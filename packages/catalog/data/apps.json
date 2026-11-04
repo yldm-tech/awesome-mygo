@@ -674,11 +674,23 @@
 			"category": "UtilitiesApplication",
 			"url": "https://github.com/sorrycc/Pinup",
 			"summary": {
-				"en": "菜单栏图床工具，上传图片后自动复制链接"
+				"en": "A macOS menu bar app that uploads images and copies the link to your clipboard.",
+				"zh-CN": "macOS 菜单栏应用：上传图片，并把链接复制到剪贴板。",
+				"zh-TW": "macOS 選單列 App：上傳圖片，並把連結複製到剪貼簿。",
+				"ja": "画像をアップロードしてリンクをクリップボードにコピーする、macOS のメニューバーアプリ。",
+				"ko": "이미지를 업로드하고 링크를 클립보드에 복사하는 macOS 메뉴 막대 앱."
 			},
 			"description": {
-				"en": "菜单栏图床工具，上传图片后自动复制链接"
-			}
+				"en": "A macOS menu bar app written in Go, with its windows drawn by MyGo's native UI. Drop files on the menu bar icon or use the global shortcuts for the clipboard and screenshots, and Pinup uploads them to an S3-compatible bucket such as AWS S3, Cloudflare R2 or MinIO, or to an HTTP upload API you set up. It then copies the links as Markdown, a plain URL or an HTML img tag. It can convert images to JPEG or HEIC, compress them and strip location data before upload, keeps a searchable history, and accepts pinup:// URLs from Shortcuts, Raycast or the shell.",
+				"zh-CN": "用 Go 编写、窗口由 MyGo 原生 UI 绘制的 macOS 菜单栏应用。把文件拖到菜单栏图标上，或用全局快捷键上传剪贴板内容和截图，Pinup 会把图片传到 AWS S3、Cloudflare R2、MinIO 等 S3 兼容存储桶，或你自行配置的 HTTP 上传接口，再把链接以 Markdown、纯 URL 或 HTML img 标签的形式复制下来。上传前可以把图片转成 JPEG 或 HEIC、压缩并去除位置信息；历史记录可搜索，也能通过 pinup:// URL 从快捷指令、Raycast 或终端调用。",
+				"zh-TW": "以 Go 撰寫、視窗由 MyGo 原生 UI 繪製的 macOS 選單列 App。把檔案拖到選單列圖示上，或用全域快速鍵上傳剪貼簿內容和螢幕截圖，Pinup 會把圖片傳到 AWS S3、Cloudflare R2、MinIO 等 S3 相容儲存貯體，或你自行設定的 HTTP 上傳 API，再把連結以 Markdown、純 URL 或 HTML img 標籤的形式複製下來。上傳前可將圖片轉成 JPEG 或 HEIC、壓縮並移除位置資訊；歷史紀錄可搜尋，也能透過 pinup:// URL 從捷徑、Raycast 或終端機呼叫。",
+				"ja": "Go で書かれ、ウィンドウを MyGo のネイティブ UI で描く macOS のメニューバーアプリ。メニューバーのアイコンにファイルをドロップするか、クリップボードやスクリーンショット用のグローバルショートカットを使うと、AWS S3、Cloudflare R2、MinIO などの S3 互換バケットや、自分で設定した HTTP アップロード API に画像を送ります。リンクは Markdown、プレーンな URL、HTML の img タグのいずれかでコピーされます。アップロード前に JPEG や HEIC への変換、圧縮、位置情報の削除ができ、履歴は検索でき、pinup:// URL を使えばショートカット、Raycast、シェルから操作できます。",
+				"ko": "Go로 작성하고 창을 MyGo의 네이티브 UI로 그린 macOS 메뉴 막대 앱입니다. 메뉴 막대 아이콘에 파일을 끌어다 놓거나 클립보드와 스크린샷용 전역 단축키를 쓰면 AWS S3, Cloudflare R2, MinIO 같은 S3 호환 버킷이나 직접 설정한 HTTP 업로드 API로 이미지를 올립니다. 링크는 Markdown, 일반 URL, HTML img 태그 중 하나로 복사됩니다. 업로드 전에 이미지를 JPEG나 HEIC로 변환하고 압축하며 위치 정보를 지울 수 있고, 기록을 검색할 수 있으며, pinup:// URL로 단축어, Raycast, 셸에서 실행할 수 있습니다."
+			},
+			"icon": {
+				"file": "pinup.webp"
+			},
+			"screenshot": "pinup.webp"
 		}
 	]
 }
