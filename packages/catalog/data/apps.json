@@ -665,6 +665,20 @@
 			"icon": {
 				"file": "myskills.webp"
 			}
+		},
+		{
+			"slug": "pinup",
+			"name": "Pinup",
+			"author": "sorrycc",
+			"kind": "native",
+			"category": "UtilitiesApplication",
+			"url": "https://github.com/sorrycc/Pinup",
+			"summary": {
+				"en": "菜单栏图床工具，上传图片后自动复制链接"
+			},
+			"description": {
+				"en": "菜单栏图床工具，上传图片后自动复制链接"
+			}
 		}
 	]
 }
