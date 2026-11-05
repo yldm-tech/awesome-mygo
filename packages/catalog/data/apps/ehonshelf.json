@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ehonshelf",
+	"name": "EhonShelf",
+	"author": "mcxen",
+	"kind": "native",
+	"category": "ReferenceApplication",
+	"url": "https://github.com/mcxen/ehon-shelf",
+	"repo": "mcxen/ehon-shelf",
+	"summary": {
+		"en": "Downloads and reads Nichibun's Enpon database of historical Japanese erotic books offline.",
+		"zh-CN": "下载并离线阅读日文研「艳本资料数据库」中的日本古代艳本。",
+		"zh-TW": "下載並離線閱讀日文研「艷本資料資料庫」中的日本古代艷本。",
+		"ja": "日文研「艶本資料データベース」の作品をダウンロードし、オフラインで読める書架アプリ。",
+		"ko": "니치분켄 '염본 자료 데이터베이스'의 작품을 내려받아 오프라인으로 읽는 책장 앱."
+	},
+	"description": {
+		"en": "A bookshelf reader for macOS, Windows and Linux, drawn with MyGo's native UI with no web view, for the roughly 470 works in Nichibun's public Enpon database. It downloads chosen works or all of them through slow, pausable requests, then reads them right to left or left to right, one or two pages at a time, remembering where you stopped in each.",
+		"zh-CN": "适用于 macOS、Windows 与 Linux 的书架阅读器，用 MyGo 原生 UI 绘制，不使用网页视图，面向日文研公开的「艳本资料数据库」中约 470 部作品。可勾选部分或全部下载，请求放慢间隔发送，并可暂停、继续；阅读时可选右至左或左至右、单页或双页，并记住每部作品读到的位置。",
+		"zh-TW": "適用於 macOS、Windows 與 Linux 的書架閱讀器，以 MyGo 原生 UI 繪製，不使用網頁視圖，對應日文研公開的「艷本資料資料庫」中約 470 部作品。可勾選部分或全部下載，請求放慢間隔送出，並可暫停、繼續；閱讀時可選右至左或左至右、單頁或雙頁，並記住每部作品讀到的位置。",
+		"ja": "macOS・Windows・Linux 向けの書架リーダーで、MyGo のネイティブ UI で描かれ、Web ビューは使いません。日文研が公開する「艶本資料データベース」の約 470 作品を対象に、選んだ作品または全作品を間隔を空けたリクエストでダウンロードし、一時停止・再開もできます。右から左・左から右、単ページ・見開きで読め、作品ごとに読んだ位置を覚えます。",
+		"ko": "macOS, Windows, Linux용 책장 리더로, MyGo의 네이티브 UI로 그리며 웹 뷰를 쓰지 않습니다. 니치분켄이 공개한 '염본 자료 데이터베이스'의 약 470개 작품을 골라서 또는 전부 내려받으며, 요청 간격을 두고 일시 정지와 재개도 됩니다. 오른쪽에서 왼쪽 또는 왼쪽에서 오른쪽으로, 한 쪽 또는 두 쪽씩 읽을 수 있고 작품마다 읽던 위치를 기억합니다."
+	},
+	"icon": {
+		"file": "ehonshelf.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "ehonshelf.webp",
+	"added": "2026-11-05T05:19:24Z"
+}
