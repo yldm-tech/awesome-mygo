@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ncmconverter",
+	"name": "NCMconverter",
+	"author": "Chilfish",
+	"kind": "native",
+	"group": "media",
+	"url": "https://github.com/Chilfish/NCMconverter",
+	"repo": "Chilfish/NCMconverter",
+	"summary": {
+		"en": "Converts NetEase Cloud Music .ncm files to mp3 or flac, with metadata, cover art and lyrics.",
+		"zh-CN": "将网易云音乐 .ncm 文件转为 mp3 或 flac，保留元数据、封面与歌词。",
+		"zh-TW": "將網易雲音樂 .ncm 檔案轉為 mp3 或 flac，保留中繼資料、封面與歌詞。",
+		"ja": "网易云音乐の .ncm をメタデータ・カバー・歌詞ごと mp3 や flac に変換。",
+		"ko": "网易云音乐 .ncm 파일을 메타데이터, 커버, 가사와 함께 mp3나 flac으로 변환합니다."
+	},
+	"description": {
+		"en": "Converts NetEase Cloud Music .ncm files into playable mp3 or flac, writing in the metadata and cover art and embedding lyrics from a .lrc file of the same name. Whole folders convert in parallel, with a naming template and skipping of existing files. Run with arguments, the same executable is a command-line tool; run without, it opens a window drawn with MyGo's native UI, with no web view.",
+		"zh-CN": "将网易云音乐的 .ncm 文件转换为可播放的 mp3 或 flac，写入元数据与封面，并嵌入同名 .lrc 文件中的歌词。可按目录并发批量转换，支持命名模板，也能跳过已存在的文件。同一个可执行文件带参数运行时是命令行工具，不带参数则打开由 MyGo 原生 UI 绘制的窗口，没有 webview。",
+		"zh-TW": "將網易雲音樂的 .ncm 檔案轉換為可播放的 mp3 或 flac，寫入中繼資料與封面，並嵌入同名 .lrc 檔案中的歌詞。可依資料夾並行批次轉換，支援命名範本，也能略過已存在的檔案。同一個執行檔帶參數執行時是命令列工具，不帶參數則開啟由 MyGo 原生 UI 繪製的視窗，沒有 webview。",
+		"ja": "网易云音乐（NetEase Cloud Music）の .ncm ファイルを再生できる mp3 や flac に変換し、メタデータとカバー画像を書き込み、同じ名前の .lrc ファイルがあれば歌詞も埋め込みます。フォルダーごとの並列変換、ファイル名テンプレート、変換済みファイルのスキップに対応します。同じ実行ファイルが、引数を付ければコマンドラインツールとして動き、引数なしで起動すると MyGo のネイティブ UI で描かれたウィンドウを開きます。Web ビューは使いません。",
+		"ko": "网易云音乐(NetEase Cloud Music)의 .ncm 파일을 재생 가능한 mp3나 flac으로 변환하면서 메타데이터와 커버 이미지를 기록하고, 같은 이름의 .lrc 파일이 있으면 가사도 넣어 줍니다. 폴더 단위 병렬 변환, 파일 이름 템플릿, 이미 있는 파일 건너뛰기를 지원합니다. 하나의 실행 파일이 인자를 주면 명령줄 도구로, 인자 없이 실행하면 MyGo의 네이티브 UI로 그린 창으로 열리며 웹 뷰는 쓰지 않습니다."
+	},
+	"icon": {
+		"file": "ncmconverter.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "ncmconverter.webp",
+	"added": "2026-11-05T14:57:25Z"
+}
