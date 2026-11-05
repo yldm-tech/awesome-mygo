@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "looma",
+	"name": "Looma",
+	"author": "POLARIS0824",
+	"kind": "native",
+	"group": "notes",
+	"url": "https://github.com/POLARIS0824/Looma",
+	"repo": "POLARIS0824/Looma",
+	"summary": {
+		"en": "The Windows version of Looma, a local Markdown notes app with vaults, categories, search and trash.",
+		"zh-CN": "Looma 的 Windows 版：本地 Markdown 笔记，可分类和搜索。",
+		"zh-TW": "Looma 的 Windows 版：本機 Markdown 筆記，可分類和搜尋。",
+		"ja": "ローカル Markdown ノートアプリ Looma の Windows 版。ボルト、カテゴリー、検索、ゴミ箱つき。",
+		"ko": "로컬 Markdown 노트 앱 Looma의 Windows 버전. 카테고리와 검색 지원."
+	},
+	"description": {
+		"en": "The Windows build of Looma, a local Markdown note-taking app, drawn with MyGo's native UI; the rest of the project is made otherwise. Notes are kept in local vaults, sorted into categories and found through search, and deleted notes go to a trash.",
+		"zh-CN": "本地 Markdown 笔记应用 Looma 的 Windows 版本，由 MyGo 原生 UI 绘制；项目的其余部分另行开发。笔记保存在本地笔记库中，可按分类整理、通过搜索查找，删除的笔记会进入回收站。",
+		"zh-TW": "本機 Markdown 筆記應用程式 Looma 的 Windows 版本，由 MyGo 原生 UI 繪製；專案的其餘部分另以其他方式開發。筆記儲存在本機筆記庫中，可依分類整理、透過搜尋查找，刪除的筆記會移到資源回收筒。",
+		"ja": "ローカルで使う Markdown ノートアプリ Looma の Windows 版で、MyGo のネイティブ UI で描かれています。プロジェクトのそれ以外の部分は別の方法で作られています。ノートはローカルのボルトに保存してカテゴリーで整理し、検索で探せます。削除したノートはゴミ箱に移ります。",
+		"ko": "로컬 Markdown 노트 앱 Looma의 Windows 버전으로, MyGo의 네이티브 UI로 그렸습니다. 프로젝트의 나머지 부분은 다른 방식으로 만들어졌습니다. 노트는 로컬 보관함에 저장해 카테고리로 정리하고 검색으로 찾으며, 삭제한 노트는 휴지통으로 갑니다."
+	},
+	"icon": {
+		"file": "looma.webp"
+	},
+	"screenshot": "looma.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-05T08:45:51Z"
+}
