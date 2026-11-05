@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "bdon-mygo",
+	"name": "bdon-mygo",
+	"author": "li-yifei",
+	"kind": "web",
+	"group": "game",
+	"url": "https://bdon.moe/tools/deck",
+	"repo": "li-yifei/bdon-mygo",
+	"summary": {
+		"en": "Unofficial desktop app for the bdon.moe Our Notes deck tool, with a faster engine and save import.",
+		"zh-CN": "bdon.moe Our Notes 组卡工具非官方桌面版，原生引擎加速，可导入存档。",
+		"zh-TW": "bdon.moe Our Notes 組卡工具非官方桌面版，原生引擎加速，可匯入存檔。",
+		"ja": "bdon.moe の Our Notes 編成ツールの非公式デスクトップ版。高速計算とセーブ取り込み。",
+		"ko": "bdon.moe Our Notes 덱 편성 도구의 비공식 데스크톱판. 빠른 계산과 세이브 가져오기."
+	},
+	"description": {
+		"en": "An unofficial desktop app for the bdon.moe Our Notes deck tool: a Go shell built with MyGo that opens the site in the system WebView. It hands the page's calculations to a multithreaded native engine, and imports your game save from an Android device over ADB into the card pool, so you no longer enter cards by hand. Releases are for Apple Silicon Macs; Windows and Linux build from source.",
+		"zh-CN": "bdon.moe 上 Our Notes 组卡工具的非官方桌面版：用 MyGo 构建的 Go 外壳，在系统 WebView 中打开该网站。网页的组卡计算交给原生多线程引擎执行，还能通过 ADB 从 Android 设备读取游戏存档并导入卡池，不必逐张录卡。发行版目前只有 Apple Silicon Mac 版，Windows 与 Linux 可从源码构建。",
+		"zh-TW": "bdon.moe 上 Our Notes 組卡工具的非官方桌面版：以 MyGo 建置的 Go 外殼，在系統 WebView 中開啟該網站。網頁的組卡計算交給原生多執行緒引擎，還能透過 ADB 從 Android 裝置讀取遊戲存檔並匯入卡池，不必逐張輸入卡片。發行版目前只有 Apple Silicon Mac 版，Windows 與 Linux 可從原始碼建置。",
+		"ja": "bdon.moe の Our Notes デッキ編成ツールを使うための非公式デスクトップアプリ。MyGo で作られた Go のシェルで、サイトをシステムの WebView で開きます。ページの編成計算はマルチスレッドのネイティブエンジンが引き受け、Android 端末から ADB でゲームのセーブデータを読み取ってカードプールに取り込めるので、カードを一枚ずつ入力する必要はありません。配布は Apple シリコン Mac 版のみで、Windows と Linux はソースからビルドできます。",
+		"ko": "bdon.moe의 Our Notes 덱 편성 도구를 위한 비공식 데스크톱 앱으로, MyGo로 만든 Go 셸이 사이트를 시스템 WebView로 엽니다. 페이지의 덱 계산은 멀티스레드 네이티브 엔진이 맡고, ADB로 Android 기기에서 게임 세이브를 읽어 카드 풀에 가져오므로 카드를 한 장씩 입력할 필요가 없습니다. 배포판은 Apple Silicon Mac용뿐이며 Windows와 Linux는 소스에서 빌드할 수 있습니다."
+	},
+	"icon": {
+		"file": "bdon-mygo.webp"
+	},
+	"screenshot": "bdon-mygo.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-05T15:15:40Z"
+}
