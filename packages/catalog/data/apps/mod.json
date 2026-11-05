@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mod",
+	"name": "我不是魔王 · 本地作弊 Mod",
+	"author": "yviscool",
+	"kind": "native",
+	"group": "game",
+	"url": "https://github.com/yviscool/im-no-demonlord-mod",
+	"repo": "yviscool/im-no-demonlord-mod",
+	"summary": {
+		"en": "A Windows loader that injects a cheat panel into the Electron game Im No Demonlord.",
+		"zh-CN": "为 Electron 游戏《我不是魔王》注入作弊面板的 Windows 加载器。",
+		"zh-TW": "為 Electron 遊戲《我不是魔王》注入作弊面板的 Windows 載入器。",
+		"ja": "Electron 製ゲーム「我不是魔王」にチートパネルを注入する Windows 用ローダー。",
+		"ko": "Electron 게임 Im No Demonlord에 치트 패널을 주입하는 Windows 로더."
+	},
+	"description": {
+		"en": "A Windows mod loader for the Electron version of Im No Demonlord, a single exe drawn with MyGo's native UI. It starts the game with a debugging port and injects a cheat panel over the Chrome DevTools Protocol without touching game files, or installs it into app.asar with a backup to restore. In game, F2 opens switches for resources, combat and game speed, each undone when turned off.",
+		"zh-CN": "为《我不是魔王》Electron 版制作的 Windows 作弊加载器，用 MyGo 原生 UI 绘制，只有一个 exe，无需安装运行时。默认以调试端口启动游戏，通过 Chrome DevTools 协议注入作弊面板，不改动游戏文件；也可以写入 app.asar，并自动备份以便还原。游戏内按 F2 打开面板，资源、战斗与游戏速度等开关一关闭即恢复原状。",
+		"zh-TW": "為《我不是魔王》Electron 版打造的 Windows 作弊載入器，以 MyGo 原生 UI 繪製，只有一個 exe，不必安裝執行環境。預設以除錯埠啟動遊戲，透過 Chrome DevTools 協定注入作弊面板，不更動遊戲檔案；也可以寫入 app.asar，並自動備份以便還原。遊戲中按 F2 開啟面板，資源、戰鬥與遊戲速度等開關一關閉就恢復原狀。",
+		"ja": "Electron 版「我不是魔王」向けの Windows 用 Mod ローダーで、MyGo のネイティブ UI で描かれた exe ひとつで動き、ランタイムのインストールは不要です。デバッグポート付きでゲームを起動し、Chrome DevTools プロトコルでチートパネルを注入するため、ゲームファイルには手を加えません。app.asar に書き込むこともでき、その場合は自動でバックアップを取って元に戻せます。ゲーム内では F2 でパネルを開き、資源や戦闘、ゲーム速度などの切り替えはオフにすればすぐ元に戻ります。",
+		"ko": "Electron판 Im No Demonlord용 Windows 모드 로더로, MyGo의 네이티브 UI로 그린 exe 하나로 동작합니다. 디버깅 포트로 게임을 실행하고 Chrome DevTools 프로토콜로 치트 패널을 주입해 게임 파일을 건드리지 않으며, 백업과 함께 app.asar에 설치해 되돌릴 수도 있습니다. 게임 안에서 F2로 패널을 열고, 각 스위치는 끄면 원래대로 돌아갑니다."
+	},
+	"icon": {
+		"file": "mod.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "mod.webp",
+	"added": "2026-11-05T08:45:51Z"
+}
