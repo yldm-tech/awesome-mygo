@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "muse",
+	"name": "Muse",
+	"author": "sogud",
+	"kind": "native",
+	"group": "media",
+	"url": "https://github.com/sogud/Muse",
+	"repo": "sogud/Muse",
+	"summary": {
+		"en": "Native macOS manager for the AI music projects, jobs and files agents create with Muse's CLI.",
+		"zh-CN": "原生 macOS 界面，管理 Agent 经 CLI 生成的 AI 音乐项目、任务与作品。",
+		"zh-TW": "原生 macOS 介面，管理 Agent 以 CLI 產生的 AI 音樂專案、任務與作品。",
+		"ja": "エージェントが CLI で作った AI 音楽のプロジェクトやジョブ、作品を管理する macOS アプリ。",
+		"ko": "에이전트가 CLI로 만든 AI 음악 프로젝트, 작업, 작품을 관리하는 네이티브 macOS 앱."
+	},
+	"description": {
+		"en": "A macOS app drawn with MyGo's native UI for managing the music projects that AI agents such as Codex create through Muse's separate creative CLI, which calls Mureka, ElevenLabs and Google Lyria. It shows projects, jobs with their status and errors, and finished works with hashes and licence notes, opens previews, exports files and checks provider keys. Creating and generating happen only in the CLI.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 应用，用来管理 Codex 等 AI Agent 通过 Muse 独立的 creative CLI 创建的音乐项目；生成由 CLI 调用 Mureka、ElevenLabs 和 Google Lyria 完成。它列出项目、任务状态与错误，以及带哈希和授权声明的作品，可以预览、导出文件，并查看各家密钥是否已配置。创建和生成都只在 CLI 中进行。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 macOS 應用程式，用來管理 Codex 等 AI Agent 透過 Muse 獨立的 creative CLI 建立的音樂專案；生成由 CLI 呼叫 Mureka、ElevenLabs 和 Google Lyria 完成。它列出專案、任務狀態與錯誤，以及附雜湊值和授權聲明的作品，可以預覽、匯出檔案，並查看各家金鑰是否已設定。建立和生成都只在 CLI 中進行。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS アプリで、Codex などの AI エージェントが Muse の独立した creative CLI で作った音楽プロジェクトを管理します。生成は CLI が Mureka、ElevenLabs、Google Lyria を呼び出して行います。プロジェクト、ジョブの状態とエラー、ハッシュやライセンス表記つきの作品を一覧でき、プレビュー、書き出し、各サービスのキー設定の確認もできます。作成と生成は CLI だけで行います。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS 앱으로, Codex 같은 AI 에이전트가 Muse의 별도 creative CLI로 만든 음악 프로젝트를 관리합니다. 생성은 CLI가 Mureka, ElevenLabs, Google Lyria를 호출해 처리합니다. 프로젝트와 작업 상태·오류, 해시와 라이선스 표기가 붙은 작품을 보여 주고, 미리보기와 내보내기, 서비스별 키 설정 확인을 지원합니다. 생성은 CLI에서만 합니다."
+	},
+	"icon": {
+		"file": "muse.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "muse.webp",
+	"added": "2026-11-05T09:41:01Z"
+}
