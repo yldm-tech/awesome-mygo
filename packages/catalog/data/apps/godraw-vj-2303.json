@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "godraw-vj-2303",
+	"name": "godraw",
+	"author": "VJ-2303",
+	"kind": "native",
+	"group": "notes",
+	"url": "https://github.com/VJ-2303/godraw",
+	"repo": "VJ-2303/godraw",
+	"summary": {
+		"en": "A local, native whiteboard for Linux in the style of tldraw that reads and writes .tldr files.",
+		"zh-CN": "tldraw 风格的本地原生 Linux 白板，读写 .tldr 文件。",
+		"zh-TW": "tldraw 風格的本機原生 Linux 白板，讀寫 .tldr 檔案。",
+		"ja": "tldraw 風のローカルでネイティブな Linux 用ホワイトボード。.tldr ファイルを読み書き。",
+		"ko": "tldraw 스타일의 로컬 네이티브 Linux 화이트보드. .tldr 파일을 읽고 씁니다."
+	},
+	"description": {
+		"en": "A Linux whiteboard in the style of tldraw, drawn with MyGo's native UI, with no web view and no JavaScript. Drawings are plain .tldr files in ~/Documents/godraw that other apps using the format can read, with autosave, crash recovery and no account or cloud. It offers freehand drawing, 20 geo shapes, arrows that bind to shapes, frames and multiple pages, and exports PNG or SVG.",
+		"zh-CN": "仿 tldraw 风格的 Linux 白板，由 MyGo 原生 UI 绘制，没有 Web 视图，也没有 JavaScript。每张图都是 ~/Documents/godraw 里的普通 .tldr 文件，其他支持该格式的应用也能读取；自带自动保存和崩溃恢复，无需账号，也不上云。提供手绘、20 种几何图形、可绑定图形的箭头、框架和多页面，可导出 PNG 或 SVG。",
+		"zh-TW": "仿 tldraw 風格的 Linux 白板，由 MyGo 原生 UI 繪製，沒有 Web 視圖，也沒有 JavaScript。每張圖都是 ~/Documents/godraw 裡的普通 .tldr 檔案，其他支援該格式的應用程式也能讀取；內建自動儲存與當機復原，不需帳號，也不上雲端。提供手繪、20 種幾何圖形、可綁定圖形的箭頭、框架與多頁面，可匯出 PNG 或 SVG。",
+		"ja": "tldraw 風の Linux 用ホワイトボードで、MyGo のネイティブ UI で描かれ、Web ビューも JavaScript もありません。図はすべて ~/Documents/godraw に置かれる普通の .tldr ファイルで、同じ形式を使う他のアプリでも読めます。自動保存とクラッシュ復旧を備え、アカウントもクラウドも不要です。手描き、20 種類の図形、図形に結びつく矢印、フレーム、複数ページを使え、PNG や SVG で書き出せます。",
+		"ko": "tldraw 스타일의 Linux 화이트보드로, MyGo의 네이티브 UI로 그려 웹 뷰도 JavaScript도 없습니다. 그림은 모두 ~/Documents/godraw에 저장되는 일반 .tldr 파일이라 같은 형식을 쓰는 다른 앱에서도 읽을 수 있고, 자동 저장과 충돌 복구를 갖췄으며 계정이나 클라우드가 필요 없습니다. 손그림, 20가지 도형, 도형에 연결되는 화살표, 프레임, 여러 페이지를 지원하고 PNG나 SVG로 내보낼 수 있습니다."
+	},
+	"icon": {
+		"file": "godraw-vj-2303.webp"
+	},
+	"screenshot": "godraw-vj-2303.webp",
+	"added": "2026-11-05T08:45:51Z"
+}
