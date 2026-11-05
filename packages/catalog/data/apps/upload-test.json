@@ -1,0 +1,15 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "upload-test",
+	"name": "Upload Test",
+	"author": "yldm-tech",
+	"kind": "native",
+	"url": "https://example.com/mygodock-upload-test",
+	"summary": {
+		"en": "A test of the submission form screenshot upload. To be closed, not merged."
+	},
+	"description": {
+		"en": "A test of the submission form screenshot upload. To be closed, not merged."
+	},
+	"added": "2026-11-05T02:13:46Z"
+}
