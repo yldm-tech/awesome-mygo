@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "gzist-dormsignin",
+	"name": "GZIST DormSignin",
+	"author": "xiaomai1011",
+	"kind": "native",
+	"group": "system",
+	"url": "https://github.com/xiaomai1011/GZIST-DormSignin-Baiyun",
+	"repo": "xiaomai1011/GZIST-DormSignin-Baiyun",
+	"summary": {
+		"en": "A Windows tray app that does the nightly dorm check-in at GZIST's Baiyun campus automatically.",
+		"zh-CN": "广州理工学院白云校区的 Windows 托盘工具，每晚自动完成宿舍查寝签到。",
+		"zh-TW": "廣州理工學院白雲校區的 Windows 系統匣工具，每晚自動完成宿舍點名簽到。",
+		"ja": "広州理工学院 白雲キャンパスの寮の点呼チェックインを毎晩自動で行う Windows トレイアプリ。",
+		"ko": "광저우이공학원 바이윈 캠퍼스 기숙사 점호 체크인을 매일 밤 자동으로 하는 Windows 트레이 앱."
+	},
+	"description": {
+		"en": "A Windows tray app for the Baiyun campus of Guangzhou Institute of Science and Technology, drawn with MyGo's native UI. Save your student ID and password once and it checks in at 21:30, 21:40, 21:50 and 22:00 through a headless Edge, logging in again when needed by solving the arithmetic captcha locally, and gives up after 23:00. The password stays in Windows Credential Manager.",
+		"zh-CN": "面向广州理工学院白云校区的 Windows 托盘工具，由 MyGo 原生 UI 绘制。学号和密码只需填一次，之后每天 21:30、21:40、21:50、22:00 通过无窗口的 Edge 自动完成查寝签到；登录失效时会在本地识别算式验证码重新登录，过了 23:00 则放弃。密码保存在 Windows 凭据管理器中。",
+		"zh-TW": "面向廣州理工學院白雲校區的 Windows 系統匣工具，由 MyGo 原生 UI 繪製。學號和密碼只需填一次，之後每天 21:30、21:40、21:50、22:00 透過無視窗的 Edge 自動完成宿舍點名簽到；登入失效時會在本機辨識算式驗證碼重新登入，過了 23:00 則放棄。密碼存放在 Windows 認證管理員中。",
+		"ja": "広州理工学院 白雲キャンパス向けの Windows トレイアプリで、MyGo のネイティブ UI で描かれています。学籍番号とパスワードを一度保存すれば、毎晩 21:30、21:40、21:50、22:00 にウィンドウなしの Edge で寮の点呼チェックインを行い、ログインが切れたら計算式の CAPTCHA をローカルで読み取って再ログインします。23:00 を過ぎたら実行しません。パスワードは Windows 資格情報マネージャーに保存されます。",
+		"ko": "광저우이공학원 바이윈 캠퍼스용 Windows 트레이 앱으로, MyGo의 네이티브 UI로 그렸습니다. 학번과 비밀번호를 한 번 저장하면 매일 밤 21:30, 21:40, 21:50, 22:00에 창 없는 Edge로 기숙사 점호 체크인을 하고, 로그인이 풀리면 산식 캡차를 로컬에서 인식해 다시 로그인하며, 23:00가 지나면 시도하지 않습니다. 비밀번호는 Windows 자격 증명 관리자에 저장됩니다."
+	},
+	"icon": {
+		"file": "gzist-dormsignin.webp"
+	},
+	"screenshot": "gzist-dormsignin.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-05T17:06:44Z"
+}
