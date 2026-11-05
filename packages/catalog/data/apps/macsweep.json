@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "macsweep",
+	"name": "MacSweep",
+	"author": "jellydn",
+	"kind": "native",
+	"group": "system",
+	"url": "https://github.com/jellydn/macsweep",
+	"repo": "jellydn/macsweep",
+	"summary": {
+		"en": "A safety-first, offline macOS cleaner, so far a read-only early build that shows disk capacity.",
+		"zh-CN": "以安全为先的离线 macOS 清理工具，目前是只读早期版本，仅显示磁盘容量。",
+		"zh-TW": "以安全為先的離線 macOS 清理工具，目前為唯讀早期版本，僅顯示磁碟容量。",
+		"ja": "安全第一のオフライン macOS クリーナー。現在は読み取り専用の初期版で、ディスク容量を表示するだけ。",
+		"ko": "안전을 우선하는 오프라인 macOS 클리너. 지금은 디스크 용량만 보여 주는 읽기 전용 초기 버전."
+	},
+	"description": {
+		"en": "An offline macOS cleaner written in Go and drawn with MyGo's native UI, with no webview. It is an early read-only build: it shows local disk capacity, ships no cleanup rules yet and cannot clean. By design, cleaning will preview files first and only move approved files to Trash, and the app uses no admin helper, Full Disk Access, network or telemetry.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的离线 macOS 清理工具，不使用 Web 视图。目前是只读的早期版本：只显示本机磁盘容量，尚未附带任何清理规则，也无法执行清理。按设计，清理前会先预览，只把获批的文件移到废纸篓；不需要管理员助手或完全磁盘访问权限，不联网，也没有遥测。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的離線 macOS 清理工具，不使用 Web 視圖。目前是唯讀的早期版本：只顯示本機磁碟容量，尚未附帶任何清理規則，也無法執行清理。依設計，清理前會先預覽，只把核准的檔案移到垃圾桶；不需要管理員輔助程式或完整磁碟取用權限，不連網，也沒有遙測。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれたオフラインの macOS クリーナー。Web ビューは使いません。現在は読み取り専用の初期版で、ローカルディスクの容量を表示するだけです。クリーンアップのルールはまだ同梱されておらず、削除もできません。設計上は、まずプレビューし、承認済みのファイルだけをゴミ箱に移します。管理者ヘルパーやフルディスクアクセス、ネットワーク、テレメトリーは使いません。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 오프라인 macOS 클리너로, 웹 뷰를 쓰지 않습니다. 현재는 읽기 전용 초기 버전이라 로컬 디스크 용량만 보여 주며, 정리 규칙은 아직 포함되지 않았고 정리 기능도 꺼져 있습니다. 설계상 먼저 미리 보고 승인된 파일만 휴지통으로 옮기며, 관리자 도우미, 전체 디스크 접근 권한, 네트워크, 텔레메트리를 쓰지 않습니다."
+	},
+	"icon": {
+		"file": "macsweep.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "macsweep.webp",
+	"added": "2026-11-05T12:11:10Z"
+}
