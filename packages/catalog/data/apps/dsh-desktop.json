@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "dsh-desktop",
+	"name": "DSH Desktop",
+	"author": "qisewai",
+	"kind": "web",
+	"group": "agents",
+	"url": "https://github.com/qisewai/dsh-desktop",
+	"repo": "qisewai/dsh-desktop",
+	"summary": {
+		"en": "Desktop shell for DeepSeek Harness: runs dsh in a window, with tray status and notifications.",
+		"zh-CN": "DeepSeek Harness 桌面壳：在窗口里运行 dsh，带托盘状态和通知。",
+		"zh-TW": "DeepSeek Harness 桌面殼：在視窗中執行 dsh，附系統匣狀態與通知。",
+		"ja": "DeepSeek Harness のデスクトップシェル。dsh をウィンドウで動かし、トレイで状態表示と通知。",
+		"ko": "DeepSeek Harness 데스크톱 셸. dsh를 창에서 실행하고 트레이 상태와 알림을 제공합니다."
+	},
+	"description": {
+		"en": "A desktop shell for DeepSeek Harness on Linux and Windows: it starts the dsh already installed on the system and shows dsh's own web UI in a MyGo window through the system web view. It restarts dsh after a crash, stays in the tray with a dot for running sessions or pending approvals, and sends a system notification when a turn finishes or dsh waits for your approval or answer.",
+		"zh-CN": "面向 Linux 与 Windows 的 DeepSeek Harness 桌面壳：拉起系统里已安装的 dsh，在 MyGo 窗口中用系统 Web 视图加载 dsh 自带的 Web UI。dsh 崩溃后会自动重启，关窗后收进托盘，托盘图标用圆点显示会话运行中或等待审批；一轮完成、等你审批或回答提问时弹出系统通知。",
+		"zh-TW": "適用 Linux 與 Windows 的 DeepSeek Harness 桌面殼：啟動系統中已安裝的 dsh，在 MyGo 視窗中以系統 Web 檢視載入 dsh 自帶的 Web UI。dsh 當掉後會自動重啟，關閉視窗後收進系統匣，圖示以圓點顯示工作階段執行中或等待核准；一輪完成、等你核准或回答提問時會跳出系統通知。",
+		"ja": "Linux と Windows 向けの DeepSeek Harness デスクトップシェル。システムにインストール済みの dsh を起動し、MyGo のウィンドウでシステムの Web ビューを使って dsh 自身の Web UI を表示します。dsh がクラッシュすると自動で再起動し、ウィンドウを閉じるとトレイに収まり、アイコンの点でセッションの実行中や承認待ちを示します。ターンの完了や、承認・質問への回答待ちはシステム通知で知らせます。",
+		"ko": "Linux와 Windows용 DeepSeek Harness 데스크톱 셸입니다. 시스템에 설치된 dsh를 실행하고, MyGo 창에서 시스템 웹 뷰로 dsh 자체 Web UI를 띄웁니다. dsh가 충돌하면 자동으로 다시 시작하고, 창을 닫으면 트레이로 들어가 아이콘의 점으로 세션 실행 중이나 승인 대기를 표시하며, 턴이 끝나거나 승인 또는 질문 답변을 기다릴 때 시스템 알림을 보냅니다."
+	},
+	"icon": {
+		"file": "dsh-desktop.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "dsh-desktop.webp",
+	"added": "2026-11-05T14:40:59Z"
+}
