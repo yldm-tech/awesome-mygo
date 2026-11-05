@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mygo",
+	"name": "MyGo 云音乐",
+	"author": "usestrove",
+	"kind": "native",
+	"group": "media",
+	"url": "https://github.com/usestrove/mygo-cloudmusic",
+	"repo": "usestrove/mygo-cloudmusic",
+	"summary": {
+		"en": "A third-party native NetEase Cloud Music client with lossless playback and word-by-word lyrics.",
+		"zh-CN": "第三方网易云音乐原生桌面客户端，支持无损音质与逐字歌词。",
+		"zh-TW": "第三方網易雲音樂原生桌面用戶端，支援無損音質與逐字歌詞。",
+		"ja": "非公式のネイティブな网易云音乐クライアント。ロスレス再生と一語ずつの歌詞表示に対応。",
+		"ko": "비공식 네이티브 넷이즈 클라우드 뮤직 클라이언트. 무손실 재생과 단어 단위 가사를 지원합니다."
+	},
+	"description": {
+		"en": "A third-party NetEase Cloud Music desktop client written in Go and drawn with MyGo's native UI, with no web view. It signs in by QR code, offers daily picks, playlists, charts, search, podcasts and personal FM, and streams at up to lossless FLAC and Hi-Res, caching played songs. Lyrics show word by word with translations, and an optional notch player sits at the top of the screen.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的第三方网易云音乐桌面客户端，没有 WebView。支持扫码登录，涵盖每日推荐、歌单、排行榜、搜索、播客与私人 FM；边下边播，最高可选无损（FLAC）与 Hi-Res 音质，听过的歌曲缓存在本机。歌词逐字显示并附翻译，还可在设置中开启屏幕顶部的刘海播放器。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的第三方網易雲音樂桌面用戶端，沒有 WebView。支援掃碼登入，涵蓋每日推薦、歌單、排行榜、搜尋、Podcast 與私人 FM；邊下邊播，最高可選無損（FLAC）與 Hi-Res 音質，聽過的歌曲快取在本機。歌詞逐字顯示並附翻譯，也可在設定中開啟螢幕頂端的瀏海播放器。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた非公式の网易云音乐デスクトップクライアント。WebView は使いません。QR コードでログインし、毎日のおすすめ、プレイリスト、ランキング、検索、ポッドキャスト、プライベート FM を備え、ダウンロードしながら最大でロスレス（FLAC）や Hi-Res の音質で再生し、聴いた曲はローカルにキャッシュします。歌詞は一語ずつ訳付きで表示され、設定で画面上部のノッチにミニプレーヤーを出せます。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 비공식 넷이즈 클라우드 뮤직 데스크톱 클라이언트로, WebView를 쓰지 않습니다. QR 코드로 로그인하고 오늘의 추천, 플레이리스트, 차트, 검색, 팟캐스트, 개인 FM을 제공하며, 내려받으면서 최대 무손실(FLAC)과 Hi-Res 음질로 재생하고 들은 곡은 로컬에 캐시합니다. 가사는 단어 단위로 번역과 함께 표시되고, 설정에서 화면 상단 노치에 미니 플레이어를 켤 수 있습니다."
+	},
+	"icon": {
+		"file": "mygo.webp"
+	},
+	"screenshot": "mygo.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-05T17:06:44Z"
+}
