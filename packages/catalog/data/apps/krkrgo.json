@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "krkrgo",
+	"name": "krkrgo",
+	"author": "Eslzzyl",
+	"kind": "native",
+	"group": "game",
+	"url": "https://github.com/Eslzzyl/krkrgo",
+	"repo": "Eslzzyl/krkrgo",
+	"summary": {
+		"en": "A pure-Go Kirikiri/Krkrz visual novel engine, with a native launcher to pick and run games.",
+		"zh-CN": "纯 Go 的 Kirikiri/Krkrz 视觉小说引擎，附原生游戏启动器。",
+		"zh-TW": "純 Go 的 Kirikiri/Krkrz 視覺小說引擎，附原生遊戲啟動器。",
+		"ja": "純 Go の Kirikiri/Krkrz ビジュアルノベルエンジン。ネイティブなゲームランチャー付き。",
+		"ko": "순수 Go로 만든 Kirikiri/Krkrz 비주얼 노벨 엔진, 네이티브 게임 런처 포함."
+	},
+	"description": {
+		"en": "A Go reimplementation of the Kirikiri/Krkrz visual novel engine for macOS, Linux and Windows. It runs TJS and KAG scripts from a game folder or an .xp3 archive. MyGo's native UI draws only the launcher where you pick a game. The games themselves render through Ebitengine, and audio and video play through an FFmpeg sidecar.",
+		"zh-CN": "用 Go 重新实现的 Kirikiri/Krkrz 视觉小说引擎，支持 macOS、Linux 与 Windows，可从游戏文件夹或 .xp3 归档运行 TJS 与 KAG 脚本。MyGo 原生 UI 只负责绘制挑选游戏的启动器；游戏本身通过 Ebitengine 渲染，音视频则借助 FFmpeg 外挂库播放。",
+		"zh-TW": "以 Go 重新實作的 Kirikiri/Krkrz 視覺小說引擎，支援 macOS、Linux 與 Windows，可從遊戲資料夾或 .xp3 封存檔執行 TJS 與 KAG 腳本。MyGo 原生 UI 只負責繪製挑選遊戲的啟動器；遊戲本身透過 Ebitengine 算繪，影音則借助 FFmpeg 外掛函式庫播放。",
+		"ja": "Go で書き直された Kirikiri/Krkrz のビジュアルノベルエンジン。macOS・Linux・Windows に対応し、ゲームフォルダーや .xp3 アーカイブから TJS と KAG のスクリプトを実行します。MyGo のネイティブ UI で描かれるのはゲームを選ぶランチャーだけです。ゲーム本体は Ebitengine で描画され、音声と動画は FFmpeg のサイドカーで再生します。",
+		"ko": "Go로 새로 구현한 Kirikiri/Krkrz 비주얼 노벨 엔진으로, macOS, Linux, Windows에서 게임 폴더나 .xp3 아카이브의 TJS·KAG 스크립트를 실행합니다. MyGo의 네이티브 UI로 그리는 것은 게임을 고르는 런처뿐입니다. 게임 자체는 Ebitengine으로 렌더링하며, 오디오와 비디오는 FFmpeg 사이드카로 재생합니다."
+	},
+	"icon": {
+		"file": "krkrgo.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "krkrgo.webp",
+	"added": "2026-11-05T12:11:10Z"
+}
