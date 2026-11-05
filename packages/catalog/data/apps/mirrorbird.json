@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mirrorbird",
+	"name": "MirrorBird",
+	"author": "fondoger",
+	"kind": "native",
+	"group": "agents",
+	"url": "https://github.com/fondoger/mirrorbird",
+	"repo": "fondoger/mirrorbird",
+	"summary": {
+		"en": "Windows tray app for continuing ChatGPT Desktop / Codex sessions in your phone's browser.",
+		"zh-CN": "在手机浏览器继续电脑上的 ChatGPT Desktop / Codex 会话。",
+		"zh-TW": "在手機瀏覽器接續電腦上的 ChatGPT Desktop / Codex 對話。",
+		"ja": "パソコンの ChatGPT Desktop / Codex のセッションをスマホのブラウザーで続ける。",
+		"ko": "PC의 ChatGPT Desktop / Codex 세션을 휴대폰 브라우저에서 이어 가는 앱."
+	},
+	"description": {
+		"en": "Continue the same ChatGPT Desktop / Codex session from your phone's browser, kept in sync with the computer over a Microsoft Dev Tunnel. The page shows messages, code and file changes live, searches and starts sessions, and keeps queued messages running when it goes offline. MyGo draws only the Windows settings window and tray; the web page is built with TypeScript and Vite.",
+		"zh-CN": "在手机浏览器里继续电脑上 ChatGPT Desktop / Codex 的同一个会话，通过 Microsoft Dev Tunnels 与电脑实时同步。网页可实时查看消息、代码和文件改动，搜索和新建会话，网页离线时排队的消息仍会继续执行。MyGo 只负责 Windows 上的设置窗口与托盘，手机网页用 TypeScript 和 Vite 另行构建。",
+		"zh-TW": "在手機瀏覽器接續電腦上 ChatGPT Desktop / Codex 的同一個對話，透過 Microsoft Dev Tunnels 與電腦即時同步。網頁可即時查看訊息、程式碼與檔案變更，搜尋和新增對話，網頁離線時排隊的訊息仍會繼續執行。MyGo 只負責 Windows 上的設定視窗與系統匣，手機網頁以 TypeScript 和 Vite 另外建置。",
+		"ja": "パソコンの ChatGPT Desktop / Codex と同じセッションをスマホのブラウザーで続けられ、Microsoft Dev Tunnels 経由でリアルタイムに同期します。ページではメッセージ、コード、ファイルの変更をリアルタイムで見られ、セッションの検索と新規作成もでき、オフライン中もキューのメッセージは実行されます。MyGo が描くのは Windows の設定ウィンドウとトレイだけで、Web ページは TypeScript と Vite で別に作られています。",
+		"ko": "PC의 ChatGPT Desktop / Codex 세션을 휴대폰 브라우저에서 이어 가며, Microsoft Dev Tunnels로 실시간 동기화합니다. 웹 페이지에서 메시지, 코드, 파일 변경을 바로 보고 세션을 검색하거나 새로 만들 수 있으며, 페이지가 오프라인이어도 대기열의 메시지는 계속 실행됩니다. MyGo는 Windows 설정 창과 트레이만 그리고, 웹 페이지는 TypeScript와 Vite로 따로 만듭니다."
+	},
+	"icon": {
+		"file": "mirrorbird.webp"
+	},
+	"screenshot": "mirrorbird.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-05T16:30:17Z"
+}
