@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ohmyanime",
+	"name": "OhMyAnime",
+	"author": "bangadam",
+	"kind": "web",
+	"group": "media",
+	"url": "https://github.com/bangadam/ohmyanime",
+	"repo": "bangadam/ohmyanime",
+	"summary": {
+		"en": "Streams anime with a local watchlist, watch history and resume, no account needed.",
+		"zh-CN": "动画串流应用，本地保存收藏列表和观看记录，可续播，无需账号。",
+		"zh-TW": "動畫串流應用程式，本機保存收藏清單與觀看紀錄，可接續播放，不需帳號。",
+		"ja": "アニメ配信アプリ。保存リストと視聴履歴をローカルに残し、続きから再生。アカウント不要。",
+		"ko": "로컬 저장 목록과 시청 기록, 이어보기를 갖춘 애니메이션 스트리밍 앱. 계정이 필요 없습니다."
+	},
+	"description": {
+		"en": "A personal anime streaming app with a Go backend and a React frontend. MyGo builds the desktop version for macOS, Windows and Linux, one binary in a web view; the server can also run on its own for a browser. It browses a catalogue with filters and a weekly schedule, plays episodes with subtitles and intro skipping, and keeps a saved list and resumable history locally, with no account.",
+		"zh-CN": "个人用的动画串流应用，后端用 Go、前端用 React。MyGo 负责构建 macOS、Windows 与 Linux 桌面版，以单个二进制文件在 Web 视图中运行；服务端也可以单独运行，供浏览器访问。可按筛选条件和每周放送表浏览片库，播放时支持字幕和跳过片头，收藏列表与可续播的观看记录都保存在本地，无需账号。",
+		"zh-TW": "個人用的動畫串流應用程式，後端用 Go、前端用 React。MyGo 負責建置 macOS、Windows 與 Linux 桌面版，以單一執行檔在 Web 視圖中執行；伺服器也能單獨執行，供瀏覽器存取。可依篩選條件與每週播出表瀏覽片庫，播放時支援字幕與跳過片頭，收藏清單與可接續播放的觀看紀錄都存在本機，不需帳號。",
+		"ja": "Go のバックエンドと React のフロントエンドで作られた個人向けのアニメ配信アプリ。MyGo が macOS・Windows・Linux 向けのデスクトップ版を Web ビューで動く単一バイナリとしてビルドし、サーバーは単体で動かしてブラウザから使うこともできます。絞り込みや週間放送スケジュールで作品を探し、字幕やイントロスキップ付きで再生でき、保存リストと続きから再生できる視聴履歴はアカウントなしでローカルに残ります。",
+		"ko": "Go 백엔드와 React 프런트엔드로 만든 개인용 애니메이션 스트리밍 앱입니다. MyGo가 macOS, Windows, Linux용 데스크톱 버전을 웹 뷰에서 실행되는 단일 바이너리로 빌드하며, 서버는 따로 실행해 브라우저에서 쓸 수도 있습니다. 필터와 주간 방영표로 작품을 찾고, 자막과 인트로 건너뛰기를 지원하는 플레이어로 보며, 저장 목록과 이어보기 기록은 계정 없이 로컬에 남습니다."
+	},
+	"icon": {
+		"file": "ohmyanime.webp"
+	},
+	"screenshot": "ohmyanime.webp",
+	"added": "2026-11-05T14:05:27Z"
+}
