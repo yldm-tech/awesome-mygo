@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ssmygo",
+	"name": "ssmygo",
+	"author": "thc5787-pixel",
+	"kind": "native",
+	"group": "network",
+	"url": "https://github.com/thc5787-pixel/ssmygo",
+	"repo": "thc5787-pixel/ssmygo",
+	"summary": {
+		"en": "A Shadowsocks proxy client with a tray menu, rule-based routing, subscriptions and QR code sharing.",
+		"zh-CN": "Shadowsocks 代理客户端：托盘菜单、按规则分流、订阅与二维码分享。",
+		"zh-TW": "Shadowsocks 代理用戶端：系統匣選單、依規則分流、訂閱與 QR 碼分享。",
+		"ja": "Shadowsocks クライアント。トレイメニュー、ルールによる振り分け、購読、QR 共有に対応。",
+		"ko": "트레이 메뉴, 규칙 기반 라우팅, 구독, QR 코드 공유를 갖춘 Shadowsocks 프록시 클라이언트."
+	},
+	"description": {
+		"en": "A Shadowsocks proxy client modeled on shadowsocks-windows, drawn with MyGo's native UI. It runs from a tray menu, keeps server configurations, routes traffic by rules, supports subscriptions and shares servers as QR codes.",
+		"zh-CN": "仿照 shadowsocks-windows 制作的 Shadowsocks 代理客户端，由 MyGo 原生 UI 绘制。它通过托盘菜单操作，可管理服务器配置、按规则分流流量、使用订阅，并能以二维码分享服务器。",
+		"zh-TW": "仿照 shadowsocks-windows 製作的 Shadowsocks 代理用戶端，由 MyGo 原生 UI 繪製。它透過系統匣選單操作，可管理伺服器設定、依規則分流流量、使用訂閱，並能以 QR 碼分享伺服器。",
+		"ja": "shadowsocks-windows にならって作られた Shadowsocks プロキシクライアントで、MyGo のネイティブ UI で描かれています。トレイメニューから操作し、サーバー設定の管理、ルールに基づくルーティング、サブスクリプション、QR コードによるサーバーの共有に対応します。",
+		"ko": "shadowsocks-windows를 본떠 만든 Shadowsocks 프록시 클라이언트로, MyGo의 네이티브 UI로 그렸습니다. 트레이 메뉴에서 동작하며 서버 설정 관리, 규칙 기반 라우팅, 구독, QR 코드로 서버 공유를 지원합니다."
+	},
+	"icon": {
+		"file": "ssmygo.webp"
+	},
+	"screenshot": "ssmygo.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-05T15:55:15Z"
+}
