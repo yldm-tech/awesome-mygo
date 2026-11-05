@@ -4,12 +4,22 @@
 	"name": "Upload Test",
 	"author": "yldm-tech",
 	"kind": "native",
+	"category": "UtilitiesApplication",
 	"url": "https://example.com/mygodock-upload-test",
 	"summary": {
-		"en": "A test of the submission form screenshot upload. To be closed, not merged."
+		"en": "A test entry for the submission form's screenshot upload, not a real app.",
+		"zh-CN": "测试提交表单截图上传的条目，并非真正的应用。",
+		"zh-TW": "測試提交表單截圖上傳的項目，並非真正的應用程式。",
+		"ja": "投稿フォームのスクリーンショットアップロードを試すテスト用エントリー。",
+		"ko": "제출 양식의 스크린샷 업로드를 시험하는 테스트 항목으로, 실제 앱이 아닙니다."
 	},
 	"description": {
-		"en": "A test of the submission form screenshot upload. To be closed, not merged."
+		"en": "A test entry for the submission form's screenshot upload, not a real app. The author states it is to be closed, not merged, and it has no README or MyGo configuration.",
+		"zh-CN": "用于测试提交表单截图上传的条目，并不是真正的应用。作者说明它会被关闭而不会合并，也没有 README 或 MyGo 配置。",
+		"zh-TW": "用來測試提交表單截圖上傳的項目，並不是真正的應用程式。作者說明它會被關閉而不會合併，也沒有 README 或 MyGo 設定檔。",
+		"ja": "投稿フォームのスクリーンショットアップロードを確かめるためのテスト用エントリーで、実際のアプリではありません。作者はマージせずに閉じる予定だとしており、README も MyGo の設定ファイルもありません。",
+		"ko": "제출 양식의 스크린샷 업로드를 시험하기 위한 테스트 항목으로, 실제 앱이 아닙니다. 작성자는 병합하지 않고 닫을 예정이라고 밝혔으며, README도 MyGo 설정 파일도 없습니다."
 	},
+	"screenshot": "upload-test.webp",
 	"added": "2026-11-05T02:13:46Z"
 }
