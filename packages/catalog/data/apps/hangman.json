@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "hangman",
+	"name": "Hangman",
+	"author": "zerebos",
+	"kind": "native",
+	"group": "game",
+	"url": "https://zerebos.github.io/hangman-mygo/",
+	"repo": "zerebos/hangman-mygo",
+	"summary": {
+		"en": "A hangman game with a hand-drawn gallows, animated guesses, synthesized sounds and word packs.",
+		"zh-CN": "Hangman 猜词游戏：手绘绞刑架、动画猜词、合成音效与多套词库。",
+		"zh-TW": "Hangman 猜字遊戲：手繪絞刑台、動畫猜字、合成音效與多套詞庫。",
+		"ja": "手描きの絞首台が動くハングマン。合成した効果音と単語パック付き。",
+		"ko": "손그림 교수대가 움직이는 행맨 게임. 합성 효과음과 단어 팩을 갖췄습니다."
+	},
+	"description": {
+		"en": "A Go port of a 2015 Java hangman game, drawn with MyGo's native UI for Windows, macOS and Linux; the same code also runs in a browser as WebAssembly. Guessed letters fly into place, the hand-drawn gallows draws itself on, and every sound is synthesized by the game. It comes with four word packs with clues and hints, opens your own word lists on the desktop and keeps lifetime stats.",
+		"zh-CN": "把 2015 年的 Java 版 Hangman 猜词游戏移植到 Go，用 MyGo 原生 UI 绘制，支持 Windows、macOS 与 Linux，同一份代码也能编译成 WebAssembly 在浏览器中运行。猜中的字母会飞到对应位置，手绘的绞刑架一笔笔画出，所有音效都由游戏自己合成。内置四套带分类与线索的词库，可使用提示，桌面版还能载入自己的词表，并记录累计战绩。",
+		"zh-TW": "把 2015 年的 Java 版 Hangman 猜字遊戲移植到 Go，以 MyGo 原生 UI 繪製，支援 Windows、macOS 與 Linux，同一份程式碼也能編譯成 WebAssembly 在瀏覽器中執行。猜中的字母會飛到對應位置，手繪的絞刑台一筆筆畫出，所有音效都由遊戲自行合成。內建四套附分類與線索的詞庫，可使用提示，桌面版還能載入自己的單字清單，並記錄累計戰績。",
+		"ja": "2015 年の Java 製ハングマンを Go に移植し、MyGo のネイティブ UI で描いた Windows・macOS・Linux 向けのゲーム。同じコードが WebAssembly としてブラウザーでも動きます。当てた文字はその位置へ飛び、手描きの絞首台は線を引くように現れ、効果音はすべてゲーム自身が合成します。カテゴリーと手がかり付きの単語パックを 4 種備え、ヒントも使え、デスクトップ版では自分の単語リストも読み込めて、通算成績を記録します。",
+		"ko": "2015년 Java 행맨 게임을 Go로 옮겨 MyGo의 네이티브 UI로 그린 Windows·macOS·Linux용 게임으로, 같은 코드가 WebAssembly로 브라우저에서도 돌아갑니다. 맞힌 글자는 제자리로 날아가고 손으로 그린 교수대가 한 획씩 그려지며, 효과음은 모두 게임이 직접 합성합니다. 카테고리와 단서가 담긴 단어 팩 네 개와 힌트를 제공하고, 데스크톱에서는 자신의 단어 목록을 불러올 수 있으며 누적 통계를 기록합니다."
+	},
+	"icon": {
+		"file": "hangman.webp"
+	},
+	"screenshot": "hangman.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-06T11:48:04Z"
+}
