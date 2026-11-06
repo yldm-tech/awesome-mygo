@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "nvr-status",
+	"name": "NVR Status",
+	"author": "dongsheng512",
+	"kind": "native",
+	"group": "devices",
+	"url": "https://github.com/dongsheng512/NVR-Status-Go",
+	"repo": "dongsheng512/NVR-Status-Go",
+	"summary": {
+		"en": "Checks Hikvision NVRs: cameras online, recordings, disks and sampled audio and video clips.",
+		"zh-CN": "海康威视 NVR 巡检工具：检查摄像头、录像、硬盘，并抽检音视频片段。",
+		"zh-TW": "海康威視 NVR 巡檢工具：檢查攝影機、錄影、硬碟，並抽檢影音片段。",
+		"ja": "Hikvision の NVR を点検。カメラ、録画、ディスクを確かめ、音声と映像も抽出検査。",
+		"ko": "Hikvision NVR 점검 도구. 카메라, 녹화, 디스크를 확인하고 영상과 음성을 샘플 검사합니다."
+	},
+	"description": {
+		"en": "A health checker for Hikvision NVRs drawn with MyGo's native UI, with no web view. It reads cameras, recording schedules, alarms and disks over ISAPI, pulls short RTSP clips through ffmpeg to check video and audio, and exports CSV or TXT reports it can compare over time. MyGo builds only this GUI; the headless agent with Prometheus metrics and the CLI are separate Go programs.",
+		"zh-CN": "海康威视 NVR 状态巡检工具，界面由 MyGo 原生绘制，没有 WebView。它通过 ISAPI 读取摄像头、录像计划、报警与硬盘状态，借助 ffmpeg 拉取短 RTSP 片段检查音视频，并导出 CSV 或 TXT 报告，可与历史结果对比。MyGo 只构建这个 GUI；带 Prometheus 指标的后台 Agent 和 CLI 是另外的 Go 程序。",
+		"zh-TW": "海康威視 NVR 狀態巡檢工具，介面由 MyGo 原生繪製，沒有 WebView。它透過 ISAPI 讀取攝影機、錄影排程、警報與硬碟狀態，藉由 ffmpeg 擷取短 RTSP 片段檢查影音，並匯出 CSV 或 TXT 報告，可與歷史結果比對。MyGo 只建置這個 GUI；附 Prometheus 指標的背景 Agent 與 CLI 是另外的 Go 程式。",
+		"ja": "Hikvision の NVR の状態を点検するツールで、画面は MyGo のネイティブ UI で描かれ、WebView はありません。ISAPI でカメラ、録画スケジュール、アラーム、ディスクの状態を読み取り、ffmpeg で短い RTSP クリップを取得して映像と音声を確かめ、CSV や TXT のレポートを書き出して過去の結果と比べられます。MyGo がビルドするのはこの GUI だけで、Prometheus メトリクスを出すバックグラウンド Agent と CLI は別の Go プログラムです。",
+		"ko": "Hikvision NVR의 상태를 점검하는 도구로, 화면은 MyGo의 네이티브 UI로 그리며 WebView가 없습니다. ISAPI로 카메라, 녹화 일정, 알람, 디스크 상태를 읽고 ffmpeg로 짧은 RTSP 클립을 받아 영상과 음성을 확인하며, CSV나 TXT 보고서를 내보내 지난 결과와 비교할 수 있습니다. MyGo가 빌드하는 것은 이 GUI뿐이며, Prometheus 지표를 내는 백그라운드 Agent와 CLI는 별도의 Go 프로그램입니다."
+	},
+	"icon": {
+		"file": "nvr-status.webp"
+	},
+	"screenshot": "nvr-status.webp",
+	"added": "2026-11-06T12:23:30Z"
+}
