@@ -1,0 +1,25 @@
+{
+	"$schema": "../schema/ai.schema.json",
+	"slug": "mygo-master",
+	"name": "mygo-master",
+	"author": "yldst-dev",
+	"summary": {
+		"en": "An agent skill for building and fixing MyGo desktop apps: up-to-date MyGo APIs, a clean architecture starter template, tuned motion values and a check script.",
+		"zh-CN": "用于构建和维护 MyGo 桌面应用的智能体技能，提供最新版 MyGo API、整洁架构起步模板、调校过的动效参数和检查脚本。",
+		"zh-TW": "用來建置與維護 MyGo 桌面應用程式的代理技能，提供最新版 MyGo API、整潔架構起始範本、調校過的動態參數和檢查腳本。",
+		"ja": "MyGo のデスクトップアプリを作り、保守するためのエージェントスキル。最新版 MyGo の API に沿った実装、クリーンアーキテクチャの雛形、調整済みのモーション値、検証スクリプトを備えます。",
+		"ko": "MyGo 데스크톱 앱을 만들고 고칠 때 쓰는 에이전트 스킬입니다. 최신 MyGo API, 클린 아키텍처 시작 템플릿, 다듬은 모션 값, 점검 스크립트를 담았습니다."
+	},
+	"repo": "yldst-dev/mygo-master",
+	"url": "https://github.com/yldst-dev/mygo-master",
+	"type": "skill",
+	"install": "npx skills add yldst-dev/mygo-master",
+	"tags": [
+		"skill",
+		"claude-code",
+		"architecture",
+		"motion"
+	],
+	"screenshot": "mygo-master.webp",
+	"added": "2026-11-06T11:48:04Z"
+}
