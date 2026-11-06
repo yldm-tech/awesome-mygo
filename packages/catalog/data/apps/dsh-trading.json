@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "dsh-trading",
+	"name": "dsh-trading",
+	"author": "zhu1090093659",
+	"kind": "web",
+	"group": "ai",
+	"url": "https://dsh-trading.win",
+	"repo": "zhu1090093659/dsh-trading",
+	"summary": {
+		"en": "AI trading terminal for crypto, US, China and Hong Kong markets; live orders need your approval.",
+		"zh-CN": "面向加密货币、美股、A 股和港股的 AI 交易终端，实盘下单须经你确认。",
+		"zh-TW": "支援加密貨幣、美股、A 股與港股的 AI 交易終端，實盤下單須經你確認。",
+		"ja": "暗号資産・米国株・中国A株・香港株に対応する AI トレード端末。実際の発注は手動で承認。",
+		"ko": "암호화폐, 미국, 중국, 홍콩 시장을 다루는 AI 트레이딩 터미널. 실주문은 직접 승인해야 합니다."
+	},
+	"description": {
+		"en": "The desktop build of dsh-trading, an AI trading terminal for crypto, US, China A-share, Hong Kong and futures markets, made with MyGo around its web frontend; the terminal also runs in the browser from the dsh CLI. AI agents research, draft trade plans and review risk beside the charts, and orders stay dry runs until live trading is turned on and each one is approved by hand.",
+		"zh-CN": "dsh-trading 的桌面版，由 MyGo 包装其 Web 前端；这款 AI 交易终端覆盖加密货币、美股、A 股、港股与国内商品期货，同一终端也可通过 dsh 命令行在浏览器中运行。图表旁的 AI 智能体负责研究标的、拟定交易计划并审查风险；下单默认只做模拟，须开启实盘交易并逐笔人工确认后才会真正下达。",
+		"zh-TW": "dsh-trading 的桌面版，以 MyGo 包裝其 Web 前端；這款 AI 交易終端涵蓋加密貨幣、美股、A 股、港股與中國商品期貨，同一終端也能透過 dsh 命令列在瀏覽器中執行。圖表旁的 AI 代理負責研究標的、擬定交易計畫並審查風險；下單預設僅為模擬，須開啟實盤交易並逐筆人工核准後才會真正送出。",
+		"ja": "dsh-trading のデスクトップ版で、Web フロントエンドを MyGo でアプリにしたもの。暗号資産、米国株、中国A株、香港株、中国の商品先物を扱う AI トレード端末で、同じ端末は dsh の CLI からブラウザでも動きます。チャートの横で AI エージェントが銘柄の調査、売買計画の作成、リスクの審査を行い、注文は既定でドライランのみ。ライブ取引を有効にし、1件ずつ手動で承認して初めて実際に発注されます。",
+		"ko": "dsh-trading의 데스크톱 버전으로, 웹 프런트엔드를 MyGo로 감쌌습니다. 암호화폐, 미국 주식, 중국 A주, 홍콩 주식, 중국 상품 선물을 다루는 AI 트레이딩 터미널이며, 같은 터미널을 dsh CLI로 브라우저에서도 실행할 수 있습니다. 차트 옆의 AI 에이전트가 종목을 조사하고 매매 계획을 세우고 위험을 검토하며, 주문은 기본적으로 모의 실행이고 실거래를 켠 뒤 한 건씩 직접 승인해야 실제로 나갑니다."
+	},
+	"icon": {
+		"file": "dsh-trading.webp"
+	},
+	"screenshot": "dsh-trading.webp",
+	"added": "2026-11-06T12:56:26Z"
+}
