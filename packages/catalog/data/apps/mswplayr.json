@@ -1,34 +1,36 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "mswplayr",
-	"name": "mswplayr",
-	"author": "Ahdeyyy",
-	"kind": "native",
-	"platforms": ["win"],
-	"category": "MultimediaApplication",
-	"group": "media",
-	"url": "https://github.com/Ahdeyyy/msw-player",
-	"repo": "Ahdeyyy/msw-player",
-	"summary": {
-		"en": "A native Windows video player on mpv: a folder library, resume and in-app subtitle search.",
-		"zh-CN": "基于 mpv 的原生 Windows 视频播放器：文件夹媒体库、续播与应用内字幕搜索。",
-		"zh-TW": "以 mpv 為核心的原生 Windows 影片播放器：資料夾媒體庫、續播與程式內字幕搜尋。",
-		"ja": "mpv ベースの Windows 向けネイティブ動画プレーヤー。ライブラリ、続き再生、字幕検索付き。",
-		"ko": "mpv 기반 네이티브 Windows 동영상 플레이어. 폴더 라이브러리, 이어 보기, 자막 검색."
-	},
-	"description": {
-		"en": "A Windows x64 video player whose interface is drawn with MyGo's native UI, while mpv decodes the video and renders it into an embedded window. Add folders to build a library with thumbnails, and watched videos resume where you left off. Subtitles are found, downloaded and loaded inside the app from the public OpenSubtitles add-on, with no API key needed.",
-		"zh-CN": "面向 Windows x64 的视频播放器，界面由 MyGo 原生 UI 绘制，视频则交给 mpv 解码并渲染到内嵌窗口中。添加文件夹即可建立带缩略图的媒体库，看过的视频会从上次停下的位置继续播放。字幕可在应用内通过公开的 OpenSubtitles 插件搜索、下载并加载，无需 API 密钥。",
-		"zh-TW": "適用於 Windows x64 的影片播放器，介面由 MyGo 原生 UI 繪製，影片則交給 mpv 解碼並算繪到內嵌視窗中。加入資料夾即可建立附縮圖的媒體庫，看過的影片會從上次停下的位置繼續播放。字幕可在程式內透過公開的 OpenSubtitles 外掛搜尋、下載並載入，不需要 API 金鑰。",
-		"ja": "Windows x64 向けの動画プレーヤー。画面は MyGo のネイティブ UI で描かれ、動画の再生は mpv が受け持ち、埋め込みウィンドウに描画します。フォルダーを追加するとサムネイル付きのライブラリができ、見たことのある動画は前回の位置から再生されます。字幕は公開の OpenSubtitles アドオンを使ってアプリ内で検索・ダウンロード・読み込みができ、API キーは不要です。",
-		"ko": "Windows x64용 동영상 플레이어입니다. 화면은 MyGo의 네이티브 UI로 그리고, 동영상은 mpv가 디코딩해 내장 창에 렌더링합니다. 폴더를 추가하면 썸네일이 붙은 라이브러리가 만들어지고, 본 적 있는 동영상은 멈춘 위치부터 이어서 재생됩니다. 자막은 공개 OpenSubtitles 애드온을 통해 앱 안에서 검색하고 내려받아 바로 불러오며, API 키가 필요 없습니다."
-	},
-	"icon": {
-		"file": "mswplayr.webp"
-	},
-	"screenshot": "mswplayr.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T05:38:23Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "mswplayr",
+  "name": "mswplayr",
+  "author": "Ahdeyyy",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "category": "MultimediaApplication",
+  "group": "media",
+  "url": "https://github.com/Ahdeyyy/msw-player",
+  "repo": "Ahdeyyy/msw-player",
+  "summary": {
+    "en": "A native Windows video player on mpv: a folder library, resume and in-app subtitle search.",
+    "zh-CN": "基于 mpv 的原生 Windows 视频播放器：文件夹媒体库、续播与应用内字幕搜索。",
+    "zh-TW": "以 mpv 為核心的原生 Windows 影片播放器：資料夾媒體庫、續播與程式內字幕搜尋。",
+    "ja": "mpv ベースの Windows 向けネイティブ動画プレーヤー。ライブラリ、続き再生、字幕検索付き。",
+    "ko": "mpv 기반 네이티브 Windows 동영상 플레이어. 폴더 라이브러리, 이어 보기, 자막 검색."
+  },
+  "description": {
+    "en": "A Windows x64 video player whose interface is drawn with MyGo's native UI, while mpv decodes the video and renders it into an embedded window. Add folders to build a library with thumbnails, and watched videos resume where you left off. Subtitles are found, downloaded and loaded inside the app from the public OpenSubtitles add-on, with no API key needed.",
+    "zh-CN": "面向 Windows x64 的视频播放器，界面由 MyGo 原生 UI 绘制，视频则交给 mpv 解码并渲染到内嵌窗口中。添加文件夹即可建立带缩略图的媒体库，看过的视频会从上次停下的位置继续播放。字幕可在应用内通过公开的 OpenSubtitles 插件搜索、下载并加载，无需 API 密钥。",
+    "zh-TW": "適用於 Windows x64 的影片播放器，介面由 MyGo 原生 UI 繪製，影片則交給 mpv 解碼並算繪到內嵌視窗中。加入資料夾即可建立附縮圖的媒體庫，看過的影片會從上次停下的位置繼續播放。字幕可在程式內透過公開的 OpenSubtitles 外掛搜尋、下載並載入，不需要 API 金鑰。",
+    "ja": "Windows x64 向けの動画プレーヤー。画面は MyGo のネイティブ UI で描かれ、動画の再生は mpv が受け持ち、埋め込みウィンドウに描画します。フォルダーを追加するとサムネイル付きのライブラリができ、見たことのある動画は前回の位置から再生されます。字幕は公開の OpenSubtitles アドオンを使ってアプリ内で検索・ダウンロード・読み込みができ、API キーは不要です。",
+    "ko": "Windows x64용 동영상 플레이어입니다. 화면은 MyGo의 네이티브 UI로 그리고, 동영상은 mpv가 디코딩해 내장 창에 렌더링합니다. 폴더를 추가하면 썸네일이 붙은 라이브러리가 만들어지고, 본 적 있는 동영상은 멈춘 위치부터 이어서 재생됩니다. 자막은 공개 OpenSubtitles 애드온을 통해 앱 안에서 검색하고 내려받아 바로 불러오며, API 키가 필요 없습니다."
+  },
+  "icon": {
+    "file": "mswplayr.webp"
+  },
+  "screenshot": "mswplayr.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T05:38:23Z"
 }
