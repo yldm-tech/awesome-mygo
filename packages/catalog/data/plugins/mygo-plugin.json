@@ -1,0 +1,24 @@
+{
+	"$schema": "../schema/plugin.schema.json",
+	"slug": "mygo-plugin",
+	"name": "mygo-plugin",
+	"mark": "mp",
+	"official": false,
+	"surface": "native",
+	"import": "github.com/yxxbc/mygo-plugin",
+	"tags": [
+		"plugins",
+		"host",
+		"moejs",
+		"sandbox"
+	],
+	"docs": "https://github.com/yxxbc/mygo-plugin",
+	"summary": {
+		"en": "A native plugin host for MyGo apps: installs plugin.json modules and runs each in its own moejs runtime, with permissions, storage, timeouts and a CLI, while the host draws the UI with MyGo's native views.",
+		"zh-CN": "面向 MyGo 应用的原生插件宿主：安装 plugin.json 插件，每个插件在自己的 moejs 运行时中执行，提供权限、存储、超时和 CLI；界面仍由宿主用 MyGo 原生视图绘制。",
+		"zh-TW": "面向 MyGo 應用程式的原生外掛宿主：安裝 plugin.json 外掛，每個外掛在自己的 moejs 執行環境中執行，提供權限、儲存、逾時與 CLI；介面仍由宿主以 MyGo 原生檢視繪製。",
+		"ja": "MyGo アプリ向けのネイティブなプラグインホスト。plugin.json のプラグインをインストールし、それぞれ専用の moejs ランタイムで実行。権限、ストレージ、タイムアウト、CLI を備え、UI はホストの MyGo ネイティブビューが描画します。",
+		"ko": "MyGo 앱을 위한 네이티브 플러그인 호스트입니다. plugin.json 플러그인을 설치하고 각 플러그인을 전용 moejs 런타임에서 실행하며, 권한, 저장소, 타임아웃, CLI를 제공합니다. UI는 호스트의 MyGo 네이티브 뷰가 그립니다."
+	},
+	"added": "2026-11-07T04:54:44Z"
+}
