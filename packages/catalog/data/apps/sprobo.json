@@ -1,34 +1,36 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "sprobo",
-	"name": "SpRobo",
-	"author": "Killow1998",
-	"kind": "native",
-	"platforms": ["linux"],
-	"category": "DeveloperApplication",
-	"group": "dev",
-	"url": "https://github.com/Killow1998/simple_rbt",
-	"repo": "Killow1998/simple_rbt",
-	"summary": {
-		"en": "Console for the simple_rbt MuJoCo robot simulator: set up robots, terrain and sensors, then drive.",
-		"zh-CN": "simple_rbt 机器人仿真器的控制台：配置机器人、地形与传感器后操控。",
-		"zh-TW": "simple_rbt 機器人模擬器的控制台：設定機器人、地形與感測器後操控。",
-		"ja": "simple_rbt ロボットシミュレーターのコンソール。ロボット、地形、センサーを設定して操縦。",
-		"ko": "simple_rbt 로봇 시뮬레이터용 콘솔. 로봇, 지형, 센서를 설정하고 조종합니다."
-	},
-	"description": {
-		"en": "SpRobo is the operator console of simple_rbt, drawn with MyGo's native UI; the simulator core, with its physics, sensors and ROS adapters, is C++ on MuJoCo. Pick a robot such as Go2 or the Franka Panda arm, a terrain and sensors, place sensor mounts in a live 3D view, then drive by keyboard and joystick or hand control to ROS 1, ROS 2 or a program. Packaged for Ubuntu 22.04 amd64.",
-		"zh-CN": "SpRobo 是 simple_rbt 的操作控制台，用 MyGo 原生 UI 绘制；仿真器本身，包括物理、传感器和 ROS 适配器，则是基于 MuJoCo 的 C++ 程序。选择 Go2、Franka Panda 机械臂等机器人，配好地形和传感器，在实时 3D 视图中调整传感器安装位置，然后用键盘和摇杆驾驶，或把控制权交给 ROS 1、ROS 2 或外部程序。安装包面向 Ubuntu 22.04 amd64。",
-		"zh-TW": "SpRobo 是 simple_rbt 的操作控制台，以 MyGo 原生 UI 繪製；模擬器本身，包括物理、感測器和 ROS 轉接器，則是以 MuJoCo 為基礎的 C++ 程式。選擇 Go2、Franka Panda 機械手臂等機器人，設定地形與感測器，在即時 3D 視圖中調整感測器安裝位置，接著用鍵盤和搖桿操控，或把控制權交給 ROS 1、ROS 2 或外部程式。安裝套件以 Ubuntu 22.04 amd64 為對象。",
-		"ja": "SpRobo は simple_rbt の操作コンソールで、MyGo のネイティブ UI で描かれています。物理演算、センサー、ROS アダプターを含むシミュレーター本体は MuJoCo ベースの C++ です。Go2 や Franka Panda アームなどのロボット、地形、センサーを選び、ライブ 3D ビューでセンサーの取り付け位置を調整してから、キーボードとジョイスティックで操縦するか、制御を ROS 1、ROS 2 または外部プログラムに渡せます。パッケージは Ubuntu 22.04 amd64 向けです。",
-		"ko": "SpRobo는 simple_rbt의 조작 콘솔로, MyGo의 네이티브 UI로 그렸습니다. 물리, 센서, ROS 어댑터를 포함한 시뮬레이터 본체는 MuJoCo 기반 C++로 작성되었습니다. Go2나 Franka Panda 암 같은 로봇과 지형, 센서를 고르고 실시간 3D 뷰에서 센서 장착 위치를 조정한 뒤 키보드와 조이스틱으로 조종하거나 제어를 ROS 1, ROS 2 또는 외부 프로그램에 넘길 수 있습니다. 패키지는 Ubuntu 22.04 amd64용입니다."
-	},
-	"icon": {
-		"file": "sprobo.webp"
-	},
-	"provisional": [
-		"screenshot"
-	],
-	"screenshot": "sprobo.webp",
-	"added": "2026-11-05T04:00:52Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "sprobo",
+  "name": "SpRobo",
+  "author": "Killow1998",
+  "kind": "native",
+  "platforms": [
+    "linux"
+  ],
+  "category": "DeveloperApplication",
+  "group": "dev",
+  "url": "https://github.com/Killow1998/simple_rbt",
+  "repo": "Killow1998/simple_rbt",
+  "summary": {
+    "en": "Console for the simple_rbt MuJoCo robot simulator: set up robots, terrain and sensors, then drive.",
+    "zh-CN": "simple_rbt 机器人仿真器的控制台：配置机器人、地形与传感器后操控。",
+    "zh-TW": "simple_rbt 機器人模擬器的控制台：設定機器人、地形與感測器後操控。",
+    "ja": "simple_rbt ロボットシミュレーターのコンソール。ロボット、地形、センサーを設定して操縦。",
+    "ko": "simple_rbt 로봇 시뮬레이터용 콘솔. 로봇, 지형, 센서를 설정하고 조종합니다."
+  },
+  "description": {
+    "en": "SpRobo is the operator console of simple_rbt, drawn with MyGo's native UI; the simulator core, with its physics, sensors and ROS adapters, is C++ on MuJoCo. Pick a robot such as Go2 or the Franka Panda arm, a terrain and sensors, place sensor mounts in a live 3D view, then drive by keyboard and joystick or hand control to ROS 1, ROS 2 or a program. Packaged for Ubuntu 22.04 amd64.",
+    "zh-CN": "SpRobo 是 simple_rbt 的操作控制台，用 MyGo 原生 UI 绘制；仿真器本身，包括物理、传感器和 ROS 适配器，则是基于 MuJoCo 的 C++ 程序。选择 Go2、Franka Panda 机械臂等机器人，配好地形和传感器，在实时 3D 视图中调整传感器安装位置，然后用键盘和摇杆驾驶，或把控制权交给 ROS 1、ROS 2 或外部程序。安装包面向 Ubuntu 22.04 amd64。",
+    "zh-TW": "SpRobo 是 simple_rbt 的操作控制台，以 MyGo 原生 UI 繪製；模擬器本身，包括物理、感測器和 ROS 轉接器，則是以 MuJoCo 為基礎的 C++ 程式。選擇 Go2、Franka Panda 機械手臂等機器人，設定地形與感測器，在即時 3D 視圖中調整感測器安裝位置，接著用鍵盤和搖桿操控，或把控制權交給 ROS 1、ROS 2 或外部程式。安裝套件以 Ubuntu 22.04 amd64 為對象。",
+    "ja": "SpRobo は simple_rbt の操作コンソールで、MyGo のネイティブ UI で描かれています。物理演算、センサー、ROS アダプターを含むシミュレーター本体は MuJoCo ベースの C++ です。Go2 や Franka Panda アームなどのロボット、地形、センサーを選び、ライブ 3D ビューでセンサーの取り付け位置を調整してから、キーボードとジョイスティックで操縦するか、制御を ROS 1、ROS 2 または外部プログラムに渡せます。パッケージは Ubuntu 22.04 amd64 向けです。",
+    "ko": "SpRobo는 simple_rbt의 조작 콘솔로, MyGo의 네이티브 UI로 그렸습니다. 물리, 센서, ROS 어댑터를 포함한 시뮬레이터 본체는 MuJoCo 기반 C++로 작성되었습니다. Go2나 Franka Panda 암 같은 로봇과 지형, 센서를 고르고 실시간 3D 뷰에서 센서 장착 위치를 조정한 뒤 키보드와 조이스틱으로 조종하거나 제어를 ROS 1, ROS 2 또는 외부 프로그램에 넘길 수 있습니다. 패키지는 Ubuntu 22.04 amd64용입니다."
+  },
+  "icon": {
+    "file": "sprobo.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "sprobo.webp",
+  "added": "2026-11-05T04:00:52Z"
 }
