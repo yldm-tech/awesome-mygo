@@ -1,0 +1,31 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ytmgo",
+	"name": "ytmGO",
+	"author": "mreasonyang",
+	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
+	"category": "MultimediaApplication",
+	"group": "media",
+	"url": "https://ytmgo.kyun.si/",
+	"repo": "mreasonyang/ytmgo",
+	"summary": {
+		"en": "A cross-platform native YouTube Music desktop client built with Go and MyGo.",
+		"zh-CN": "用 Go 与 MyGo 构建的跨平台原生 YouTube Music 桌面客户端。",
+		"zh-TW": "以 Go 與 MyGo 打造的跨平台原生 YouTube Music 桌面用戶端。",
+		"ja": "Go と MyGo で作られたクロスプラットフォームのネイティブ YouTube Music デスクトップクライアント。",
+		"ko": "Go와 MyGo로 만든 크로스 플랫폼 네이티브 YouTube Music 데스크톱 클라이언트."
+	},
+	"description": {
+		"en": "A native Go and MyGo YouTube Music client for macOS, Windows and Linux, with synced lyrics, on-demand music video, search, playlists, library browsing, media keys, system Now Playing controls, encrypted account sessions and signed in-app updates.",
+		"zh-CN": "用 Go 与 MyGo 编写的 macOS、Windows 和 Linux 原生 YouTube Music 客户端，支持同步歌词、按需音乐视频、搜索、播放列表、资料库浏览、媒体键、系统播放控制、加密账号会话和签名应用内更新。",
+		"zh-TW": "以 Go 與 MyGo 編寫的 macOS、Windows 與 Linux 原生 YouTube Music 用戶端，支援同步歌詞、隨選音樂影片、搜尋、播放清單、資料庫瀏覽、媒體鍵、系統播放控制、加密帳號工作階段與簽名應用程式內更新。",
+		"ja": "Go と MyGo で作られた macOS・Windows・Linux 向けネイティブ YouTube Music クライアント。同期歌詞、オンデマンドの音楽ビデオ、検索、プレイリスト、ライブラリ、メディアキー、システムの Now Playing 操作、暗号化アカウントセッション、署名付きアプリ内更新に対応します。",
+		"ko": "Go와 MyGo로 만든 macOS·Windows·Linux용 네이티브 YouTube Music 클라이언트입니다. 동기화 가사, 주문형 뮤직 비디오, 검색, 재생목록, 보관함 탐색, 미디어 키, 시스템 Now Playing 제어, 암호화된 계정 세션과 서명된 앱 내 업데이트를 지원합니다."
+	},
+	"icon": {
+		"file": "ytmgo.webp"
+	},
+	"screenshot": "ytmgo.webp",
+	"added": "2026-11-07T22:18:29Z"
+}
