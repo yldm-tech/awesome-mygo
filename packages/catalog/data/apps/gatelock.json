@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "gatelock",
+	"name": "Gatelock",
+	"author": "nomyfan",
+	"kind": "native",
+	"group": "agents",
+	"url": "https://github.com/nomyfan/gatelock",
+	"repo": "nomyfan/gatelock",
+	"summary": {
+		"en": "Keeps credentials encrypted with age and hands them to coding agents one command at a time.",
+		"zh-CN": "用 age 加密保存凭据，按命令逐次交给编码代理使用。",
+		"zh-TW": "以 age 加密保存憑證，依指令逐次交給程式設計代理使用。",
+		"ja": "認証情報を age で暗号化して保管し、コマンドごとにコーディングエージェントへ渡す。",
+		"ko": "자격 증명을 age로 암호화해 보관하고 명령 하나씩 코딩 에이전트에 넘겨 줍니다."
+	},
+	"description": {
+		"en": "A macOS app built with MyGo that keeps the credentials commands need in vaults encrypted with age. A coding agent runs gatelock run <vault> -- <command>, and after Touch ID or the passphrase the command gets the vault's env, with the values masked in its output. The app records each command run, so you can watch it and stop it.",
+		"zh-CN": "用 MyGo 构建的 macOS 应用，把命令所需的凭据存放在以 age 加密的保险库中。编码代理通过 gatelock run <vault> -- <command> 运行命令，经 Touch ID 或口令验证后，命令会获得保险库中的环境变量，输出里的这些值会被遮蔽。应用记录每一次运行的命令，可以随时查看并终止。",
+		"zh-TW": "以 MyGo 打造的 macOS 應用程式，把指令所需的憑證存放在以 age 加密的保險庫中。程式設計代理透過 gatelock run <vault> -- <command> 執行指令，經 Touch ID 或密語驗證後，指令會取得保險庫中的環境變數，輸出裡的這些值會被遮蔽。應用程式記錄每一次執行的指令，可以隨時查看並終止。",
+		"ja": "MyGo で作られた macOS アプリで、コマンドが必要とする認証情報を age で暗号化したボールトに保管します。コーディングエージェントが gatelock run <vault> -- <command> を実行すると、Touch ID かパスフレーズで確認したあと、ボールトの環境変数を加えてコマンドが動き、その値は出力の中で伏せられます。実行されたコマンドはアプリに記録され、様子を見たり止めたりできます。",
+		"ko": "MyGo로 만든 macOS 앱으로, 명령에 필요한 자격 증명을 age로 암호화한 볼트에 보관합니다. 코딩 에이전트가 gatelock run <vault> -- <command>를 실행하면 Touch ID나 암호 확인 후 볼트의 환경 변수가 더해진 채 명령이 실행되고, 출력에서는 그 값이 가려집니다. 앱이 실행된 명령을 하나하나 기록하므로 지켜보다가 중지할 수 있습니다."
+	},
+	"icon": {
+		"file": "gatelock.webp"
+	},
+	"screenshot": "gatelock.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-07T08:59:06Z"
+}
