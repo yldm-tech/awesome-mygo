@@ -1,6 +1,6 @@
 import { DEFAULT_LANG, t } from '@awesome-mygo/catalog';
 import { createFileRoute } from '@tanstack/react-router';
-import { useMemo, useState } from 'react';
+import { type PointerEvent, useMemo, useState } from 'react';
 import { useLang, useT } from '../lib/lang';
 import { MetricsRange, number, pathLabel, shortDay, useMetrics } from '../lib/metrics';
 import { SITE_NAME } from '../lib/seo';
@@ -25,6 +25,7 @@ function MetricCard({ label, value, accent = false }: { label: string; value: st
 }
 
 function ViewChart({ days, locale }: { days: { day: string; views: number }[]; locale: string }) {
+	const [activeIndex, setActiveIndex] = useState<number | null>(null);
 	const width = 860;
 	const height = 280;
 	const left = 24;
@@ -39,22 +40,36 @@ function ViewChart({ days, locale }: { days: { day: string; views: number }[]; l
 	const line = points.map((p) => `${p.x},${p.y}`).join(' ');
 	const area = points.length > 0 ? `${left},${top + plotHeight} ${line} ${left + plotWidth},${top + plotHeight}` : '';
 	const labels = days.filter((_, i) => i === 0 || i === days.length - 1 || i === Math.floor(days.length / 2));
+	const activePoint = activeIndex === null ? undefined : points[activeIndex];
+	const setActiveFromPointer = (event: PointerEvent<SVGSVGElement>) => {
+		if (days.length === 0) return;
+		const bounds = event.currentTarget.getBoundingClientRect();
+		const viewX = ((event.clientX - bounds.left) / bounds.width) * width;
+		const normalized = (viewX - left) / plotWidth;
+		const index = days.length <= 1 ? 0 : Math.round(Math.max(0, Math.min(1, normalized)) * (days.length - 1));
+		setActiveIndex(index);
+	};
 	return (
 		<div className='relative min-h-[280px] overflow-hidden rounded-[14px] border border-line-2 bg-bg/45 p-3'>
-			<svg viewBox={`0 0 ${width} ${height}`} role='img' aria-label='Page views over time' className='block h-auto w-full'>
+			{activePoint && activeIndex !== null && <div className='pointer-events-none absolute top-3 z-10 -translate-x-1/2 rounded-lg border border-cyan/35 bg-panel/95 px-3 py-2 text-center font-mono text-[11px] shadow-[0_8px_24px_rgba(0,0,0,0.28)]' style={{ left: `${(activePoint.x / width) * 100}%` }}>
+				<div className='text-fg-3'>{shortDay(days[activeIndex]?.day ?? '', locale)}</div>
+				<div className='mt-0.5 text-[15px] font-bold text-cyan'>{number(days[activeIndex]?.views ?? 0, locale)}</div>
+			</div>}
+			<svg viewBox={`0 0 ${width} ${height}`} role='img' aria-label='Page views over time' className='block h-auto w-full' onPointerMove={setActiveFromPointer} onPointerLeave={() => setActiveIndex(null)}>
 				<defs>
 					<linearGradient id='metrics-area' x1='0' y1='0' x2='0' y2='1'>
 						<stop offset='0%' stopColor='#3fd3f5' stopOpacity='0.32' />
 						<stop offset='100%' stopColor='#3fd3f5' stopOpacity='0' />
 					</linearGradient>
 				</defs>
+				<rect width={width} height={height} fill='transparent' pointerEvents='all' />
 				{[0, 0.5, 1].map((fraction) => {
 					const y = top + plotHeight * fraction;
 					return <line key={fraction} x1={left} x2={left + plotWidth} y1={y} y2={y} stroke='currentColor' strokeOpacity='0.12' strokeDasharray='3 7' />;
 				})}
-				{area && <polygon points={area} fill='url(#metrics-area)' />}
-				{line && <polyline points={line} fill='none' stroke='#3fd3f5' strokeWidth='4' strokeLinecap='round' strokeLinejoin='round' />}
-				{points.map((p, i) => <circle key={days[i]?.day} cx={p.x} cy={p.y} r={days.length > 45 ? 2.5 : 4} fill='#0b0d10' stroke='#3fd3f5' strokeWidth='2' />)}
+				{area && <polygon points={area} fill='url(#metrics-area)' className='metrics-chart-area motion-safe:animate-[metrics-area-in_0.8s_ease-out_both] motion-reduce:animate-none' />}
+				{line && <polyline points={line} pathLength='1' fill='none' stroke='#3fd3f5' strokeWidth='4' strokeLinecap='round' strokeLinejoin='round' className='metrics-chart-line motion-safe:animate-[metrics-line-draw_1.1s_cubic-bezier(0.2,0.7,0.2,1)_both] motion-reduce:animate-none' />}
+				{points.map((p, i) => <circle key={days[i]?.day} cx={p.x} cy={p.y} r={activeIndex === i ? (days.length > 45 ? 4 : 6) : days.length > 45 ? 2.5 : 4} fill={activeIndex === i ? '#3fd3f5' : '#0b0d10'} stroke='#3fd3f5' strokeWidth='2' className='metrics-chart-point motion-safe:animate-[metrics-point-pop_0.35s_ease-out_both] motion-reduce:animate-none' style={{ animationDelay: `${Math.min(i * 22, 420)}ms` }} />)}
 			</svg>
 			<div className='pointer-events-none absolute inset-x-4 bottom-2 flex justify-between font-mono text-[11px] text-fg-3'>
 				{labels.map((d) => <span key={d.day}>{shortDay(d.day, locale)}</span>)}
