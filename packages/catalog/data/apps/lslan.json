@@ -1,33 +1,36 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "lslan",
-	"name": "lslan",
-	"author": "xiyaowong",
-	"kind": "native",
-	"platforms": ["win", "mac"],
-	"group": "system",
-	"url": "https://github.com/xiyaowong/lslan",
-	"repo": "xiyaowong/lslan",
-	"summary": {
-		"en": "A Windows LAN scanner that finds devices and open ports, with Ping, Tracert and Wake-on-LAN.",
-		"zh-CN": "Windows 局域网扫描：查设备和开放端口，带 Ping、Tracert、远程唤醒。",
-		"zh-TW": "Windows 區域網路掃描：查裝置和開放埠，附 Ping、Tracert、遠端喚醒。",
-		"ja": "Windows 用 LAN スキャナー。機器と開放ポートを探し、Ping や Wake-on-LAN も。",
-		"ko": "Windows LAN 스캐너. 기기와 열린 포트를 찾고 Ping과 Wake-on-LAN 지원."
-	},
-	"description": {
-		"en": "A LAN scanner for 64-bit Windows, drawn with MyGo's native UI. It finds hosts on the subnet over ICMP, ARP and mDNS, lists their IP, MAC, vendor and host name, and recognizes routers, NAS boxes and printers. For a selected device it checks common open ports, browses SMB shares, tests telnet connections, runs Ping and Tracert, and can wake it with Wake-on-LAN.",
-		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 64 位局域网扫描工具。它通过 ICMP、ARP 和 mDNS 探测网段内的主机，列出 IP、MAC、厂商与主机名，并识别路由器、NAS、打印机等设备。选中设备后可查看常用端口的开放状态、浏览 SMB 共享、测试 telnet 连接，直接发起 Ping 和 Tracert，或用 Wake-on-LAN 远程唤醒。",
-		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 64 位元區域網路掃描工具。它透過 ICMP、ARP 和 mDNS 探測網段內的主機，列出 IP、MAC、廠商與主機名稱，並辨識路由器、NAS、印表機等裝置。選取裝置後可查看常用連接埠的開放狀態、瀏覽 SMB 共用、測試 telnet 連線，直接發起 Ping 和 Tracert，或以 Wake-on-LAN 遠端喚醒。",
-		"ja": "MyGo のネイティブ UI で描かれた、64 ビット Windows 向けの LAN スキャナー。ICMP・ARP・mDNS でネットワーク内のホストを探し、IP、MAC、メーカー、ホスト名を表示して、ルーター、NAS、プリンターなどを識別します。選んだ機器について主要ポートの開放状況の確認、SMB 共有の閲覧、telnet 接続テスト、Ping と Tracert の実行ができ、Wake-on-LAN で起動することもできます。",
-		"ko": "MyGo의 네이티브 UI로 그린 64비트 Windows용 LAN 스캐너입니다. ICMP, ARP, mDNS로 네트워크의 호스트를 찾아 IP, MAC, 제조사, 호스트 이름을 보여 주고 공유기, NAS, 프린터 등을 알아봅니다. 선택한 기기의 주요 포트 개방 여부를 확인하고 SMB 공유를 둘러보거나 telnet 연결을 테스트하며, Ping과 Tracert를 실행하고 Wake-on-LAN으로 깨울 수 있습니다."
-	},
-	"icon": {
-		"file": "lslan.webp"
-	},
-	"screenshot": "lslan.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T14:23:33Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "lslan",
+  "name": "lslan",
+  "author": "xiyaowong",
+  "kind": "native",
+  "platforms": [
+    "win",
+    "mac"
+  ],
+  "group": "system",
+  "url": "https://github.com/xiyaowong/lslan",
+  "repo": "xiyaowong/lslan",
+  "summary": {
+    "en": "A Windows LAN scanner that finds devices and open ports, with Ping, Tracert and Wake-on-LAN.",
+    "zh-CN": "Windows 局域网扫描：查设备和开放端口，带 Ping、Tracert、远程唤醒。",
+    "zh-TW": "Windows 區域網路掃描：查裝置和開放埠，附 Ping、Tracert、遠端喚醒。",
+    "ja": "Windows 用 LAN スキャナー。機器と開放ポートを探し、Ping や Wake-on-LAN も。",
+    "ko": "Windows LAN 스캐너. 기기와 열린 포트를 찾고 Ping과 Wake-on-LAN 지원."
+  },
+  "description": {
+    "en": "A LAN scanner for 64-bit Windows, drawn with MyGo's native UI. It finds hosts on the subnet over ICMP, ARP and mDNS, lists their IP, MAC, vendor and host name, and recognizes routers, NAS boxes and printers. For a selected device it checks common open ports, browses SMB shares, tests telnet connections, runs Ping and Tracert, and can wake it with Wake-on-LAN.",
+    "zh-CN": "用 MyGo 原生 UI 绘制的 Windows 64 位局域网扫描工具。它通过 ICMP、ARP 和 mDNS 探测网段内的主机，列出 IP、MAC、厂商与主机名，并识别路由器、NAS、打印机等设备。选中设备后可查看常用端口的开放状态、浏览 SMB 共享、测试 telnet 连接，直接发起 Ping 和 Tracert，或用 Wake-on-LAN 远程唤醒。",
+    "zh-TW": "用 MyGo 原生 UI 繪製的 Windows 64 位元區域網路掃描工具。它透過 ICMP、ARP 和 mDNS 探測網段內的主機，列出 IP、MAC、廠商與主機名稱，並辨識路由器、NAS、印表機等裝置。選取裝置後可查看常用連接埠的開放狀態、瀏覽 SMB 共用、測試 telnet 連線，直接發起 Ping 和 Tracert，或以 Wake-on-LAN 遠端喚醒。",
+    "ja": "MyGo のネイティブ UI で描かれた、64 ビット Windows 向けの LAN スキャナー。ICMP・ARP・mDNS でネットワーク内のホストを探し、IP、MAC、メーカー、ホスト名を表示して、ルーター、NAS、プリンターなどを識別します。選んだ機器について主要ポートの開放状況の確認、SMB 共有の閲覧、telnet 接続テスト、Ping と Tracert の実行ができ、Wake-on-LAN で起動することもできます。",
+    "ko": "MyGo의 네이티브 UI로 그린 64비트 Windows용 LAN 스캐너입니다. ICMP, ARP, mDNS로 네트워크의 호스트를 찾아 IP, MAC, 제조사, 호스트 이름을 보여 주고 공유기, NAS, 프린터 등을 알아봅니다. 선택한 기기의 주요 포트 개방 여부를 확인하고 SMB 공유를 둘러보거나 telnet 연결을 테스트하며, Ping과 Tracert를 실행하고 Wake-on-LAN으로 깨울 수 있습니다."
+  },
+  "icon": {
+    "file": "lslan.webp"
+  },
+  "screenshot": "lslan.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T14:23:33Z"
 }
