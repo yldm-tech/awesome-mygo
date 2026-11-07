@@ -28,9 +28,6 @@
   "icon": {
     "file": "sprobo.webp"
   },
-  "provisional": [
-    "icon"
-  ],
   "screenshot": "sprobo.webp",
   "added": "2026-11-05T04:00:52Z"
 }

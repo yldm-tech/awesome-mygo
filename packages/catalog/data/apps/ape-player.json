@@ -25,9 +25,6 @@
 	"icon": {
 		"file": "ape-player.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "ape-player.webp",
 	"added": "2026-11-06T09:35:08Z"
 }

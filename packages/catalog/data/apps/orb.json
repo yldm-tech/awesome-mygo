@@ -29,9 +29,6 @@
   "icon": {
     "file": "orb.webp"
   },
-  "provisional": [
-    "icon"
-  ],
   "screenshot": "orb.webp",
   "added": "2026-11-06T09:35:08Z"
 }
