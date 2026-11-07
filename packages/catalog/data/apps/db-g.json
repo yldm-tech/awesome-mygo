@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "db-g",
+	"name": "DB-G",
+	"author": "Kuangcp",
+	"kind": "native",
+	"group": "dev",
+	"url": "https://github.com/Kuangcp/DB-G",
+	"repo": "Kuangcp/DB-G",
+	"summary": {
+		"en": "A desktop client for SQLite, MySQL, PostgreSQL and ClickHouse with SQL consoles and completion.",
+		"zh-CN": "SQLite、MySQL、PostgreSQL、ClickHouse 桌面数据库客户端。",
+		"zh-TW": "SQLite、MySQL、PostgreSQL、ClickHouse 桌面資料庫用戶端。",
+		"ja": "SQLite・MySQL・PostgreSQL・ClickHouse 対応のデータベースクライアント。",
+		"ko": "SQLite, MySQL, PostgreSQL, ClickHouse용 DB 클라이언트."
+	},
+	"description": {
+		"en": "A database client for SQLite, MySQL, PostgreSQL and ClickHouse, drawn with MyGo's native UI. Each data source gets named SQL consoles saved as files, with highlighting, table and column completion and multi-statement runs; results export to CSV, JSON or SQL INSERT and, for single-table queries with a primary key, can be edited and committed in one transaction. ClickHouse is read-only.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的数据库客户端，支持 SQLite、MySQL、PostgreSQL 与 ClickHouse。每个数据源可建多个命名 SQL 控制台并保存为文件，带语法高亮、表与列补全和多语句执行；结果可导出为 CSV、JSON 或 SQL INSERT，单表且含主键的查询结果还能编辑后在单个事务中提交。ClickHouse 为只读。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的資料庫用戶端，支援 SQLite、MySQL、PostgreSQL 與 ClickHouse。每個資料來源可建立多個具名 SQL 主控台並存成檔案，具備語法醒目提示、資料表與欄位自動完成和多陳述式執行；結果可匯出為 CSV、JSON 或 SQL INSERT，單一資料表且含主鍵的查詢結果還能編輯後在單一交易中提交。ClickHouse 為唯讀。",
+		"ja": "MyGo のネイティブ UI で描かれた、SQLite・MySQL・PostgreSQL・ClickHouse 対応のデータベースクライアント。データソースごとに名前付きの SQL コンソールを作ってファイルに保存でき、構文ハイライト、テーブルと列の補完、複数ステートメントの実行に対応します。結果は CSV・JSON・SQL INSERT に書き出せ、主キーを含む単一テーブルのクエリなら結果を編集して一つのトランザクションでコミットできます。ClickHouse は読み取り専用です。",
+		"ko": "MyGo의 네이티브 UI로 그린 SQLite, MySQL, PostgreSQL, ClickHouse용 데이터베이스 클라이언트입니다. 데이터 소스마다 이름 붙은 SQL 콘솔을 여러 개 만들어 파일로 저장하며, 구문 강조, 테이블·열 자동 완성, 여러 문장 실행을 지원합니다. 결과는 CSV, JSON, SQL INSERT로 내보낼 수 있고, 기본 키가 있는 단일 테이블 쿼리라면 결과를 편집해 하나의 트랜잭션으로 커밋할 수 있습니다. ClickHouse는 읽기 전용입니다."
+	},
+	"icon": {
+		"file": "db-g.webp"
+	},
+	"screenshot": "db-g.webp",
+	"added": "2026-11-07T08:59:06Z"
+}
