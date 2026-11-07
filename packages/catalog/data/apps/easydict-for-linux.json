@@ -25,6 +25,9 @@
 	"icon": {
 		"file": "easydict-for-linux.webp"
 	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "easydict-for-linux.webp",
 	"added": "2026-11-05T16:30:17Z"
 }
