@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "lan-notify",
-	"name": "LAN Notify",
-	"author": "sanqiandamowang",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "chat",
-	"url": "https://github.com/sanqiandamowang/beebee",
-	"repo": "sanqiandamowang/beebee",
-	"summary": {
-		"en": "Pushes desktop reminders to Windows PCs on a LAN from a CLI or local HTTP sender.",
-		"zh-CN": "在局域网内向 Windows 电脑推送桌面提醒，用 CLI 或 HTTP 发送。",
-		"zh-TW": "在區域網路內向 Windows 電腦推送桌面提醒，以 CLI 或 HTTP 傳送。",
-		"ja": "LAN 内の Windows PC へ、CLI や HTTP からデスクトップ通知を送るツール。",
-		"ko": "CLI나 HTTP로 LAN 안의 Windows PC에 데스크톱 알림을 보내는 도구."
-	},
-	"description": {
-		"en": "A tool for pushing reminders to Windows PCs on a LAN, with no server or third-party platform. A sender CLI, which can also run a local HTTP endpoint for agents, sends messages over TCP to a tray receiver that pops up a panel and keeps a history. Only the receiver is built with MyGo, its panel drawn with the native UI outside the Windows notification center; the sender is a plain Go CLI.",
-		"zh-CN": "在局域网内向 Windows 电脑推送桌面提醒的小工具，不需要内网服务器，也不依赖第三方平台。发送端 CLI 也可常驻本地 HTTP 接口供 Agent 调用，通过 TCP 把消息发给托盘里的接收端，由它弹出面板并保留历史。MyGo 只用于接收端，面板由其原生 UI 绘制，不进入 Windows 通知中心；发送端是普通的 Go 命令行程序。",
-		"zh-TW": "在區域網路內向 Windows 電腦推送桌面提醒的小工具，不需要內網伺服器，也不依賴第三方平台。傳送端 CLI 也能常駐本機 HTTP 介面供 Agent 呼叫，透過 TCP 把訊息送到系統匣裡的接收端，由它彈出面板並保留歷史紀錄。MyGo 只用於接收端，面板由其原生 UI 繪製，不會進入 Windows 通知中心；傳送端是一般的 Go 命令列程式。",
-		"ja": "LAN 内の Windows PC にデスクトップ通知を送る小さなツールで、社内サーバーもサードパーティのサービスも要りません。送信側の CLI はエージェント向けにローカル HTTP エンドポイントとしても常駐でき、TCP でタスクトレイの受信側にメッセージを送ると、受信側がパネルを開いて履歴を残します。MyGo を使うのは受信側だけで、パネルはネイティブ UI で描かれ、Windows の通知センターには入りません。送信側は普通の Go の CLI です。",
-		"ko": "LAN 안의 Windows PC로 데스크톱 알림을 보내는 작은 도구로, 내부 서버나 서드파티 플랫폼이 필요 없습니다. 송신 CLI는 에이전트용 로컬 HTTP 엔드포인트로도 상주할 수 있고, TCP로 트레이의 수신 프로그램에 메시지를 보내면 수신 쪽이 패널을 띄우고 기록을 남깁니다. MyGo는 수신 프로그램에만 쓰이며, 패널은 네이티브 UI로 그려져 Windows 알림 센터에 들어가지 않습니다. 송신 쪽은 일반 Go CLI입니다."
-	},
-	"icon": {
-		"file": "lan-notify.webp"
-	},
-	"provisional": [
-		"screenshot"
-	],
-	"screenshot": "lan-notify.webp",
-	"added": "2026-11-05T14:40:59Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "lan-notify",
+  "name": "LAN Notify",
+  "author": "sanqiandamowang",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "chat",
+  "url": "https://github.com/sanqiandamowang/beebee",
+  "repo": "sanqiandamowang/beebee",
+  "summary": {
+    "en": "Pushes desktop reminders to Windows PCs on a LAN from a CLI or local HTTP sender.",
+    "zh-CN": "在局域网内向 Windows 电脑推送桌面提醒，用 CLI 或 HTTP 发送。",
+    "zh-TW": "在區域網路內向 Windows 電腦推送桌面提醒，以 CLI 或 HTTP 傳送。",
+    "ja": "LAN 内の Windows PC へ、CLI や HTTP からデスクトップ通知を送るツール。",
+    "ko": "CLI나 HTTP로 LAN 안의 Windows PC에 데스크톱 알림을 보내는 도구."
+  },
+  "description": {
+    "en": "A tool for pushing reminders to Windows PCs on a LAN, with no server or third-party platform. A sender CLI, which can also run a local HTTP endpoint for agents, sends messages over TCP to a tray receiver that pops up a panel and keeps a history. Only the receiver is built with MyGo, its panel drawn with the native UI outside the Windows notification center; the sender is a plain Go CLI.",
+    "zh-CN": "在局域网内向 Windows 电脑推送桌面提醒的小工具，不需要内网服务器，也不依赖第三方平台。发送端 CLI 也可常驻本地 HTTP 接口供 Agent 调用，通过 TCP 把消息发给托盘里的接收端，由它弹出面板并保留历史。MyGo 只用于接收端，面板由其原生 UI 绘制，不进入 Windows 通知中心；发送端是普通的 Go 命令行程序。",
+    "zh-TW": "在區域網路內向 Windows 電腦推送桌面提醒的小工具，不需要內網伺服器，也不依賴第三方平台。傳送端 CLI 也能常駐本機 HTTP 介面供 Agent 呼叫，透過 TCP 把訊息送到系統匣裡的接收端，由它彈出面板並保留歷史紀錄。MyGo 只用於接收端，面板由其原生 UI 繪製，不會進入 Windows 通知中心；傳送端是一般的 Go 命令列程式。",
+    "ja": "LAN 内の Windows PC にデスクトップ通知を送る小さなツールで、社内サーバーもサードパーティのサービスも要りません。送信側の CLI はエージェント向けにローカル HTTP エンドポイントとしても常駐でき、TCP でタスクトレイの受信側にメッセージを送ると、受信側がパネルを開いて履歴を残します。MyGo を使うのは受信側だけで、パネルはネイティブ UI で描かれ、Windows の通知センターには入りません。送信側は普通の Go の CLI です。",
+    "ko": "LAN 안의 Windows PC로 데스크톱 알림을 보내는 작은 도구로, 내부 서버나 서드파티 플랫폼이 필요 없습니다. 송신 CLI는 에이전트용 로컬 HTTP 엔드포인트로도 상주할 수 있고, TCP로 트레이의 수신 프로그램에 메시지를 보내면 수신 쪽이 패널을 띄우고 기록을 남깁니다. MyGo는 수신 프로그램에만 쓰이며, 패널은 네이티브 UI로 그려져 Windows 알림 센터에 들어가지 않습니다. 송신 쪽은 일반 Go CLI입니다."
+  },
+  "icon": {
+    "file": "lan-notify.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "lan-notify.webp",
+  "added": "2026-11-05T14:40:59Z"
 }
