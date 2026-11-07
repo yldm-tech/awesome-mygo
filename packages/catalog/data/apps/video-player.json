@@ -26,8 +26,7 @@
 		"file": "video-player.webp"
 	},
 	"provisional": [
-		"icon",
-		"screenshot"
+		"icon"
 	],
 	"screenshot": "video-player.webp",
 	"added": "2026-11-05T17:38:35Z"
