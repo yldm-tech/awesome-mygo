@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "switchhosts-native",
-	"name": "SwitchHosts Native",
-	"author": "SatanKiss",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "network",
-	"url": "https://github.com/SatanKiss/SwitchHost-mygo",
-	"repo": "SatanKiss/SwitchHost-mygo",
-	"summary": {
-		"en": "A rewrite of SwitchHosts with MyGo's native UI, for managing the hosts file on Windows.",
-		"zh-CN": "SwitchHosts 的 MyGo 原生重写版，Windows hosts 管理工具。",
-		"zh-TW": "SwitchHosts 的 MyGo 原生重寫版，Windows hosts 管理工具。",
-		"ja": "MyGo ネイティブ版 SwitchHosts。Windows の hosts ファイルを管理。",
-		"ko": "MyGo로 다시 만든 네이티브 SwitchHosts. Windows hosts 파일 관리 도구."
-	},
-	"description": {
-		"en": "A rewrite of oldj's SwitchHosts, the hosts file manager, drawn with MyGo's pure-Go native UI: no cgo, no WebView and no Node toolchain. It is built for Windows on x64 and ARM64, either as a standalone exe with its icon and version info or as an NSIS installer, and tagged releases also ship a portable zip.",
-		"zh-CN": "oldj 的 hosts 文件管理工具 SwitchHosts 的重写版，由 MyGo 的纯 Go 原生 UI 绘制，不依赖 cgo 和 WebView，也不需要 Node 工具链。它面向 Windows x64 与 ARM64 构建，可以是带图标和版本信息的独立 exe，也可以是 NSIS 安装包，打标签发布的版本还附带便携版 zip。",
-		"zh-TW": "oldj 的 hosts 檔案管理工具 SwitchHosts 的重寫版，由 MyGo 的純 Go 原生 UI 繪製，不依賴 cgo 與 WebView，也不需要 Node 工具鏈。它針對 Windows x64 與 ARM64 建置，可以是帶圖示和版本資訊的獨立 exe，也可以是 NSIS 安裝程式，以標籤發布的版本還附帶免安裝版 zip。",
-		"ja": "oldj による hosts ファイル管理ツール SwitchHosts を、MyGo の純 Go ネイティブ UI で書き直したものです。cgo も WebView も Node のツールチェーンも使いません。Windows の x64 と ARM64 向けにビルドされ、アイコンとバージョン情報付きの単体 exe か NSIS インストーラーとして入手でき、タグ付きのリリースにはポータブル版の zip も付きます。",
-		"ko": "oldj의 hosts 파일 관리 도구 SwitchHosts를 MyGo의 순수 Go 네이티브 UI로 다시 작성한 앱입니다. cgo도 WebView도 Node 툴체인도 쓰지 않습니다. Windows x64와 ARM64용으로 빌드되며, 아이콘과 버전 정보가 담긴 단일 exe나 NSIS 설치 프로그램으로 받을 수 있고, 태그 릴리스에는 포터블 zip도 함께 제공됩니다."
-	},
-	"icon": {
-		"file": "switchhosts-native.webp"
-	},
-	"screenshot": "switchhosts-native.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-06T01:05:06Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "switchhosts-native",
+  "name": "SwitchHosts Native",
+  "author": "SatanKiss",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "network",
+  "url": "https://github.com/SatanKiss/SwitchHost-mygo",
+  "repo": "SatanKiss/SwitchHost-mygo",
+  "summary": {
+    "en": "A rewrite of SwitchHosts with MyGo's native UI, for managing the hosts file on Windows.",
+    "zh-CN": "SwitchHosts 的 MyGo 原生重写版，Windows hosts 管理工具。",
+    "zh-TW": "SwitchHosts 的 MyGo 原生重寫版，Windows hosts 管理工具。",
+    "ja": "MyGo ネイティブ版 SwitchHosts。Windows の hosts ファイルを管理。",
+    "ko": "MyGo로 다시 만든 네이티브 SwitchHosts. Windows hosts 파일 관리 도구."
+  },
+  "description": {
+    "en": "A rewrite of oldj's SwitchHosts, the hosts file manager, drawn with MyGo's pure-Go native UI: no cgo, no WebView and no Node toolchain. It is built for Windows on x64 and ARM64, either as a standalone exe with its icon and version info or as an NSIS installer, and tagged releases also ship a portable zip.",
+    "zh-CN": "oldj 的 hosts 文件管理工具 SwitchHosts 的重写版，由 MyGo 的纯 Go 原生 UI 绘制，不依赖 cgo 和 WebView，也不需要 Node 工具链。它面向 Windows x64 与 ARM64 构建，可以是带图标和版本信息的独立 exe，也可以是 NSIS 安装包，打标签发布的版本还附带便携版 zip。",
+    "zh-TW": "oldj 的 hosts 檔案管理工具 SwitchHosts 的重寫版，由 MyGo 的純 Go 原生 UI 繪製，不依賴 cgo 與 WebView，也不需要 Node 工具鏈。它針對 Windows x64 與 ARM64 建置，可以是帶圖示和版本資訊的獨立 exe，也可以是 NSIS 安裝程式，以標籤發布的版本還附帶免安裝版 zip。",
+    "ja": "oldj による hosts ファイル管理ツール SwitchHosts を、MyGo の純 Go ネイティブ UI で書き直したものです。cgo も WebView も Node のツールチェーンも使いません。Windows の x64 と ARM64 向けにビルドされ、アイコンとバージョン情報付きの単体 exe か NSIS インストーラーとして入手でき、タグ付きのリリースにはポータブル版の zip も付きます。",
+    "ko": "oldj의 hosts 파일 관리 도구 SwitchHosts를 MyGo의 순수 Go 네이티브 UI로 다시 작성한 앱입니다. cgo도 WebView도 Node 툴체인도 쓰지 않습니다. Windows x64와 ARM64용으로 빌드되며, 아이콘과 버전 정보가 담긴 단일 exe나 NSIS 설치 프로그램으로 받을 수 있고, 태그 릴리스에는 포터블 zip도 함께 제공됩니다."
+  },
+  "icon": {
+    "file": "switchhosts-native.webp"
+  },
+  "screenshot": "switchhosts-native.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-06T01:05:06Z"
 }
