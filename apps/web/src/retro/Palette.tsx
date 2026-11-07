@@ -45,8 +45,7 @@ function Find({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (slug:
 	const catLabel: Record<SearchCat, string> = { ui: t.cat_ui_name, state: t.cat_state_name, template: t.cat_tpl_name, ai: t.cat_ai_name, plugin: t.nav_plugins, showcase: t.cat_show_name, article: t.article };
 
 	const go = (to: (typeof JUMPS)[number]['to']) => {
-		onClose();
-		void navigate({ to });
+		void navigate({ to }).finally(onClose);
 	};
 	const open = (r: SearchItem) => {
 		const tg = r.target;
@@ -72,7 +71,7 @@ function Find({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (slug:
 
 	return (
 		<div className='fixed inset-0 z-[60] flex items-start justify-center bg-ink/35 backdrop-blur-[2px] px-3 pt-3 pb-4 desk:pt-[12vh]'>
-			<div ref={ref} role='dialog' aria-modal='true' aria-label={t.search} className='w-full max-w-[600px]'>
+			<div ref={ref} role='dialog' aria-modal='true' aria-label={t.search} onKeyDown={onKeyDown} className='w-full max-w-[600px]'>
 				<Win title={t.search} onClose={onClose}>
 					<div className='flex items-center gap-2 px-1.5 pt-[3px] pb-1.5'>
 						<label htmlFor='q' className='sr-only'>
@@ -91,7 +90,6 @@ function Find({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (slug:
 									setQ(e.target.value);
 									setActive(0);
 								}}
-								onKeyDown={onKeyDown}
 								placeholder={t.search_ph}
 								autoComplete='off'
 								className='h-full min-w-0 flex-1 border-0 bg-transparent p-0 outline-none placeholder:text-faint focus-visible:shadow-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden'
@@ -124,7 +122,7 @@ function Find({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (slug:
 							<>
 								<span className='block border-b border-line px-2 pb-1 text-muted'>{fill(t.results, { x: String(results.length) })}</span>
 								{results.map((r, i) => (
-									<button key={`${r.cat}:${r.name}`} id={`pi-${i}`} data-i={i} role='option' aria-selected={i === active} type='button' className={`${row} grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2.5 py-1 desk:grid-cols-[8.5rem_minmax(0,1fr)_auto]`} onClick={() => open(r)} onPointerMove={() => setActive(i)}>
+									<button key={`${r.cat}:${r.name}:${i}`} id={`pi-${i}`} data-i={i} role='option' aria-selected={i === active} type='button' className={`${row} grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2.5 py-1 desk:grid-cols-[8.5rem_minmax(0,1fr)_auto]`} onClick={() => open(r)} onPointerDown={(e) => e.preventDefault()} onPointerMove={() => setActive(i)}>
 										<span className='col-start-2 row-start-1 max-w-[8.5rem] justify-self-end truncate rounded-full bg-face-lo px-2 text-xs leading-5 text-ink group-aria-selected:bg-yel desk:col-start-1 desk:justify-self-start'>{catLabel[r.cat]}</span>
 										<span className='col-start-1 row-start-1 grid min-w-0 desk:col-start-2'>
 											<span className='truncate'>{r.name}</span>

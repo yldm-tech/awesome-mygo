@@ -51,8 +51,7 @@ function Palette({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (sl
 	const catLabel: Record<SearchCat, string> = { ui: t.cat_ui_name, state: t.cat_state_name, template: t.cat_tpl_name, ai: t.cat_ai_name, plugin: t.nav_plugins, showcase: t.cat_show_name, article: t.article };
 
 	const go = (to: (typeof JUMPS)[number]['to']) => {
-		onClose();
-		void navigate({ to });
+		void navigate({ to }).finally(onClose);
 	};
 	const open = (r: SearchItem) => {
 		const tg = r.target;
@@ -79,7 +78,7 @@ function Palette({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (sl
 	return (
 		// Below md the palette is a full-width sheet at the top of the screen, as tall as the dynamic viewport at most, so the input and the first results stay above the on-screen keyboard.
 		<div className='fade fixed inset-0 z-50 flex items-start justify-center bg-[rgba(5,7,9,0.7)] px-4 pt-[12vh] pb-4 backdrop-blur-[6px] max-md:p-0 max-md:pt-[env(safe-area-inset-top)]'>
-			<div ref={ref} role='dialog' aria-modal='true' aria-label={t.search} className='enter flex max-h-[70vh] w-full max-w-[640px] flex-col overflow-hidden rounded-[18px] border border-line-3 bg-panel shadow-[0_40px_120px_rgba(0,0,0,0.6)] max-md:max-h-[calc(100dvh-env(safe-area-inset-top))] max-md:max-w-none max-md:rounded-t-none max-md:border-x-0 max-md:border-t-0'>
+			<div ref={ref} role='dialog' aria-modal='true' aria-label={t.search} onKeyDown={onKeyDown} className='enter flex max-h-[70vh] w-full max-w-[640px] flex-col overflow-hidden rounded-[18px] border border-line-3 bg-panel shadow-[0_40px_120px_rgba(0,0,0,0.6)] max-md:max-h-[calc(100dvh-env(safe-area-inset-top))] max-md:max-w-none max-md:rounded-t-none max-md:border-x-0 max-md:border-t-0'>
 				<div className='flex items-center gap-3 border-b border-line-2 pr-3 pl-5 max-md:px-6 max-sm:px-4'>
 					<SearchIcon size={20} stroke='#3FD3F5' />
 					<label htmlFor='q' className='sr-only'>
@@ -94,7 +93,6 @@ function Palette({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (sl
 							setQ(e.target.value);
 							setActive(0);
 						}}
-						onKeyDown={onKeyDown}
 						placeholder={t.search_ph}
 						autoComplete='off'
 						className='h-15 min-w-0 flex-auto border-0 bg-transparent font-[family-name:inherit] text-[18px] text-fg outline-none'
@@ -123,7 +121,7 @@ function Palette({ onClose, onApp, onSubmit }: { onClose: () => void; onApp: (sl
 						<>
 							<span className='block px-3 pt-2.5 pb-1.5 font-mono text-[11px] tracking-[0.1em] text-fg-3'>{fill(t.results, { x: String(results.length) })}</span>
 							{results.map((r, i) => (
-								<button key={`${r.cat}:${r.name}`} id={`pi-${i}`} data-i={i} role='option' aria-selected={i === active} type='button' className='row flex w-full items-center gap-3.5 rounded-[10px] border-0 bg-transparent p-3 text-left text-fg hover:bg-cyan/7 aria-selected:bg-cyan/7' onClick={() => open(r)} onPointerMove={() => setActive(i)}>
+								<button key={`${r.cat}:${r.name}:${i}`} id={`pi-${i}`} data-i={i} role='option' aria-selected={i === active} type='button' className='row flex w-full items-center gap-3.5 rounded-[10px] border-0 bg-transparent p-3 text-left text-fg hover:bg-cyan/7 aria-selected:bg-cyan/7' onClick={() => open(r)} onPointerDown={(e) => e.preventDefault()} onPointerMove={() => setActive(i)}>
 									<span className='min-w-14 rounded-md border border-line-3 px-2 py-[3px] text-center text-[11px] text-fg-2'>{catLabel[r.cat]}</span>
 									<span className='flex min-w-0 flex-auto flex-col gap-0.5'>
 										<span className='text-[15px] font-bold max-md:wrap-break-word'>{r.name}</span>
