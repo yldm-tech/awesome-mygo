@@ -59,9 +59,9 @@ html:lang(ko) .site {
 
 /* Page layout shared by every route of the original look: the page container, its heading and lead paragraph, and the mono kicker above headings. They stay named classes because every page repeats them; a page adds its own gap and extras with utilities beside the class (`page enter gap-10`). */
 
-/* Every page's container. The gutter is 24px from sm up and 16px on phones, the same as the header, the footer and the dialogs, so all left edges line up. On a phone the space above and below the page shrinks too, as 72px over the heading left the first card under the fold. */
+/* Every page's container. It grows to 1600px on wide screens, while the gutter stays 24px from sm up and 16px on phones, the same as the header, the footer and the dialogs, so all left edges line up. On a phone the space above and below the page shrinks too, as 72px over the heading left the first card under the fold. */
 .page {
-	max-width: 1240px;
+	max-width: 1600px;
 	margin: 0 auto;
 	padding: 72px 24px 96px;
 	display: flex;

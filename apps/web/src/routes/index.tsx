@@ -41,7 +41,7 @@ const HERO_APPS = [
 const FEATURED = ['mixmusic', 'kero', 'liubai', 'godwit'] as const;
 
 // The two sections under the hero (categories, featured) share their box, head row and heading; each adds its own vertical padding.
-const SEC = 'mx-auto flex max-w-[1240px] flex-col gap-7 px-6 max-sm:px-4';
+const SEC = 'mx-auto flex max-w-[1600px] flex-col gap-7 px-6 max-sm:px-4';
 const SEC_HEAD = 'flex flex-wrap items-end justify-between gap-4';
 const SEC_H2 = 'm-0 text-[44px] font-black tracking-[-0.03em] max-sm:text-[34px]';
 // The hero's two 52px buttons; on phones they grow to fill their row (see the row's comment).
@@ -150,7 +150,7 @@ function Hero() {
 	return (
 		<section ref={heroRef} onPointerMove={onMove} onPointerLeave={onLeave} className='relative overflow-hidden border-b border-line max-tab:pb-14'>
 			{/* Copy on the left, the code window on the right; one column below 1000px. */}
-			<div className='relative z-2 mx-auto grid max-w-[1240px] grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] items-center gap-x-16 gap-y-12 px-6 pt-28 pb-0 max-hero:grid-cols-1 max-hero:pt-18 max-sm:px-4 max-sm:pt-12'>
+			<div className='relative z-2 mx-auto grid max-w-[1600px] grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] items-center gap-x-16 gap-y-12 px-6 pt-28 pb-0 max-hero:grid-cols-1 max-hero:pt-18 max-sm:px-4 max-sm:pt-12'>
 				<div className='flex min-w-0 flex-col items-start gap-7'>
 				<Link to='/showcase' className={`group box-border inline-flex min-h-9 items-center gap-2.5 rounded-full border border-line-3 bg-panel/75 py-0 pr-3.5 pl-1.5 text-[13px] text-fg-2 no-underline backdrop-blur-[8px] transition-[border-color,color] duration-200 ease-[ease] hover:border-cyan hover:text-fg max-md:min-h-10 ${POP_1}`}>
 					<span className='inline-flex items-center gap-1.5 rounded-full bg-cyan/14 px-2.5 py-[3px] font-mono text-[11px] font-bold text-cyan' lang='en'>
