@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "iloader-cert-export",
-	"name": "iloader-cert-export",
-	"author": "Star-Trails",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "dev",
-	"url": "https://github.com/Star-Trails/iloader-cert-export",
-	"repo": "Star-Trails/iloader-cert-export",
-	"summary": {
-		"en": "A Windows tool that exports iloader's Apple Development certificate as a .p12 for LiveContainer.",
-		"zh-CN": "将 iloader 的签名证书导出为 LiveContainer 可用的 .p12。",
-		"zh-TW": "將 iloader 的簽署憑證匯出為 LiveContainer 可用的 .p12。",
-		"ja": "iloader の署名証明書を LiveContainer 用の .p12 ファイルに書き出すアプリ。",
-		"ko": "iloader의 서명 인증서를 LiveContainer용 .p12로 내보내는 Windows 앱."
-	},
-	"description": {
-		"en": "A Windows app drawn with MyGo's native UI, with a Rust helper for the Apple side. It signs in with the account iloader saved, downloads the certificate matching iloader's stored private key and writes it as a password-protected .p12 for LiveContainer's JIT-less mode. It never creates, renews or revokes certificates and leaves iloader's storage untouched.",
-		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 应用，与 Apple 的交互由一个 Rust 辅助程序完成。它用 iloader 保存的账户登录 Apple，下载与 iloader 本地私钥匹配的证书，导出为带密码的 .p12 文件，供 LiveContainer 的 JIT-less 模式导入。它不会创建、续期或吊销证书，也不改动 iloader 的存储。",
-		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 應用程式，與 Apple 的溝通由一個 Rust 輔助程式負責。它以 iloader 儲存的帳號登入 Apple，下載與 iloader 本機私鑰相符的憑證，匯出為設有密碼的 .p12 檔，供 LiveContainer 的 JIT-less 模式匯入。它不會建立、續期或撤銷憑證，也不更動 iloader 的儲存資料。",
-		"ja": "MyGo のネイティブ UI で描かれた Windows アプリで、Apple とのやり取りは Rust 製のヘルパーが担います。iloader が保存したアカウントで Apple にサインインし、iloader が保管する秘密鍵に対応する証明書をダウンロードして、LiveContainer の JIT-less モード用にパスワード付きの .p12 ファイルとして書き出します。証明書の作成・更新・失効は行わず、iloader の保存データにも手を付けません。",
-		"ko": "MyGo의 네이티브 UI로 그린 Windows 앱으로, Apple과의 통신은 Rust로 만든 도우미 프로그램이 맡습니다. iloader에 저장된 계정으로 Apple에 로그인해 iloader가 보관한 개인 키와 맞는 인증서를 내려받고, LiveContainer의 JIT-less 모드에서 가져올 수 있도록 암호가 걸린 .p12 파일로 내보냅니다. 인증서를 만들거나 갱신하거나 폐기하지 않으며 iloader의 저장 데이터도 건드리지 않습니다."
-	},
-	"icon": {
-		"file": "iloader-cert-export.webp"
-	},
-	"screenshot": "iloader-cert-export.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T13:45:02Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "iloader-cert-export",
+  "name": "iloader-cert-export",
+  "author": "Star-Trails",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "dev",
+  "url": "https://github.com/Star-Trails/iloader-cert-export",
+  "repo": "Star-Trails/iloader-cert-export",
+  "summary": {
+    "en": "A Windows tool that exports iloader's Apple Development certificate as a .p12 for LiveContainer.",
+    "zh-CN": "将 iloader 的签名证书导出为 LiveContainer 可用的 .p12。",
+    "zh-TW": "將 iloader 的簽署憑證匯出為 LiveContainer 可用的 .p12。",
+    "ja": "iloader の署名証明書を LiveContainer 用の .p12 ファイルに書き出すアプリ。",
+    "ko": "iloader의 서명 인증서를 LiveContainer용 .p12로 내보내는 Windows 앱."
+  },
+  "description": {
+    "en": "A Windows app drawn with MyGo's native UI, with a Rust helper for the Apple side. It signs in with the account iloader saved, downloads the certificate matching iloader's stored private key and writes it as a password-protected .p12 for LiveContainer's JIT-less mode. It never creates, renews or revokes certificates and leaves iloader's storage untouched.",
+    "zh-CN": "用 MyGo 原生 UI 绘制的 Windows 应用，与 Apple 的交互由一个 Rust 辅助程序完成。它用 iloader 保存的账户登录 Apple，下载与 iloader 本地私钥匹配的证书，导出为带密码的 .p12 文件，供 LiveContainer 的 JIT-less 模式导入。它不会创建、续期或吊销证书，也不改动 iloader 的存储。",
+    "zh-TW": "用 MyGo 原生 UI 繪製的 Windows 應用程式，與 Apple 的溝通由一個 Rust 輔助程式負責。它以 iloader 儲存的帳號登入 Apple，下載與 iloader 本機私鑰相符的憑證，匯出為設有密碼的 .p12 檔，供 LiveContainer 的 JIT-less 模式匯入。它不會建立、續期或撤銷憑證，也不更動 iloader 的儲存資料。",
+    "ja": "MyGo のネイティブ UI で描かれた Windows アプリで、Apple とのやり取りは Rust 製のヘルパーが担います。iloader が保存したアカウントで Apple にサインインし、iloader が保管する秘密鍵に対応する証明書をダウンロードして、LiveContainer の JIT-less モード用にパスワード付きの .p12 ファイルとして書き出します。証明書の作成・更新・失効は行わず、iloader の保存データにも手を付けません。",
+    "ko": "MyGo의 네이티브 UI로 그린 Windows 앱으로, Apple과의 통신은 Rust로 만든 도우미 프로그램이 맡습니다. iloader에 저장된 계정으로 Apple에 로그인해 iloader가 보관한 개인 키와 맞는 인증서를 내려받고, LiveContainer의 JIT-less 모드에서 가져올 수 있도록 암호가 걸린 .p12 파일로 내보냅니다. 인증서를 만들거나 갱신하거나 폐기하지 않으며 iloader의 저장 데이터도 건드리지 않습니다."
+  },
+  "icon": {
+    "file": "iloader-cert-export.webp"
+  },
+  "screenshot": "iloader-cert-export.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T13:45:02Z"
 }
