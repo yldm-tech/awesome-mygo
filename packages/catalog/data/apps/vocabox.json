@@ -1,34 +1,36 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "vocabox",
-	"name": "VocaBox",
-	"author": "hu-ja-ja",
-	"kind": "native",
-	"platforms": ["win"],
-	"category": "MultimediaApplication",
-	"group": "media",
-	"url": "https://github.com/hu-ja-ja/VocaBox_Desktop",
-	"repo": "hu-ja-ja/VocaBox_Desktop",
-	"summary": {
-		"en": "A Windows audio player for Niconico mylists, with synced lyrics and offline saving.",
-		"zh-CN": "收听 Niconico mylist 的 Windows 播放器，带同步歌词与离线保存。",
-		"zh-TW": "收聽 Niconico mylist 的 Windows 播放器，附同步歌詞與離線儲存。",
-		"ja": "ニコニコ動画のマイリストを音声で聴く Windows 用プレーヤー。同期歌詞とオフライン保存に対応。",
-		"ko": "니코니코 동화 마이리스트를 듣는 Windows 플레이어. 가사 동기화와 오프라인 저장 지원."
-	},
-	"description": {
-		"en": "A 64-bit Windows player for listening to Niconico mylists without the video, drawn with MyGo's native UI. It loads public mylists by URL or ID, and your own private ones after you log in to Niconico, with a queue, lyrics that follow playback and media key support. Mylists can be saved for offline play, and Discord Rich Presence can show the current song on your profile.",
-		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 64 位播放器，只播放 Niconico mylist 中歌曲的音频，不显示视频。可通过 URL 或 ID 读取公开 mylist，登录 Niconico 后还能使用自己的非公开 mylist；支持播放队列、随播放进度切换的歌词和键盘媒体键。mylist 可保存到本地离线收听，开启 Discord Rich Presence 后会在个人资料上显示正在播放的歌曲。",
-		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 64 位元播放器，只播放 Niconico mylist 中歌曲的音訊，不顯示影片。可透過 URL 或 ID 讀取公開 mylist，登入 Niconico 後還能使用自己的非公開 mylist；支援播放佇列、隨播放進度切換的歌詞和鍵盤媒體鍵。mylist 可儲存到本機離線收聽，開啟 Discord Rich Presence 後會在個人檔案上顯示正在播放的歌曲。",
-		"ja": "MyGo のネイティブ UI で描かれた Windows 64 ビット向けプレーヤーで、ニコニコ動画のマイリストを映像なしの音声で楽しめます。公開マイリストは URL か ID で読み込め、ニコニコにログインすれば自分の非公開マイリストも使えます。再生キュー、再生位置に合わせて切り替わる歌詞、メディアキーに対応し、マイリストごとに音源を保存してオフラインで再生できます。Discord Rich Presence を有効にすると、再生中の曲をプロフィールに表示します。",
-		"ko": "MyGo의 네이티브 UI로 그린 Windows 64비트용 플레이어로, 니코니코 동화 마이리스트를 영상 없이 음성으로 듣습니다. 공개 마이리스트는 URL이나 ID로, 비공개 마이리스트는 니코니코에 로그인해 불러옵니다. 재생 대기열, 재생 위치에 맞춰 바뀌는 가사, 미디어 키를 지원하고, 음원을 저장해 오프라인으로 들을 수 있습니다. Discord Rich Presence를 켜면 재생 중인 곡을 프로필에 표시합니다."
-	},
-	"icon": {
-		"file": "vocabox.webp"
-	},
-	"screenshot": "vocabox.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T05:38:23Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "vocabox",
+  "name": "VocaBox",
+  "author": "hu-ja-ja",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "category": "MultimediaApplication",
+  "group": "media",
+  "url": "https://github.com/hu-ja-ja/VocaBox_Desktop",
+  "repo": "hu-ja-ja/VocaBox_Desktop",
+  "summary": {
+    "en": "A Windows audio player for Niconico mylists, with synced lyrics and offline saving.",
+    "zh-CN": "收听 Niconico mylist 的 Windows 播放器，带同步歌词与离线保存。",
+    "zh-TW": "收聽 Niconico mylist 的 Windows 播放器，附同步歌詞與離線儲存。",
+    "ja": "ニコニコ動画のマイリストを音声で聴く Windows 用プレーヤー。同期歌詞とオフライン保存に対応。",
+    "ko": "니코니코 동화 마이리스트를 듣는 Windows 플레이어. 가사 동기화와 오프라인 저장 지원."
+  },
+  "description": {
+    "en": "A 64-bit Windows player for listening to Niconico mylists without the video, drawn with MyGo's native UI. It loads public mylists by URL or ID, and your own private ones after you log in to Niconico, with a queue, lyrics that follow playback and media key support. Mylists can be saved for offline play, and Discord Rich Presence can show the current song on your profile.",
+    "zh-CN": "用 MyGo 原生 UI 绘制的 Windows 64 位播放器，只播放 Niconico mylist 中歌曲的音频，不显示视频。可通过 URL 或 ID 读取公开 mylist，登录 Niconico 后还能使用自己的非公开 mylist；支持播放队列、随播放进度切换的歌词和键盘媒体键。mylist 可保存到本地离线收听，开启 Discord Rich Presence 后会在个人资料上显示正在播放的歌曲。",
+    "zh-TW": "用 MyGo 原生 UI 繪製的 Windows 64 位元播放器，只播放 Niconico mylist 中歌曲的音訊，不顯示影片。可透過 URL 或 ID 讀取公開 mylist，登入 Niconico 後還能使用自己的非公開 mylist；支援播放佇列、隨播放進度切換的歌詞和鍵盤媒體鍵。mylist 可儲存到本機離線收聽，開啟 Discord Rich Presence 後會在個人檔案上顯示正在播放的歌曲。",
+    "ja": "MyGo のネイティブ UI で描かれた Windows 64 ビット向けプレーヤーで、ニコニコ動画のマイリストを映像なしの音声で楽しめます。公開マイリストは URL か ID で読み込め、ニコニコにログインすれば自分の非公開マイリストも使えます。再生キュー、再生位置に合わせて切り替わる歌詞、メディアキーに対応し、マイリストごとに音源を保存してオフラインで再生できます。Discord Rich Presence を有効にすると、再生中の曲をプロフィールに表示します。",
+    "ko": "MyGo의 네이티브 UI로 그린 Windows 64비트용 플레이어로, 니코니코 동화 마이리스트를 영상 없이 음성으로 듣습니다. 공개 마이리스트는 URL이나 ID로, 비공개 마이리스트는 니코니코에 로그인해 불러옵니다. 재생 대기열, 재생 위치에 맞춰 바뀌는 가사, 미디어 키를 지원하고, 음원을 저장해 오프라인으로 들을 수 있습니다. Discord Rich Presence를 켜면 재생 중인 곡을 프로필에 표시합니다."
+  },
+  "icon": {
+    "file": "vocabox.webp"
+  },
+  "screenshot": "vocabox.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T05:38:23Z"
 }
