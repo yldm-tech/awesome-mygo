@@ -26,8 +26,7 @@
 		"file": "esp32-mini-tv.webp"
 	},
 	"provisional": [
-		"icon",
-		"screenshot"
+		"icon"
 	],
 	"screenshot": "esp32-mini-tv.webp",
 	"added": "2026-11-05T04:32:09Z"
