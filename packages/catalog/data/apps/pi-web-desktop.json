@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "pi-web-desktop",
-	"name": "Pi Web Desktop",
-	"author": "Clearzero22",
-	"kind": "web",
-	"platforms": ["win"],
-	"group": "agents",
-	"url": "https://github.com/Clearzero22/pi-web-desktop",
-	"repo": "Clearzero22/pi-web-desktop",
-	"summary": {
-		"en": "Runs pi-web in its own desktop window, with a private Node runtime it downloads on first launch.",
-		"zh-CN": "在独立窗口中运行 pi-web，首次启动时自动下载专用的 Node 运行时。",
-		"zh-TW": "在獨立視窗中執行 pi-web，首次啟動時自動下載專用的 Node 執行環境。",
-		"ja": "pi-web を専用ウィンドウで動かすアプリ。初回起動時に専用の Node ランタイムを取得。",
-		"ko": "pi-web을 전용 창에서 실행하고, 처음 실행할 때 전용 Node 런타임을 내려받습니다."
-	},
-	"description": {
-		"en": "A MyGo desktop shell for pi-web that shows it in a web view; pi-web itself is the npm package @agegr/pi-web, made separately. On first launch it downloads Node 24.21.0 and the latest pi-web into its own folder, kept apart from any global Node and npm cache, then runs pi-web on port 30142 and opens it in a window with F11 full screen. The build in the README is for Windows.",
-		"zh-CN": "pi-web 的桌面外壳，由 MyGo 以 Web 视图承载；pi-web 本身是另行开发的 npm 包 @agegr/pi-web。首次启动时会把 Node 24.21.0 和最新版 pi-web 下载到自己的目录，与全局 Node 和 npm 缓存隔离，随后在 30142 端口运行 pi-web 并在窗口中打开，按 F11 可全屏。README 中的构建面向 Windows。",
-		"zh-TW": "pi-web 的桌面外殼，由 MyGo 以 Web 視圖承載；pi-web 本身是另外開發的 npm 套件 @agegr/pi-web。首次啟動時會把 Node 24.21.0 和最新版 pi-web 下載到自己的目錄，與全域 Node 和 npm 快取隔離，接著在 30142 連接埠執行 pi-web 並在視窗中開啟，按 F11 可全螢幕。README 中的建置以 Windows 為對象。",
-		"ja": "pi-web のデスクトップ版で、MyGo の Web ビューに pi-web を表示します。pi-web 本体は別に作られている npm パッケージ @agegr/pi-web です。初回起動時に Node 24.21.0 と最新の pi-web を専用フォルダーにダウンロードし、グローバルの Node や npm キャッシュとは分けたまま、ポート 30142 で pi-web を動かしてウィンドウに開きます。F11 で全画面表示にできます。README のビルドは Windows 向けです。",
-		"ko": "pi-web의 데스크톱 버전으로, MyGo의 웹 뷰에 pi-web을 띄웁니다. pi-web 자체는 별도로 만들어진 npm 패키지 @agegr/pi-web입니다. 처음 실행하면 Node 24.21.0과 최신 pi-web을 전용 폴더에 내려받아 전역 Node 및 npm 캐시와 분리해 두고, 30142 포트에서 pi-web을 실행해 창으로 엽니다. F11로 전체 화면을 쓸 수 있으며, README의 빌드는 Windows용입니다."
-	},
-	"icon": {
-		"file": "pi-web-desktop.webp"
-	},
-	"screenshot": "pi-web-desktop.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-06T09:35:08Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "pi-web-desktop",
+  "name": "Pi Web Desktop",
+  "author": "Clearzero22",
+  "kind": "web",
+  "platforms": [
+    "win"
+  ],
+  "group": "agents",
+  "url": "https://github.com/Clearzero22/pi-web-desktop",
+  "repo": "Clearzero22/pi-web-desktop",
+  "summary": {
+    "en": "Runs pi-web in its own desktop window, with a private Node runtime it downloads on first launch.",
+    "zh-CN": "在独立窗口中运行 pi-web，首次启动时自动下载专用的 Node 运行时。",
+    "zh-TW": "在獨立視窗中執行 pi-web，首次啟動時自動下載專用的 Node 執行環境。",
+    "ja": "pi-web を専用ウィンドウで動かすアプリ。初回起動時に専用の Node ランタイムを取得。",
+    "ko": "pi-web을 전용 창에서 실행하고, 처음 실행할 때 전용 Node 런타임을 내려받습니다."
+  },
+  "description": {
+    "en": "A MyGo desktop shell for pi-web that shows it in a web view; pi-web itself is the npm package @agegr/pi-web, made separately. On first launch it downloads Node 24.21.0 and the latest pi-web into its own folder, kept apart from any global Node and npm cache, then runs pi-web on port 30142 and opens it in a window with F11 full screen. The build in the README is for Windows.",
+    "zh-CN": "pi-web 的桌面外壳，由 MyGo 以 Web 视图承载；pi-web 本身是另行开发的 npm 包 @agegr/pi-web。首次启动时会把 Node 24.21.0 和最新版 pi-web 下载到自己的目录，与全局 Node 和 npm 缓存隔离，随后在 30142 端口运行 pi-web 并在窗口中打开，按 F11 可全屏。README 中的构建面向 Windows。",
+    "zh-TW": "pi-web 的桌面外殼，由 MyGo 以 Web 視圖承載；pi-web 本身是另外開發的 npm 套件 @agegr/pi-web。首次啟動時會把 Node 24.21.0 和最新版 pi-web 下載到自己的目錄，與全域 Node 和 npm 快取隔離，接著在 30142 連接埠執行 pi-web 並在視窗中開啟，按 F11 可全螢幕。README 中的建置以 Windows 為對象。",
+    "ja": "pi-web のデスクトップ版で、MyGo の Web ビューに pi-web を表示します。pi-web 本体は別に作られている npm パッケージ @agegr/pi-web です。初回起動時に Node 24.21.0 と最新の pi-web を専用フォルダーにダウンロードし、グローバルの Node や npm キャッシュとは分けたまま、ポート 30142 で pi-web を動かしてウィンドウに開きます。F11 で全画面表示にできます。README のビルドは Windows 向けです。",
+    "ko": "pi-web의 데스크톱 버전으로, MyGo의 웹 뷰에 pi-web을 띄웁니다. pi-web 자체는 별도로 만들어진 npm 패키지 @agegr/pi-web입니다. 처음 실행하면 Node 24.21.0과 최신 pi-web을 전용 폴더에 내려받아 전역 Node 및 npm 캐시와 분리해 두고, 30142 포트에서 pi-web을 실행해 창으로 엽니다. F11로 전체 화면을 쓸 수 있으며, README의 빌드는 Windows용입니다."
+  },
+  "icon": {
+    "file": "pi-web-desktop.webp"
+  },
+  "screenshot": "pi-web-desktop.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-06T09:35:08Z"
 }
