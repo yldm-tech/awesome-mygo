@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "png-to-ico",
-	"name": "PNG to ICO",
-	"author": "flowprog",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "media",
-	"url": "https://github.com/flowprog/png2ico",
-	"repo": "flowprog/png2ico",
-	"summary": {
-		"en": "Converts a PNG into a multi-size Windows ICO with transparency, with a GUI and a separate CLI.",
-		"zh-CN": "把 PNG 转成保留透明度的多尺寸 Windows ICO，附图形界面与独立命令行。",
-		"zh-TW": "把 PNG 轉成保留透明度的多尺寸 Windows ICO，附圖形介面與獨立命令列。",
-		"ja": "PNG を透過を保った複数サイズの Windows ICO に変換。GUI と別の CLI を用意。",
-		"ko": "PNG를 투명도를 유지한 여러 크기의 Windows ICO로 변환합니다. GUI와 별도 CLI 제공."
-	},
-	"description": {
-		"en": "A Windows PNG-to-ICO converter whose GUI is drawn with MyGo's native UI, with no WebView2 or Node.js needed. Pick or drop a PNG, click Convert, and it writes an ICO with six sizes from 16 to 256 pixels, keeping transparency and padding non-square images instead of cropping them. A separate png2ico-cli.exe, built without MyGo, does the same from terminals and scripts.",
-		"zh-CN": "Windows 上的 PNG 转 ICO 工具，图形界面由 MyGo 原生 UI 绘制，无需 WebView2 或 Node.js。选择或拖入一张 PNG，点击 Convert，即可生成包含 16 到 256 像素六种尺寸的 ICO，保留透明度，非正方形图片用透明背景补齐而不裁剪。另有独立的 png2ico-cli.exe 供终端和脚本使用，它不依赖 MyGo。",
-		"zh-TW": "Windows 上的 PNG 轉 ICO 工具，圖形介面由 MyGo 原生 UI 繪製，不需要 WebView2 或 Node.js。選擇或拖入一張 PNG，按下 Convert，即可產生含 16 到 256 像素共六種尺寸的 ICO，保留透明度，非正方形圖片以透明背景補齊而不裁切。另有獨立的 png2ico-cli.exe 供終端機與腳本使用，不依賴 MyGo。",
-		"ja": "GUI を MyGo のネイティブ UI で描いた Windows 用の PNG から ICO への変換ツール。WebView2 も Node.js も要りません。PNG を選ぶかウィンドウにドロップして Convert を押すと、16〜256 ピクセルの 6 サイズを含む ICO を書き出します。透過は保たれ、正方形でない画像は切り取らずに透明な余白で補います。ターミナルやスクリプト向けには、MyGo を使わない別の png2ico-cli.exe があります。",
-		"ko": "GUI를 MyGo의 네이티브 UI로 그린 Windows용 PNG-ICO 변환 도구로, WebView2나 Node.js가 필요 없습니다. PNG를 고르거나 창에 끌어 놓고 Convert를 누르면 16부터 256픽셀까지 여섯 가지 크기를 담은 ICO를 만들며, 투명도를 유지하고 정사각형이 아닌 이미지는 자르지 않고 투명한 여백으로 채웁니다. 터미널과 스크립트용으로는 MyGo를 쓰지 않는 별도의 png2ico-cli.exe가 있습니다."
-	},
-	"icon": {
-		"file": "png-to-ico.webp"
-	},
-	"provisional": [
-		"screenshot"
-	],
-	"screenshot": "png-to-ico.webp",
-	"added": "2026-11-05T15:37:24Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "png-to-ico",
+  "name": "PNG to ICO",
+  "author": "flowprog",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "media",
+  "url": "https://github.com/flowprog/png2ico",
+  "repo": "flowprog/png2ico",
+  "summary": {
+    "en": "Converts a PNG into a multi-size Windows ICO with transparency, with a GUI and a separate CLI.",
+    "zh-CN": "把 PNG 转成保留透明度的多尺寸 Windows ICO，附图形界面与独立命令行。",
+    "zh-TW": "把 PNG 轉成保留透明度的多尺寸 Windows ICO，附圖形介面與獨立命令列。",
+    "ja": "PNG を透過を保った複数サイズの Windows ICO に変換。GUI と別の CLI を用意。",
+    "ko": "PNG를 투명도를 유지한 여러 크기의 Windows ICO로 변환합니다. GUI와 별도 CLI 제공."
+  },
+  "description": {
+    "en": "A Windows PNG-to-ICO converter whose GUI is drawn with MyGo's native UI, with no WebView2 or Node.js needed. Pick or drop a PNG, click Convert, and it writes an ICO with six sizes from 16 to 256 pixels, keeping transparency and padding non-square images instead of cropping them. A separate png2ico-cli.exe, built without MyGo, does the same from terminals and scripts.",
+    "zh-CN": "Windows 上的 PNG 转 ICO 工具，图形界面由 MyGo 原生 UI 绘制，无需 WebView2 或 Node.js。选择或拖入一张 PNG，点击 Convert，即可生成包含 16 到 256 像素六种尺寸的 ICO，保留透明度，非正方形图片用透明背景补齐而不裁剪。另有独立的 png2ico-cli.exe 供终端和脚本使用，它不依赖 MyGo。",
+    "zh-TW": "Windows 上的 PNG 轉 ICO 工具，圖形介面由 MyGo 原生 UI 繪製，不需要 WebView2 或 Node.js。選擇或拖入一張 PNG，按下 Convert，即可產生含 16 到 256 像素共六種尺寸的 ICO，保留透明度，非正方形圖片以透明背景補齊而不裁切。另有獨立的 png2ico-cli.exe 供終端機與腳本使用，不依賴 MyGo。",
+    "ja": "GUI を MyGo のネイティブ UI で描いた Windows 用の PNG から ICO への変換ツール。WebView2 も Node.js も要りません。PNG を選ぶかウィンドウにドロップして Convert を押すと、16〜256 ピクセルの 6 サイズを含む ICO を書き出します。透過は保たれ、正方形でない画像は切り取らずに透明な余白で補います。ターミナルやスクリプト向けには、MyGo を使わない別の png2ico-cli.exe があります。",
+    "ko": "GUI를 MyGo의 네이티브 UI로 그린 Windows용 PNG-ICO 변환 도구로, WebView2나 Node.js가 필요 없습니다. PNG를 고르거나 창에 끌어 놓고 Convert를 누르면 16부터 256픽셀까지 여섯 가지 크기를 담은 ICO를 만들며, 투명도를 유지하고 정사각형이 아닌 이미지는 자르지 않고 투명한 여백으로 채웁니다. 터미널과 스크립트용으로는 MyGo를 쓰지 않는 별도의 png2ico-cli.exe가 있습니다."
+  },
+  "icon": {
+    "file": "png-to-ico.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "png-to-ico.webp",
+  "added": "2026-11-05T15:37:24Z"
 }
