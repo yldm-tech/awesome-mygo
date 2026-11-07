@@ -1,34 +1,36 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "shixin-input",
-	"name": "Shixin Input",
-	"author": "shixin-labs",
-	"kind": "native",
-	"platforms": ["win", "mac"],
-	"group": "system",
-	"url": "https://github.com/shixin-labs/shixin-input",
-	"repo": "shixin-labs/shixin-input",
-	"summary": {
-		"en": "A Chinese pinyin and shuangpin input method on Rime for macOS, with unsigned Windows previews.",
-		"zh-CN": "基于 Rime 的 macOS 中文拼音与双拼输入法，另有未签名的 Windows 预览版。",
-		"zh-TW": "基於 Rime 的 macOS 中文拼音與雙拼輸入法，另有未簽署的 Windows 預覽版。",
-		"ja": "Rime ベースの macOS 向け中国語ピンイン・双拼入力メソッド。Windows 版は未署名プレビュー。",
-		"ko": "Rime 기반 macOS용 중국어 병음·쌍병 입력기. Windows는 서명되지 않은 미리보기 제공."
-	},
-	"description": {
-		"en": "A Chinese input method for macOS built on librime, meant to be as easy as Sogou Pinyin: every option is in a settings app rather than YAML, and Rime runs in a separate process so typing never waits on it. It has full pinyin, seven shuangpin layouts and fuzzy pinyin, and can optionally reorder candidates with a small model on your Mac's GPU. Its UI uses MyGo's native UI; Windows x64 and ARM64 builds are unsigned previews.",
-		"zh-CN": "基于 librime 的 macOS 中文输入法，目标是像搜狗拼音一样好用：所有选项都在设置程序里，无需编辑 YAML；Rime 在独立进程中运行，打字从不等待引擎。支持全拼、七种双拼方案和模糊音，还可选用在 Mac GPU 上运行的小型语言模型为候选词重新排序。界面使用 MyGo 原生 UI；Windows x64 与 ARM64 版为未签名预览版。",
-		"zh-TW": "基於 librime 的 macOS 中文輸入法，目標是像搜狗拼音一樣好用：所有選項都在設定程式裡，不必編輯 YAML；Rime 在獨立行程中執行，打字從不等待引擎。支援全拼、七種雙拼方案和模糊音，還可選用在 Mac GPU 上執行的小型語言模型為候選字詞重新排序。介面使用 MyGo 原生 UI；Windows x64 與 ARM64 版為未簽署的預覽版。",
-		"ja": "librime をベースにした macOS 向けの中国語入力メソッド。Sogou Pinyin のような使いやすさを目指し、設定はすべて設定アプリで行えて YAML を編集する必要はありません。Rime は別プロセスで動くため、入力がエンジンを待つことはありません。全拼、7 種類の双拼配列、あいまい入力に対応し、オプションで Mac の GPU 上の小さな言語モデルを使って候補を並べ替えることもできます。UI は MyGo のネイティブ UI で、Windows x64・ARM64 版は未署名のプレビューです。",
-		"ko": "librime 기반의 macOS용 중국어 입력기로, Sogou Pinyin처럼 쉬운 사용을 목표로 합니다. 모든 옵션은 설정 앱에서 바꾸며 YAML을 편집할 필요가 없고, Rime이 별도 프로세스에서 돌아 입력이 엔진을 기다리지 않습니다. 전체 병음, 7가지 쌍병 배열, 퍼지 병음을 지원하며, 원하면 Mac GPU에서 도는 작은 언어 모델로 후보를 재정렬합니다. UI는 MyGo의 네이티브 UI이며, Windows x64·ARM64 빌드는 서명되지 않은 미리보기입니다."
-	},
-	"icon": {
-		"file": "shixin-input.webp"
-	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
-	"screenshot": "shixin-input.webp",
-	"added": "2026-11-05T08:45:51Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "shixin-input",
+  "name": "Shixin Input",
+  "author": "shixin-labs",
+  "kind": "native",
+  "platforms": [
+    "win",
+    "mac"
+  ],
+  "group": "system",
+  "url": "https://github.com/shixin-labs/shixin-input",
+  "repo": "shixin-labs/shixin-input",
+  "summary": {
+    "en": "A Chinese pinyin and shuangpin input method on Rime for macOS, with unsigned Windows previews.",
+    "zh-CN": "基于 Rime 的 macOS 中文拼音与双拼输入法，另有未签名的 Windows 预览版。",
+    "zh-TW": "基於 Rime 的 macOS 中文拼音與雙拼輸入法，另有未簽署的 Windows 預覽版。",
+    "ja": "Rime ベースの macOS 向け中国語ピンイン・双拼入力メソッド。Windows 版は未署名プレビュー。",
+    "ko": "Rime 기반 macOS용 중국어 병음·쌍병 입력기. Windows는 서명되지 않은 미리보기 제공."
+  },
+  "description": {
+    "en": "A Chinese input method for macOS built on librime, meant to be as easy as Sogou Pinyin: every option is in a settings app rather than YAML, and Rime runs in a separate process so typing never waits on it. It has full pinyin, seven shuangpin layouts and fuzzy pinyin, and can optionally reorder candidates with a small model on your Mac's GPU. Its UI uses MyGo's native UI; Windows x64 and ARM64 builds are unsigned previews.",
+    "zh-CN": "基于 librime 的 macOS 中文输入法，目标是像搜狗拼音一样好用：所有选项都在设置程序里，无需编辑 YAML；Rime 在独立进程中运行，打字从不等待引擎。支持全拼、七种双拼方案和模糊音，还可选用在 Mac GPU 上运行的小型语言模型为候选词重新排序。界面使用 MyGo 原生 UI；Windows x64 与 ARM64 版为未签名预览版。",
+    "zh-TW": "基於 librime 的 macOS 中文輸入法，目標是像搜狗拼音一樣好用：所有選項都在設定程式裡，不必編輯 YAML；Rime 在獨立行程中執行，打字從不等待引擎。支援全拼、七種雙拼方案和模糊音，還可選用在 Mac GPU 上執行的小型語言模型為候選字詞重新排序。介面使用 MyGo 原生 UI；Windows x64 與 ARM64 版為未簽署的預覽版。",
+    "ja": "librime をベースにした macOS 向けの中国語入力メソッド。Sogou Pinyin のような使いやすさを目指し、設定はすべて設定アプリで行えて YAML を編集する必要はありません。Rime は別プロセスで動くため、入力がエンジンを待つことはありません。全拼、7 種類の双拼配列、あいまい入力に対応し、オプションで Mac の GPU 上の小さな言語モデルを使って候補を並べ替えることもできます。UI は MyGo のネイティブ UI で、Windows x64・ARM64 版は未署名のプレビューです。",
+    "ko": "librime 기반의 macOS용 중국어 입력기로, Sogou Pinyin처럼 쉬운 사용을 목표로 합니다. 모든 옵션은 설정 앱에서 바꾸며 YAML을 편집할 필요가 없고, Rime이 별도 프로세스에서 돌아 입력이 엔진을 기다리지 않습니다. 전체 병음, 7가지 쌍병 배열, 퍼지 병음을 지원하며, 원하면 Mac GPU에서 도는 작은 언어 모델로 후보를 재정렬합니다. UI는 MyGo의 네이티브 UI이며, Windows x64·ARM64 빌드는 서명되지 않은 미리보기입니다."
+  },
+  "icon": {
+    "file": "shixin-input.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "shixin-input.webp",
+  "added": "2026-11-05T08:45:51Z"
 }
