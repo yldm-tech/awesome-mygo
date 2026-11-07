@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "cue",
-	"name": "Cue",
-	"author": "yviscool",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "system",
-	"url": "https://github.com/yviscool/cue",
-	"repo": "yviscool/cue",
-	"summary": {
-		"en": "A Windows tray app that shows your keystrokes, shortcuts and clicks on screen for presentations.",
-		"zh-CN": "Windows 托盘应用，演示时把按键、快捷键和鼠标点击显示在屏幕上。",
-		"zh-TW": "Windows 系統匣應用程式，簡報時把按鍵、快捷鍵和滑鼠點擊顯示在螢幕上。",
-		"ja": "プレゼン中のキー入力、ショートカット、クリックを画面に表示する Windows トレイアプリ。",
-		"ko": "발표 중 키 입력, 단축키, 마우스 클릭을 화면에 보여 주는 Windows 트레이 앱."
-	},
-	"description": {
-		"en": "A Windows tray app that shows keystrokes on screen for presenters and streamers, in a transparent click-through overlay drawn with Direct3D 11 from pure Go. It labels shortcuts such as Ctrl + C as Copy, groups typing into words, can show mouse clicks and scrolling, and hides input in sensitive dialogs. It comes with 12 themes and 8 keycap styles.",
-		"zh-CN": "Windows 托盘应用，为演示者和主播把按键显示在屏幕上，悬浮窗透明且点击穿透，由纯 Go 通过 Direct3D 11 绘制。它会把 Ctrl + C 等快捷键标注为“复制”之类的操作，把连续输入聚合成单词，可显示鼠标点击与滚轮滚动，并在敏感输入框中遮蔽内容。内置 12 款主题和 8 种键帽样式。",
-		"zh-TW": "Windows 系統匣應用程式，為簡報者與實況主把按鍵顯示在螢幕上，懸浮視窗透明且可點擊穿透，由純 Go 透過 Direct3D 11 繪製。它會把 Ctrl + C 等快捷鍵標示為「複製」之類的操作，把連續輸入合併成單字，可顯示滑鼠點擊與滾輪捲動，並在敏感輸入框中遮蔽內容。內建 12 款主題與 8 種鍵帽樣式。",
-		"ja": "プレゼンや配信向けに、キー入力を画面に表示する Windows のトレイアプリ。透明でクリックを透過するオーバーレイを、純粋な Go から Direct3D 11 で描画します。Ctrl + C なら「コピー」のようにショートカットの意味を表示し、続けて打った文字を単語にまとめ、マウスのクリックやスクロールも表示でき、機密性の高い入力欄では内容を隠します。テーマは 12 種類、キーキャップのスタイルは 8 種類です。",
-		"ko": "발표자와 스트리머를 위해 키 입력을 화면에 보여 주는 Windows 트레이 앱으로, 투명하고 클릭이 통과되는 오버레이를 순수 Go에서 Direct3D 11로 그립니다. Ctrl + C를 '복사'처럼 단축키의 동작으로 표시하고, 이어서 입력한 글자를 단어로 묶으며, 마우스 클릭과 스크롤도 보여 줄 수 있고, 민감한 입력 창에서는 내용을 가립니다. 테마 12종과 키캡 스타일 8종이 있습니다."
-	},
-	"icon": {
-		"file": "cue.webp"
-	},
-	"provisional": [
-		"screenshot"
-	],
-	"screenshot": "cue.webp",
-	"added": "2026-11-05T17:38:35Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "cue",
+  "name": "Cue",
+  "author": "yviscool",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "system",
+  "url": "https://github.com/yviscool/cue",
+  "repo": "yviscool/cue",
+  "summary": {
+    "en": "A Windows tray app that shows your keystrokes, shortcuts and clicks on screen for presentations.",
+    "zh-CN": "Windows 托盘应用，演示时把按键、快捷键和鼠标点击显示在屏幕上。",
+    "zh-TW": "Windows 系統匣應用程式，簡報時把按鍵、快捷鍵和滑鼠點擊顯示在螢幕上。",
+    "ja": "プレゼン中のキー入力、ショートカット、クリックを画面に表示する Windows トレイアプリ。",
+    "ko": "발표 중 키 입력, 단축키, 마우스 클릭을 화면에 보여 주는 Windows 트레이 앱."
+  },
+  "description": {
+    "en": "A Windows tray app that shows keystrokes on screen for presenters and streamers, in a transparent click-through overlay drawn with Direct3D 11 from pure Go. It labels shortcuts such as Ctrl + C as Copy, groups typing into words, can show mouse clicks and scrolling, and hides input in sensitive dialogs. It comes with 12 themes and 8 keycap styles.",
+    "zh-CN": "Windows 托盘应用，为演示者和主播把按键显示在屏幕上，悬浮窗透明且点击穿透，由纯 Go 通过 Direct3D 11 绘制。它会把 Ctrl + C 等快捷键标注为“复制”之类的操作，把连续输入聚合成单词，可显示鼠标点击与滚轮滚动，并在敏感输入框中遮蔽内容。内置 12 款主题和 8 种键帽样式。",
+    "zh-TW": "Windows 系統匣應用程式，為簡報者與實況主把按鍵顯示在螢幕上，懸浮視窗透明且可點擊穿透，由純 Go 透過 Direct3D 11 繪製。它會把 Ctrl + C 等快捷鍵標示為「複製」之類的操作，把連續輸入合併成單字，可顯示滑鼠點擊與滾輪捲動，並在敏感輸入框中遮蔽內容。內建 12 款主題與 8 種鍵帽樣式。",
+    "ja": "プレゼンや配信向けに、キー入力を画面に表示する Windows のトレイアプリ。透明でクリックを透過するオーバーレイを、純粋な Go から Direct3D 11 で描画します。Ctrl + C なら「コピー」のようにショートカットの意味を表示し、続けて打った文字を単語にまとめ、マウスのクリックやスクロールも表示でき、機密性の高い入力欄では内容を隠します。テーマは 12 種類、キーキャップのスタイルは 8 種類です。",
+    "ko": "발표자와 스트리머를 위해 키 입력을 화면에 보여 주는 Windows 트레이 앱으로, 투명하고 클릭이 통과되는 오버레이를 순수 Go에서 Direct3D 11로 그립니다. Ctrl + C를 '복사'처럼 단축키의 동작으로 표시하고, 이어서 입력한 글자를 단어로 묶으며, 마우스 클릭과 스크롤도 보여 줄 수 있고, 민감한 입력 창에서는 내용을 가립니다. 테마 12종과 키캡 스타일 8종이 있습니다."
+  },
+  "icon": {
+    "file": "cue.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "cue.webp",
+  "added": "2026-11-05T17:38:35Z"
 }
