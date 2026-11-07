@@ -14,7 +14,7 @@ export function pruneConfig(env: Record<string, string | undefined>): PruneConfi
 	return { scoreFloor: num(env.SCORE_FLOOR, PRUNE_DEFAULTS.scoreFloor), graceDays: num(env.GRACE_DAYS, PRUNE_DEFAULTS.graceDays), staleDays: num(env.STALE_DAYS, PRUNE_DEFAULTS.staleDays) };
 }
 
-// What is known of an entry when it is judged. score is the site's score (scoreOf's total), undefined while the entry has none: a community plugin, which the site does not score, or an entry the score workflow has not measured yet. lastCommit is the date of the latest commit on the repository's default branch, or in the folder the entry is measured by. usesMygo is undefined when it could not be told (a tree too large).
+// What is known of an entry when it is judged. score is the site's score (scoreOf's total), undefined while the score workflow has not measured the entry yet. lastCommit is the date of the latest commit on the repository's default branch, or in the folder the entry is measured by. usesMygo is undefined when it could not be told (a tree too large).
 export interface PruneFacts {
 	added?: string;
 	score?: number;

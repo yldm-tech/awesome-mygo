@@ -21,7 +21,7 @@ const ACTIVITY_MIN = 4;
 // How many days with a release or tag in the counted weeks count in full, on a log scale below: one a week.
 export const RELEASE_ANCHOR = 12;
 
-// What the workflow records of one entry. An entry without repo is closed source. path is set when the entry lives in a folder of a larger repository (an official plugin inside egoist/mygo): its activity is that folder's, its release and license the repository's, and its stars are not recorded, as the repository's are not the plugin's own. A field that is left out was not measured, except released (never released) and archived (not archived).
+// What the workflow records of one entry. An entry without repo is closed source. path is set when the entry lives in a folder of a larger repository: its activity is that folder's, its release and license the repository's, and its stars are not recorded, as the repository's are not the plugin's own. A field that is left out was not measured, except released (never released) and archived (not archived).
 export interface ScoreSignals {
 	repo?: string;
 	path?: string;
@@ -125,12 +125,15 @@ export interface ScoreTarget {
 }
 
 const GITHUB_REPO = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?(?:[/#?]|$)/;
+const GITHUB_IMPORT = /^github\.com\/([\w.-]+)\/([\w.-]+?)(?:\/|$)/i;
 
-// What the workflow measures for an entry: its repository (its repo field, or else its link when that is a repository) and, for an entry in a folder of it, the folder (from its Go import path under the repository, or else from a /tree/<ref>/<path> link into that same repository). An empty target is a closed-source entry.
+// What the workflow measures for an entry: its repository (its repo field, its link when that is a repository, or a GitHub Go import path) and, for an entry in a folder of it, the folder (from its Go import path under the repository, or else from a /tree/<ref>/<path> link into that same repository). An empty target is a closed-source entry.
 export function scoreTarget(e: { repo?: string; url?: string; goImport?: string }): ScoreTarget {
 	const m = e.url ? GITHUB_REPO.exec(e.url.trim()) : null;
 	const linked = m ? `${m[1]}/${m[2]}` : undefined;
-	const repo = e.repo && /^[^/\s]+\/[^/\s]+$/.test(e.repo) ? e.repo : linked;
+	const imported = e.goImport ? GITHUB_IMPORT.exec(e.goImport.trim()) : null;
+	const importedRepo = imported ? `${imported[1]}/${imported[2]}` : undefined;
+	const repo = e.repo && /^[^/\s]+\/[^/\s]+$/.test(e.repo) ? e.repo : linked ?? importedRepo;
 	if (!repo) return {};
 	const prefix = `github.com/${repo}/`.toLowerCase();
 	const fromImport = e.goImport?.toLowerCase().startsWith(prefix) ? e.goImport.slice(prefix.length) : undefined;

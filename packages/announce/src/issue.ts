@@ -50,9 +50,9 @@ export function standInImages(kind: EntryKind, entry: Entry): { screenshot: bool
 
 // ---- the score ----
 
-// Whether the site scores the entry: every one but a community plugin, which has no card of its own (scoredEntry in packages/enrich/src/signals.ts).
+// Whether the site scores the entry: every one but an official plugin, which belongs to MyGo itself (scoredEntry in packages/enrich/src/signals.ts).
 export function isScored(kind: EntryKind, entry: Entry): boolean {
-	return kind !== 'plugin' || entry.official === true;
+	return kind !== 'plugin' || entry.official !== true;
 }
 
 // Where the entry's score shows: the score section of an app's page, or the card on its category's page.

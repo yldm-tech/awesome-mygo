@@ -90,7 +90,7 @@ export function ScoreBreakdown({ item, id, className = '' }: { item: string; id?
 	);
 }
 
-// The total on a button that opens the breakdown, for the entries that have no page of their own (UI libraries, state solutions, official plugins). A native popover: Escape, a click outside or the close button dismiss it, it works by touch, and it sits above everything else, so a card's transform or overflow cannot clip it. It sits beside a card's link rather than inside it.
+// The total on a button that opens the breakdown, for the entries that have no page of their own (UI libraries, state solutions, community plugins). A native popover: Escape, a click outside or the close button dismiss it, it works by touch, and it sits above everything else, so a card's transform or overflow cannot clip it. It sits beside a card's link rather than inside it.
 export function ScoreButton({ item, name, className = '' }: { item: string; name: string; className?: string }) {
 	const t = useT();
 	const id = useId();

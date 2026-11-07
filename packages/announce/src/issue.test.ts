@@ -148,13 +148,13 @@ describe('the score', () => {
 		expect(scoreTips({ repo: 'a/b', license: null, released: null }, now).map((t) => t.tip)).toEqual(['license', 'release']);
 	});
 
-	it("links where the score shows: an app's score section, a library's category page; a community plugin has none", () => {
+	it("links where the score shows: an app's score section, a library's category page and a community plugin's page", () => {
 		expect(scorePage('app', { slug: 'kumo' })).toBe(`${SITE_URL}/apps/kumo#score`);
 		expect(scorePage('ui', { slug: 'uix' })).toBe(`${SITE_URL}/ui`);
 		expect(scorePage('state', { slug: 's' })).toBe(`${SITE_URL}/state`);
 		expect(isScored('app', { slug: 'a' })).toBe(true);
-		expect(isScored('plugin', { slug: 'p', official: true })).toBe(true);
-		expect(isScored('plugin', { slug: 'p', official: false })).toBe(false);
+		expect(isScored('plugin', { slug: 'p', official: true })).toBe(false);
+		expect(isScored('plugin', { slug: 'p', official: false })).toBe(true);
 	});
 
 	it('says where the score will show and how to raise it, in English and Chinese', () => {
@@ -187,13 +187,14 @@ describe('the score', () => {
 		expect(now).not.toContain('下次每日测量');
 	});
 
-	it('gives no tips when none apply, and no score to a community plugin', () => {
+	it('gives no tips when none apply, and scores a community plugin', () => {
 		const none = composeIssue({ kind: 'app', entry: { slug: 'm', name: 'M' }, tips: [] }).body;
 		expect(none).toContain('is updated weekly');
 		expect(none).not.toContain('To raise it');
 		expect(none).not.toContain('提高分数');
 		const plugin = composeIssue({ kind: 'plugin', entry: { slug: 'untie', name: 'untie', official: false }, tips: scoreTips({ repo: 'a/b', license: null }, now) }).body;
-		expect(plugin).not.toContain('score');
-		expect(plugin).not.toContain('分数');
+		expect(plugin).toContain(`untie's score shows at ${SITE_URL}/plugins from the next daily measurement, and is updated weekly.`);
+		expect(plugin).toContain('To raise it:');
+		expect(plugin).toContain('分数');
 	});
 });

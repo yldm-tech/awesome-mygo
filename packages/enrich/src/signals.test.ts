@@ -108,11 +108,12 @@ describe('what the site scores', () => {
 		expect(scoredEntry('app', { slug: '2048', url: 'https://github.com/egoist/2048' })).toEqual({ key: 'app:2048', target: { repo: 'egoist/2048' }, urlOnly: true });
 		expect(scoredEntry('app', { slug: 'bamboo', url: 'https://getbamboo.app/', repo: 'OldPanda/bamboo' })).toEqual({ key: 'app:bamboo', target: { repo: 'OldPanda/bamboo' }, urlOnly: false });
 		expect(scoredEntry('ui', { slug: 'mujicaui', repo: 'ELY-Open-Source/MujicaUI', url: 'https://github.com/ELY-Open-Source/MujicaUI/tree/main/x' })).toEqual({ key: 'ui:ELY-Open-Source/MujicaUI', target: { repo: 'ELY-Open-Source/MujicaUI' }, urlOnly: false });
-		expect(scoredEntry('plugin', { slug: 'sqlite', official: true, docs: 'https://github.com/egoist/mygo/blob/main/docs/plugins/sqlite.md', import: 'github.com/egoist/mygo/plugins/sqlite' })).toEqual({ key: 'plugin:sqlite', target: { repo: 'egoist/mygo', path: 'plugins/sqlite' }, urlOnly: false });
+		expect(scoredEntry('plugin', { slug: 'untie', official: false, docs: 'https://github.com/someone/untie', import: 'github.com/someone/untie' })).toEqual({ key: 'plugin:untie', target: { repo: 'someone/untie' }, urlOnly: false });
 	});
 
-	it('leaves out the community plugins, which have no likes', () => {
-		expect(scoredEntry('plugin', { slug: 'untie', official: false, docs: 'https://github.com/someone/untie', import: 'github.com/someone/untie' })).toBeUndefined();
+	it('leaves out official plugins, which belong to MyGo itself', () => {
+		expect(scoredEntry('plugin', { slug: 'sqlite', official: true, docs: 'https://github.com/egoist/mygo/blob/main/docs/plugins/sqlite.md', import: 'github.com/egoist/mygo/plugins/sqlite' })).toBeUndefined();
+		expect(scoredEntry('plugin', { slug: 'untie', official: false, docs: 'https://github.com/someone/untie', import: 'github.com/someone/untie' })).toEqual({ key: 'plugin:untie', target: { repo: 'someone/untie' }, urlOnly: false });
 	});
 });
 

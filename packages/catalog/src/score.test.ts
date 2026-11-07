@@ -7,7 +7,7 @@ const daysBefore = (n: number) => new Date(Date.parse(`${AS_OF}T00:00:00Z`) - n 
 
 // An open-source app, measured in full.
 const OPEN: ScoreSignals = { repo: 'egoist/kero', stars: 1419, weeks: 12, activeWeeks: 12, license: 'MIT', osi: true, released: daysBefore(2), releaseDays: 12, likes: 0 };
-// An official plugin, in a folder of egoist/mygo.
+// A plugin in a folder of a larger repository.
 const PLUGIN: ScoreSignals = { repo: 'egoist/mygo', path: 'plugins/sqlite', weeks: 6, activeWeeks: 4, license: 'MIT', osi: true, released: daysBefore(1), releaseDays: 26, likes: 0 };
 
 const part = (score: Score, signal: ScoreSignal) => score.parts.find((p) => p.signal === signal)!;
@@ -118,7 +118,7 @@ describe('scoreOf', () => {
 		expect(score({ likes: 2, stars: 5000, weeks: 12, activeWeeks: 12, released: AS_OF }).total).toBe(37);
 	});
 
-	it('counts an official plugin\'s stars at neutral, as its repository\'s are not its own', () => {
+	it('counts a folder plugin\'s stars at neutral, as its repository\'s are not its own', () => {
 		const sqlite = score(PLUGIN);
 		expect(part(sqlite, 'stars')).toEqual({ signal: 'stars', points: 15, max: 30, basis: 'neutral' });
 		expect(part(sqlite, 'activity').basis).toBe('measured');
@@ -221,10 +221,11 @@ describe('scoreTarget', () => {
 		expect(scoreTarget({ url: 'https://github.com/egoist/2048.git' })).toEqual({ repo: 'egoist/2048' });
 	});
 
-	it('measures an official plugin in its folder of egoist/mygo', () => {
+	it('measures a plugin in its folder of a larger repository', () => {
 		const sqlite = { url: 'https://github.com/egoist/mygo/blob/main/docs/plugins/sqlite.md', goImport: 'github.com/egoist/mygo/plugins/sqlite' };
 		expect(scoreTarget(sqlite)).toEqual({ repo: 'egoist/mygo', path: 'plugins/sqlite' });
 		expect(scoreTarget({ ...sqlite, goImport: 'github.com/Egoist/MyGo/plugins/sqlite' })).toEqual({ repo: 'egoist/mygo', path: 'plugins/sqlite' });
+		expect(scoreTarget({ url: 'https://limu.firede.com', goImport: 'github.com/firede/limu/limumygo' })).toEqual({ repo: 'firede/limu', path: 'limumygo' });
 	});
 
 	it('measures the folder a /tree/ link points at', () => {

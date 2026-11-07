@@ -1,5 +1,5 @@
 import scoresJson from '../data/scores.json';
-import { AI_TOOLS, APPS, PLUGINS, STATE_SOLUTIONS, TEMPLATES, UI_LIBS } from './catalog';
+import { AI_TOOLS, APPS, COMMUNITY_PLUGINS, STATE_SOLUTIONS, TEMPLATES, UI_LIBS } from './catalog';
 import { ACTIVITY_WEEKS, type Score, type ScoreSignals, type ScoreTarget, scoreKey, scoreOf, scoreTarget } from './score';
 import { CatalogError, Reader } from './validate';
 
@@ -86,7 +86,7 @@ export function readScores(json: unknown): ScoresFile {
 	return { asOf, entries };
 }
 
-// What the workflow measures for each entry that has a score, by its key: the entries visitors can like (LIKE_KEYS), as the catalog lists them now.
+// What the workflow measures for each entry that has a score, by its key: the scoreable entries among those visitors can like (LIKE_KEYS), as the catalog lists them now.
 export const SCORE_TARGETS: ReadonlyMap<string, ScoreTarget> = new Map([
 	...APPS.map((a) => [scoreKey('app', a), scoreTarget({ repo: a.repo, url: a.url })] as const),
 	...UI_LIBS.map((l) => [scoreKey('ui', l), scoreTarget({ repo: l.repo })] as const),
@@ -94,7 +94,7 @@ export const SCORE_TARGETS: ReadonlyMap<string, ScoreTarget> = new Map([
 	...TEMPLATES.map((x) => [scoreKey('template', x), scoreTarget({ repo: x.repo })] as const),
 	// An AI tool in a folder of its repository is measured by that folder.
 	...AI_TOOLS.map((x) => [scoreKey('ai', x), scoreTarget({ repo: x.repo, url: x.url })] as const),
-	...PLUGINS.map((p) => [scoreKey('plugin', p), scoreTarget({ url: p.url, goImport: p.goImport })] as const),
+	...COMMUNITY_PLUGINS.map((p) => [scoreKey('plugin', p), scoreTarget({ url: p.url, goImport: p.goImport })] as const),
 ]);
 
 export interface EntryScore {

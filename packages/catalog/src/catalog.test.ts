@@ -247,8 +247,9 @@ describe('showcase groups', () => {
 
 describe('like keys', () => {
 	it('gives every likeable entry its own key', () => {
-		expect(LIKE_KEYS.size).toBe(APPS.length + UI_LIBS.length + STATE_SOLUTIONS.length + TEMPLATES.length + AI_TOOLS.length + PLUGINS.length);
+		expect(LIKE_KEYS.size).toBe(APPS.length + UI_LIBS.length + STATE_SOLUTIONS.length + TEMPLATES.length + AI_TOOLS.length + PLUGINS.length + COMMUNITY_PLUGINS.length);
 		expect(LIKE_KEYS.has(likeKey.app(APPS[0]))).toBe(true);
+		expect(LIKE_KEYS.has(likeKey.plugin(COMMUNITY_PLUGINS[0]))).toBe(true);
 		expect(LIKE_KEYS.has('app:not-an-app')).toBe(false);
 	});
 });
@@ -1102,22 +1103,23 @@ describe('scores', () => {
 		expect(read(kit)).not.toThrow();
 	});
 
-	it('keys every entry\'s score as its like, and only the entries visitors can like', () => {
+	it('keys every score as its like, and scores only community plugins', () => {
 		for (const a of APPS) expect(scoreKey('app', a)).toBe(likeKey.app(a));
 		for (const l of UI_LIBS) expect(scoreKey('ui', l)).toBe(likeKey.ui(l));
 		for (const s of STATE_SOLUTIONS) expect(scoreKey('state', s)).toBe(likeKey.state(s));
 		for (const x of TEMPLATES) expect(scoreKey('template', x)).toBe(likeKey.template(x));
 		for (const x of AI_TOOLS) expect(scoreKey('ai', x)).toBe(likeKey.ai(x));
-		for (const p of PLUGINS) expect(scoreKey('plugin', p)).toBe(likeKey.plugin(p));
-		expect([...SCORE_TARGETS.keys()].sort()).toEqual([...LIKE_KEYS].sort());
-		for (const p of COMMUNITY_PLUGINS) {
+		for (const p of [...PLUGINS, ...COMMUNITY_PLUGINS]) expect(scoreKey('plugin', p)).toBe(likeKey.plugin(p));
+		expect([...SCORE_TARGETS.keys()].every((key) => LIKE_KEYS.has(key))).toBe(true);
+		for (const p of PLUGINS) {
 			expect(Object.keys(scoresFile.entries), p.slug).not.toContain(scoreKey('plugin', p));
 			expect(SCORE_TARGETS.has(scoreKey('plugin', p)), p.slug).toBe(false);
 		}
+		for (const p of COMMUNITY_PLUGINS) expect(SCORE_TARGETS.has(scoreKey('plugin', p)), p.slug).toBe(true);
 	});
 
-	it('measures every official plugin in its own folder, and an app without a repo field by its repository link', () => {
-		for (const p of PLUGINS) expect(SCORE_TARGETS.get(scoreKey('plugin', p)), p.slug).toEqual({ repo: 'egoist/mygo', path: `plugins/${p.slug}` });
+	it('measures every community plugin from its repository or folder, and an app without a repo field by its repository link', () => {
+		for (const p of COMMUNITY_PLUGINS) expect(SCORE_TARGETS.get(scoreKey('plugin', p)), p.slug).toEqual(expect.objectContaining({ repo: expect.any(String) }));
 		expect(SCORE_TARGETS.get('app:2048')).toEqual({ repo: 'egoist/2048' });
 		expect(SCORE_TARGETS.get('app:pulse')).toEqual({});
 	});
@@ -1126,7 +1128,7 @@ describe('scores', () => {
 		const app = APPS.find((a) => a.repo)!;
 		const other = APPS.find((a) => a.repo && a.repo !== app.repo)!;
 		const closed = APPS.find((a) => !SCORE_TARGETS.get(scoreKey('app', a))?.repo)!;
-		const plugin = PLUGINS[0];
+		const plugin = COMMUNITY_PLUGINS[0];
 		const at = (key: string) => SCORE_TARGETS.get(key)!;
 		const keys = { app: scoreKey('app', app), other: scoreKey('app', other), closed: scoreKey('app', closed), plugin: scoreKey('plugin', plugin) };
 		const scores = scoresFor(readScores(file({

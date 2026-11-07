@@ -83,9 +83,9 @@ export interface Scored {
 
 const str = (v: unknown) => (typeof v === 'string' ? v : undefined);
 
-// The scored entry of one of data/<kind>/*.json, or undefined for one the site does not score: a community plugin, which has no card and no likes.
+// The scored entry of one of data/<kind>/*.json, or undefined for one the site does not score: an official plugin, which belongs to MyGo itself.
 export function scoredEntry(kind: EntryKind, e: Entry): Scored | undefined {
-	if (kind === 'plugin' && e.official !== true) return undefined;
+	if (kind === 'plugin' && e.official === true) return undefined;
 	const slug = String(e.slug);
 	const repo = str(e.repo);
 	// An app's and an AI tool's link may be a folder of their repository, which is then what is measured.

@@ -50,7 +50,7 @@ function PluginsPage() {
 	const shown = PLUGINS.filter((p) => fits(p.surface));
 	// The community's plugins, under the same filter, after the official ones and the call to write one.
 	const community = COMMUNITY_PLUGINS.filter((p) => fits(p.surface));
-	// Most liked or highest score first; equal likes keep the docs' order, and equal totals are ordered by the unrounded sum, then the raw active weeks and release days, then the docs' order (compareByScore). The community's plugins have no score yet, so by score they keep theirs.
+	// Most liked or highest score first; equal likes keep the docs' order, and equal totals are ordered by the unrounded sum, then the raw active weeks and release days, then the docs' order (compareByScore). A plugin without a score yet stays in its docs order.
 	for (const list of [shown, community]) {
 		if (sort === 'likes') list.sort((a, b) => (counts[likeKey.plugin(b)] ?? 0) - (counts[likeKey.plugin(a)] ?? 0));
 		if (sort === 'score') list.sort((a, b) => compareByScore(likeKey.plugin(a), likeKey.plugin(b)));

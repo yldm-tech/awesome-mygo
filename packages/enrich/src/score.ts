@@ -5,7 +5,7 @@ import { github } from './github.ts';
 import { type BatchResult, type GraphqlAnswer, type Scored, type ScoresFile, anomalies, assemble, batches, buildQuery, commitMessage, isIdle, parseBatch, planRun, readLikes, scoredEntry, serializeScores, totalOf, weekStart, weekWindows } from './signals.ts';
 import { ENTRY_DIRS, type Entry, type EntryKind } from './source.ts';
 
-// Run by .github/workflows/score.yml once a day. It records in packages/catalog/data/scores.json the raw signals each entry's score is computed from when the site is built (packages/catalog/src/score.ts): for every app, UI library, state management library and official plugin, its repository's stars, license, latest release or tag and whether it is archived, in how many of the 12 full weeks before this week's Monday (asOf) it had commits, on how many days in those weeks it had a release or tag, and its likes on the site. A closed-source app has only its likes; an official plugin's commits are counted in its own folder of egoist/mygo, and its stars are not recorded, as egoist/mygo's are not the plugin's own.
+// Run by .github/workflows/score.yml once a day. It records in packages/catalog/data/scores.json the raw signals each entry's score is computed from when the site is built (packages/catalog/src/score.ts): for every app, UI library, state management library and community plugin, its repository's stars, license, latest release or tag and whether it is archived, in how many of the 12 full weeks before this week's Monday (asOf) it had commits, on how many days in those weeks it had a release or tag, and its likes on the site. A closed-source app has only its likes; a plugin in a folder of a repository has its commits counted in that folder, and its stars are not recorded, as the repository's are not the plugin's own.
 //
 // The first run of a week measures every entry, so that a week's signals are one snapshot; a later run that week only measures the entries that have no record yet, whose repository or folder changed, or whose record is from before a signal was recorded, and leaves every other record as it is (signals.ts, planRun). A run is all or nothing: a failed request, a GraphQL error other than a repository GitHub does not find, likes that cannot be read, or more than a fifth of the repositories not found throws before anything is written, and the next day's run makes up the week. A repository that is not found keeps its entry's last record of it, or leaves the entry without one (the site shows it as pending), and is listed under Data to fix.
 //
@@ -31,7 +31,7 @@ const say = (line: string): void => {
 };
 const cell = (s: string) => s.replace(/\|/g, '\\|');
 
-// Every entry the site scores, from data/{apps,ui,state,templates,ai,plugins}/*.json as the catalog reads them, with the official plugins only, as LIKE_KEYS has them.
+// Every entry the site scores, from data/{apps,ui,state,templates,ai,plugins}/*.json as the catalog reads them, with community plugins only (a subset of LIKE_KEYS).
 async function scoredEntries(): Promise<Scored[]> {
 	const out: Scored[] = [];
 	for (const [kind, dir] of Object.entries(ENTRY_DIRS) as [EntryKind, string][]) {
