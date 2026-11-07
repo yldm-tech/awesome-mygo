@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "meow-craft-launcher",
+	"name": "Meow Craft Launcher",
+	"author": "Lingwcy",
+	"kind": "native",
+	"group": "game",
+	"url": "https://github.com/Lingwcy/mcl",
+	"repo": "Lingwcy/mcl",
+	"summary": {
+		"en": "A Minecraft Java Edition launcher: isolated instances, mods, resource packs and Java runtimes.",
+		"zh-CN": "Minecraft Java 版启动器：独立实例、模组与资源包、Java 运行时管理。",
+		"zh-TW": "Minecraft Java 版啟動器：獨立實例、模組與資源包、Java 執行環境管理。",
+		"ja": "Minecraft Java 版ランチャー。インスタンス、Mod、リソースパック、Java を一か所で管理。",
+		"ko": "Minecraft Java 에디션 런처. 독립 인스턴스, 모드와 리소스 팩, Java 런타임 관리."
+	},
+	"description": {
+		"en": "A Minecraft Java Edition launcher written in Go and drawn with MyGo's native UI. It creates isolated instances, lets you browse mods and resource packs, and manages Java runtimes from one app. Releases come as a universal DMG for Apple Silicon and Intel Macs and a Windows x64 installer; the Mac app has only an ad-hoc signature and the Windows installer is unsigned.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的 Minecraft Java 版启动器。可以创建相互隔离的实例，浏览模组与资源包，并在同一个应用里管理 Java 运行时。发布版本包括适用于 Apple Silicon 与 Intel Mac 的通用 DMG 和 Windows x64 安装程序；Mac 版仅有 ad-hoc 签名，Windows 安装程序未签名。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的 Minecraft Java 版啟動器。可以建立彼此隔離的實例，瀏覽模組與資源包，並在同一個應用程式裡管理 Java 執行環境。發行版本包括適用於 Apple Silicon 與 Intel Mac 的通用 DMG 和 Windows x64 安裝程式；Mac 版僅有 ad-hoc 簽章，Windows 安裝程式未簽章。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた Minecraft Java 版のランチャー。互いに独立したインスタンスを作成し、Mod やリソースパックを探し、Java ランタイムの管理までひとつのアプリで行えます。配布物は Apple Silicon と Intel Mac に対応したユニバーサル DMG と Windows x64 用インストーラーで、Mac 版は ad-hoc 署名のみ、Windows 版インストーラーは署名されていません。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 Minecraft Java 에디션 런처입니다. 서로 분리된 인스턴스를 만들고, 모드와 리소스 팩을 둘러보고, Java 런타임까지 앱 하나에서 관리합니다. 배포판은 Apple Silicon과 Intel Mac용 유니버설 DMG와 Windows x64 설치 프로그램이며, Mac 앱은 ad-hoc 서명만 되어 있고 Windows 설치 프로그램은 서명되지 않았습니다."
+	},
+	"icon": {
+		"file": "meow-craft-launcher.webp"
+	},
+	"screenshot": "meow-craft-launcher.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-07T08:59:06Z"
+}
