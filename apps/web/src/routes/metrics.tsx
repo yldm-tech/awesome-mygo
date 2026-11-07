@@ -80,15 +80,15 @@ function MetricsPage() {
 					<h1 className='page-h1'>{t.metrics_h}</h1>
 					<p className='page-p max-w-[680px]'>{t.metrics_p}</p>
 				</div>
-				<div className='flex items-center gap-2 rounded-full border border-cyan/35 bg-cyan/8 px-3.5 py-2 font-mono text-[12px] text-cyan'>
-					<span className='size-2 rounded-full bg-cyan shadow-[0_0_14px_rgba(63,211,245,0.9)]' aria-hidden='true' />
+				<div className='flex items-center gap-2 rounded-full border border-green/35 bg-green/8 px-3.5 py-2 font-mono text-[12px] text-green'>
+					<span className='size-2 rounded-full bg-green shadow-[0_0_14px_rgba(155,227,138,0.9)]' aria-hidden='true' />
 					{t.metrics_live}
 				</div>
 			</header>
 			<div className='flex flex-wrap items-center justify-between gap-3 rounded-[14px] border border-line bg-well/70 p-2.5'>
 				<span className='px-2 text-[13px] font-semibold text-fg-3'>{t.metrics_range}</span>
 				<div role='tablist' aria-label={t.metrics_range} className='flex gap-1'>
-					{RANGES.map((days) => <button key={days} type='button' role='tab' aria-selected={range === days} onClick={() => setRange(days)} className='min-h-9 rounded-[9px] border-0 px-3.5 text-[13px] font-semibold text-fg-2 transition-colors aria-selected:bg-cyan aria-selected:text-bg'>{t[`metrics_${days}d` as 'metrics_7d' | 'metrics_30d' | 'metrics_90d']}</button>)}
+					{RANGES.map((days) => <button key={days} type='button' role='tab' aria-selected={range === days} onClick={() => setRange(days)} className='min-h-9 rounded-[9px] border-0 bg-transparent px-3.5 text-[13px] font-semibold text-fg-2 transition-colors hover:bg-white/6 hover:text-fg aria-selected:bg-cyan aria-selected:text-bg'>{t[`metrics_${days}d` as 'metrics_7d' | 'metrics_30d' | 'metrics_90d']}</button>)}
 				</div>
 			</div>
 			{loading ? <div className='rounded-[18px] border border-line-2 bg-panel p-10 text-center text-fg-3'>{t.metrics_loading}</div> : error || !data ? <div className='rounded-[18px] border border-dashed border-line-3 bg-panel p-10 text-center text-fg-2'>{reason === 'not_configured' ? t.metrics_not_configured : t.metrics_unavailable}</div> : (
