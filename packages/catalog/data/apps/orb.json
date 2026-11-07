@@ -1,34 +1,37 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "orb",
-	"name": "Orb",
-	"author": "OrdalieTech",
-	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
-	"group": "agents",
-	"url": "https://github.com/OrdalieTech/orb",
-	"repo": "OrdalieTech/orb",
-	"summary": {
-		"en": "Desktop client for Orb, a pure-Go coding agent ported from pi.",
-		"zh-CN": "Orb 的桌面客户端，一个从 pi 移植的纯 Go 编程智能体。",
-		"zh-TW": "Orb 的桌面用戶端，一個從 pi 移植的純 Go 程式碼代理。",
-		"ja": "Orb のデスクトップクライアント。pi から移植された純 Go 製のコーディングエージェント。",
-		"ko": "pi에서 포팅한 순수 Go 코딩 에이전트 Orb의 데스크톱 클라이언트."
-	},
-	"description": {
-		"en": "The desktop client of Orb, a pure-Go coding agent that began as a port of pi and keeps interop with it, drawn with MyGo's native UI; the orb CLI and its terminal UI, the Go SDK and other deployments are built separately. Orb keeps sessions in SQLite with Pi JSONL import and export, runs many pi extensions unmodified and pairs devices over Bridge.",
-		"zh-CN": "Orb 的桌面客户端，由 MyGo 原生 UI 绘制。Orb 是从 pi 移植而来、并与之保持互通的纯 Go 编程智能体；orb 命令行及其终端界面、Go SDK 和其他部署形态另行构建。会话存于 SQLite，可导入导出 Pi 的 JSONL，能直接运行许多 pi 扩展，并可通过 Bridge 配对设备。",
-		"zh-TW": "Orb 的桌面用戶端，由 MyGo 原生 UI 繪製。Orb 是從 pi 移植而來、並與之保持互通的純 Go 程式碼代理；orb 命令列及其終端介面、Go SDK 與其他部署形式另行建置。工作階段存於 SQLite，可匯入匯出 Pi 的 JSONL，能直接執行許多 pi 擴充功能，並可透過 Bridge 配對裝置。",
-		"ja": "MyGo のネイティブ UI で描かれた Orb のデスクトップクライアント。Orb は pi の移植として始まり、互換性を保ち続ける純 Go 製のコーディングエージェントで、orb CLI とそのターミナル UI、Go SDK、ほかのデプロイ先は別に作られています。セッションは SQLite に保存され、Pi の JSONL で読み込み・書き出しができます。多くの pi 拡張をそのまま動かせ、Bridge でデバイスをペアリングできます。",
-		"ko": "MyGo의 네이티브 UI로 그린 Orb의 데스크톱 클라이언트입니다. Orb는 pi를 포팅해 시작했고 지금도 호환성을 유지하는 순수 Go 코딩 에이전트이며, orb CLI와 그 터미널 UI, Go SDK, 그 밖의 배포 형태는 따로 만들어집니다. 세션은 SQLite에 저장되고 Pi JSONL로 가져오거나 내보낼 수 있습니다. 많은 pi 확장을 그대로 실행하고 Bridge로 기기를 페어링합니다."
-	},
-	"icon": {
-		"file": "orb.webp"
-	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
-	"screenshot": "orb.webp",
-	"added": "2026-11-06T09:35:08Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "orb",
+  "name": "Orb",
+  "author": "OrdalieTech",
+  "kind": "native",
+  "platforms": [
+    "win",
+    "linux",
+    "mac"
+  ],
+  "group": "agents",
+  "url": "https://github.com/OrdalieTech/orb",
+  "repo": "OrdalieTech/orb",
+  "summary": {
+    "en": "Desktop client for Orb, a pure-Go coding agent ported from pi.",
+    "zh-CN": "Orb 的桌面客户端，一个从 pi 移植的纯 Go 编程智能体。",
+    "zh-TW": "Orb 的桌面用戶端，一個從 pi 移植的純 Go 程式碼代理。",
+    "ja": "Orb のデスクトップクライアント。pi から移植された純 Go 製のコーディングエージェント。",
+    "ko": "pi에서 포팅한 순수 Go 코딩 에이전트 Orb의 데스크톱 클라이언트."
+  },
+  "description": {
+    "en": "The desktop client of Orb, a pure-Go coding agent that began as a port of pi and keeps interop with it, drawn with MyGo's native UI; the orb CLI and its terminal UI, the Go SDK and other deployments are built separately. Orb keeps sessions in SQLite with Pi JSONL import and export, runs many pi extensions unmodified and pairs devices over Bridge.",
+    "zh-CN": "Orb 的桌面客户端，由 MyGo 原生 UI 绘制。Orb 是从 pi 移植而来、并与之保持互通的纯 Go 编程智能体；orb 命令行及其终端界面、Go SDK 和其他部署形态另行构建。会话存于 SQLite，可导入导出 Pi 的 JSONL，能直接运行许多 pi 扩展，并可通过 Bridge 配对设备。",
+    "zh-TW": "Orb 的桌面用戶端，由 MyGo 原生 UI 繪製。Orb 是從 pi 移植而來、並與之保持互通的純 Go 程式碼代理；orb 命令列及其終端介面、Go SDK 與其他部署形式另行建置。工作階段存於 SQLite，可匯入匯出 Pi 的 JSONL，能直接執行許多 pi 擴充功能，並可透過 Bridge 配對裝置。",
+    "ja": "MyGo のネイティブ UI で描かれた Orb のデスクトップクライアント。Orb は pi の移植として始まり、互換性を保ち続ける純 Go 製のコーディングエージェントで、orb CLI とそのターミナル UI、Go SDK、ほかのデプロイ先は別に作られています。セッションは SQLite に保存され、Pi の JSONL で読み込み・書き出しができます。多くの pi 拡張をそのまま動かせ、Bridge でデバイスをペアリングできます。",
+    "ko": "MyGo의 네이티브 UI로 그린 Orb의 데스크톱 클라이언트입니다. Orb는 pi를 포팅해 시작했고 지금도 호환성을 유지하는 순수 Go 코딩 에이전트이며, orb CLI와 그 터미널 UI, Go SDK, 그 밖의 배포 형태는 따로 만들어집니다. 세션은 SQLite에 저장되고 Pi JSONL로 가져오거나 내보낼 수 있습니다. 많은 pi 확장을 그대로 실행하고 Bridge로 기기를 페어링합니다."
+  },
+  "icon": {
+    "file": "orb.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "orb.webp",
+  "added": "2026-11-06T09:35:08Z"
 }
