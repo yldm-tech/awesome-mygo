@@ -4,6 +4,7 @@
 	"name": "DumpingGround",
 	"author": "villatothesea",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/villatothesea/DumpingGround",
 	"repo": "villatothesea/DumpingGround",
@@ -25,8 +26,7 @@
 		"file": "dumpingground.webp"
 	},
 	"provisional": [
-		"icon",
-		"screenshot"
+		"icon"
 	],
 	"screenshot": "dumpingground.webp",
 	"added": "2026-11-06T09:35:08Z"

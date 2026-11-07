@@ -4,6 +4,7 @@
 	"name": "SmartImage-Toolkit",
 	"author": "Shirolin",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "media",
 	"url": "https://github.com/Shirolin/SmartImage-Toolkit",
 	"repo": "Shirolin/SmartImage-Toolkit",
@@ -21,9 +22,6 @@
 		"ja": "ローカルで動く画像一括処理ツールを Windows 向けのネイティブデスクトップアプリとして書き直したもので、MyGo のネイティブ UI で描かれています。安定版は今も Node.js 実装です。ファイルをキューに入れて WebP などへの形式変換、リサイズ、余白除去、トリミング、被写体の中央寄せ、目標比率へのキャンバス拡張を行え、最大 500 枚まで分割できるグリッド切り出しエディターも備えます。画像は PC の外に出ません。AI による背景除去はまだ Go 版に移されていません。",
 		"ko": "로컬에서 실행되는 이미지 일괄 처리 도구를 Windows용 네이티브 데스크톱 앱으로 다시 작성한 것으로, MyGo의 네이티브 UI로 그립니다. 안정 버전은 여전히 Node.js 구현입니다. 파일을 대기열에 넣어 WebP 등으로 형식을 변환하고, 크기 조정, 여백 제거, 자르기, 피사체 가운데 정렬, 목표 비율로 캔버스 확장을 할 수 있으며, 최대 500조각까지 나누는 격자 분할 편집기도 있습니다. 이미지는 PC 밖으로 나가지 않습니다. AI 배경 제거는 아직 Go 버전에 없습니다."
 	},
-	"provisional": [
-		"screenshot"
-	],
 	"screenshot": "smartimage-toolkit.webp",
 	"icon": {
 		"file": "smartimage-toolkit.webp"

@@ -4,6 +4,7 @@
 	"name": "Nagi",
 	"author": "HeimaoLST",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "BusinessApplication",
 	"group": "ai",
 	"url": "https://github.com/HeimaoLST/Saki",
@@ -26,8 +27,7 @@
 		"file": "nagi.webp"
 	},
 	"provisional": [
-		"icon",
-		"screenshot"
+		"icon"
 	],
 	"screenshot": "nagi.webp",
 	"added": "2026-11-05T05:02:32Z"
