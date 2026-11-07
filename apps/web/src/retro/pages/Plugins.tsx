@@ -26,13 +26,13 @@ function Explorer() {
 	// ?source= and ?surface= keep the selected plugin list and filter in the address.
 	const { source: sourceParam, surface: surfaceParam } = useSearch({ from: '/plugins' });
 	const navigate = useNavigate({ from: '/plugins' });
-	const source = sourceParam ?? 'official';
-	const setSource = (s: 'official' | 'community') => void navigate({ search: (prev) => ({ ...prev, source: s === 'official' ? undefined : s }), replace: true, resetScroll: false });
+	const source = sourceParam ?? 'all';
+	const setSource = (s: 'all' | 'official' | 'community') => void navigate({ search: (prev) => ({ ...prev, source: s === 'all' ? undefined : s }), replace: true, resetScroll: false });
 	const surface = surfaceParam ?? 'all';
 	const setSurface = (s: 'all' | 'web' | 'native') => void navigate({ search: (prev) => ({ ...prev, surface: s === 'all' ? undefined : s }), replace: true, resetScroll: false });
 	const surfLabel: Record<PluginSurface, string> = { web: t.surf_web, native: t.surf_native, both: t.surf_both };
 	// Tabs keep the official and community lists together without making one flat stream. A plugin for both kinds of window shows under either filter.
-	const list = source === 'official' ? PLUGINS : COMMUNITY_PLUGINS;
+	const list = source === 'official' ? PLUGINS : source === 'community' ? COMMUNITY_PLUGINS : [...PLUGINS, ...COMMUNITY_PLUGINS];
 	const shown = list.filter((p) => surface === 'all' || p.surface === surface || p.surface === 'both');
 	const chips = [
 		{ key: 'all' as const, label: `${t.all} · ${list.length}` },
@@ -43,9 +43,9 @@ function Explorer() {
 		<Win level={1} title={t.nav_plugins} fill closeTo='/' className='desk:col-span-8 desk:col-start-1 desk:row-span-2 desk:row-start-1'>
 			<div className='flex flex-wrap items-center gap-2.5 px-1.5 pt-[3px] pb-1.5'>
 				<div role='tablist' aria-label={t.nav_plugins} className='flex'>
-					{(['official', 'community'] as const).map((key) => (
+					{(['all', 'official', 'community'] as const).map((key) => (
 						<button key={key} type='button' role='tab' aria-selected={source === key} onClick={() => setSource(key)} className={`${btnSm} ${seg} aria-selected:bg-ink aria-selected:text-paper`}>
-							{key === 'official' ? t.plug_official : t.plug_community} · {key === 'official' ? PLUGINS.length : COMMUNITY_PLUGINS.length}
+							{key === 'all' ? t.all : key === 'official' ? t.plug_official : t.plug_community} · {key === 'all' ? PLUGINS.length + COMMUNITY_PLUGINS.length : key === 'official' ? PLUGINS.length : COMMUNITY_PLUGINS.length}
 						</button>
 					))}
 				</div>

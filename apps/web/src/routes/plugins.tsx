@@ -38,8 +38,8 @@ function PluginsPage() {
 	const search = Route.useSearch();
 	const navigate = useNavigate({ from: '/plugins' });
 	const setSearch = (next: typeof search) => void navigate({ search: (prev) => ({ ...prev, ...next }), replace: true, resetScroll: false });
-	const source = search.source ?? 'official';
-	const setSource = (next: 'official' | 'community') => setSearch({ source: next === 'official' ? undefined : next });
+	const source = search.source ?? 'all';
+	const setSource = (next: 'all' | 'official' | 'community') => setSearch({ source: next === 'all' ? undefined : next });
 	const surface = search.surface ?? 'all';
 	const setSurface = (s: 'all' | 'web' | 'native') => setSearch({ surface: s === 'all' ? undefined : s });
 	const surfLabel: Record<PluginSurface, string> = { web: t.surf_web, native: t.surf_native, both: t.surf_both };
@@ -52,7 +52,8 @@ function PluginsPage() {
 	const shown = PLUGINS.filter((p) => fits(p.surface));
 	// The community's plugins, under the same filter, after the official ones and the call to write one.
 	const community = COMMUNITY_PLUGINS.filter((p) => fits(p.surface));
-	const sourcePlugins = source === 'official' ? PLUGINS : COMMUNITY_PLUGINS;
+	const sourcePlugins = source === 'official' ? PLUGINS : source === 'community' ? COMMUNITY_PLUGINS : [...PLUGINS, ...COMMUNITY_PLUGINS];
+	const sourceKicker = source === 'all' ? 'PLUGINS' : source === 'official' ? 'OFFICIAL' : 'COMMUNITY';
 	// Most liked or highest score first; equal likes keep the docs' order, and equal totals are ordered by the unrounded sum, then the raw active weeks and release days, then the docs' order (compareByScore). A plugin without a score yet stays in its docs order.
 	for (const list of [shown, community]) {
 		if (sort === 'likes') list.sort((a, b) => (counts[likeKey.plugin(b)] ?? 0) - (counts[likeKey.plugin(a)] ?? 0));
@@ -100,7 +101,7 @@ function PluginsPage() {
 	return (
 		<section className='page enter gap-10 max-sm:gap-6'>
 			<div className='flex flex-col gap-3.5'>
-				<span className='kicker' lang='en'>~/PLUGINS · {PLUGINS.length} OFFICIAL</span>
+				<span className='kicker' lang='en'>~/PLUGINS · {sourcePlugins.length} {sourceKicker}</span>
 				<h1 className='page-h1'>{t.nav_plugins}</h1>
 				{/* Below sm the lead paragraph is left out: on a phone it took four lines ahead of the list, whose heading and cards already say what the page holds. */}
 				<p className='page-p max-sm:hidden'>{t.plug_p}</p>
@@ -113,6 +114,18 @@ function PluginsPage() {
 						</FilterChip>
 					))}
 				</FilterChips>
+				<span className='hidden h-6 w-px bg-line-3 md:block' aria-hidden='true' />
+				<FilterChips label={t.nav_plugins}>
+					{(['all', 'official', 'community'] as const).map((key) => {
+						const count = key === 'all' ? PLUGINS.length + COMMUNITY_PLUGINS.length : key === 'official' ? PLUGINS.length : COMMUNITY_PLUGINS.length;
+						const label = key === 'all' ? t.all : key === 'official' ? t.plug_official : t.plug_community;
+						return (
+							<FilterChip key={key} onClick={() => setSource(key)} pressed={source === key} count={count} title={label}>
+								{label}
+							</FilterChip>
+						);
+					})}
+				</FilterChips>
 				{(likes !== 'off' || HAS_SCORES) && (
 					<FilterSelects grouped>
 						<FilterSelect id='sort' label={t.sort} value={sort} onChange={(v) => setSearch({ sort: v === fallback ? undefined : (v as typeof sort) })}>
@@ -123,18 +136,7 @@ function PluginsPage() {
 					</FilterSelects>
 				)}
 			</FilterBar>
-			{/* The source tabs keep official and community plugins in one section without flattening them into one long list. */}
-			<div role='tablist' aria-label={t.nav_plugins} className='flex gap-1 rounded-[14px] border border-line bg-well/70 p-1'>
-				{(['official', 'community'] as const).map((key) => {
-					const count = key === 'official' ? PLUGINS.length : COMMUNITY_PLUGINS.length;
-					return (
-						<button key={key} type='button' role='tab' aria-selected={source === key} onClick={() => setSource(key)} className='min-h-10 flex-1 rounded-[10px] border-0 px-4 text-left text-[14px] font-semibold text-fg-2 transition-[background,color] duration-150 aria-selected:bg-panel aria-selected:text-fg'>
-							{key === 'official' ? t.plug_official : t.plug_community} <span className='ml-1 font-mono text-[12px] text-fg-3'>{count}</span>
-						</button>
-					);
-				})}
-			</div>
-			{source === 'official' ? (
+			{source !== 'community' && (
 				<>
 					<div className='grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-4'>{shown.map(card)}</div>
 					<div className='rv overflow-hidden rounded-[18px] border border-line-3 bg-panel'>
@@ -161,7 +163,8 @@ function PluginsPage() {
 						</div>
 					</div>
 				</>
-			) : (
+			)}
+			{source !== 'official' && (
 				<>
 					<CtaBox>
 						<CtaHead as='h2' title={COMMUNITY_PLUGINS.length > 0 ? fill(t.comm_h, { n: COMMUNITY_PLUGINS.length }) : t.comm_none} text={t.comm_p} />

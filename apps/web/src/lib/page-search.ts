@@ -16,14 +16,14 @@ export function oneOf<T extends string>(v: unknown, values: readonly T[]): T | u
 
 // The plugins page: the kind of window a plugin serves, and the order besides the docs' own.
 export interface PluginsSearch {
-	source?: 'official' | 'community';
+	source?: 'all' | 'official' | 'community';
 	surface?: 'web' | 'native';
 	sort?: 'docs' | 'likes' | 'score';
 }
 
 export function validatePluginsSearch(search: Record<string, unknown>): PluginsSearch {
 	return {
-		source: oneOf(search.source, ['official', 'community'] as const),
+		source: oneOf(search.source, ['all', 'official', 'community'] as const),
 		surface: oneOf(search.surface, ['web', 'native'] as const),
 		sort: oneOf(search.sort, ['docs', 'likes', 'score'] as const),
 	};
