@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "launchr",
-	"name": "Launchr",
-	"author": "Ahdeyyy",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "system",
-	"url": "https://github.com/Ahdeyyy/launchr",
-	"repo": "Ahdeyyy/launchr",
-	"summary": {
-		"en": "A Windows tray launcher for apps and windows, clipboard history and Obsidian notes.",
-		"zh-CN": "Windows 托盘启动器：切换窗口、启动应用，搜索剪贴板与 Obsidian 笔记。",
-		"zh-TW": "Windows 系統匣啟動器：切換視窗、開啟程式，搜尋剪貼簿與 Obsidian 筆記。",
-		"ja": "Windows のトレイ常駐ランチャー。アプリ切り替え、クリップボード履歴、Obsidian ノート。",
-		"ko": "Windows 트레이 런처. 앱 전환과 실행, 클립보드 기록, Obsidian 노트 검색."
-	},
-	"description": {
-		"en": "A Windows launcher that lives in the tray and opens with Alt+Space, drawn with MyGo's native UI, with no bundled browser or extension runtime. It switches to open windows or launches installed apps, keeps a searchable text and image clipboard history on disk, does calculations and currency conversion, and searches, creates and appends to Obsidian notes through the official Obsidian CLI.",
-		"zh-CN": "常驻托盘、按 Alt+Space 呼出的 Windows 启动器，由 MyGo 原生 UI 绘制，不内嵌浏览器，也没有扩展运行时。它能切换到已打开的窗口或启动已安装的应用，把文字和图片剪贴板历史保存在本地并可搜索，能做计算与汇率换算，还能通过官方 Obsidian CLI 搜索、新建笔记或追加到每日笔记。",
-		"zh-TW": "常駐系統匣、按 Alt+Space 叫出的 Windows 啟動器，由 MyGo 原生 UI 繪製，不內嵌瀏覽器，也沒有擴充執行環境。它能切換到已開啟的視窗或啟動已安裝的應用程式，把文字與圖片剪貼簿紀錄存在本機並可搜尋，能做計算與匯率換算，還能透過官方 Obsidian CLI 搜尋、新增筆記或附加到每日筆記。",
-		"ja": "トレイに常駐し、Alt+Space で呼び出す Windows 用ランチャー。MyGo のネイティブ UI で描かれ、ブラウザーも拡張ランタイムも同梱していません。開いているウィンドウへの切り替えやインストール済みアプリの起動、テキストと画像のクリップボード履歴のローカル保存と検索、計算と通貨換算ができ、公式の Obsidian CLI を通じてノートの検索、作成、デイリーノートへの追記も行えます。",
-		"ko": "트레이에 상주하며 Alt+Space로 여는 Windows 런처로, MyGo의 네이티브 UI로 그렸고 브라우저나 확장 런타임을 포함하지 않습니다. 열린 창으로 전환하거나 설치된 앱을 실행하고, 텍스트와 이미지 클립보드 기록을 디스크에 저장해 검색하며, 계산과 환율 변환을 하고, 공식 Obsidian CLI를 통해 노트를 검색하거나 만들고 데일리 노트에 내용을 덧붙입니다."
-	},
-	"icon": {
-		"file": "launchr.webp"
-	},
-	"screenshot": "launchr.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T08:08:34Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "launchr",
+  "name": "Launchr",
+  "author": "Ahdeyyy",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "system",
+  "url": "https://github.com/Ahdeyyy/launchr",
+  "repo": "Ahdeyyy/launchr",
+  "summary": {
+    "en": "A Windows tray launcher for apps and windows, clipboard history and Obsidian notes.",
+    "zh-CN": "Windows 托盘启动器：切换窗口、启动应用，搜索剪贴板与 Obsidian 笔记。",
+    "zh-TW": "Windows 系統匣啟動器：切換視窗、開啟程式，搜尋剪貼簿與 Obsidian 筆記。",
+    "ja": "Windows のトレイ常駐ランチャー。アプリ切り替え、クリップボード履歴、Obsidian ノート。",
+    "ko": "Windows 트레이 런처. 앱 전환과 실행, 클립보드 기록, Obsidian 노트 검색."
+  },
+  "description": {
+    "en": "A Windows launcher that lives in the tray and opens with Alt+Space, drawn with MyGo's native UI, with no bundled browser or extension runtime. It switches to open windows or launches installed apps, keeps a searchable text and image clipboard history on disk, does calculations and currency conversion, and searches, creates and appends to Obsidian notes through the official Obsidian CLI.",
+    "zh-CN": "常驻托盘、按 Alt+Space 呼出的 Windows 启动器，由 MyGo 原生 UI 绘制，不内嵌浏览器，也没有扩展运行时。它能切换到已打开的窗口或启动已安装的应用，把文字和图片剪贴板历史保存在本地并可搜索，能做计算与汇率换算，还能通过官方 Obsidian CLI 搜索、新建笔记或追加到每日笔记。",
+    "zh-TW": "常駐系統匣、按 Alt+Space 叫出的 Windows 啟動器，由 MyGo 原生 UI 繪製，不內嵌瀏覽器，也沒有擴充執行環境。它能切換到已開啟的視窗或啟動已安裝的應用程式，把文字與圖片剪貼簿紀錄存在本機並可搜尋，能做計算與匯率換算，還能透過官方 Obsidian CLI 搜尋、新增筆記或附加到每日筆記。",
+    "ja": "トレイに常駐し、Alt+Space で呼び出す Windows 用ランチャー。MyGo のネイティブ UI で描かれ、ブラウザーも拡張ランタイムも同梱していません。開いているウィンドウへの切り替えやインストール済みアプリの起動、テキストと画像のクリップボード履歴のローカル保存と検索、計算と通貨換算ができ、公式の Obsidian CLI を通じてノートの検索、作成、デイリーノートへの追記も行えます。",
+    "ko": "트레이에 상주하며 Alt+Space로 여는 Windows 런처로, MyGo의 네이티브 UI로 그렸고 브라우저나 확장 런타임을 포함하지 않습니다. 열린 창으로 전환하거나 설치된 앱을 실행하고, 텍스트와 이미지 클립보드 기록을 디스크에 저장해 검색하며, 계산과 환율 변환을 하고, 공식 Obsidian CLI를 통해 노트를 검색하거나 만들고 데일리 노트에 내용을 덧붙입니다."
+  },
+  "icon": {
+    "file": "launchr.webp"
+  },
+  "screenshot": "launchr.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T08:08:34Z"
 }
