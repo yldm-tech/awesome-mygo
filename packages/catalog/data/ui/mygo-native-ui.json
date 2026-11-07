@@ -15,8 +15,5 @@
 	"repo": "xingkaixin/mygo-native-ui",
 	"url": "https://github.com/xingkaixin/mygo-native-ui",
 	"screenshot": "mygo-native-ui.webp",
-	"provisional": [
-		"screenshot"
-	],
 	"added": "2026-11-05T14:05:27Z"
 }
