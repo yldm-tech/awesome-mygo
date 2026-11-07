@@ -89,7 +89,7 @@
 	image-rendering: pixelated;
 }
 
-/* Scores (components/Score.tsx). The component lives outside this folder, so Tailwind never sees its class names; its parts are drawn here instead, as the original look draws them in styles.css. The badge is a filled pill coloured by band (green from 80, purple from 60, grey below; never yellow or red, which read as a warning); the popover is a small window over a dimmed desktop. */
+/* Scores (components/Score.tsx). The component lives outside this folder, so Tailwind never sees its class names; its parts are drawn here instead, as the original look draws them in styles.css. The badge is a filled pill coloured by five cool-toned bands; never yellow or red, which read as a warning. */
 @layer components {
 	.score-chip {
 		display: inline-flex;
@@ -98,8 +98,8 @@
 		padding: 1px 7px;
 		border: 1px solid rgb(16 35 58 / 0.25);
 		border-radius: 9999px;
-		background: var(--color-pur);
-		color: var(--color-hi);
+		background: var(--color-face-lo);
+		color: var(--color-ink);
 		font-family: var(--font-mono);
 		font-size: 12px;
 		font-weight: 700;
@@ -107,11 +107,23 @@
 		font-variant-numeric: tabular-nums;
 		box-shadow: 0 1px 1px rgb(16 35 58 / 0.12);
 	}
-	.score-chip[data-tier='hi'] {
+	.score-chip[data-tier='top'] {
 		background: #8fdba6;
 		color: var(--color-ink);
 	}
+	.score-chip[data-tier='hi'] {
+		background: var(--color-sky);
+		color: var(--color-ink);
+	}
+	.score-chip[data-tier='mid'] {
+		background: var(--color-pur-hi);
+		color: var(--color-hi);
+	}
 	.score-chip[data-tier='lo'] {
+		background: var(--color-face);
+		color: var(--color-ink);
+	}
+	.score-chip[data-tier='low'] {
 		background: var(--color-face-lo);
 		color: var(--color-ink);
 	}
@@ -139,8 +151,11 @@
 		padding: 2px 9px;
 		font-size: 13px;
 	}
-	.score-total[data-tier='hi'] {
+	.score-total[data-tier='top'] {
 		color: #1f7a45;
+	}
+	.score-total[data-tier='hi'] {
+		color: #287eaa;
 	}
 	.score-total[data-tier='mid'] {
 		color: var(--color-pur);

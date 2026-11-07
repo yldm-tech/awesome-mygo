@@ -28,20 +28,20 @@ export interface ScoreView {
 	asOf: string;
 }
 
-// A score's band, which each look colours its badge by: 80 and above, 60 to 79, below 60.
-export type ScoreTier = 'hi' | 'mid' | 'lo';
+// A score's band, which each look colours its badge by. The bands use the exact score so two entries that round to the same displayed tenth can still get the same treatment consistently.
+export type ScoreTier = 'top' | 'hi' | 'mid' | 'lo' | 'low';
 export function scoreTier(score: Score): ScoreTier {
-	return score.total >= 80 ? 'hi' : score.total >= 60 ? 'mid' : 'lo';
+	return score.exact >= 80 ? 'top' : score.exact >= 65 ? 'hi' : score.exact >= 50 ? 'mid' : score.exact >= 35 ? 'lo' : 'low';
 }
 
-// The total as shown: approximate (≈37) when part of the weight was counted at NEUTRAL rather than measured.
+// The total as shown: approximate (≈36.6) when part of the weight was counted at NEUTRAL rather than measured. The exact score is kept to one decimal so close entries do not collapse into the same integer badge.
 export function scoreTotal(score: Score): string {
-	return `${score.measured < 1 ? '≈' : ''}${score.total}`;
+	return `${score.measured < 1 ? '≈' : ''}${score.exact.toFixed(1)}`;
 }
 
 // The score as a sentence for assistive technology and the tooltip, with a note when part of it could not be measured.
 export function scoreLabel(score: Score, name: string, t: Translations, lang: LangCode): string {
-	const label = fill(t.score_a, { x: name, n: score.total });
+	const label = fill(t.score_a, { x: name, n: scoreTotal(score) });
 	if (score.measured >= 1) return label;
 	return `${label}${lang === 'en' || lang === 'ko' ? '. ' : '。'}${t.score_partial}`;
 }

@@ -22,7 +22,7 @@ export function ScoreChip({ item, name, className = '' }: { item: string; name: 
 	);
 }
 
-// The score as a window's status bar, at the foot of a showcase card in the original look, matching the card's title bar: the word, a thin bar as long as the score in its band's colour (scoreTier), and the total out of 100.
+// The score as a window's status bar, at the foot of a showcase card in the original look, matching the card's title bar: the word, a thin bar as long as the exact score in its band's colour (scoreTier), and the total out of 100.
 export function ScoreBar({ item, name }: { item: string; name: string }) {
 	const t = useT();
 	const lang = useLang();
@@ -35,7 +35,7 @@ export function ScoreBar({ item, name }: { item: string; name: string }) {
 				{t.score}
 			</span>
 			<span className='score-bar-track' aria-hidden='true'>
-				<span className='score-bar-fill' style={{ width: `${score.total}%` }} />
+			<span className='score-bar-fill' style={{ width: `${score.exact}%` }} />
 			</span>
 			<span className='score-bar-n' aria-hidden='true'>
 				{scoreTotal(score)}

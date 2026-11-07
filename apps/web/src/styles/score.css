@@ -49,19 +49,25 @@ Below md the buttons grow to 40px, the smallest touch target the phone layout al
 	font-family: var(--font-mono);
 	font-variant-numeric: tabular-nums;
 }
-/* A dot in the band's colour (scoreTier): green from 80, the site's cyan from 60, grey below. Never amber, yellow or red, which read as a warning. */
+/* A dot in the band's colour (scoreTier): five cool-toned bands make close scores easier to distinguish without turning the score into a warning light. */
 .score-chip::before {
 	content: '';
 	width: 7px;
 	height: 7px;
 	border-radius: 50%;
-	background: var(--color-cyan);
+	background: var(--color-fg-3);
 }
-.score-chip[data-tier='hi']::before {
+.score-chip[data-tier='top']::before {
 	background: var(--color-green);
 }
+.score-chip[data-tier='hi']::before {
+	background: var(--color-cyan);
+}
+.score-chip[data-tier='mid']::before {
+	background: color-mix(in srgb, var(--color-cyan) 72%, var(--color-fg-3));
+}
 .score-chip[data-tier='lo']::before {
-	background: var(--color-fg-3);
+	background: color-mix(in srgb, var(--color-cyan) 36%, var(--color-fg-3));
 }
 .score-chip-k {
 	font-family: var(--font-display);
@@ -122,13 +128,19 @@ Below md the buttons grow to 40px, the smallest touch target the phone layout al
 	display: block;
 	height: 100%;
 	border-radius: 2px;
-	background: var(--color-cyan);
+	background: var(--color-fg-3);
 }
-.score-bar[data-tier='hi'] .score-bar-fill {
+.score-bar[data-tier='top'] .score-bar-fill {
 	background: var(--color-green);
 }
+.score-bar[data-tier='hi'] .score-bar-fill {
+	background: var(--color-cyan);
+}
+.score-bar[data-tier='mid'] .score-bar-fill {
+	background: color-mix(in srgb, var(--color-cyan) 72%, var(--color-fg-3));
+}
 .score-bar[data-tier='lo'] .score-bar-fill {
-	background: var(--color-fg-3);
+	background: color-mix(in srgb, var(--color-cyan) 36%, var(--color-fg-3));
 }
 .score-bar-n {
 	font-weight: 700;
@@ -138,11 +150,14 @@ Below md the buttons grow to 40px, the smallest touch target the phone layout al
 	font-weight: 400;
 	color: var(--color-fg-3);
 }
-.score-total[data-tier='hi'] {
+.score-total[data-tier='top'] {
 	color: var(--color-green);
 }
-.score-total[data-tier='mid'] {
+.score-total[data-tier='hi'] {
 	color: var(--color-cyan);
+}
+.score-total[data-tier='mid'] {
+	color: color-mix(in srgb, var(--color-cyan) 72%, var(--color-fg));
 }
 /* The popover sits in the top layer, centred in the window by the browser. */
 .score-pop {
