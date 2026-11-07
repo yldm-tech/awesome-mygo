@@ -1,34 +1,38 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "mochi",
-	"name": "Mochi",
-	"author": "maximousblk",
-	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
-	"category": "UtilitiesApplication",
-	"group": "system",
-	"url": "https://github.com/maximousblk/mochi",
-	"repo": "maximousblk/mochi",
-	"summary": {
-		"en": "Native app for your Tailcat hosts, with SSH, WebDAV, RustDesk and send-text launchers.",
-		"zh-CN": "Tailcat 主机客户端：SSH、WebDAV、RustDesk 与文本发送。",
-		"zh-TW": "Tailcat 主機用戶端：SSH、WebDAV、RustDesk 與文字傳送。",
-		"ja": "Tailcat ホスト用のネイティブアプリ。SSH、WebDAV、RustDesk、テキスト送信に対応。",
-		"ko": "Tailcat 호스트용 네이티브 앱: SSH, WebDAV, RustDesk, 텍스트 전송."
-	},
-	"description": {
-		"en": "A desktop app for Tailcat hosts on Windows, macOS and Linux, drawn with MyGo's native UI. It saves Tailcat addresses and gives each host launchers for an SSH tunnel, a WebDAV mount in Explorer or Finder, RustDesk port forwarding and sending text to its Inbox, and can run an embedded Tailcat server that admits approved clients. It is in alpha, with no installers yet.",
-		"zh-CN": "用 MyGo 原生 UI 绘制的 Tailcat 主机桌面应用，适用于 Windows、macOS 与 Linux。它保存 Tailcat 地址，为每台主机提供启动器：SSH 隧道、在资源管理器或访达中挂载 WebDAV、转发 RustDesk 端口、向其收件箱发送文本；还可运行内置的 Tailcat 服务器，只接纳经批准的客户端。目前为 alpha 阶段，尚无安装程序。",
-		"zh-TW": "以 MyGo 原生 UI 繪製的 Tailcat 主機桌面應用程式，適用於 Windows、macOS 與 Linux。它儲存 Tailcat 位址，為每台主機提供啟動器：SSH 通道、在檔案總管或 Finder 掛載 WebDAV、轉送 RustDesk 連接埠、傳送文字到其收件匣；也能執行內建的 Tailcat 伺服器，只接受經核准的用戶端。目前仍是 alpha 階段，尚無安裝程式。",
-		"ja": "MyGo のネイティブ UI で描かれた、Windows・macOS・Linux 向けの Tailcat ホスト用デスクトップアプリ。Tailcat アドレスを保存し、ホストごとに SSH トンネル、エクスプローラーや Finder での WebDAV マウント、RustDesk のポート転送、受信箱へのテキスト送信といったランチャーを用意します。内蔵の Tailcat サーバーを動かし、承認したクライアントだけを受け入れることもできます。現在はアルファ版で、インストーラーはまだありません。",
-		"ko": "MyGo의 네이티브 UI로 그린 Windows·macOS·Linux용 Tailcat 호스트 데스크톱 앱입니다. Tailcat 주소를 저장하고 호스트마다 SSH 터널, 탐색기나 Finder에서의 WebDAV 마운트, RustDesk 포트 포워딩, 받은편지함으로 텍스트 보내기 런처를 제공하며, 내장 Tailcat 서버를 켜서 승인한 클라이언트만 받을 수도 있습니다. 아직 알파 단계이고 설치 프로그램은 없습니다."
-	},
-	"icon": {
-		"file": "mochi.webp"
-	},
-	"screenshot": "mochi.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T04:00:52Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "mochi",
+  "name": "Mochi",
+  "author": "maximousblk",
+  "kind": "native",
+  "platforms": [
+    "win",
+    "linux",
+    "mac"
+  ],
+  "category": "UtilitiesApplication",
+  "group": "system",
+  "url": "https://github.com/maximousblk/mochi",
+  "repo": "maximousblk/mochi",
+  "summary": {
+    "en": "Native app for your Tailcat hosts, with SSH, WebDAV, RustDesk and send-text launchers.",
+    "zh-CN": "Tailcat 主机客户端：SSH、WebDAV、RustDesk 与文本发送。",
+    "zh-TW": "Tailcat 主機用戶端：SSH、WebDAV、RustDesk 與文字傳送。",
+    "ja": "Tailcat ホスト用のネイティブアプリ。SSH、WebDAV、RustDesk、テキスト送信に対応。",
+    "ko": "Tailcat 호스트용 네이티브 앱: SSH, WebDAV, RustDesk, 텍스트 전송."
+  },
+  "description": {
+    "en": "A desktop app for Tailcat hosts on Windows, macOS and Linux, drawn with MyGo's native UI. It saves Tailcat addresses and gives each host launchers for an SSH tunnel, a WebDAV mount in Explorer or Finder, RustDesk port forwarding and sending text to its Inbox, and can run an embedded Tailcat server that admits approved clients. It is in alpha, with no installers yet.",
+    "zh-CN": "用 MyGo 原生 UI 绘制的 Tailcat 主机桌面应用，适用于 Windows、macOS 与 Linux。它保存 Tailcat 地址，为每台主机提供启动器：SSH 隧道、在资源管理器或访达中挂载 WebDAV、转发 RustDesk 端口、向其收件箱发送文本；还可运行内置的 Tailcat 服务器，只接纳经批准的客户端。目前为 alpha 阶段，尚无安装程序。",
+    "zh-TW": "以 MyGo 原生 UI 繪製的 Tailcat 主機桌面應用程式，適用於 Windows、macOS 與 Linux。它儲存 Tailcat 位址，為每台主機提供啟動器：SSH 通道、在檔案總管或 Finder 掛載 WebDAV、轉送 RustDesk 連接埠、傳送文字到其收件匣；也能執行內建的 Tailcat 伺服器，只接受經核准的用戶端。目前仍是 alpha 階段，尚無安裝程式。",
+    "ja": "MyGo のネイティブ UI で描かれた、Windows・macOS・Linux 向けの Tailcat ホスト用デスクトップアプリ。Tailcat アドレスを保存し、ホストごとに SSH トンネル、エクスプローラーや Finder での WebDAV マウント、RustDesk のポート転送、受信箱へのテキスト送信といったランチャーを用意します。内蔵の Tailcat サーバーを動かし、承認したクライアントだけを受け入れることもできます。現在はアルファ版で、インストーラーはまだありません。",
+    "ko": "MyGo의 네이티브 UI로 그린 Windows·macOS·Linux용 Tailcat 호스트 데스크톱 앱입니다. Tailcat 주소를 저장하고 호스트마다 SSH 터널, 탐색기나 Finder에서의 WebDAV 마운트, RustDesk 포트 포워딩, 받은편지함으로 텍스트 보내기 런처를 제공하며, 내장 Tailcat 서버를 켜서 승인한 클라이언트만 받을 수도 있습니다. 아직 알파 단계이고 설치 프로그램은 없습니다."
+  },
+  "icon": {
+    "file": "mochi.webp"
+  },
+  "screenshot": "mochi.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T04:00:52Z"
 }
