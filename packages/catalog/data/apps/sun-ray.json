@@ -1,34 +1,38 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "sun-ray",
-	"name": "Sun Ray",
-	"author": "idealisan",
-	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
-	"category": "UtilitiesApplication",
-	"group": "network",
-	"url": "https://github.com/idealisan/sun-ray",
-	"repo": "idealisan/sun-ray",
-	"summary": {
-		"en": "A native Xray-core proxy client with the core built in, live traffic, logs and node speed tests.",
-		"zh-CN": "内置 Xray-core 的原生代理客户端，带实时流量、日志与节点测速。",
-		"zh-TW": "內建 Xray-core 的原生代理用戶端，附即時流量、日誌與節點測速。",
-		"ja": "Xray-core 内蔵のネイティブなプロキシクライアント。通信量とログの表示、ノードの速度測定に対応。",
-		"ko": "Xray-core를 내장한 네이티브 프록시 클라이언트. 실시간 트래픽, 로그, 노드 속도 측정 지원."
-	},
-	"description": {
-		"en": "An Xray-core client for Windows, macOS and Linux drawn with MyGo's native UI, with Xray-core built into the same binary instead of run as a separate process. It runs a local SOCKS5 and HTTP proxy over vless, vmess, trojan or shadowsocks with TLS, shows live traffic and logs, stays in the tray and tests each node's latency and speed. Server lists are not saved yet.",
-		"zh-CN": "用 MyGo 原生 UI 绘制的 Xray-core 客户端，支持 Windows、macOS 与 Linux，Xray-core 作为库编进同一个二进制，不另起进程。它在本机提供 SOCKS5 与 HTTP 代理，出站支持 vless、vmess、trojan、shadowsocks 及 TLS，显示实时流量和日志，可常驻托盘，并能测试各节点的延迟与速度。目前还不能保存服务器列表。",
-		"zh-TW": "用 MyGo 原生 UI 繪製的 Xray-core 用戶端，支援 Windows、macOS 與 Linux，Xray-core 以函式庫形式編進同一個執行檔，不另開行程。它在本機提供 SOCKS5 與 HTTP 代理，出站支援 vless、vmess、trojan、shadowsocks 及 TLS，顯示即時流量與日誌，可常駐系統匣，並能測試各節點的延遲與速度。目前還無法儲存伺服器清單。",
-		"ja": "MyGo のネイティブ UI で描かれた Windows・macOS・Linux 向けの Xray-core クライアント。Xray-core をライブラリとして同じバイナリに組み込み、別プロセスは起動しません。ローカルに SOCKS5 と HTTP のプロキシを立て、vless・vmess・trojan・shadowsocks と TLS で接続し、通信量とログをリアルタイムに表示します。トレイに常駐し、ノードごとの遅延と速度も測れます。サーバーリストはまだ保存できません。",
-		"ko": "MyGo의 네이티브 UI로 그린 Windows·macOS·Linux용 Xray-core 클라이언트로, Xray-core를 라이브러리로 같은 바이너리에 넣어 별도 프로세스를 띄우지 않습니다. 로컬 SOCKS5·HTTP 프록시를 열고 vless, vmess, trojan, shadowsocks와 TLS로 연결하며, 실시간 트래픽과 로그를 보여 주고 트레이에 상주하며 노드별 지연과 속도를 측정합니다. 서버 목록은 아직 저장되지 않습니다."
-	},
-	"icon": {
-		"file": "sun-ray.webp"
-	},
-	"screenshot": "sun-ray.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T05:57:31Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "sun-ray",
+  "name": "Sun Ray",
+  "author": "idealisan",
+  "kind": "native",
+  "platforms": [
+    "win",
+    "linux",
+    "mac"
+  ],
+  "category": "UtilitiesApplication",
+  "group": "network",
+  "url": "https://github.com/idealisan/sun-ray",
+  "repo": "idealisan/sun-ray",
+  "summary": {
+    "en": "A native Xray-core proxy client with the core built in, live traffic, logs and node speed tests.",
+    "zh-CN": "内置 Xray-core 的原生代理客户端，带实时流量、日志与节点测速。",
+    "zh-TW": "內建 Xray-core 的原生代理用戶端，附即時流量、日誌與節點測速。",
+    "ja": "Xray-core 内蔵のネイティブなプロキシクライアント。通信量とログの表示、ノードの速度測定に対応。",
+    "ko": "Xray-core를 내장한 네이티브 프록시 클라이언트. 실시간 트래픽, 로그, 노드 속도 측정 지원."
+  },
+  "description": {
+    "en": "An Xray-core client for Windows, macOS and Linux drawn with MyGo's native UI, with Xray-core built into the same binary instead of run as a separate process. It runs a local SOCKS5 and HTTP proxy over vless, vmess, trojan or shadowsocks with TLS, shows live traffic and logs, stays in the tray and tests each node's latency and speed. Server lists are not saved yet.",
+    "zh-CN": "用 MyGo 原生 UI 绘制的 Xray-core 客户端，支持 Windows、macOS 与 Linux，Xray-core 作为库编进同一个二进制，不另起进程。它在本机提供 SOCKS5 与 HTTP 代理，出站支持 vless、vmess、trojan、shadowsocks 及 TLS，显示实时流量和日志，可常驻托盘，并能测试各节点的延迟与速度。目前还不能保存服务器列表。",
+    "zh-TW": "用 MyGo 原生 UI 繪製的 Xray-core 用戶端，支援 Windows、macOS 與 Linux，Xray-core 以函式庫形式編進同一個執行檔，不另開行程。它在本機提供 SOCKS5 與 HTTP 代理，出站支援 vless、vmess、trojan、shadowsocks 及 TLS，顯示即時流量與日誌，可常駐系統匣，並能測試各節點的延遲與速度。目前還無法儲存伺服器清單。",
+    "ja": "MyGo のネイティブ UI で描かれた Windows・macOS・Linux 向けの Xray-core クライアント。Xray-core をライブラリとして同じバイナリに組み込み、別プロセスは起動しません。ローカルに SOCKS5 と HTTP のプロキシを立て、vless・vmess・trojan・shadowsocks と TLS で接続し、通信量とログをリアルタイムに表示します。トレイに常駐し、ノードごとの遅延と速度も測れます。サーバーリストはまだ保存できません。",
+    "ko": "MyGo의 네이티브 UI로 그린 Windows·macOS·Linux용 Xray-core 클라이언트로, Xray-core를 라이브러리로 같은 바이너리에 넣어 별도 프로세스를 띄우지 않습니다. 로컬 SOCKS5·HTTP 프록시를 열고 vless, vmess, trojan, shadowsocks와 TLS로 연결하며, 실시간 트래픽과 로그를 보여 주고 트레이에 상주하며 노드별 지연과 속도를 측정합니다. 서버 목록은 아직 저장되지 않습니다."
+  },
+  "icon": {
+    "file": "sun-ray.webp"
+  },
+  "screenshot": "sun-ray.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T05:57:31Z"
 }
