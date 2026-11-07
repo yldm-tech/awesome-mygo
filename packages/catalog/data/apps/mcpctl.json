@@ -1,34 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "mcpctl",
-	"name": "mcpctl",
-	"author": "hoanglong2311",
-	"kind": "native",
-	"platforms": ["mac"],
-	"group": "agents",
-	"url": "https://github.com/hoanglong2311/mcpgw",
-	"repo": "hoanglong2311/mcpgw",
-	"summary": {
-		"en": "A menu bar app for a local macOS MCP gateway that shares stdio MCP servers over HTTP.",
-		"zh-CN": "macOS MCP 网关的菜单栏应用，以 HTTP 共享 stdio MCP 服务。",
-		"zh-TW": "macOS MCP 閘道的選單列 App，以 HTTP 共用 stdio MCP 服務。",
-		"ja": "macOS の MCP ゲートウェイ用メニューバーアプリ。stdio サーバーを HTTP で共有。",
-		"ko": "로컬 macOS MCP 게이트웨이용 메뉴 막대 앱. stdio MCP 서버를 HTTP로 공유합니다."
-	},
-	"description": {
-		"en": "A local MCP gateway for macOS: each stdio MCP server is declared once, run by a launchd daemon as one shared process and served over HTTP on loopback to Claude Code, Codex, Claude Desktop and other clients, with tokens kept in Keychain. MyGo's native UI draws only the menu bar app, which shows each server's state, toggles and restarts it; the daemon and mcpctl CLI work without it.",
-		"zh-CN": "macOS 本地 MCP 网关：每个 stdio MCP server 只需声明一次，由 launchd 守护进程以单个共享进程运行，并通过回环地址上的 HTTP 提供给 Claude Code、Codex、Claude Desktop 等客户端，令牌存放在钥匙串中。MyGo 原生 UI 只用于绘制菜单栏应用，用来查看各 server 的状态、开关和重启；守护进程与 mcpctl 命令行不依赖它也能运行。",
-		"zh-TW": "macOS 本機 MCP 閘道：每個 stdio MCP server 只需宣告一次，由 launchd 常駐程式以單一共用行程執行，並透過回送位址上的 HTTP 提供給 Claude Code、Codex、Claude Desktop 等用戶端，權杖存放在鑰匙圈中。MyGo 原生 UI 只用於繪製選單列 App，用來查看各 server 的狀態、開關與重新啟動；常駐程式與 mcpctl 命令列不依賴它也能執行。",
-		"ja": "macOS 用のローカル MCP ゲートウェイ。stdio の MCP サーバーは一度宣言するだけで、launchd のデーモンが共有プロセスとして動かし、ループバック上の HTTP で Claude Code、Codex、Claude Desktop などのクライアントに提供します。トークンはキーチェーンに保管されます。MyGo のネイティブ UI で描かれているのはメニューバーアプリだけで、各サーバーの状態表示、オン・オフ、再起動ができます。デーモンと mcpctl CLI はこれがなくても動きます。",
-		"ko": "macOS용 로컬 MCP 게이트웨이입니다. stdio MCP 서버를 한 번만 선언하면 launchd 데몬이 공유 프로세스 하나로 실행하고, 루프백의 HTTP로 Claude Code, Codex, Claude Desktop 등 클라이언트에 제공하며, 토큰은 키체인에 보관합니다. MyGo의 네이티브 UI로 그린 것은 메뉴 막대 앱뿐으로, 서버별 상태를 보고 켜고 끄고 재시작합니다. 데몬과 mcpctl CLI는 앱 없이도 동작합니다."
-	},
-	"icon": {
-		"file": "mcpctl.webp"
-	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
-	"screenshot": "mcpctl.webp",
-	"added": "2026-11-05T14:40:59Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "mcpctl",
+  "name": "mcpctl",
+  "author": "hoanglong2311",
+  "kind": "native",
+  "platforms": [
+    "mac"
+  ],
+  "group": "agents",
+  "url": "https://github.com/hoanglong2311/mcpgw",
+  "repo": "hoanglong2311/mcpgw",
+  "summary": {
+    "en": "A menu bar app for a local macOS MCP gateway that shares stdio MCP servers over HTTP.",
+    "zh-CN": "macOS MCP 网关的菜单栏应用，以 HTTP 共享 stdio MCP 服务。",
+    "zh-TW": "macOS MCP 閘道的選單列 App，以 HTTP 共用 stdio MCP 服務。",
+    "ja": "macOS の MCP ゲートウェイ用メニューバーアプリ。stdio サーバーを HTTP で共有。",
+    "ko": "로컬 macOS MCP 게이트웨이용 메뉴 막대 앱. stdio MCP 서버를 HTTP로 공유합니다."
+  },
+  "description": {
+    "en": "A local MCP gateway for macOS: each stdio MCP server is declared once, run by a launchd daemon as one shared process and served over HTTP on loopback to Claude Code, Codex, Claude Desktop and other clients, with tokens kept in Keychain. MyGo's native UI draws only the menu bar app, which shows each server's state, toggles and restarts it; the daemon and mcpctl CLI work without it.",
+    "zh-CN": "macOS 本地 MCP 网关：每个 stdio MCP server 只需声明一次，由 launchd 守护进程以单个共享进程运行，并通过回环地址上的 HTTP 提供给 Claude Code、Codex、Claude Desktop 等客户端，令牌存放在钥匙串中。MyGo 原生 UI 只用于绘制菜单栏应用，用来查看各 server 的状态、开关和重启；守护进程与 mcpctl 命令行不依赖它也能运行。",
+    "zh-TW": "macOS 本機 MCP 閘道：每個 stdio MCP server 只需宣告一次，由 launchd 常駐程式以單一共用行程執行，並透過回送位址上的 HTTP 提供給 Claude Code、Codex、Claude Desktop 等用戶端，權杖存放在鑰匙圈中。MyGo 原生 UI 只用於繪製選單列 App，用來查看各 server 的狀態、開關與重新啟動；常駐程式與 mcpctl 命令列不依賴它也能執行。",
+    "ja": "macOS 用のローカル MCP ゲートウェイ。stdio の MCP サーバーは一度宣言するだけで、launchd のデーモンが共有プロセスとして動かし、ループバック上の HTTP で Claude Code、Codex、Claude Desktop などのクライアントに提供します。トークンはキーチェーンに保管されます。MyGo のネイティブ UI で描かれているのはメニューバーアプリだけで、各サーバーの状態表示、オン・オフ、再起動ができます。デーモンと mcpctl CLI はこれがなくても動きます。",
+    "ko": "macOS용 로컬 MCP 게이트웨이입니다. stdio MCP 서버를 한 번만 선언하면 launchd 데몬이 공유 프로세스 하나로 실행하고, 루프백의 HTTP로 Claude Code, Codex, Claude Desktop 등 클라이언트에 제공하며, 토큰은 키체인에 보관합니다. MyGo의 네이티브 UI로 그린 것은 메뉴 막대 앱뿐으로, 서버별 상태를 보고 켜고 끄고 재시작합니다. 데몬과 mcpctl CLI는 앱 없이도 동작합니다."
+  },
+  "icon": {
+    "file": "mcpctl.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "mcpctl.webp",
+  "added": "2026-11-05T14:40:59Z"
 }
