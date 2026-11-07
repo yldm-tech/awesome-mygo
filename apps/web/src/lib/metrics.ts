@@ -12,6 +12,7 @@ export interface MetricsPayload {
 	pageCount: number;
 	daily: { day: string; views: number }[];
 	topPaths: { path: string; views: number }[];
+	regions: { country: string; views: number }[];
 }
 
 interface MetricsState {
@@ -25,8 +26,9 @@ export function useMetrics(days: MetricsRange): MetricsState {
 	const [state, setState] = useState<MetricsState>({ loading: true, error: false });
 	useEffect(() => {
 		let live = true;
-		setState({ loading: true, error: false });
-		fetch(`/api/metrics?days=${days}`, { cache: 'no-store' })
+		const load = () => {
+			setState((current) => (current.data ? { ...current, error: false } : { loading: true, error: false }));
+			return fetch(`/api/metrics?days=${days}`, { cache: 'no-store' })
 			.then(async (response) => {
 				if (!response.ok) throw new Error(`metrics: HTTP ${response.status}`);
 				return (await response.json()) as MetricsPayload;
@@ -37,8 +39,12 @@ export function useMetrics(days: MetricsRange): MetricsState {
 			.catch(() => {
 				if (live) setState({ loading: false, error: true, reason: 'unavailable' });
 			});
+		};
+		void load();
+		const timer = window.setInterval(() => void load(), 30_000);
 		return () => {
 			live = false;
+			window.clearInterval(timer);
 		};
 	}, [days]);
 	return state;

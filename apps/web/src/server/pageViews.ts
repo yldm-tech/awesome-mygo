@@ -20,6 +20,11 @@ export interface PathViews {
 	views: number;
 }
 
+export interface RegionViews {
+	country: string;
+	views: number;
+}
+
 export interface PageViewMetrics {
 	days: number;
 	start: string;
@@ -28,6 +33,7 @@ export interface PageViewMetrics {
 	pageCount: number;
 	daily: DailyViews[];
 	topPaths: PathViews[];
+	regions: RegionViews[];
 }
 
 function utcDay(date = new Date()): string {
@@ -46,10 +52,20 @@ export function cleanPagePath(value: unknown): string | undefined {
 	return value === '/' ? value : value.replace(/\/+$/, '') || '/';
 }
 
-export async function recordPageView(db: D1PageViews, path: string, day = utcDay()): Promise<void> {
+export function cleanCountry(value: unknown): string {
+	if (typeof value !== 'string') return 'XX';
+	const country = value.trim().toUpperCase();
+	return /^[A-Z]{2}$/.test(country) ? country : 'XX';
+}
+
+export async function recordPageView(db: D1PageViews, path: string, country = 'XX', day = utcDay()): Promise<void> {
 	await db
 		.prepare('INSERT INTO page_views (day, path, views) VALUES (?, ?, 1) ON CONFLICT(day, path) DO UPDATE SET views = views + 1')
 		.bind(day, path)
+		.run();
+	await db
+		.prepare('INSERT INTO page_view_regions (day, country, views) VALUES (?, ?, 1) ON CONFLICT(day, country) DO UPDATE SET views = views + 1')
+		.bind(day, country)
 		.run();
 }
 
@@ -57,11 +73,12 @@ export async function pageViewMetrics(db: D1PageViews, requestedDays: number): P
 	const days = requestedDays === 7 || requestedDays === 90 ? requestedDays : 30;
 	const end = utcDay();
 	const start = dayBefore(days - 1);
-	const [dailyResult, pathResult, totalResult, pageCountResult] = await Promise.all([
+	const [dailyResult, pathResult, totalResult, pageCountResult, regionsResult] = await Promise.all([
 		db.prepare('SELECT day, SUM(views) AS views FROM page_views WHERE day BETWEEN ? AND ? GROUP BY day ORDER BY day').bind(start, end).all<DailyViews>(),
 		db.prepare('SELECT path, SUM(views) AS views FROM page_views WHERE day BETWEEN ? AND ? GROUP BY path ORDER BY views DESC, path LIMIT 12').bind(start, end).all<PathViews>(),
 		db.prepare('SELECT COALESCE(SUM(views), 0) AS views FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ views: number }>(),
 		db.prepare('SELECT COUNT(DISTINCT path) AS n FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ n: number }>(),
+		db.prepare('SELECT country, SUM(views) AS views FROM page_view_regions WHERE day BETWEEN ? AND ? GROUP BY country ORDER BY views DESC, country LIMIT 48').bind(start, end).all<RegionViews>(),
 	]);
 	const byDay = new Map(dailyResult.results.map((row) => [row.day, Number(row.views) || 0]));
 	const daily: DailyViews[] = [];
@@ -79,5 +96,6 @@ export async function pageViewMetrics(db: D1PageViews, requestedDays: number): P
 		pageCount: Number(pageCountResult.results[0]?.n) || 0,
 		daily,
 		topPaths: pathResult.results.map((row) => ({ path: row.path, views: Number(row.views) || 0 })),
+		regions: regionsResult.results.map((row) => ({ country: row.country, views: Number(row.views) || 0 })),
 	};
 }

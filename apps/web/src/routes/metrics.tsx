@@ -1,6 +1,7 @@
 import { DEFAULT_LANG, t } from '@awesome-mygo/catalog';
 import { createFileRoute } from '@tanstack/react-router';
 import { type PointerEvent, useMemo, useState } from 'react';
+import { MetricsGlobe } from '../components/MetricsGlobe';
 import { useLang, useT } from '../lib/lang';
 import { MetricsRange, number, pathLabel, shortDay, useMetrics } from '../lib/metrics';
 import { SITE_NAME } from '../lib/seo';
@@ -114,6 +115,10 @@ function MetricsPage() {
 						<MetricCard label={t.metrics_peak} value={peak ? `${number(peak.views, locale)} · ${shortDay(peak.day, locale)}` : '—'} />
 						<MetricCard label={t.metrics_pages} value={number(data.pageCount, locale)} />
 					</div>
+					<section className='rounded-[18px] border border-line-2 bg-panel p-5 max-sm:p-4' aria-labelledby='metrics-regions'>
+						<div className='mb-4 flex items-start justify-between gap-4'><div><h2 id='metrics-regions' className='m-0 text-[20px] font-black'>{t.metrics_regions}</h2><p className='m-0 mt-1 font-mono text-[11px] text-fg-3'>{t.metrics_updated}</p></div><span className='font-mono text-[12px] text-cyan'>{data.start} → {data.end}</span></div>
+						<MetricsGlobe regions={data.regions} locale={locale} label={t.metrics_regions} />
+					</section>
 					<div className='grid grid-cols-[minmax(0,1.55fr)_minmax(300px,0.9fr)] gap-4 max-lg:grid-cols-1'>
 						<section className='rounded-[18px] border border-line-2 bg-panel p-5 max-sm:p-4' aria-labelledby='metrics-distribution'>
 							<div className='mb-4 flex items-start justify-between gap-4'><div><h2 id='metrics-distribution' className='m-0 text-[20px] font-black'>{t.metrics_distribution}</h2><p className='m-0 mt-1 font-mono text-[11px] text-fg-3'>{t.metrics_updated}</p></div><span className='font-mono text-[12px] text-cyan'>{data.start} → {data.end}</span></div>

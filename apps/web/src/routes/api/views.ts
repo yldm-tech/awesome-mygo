@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { env } from 'cloudflare:workers';
-import { cleanPagePath, recordPageView } from '../../server/pageViews';
+import { cleanCountry, cleanPagePath, recordPageView } from '../../server/pageViews';
 
 function json(body: unknown, status = 200): Response {
 	return Response.json(body, { status, headers: { 'cache-control': 'no-store' } });
@@ -26,7 +26,7 @@ export const Route = createFileRoute('/api/views')({
 				const path = cleanPagePath((body as { path?: unknown } | null)?.path);
 				if (!path || path.startsWith('/api/')) return json({ error: 'invalid' }, 400);
 				try {
-					await recordPageView(env.DB, path);
+					await recordPageView(env.DB, path, cleanCountry(request.headers.get('cf-ipcountry')));
 					return new Response(null, { status: 204 });
 				} catch (error) {
 					console.error('recording page view failed', error);
