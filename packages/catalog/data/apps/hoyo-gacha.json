@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "hoyo-gacha",
+	"name": "Hoyo Gacha",
+	"author": "quantulr",
+	"kind": "native",
+	"group": "game",
+	"url": "https://github.com/quantulr/hoyo-gacha",
+	"repo": "quantulr/hoyo-gacha",
+	"summary": {
+		"en": "Gacha pull history and stats for Genshin Impact, Honkai: Star Rail and Zenless Zone Zero.",
+		"zh-CN": "原神、崩坏：星穹铁道、绝区零的抽卡记录管理与统计工具。",
+		"zh-TW": "原神、崩壞：星穹鐵道、絕區零的抽卡紀錄管理與統計工具。",
+		"ja": "原神・崩壊：スターレイル・ゼンレスゾーンゼロのガチャ履歴を管理・集計。",
+		"ko": "원신, 붕괴: 스타레일, 젠레스 존 제로의 가챠 기록을 관리하고 분석합니다."
+	},
+	"description": {
+		"en": "A Windows app drawn with MyGo's native UI that gathers gacha records for Genshin Impact, Honkai: Star Rail and Zenless Zone Zero in one window. It fetches new pulls from the official API using the temporary authkey in the game's logs, or imports gacha-list-<uid>.json from other export tools. It shows pull counts, 5-star rates, pity progress and lost 50/50s, and keeps records local.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 应用，把原神、崩坏：星穹铁道和绝区零的抽卡记录集中到一个窗口。它从本机游戏日志或缓存中读取临时 authkey，通过官方接口抓取最新记录，也能导入其他导出工具生成的 gacha-list-<uid>.json。概览展示抽数、出金率、保底进度和歪卡标记，记录只保存在本机。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 應用程式，把原神、崩壞：星穹鐵道和絕區零的抽卡紀錄集中到一個視窗。它從本機遊戲日誌或快取讀取臨時 authkey，透過官方介面抓取最新紀錄，也能匯入其他匯出工具產生的 gacha-list-<uid>.json。概覽顯示抽數、出金率、保底進度與歪卡標記，紀錄只存在本機。",
+		"ja": "MyGo のネイティブ UI で描かれた Windows アプリで、原神・崩壊：スターレイル・ゼンレスゾーンゼロのガチャ履歴を一つのウィンドウにまとめます。ゲームのローカルログやキャッシュから一時的な authkey を読み取って公式 API から最新の記録を取得するほか、他のエクスポートツールが出力した gacha-list-<uid>.json も読み込めます。総ガチャ数、最高レアの排出率、天井までの進捗、すり抜けを表示し、記録は手元にだけ保存されます。",
+		"ko": "MyGo의 네이티브 UI로 그린 Windows 앱으로, 원신, 붕괴: 스타레일, 젠레스 존 제로의 가챠 기록을 한 창에 모아 줍니다. 게임의 로컬 로그나 캐시에서 임시 authkey를 읽어 공식 API로 새 기록을 가져오고, 다른 내보내기 도구가 만든 gacha-list-<uid>.json도 가져올 수 있습니다. 뽑기 수, 최고 등급 확률, 천장 진행도, 픽뚫 여부를 보여 주며 기록은 내 컴퓨터에만 저장합니다."
+	},
+	"icon": {
+		"file": "hoyo-gacha.webp"
+	},
+	"screenshot": "hoyo-gacha.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-07T08:59:06Z"
+}
