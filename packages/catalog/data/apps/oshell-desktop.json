@@ -1,33 +1,37 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "oshell-desktop",
-	"name": "OShell Desktop",
-	"author": "oshell-desktop",
-	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
-	"group": "dev",
-	"url": "https://github.com/oshell-desktop/oshell-desktop",
-	"repo": "oshell-desktop/oshell-desktop",
-	"summary": {
-		"en": "SSH terminal and SFTP/FTP file manager for Windows and Linux, sharing settings with macOS OShell.",
-		"zh-CN": "Windows 与 Linux 上的 SSH 终端和 SFTP/FTP 文件管理器。",
-		"zh-TW": "Windows 與 Linux 上的 SSH 終端機與 SFTP/FTP 檔案管理器。",
-		"ja": "Windows・Linux 向けの SSH ターミナル兼 SFTP/FTP ファイルマネージャー。",
-		"ko": "Windows·Linux용 SSH 터미널 겸 SFTP/FTP 파일 관리자."
-	},
-	"description": {
-		"en": "The Windows and Linux edition of OShell, built with MyGo's native UI and Ghostty VT; the macOS OShell is a separate app not built here, and the two sync settings through a shared folder or WebDAV. It has SSH and local terminals with split panes, tab groups and multiple windows, proxies and jump hosts, and SFTP, FTP, SCP and ZMODEM transfers, with pause and resume for SFTP.",
-		"zh-CN": "OShell 的 Windows 与 Linux 版本，由 MyGo 原生 UI 和 Ghostty VT 构建；macOS 版 OShell 是另一款应用，不在本项目中构建，两者可通过共享目录或 WebDAV 同步配置。提供 SSH 与本地终端、分屏、标签组和多窗口，支持代理与跳板机，以及 SFTP、FTP、SCP、ZMODEM 文件传输，SFTP 可暂停和续传。",
-		"zh-TW": "OShell 的 Windows 與 Linux 版本，以 MyGo 原生 UI 和 Ghostty VT 打造；macOS 版 OShell 是另一款應用程式，不在本專案中建置，兩者可透過共用目錄或 WebDAV 同步設定。提供 SSH 與本機終端機、分割畫面、分頁群組和多視窗，支援代理與跳板機，以及 SFTP、FTP、SCP、ZMODEM 檔案傳輸，SFTP 可暫停與續傳。",
-		"ja": "OShell の Windows・Linux 版で、MyGo のネイティブ UI と Ghostty VT で作られています。macOS 版 OShell は別のアプリでこのプロジェクトではビルドせず、共有フォルダーや WebDAV で設定を同期できます。SSH とローカルターミナル、画面分割、タブグループ、複数ウィンドウ、プロキシと踏み台サーバーに対応し、SFTP・FTP・SCP・ZMODEM でファイルを転送でき、SFTP は一時停止と再開ができます。",
-		"ko": "OShell의 Windows·Linux 버전으로, MyGo의 네이티브 UI와 Ghostty VT로 만들었습니다. macOS용 OShell은 별도 앱으로 이 프로젝트에서 빌드하지 않으며, 공유 폴더나 WebDAV로 설정을 동기화할 수 있습니다. SSH와 로컬 터미널, 화면 분할, 탭 그룹, 다중 창, 프록시와 점프 호스트를 지원하고, SFTP·FTP·SCP·ZMODEM으로 파일을 전송하며 SFTP는 일시 중지와 이어받기가 됩니다."
-	},
-	"icon": {
-		"file": "oshell-desktop.webp"
-	},
-	"screenshot": "oshell-desktop.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-06T04:56:38Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "oshell-desktop",
+  "name": "OShell Desktop",
+  "author": "oshell-desktop",
+  "kind": "native",
+  "platforms": [
+    "win",
+    "linux",
+    "mac"
+  ],
+  "group": "dev",
+  "url": "https://github.com/oshell-desktop/oshell-desktop",
+  "repo": "oshell-desktop/oshell-desktop",
+  "summary": {
+    "en": "SSH terminal and SFTP/FTP file manager for Windows and Linux, sharing settings with macOS OShell.",
+    "zh-CN": "Windows 与 Linux 上的 SSH 终端和 SFTP/FTP 文件管理器。",
+    "zh-TW": "Windows 與 Linux 上的 SSH 終端機與 SFTP/FTP 檔案管理器。",
+    "ja": "Windows・Linux 向けの SSH ターミナル兼 SFTP/FTP ファイルマネージャー。",
+    "ko": "Windows·Linux용 SSH 터미널 겸 SFTP/FTP 파일 관리자."
+  },
+  "description": {
+    "en": "The Windows and Linux edition of OShell, built with MyGo's native UI and Ghostty VT; the macOS OShell is a separate app not built here, and the two sync settings through a shared folder or WebDAV. It has SSH and local terminals with split panes, tab groups and multiple windows, proxies and jump hosts, and SFTP, FTP, SCP and ZMODEM transfers, with pause and resume for SFTP.",
+    "zh-CN": "OShell 的 Windows 与 Linux 版本，由 MyGo 原生 UI 和 Ghostty VT 构建；macOS 版 OShell 是另一款应用，不在本项目中构建，两者可通过共享目录或 WebDAV 同步配置。提供 SSH 与本地终端、分屏、标签组和多窗口，支持代理与跳板机，以及 SFTP、FTP、SCP、ZMODEM 文件传输，SFTP 可暂停和续传。",
+    "zh-TW": "OShell 的 Windows 與 Linux 版本，以 MyGo 原生 UI 和 Ghostty VT 打造；macOS 版 OShell 是另一款應用程式，不在本專案中建置，兩者可透過共用目錄或 WebDAV 同步設定。提供 SSH 與本機終端機、分割畫面、分頁群組和多視窗，支援代理與跳板機，以及 SFTP、FTP、SCP、ZMODEM 檔案傳輸，SFTP 可暫停與續傳。",
+    "ja": "OShell の Windows・Linux 版で、MyGo のネイティブ UI と Ghostty VT で作られています。macOS 版 OShell は別のアプリでこのプロジェクトではビルドせず、共有フォルダーや WebDAV で設定を同期できます。SSH とローカルターミナル、画面分割、タブグループ、複数ウィンドウ、プロキシと踏み台サーバーに対応し、SFTP・FTP・SCP・ZMODEM でファイルを転送でき、SFTP は一時停止と再開ができます。",
+    "ko": "OShell의 Windows·Linux 버전으로, MyGo의 네이티브 UI와 Ghostty VT로 만들었습니다. macOS용 OShell은 별도 앱으로 이 프로젝트에서 빌드하지 않으며, 공유 폴더나 WebDAV로 설정을 동기화할 수 있습니다. SSH와 로컬 터미널, 화면 분할, 탭 그룹, 다중 창, 프록시와 점프 호스트를 지원하고, SFTP·FTP·SCP·ZMODEM으로 파일을 전송하며 SFTP는 일시 중지와 이어받기가 됩니다."
+  },
+  "icon": {
+    "file": "oshell-desktop.webp"
+  },
+  "screenshot": "oshell-desktop.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-06T04:56:38Z"
 }
