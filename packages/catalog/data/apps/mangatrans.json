@@ -1,34 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "mangatrans",
-	"name": "mangatrans",
-	"author": "roketskiy",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "ai",
-	"url": "https://github.com/roketskiy/mangatrans",
-	"repo": "roketskiy/mangatrans",
-	"summary": {
-		"en": "Translates Japanese manga CBZ/ZIP files into Simplified Chinese locally on an NVIDIA GPU.",
-		"zh-CN": "在本机用 NVIDIA GPU 把日文漫画 CBZ/ZIP 翻译成简体中文。",
-		"zh-TW": "在本機用 NVIDIA GPU 把日文漫畫 CBZ/ZIP 翻譯成簡體中文。",
-		"ja": "日本語のマンガ（CBZ/ZIP）を NVIDIA GPU 上のローカル処理で簡体字中国語に翻訳。",
-		"ko": "일본어 만화 CBZ/ZIP 파일을 NVIDIA GPU에서 로컬로 간체 중국어로 번역합니다."
-	},
-	"description": {
-		"en": "A Windows tool that turns Japanese manga CBZ or ZIP files into Simplified Chinese CBZ, running text detection, OCR, translation, inpainting and typesetting locally on an NVIDIA GPU. MyGo draws only the native desktop window for picking files and following progress; translation is done by a separate command-line engine. Setup needs CUDA, llama.cpp, ONNX Runtime and models installed by hand.",
-		"zh-CN": "把日文漫画 CBZ/ZIP 翻译成简体中文 CBZ 的 Windows 工具，文字检测、OCR、翻译、擦字和排版全部在本机 NVIDIA GPU 上运行。MyGo 只负责原生桌面窗口，用来选文件、查看进度和日志；翻译由同目录下独立的命令行引擎完成。需要自行准备 CUDA、llama.cpp、ONNX Runtime 和各个模型。",
-		"zh-TW": "把日文漫畫 CBZ/ZIP 翻譯成簡體中文 CBZ 的 Windows 工具，文字偵測、OCR、翻譯、去字和排版全部在本機 NVIDIA GPU 上執行。MyGo 只負責原生桌面視窗，用來選檔案、查看進度和記錄；翻譯由同目錄下獨立的命令列引擎完成。需要自行準備 CUDA、llama.cpp、ONNX Runtime 和各個模型。",
-		"ja": "日本語のマンガ（CBZ/ZIP）を簡体字中国語の CBZ に翻訳する Windows 用ツール。文字検出、OCR、翻訳、文字消し、写植をすべてローカルの NVIDIA GPU で処理します。MyGo が描くのはファイル選択と進捗・ログ表示を担うネイティブのデスクトップ画面だけで、翻訳は別のコマンドラインエンジンが行います。CUDA、llama.cpp、ONNX Runtime と各モデルは手動で用意する必要があります。",
-		"ko": "일본어 만화 CBZ/ZIP 파일을 간체 중국어 CBZ로 번역하는 Windows 도구로, 글자 검출, OCR, 번역, 글자 지우기, 식자를 모두 로컬 NVIDIA GPU에서 처리합니다. MyGo는 파일 선택과 진행 상황·로그 표시를 맡는 네이티브 데스크톱 창만 그리고, 번역은 별도의 명령줄 엔진이 합니다. CUDA, llama.cpp, ONNX Runtime과 각 모델을 직접 준비해야 합니다."
-	},
-	"icon": {
-		"file": "mangatrans.webp"
-	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
-	"screenshot": "mangatrans.webp",
-	"added": "2026-11-05T14:57:25Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "mangatrans",
+  "name": "mangatrans",
+  "author": "roketskiy",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "ai",
+  "url": "https://github.com/roketskiy/mangatrans",
+  "repo": "roketskiy/mangatrans",
+  "summary": {
+    "en": "Translates Japanese manga CBZ/ZIP files into Simplified Chinese locally on an NVIDIA GPU.",
+    "zh-CN": "在本机用 NVIDIA GPU 把日文漫画 CBZ/ZIP 翻译成简体中文。",
+    "zh-TW": "在本機用 NVIDIA GPU 把日文漫畫 CBZ/ZIP 翻譯成簡體中文。",
+    "ja": "日本語のマンガ（CBZ/ZIP）を NVIDIA GPU 上のローカル処理で簡体字中国語に翻訳。",
+    "ko": "일본어 만화 CBZ/ZIP 파일을 NVIDIA GPU에서 로컬로 간체 중국어로 번역합니다."
+  },
+  "description": {
+    "en": "A Windows tool that turns Japanese manga CBZ or ZIP files into Simplified Chinese CBZ, running text detection, OCR, translation, inpainting and typesetting locally on an NVIDIA GPU. MyGo draws only the native desktop window for picking files and following progress; translation is done by a separate command-line engine. Setup needs CUDA, llama.cpp, ONNX Runtime and models installed by hand.",
+    "zh-CN": "把日文漫画 CBZ/ZIP 翻译成简体中文 CBZ 的 Windows 工具，文字检测、OCR、翻译、擦字和排版全部在本机 NVIDIA GPU 上运行。MyGo 只负责原生桌面窗口，用来选文件、查看进度和日志；翻译由同目录下独立的命令行引擎完成。需要自行准备 CUDA、llama.cpp、ONNX Runtime 和各个模型。",
+    "zh-TW": "把日文漫畫 CBZ/ZIP 翻譯成簡體中文 CBZ 的 Windows 工具，文字偵測、OCR、翻譯、去字和排版全部在本機 NVIDIA GPU 上執行。MyGo 只負責原生桌面視窗，用來選檔案、查看進度和記錄；翻譯由同目錄下獨立的命令列引擎完成。需要自行準備 CUDA、llama.cpp、ONNX Runtime 和各個模型。",
+    "ja": "日本語のマンガ（CBZ/ZIP）を簡体字中国語の CBZ に翻訳する Windows 用ツール。文字検出、OCR、翻訳、文字消し、写植をすべてローカルの NVIDIA GPU で処理します。MyGo が描くのはファイル選択と進捗・ログ表示を担うネイティブのデスクトップ画面だけで、翻訳は別のコマンドラインエンジンが行います。CUDA、llama.cpp、ONNX Runtime と各モデルは手動で用意する必要があります。",
+    "ko": "일본어 만화 CBZ/ZIP 파일을 간체 중국어 CBZ로 번역하는 Windows 도구로, 글자 검출, OCR, 번역, 글자 지우기, 식자를 모두 로컬 NVIDIA GPU에서 처리합니다. MyGo는 파일 선택과 진행 상황·로그 표시를 맡는 네이티브 데스크톱 창만 그리고, 번역은 별도의 명령줄 엔진이 합니다. CUDA, llama.cpp, ONNX Runtime과 각 모델을 직접 준비해야 합니다."
+  },
+  "icon": {
+    "file": "mangatrans.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "mangatrans.webp",
+  "added": "2026-11-05T14:57:25Z"
 }
