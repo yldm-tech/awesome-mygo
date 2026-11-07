@@ -23,12 +23,6 @@
 		"ja": "opus-mt モデルを ONNX Runtime でローカル実行するオフライン機械翻訳ツール。言語パックを一度ダウンロードすれば、ネット接続も API キーも利用料も要りません。38 の言語ペアを備え、直接のペアがない場合は英語を経由して訳します。MyGo が描くのは Windows と Apple Silicon Mac 向けのデスクトップ GUI だけで、CLI と HTTP API は別のコマンドラインプログラムが提供します。",
 		"ko": "opus-mt 모델을 ONNX Runtime으로 로컬에서 실행하는 오프라인 기계 번역 도구입니다. 언어 팩을 한 번 내려받으면 네트워크도 API 키도 이용료도 필요 없습니다. 38개 언어 쌍을 갖추고, 직접 쌍이 없으면 영어를 거쳐 번역합니다. MyGo는 Windows와 Apple Silicon Mac용 데스크톱 GUI만 그리며, CLI와 HTTP API는 별도의 명령줄 프로그램이 제공합니다."
 	},
-	"icon": {
-		"file": "translator233.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "translator233.webp",
 	"added": "2026-11-05T04:45:28Z"
 }

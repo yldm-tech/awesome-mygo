@@ -22,12 +22,6 @@
 		"ja": "gh-agent のトレイアプリで、MyGo と React の Web フロントエンドで作られています。同じコアを使う CLI は別にあります。GitHub をポーリングし、issue と PR を ACP 経由でローカルのエージェント（CodeBuddy、Codex、Claude Code、pi）に渡し、返信の下書きとコードの差分を承認待ちに並べ、承認するまで投稿しません。変更は別の git worktree でローカルブランチにコミットされ、プッシュはされません。",
 		"ko": "gh-agent의 트레이 앱으로, MyGo와 React 웹 프런트엔드로 만들었으며 같은 코어를 쓰는 CLI는 따로 있습니다. GitHub를 폴링해 issue와 PR을 ACP로 로컬 에이전트(CodeBuddy, Codex, Claude Code, pi)에 넘기고, 답글 초안과 코드 diff를 검토 대기열에 올려 승인해야만 게시합니다. 변경은 별도의 git worktree에서 로컬 브랜치에 커밋되며 푸시하지 않습니다."
 	},
-	"icon": {
-		"file": "gh-agent.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "gh-agent.webp",
 	"added": "2026-11-05T12:11:10Z"
 }

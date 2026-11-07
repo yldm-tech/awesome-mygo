@@ -23,12 +23,6 @@
 		"ja": "Orbit360 のデスクトップ GUI。MyGo のネイティブ UI で scripts/bundle.py にフォームをかぶせ、360° 周回動画を 1 つの .orb ファイルに変換します。フレームレート、WebP・AVIF・JPEG の形式、回転軸、角度範囲を設定でき、ログの表示とブラウザーでのプレビューもできます。Python 3 と ffmpeg が必要です。Web プレーヤーは Vite と React で作られています。",
 		"ko": "Orbit360의 데스크톱 GUI로, MyGo의 네이티브 UI로 scripts/bundle.py에 폼을 씌워 360° 회전 촬영 영상을 하나의 .orb 파일로 만듭니다. 프레임 레이트, WebP·AVIF·JPEG 프레임 형식, 회전축, 각도 범위를 정할 수 있고 로그를 실시간으로 보며 브라우저에서 미리 볼 수 있습니다. Python 3와 ffmpeg가 필요합니다. 웹 플레이어는 Vite와 React로 만들었습니다."
 	},
-	"icon": {
-		"file": "orbit360.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "orbit360.webp",
 	"added": "2026-11-05T05:19:24Z"
 }

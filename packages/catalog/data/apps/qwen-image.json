@@ -24,12 +24,6 @@
     "ja": "VRAM 12 GB 以上の NVIDIA GPU で Qwen-Image-2.1 をローカル実行する Windows アプリ。stable-diffusion.cpp を使い、ComfyUI は不要です。GUI は MyGo のネイティブ UI で描かれ、テキストからの画像生成と複数の参照画像による編集ができ、sd-server.exe バックエンドが常駐するので連続生成でもモデルを読み直しません。セットアップとコマンドラインツールは PowerShell と Python 製です。",
     "ko": "VRAM 12GB 이상의 NVIDIA GPU에서 Qwen-Image-2.1을 로컬로 실행하는 Windows 앱으로, stable-diffusion.cpp 기반이며 ComfyUI가 필요 없습니다. MyGo의 네이티브 UI로 그린 GUI에서 텍스트로 이미지를 만들거나 여러 참조 이미지로 편집하고, sd-server.exe 백엔드가 상주해 모델을 다시 읽지 않습니다. 설치와 명령줄 도구는 PowerShell과 Python입니다."
   },
-  "icon": {
-    "file": "qwen-image.webp"
-  },
-  "provisional": [
-    "icon"
-  ],
   "screenshot": "qwen-image.webp",
   "added": "2026-11-05T17:38:35Z"
 }

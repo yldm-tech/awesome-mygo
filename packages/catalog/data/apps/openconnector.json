@@ -22,12 +22,6 @@
 		"ja": "Google・GitHub・Slack・Notion・Linear のアカウントを一度つなぐだけで、MCP または REST のエンドポイントひとつから AI エージェントに使わせられるローカルハブ。エージェントごとに専用のトークンとポリシーを持ち、認証情報は暗号化して手元に保存されます。MyGo は Web フロントエンドのデスクトップコンソールをビルドし、同じバイナリは CLI とサーバーとしてヘッドレスでも動きます。まだ初期段階で、実 API でのテストは未実施です。",
 		"ko": "Google, GitHub, Slack, Notion, Linear 계정을 한 번만 연결하면 하나의 MCP 또는 REST 엔드포인트로 AI 에이전트가 쓸 수 있게 해 주는 로컬 허브입니다. 에이전트마다 토큰과 정책이 따로 있고, 자격 증명은 암호화되어 내 컴퓨터에 저장됩니다. MyGo는 웹 프런트엔드로 데스크톱 콘솔을 빌드하며, 같은 바이너리는 창 없이 CLI와 서버로도 실행됩니다. 아직 초기 단계로 실제 API로는 테스트되지 않았습니다."
 	},
-	"icon": {
-		"file": "openconnector.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "openconnector.webp",
 	"added": "2026-11-05T15:15:40Z"
 }

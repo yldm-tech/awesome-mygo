@@ -22,12 +22,6 @@
 		"ja": "macOS・Linux・Windows 向けの Kubernetes クライアント。MyGo を使い、システムの WebView で React のフロントエンドを動かす、約 47 MB の Go バイナリ 1 つでできています。kubeconfig のコンテキストをすべて読み込みつつファイルは書き換えず、キー操作ひとつでクラスターを切り替えられ、リソースはライブで更新されます。ログ、シェル、YAML の編集、Helm リリースの確認に加え、監視中の名前空間では変更履歴を 7 日間残します。",
 		"ko": "macOS, Linux, Windows용 Kubernetes 클라이언트로, MyGo를 통해 시스템 WebView에서 React 프런트엔드를 실행하며 약 47MB짜리 Go 바이너리 하나로 이루어져 있습니다. kubeconfig의 모든 컨텍스트를 읽되 파일은 바꾸지 않고, 키 하나로 클러스터를 전환하며 리소스를 실시간으로 보여 줍니다. 로그, 셸, YAML 편집, Helm 릴리스 확인을 지원하고, 지켜보는 네임스페이스의 변경 내역을 7일간 타임라인으로 남깁니다."
 	},
-	"icon": {
-		"file": "kube-desk.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "kube-desk.webp",
 	"added": "2026-11-05T08:08:34Z"
 }

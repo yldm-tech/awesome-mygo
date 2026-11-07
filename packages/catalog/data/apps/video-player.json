@@ -22,12 +22,6 @@
 		"ja": "MyGo のネイティブ UI と MujicaUI のウィジェットで描かれたデスクトップ用動画プレーヤー。Cgo を使わず純粋な Go でビルドされています。正確なシーク、再生速度の変更、フルスクリーンとピクチャーインピクチャーに対応し、動画と同じ場所にある SRT・VTT 字幕を自動で読み込み、キューに入れた複数の動画を順に再生します。ffmpeg、ffprobe、ffplay をインストールして PATH に通しておく必要があります。",
 		"ko": "MyGo의 네이티브 UI와 MujicaUI 위젯으로 그린 데스크톱 동영상 플레이어로, Cgo 없이 순수 Go로 빌드됩니다. 정밀 탐색, 재생 속도 조절, 전체 화면과 PIP를 지원하고, 동영상 옆에 있는 SRT·VTT 자막 파일을 자동으로 불러오며, 대기열에 넣은 여러 동영상을 차례로 재생합니다. ffmpeg, ffprobe, ffplay가 설치되어 PATH에 있어야 합니다."
 	},
-	"icon": {
-		"file": "video-player.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "video-player.webp",
 	"added": "2026-11-05T17:38:35Z"
 }

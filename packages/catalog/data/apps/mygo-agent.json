@@ -22,12 +22,6 @@
 		"ja": "MyGo のネイティブ UI で描かれたデスクトップ AI コーディングエージェント。WebView も HTML も JavaScript も使いません。内蔵のエージェントループで OpenAI 互換 API を呼ぶほか、Codex CLI・Claude Code・Pi を駆動でき、スキル、MCP サーバー、内蔵の Ghostty ターミナルにも対応します。3 つの承認モードでツールを制御し、Agent モードでは macOS と Linux のサンドボックスでシェルをネットワークなしで実行します。",
 		"ko": "MyGo의 네이티브 UI로 그린 데스크톱 AI 코딩 에이전트로, WebView도 HTML도 JavaScript도 쓰지 않습니다. 내장 에이전트 루프로 OpenAI 호환 API를 호출하거나 Codex CLI, Claude Code, Pi를 구동하며, 스킬, MCP 서버, 내장 Ghostty 터미널을 지원합니다. 세 가지 승인 모드로 도구 사용을 통제하고, Agent 모드에서는 macOS와 Linux 샌드박스에서 네트워크 없이 셸을 실행합니다."
 	},
-	"icon": {
-		"file": "mygo-agent.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "mygo-agent.webp",
 	"added": "2026-11-05T17:06:44Z"
 }

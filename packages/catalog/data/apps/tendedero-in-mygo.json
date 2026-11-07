@@ -22,12 +22,6 @@
 		"ja": "Alejandro Buján の macOS アプリ Tendedero を、SwiftUI から Go と MyGo のネイティブ UI に移植したもので、macOS・Linux・Windows 向けにビルドできます。デスクトップや ~/Pictures/Screenshots などのフォルダーを監視し、新しいスクリーンショットを画面上端のロープに吊るします。ポインターを上端に置くとロープが下りてきて、クリックでコピー、ドラッグでフォルダーへ、隅のバツ印で取り外せます。",
 		"ko": "Alejandro Buján의 macOS 앱 Tendedero를 SwiftUI에서 Go와 MyGo의 네이티브 UI로 옮긴 버전으로, macOS, Linux, Windows용으로 빌드됩니다. 바탕화면과 ~/Pictures/Screenshots 등의 폴더를 지켜보다가 새 스크린샷을 화면 위쪽 줄에 걸어 두고, 포인터를 화면 위쪽에 두면 줄이 내려옵니다. 클릭하면 복사, 폴더로 끌면 보관, 모서리의 X를 누르면 내립니다."
 	},
-	"icon": {
-		"file": "tendedero-in-mygo.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "tendedero-in-mygo.webp",
 	"added": "2026-11-05T17:24:29Z"
 }

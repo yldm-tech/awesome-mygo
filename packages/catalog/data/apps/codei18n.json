@@ -22,12 +22,6 @@
 		"ja": "MyGo のネイティブ UI で描かれた Codei18n の Windows 版デスクトップクライアントで、Web ビューは使いません。Codei18n core ライブラリをプロセス内で呼び出し、codei18n コマンドラインもその core が提供します。複数プロジェクトのコードコメントを抽出・翻訳し、API トークンは Windows 資格情報マネージャーに保存。コメントは絞り込みや検索ができ、原文と訳文を並べて編集できます。",
 		"ko": "MyGo의 네이티브 UI로 그린 Codei18n의 Windows 데스크톱 클라이언트로, 웹 뷰를 쓰지 않습니다. Codei18n core 라이브러리를 프로세스 안에서 호출하며, codei18n 명령줄 도구도 이 core에서 나옵니다. 여러 프로젝트의 코드 주석을 추출해 번역하고, API 토큰은 Windows 자격 증명 관리자에 저장하며, 주석을 필터링·검색하고 원문과 번역을 나란히 놓고 편집할 수 있습니다."
 	},
-	"icon": {
-		"file": "codei18n.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "codei18n.webp",
 	"added": "2026-11-05T17:24:29Z"
 }

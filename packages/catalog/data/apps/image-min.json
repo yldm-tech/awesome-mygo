@@ -22,12 +22,6 @@
 		"ja": "MyGo のネイティブ UI で描かれた macOS 用の画像圧縮ツールで、HTML、JavaScript、WebView は使いません。PNG、JPEG、GIF、WebP、TIFF、SVG の画像をウィンドウにドロップすると、元の画像の横に -min 付きのコピーを作ります。元のファイルは上書きせず、出力が元より大きくなることもありません。標準は可逆圧縮で、設定から非可逆圧縮と品質の調整を選べます。表示言語は中国語と英語です。",
 		"ko": "MyGo의 네이티브 UI로 그린 macOS용 이미지 압축 도구로, HTML, JavaScript, WebView를 쓰지 않습니다. PNG, JPEG, GIF, WebP, TIFF, SVG 이미지를 창에 끌어 놓으면 원본 옆에 -min이 붙은 사본을 만들며, 원본을 덮어쓰지 않고 결과가 원본보다 커지지도 않습니다. 기본은 무손실 압축이고 설정에서 손실 압축과 품질을 조절할 수 있으며, 인터페이스는 중국어와 영어를 지원합니다."
 	},
-	"icon": {
-		"file": "image-min.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "image-min.webp",
 	"added": "2026-11-05T16:49:05Z"
 }

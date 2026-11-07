@@ -22,12 +22,6 @@
 		"ja": "Windows・macOS 向けの動く壁紙アプリで、動画や画像をデスクトップに表示します。操作はトレイアイコンと、MyGo のネイティブ UI で描かれた設定ウィンドウから行います。動画は Windows では mpv か Media Foundation、macOS では AVFoundation で再生します。ディスプレイごとに再生・一時停止でき、1 枚の壁紙を複数の画面にまたがせることもでき、アプリ別のルール、一括インポート、任意の H.264 変換も備えています。",
 		"ko": "Windows와 macOS용 움직이는 배경화면 앱으로, 동영상과 이미지를 바탕화면에 띄웁니다. 트레이 아이콘과 MyGo의 네이티브 UI로 그린 설정 창에서 조작합니다. 동영상은 Windows에서는 mpv나 Media Foundation으로, macOS에서는 AVFoundation으로 재생합니다. 디스플레이마다 따로 재생하거나 일시 정지할 수 있고, 배경화면 하나를 여러 화면에 걸쳐 펼칠 수 있으며, 앱별 규칙, 일괄 가져오기, 선택형 H.264 변환도 제공합니다."
 	},
-	"icon": {
-		"file": "wallpaper.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "wallpaper.webp",
 	"added": "2026-11-05T08:45:51Z"
 }

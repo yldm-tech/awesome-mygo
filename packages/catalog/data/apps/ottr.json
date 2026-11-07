@@ -23,11 +23,5 @@
 		"ko": "MyGo의 네이티브 UI로 그린 Windows 화면 녹화 앱으로, 웹 뷰가 없습니다. sherpa-onnx로 오프라인 전사를 하며 녹화 중 자막을 실시간으로 보여 주고, 온라인 서비스로 번역하고 원격 모델로 AI 요약을 만들며, 모든 내용을 로컬 SQLite 라이브러리에 저장합니다. FFmpeg 설치가 필요하며, 패키징, 창 내 재생, 다른 플랫폼 지원은 아직 로드맵에 있습니다."
 	},
 	"screenshot": "ottr.webp",
-	"icon": {
-		"file": "ottr.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"added": "2026-11-05T11:28:55Z"
 }

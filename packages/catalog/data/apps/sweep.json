@@ -23,12 +23,6 @@
 		"ja": "MyGo のネイティブ UI で描かれた Windows アプリで、Web ビューはありません。Rust、Node、Python、Gradle、Android、Xcode、CMake が残す再生成可能なビルド出力をディスク全体から探し、ツリーマップと、パス・サイズ・更新時期つきの一覧で示して、確認のうえ選んだものを削除します。対応するビルドシステムのファイルが隣にあるフォルダーだけを対象とし、削除はごみ箱を経由しない完全削除です。",
 		"ko": "MyGo의 네이티브 UI로 그린 Windows 앱으로, 웹 뷰가 없습니다. Rust, Node, Python, Gradle, Android, Xcode, CMake가 남긴 재생성 가능한 빌드 산출물을 디스크 전체에서 찾아 트리맵과 경로, 크기, 수정 시점이 담긴 목록으로 보여 주고, 확인을 거쳐 선택한 항목을 삭제합니다. 해당 빌드 시스템의 파일이 옆에 있는 폴더만 대상으로 삼으며, 휴지통을 거치지 않고 영구 삭제합니다."
 	},
-	"icon": {
-		"file": "sweep.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "sweep.webp",
 	"added": "2026-11-05T03:22:12Z"
 }

@@ -22,12 +22,6 @@
 		"ja": "elasticvue を macOS ネイティブで書き直したアプリで、13 のモジュールを同等に備え、純粋な Go と MyGo のネイティブ UI で描かれています。Web ビューはありません。Elasticsearch 7・8・9、OpenSearch、serverless に直接つなぐので CORS の制約がなく、basic 認証、API キー、AWS IAM に対応します。認証情報は macOS のキーチェーンに、REST の履歴と保存したクエリは SQLite に保存され、JSON エディターはマッピングから補完します。",
 		"ko": "elasticvue를 macOS 네이티브로 다시 만든 앱으로, 13개 모듈을 그대로 갖추고 순수 Go와 MyGo의 네이티브 UI로 그렸으며 웹 뷰가 없습니다. Elasticsearch 7·8·9, OpenSearch, serverless에 직접 연결해 CORS 제약이 없고, basic 인증, API 키, AWS IAM을 지원합니다. 자격 증명은 macOS 키체인에, REST 기록과 저장한 쿼리는 SQLite에 보관하며, JSON 편집기는 매핑을 바탕으로 자동 완성합니다."
 	},
-	"icon": {
-		"file": "seismic.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "seismic.webp",
 	"added": "2026-11-05T16:49:05Z"
 }

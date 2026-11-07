@@ -22,12 +22,6 @@
 		"ja": "チャット一覧やアルバムのサムネイル、ファイルマネージャーなど通常の PNG しか読まない場所では画像 A を、ブラウザーや iOS・macOS の写真など APNG 対応ビューアーで開くと画像 B を表示する「両面」PNG を作ります。MyGo のネイティブ UI で描かれ、dualpng コマンドラインも備えた純 Go 製で、Windows・macOS・Linux 向けです。入力は PNG と JPEG。WeChat や QQ では画像が再圧縮されるため、効果は消えます。",
 		"ko": "채팅 목록, 앨범 썸네일, 파일 관리자처럼 일반 PNG만 읽는 곳에서는 이미지 A를, 브라우저나 iOS·macOS 사진 같은 APNG 뷰어에서 열면 이미지 B를 보여 주는 '양면' PNG를 만듭니다. MyGo의 네이티브 UI로 그렸고 dualpng 명령줄도 있으며, 순수 Go로 Windows, macOS, Linux용으로 빌드됩니다. 입력은 PNG와 JPEG이며, WeChat과 QQ는 이미지를 다시 압축해 효과가 사라집니다."
 	},
-	"icon": {
-		"file": "dual-png.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "dual-png.webp",
 	"added": "2026-11-05T23:30:36Z"
 }

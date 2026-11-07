@@ -22,12 +22,6 @@
 		"ja": "~/.agents/skills または任意のフォルダーにある agent skills を読む macOS アプリで、MyGo を使い Go のバックエンドとシステムの WebView 上の Web フロントエンドで作られています。skill を出どころや接頭辞でグループ分けし、検索や絞り込みができ、Markdown を整えて表示し、frontmatter はカードにまとめます。vercel-labs/skills CLI の .skill-lock.json を使い、バージョンの表示と更新の確認も行います。",
 		"ko": "~/.agents/skills 또는 직접 고른 폴더의 agent skills를 읽는 macOS 앱으로, MyGo로 만든 Go 백엔드와 시스템 웹뷰 속 웹 프런트엔드로 이루어져 있습니다. skill을 출처나 접두사별로 묶고 검색과 필터를 지원하며, Markdown을 보기 좋게 렌더링하고 frontmatter는 카드로 보여 줍니다. vercel-labs/skills CLI의 .skill-lock.json을 이용해 버전을 표시하고 업데이트를 확인합니다."
 	},
-	"icon": {
-		"file": "skills-reader.webp"
-	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "skills-reader.webp",
 	"added": "2026-11-05T15:37:24Z"
 }
