@@ -27,9 +27,6 @@
   "icon": {
     "file": "lan-notify.webp"
   },
-  "provisional": [
-    "icon"
-  ],
   "screenshot": "lan-notify.webp",
   "added": "2026-11-05T14:40:59Z"
 }

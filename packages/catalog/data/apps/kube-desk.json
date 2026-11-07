@@ -25,9 +25,6 @@
 	"icon": {
 		"file": "kube-desk.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "kube-desk.webp",
 	"added": "2026-11-05T08:08:34Z"
 }

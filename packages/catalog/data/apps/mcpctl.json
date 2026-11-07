@@ -27,9 +27,6 @@
   "icon": {
     "file": "mcpctl.webp"
   },
-  "provisional": [
-    "icon"
-  ],
   "screenshot": "mcpctl.webp",
   "added": "2026-11-05T14:40:59Z"
 }

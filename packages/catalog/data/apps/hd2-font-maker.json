@@ -25,9 +25,6 @@
 	"icon": {
 		"file": "hd2-font-maker.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "hd2-font-maker.webp",
 	"added": "2026-11-05T23:30:36Z"
 }
