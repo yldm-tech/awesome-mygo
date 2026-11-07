@@ -9,8 +9,8 @@ export function Footer() {
 	const t = useT();
 	return (
 		<footer className='relative z-1 overflow-hidden border-t border-line bg-bg/60'>
-			{/* The page's gutter: 24px from sm up, 16px on phones. */}
-			<div className='mx-auto flex max-w-[1600px] flex-col gap-7 px-6 pt-12 pb-8 max-sm:px-4'>
+			{/* The page's gutter: 24px from sm up, 20px on phones. */}
+			<div className='mx-auto flex max-w-[1600px] flex-col gap-7 px-6 pt-12 pb-8 max-sm:px-5'>
 				{/* Clipped by the footer at its widest; on phones it is sized to the screen, so the whole name shows. */}
 				<span aria-hidden='true' className='font-display text-[clamp(56px,14vw,200px)] leading-[0.8] font-extrabold tracking-[-0.06em] whitespace-nowrap text-bar max-sm:text-[13vw]'>
 					Awesome MyGo

@@ -23,7 +23,7 @@ export function FilterChips({ label, children }: { label: string; children: Reac
 	return (
 		<div
 			ref={row}
-			className='flex flex-wrap gap-2 max-md:-my-1 max-md:flex-nowrap max-md:overflow-x-auto max-md:py-1 max-md:[scrollbar-width:none] max-sm:-mx-4 max-sm:scroll-px-4 max-sm:px-4 sm:max-md:-mx-6 sm:max-md:scroll-px-6 sm:max-md:px-6 max-md:[&::-webkit-scrollbar]:hidden'
+			className='flex flex-wrap gap-2 max-md:-my-1 max-md:flex-nowrap max-md:overflow-x-auto max-md:py-1 max-md:[scrollbar-width:none] max-sm:-mx-5 max-sm:scroll-px-5 max-sm:px-5 sm:max-md:-mx-6 sm:max-md:scroll-px-6 sm:max-md:px-6 max-md:[&::-webkit-scrollbar]:hidden'
 			role='group'
 			aria-label={label}
 		>
