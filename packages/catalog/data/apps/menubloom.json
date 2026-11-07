@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "menubloom",
+	"name": "Menubloom",
+	"author": "lzhgus",
+	"kind": "native",
+	"group": "system",
+	"url": "https://menubloom.lzhgus.com",
+	"repo": "lzhgus/menubloom",
+	"summary": {
+		"en": "Adds New File, Copy Path, Cut and Paste, Open in Terminal and more to Finder's right-click menu.",
+		"zh-CN": "为访达右键菜单加上新建文件、拷贝路径、剪切粘贴、在终端中打开等功能。",
+		"zh-TW": "為 Finder 右鍵選單加上新增檔案、拷貝路徑、剪下貼上、在終端機開啟等功能。",
+		"ja": "Finder の右クリックに新規ファイル、パスのコピー、カットと貼り付け、ターミナルで開くなどを追加。",
+		"ko": "Finder 오른쪽 클릭에 새 파일, 경로 복사, 잘라내기와 붙여넣기 등을 더합니다."
+	},
+	"description": {
+		"en": "A macOS menu bar app that adds New File from templates, Copy Path, Cut and Paste Here, Open in Terminal, image conversion and your own shell commands to Finder's right-click menu. The app, its Settings and every action are built in Go with MyGo's native UI. The Finder extension that draws the menu is a small Swift app extension. It makes no network connections.",
+		"zh-CN": "macOS 菜单栏应用，为访达的右键菜单加上按模板新建文件、拷贝路径、剪切与粘贴、在终端中打开、图片转换以及自定义 Shell 命令。应用本体、设置界面和所有操作都用 Go 编写，界面由 MyGo 原生 UI 绘制；负责显示菜单的访达扩展则是一个用 Swift 写的小型应用扩展。它不进行任何网络连接。",
+		"zh-TW": "macOS 選單列 App，為 Finder 的右鍵選單加上依範本新增檔案、拷貝路徑、剪下與貼上、在終端機中開啟、圖片轉換以及自訂 Shell 指令。App 本體、設定畫面和所有操作都用 Go 撰寫，介面由 MyGo 原生 UI 繪製；負責顯示選單的 Finder 延伸功能則是一個用 Swift 寫的小型 App 延伸功能。它不進行任何網路連線。",
+		"ja": "Finder の右クリックメニューに、テンプレートからの新規ファイル、パスのコピー、カットと貼り付け、ターミナルで開く、画像変換、自作のシェルコマンドを加える macOS のメニューバーアプリです。アプリ本体と設定画面、すべての操作は Go と MyGo のネイティブ UI で作られています。メニューを表示する Finder 拡張だけは、Swift で書かれた小さなアプリ拡張です。ネットワーク通信は一切行いません。",
+		"ko": "Finder의 오른쪽 클릭 메뉴에 템플릿으로 새 파일 만들기, 경로 복사, 잘라내기와 붙여넣기, 터미널에서 열기, 이미지 변환, 직접 만든 셸 명령을 더하는 macOS 메뉴 막대 앱입니다. 앱 본체와 설정 화면, 모든 동작은 Go와 MyGo의 네이티브 UI로 만들었습니다. 메뉴를 그리는 Finder 확장만 Swift로 작성한 작은 앱 확장입니다. 네트워크에 전혀 연결하지 않습니다."
+	},
+	"icon": {
+		"file": "menubloom.webp"
+	},
+	"screenshot": "menubloom.webp",
+	"added": "2026-11-07T08:59:06Z"
+}
