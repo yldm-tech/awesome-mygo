@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "atrust-hub",
+	"name": "aTrust Hub",
+	"author": "weigram",
+	"kind": "native",
+	"group": "network",
+	"url": "https://github.com/weigram/aTrustHub",
+	"repo": "weigram/aTrustHub",
+	"summary": {
+		"en": "Keeps several aTrust VPN gateways online at once, with one SOCKS5 entry routing to each.",
+		"zh-CN": "同时保持多个 aTrust VPN 网关在线，用一个 SOCKS5 统一入口自动分流。",
+		"zh-TW": "同時保持多個 aTrust VPN 閘道上線，以單一 SOCKS5 統一入口自動分流。",
+		"ja": "複数の aTrust VPN ゲートウェイに同時接続し、ひとつの SOCKS5 入口で振り分け。",
+		"ko": "여러 aTrust VPN 게이트웨이에 동시에 접속하고 하나의 SOCKS5 입구로 분배합니다."
+	},
+	"description": {
+		"en": "A macOS and Windows client, drawn with MyGo's native UI, that stays logged in to several aTrust gateways at once. Each gateway keeps its own tunnel and SOCKS5 port, and one unified SOCKS5 entry routes each connection to the gateway that covers the target. A global TUN mode reaches intranets without proxy settings; on Windows it is still experimental.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 与 Windows 客户端，可同时登录多个 aTrust 零信任网关。每个网关各有独立隧道和本地 SOCKS5 端口，统一入口 SOCKS5 会把连接交给发布了目标资源的网关。开启全局 TUN 后无需配置代理即可访问内网，Windows 上该功能仍处于实验阶段。",
+		"zh-TW": "以 MyGo 原生 UI 繪製的 macOS 與 Windows 用戶端，可同時登入多個 aTrust 零信任閘道。每個閘道各有獨立通道與本機 SOCKS5 連接埠，統一入口 SOCKS5 會把連線交給發布了目標資源的閘道。開啟全域 TUN 後不必設定代理即可存取內網，此功能在 Windows 上仍屬實驗性質。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS・Windows 向けクライアントで、複数の aTrust ゼロトラストゲートウェイに同時にログインできます。ゲートウェイごとに独立したトンネルとローカルの SOCKS5 ポートを持ち、統合 SOCKS5 入口が接続先のリソースを公開しているゲートウェイへ接続を振り分けます。グローバル TUN を有効にするとプロキシ設定なしで社内ネットワークに届きますが、Windows ではまだ実験的です。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS·Windows 클라이언트로, 여러 aTrust 제로 트러스트 게이트웨이에 동시에 로그인합니다. 게이트웨이마다 독립된 터널과 로컬 SOCKS5 포트를 두고, 통합 SOCKS5 입구가 대상 리소스를 게시한 게이트웨이로 연결을 넘깁니다. 전역 TUN을 켜면 프록시 설정 없이 내부망에 접근할 수 있으며, Windows에서는 아직 실험 단계입니다."
+	},
+	"icon": {
+		"file": "atrust-hub.webp"
+	},
+	"screenshot": "atrust-hub.webp",
+	"added": "2026-11-07T08:59:06Z"
+}
