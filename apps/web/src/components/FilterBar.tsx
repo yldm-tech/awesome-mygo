@@ -2,7 +2,7 @@ import { type ReactNode, useEffect, useRef } from 'react';
 
 // The filter bar over a listing (the showcase, the UI libraries and the plugins): a row of chips and the selects beside them. From md up it is a panel that sticks under the header while the list scrolls. Below md it is neither a panel nor sticky, as a sticky bar of wrapped chips covered the cards on a phone: the chips become one row that scrolls sideways, out to the screen's edges, and the selects share the row under it. A screen under 560px tall (a phone held sideways, which is md wide) keeps the panel but does not stick it, as header and panel would leave a strip of the list.
 export function FilterBar({ children }: { children: ReactNode }) {
-	return <div className='sticky top-[72px] z-5 flex [@media(max-height:560px)]:static flex-wrap items-center justify-between gap-3 rounded-[14px] border border-line bg-well/90 p-3 backdrop-blur-[10px] max-md:static max-md:flex-col max-md:flex-nowrap max-md:items-stretch max-md:rounded-none max-md:border-0 max-md:bg-transparent max-md:p-0 max-md:backdrop-blur-none'>{children}</div>;
+	return <div className='sticky top-[72px] z-5 flex [@media(max-height:560px)]:static flex-wrap items-center justify-start gap-3 rounded-[14px] border border-line bg-well/90 p-3 backdrop-blur-[10px] max-md:static max-md:flex-col max-md:flex-nowrap max-md:items-stretch max-md:rounded-none max-md:border-0 max-md:bg-transparent max-md:p-0 max-md:backdrop-blur-none'>{children}</div>;
 }
 
 // The chips' row. Below md it runs past the page's gutter (16px below sm, 24px up to md) to the screen's edges, with the gutter as its padding and scroll padding, so the first chip lines up with the page and the row scrolls under the edge; the scroll bar is hidden, and a few pixels above and below keep a focused chip's outline from being clipped.
@@ -50,9 +50,9 @@ export function FilterChip({ pressed, onClick, count, title, children }: { press
 	);
 }
 
-// The selects of a bar. Every listing keeps them together at the bar's end (`grouped`), beside or under the chips; without it each is an item of the bar itself, which the bar's spacing pulled apart, one in the middle and one at the end. Below md they share one row, each taking half of it, a lone one too.
+// The selects of a bar. Every listing keeps them together (`grouped`) in the same normal flow as the chips, so when the bar wraps the next row starts at the same left edge instead of being pushed to the right. Below md they share one row, each taking half of it, a lone one too.
 export function FilterSelects({ grouped = false, children }: { grouped?: boolean; children: ReactNode }) {
-	return <div className={grouped ? 'flex flex-wrap items-center gap-x-4 gap-y-3 md:ml-auto max-md:flex-nowrap max-md:gap-3' : 'flex gap-3 md:contents'}>{children}</div>;
+	return <div className={grouped ? 'flex flex-wrap items-center gap-x-4 gap-y-3 max-md:flex-nowrap max-md:gap-3' : 'flex gap-3 md:contents'}>{children}</div>;
 }
 
 // A labelled select. Below md its text is 16px, the smallest size at which iOS does not zoom the page when the select is tapped, and the label goes above it, so the select has its half of the row to itself in every language.
