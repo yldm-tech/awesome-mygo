@@ -88,6 +88,8 @@
 	"tool_p": "创建、开发与构建 MyGo 应用；mygo doctor 检查开发环境。",
 	"a_copy_cmd": "复制命令",
 	"comm_h": "社区插件 · {n}",
+	"plug_official": "官方",
+	"plug_community": "社区",
 	"comm_none": "还没有社区插件",
 	"comm_p": "按官方 Plugins 指南编写，发布后提交到这里。",
 	"guide": "编写插件指南 ↗",

@@ -88,6 +88,8 @@
 	"tool_p": "MyGo 앱 생성·개발·빌드, mygo doctor로 개발 환경을 점검합니다.",
 	"a_copy_cmd": "명령 복사",
 	"comm_h": "커뮤니티 플러그인 · {n}",
+	"plug_official": "공식",
+	"plug_community": "커뮤니티",
 	"comm_none": "아직 커뮤니티 플러그인이 없습니다",
 	"comm_p": "공식 Plugins 가이드로 만들고 공개한 뒤 여기에 제출하세요.",
 	"guide": "플러그인 가이드 ↗",

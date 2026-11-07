@@ -23,23 +23,32 @@ export function Plugins() {
 function Explorer() {
 	const t = useT();
 	const lang = useLang();
-	// ?surface= keeps the filter in the address, as in the original look.
-	const { surface: surfaceParam } = useSearch({ from: '/plugins' });
+	// ?source= and ?surface= keep the selected plugin list and filter in the address.
+	const { source: sourceParam, surface: surfaceParam } = useSearch({ from: '/plugins' });
 	const navigate = useNavigate({ from: '/plugins' });
+	const source = sourceParam ?? 'official';
+	const setSource = (s: 'official' | 'community') => void navigate({ search: (prev) => ({ ...prev, source: s === 'official' ? undefined : s }), replace: true, resetScroll: false });
 	const surface = surfaceParam ?? 'all';
 	const setSurface = (s: 'all' | 'web' | 'native') => void navigate({ search: (prev) => ({ ...prev, surface: s === 'all' ? undefined : s }), replace: true, resetScroll: false });
 	const surfLabel: Record<PluginSurface, string> = { web: t.surf_web, native: t.surf_native, both: t.surf_both };
-	// The official plugins, then the community's, each row marked which it is. A plugin for both kinds of window shows under either filter.
-	const all = [...PLUGINS, ...COMMUNITY_PLUGINS];
-	const shown = all.filter((p) => surface === 'all' || p.surface === surface || p.surface === 'both');
+	// Tabs keep the official and community lists together without making one flat stream. A plugin for both kinds of window shows under either filter.
+	const list = source === 'official' ? PLUGINS : COMMUNITY_PLUGINS;
+	const shown = list.filter((p) => surface === 'all' || p.surface === surface || p.surface === 'both');
 	const chips = [
-		{ key: 'all' as const, label: `${t.all} · ${all.length}` },
-		{ key: 'web' as const, label: `${t.surf_web} · ${all.filter((p) => p.surface !== 'native').length}` },
-		{ key: 'native' as const, label: `${t.surf_native} · ${all.filter((p) => p.surface !== 'web').length}` },
+		{ key: 'all' as const, label: `${t.all} · ${list.length}` },
+		{ key: 'web' as const, label: `${t.surf_web} · ${list.filter((p) => p.surface !== 'native').length}` },
+		{ key: 'native' as const, label: `${t.surf_native} · ${list.filter((p) => p.surface !== 'web').length}` },
 	];
 	return (
 		<Win level={1} title={t.nav_plugins} fill closeTo='/' className='desk:col-span-8 desk:col-start-1 desk:row-span-2 desk:row-start-1'>
 			<div className='flex flex-wrap items-center gap-2.5 px-1.5 pt-[3px] pb-1.5'>
+				<div role='tablist' aria-label={t.nav_plugins} className='flex'>
+					{(['official', 'community'] as const).map((key) => (
+						<button key={key} type='button' role='tab' aria-selected={source === key} onClick={() => setSource(key)} className={`${btnSm} ${seg} aria-selected:bg-ink aria-selected:text-paper`}>
+							{key === 'official' ? t.plug_official : t.plug_community} · {key === 'official' ? PLUGINS.length : COMMUNITY_PLUGINS.length}
+						</button>
+					))}
+				</div>
 				<div role='group' aria-label={t.a_filter} className='flex flex-wrap'>
 					{chips.map((c) => (
 						<button key={c.key} type='button' aria-pressed={surface === c.key} onClick={() => setSurface(c.key)} className={`${btnSm} ${seg}`}>
@@ -95,9 +104,9 @@ function Explorer() {
 			</ul>
 			<StatusBar>
 				<span>
-					<b className='font-semibold text-ink'>{shown.length}</b> / {fill(t.r_items, { n: all.length })}
+					<b className='font-semibold text-ink'>{shown.length}</b> / {fill(t.r_items, { n: list.length })}
 				</span>
-				<span>{fill(t.cat_plug_desc, { n: PLUGINS.length })}</span>
+				<span>{source === 'official' ? fill(t.cat_plug_desc, { n: PLUGINS.length }) : fill(t.comm_h, { n: COMMUNITY_PLUGINS.length })}</span>
 			</StatusBar>
 		</Win>
 	);

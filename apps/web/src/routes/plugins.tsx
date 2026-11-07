@@ -38,6 +38,8 @@ function PluginsPage() {
 	const search = Route.useSearch();
 	const navigate = useNavigate({ from: '/plugins' });
 	const setSearch = (next: typeof search) => void navigate({ search: (prev) => ({ ...prev, ...next }), replace: true, resetScroll: false });
+	const source = search.source ?? 'official';
+	const setSource = (next: 'official' | 'community') => setSearch({ source: next === 'official' ? undefined : next });
 	const surface = search.surface ?? 'all';
 	const setSurface = (s: 'all' | 'web' | 'native') => setSearch({ surface: s === 'all' ? undefined : s });
 	const surfLabel: Record<PluginSurface, string> = { web: t.surf_web, native: t.surf_native, both: t.surf_both };
@@ -50,15 +52,16 @@ function PluginsPage() {
 	const shown = PLUGINS.filter((p) => fits(p.surface));
 	// The community's plugins, under the same filter, after the official ones and the call to write one.
 	const community = COMMUNITY_PLUGINS.filter((p) => fits(p.surface));
+	const sourcePlugins = source === 'official' ? PLUGINS : COMMUNITY_PLUGINS;
 	// Most liked or highest score first; equal likes keep the docs' order, and equal totals are ordered by the unrounded sum, then the raw active weeks and release days, then the docs' order (compareByScore). A plugin without a score yet stays in its docs order.
 	for (const list of [shown, community]) {
 		if (sort === 'likes') list.sort((a, b) => (counts[likeKey.plugin(b)] ?? 0) - (counts[likeKey.plugin(a)] ?? 0));
 		if (sort === 'score') list.sort((a, b) => compareByScore(likeKey.plugin(a), likeKey.plugin(b)));
 	}
 	const chips = [
-		{ key: 'all' as const, label: t.all, n: PLUGINS.length },
-		{ key: 'web' as const, label: t.surf_web, n: PLUGINS.filter((p) => p.surface !== 'native').length },
-		{ key: 'native' as const, label: t.surf_native, n: PLUGINS.filter((p) => p.surface !== 'web').length },
+		{ key: 'all' as const, label: t.all, n: sourcePlugins.length },
+		{ key: 'web' as const, label: t.surf_web, n: sourcePlugins.filter((p) => p.surface !== 'native').length },
+		{ key: 'native' as const, label: t.surf_native, n: sourcePlugins.filter((p) => p.surface !== 'web').length },
 	];
 	// One plugin's card, as the official ones and the community's are shown alike.
 	const card = (p: Plugin, k: number) => {
@@ -120,45 +123,60 @@ function PluginsPage() {
 					</FilterSelects>
 				)}
 			</FilterBar>
-			{/* auto-fill keeps a column's width when a row has fewer cards than columns, so the community's one plugin is as wide as an official one rather than the whole row. */}
-			<div className='grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-4'>
-				{shown.map(card)}
+			{/* The source tabs keep official and community plugins in one section without flattening them into one long list. */}
+			<div role='tablist' aria-label={t.nav_plugins} className='flex gap-1 rounded-[14px] border border-line bg-well/70 p-1'>
+				{(['official', 'community'] as const).map((key) => {
+					const count = key === 'official' ? PLUGINS.length : COMMUNITY_PLUGINS.length;
+					return (
+						<button key={key} type='button' role='tab' aria-selected={source === key} onClick={() => setSource(key)} className='min-h-10 flex-1 rounded-[10px] border-0 px-4 text-left text-[14px] font-semibold text-fg-2 transition-[background,color] duration-150 aria-selected:bg-panel aria-selected:text-fg'>
+							{key === 'official' ? t.plug_official : t.plug_community} <span className='ml-1 font-mono text-[12px] text-fg-3'>{count}</span>
+						</button>
+					);
+				})}
 			</div>
-			<div className='rv overflow-hidden rounded-[18px] border border-line-3 bg-panel'>
-				<WinBar label='mygo-cli' size='md' className='panel-bar' />
-				<div className='grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-6 p-6 max-sm:p-[18px]'>
-					<div className='flex flex-col gap-2'>
-						<h2 className='m-0 text-[24px] font-black'>{t.tool_h}</h2>
-						<p className='m-0 text-[15px] leading-[1.7] text-fg-2'>{t.tool_p}</p>
+			{source === 'official' ? (
+				<>
+					<div className='grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-4'>{shown.map(card)}</div>
+					<div className='rv overflow-hidden rounded-[18px] border border-line-3 bg-panel'>
+						<WinBar label='mygo-cli' size='md' className='panel-bar' />
+						<div className='grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-6 p-6 max-sm:p-[18px]'>
+							<div className='flex flex-col gap-2'>
+								<h2 className='m-0 text-[24px] font-black'>{t.tool_h}</h2>
+								<p className='m-0 text-[15px] leading-[1.7] text-fg-2'>{t.tool_p}</p>
+							</div>
+							<div className='flex flex-col gap-2'>
+								{CLI_CMDS.map((cmd, i) => {
+									const key = i === 0 ? 'cmd0' : 'cmd1';
+									return (
+										<div key={cmd} className={cmdRow}>
+											<span className='flex-auto overflow-x-auto font-mono text-[14px] whitespace-nowrap text-fg'>
+												<span className='text-cyan'>❯ </span>
+												{cmd}
+											</span>
+											<CopyButton text={cmd} copyKey={key} label={t.a_copy_cmd} />
+										</div>
+									);
+								})}
+							</div>
+						</div>
 					</div>
-					<div className='flex flex-col gap-2'>
-						{CLI_CMDS.map((cmd, i) => {
-							const key = i === 0 ? 'cmd0' : 'cmd1';
-							return (
-								<div key={cmd} className={cmdRow}>
-									<span className='flex-auto overflow-x-auto font-mono text-[14px] whitespace-nowrap text-fg'>
-										<span className='text-cyan'>❯ </span>
-										{cmd}
-									</span>
-									<CopyButton text={cmd} copyKey={key} label={t.a_copy_cmd} />
-								</div>
-							);
-						})}
-					</div>
-				</div>
-			</div>
-			<CtaBox>
-				<CtaHead as='h2' title={COMMUNITY_PLUGINS.length > 0 ? fill(t.comm_h, { n: COMMUNITY_PLUGINS.length }) : t.comm_none} text={t.comm_p} />
-				<div className='flex flex-wrap gap-2.5'>
-					<a className='btn-g btn-44 btn-outline px-4' href={PLUGINS_DOC} target='_blank' rel='noopener'>
-						{t.guide}
-					</a>
-					<button type='button' className='btn-c btn-44' onClick={() => openSubmit('plugin')}>
-						{t.sub_plugin}
-					</button>
-				</div>
-			</CtaBox>
-			{community.length > 0 && <div className='grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-4'>{community.map(card)}</div>}
+				</>
+			) : (
+				<>
+					<CtaBox>
+						<CtaHead as='h2' title={COMMUNITY_PLUGINS.length > 0 ? fill(t.comm_h, { n: COMMUNITY_PLUGINS.length }) : t.comm_none} text={t.comm_p} />
+						<div className='flex flex-wrap gap-2.5'>
+							<a className='btn-g btn-44 btn-outline px-4' href={PLUGINS_DOC} target='_blank' rel='noopener'>
+								{t.guide}
+							</a>
+							<button type='button' className='btn-c btn-44' onClick={() => openSubmit('plugin')}>
+								{t.sub_plugin}
+							</button>
+						</div>
+					</CtaBox>
+					{community.length > 0 ? <div className='grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-4'>{community.map(card)}</div> : <p className='m-0 text-[15px] text-fg-2'>{t.comm_none}</p>}
+				</>
+			)}
 		</section>
 	);
 }

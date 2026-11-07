@@ -88,6 +88,8 @@
 	"tool_p": "建立、開發與建置 MyGo 應用；mygo doctor 檢查開發環境。",
 	"a_copy_cmd": "複製指令",
 	"comm_h": "社群外掛 · {n}",
+	"plug_official": "官方",
+	"plug_community": "社群",
 	"comm_none": "還沒有社群外掛",
 	"comm_p": "依官方 Plugins 指南撰寫，發布後提交到這裡。",
 	"guide": "撰寫外掛指南 ↗",

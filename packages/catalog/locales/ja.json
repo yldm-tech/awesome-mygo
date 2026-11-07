@@ -88,6 +88,8 @@
 	"tool_p": "MyGo アプリの作成・開発・ビルド。mygo doctor で開発環境をチェック。",
 	"a_copy_cmd": "コマンドをコピー",
 	"comm_h": "コミュニティプラグイン · {n}",
+	"plug_official": "公式",
+	"plug_community": "コミュニティ",
 	"comm_none": "コミュニティプラグインはまだありません",
 	"comm_p": "公式の Plugins ガイドに沿って作り、公開したらここへ投稿してください。",
 	"guide": "プラグインの書き方 ↗",
