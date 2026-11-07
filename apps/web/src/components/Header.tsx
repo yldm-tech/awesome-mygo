@@ -59,7 +59,7 @@ export function Header({ scrolled }: { scrolled: boolean }) {
 			data-scrolled={scrolled}
 		>
 			{/* The brand, the eight sections and the header actions share one row from the burger breakpoint up: the search button is as wide as its label, and below 1288px, before the 1600px container reaches its full width, the brand shows only its logo, the search button drops its label and the gaps tighten, so every language fits one row down to 1100px. Below md (phones) the header is one compact row of the brand, search, submit and the burger: the language, look and GitHub buttons move into the burger's panel, and the gaps, buttons and brand shrink so English still fits at 360px. */}
-			<div className='mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2.5 px-6 py-2.5 max-hdr:gap-x-3.5 max-md:gap-x-1.5 max-md:py-2 max-sm:px-5'>
+			<div className='site-shell mx-auto flex flex-wrap items-center gap-x-5 gap-y-2.5 px-6 py-2.5 max-hdr:gap-x-3.5 max-md:gap-x-1.5 max-md:py-2 max-sm:px-5'>
 				<Link to='/' aria-label={t.a_home} className='flex min-h-11 items-center gap-2.5 p-0 text-fg no-underline max-md:mr-auto max-md:min-h-10 max-md:gap-2 max-md:[&_img]:size-7'>
 					<Logo />
 					<span className='font-display text-[20px] font-extrabold tracking-[-0.035em] max-hdr:nav:hidden max-md:text-[clamp(16px,4.44vw,18px)]'>

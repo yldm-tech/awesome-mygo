@@ -1,6 +1,12 @@
 /* Rules on bare elements (the page, links, buttons, form controls, focus rings, the selection) and the site's per-language text face. Components style themselves with utilities; these are the defaults they start from. */
 :root {
 	color-scheme: dark;
+	--site-max: 1240px;
+}
+@media (min-width: 1700px) {
+	:root {
+		--site-max: 1520px;
+	}
 }
 body {
 	margin: 0;
@@ -59,9 +65,9 @@ html:lang(ko) .site {
 
 /* Page layout shared by every route of the original look: the page container, its heading and lead paragraph, and the mono kicker above headings. They stay named classes because every page repeats them; a page adds its own gap and extras with utilities beside the class (`page enter gap-10`). */
 
-/* Every page's container. It grows to 1600px on wide screens, while the gutter stays 24px from sm up and 20px on phones, the same as the header, the footer and the dialogs, so all left edges line up. On a phone the space above and below the page shrinks too, as 72px over the heading left the first card under the fold. */
+/* Every page's container. It stays at 1240px for laptop-sized viewports and grows to 1520px only on genuinely wide screens; the gutter stays 24px from sm up and 20px on phones, the same as the header, the footer and the dialogs, so all left edges line up. On a phone the space above and below the page shrinks too, as 72px over the heading left the first card under the fold. */
 .page {
-	max-width: 1600px;
+	max-width: var(--site-max);
 	margin: 0 auto;
 	padding: 72px 24px 96px;
 	display: flex;
@@ -69,6 +75,9 @@ html:lang(ko) .site {
 	@variant max-sm {
 		padding: 32px 20px 64px;
 	}
+}
+.site-shell {
+	max-width: var(--site-max);
 }
 .page-h1 {
 	margin: 0;
