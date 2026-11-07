@@ -4,6 +4,7 @@
 	"name": "CyberMe",
 	"author": "wherexml",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "BusinessApplication",
 	"group": "ai",
 	"url": "https://github.com/wherexml/CyberMe",

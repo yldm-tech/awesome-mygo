@@ -4,6 +4,7 @@
 	"name": "MotionDuo",
 	"author": "alvin-7",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/alvin-7/motionduo",

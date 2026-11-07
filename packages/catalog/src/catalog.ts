@@ -86,6 +86,8 @@ export function byAdded(a: { slug: string; added?: string }, b: { slug: string; 
 // ---- apps (data/apps/<slug>.json) ----
 
 export type AppKind = 'native' | 'web';
+export const APP_PLATFORMS = ['win', 'linux', 'mac'] as const;
+export type AppPlatform = (typeof APP_PLATFORMS)[number];
 
 // The schema.org applicationCategory values Google's software-app structured data accepts that can describe a desktop app.
 export const APP_CATEGORIES = ['BusinessApplication', 'CommunicationApplication', 'DesignApplication', 'DeveloperApplication', 'EducationalApplication', 'EntertainmentApplication', 'FinanceApplication', 'GameApplication', 'HealthApplication', 'LifestyleApplication', 'MultimediaApplication', 'ReferenceApplication', 'SecurityApplication', 'UtilitiesApplication'] as const;
@@ -143,6 +145,7 @@ export interface App {
 	name: string;
 	author: string;
 	kind: AppKind;
+	platforms: readonly AppPlatform[];
 	// The showcase's group (appGroup).
 	group?: EntryGroup;
 	// For structured data only: the entry's own, or else its group's (GROUP_CATEGORY).
@@ -181,8 +184,11 @@ const readProvisional = (r: Reader, allowed: readonly ProvisionalImage[]): Provi
 };
 
 const readApp = (r: Reader): App => {
-	r.only(['$schema', 'slug', 'name', 'author', 'kind', 'category', 'group', 'url', 'repo', 'summary', 'description', 'screenshot', 'icon', 'provisional', 'added']);
+	r.only(['$schema', 'slug', 'name', 'author', 'kind', 'platforms', 'category', 'group', 'url', 'repo', 'summary', 'description', 'screenshot', 'icon', 'provisional', 'added']);
 	const group = r.raw.group === undefined ? undefined : r.oneOf('group', ENTRY_GROUPS);
+	const platforms = r.raw.platforms === undefined ? [...APP_PLATFORMS] : r.strings('platforms', 1);
+	if (platforms.some((platform) => !(APP_PLATFORMS as readonly string[]).includes(platform))) r.fail('platforms', `must contain only ${APP_PLATFORMS.join(', ')}`);
+	if (new Set(platforms).size !== platforms.length) r.fail('platforms', 'lists a platform twice');
 	const icon = r.raw.icon as { ailogo?: unknown; file?: unknown } | undefined;
 	let iconUrl: string | undefined;
 	if (icon !== undefined) {
@@ -195,6 +201,7 @@ const readApp = (r: Reader): App => {
 		name: r.str('name'),
 		author: r.str('author'),
 		kind: r.oneOf('kind', ['native', 'web'] as const),
+		platforms: platforms as AppPlatform[],
 		group,
 		category: r.raw.category === undefined ? (group ? GROUP_CATEGORY[group] : undefined) : r.oneOf('category', APP_CATEGORIES),
 		url: r.url('url'),

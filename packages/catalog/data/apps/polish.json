@@ -4,6 +4,7 @@
 	"name": "Polish",
 	"author": "52funny",
 	"kind": "native",
+	"platforms": ["linux"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://github.com/52funny/polish",

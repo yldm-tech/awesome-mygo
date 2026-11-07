@@ -4,6 +4,7 @@
 	"name": "WebDD",
 	"author": "jiqing112",
 	"kind": "web",
+	"platforms": ["win", "linux"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/jiqing112/webdd-mygo-gui",

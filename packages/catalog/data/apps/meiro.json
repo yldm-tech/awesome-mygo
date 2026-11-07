@@ -4,6 +4,7 @@
 	"name": "Meiro",
 	"author": "elianiva",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://meiro.elianiva.com",

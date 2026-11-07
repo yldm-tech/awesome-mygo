@@ -4,6 +4,7 @@
 	"name": "Planet Windows",
 	"author": "Stdq123",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"group": "notes",
 	"url": "https://github.com/Stdq123/planet-windows",
 	"repo": "Stdq123/planet-windows",

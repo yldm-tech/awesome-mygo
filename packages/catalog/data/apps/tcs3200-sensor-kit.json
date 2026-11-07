@@ -4,6 +4,7 @@
 	"name": "TCS3200 Sensor Kit",
 	"author": "Nigh",
 	"kind": "native",
+	"platforms": ["linux"],
 	"group": "devices",
 	"url": "https://github.com/Nigh/TCS3200-sensor-kit",
 	"repo": "Nigh/TCS3200-sensor-kit",

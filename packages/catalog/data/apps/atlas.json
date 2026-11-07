@@ -4,6 +4,7 @@
 	"name": "Atlas",
 	"author": "gvenusleo",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/gvenusleo/Atlas",
 	"repo": "gvenusleo/Atlas",

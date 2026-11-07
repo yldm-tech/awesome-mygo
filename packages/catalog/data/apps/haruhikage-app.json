@@ -4,6 +4,7 @@
 	"name": "春日影",
 	"author": "yxxbc",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/yxxbc/haruhikage-app",
 	"repo": "yxxbc/haruhikage-app",

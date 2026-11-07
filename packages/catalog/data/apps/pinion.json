@@ -4,6 +4,7 @@
 	"name": "Pinion",
 	"author": "DanielZhangyc",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "GameApplication",
 	"group": "game",
 	"url": "https://github.com/DanielZhangyc/Pinion",

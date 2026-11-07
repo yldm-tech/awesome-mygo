@@ -4,6 +4,7 @@
 	"name": "喵喵の清单",
 	"author": "rppig42",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/rppig42/miaomiao-todo",
 	"repo": "rppig42/miaomiao-todo",

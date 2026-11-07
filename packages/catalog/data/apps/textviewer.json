@@ -4,6 +4,7 @@
 	"name": "TextViewer",
 	"author": "Oranjekop",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/Oranjekop/TextViewer",

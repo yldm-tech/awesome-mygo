@@ -4,6 +4,7 @@
 	"name": "Cleanzo",
 	"author": "echoVic",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://cleanzo.echovic.com",

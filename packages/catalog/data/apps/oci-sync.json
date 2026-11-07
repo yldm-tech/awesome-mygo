@@ -4,6 +4,7 @@
 	"name": "oci-sync",
 	"author": "tiramission",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://tiramission.github.io/oci-sync/",

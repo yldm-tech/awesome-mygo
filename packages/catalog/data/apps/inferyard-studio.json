@@ -4,6 +4,7 @@
 	"name": "InferYard Studio",
 	"author": "sunny0826",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "ai",
 	"url": "https://github.com/sunny0826/inferyard/tree/main/studio",
 	"repo": "sunny0826/inferyard",

@@ -4,6 +4,7 @@
 	"name": "NeoHM",
 	"author": "oneo-me",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://oneo-me.github.io/neohm/",

@@ -4,6 +4,7 @@
 	"name": "Easy SSH Port",
 	"author": "ji233-Sun",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/ji233-Sun/easy-ssh-port",

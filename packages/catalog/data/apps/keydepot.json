@@ -4,6 +4,7 @@
 	"name": "KeyDepot",
 	"author": "tbdsux",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/tbdsux/keydepot",
 	"repo": "tbdsux/keydepot",

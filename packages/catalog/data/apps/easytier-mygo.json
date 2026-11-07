@@ -4,6 +4,7 @@
 	"name": "EasyTier MyGo",
 	"author": "YuanZhe-99",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "network",
 	"url": "https://github.com/YuanZhe-99/Easytier-MyGo",
 	"repo": "YuanZhe-99/Easytier-MyGo",

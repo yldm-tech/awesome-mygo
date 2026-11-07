@@ -4,6 +4,7 @@
 	"name": "Burrow",
 	"author": "DiiKhanh",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/DiiKhanh/burrow",
 	"repo": "DiiKhanh/burrow",

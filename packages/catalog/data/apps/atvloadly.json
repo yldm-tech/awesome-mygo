@@ -4,6 +4,7 @@
 	"name": "atvloadly",
 	"author": "bitxeno",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/bitxeno/atvloadly",

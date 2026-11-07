@@ -4,6 +4,7 @@
 	"name": "Quarry",
 	"author": "Prit36",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/Prit36/quarry-disk-analyzer",
 	"repo": "Prit36/quarry-disk-analyzer",

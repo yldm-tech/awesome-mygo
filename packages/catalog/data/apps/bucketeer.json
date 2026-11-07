@@ -4,6 +4,7 @@
 	"name": "Bucketeer",
 	"author": "zachzhao1984",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "dev",
 	"url": "https://github.com/zachzhao1984/bucketeer",
 	"repo": "zachzhao1984/bucketeer",

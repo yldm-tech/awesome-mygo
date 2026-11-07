@@ -4,6 +4,7 @@
 	"name": "酷狗音乐 · MyGo",
 	"author": "fansa91",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/fansa91/mygo-kgou",
 	"repo": "fansa91/mygo-kgou",

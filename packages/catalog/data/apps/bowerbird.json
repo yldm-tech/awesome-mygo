@@ -4,6 +4,7 @@
 	"name": "Bowerbird",
 	"author": "owocc",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/owocc/bowerbird",

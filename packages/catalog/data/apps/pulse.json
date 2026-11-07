@@ -4,6 +4,7 @@
 	"name": "Pulse",
 	"author": "egoist",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://pulse.egoist.dev",

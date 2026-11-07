@@ -4,6 +4,7 @@
 	"name": "imyemail-cloud-mygo",
 	"author": "logdns",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "CommunicationApplication",
 	"group": "chat",
 	"url": "https://imy.email",

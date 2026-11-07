@@ -4,6 +4,7 @@
 	"name": "Quesora Native",
 	"author": "ispacewang",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "ReferenceApplication",
 	"group": "notes",
 	"url": "https://github.com/ispacewang/quesora-native",

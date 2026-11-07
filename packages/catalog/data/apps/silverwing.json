@@ -4,6 +4,7 @@
 	"name": "Silverwing",
 	"author": "javatoai",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/javatoai/silverwing",

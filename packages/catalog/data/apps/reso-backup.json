@@ -4,6 +4,7 @@
 	"name": "ReSo Backup",
 	"author": "Nigh",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/Nigh/ReSoBackup",

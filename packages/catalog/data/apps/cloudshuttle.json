@@ -4,6 +4,7 @@
 	"name": "CloudShuttle",
 	"author": "starriv",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/starriv/cloudshuttle",
 	"repo": "starriv/cloudshuttle",

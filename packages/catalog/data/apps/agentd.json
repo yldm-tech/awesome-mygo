@@ -4,6 +4,7 @@
 	"name": "agentd",
 	"author": "nguyenvanduocit",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/nguyenvanduocit/agentd",
 	"repo": "nguyenvanduocit/agentd",

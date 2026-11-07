@@ -4,6 +4,7 @@
 	"name": "MyGo Notes",
 	"author": "Gahulv",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "notes",
 	"url": "https://github.com/Gahulv/mygo-notes",
 	"repo": "Gahulv/mygo-notes",

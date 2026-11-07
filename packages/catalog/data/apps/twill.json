@@ -4,6 +4,7 @@
 	"name": "Twill",
 	"author": "ziludev",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/ziludev/twill",
 	"repo": "ziludev/twill",

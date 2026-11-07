@@ -4,6 +4,7 @@
 	"name": "ReqFlow",
 	"author": "wangqizhi",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "agents",
 	"url": "https://github.com/wangqizhi/ReqFlow",
 	"repo": "wangqizhi/ReqFlow",

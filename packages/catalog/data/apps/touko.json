@@ -4,6 +4,7 @@
 	"name": "TOUKO",
 	"author": "Eurekaimer",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/Eurekaimer/TOUKO",

@@ -4,6 +4,7 @@
 	"name": "Anker Prime Desktop",
 	"author": "LYJW131",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/LYJW131/anker-prime-desktop",

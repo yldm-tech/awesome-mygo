@@ -4,6 +4,7 @@
 	"name": "ClipRecorder",
 	"author": "soidaken",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/soidaken/ClipRecorder",
 	"repo": "soidaken/ClipRecorder",

@@ -4,6 +4,7 @@
 	"name": "wada-terminal",
 	"author": "xleotranx",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/xleotranx/wada-terminal",

@@ -4,6 +4,7 @@
 	"name": "Spool",
 	"author": "LarchLiu",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/LarchLiu/spool",
 	"repo": "LarchLiu/spool",

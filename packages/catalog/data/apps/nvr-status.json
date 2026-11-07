@@ -4,6 +4,7 @@
 	"name": "NVR Status",
 	"author": "dongsheng512",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "devices",
 	"url": "https://github.com/dongsheng512/NVR-Status-Go",
 	"repo": "dongsheng512/NVR-Status-Go",

@@ -4,6 +4,7 @@
 	"name": "MySkills",
 	"author": "legibet",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/legibet/myskills",

@@ -4,6 +4,7 @@
 	"name": "Morilo",
 	"author": "hifizz",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "BusinessApplication",
 	"group": "ai",
 	"url": "https://github.com/hifizz/morilo",

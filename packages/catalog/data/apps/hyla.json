@@ -4,6 +4,7 @@
 	"name": "Hyla",
 	"author": "smallnest",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/smallnest/hyla",

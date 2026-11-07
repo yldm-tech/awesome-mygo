@@ -4,6 +4,7 @@
 	"name": "Droi",
 	"author": "kkkk2323",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/kkkk2323/droi/releases/latest",

@@ -4,6 +4,7 @@
 	"name": "MyGo Launcher",
 	"author": "canwdev",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/canwdev/mygo-launcher",
 	"repo": "canwdev/mygo-launcher",

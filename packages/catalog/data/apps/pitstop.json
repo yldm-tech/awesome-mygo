@@ -4,6 +4,7 @@
 	"name": "pitstop",
 	"author": "Bush2021",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/Bush2021/pitstop",

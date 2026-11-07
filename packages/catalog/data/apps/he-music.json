@@ -4,6 +4,7 @@
 	"name": "HE-Music",
 	"author": "he-music",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/he-music/HE-Music",

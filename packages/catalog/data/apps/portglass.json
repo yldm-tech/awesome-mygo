@@ -4,6 +4,7 @@
 	"name": "PortGlass",
 	"author": "liangzhiyu",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/liangzhiyu/portglass",
 	"repo": "liangzhiyu/portglass",

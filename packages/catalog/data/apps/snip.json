@@ -4,6 +4,7 @@
 	"name": "snip",
 	"author": "0froq",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/0froq/snip",
 	"repo": "0froq/snip",

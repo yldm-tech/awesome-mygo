@@ -4,6 +4,7 @@
 	"name": "ttoy",
 	"author": "zrcoder",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/zrcoder/ttoy",

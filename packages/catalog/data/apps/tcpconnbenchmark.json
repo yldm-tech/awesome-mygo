@@ -4,6 +4,7 @@
 	"name": "tcpconnbenchmark",
 	"author": "lxlonion",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/lxlonion/tcpconnbenchmark",
 	"repo": "lxlonion/tcpconnbenchmark",

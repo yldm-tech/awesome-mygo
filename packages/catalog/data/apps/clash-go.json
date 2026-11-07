@@ -4,6 +4,7 @@
 	"name": "Clash Go",
 	"author": "charlzyx",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "network",
 	"url": "https://github.com/charlzyx/clash-go",
 	"repo": "charlzyx/clash-go",

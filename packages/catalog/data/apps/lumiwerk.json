@@ -4,6 +4,7 @@
 	"name": "Lumiwerk",
 	"author": "mcxen",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/mcxen/lumiwerk",

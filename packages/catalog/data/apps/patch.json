@@ -4,6 +4,7 @@
 	"name": "Patch",
 	"author": "darylcecile",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "dev",
 	"url": "https://github.com/darylcecile/patch",
 	"repo": "darylcecile/patch",

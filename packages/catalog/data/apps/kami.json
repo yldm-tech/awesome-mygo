@@ -4,6 +4,7 @@
 	"name": "Kami",
 	"author": "Umupa",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://umupa.github.io/Kami/",

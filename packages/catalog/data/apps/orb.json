@@ -4,6 +4,7 @@
 	"name": "Orb",
 	"author": "OrdalieTech",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/OrdalieTech/orb",
 	"repo": "OrdalieTech/orb",

@@ -4,6 +4,7 @@
 	"name": "Downloader",
 	"author": "josexy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/josexy/go-downloader",
 	"repo": "josexy/go-downloader",

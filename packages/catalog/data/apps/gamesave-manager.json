@@ -4,6 +4,7 @@
 	"name": "GameSave Manager",
 	"author": "ZeroDevi1",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "game",
 	"url": "https://github.com/ZeroDevi1/gamesave-manager",
 	"repo": "ZeroDevi1/gamesave-manager",

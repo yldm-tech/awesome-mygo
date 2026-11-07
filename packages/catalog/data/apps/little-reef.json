@@ -4,6 +4,7 @@
 	"name": "小海底 Little Reef",
 	"author": "echoVic",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://reef.echovic.com",

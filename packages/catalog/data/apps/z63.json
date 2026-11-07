@@ -4,6 +4,7 @@
 	"name": "Z63",
 	"author": "WonderLantern",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/WonderLantern/z63-qemu",

@@ -4,6 +4,7 @@
 	"name": "translator233",
 	"author": "neko233-com",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://github.com/neko233-com/translator233",

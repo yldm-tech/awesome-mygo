@@ -4,6 +4,7 @@
 	"name": "Sit and Play",
 	"author": "qepo17",
 	"kind": "web",
+	"platforms": ["win", "linux"],
 	"group": "game",
 	"url": "https://github.com/qepo17/sit-and-play",
 	"repo": "qepo17/sit-and-play",

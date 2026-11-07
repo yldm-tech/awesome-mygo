@@ -4,6 +4,7 @@
 	"name": "ClashX Go",
 	"author": "Sakurasan",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/Sakurasan/ClashX-Go",

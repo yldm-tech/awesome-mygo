@@ -4,6 +4,7 @@
 	"name": "Arion",
 	"author": "AstraFoundry",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://arion.astrafoundry.si",

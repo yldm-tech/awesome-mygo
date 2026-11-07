@@ -4,6 +4,7 @@
 	"name": "Lucia",
 	"author": "LoTwT",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "game",
 	"url": "https://github.com/LoTwT/lucia",
 	"repo": "LoTwT/lucia",

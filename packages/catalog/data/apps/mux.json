@@ -4,6 +4,7 @@
 	"name": "Mux",
 	"author": "nomyfan",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/nomyfan/mux",
 	"repo": "nomyfan/mux",

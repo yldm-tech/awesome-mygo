@@ -4,6 +4,7 @@
 	"name": "Kube Desk",
 	"author": "ftech-vn",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://kubedesk.cloud/",
 	"repo": "ftech-vn/kubedesk",

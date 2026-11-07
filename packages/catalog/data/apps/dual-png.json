@@ -4,6 +4,7 @@
 	"name": "双面 PNG",
 	"author": "SinarPandora",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/SinarPandora/dual-png",
 	"repo": "SinarPandora/dual-png",

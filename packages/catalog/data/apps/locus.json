@@ -4,6 +4,7 @@
 	"name": "Locus",
 	"author": "oneo-me",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://oneo-me.github.io/locus/",

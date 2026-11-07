@@ -4,6 +4,7 @@
 	"name": "MyGO-Clash",
 	"author": "Souitou-iop",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "network",
 	"url": "https://github.com/Souitou-iop/MyGO-Clash",
 	"repo": "Souitou-iop/MyGO-Clash",

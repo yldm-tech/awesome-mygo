@@ -4,6 +4,7 @@
 	"name": "Voke",
 	"author": "zyition",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/zyition/voke",
 	"repo": "zyition/voke",

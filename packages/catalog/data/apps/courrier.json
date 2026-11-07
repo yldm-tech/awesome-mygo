@@ -4,6 +4,7 @@
 	"name": "courrier",
 	"author": "tbdsux",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "chat",
 	"url": "https://github.com/tbdsux/courrier",
 	"repo": "tbdsux/courrier",

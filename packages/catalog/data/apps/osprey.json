@@ -4,6 +4,7 @@
 	"name": "Osprey",
 	"author": "overcat",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/overcat/osprey",
 	"repo": "overcat/osprey",

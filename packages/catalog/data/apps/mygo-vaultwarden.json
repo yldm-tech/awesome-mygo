@@ -4,6 +4,7 @@
 	"name": "MyGo Vaultwarden",
 	"author": "vfasky",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://mygo-vault.vfasky.com",
 	"repo": "vfasky/mygo-vaultwarden",

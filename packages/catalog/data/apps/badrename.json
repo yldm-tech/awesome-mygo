@@ -4,6 +4,7 @@
 	"name": "BadRename",
 	"author": "Nemuboshi",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/Nemuboshi/BadRename",

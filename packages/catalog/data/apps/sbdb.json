@@ -4,6 +4,7 @@
 	"name": "SBDb",
 	"author": "congthien2003",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "dev",
 	"url": "https://github.com/congthien2003/dbl",
 	"repo": "congthien2003/dbl",

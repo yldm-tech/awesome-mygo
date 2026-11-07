@@ -4,6 +4,7 @@
 	"name": "Baggy",
 	"author": "zucchiniEvader",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "ai",
 	"url": "https://zucchinievader.github.io/baggy/",
 	"repo": "zucchiniEvader/baggy",

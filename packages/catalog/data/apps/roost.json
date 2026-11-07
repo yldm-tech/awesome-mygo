@@ -4,6 +4,7 @@
 	"name": "roost",
 	"author": "Ernxst",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/Ernxst/roost",
 	"repo": "Ernxst/roost",

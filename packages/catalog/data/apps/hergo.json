@@ -4,6 +4,7 @@
 	"name": "Hergo",
 	"author": "Maidang1",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/Maidang1/hergo",

@@ -4,6 +4,7 @@
 	"name": "Curb",
 	"author": "xptea",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://curb.seths.app",

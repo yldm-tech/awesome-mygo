@@ -4,6 +4,7 @@
 	"name": "WSLPilot",
 	"author": "YuanZhe-99",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "dev",
 	"url": "https://github.com/YuanZhe-99/WSLPilot",
 	"repo": "YuanZhe-99/WSLPilot",

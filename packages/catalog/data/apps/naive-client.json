@@ -4,6 +4,7 @@
 	"name": "Naive Client",
 	"author": "Jonkimi",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/Jonkimi/mygo-naive-client",

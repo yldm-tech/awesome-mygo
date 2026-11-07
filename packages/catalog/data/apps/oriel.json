@@ -4,6 +4,7 @@
 	"name": "Oriel",
 	"author": "yangflow",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "notes",
 	"url": "https://github.com/yangflow/oriel",
 	"repo": "yangflow/oriel",

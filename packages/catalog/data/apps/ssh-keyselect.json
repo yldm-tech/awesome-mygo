@@ -4,6 +4,7 @@
 	"name": "SSH KeySelect",
 	"author": "jfut",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/jfut/ssh-keyselect",

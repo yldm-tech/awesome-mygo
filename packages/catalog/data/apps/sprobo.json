@@ -4,6 +4,7 @@
 	"name": "SpRobo",
 	"author": "Killow1998",
 	"kind": "native",
+	"platforms": ["linux"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/Killow1998/simple_rbt",

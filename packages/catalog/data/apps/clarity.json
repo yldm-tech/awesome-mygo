@@ -4,6 +4,7 @@
 	"name": "Clarity",
 	"author": "mcxen",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/mcxen/clarity",
 	"repo": "mcxen/clarity",

@@ -4,6 +4,7 @@
 	"name": "Bili FM",
 	"author": "vst93",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/vst93/bili-fm",

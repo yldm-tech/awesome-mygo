@@ -4,6 +4,7 @@
 	"name": "ccmail",
 	"author": "CarlOpenLab",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "chat",
 	"url": "https://carlopenlab.github.io/ccmail/",
 	"repo": "CarlOpenLab/ccmail",

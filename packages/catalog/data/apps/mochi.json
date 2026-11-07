@@ -4,6 +4,7 @@
 	"name": "Mochi",
 	"author": "maximousblk",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/maximousblk/mochi",

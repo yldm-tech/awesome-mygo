@@ -4,6 +4,7 @@
 	"name": "Hop",
 	"author": "marukolibro",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://marukolibro.github.io/Hop/",

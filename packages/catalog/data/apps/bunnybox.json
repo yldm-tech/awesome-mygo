@@ -4,6 +4,7 @@
 	"name": "BunnyBox",
 	"author": "lesnolie",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/lesnolie/bunnybox",

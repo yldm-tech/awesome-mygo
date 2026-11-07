@@ -4,6 +4,7 @@
 	"name": "dsh-trading",
 	"author": "zhu1090093659",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "ai",
 	"url": "https://dsh-trading.win",
 	"repo": "zhu1090093659/dsh-trading",

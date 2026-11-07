@@ -4,6 +4,7 @@
 	"name": "ChisaCloudCode",
 	"author": "ChisaAlter",
 	"kind": "web",
+	"platforms": ["win"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/ChisaAlter/ChisaCloudCode",

@@ -4,6 +4,7 @@
 	"name": "Neural Breach",
 	"author": "ntnyq",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "game",
 	"url": "https://github.com/ntnyq/NeuralBreach",
 	"repo": "ntnyq/NeuralBreach",

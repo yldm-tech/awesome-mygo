@@ -4,6 +4,7 @@
 	"name": "PNG to ICO",
 	"author": "flowprog",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "media",
 	"url": "https://github.com/flowprog/png2ico",
 	"repo": "flowprog/png2ico",

@@ -4,6 +4,7 @@
 	"name": "Kumo",
 	"author": "AstraFoundry",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://usekumo.app",

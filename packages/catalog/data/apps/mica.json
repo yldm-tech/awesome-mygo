@@ -4,6 +4,7 @@
 	"name": "Mica",
 	"author": "everpcpc",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "chat",
 	"url": "https://everpcpc.github.io/mica/",
 	"repo": "everpcpc/mica",

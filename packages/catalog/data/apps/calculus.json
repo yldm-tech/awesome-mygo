@@ -4,6 +4,7 @@
 	"name": "Calculus",
 	"author": "tortoise10h",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/tortoise10h/calculus",
 	"repo": "tortoise10h/calculus",

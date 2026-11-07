@@ -4,6 +4,7 @@
 	"name": "Dew",
 	"author": "kzheart",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"group": "notes",
 	"url": "https://github.com/kzheart/Dew",
 	"repo": "kzheart/Dew",

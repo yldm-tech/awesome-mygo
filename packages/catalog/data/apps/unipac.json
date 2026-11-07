@@ -4,6 +4,7 @@
 	"name": "UniPac",
 	"author": "RUBisco0211",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/RUBisco0211/unipac",

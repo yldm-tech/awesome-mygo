@@ -4,6 +4,7 @@
 	"name": "Unscan",
 	"author": "tacshi",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/tacshi/Unscan",

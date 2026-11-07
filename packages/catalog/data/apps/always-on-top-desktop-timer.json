@@ -4,6 +4,7 @@
 	"name": "Always-on-Top Desktop Timer",
 	"author": "ctzcs",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/ctzcs/Timer",
 	"repo": "ctzcs/Timer",

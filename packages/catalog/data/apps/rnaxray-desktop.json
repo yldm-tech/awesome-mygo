@@ -4,6 +4,7 @@
 	"name": "RNAxRay Desktop",
 	"author": "Vicky-0256",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/Vicky-0256/RNAxRAY",
 	"repo": "Vicky-0256/RNAxRAY",

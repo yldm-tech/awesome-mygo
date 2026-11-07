@@ -4,6 +4,7 @@
 	"name": "mcpctl",
 	"author": "hoanglong2311",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/hoanglong2311/mcpgw",
 	"repo": "hoanglong2311/mcpgw",

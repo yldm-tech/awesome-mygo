@@ -1,4 +1,4 @@
-import { APPS, APP_GROUPS, type App, type AppGroup, type AppKind, HAS_SCORES, appGroup, byNewest, compareByScore, isAppGroup, likeKey } from '@awesome-mygo/catalog';
+import { APPS, APP_GROUPS, APP_PLATFORMS, type App, type AppGroup, type AppKind, type AppPlatform, HAS_SCORES, appGroup, byNewest, compareByScore, isAppGroup, likeKey } from '@awesome-mygo/catalog';
 import type { LikesState } from './likes';
 import { oneOf, text } from './page-search';
 
@@ -6,6 +6,7 @@ import { oneOf, text } from './page-search';
 export interface ShowcaseSearch {
 	cat?: AppGroup;
 	ui?: AppKind;
+	platform?: AppPlatform;
 	sort?: AppSort;
 	author?: string;
 }
@@ -20,6 +21,7 @@ export function validateShowcaseSearch(search: Record<string, unknown>): Showcas
 	return {
 		cat: isAppGroup(search.cat) ? search.cat : typeof search.cat === 'string' ? FORMER_GROUPS[search.cat] : undefined,
 		ui: search.ui === 'native' || search.ui === 'web' ? search.ui : undefined,
+		platform: typeof search.platform === 'string' && APP_PLATFORMS.includes(search.platform as AppPlatform) ? (search.platform as AppPlatform) : undefined,
 		sort: oneOf(search.sort, ['natural', 'newest', 'likes', 'score'] as const),
 		author: author !== undefined && AUTHORS.has(author) ? author : undefined,
 	};

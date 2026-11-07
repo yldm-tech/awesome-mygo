@@ -4,6 +4,7 @@
 	"name": "LinkDeck",
 	"author": "scialpicoody",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/scialpicoody/linkdeck",

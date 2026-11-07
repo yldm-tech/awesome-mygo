@@ -4,6 +4,7 @@
 	"name": "Lorca",
 	"author": "egoist",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "CommunicationApplication",
 	"group": "ai",
 	"url": "https://lorca.app",

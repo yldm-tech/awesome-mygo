@@ -4,6 +4,7 @@
 	"name": "Tendedero, in MyGo",
 	"author": "HycJack",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/HycJack/mygo-tendedero",
 	"repo": "HycJack/mygo-tendedero",

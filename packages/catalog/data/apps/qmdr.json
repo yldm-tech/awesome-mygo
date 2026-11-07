@@ -4,6 +4,7 @@
 	"name": "Qmdr",
 	"author": "rzh0504",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/rzh0504/Qmdr",

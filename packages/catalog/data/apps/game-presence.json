@@ -4,6 +4,7 @@
 	"name": "Game Presence",
 	"author": "JoaoVitorOli",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "game",
 	"url": "https://github.com/JoaoVitorOli/gamepresence",
 	"repo": "JoaoVitorOli/gamepresence",

@@ -4,6 +4,7 @@
 	"name": "Agent Usage Metrics",
 	"author": "meimingqi222",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/meimingqi222/devin-usage-metrics",

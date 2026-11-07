@@ -4,6 +4,7 @@
 	"name": "VideoDown",
 	"author": "kamiertop",
 	"kind": "native",
+	"platforms": ["win", "linux"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/kamiertop/videodown",

@@ -4,6 +4,7 @@
 	"name": "DeepSeek Harness",
 	"author": "dhx007",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/dhx007/mygo-dsh",
 	"repo": "dhx007/mygo-dsh",

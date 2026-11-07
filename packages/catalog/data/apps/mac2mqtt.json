@@ -4,6 +4,7 @@
 	"name": "Mac2MQTT",
 	"author": "FaintGhost",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://faintghost.github.io/mac2mqtt/",

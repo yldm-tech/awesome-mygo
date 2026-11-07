@@ -4,6 +4,7 @@
 	"name": "radio-desktop",
 	"author": "hmgle",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/hmgle/radio-desktop",

@@ -4,6 +4,7 @@
 	"name": "Joplin Lite",
 	"author": "lsj5031",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/lsj5031/joplin-lite",

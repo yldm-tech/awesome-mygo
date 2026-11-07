@@ -4,6 +4,7 @@
 	"name": "MediaGo",
 	"author": "jyuuroku16",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "media",
 	"url": "https://github.com/jyuuroku16/mediago",
 	"repo": "jyuuroku16/mediago",

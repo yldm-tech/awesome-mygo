@@ -4,6 +4,7 @@
 	"name": "contr",
 	"author": "contursofran",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/contursofran/contr",

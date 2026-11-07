@@ -4,6 +4,7 @@
 	"name": "OpenUXP Installer",
 	"author": "Moonvy",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/Moonvy/UPX-Installer-GO",
 	"repo": "Moonvy/UPX-Installer-GO",

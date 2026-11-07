@@ -4,6 +4,7 @@
 	"name": "Kero",
 	"author": "egoist",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://kero.sh",

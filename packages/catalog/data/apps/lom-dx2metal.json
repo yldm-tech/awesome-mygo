@@ -4,6 +4,7 @@
 	"name": "lom-dx2metal",
 	"author": "li-yifei",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "game",
 	"url": "https://github.com/li-yifei/lom-dx2metal",
 	"repo": "li-yifei/lom-dx2metal",

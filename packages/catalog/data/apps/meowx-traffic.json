@@ -4,6 +4,7 @@
 	"name": "MeowX Traffic",
 	"author": "zshpaul",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/zshpaul/meowx-traffic/releases/latest",
 	"repo": "zshpaul/meowx-traffic",

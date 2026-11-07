@@ -4,6 +4,7 @@
 	"name": "LunaBox",
 	"author": "Saramanda9988",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "GameApplication",
 	"group": "game",
 	"url": "https://box.lunarain.site",

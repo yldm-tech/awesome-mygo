@@ -4,6 +4,7 @@
 	"name": "Sun Ray",
 	"author": "idealisan",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/idealisan/sun-ray",

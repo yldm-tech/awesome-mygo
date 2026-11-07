@@ -4,6 +4,7 @@
 	"name": "Kim Quy",
 	"author": "msongd",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://github.com/msongd/kimquy",

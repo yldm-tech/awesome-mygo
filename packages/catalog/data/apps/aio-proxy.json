@@ -4,6 +4,7 @@
 	"name": "AIO Proxy",
 	"author": "aio-proxy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "ai",
 	"url": "https://aioproxy.dev",

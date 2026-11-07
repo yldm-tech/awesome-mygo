@@ -4,6 +4,7 @@
 	"name": "Spark",
 	"author": "zackzhou-work",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/zackzhou-work/spark-go",
 	"repo": "zackzhou-work/spark-go",

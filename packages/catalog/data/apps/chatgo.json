@@ -4,6 +4,7 @@
 	"name": "ChatGo",
 	"author": "tk103331",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "ai",
 	"url": "https://github.com/tk103331/ChatGo",

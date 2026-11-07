@@ -4,6 +4,7 @@
 	"name": "Handbean",
 	"author": "youfun",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/youfun/Handbean",

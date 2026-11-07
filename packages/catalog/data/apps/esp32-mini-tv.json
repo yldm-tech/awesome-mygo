@@ -4,6 +4,7 @@
 	"name": "ESP32 Mini TV",
 	"author": "mu-zi-lee",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/mu-zi-lee/ESP32-Mini-TV",

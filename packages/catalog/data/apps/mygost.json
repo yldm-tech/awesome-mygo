@@ -4,6 +4,7 @@
 	"name": "mygost",
 	"author": "pingfury108",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "network",
 	"url": "https://github.com/pingfury108/mygost",
 	"repo": "pingfury108/mygost",

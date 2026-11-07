@@ -4,6 +4,7 @@
 	"name": "MyGo 翻译",
 	"author": "Honghurumeng",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/Honghurumeng/mygo-translate",
 	"repo": "Honghurumeng/mygo-translate",

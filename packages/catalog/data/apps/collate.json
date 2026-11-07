@@ -4,6 +4,7 @@
 	"name": "Collate",
 	"author": "iamwent",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://iamwent.github.io/collate/",

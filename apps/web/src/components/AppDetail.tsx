@@ -4,7 +4,7 @@ import { useLang, useT } from '../lib/lang';
 import { scoreTotal } from '../lib/score';
 import { appBadgeMarkdown } from '../lib/seo';
 import { useSite } from '../lib/site';
-import { AppLink, type AppView, MonoTile, appView } from './bits';
+import { AppLink, PlatformTags, type AppView, MonoTile, appView } from './bits';
 import { CopyButton } from './CopyCmd';
 import { LikeButton } from './Like';
 
@@ -65,6 +65,8 @@ export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string
 			</dd>
 			<dt>{t.f_ui}</dt>
 			<dd>{kindLabel}</dd>
+			<dt>{t.f_platform}</dt>
+			<dd><PlatformTags app={app} /></dd>
 			<dt>{t.f_cat}</dt>
 			<dd>
 				<Link to='/showcase' search={{ cat: group }}>

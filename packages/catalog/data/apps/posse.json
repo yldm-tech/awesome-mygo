@@ -4,6 +4,7 @@
 	"name": "Posse",
 	"author": "syanbo",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/syanbo/posse",

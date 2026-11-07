@@ -4,6 +4,7 @@
 	"name": "Bentomail",
 	"author": "Ahdeyyy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "chat",
 	"url": "https://github.com/Ahdeyyy/bentomail",
 	"repo": "Ahdeyyy/bentomail",

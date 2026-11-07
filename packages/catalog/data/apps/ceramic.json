@@ -4,6 +4,7 @@
 	"name": "Ceramic",
 	"author": "looechao",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "chat",
 	"url": "https://github.com/looechao/ceramic",
 	"repo": "looechao/ceramic",

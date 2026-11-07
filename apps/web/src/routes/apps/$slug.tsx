@@ -1,7 +1,7 @@
 import { appBySlug, appGroup, likeKey, pick } from '@awesome-mygo/catalog';
 import { Link, createFileRoute, notFound } from '@tanstack/react-router';
 import { AppActions, AppBadge, AppFacts, AppPager, MoreBy, secH } from '../../components/AppDetail';
-import { KindTag, MonoTile, WinBar, appView } from '../../components/bits';
+import { KindTag, MonoTile, PlatformTags, WinBar, appView } from '../../components/bits';
 import { ScoreBreakdown } from '../../components/Score';
 import { useLang, useT } from '../../lib/lang';
 import { appHead } from '../../lib/seo';
@@ -64,6 +64,7 @@ function AppPage() {
 				<div className='flex min-w-0 flex-col gap-3.5'>
 					<p className='m-0 flex flex-wrap items-center gap-x-3.5 gap-y-2 font-mono text-[12px] text-fg-3 [&_.kind-tag]:self-center'>
 						<KindTag app={app} label={kindLabel} />
+						<PlatformTags app={app} />
 						<Link to='/showcase' search={{ cat: group }} className='tracking-[0.04em] text-cyan no-underline hover:text-cyan-2 hover:underline'>
 							{t[`grp_${group}`]}
 						</Link>

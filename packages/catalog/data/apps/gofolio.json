@@ -4,6 +4,7 @@
 	"name": "GoFolio",
 	"author": "agnogad",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "notes",
 	"url": "https://github.com/agnogad/GoFolio",
 	"repo": "agnogad/GoFolio",

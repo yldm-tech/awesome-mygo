@@ -4,6 +4,7 @@
 	"name": "CPA-Bar",
 	"author": "Licoy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/Licoy/CPA-Bar",

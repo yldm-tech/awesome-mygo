@@ -4,6 +4,7 @@
 	"name": "Nova",
 	"author": "yaffalhakim1",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "GameApplication",
 	"group": "game",
 	"url": "https://github.com/yaffalhakim1/nova",

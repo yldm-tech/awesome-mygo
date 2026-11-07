@@ -4,6 +4,7 @@
 	"name": "Agent Kanban",
 	"author": "lzhgus",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://agent-kanban.lzhgus.com",
 	"repo": "lzhgus/agent-kanban",

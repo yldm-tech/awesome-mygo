@@ -4,6 +4,7 @@
 	"name": "ndor",
 	"author": "zrcoder",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "dev",
 	"url": "https://ndor.netlify.app",

@@ -4,6 +4,7 @@
 	"name": "Para Term",
 	"author": "pararchy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/pararchy/para-term",
 	"repo": "pararchy/para-term",

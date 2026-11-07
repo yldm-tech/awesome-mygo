@@ -4,6 +4,7 @@
 	"name": "TingSub",
 	"author": "yeshan333",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://shansan.top/tingsub/",

@@ -1,6 +1,7 @@
 /* Desktop theme. Loaded only when the theme cookie picks it; the original look keeps styles.css. Tailwind scans only this folder, so the original components' class names never reach this stylesheet. */
 /* The desktop metaphor (menu bar, folder icons, windows) is the only period touch; the windows themselves are drawn like a current desktop: system type, rounded corners, hairline borders and soft shadows. */
 @import 'tailwindcss' source(none);
+.platform-tag { display: inline-block; border: 1px solid var(--color-line); border-radius: 4px; padding: 1px 4px; font-size: 10px; line-height: 14px; color: var(--color-muted); }
 @source './';
 
 @theme {

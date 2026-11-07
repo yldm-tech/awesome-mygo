@@ -4,6 +4,7 @@
 	"name": "SwitchHosts Native",
 	"author": "SatanKiss",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/SatanKiss/SwitchHost-mygo",
 	"repo": "SatanKiss/SwitchHost-mygo",

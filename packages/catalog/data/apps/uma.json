@@ -4,6 +4,7 @@
 	"name": "Uma",
 	"author": "egoist",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "BusinessApplication",
 	"group": "dev",
 	"url": "https://github.com/egoist/uma",

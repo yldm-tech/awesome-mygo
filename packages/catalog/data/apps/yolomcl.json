@@ -4,6 +4,7 @@
 	"name": "YoloMCL",
 	"author": "Viking602",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "GameApplication",
 	"group": "game",
 	"url": "https://github.com/Viking602/YoloMCL",

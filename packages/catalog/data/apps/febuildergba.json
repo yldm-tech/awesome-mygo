@@ -4,6 +4,7 @@
 	"name": "FEBuilderGBA",
 	"author": "woxQAQ",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "game",
 	"url": "https://github.com/woxQAQ/febuildergba-mygo",
 	"repo": "woxQAQ/febuildergba-mygo",

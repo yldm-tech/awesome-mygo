@@ -4,6 +4,7 @@
 	"name": "Gotify Desktop",
 	"author": "RedwindA",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "CommunicationApplication",
 	"group": "chat",
 	"url": "https://github.com/RedwindA/gotify-desktop",

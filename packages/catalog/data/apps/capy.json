@@ -4,6 +4,7 @@
 	"name": "Capy",
 	"author": "onyx-dot-app",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/onyx-dot-app/Capy",
 	"repo": "onyx-dot-app/Capy",

@@ -4,6 +4,7 @@
 	"name": "视频抽帧",
 	"author": "xiyaowong",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/xiyaowong/framepicker",

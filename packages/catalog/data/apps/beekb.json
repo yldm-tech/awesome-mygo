@@ -4,6 +4,7 @@
 	"name": "beekb",
 	"author": "Kutius",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "devices",
 	"url": "https://github.com/Kutius/beekb-driver",
 	"repo": "Kutius/beekb-driver",

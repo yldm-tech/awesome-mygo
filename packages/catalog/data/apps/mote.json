@@ -4,6 +4,7 @@
 	"name": "Mote",
 	"author": "xinde",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/xinde/Mote",
 	"repo": "xinde/Mote",

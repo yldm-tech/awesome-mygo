@@ -4,6 +4,7 @@
 	"name": "PortPilot",
 	"author": "zhengchalei",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "dev",
 	"url": "https://github.com/zhengchalei/port-kill",
 	"repo": "zhengchalei/port-kill",

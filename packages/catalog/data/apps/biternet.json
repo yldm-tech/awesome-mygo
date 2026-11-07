@@ -4,6 +4,7 @@
 	"name": "BITERNET",
 	"author": "bitoolkit",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "network",
 	"url": "https://bitoolkit.github.io/biternet-go/",
 	"repo": "bitoolkit/biternet-go",

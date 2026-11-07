@@ -4,6 +4,7 @@
 	"name": "Polyfork",
 	"author": "limboy",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "media",
 	"url": "https://github.com/limboy/polyfork",
 	"repo": "limboy/polyfork",

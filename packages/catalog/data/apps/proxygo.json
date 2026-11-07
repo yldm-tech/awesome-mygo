@@ -4,6 +4,7 @@
 	"name": "ProxyGo",
 	"author": "tacshi",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/tacshi/ProxyGo",
 	"repo": "tacshi/ProxyGo",

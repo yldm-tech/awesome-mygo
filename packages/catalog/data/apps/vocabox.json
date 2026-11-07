@@ -4,6 +4,7 @@
 	"name": "VocaBox",
 	"author": "hu-ja-ja",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/hu-ja-ja/VocaBox_Desktop",

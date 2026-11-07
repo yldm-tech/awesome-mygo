@@ -4,6 +4,7 @@
 	"name": "Ape Player",
 	"author": "myoula",
 	"kind": "native",
+	"platforms": ["linux"],
 	"group": "media",
 	"url": "https://github.com/myoula/ape-player",
 	"repo": "myoula/ape-player",

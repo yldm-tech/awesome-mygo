@@ -4,6 +4,7 @@
 	"name": "Firn",
 	"author": "frostyard",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/frostyard/firn",
 	"repo": "frostyard/firn",

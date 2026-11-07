@@ -4,6 +4,7 @@
 	"name": "Elir",
 	"author": "lesenelir",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/lesenelir/lesenelir.me/tree/master/apps/elir",
 	"repo": "lesenelir/lesenelir.me",

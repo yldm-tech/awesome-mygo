@@ -4,6 +4,7 @@
 	"name": "RayDock",
 	"author": "jnnbimo",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/jnnbimo/RayDock",
 	"repo": "jnnbimo/RayDock",

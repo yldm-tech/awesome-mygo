@@ -4,6 +4,7 @@
 	"name": "Aurora",
 	"author": "pplmx",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "dev",
 	"url": "https://github.com/pplmx/aurora",

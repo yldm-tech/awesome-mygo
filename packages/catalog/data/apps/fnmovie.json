@@ -4,6 +4,7 @@
 	"name": "哞哩影院",
 	"author": "biaobiaobiao108",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "media",
 	"url": "https://biaobiaobiao108.github.io/fnmovie/",
 	"repo": "biaobiaobiao108/fnmovie",

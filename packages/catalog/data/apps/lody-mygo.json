@@ -4,6 +4,7 @@
 	"name": "Lody Native",
 	"author": "lbr77",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/lbr77/lody-mygo",

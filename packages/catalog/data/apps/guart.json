@@ -4,6 +4,7 @@
 	"name": "GUART 串口工具",
 	"author": "zty012",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://guart.2y.nz",
 	"repo": "zty012/guart",

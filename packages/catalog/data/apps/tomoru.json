@@ -4,6 +4,7 @@
 	"name": "Tomoru",
 	"author": "ACAne0320",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://tomoru.acane.dev",

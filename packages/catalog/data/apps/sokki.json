@@ -4,6 +4,7 @@
 	"name": "Sokki",
 	"author": "sorrycc",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/sorrycc/Sokki",
 	"repo": "sorrycc/Sokki",

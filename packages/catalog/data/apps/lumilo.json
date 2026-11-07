@@ -4,6 +4,7 @@
 	"name": "Lumilo",
 	"author": "kotuke",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "ai",
 	"url": "https://github.com/kotuke/lumilo",

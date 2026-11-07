@@ -4,6 +4,7 @@
 	"name": "Pomodoro",
 	"author": "mintonight",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/mintonight/pomodoro",
 	"repo": "mintonight/pomodoro",

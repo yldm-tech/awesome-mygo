@@ -4,6 +4,7 @@
 	"name": "Godrome",
 	"author": "XueJie1",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/XueJie1/godrome",

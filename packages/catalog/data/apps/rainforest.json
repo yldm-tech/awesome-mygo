@@ -4,6 +4,7 @@
 	"name": "Rainforest",
 	"author": "thedavidweng",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/thedavidweng/rainforest",
 	"repo": "thedavidweng/rainforest",

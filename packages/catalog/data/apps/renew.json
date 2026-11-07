@@ -4,6 +4,7 @@
 	"name": "明镜高悬 Renew",
 	"author": "stevessr",
 	"kind": "native",
+	"platforms": ["linux"],
 	"group": "agents",
 	"url": "https://github.com/stevessr/agent-ebpf-filter/tree/master/desktop/renew",
 	"repo": "stevessr/agent-ebpf-filter",

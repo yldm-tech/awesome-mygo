@@ -4,6 +4,7 @@
 	"name": "gossh",
 	"author": "Sutsikii",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/Sutsikii/go-ssh",
 	"repo": "Sutsikii/go-ssh",

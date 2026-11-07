@@ -4,6 +4,7 @@
 	"name": "Vibe Cook",
 	"author": "zkeq",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "ReferenceApplication",
 	"group": "notes",
 	"url": "https://cook.corerevive.cn",

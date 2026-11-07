@@ -4,6 +4,7 @@
 	"name": "Calc",
 	"author": "CBR0",
 	"kind": "native",
+	"platforms": ["win", "linux"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/CBR0/calc",

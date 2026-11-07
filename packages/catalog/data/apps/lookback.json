@@ -4,6 +4,7 @@
 	"name": "Lookback",
 	"author": "hamidriaz1998",
 	"kind": "native",
+	"platforms": ["linux"],
 	"group": "system",
 	"url": "https://github.com/hamidriaz1998/lookback",
 	"repo": "hamidriaz1998/lookback",

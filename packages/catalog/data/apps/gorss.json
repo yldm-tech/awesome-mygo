@@ -4,6 +4,7 @@
 	"name": "GoRss",
 	"author": "RSK21X",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "ReferenceApplication",
 	"group": "notes",
 	"url": "https://github.com/RSK21X/GoRss",

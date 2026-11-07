@@ -4,6 +4,7 @@
 	"name": "Lark Music",
 	"author": "ca-x",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/ca-x/lark",

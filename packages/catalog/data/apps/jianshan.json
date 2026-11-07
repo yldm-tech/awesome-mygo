@@ -4,6 +4,7 @@
 	"name": "见山",
 	"author": "ch1y1z1",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/ch1y1z1/jianshan",
 	"repo": "ch1y1z1/jianshan",

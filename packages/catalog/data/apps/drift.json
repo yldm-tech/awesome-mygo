@@ -4,6 +4,7 @@
 	"name": "Drift",
 	"author": "Celestia-Milara",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "notes",
 	"url": "https://github.com/Celestia-Milara/BuildDrift",
 	"repo": "Celestia-Milara/BuildDrift",

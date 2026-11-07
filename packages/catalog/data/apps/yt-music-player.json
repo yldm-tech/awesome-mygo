@@ -4,6 +4,7 @@
 	"name": "YT Music Player",
 	"author": "xlanstar",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/xlanstar/yt-music-player",

@@ -4,6 +4,7 @@
 	"name": "Kata",
 	"author": "yaffalhakim1",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "notes",
 	"url": "https://github.com/yaffalhakim1/kata",
 	"repo": "yaffalhakim1/kata",

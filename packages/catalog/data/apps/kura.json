@@ -4,6 +4,7 @@
 	"name": "kura",
 	"author": "ArnoChenFx",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/ArnoChenFx/kura",
 	"repo": "ArnoChenFx/kura",

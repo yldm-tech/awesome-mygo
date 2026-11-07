@@ -4,6 +4,7 @@
 	"name": "SmartAR Desktop",
 	"author": "308K",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "notes",
 	"url": "https://github.com/308K/my-doubtful-go",
 	"repo": "308K/my-doubtful-go",

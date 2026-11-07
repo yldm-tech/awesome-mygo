@@ -4,6 +4,7 @@
 	"name": "orbit",
 	"author": "real-jacket",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/real-jacket/orbit",

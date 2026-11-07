@@ -4,6 +4,7 @@
 	"name": "OpenConnector",
 	"author": "cheese-zj",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/cheese-zj/openconnector",
 	"repo": "cheese-zj/openconnector",

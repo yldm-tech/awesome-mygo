@@ -4,6 +4,7 @@
 	"name": "Locklark",
 	"author": "jihuayu",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/jihuayu/locklark",
 	"repo": "jihuayu/locklark",

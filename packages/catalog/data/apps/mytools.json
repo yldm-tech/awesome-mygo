@@ -4,6 +4,7 @@
 	"name": "mytools",
 	"author": "yinshuwei",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/yinshuwei/mytools",
 	"repo": "yinshuwei/mytools",

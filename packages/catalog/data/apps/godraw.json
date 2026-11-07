@@ -4,6 +4,7 @@
 	"name": "godraw",
 	"author": "egoist",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "BusinessApplication",
 	"group": "notes",
 	"url": "https://github.com/egoist/godraw",

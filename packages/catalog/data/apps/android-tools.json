@@ -4,6 +4,7 @@
 	"name": "android-tools",
 	"author": "wanan9999",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/wanan9999/android-tools",

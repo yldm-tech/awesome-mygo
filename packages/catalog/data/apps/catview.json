@@ -4,6 +4,7 @@
 	"name": "CatView",
 	"author": "sogud",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/sogud/catview",

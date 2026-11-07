@@ -4,6 +4,7 @@
 	"name": "Skills Hub",
 	"author": "Riablo",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/Riablo/skills-hub",
 	"repo": "Riablo/skills-hub",

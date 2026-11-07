@@ -4,6 +4,7 @@
 	"name": "Mu",
 	"author": "spachava753",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/spachava753/mu",
 	"repo": "spachava753/mu",

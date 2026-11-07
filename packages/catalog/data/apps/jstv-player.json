@@ -4,6 +4,7 @@
 	"name": "JSTV Player",
 	"author": "freelxs",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/freelxs/jstv-player",
 	"repo": "freelxs/jstv-player",

@@ -4,6 +4,7 @@
 	"name": "听宇 Tingyu",
 	"author": "renyijiu",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "media",
 	"url": "https://github.com/renyijiu/tingyu",
 	"repo": "renyijiu/tingyu",

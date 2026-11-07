@@ -4,6 +4,7 @@
 	"name": "象棋残局",
 	"author": "ch1y1z1",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "game",
 	"url": "https://github.com/ch1y1z1/xiangqi_go",
 	"repo": "ch1y1z1/xiangqi_go",

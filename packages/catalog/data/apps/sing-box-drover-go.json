@@ -4,6 +4,7 @@
 	"name": "sing-box-drover-go",
 	"author": "moxuun",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/moxuun/sing-box-drover-go",

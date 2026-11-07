@@ -4,6 +4,7 @@
 	"name": "MyLock",
 	"author": "BabyLy233",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "game",
 	"url": "https://github.com/BabyLy233/MyLock",
 	"repo": "BabyLy233/MyLock",

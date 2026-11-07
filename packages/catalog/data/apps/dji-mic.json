@@ -4,6 +4,7 @@
 	"name": "DJI Mic 接收器控制台",
 	"author": "Curtion",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "devices",
 	"url": "https://github.com/Curtion/dji-mic-rx",
 	"repo": "Curtion/dji-mic-rx",

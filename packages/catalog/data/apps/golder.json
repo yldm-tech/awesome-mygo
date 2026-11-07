@@ -4,6 +4,7 @@
 	"name": "golder",
 	"author": "getan",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://golder-cli.pages.dev",

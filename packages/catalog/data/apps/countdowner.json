@@ -4,6 +4,7 @@
 	"name": "Countdowner",
 	"author": "Star-Trails",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/Star-Trails/countdowner",
 	"repo": "Star-Trails/countdowner",

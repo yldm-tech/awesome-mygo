@@ -4,6 +4,7 @@
 	"name": "iloader-cert-export",
 	"author": "Star-Trails",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "dev",
 	"url": "https://github.com/Star-Trails/iloader-cert-export",
 	"repo": "Star-Trails/iloader-cert-export",

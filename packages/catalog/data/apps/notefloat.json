@@ -4,6 +4,7 @@
 	"name": "Notefloat",
 	"author": "insv23",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/insv23/notefloat",
 	"repo": "insv23/notefloat",

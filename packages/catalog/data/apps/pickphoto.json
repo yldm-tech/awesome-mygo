@@ -4,6 +4,7 @@
 	"name": "PickPhoto",
 	"author": "lfcypo",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/lfcypo/pickphoto",
 	"repo": "lfcypo/pickphoto",

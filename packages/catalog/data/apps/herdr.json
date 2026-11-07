@@ -4,6 +4,7 @@
 	"name": "Herdr",
 	"author": "TengYangTuoHai",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/TengYangTuoHai/herdr-mygo",
 	"repo": "TengYangTuoHai/herdr-mygo",

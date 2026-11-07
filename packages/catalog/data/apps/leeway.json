@@ -4,6 +4,7 @@
 	"name": "leeway",
 	"author": "Helix-lyh",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/Helix-lyh/leeway",
 	"repo": "Helix-lyh/leeway",

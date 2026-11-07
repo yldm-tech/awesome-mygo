@@ -4,6 +4,7 @@
 	"name": "Kopi",
 	"author": "zucchiniEvader",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/zucchiniEvader/kopi",
 	"repo": "zucchiniEvader/kopi",

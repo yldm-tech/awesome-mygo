@@ -4,6 +4,7 @@
 	"name": "Yeek",
 	"author": "tacshi",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/tacshi/Yeek",

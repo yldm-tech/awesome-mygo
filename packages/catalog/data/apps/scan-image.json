@@ -4,6 +4,7 @@
 	"name": "Scan Image",
 	"author": "huynhkinhao1910",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/huynhkinhao1910/scan-image",
 	"repo": "huynhkinhao1910/scan-image",

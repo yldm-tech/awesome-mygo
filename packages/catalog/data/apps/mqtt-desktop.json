@@ -4,6 +4,7 @@
 	"name": "MQTT Desktop",
 	"author": "zhengchalei",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "dev",
 	"url": "https://github.com/zhengchalei/MQTT-Desktop",
 	"repo": "zhengchalei/MQTT-Desktop",

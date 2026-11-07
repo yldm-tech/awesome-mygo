@@ -4,6 +4,7 @@
 	"name": "DS Search",
 	"author": "horizon0514",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/horizon0514/ds-search",
 	"repo": "horizon0514/ds-search",

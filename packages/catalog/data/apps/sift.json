@@ -4,6 +4,7 @@
 	"name": "Sift",
 	"author": "jinghaihan",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/jinghaihan/sift",
 	"repo": "jinghaihan/sift",

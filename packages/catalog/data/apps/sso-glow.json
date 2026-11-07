@@ -4,6 +4,7 @@
 	"name": "sso-glow",
 	"author": "junga12",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/junga12/sso-glow",
 	"repo": "junga12/sso-glow",

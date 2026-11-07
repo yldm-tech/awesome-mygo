@@ -4,6 +4,7 @@
 	"name": "蛋查查 · Rocom Egg Check",
 	"author": "JayeGT002",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "ReferenceApplication",
 	"group": "game",
 	"url": "https://github.com/JayeGT002/rocom-egg-check",

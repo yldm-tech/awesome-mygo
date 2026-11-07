@@ -4,6 +4,7 @@
 	"name": "MyCode",
 	"author": "hunghg255",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://docs-mu-roan.vercel.app",
 	"repo": "hunghg255/mycode",

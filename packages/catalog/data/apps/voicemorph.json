@@ -4,6 +4,7 @@
 	"name": "VoiceMorph",
 	"author": "tviber",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/tviber/voice-morph",

@@ -4,6 +4,7 @@
 	"name": "Proxy Bridge",
 	"author": "Binaryify",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/Binaryify/proxy-bridge",

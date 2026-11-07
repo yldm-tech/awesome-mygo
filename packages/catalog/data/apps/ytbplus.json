@@ -4,6 +4,7 @@
 	"name": "ytbplus",
 	"author": "latiefahmad",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/latiefahmad/ytbplus",

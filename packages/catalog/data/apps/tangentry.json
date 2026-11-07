@@ -4,6 +4,7 @@
 	"name": "Tangentry",
 	"author": "mu-zi-lee",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "ReferenceApplication",
 	"group": "notes",
 	"url": "https://github.com/mu-zi-lee/Tangentry",

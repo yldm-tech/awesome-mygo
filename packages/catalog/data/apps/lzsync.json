@@ -4,6 +4,7 @@
 	"name": "LZSync",
 	"author": "ShineBreaker",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "game",
 	"url": "https://github.com/ShineBreaker/LZSync",
 	"repo": "ShineBreaker/LZSync",

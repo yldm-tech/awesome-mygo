@@ -4,6 +4,7 @@
 	"name": "MyGo Agent",
 	"author": "HycJack",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/HycJack/mygo-agent",
 	"repo": "HycJack/mygo-agent",

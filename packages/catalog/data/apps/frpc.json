@@ -4,6 +4,7 @@
 	"name": "frpc 客户端",
 	"author": "jiqing112",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/jiqing112/frpcclient",
 	"repo": "jiqing112/frpcclient",

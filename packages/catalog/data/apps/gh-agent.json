@@ -4,6 +4,7 @@
 	"name": "GH Agent",
 	"author": "ayuayue",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/ayuayue/gh-agent",
 	"repo": "ayuayue/gh-agent",

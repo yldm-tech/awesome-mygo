@@ -4,6 +4,7 @@
 	"name": "Launchr",
 	"author": "Ahdeyyy",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/Ahdeyyy/launchr",
 	"repo": "Ahdeyyy/launchr",

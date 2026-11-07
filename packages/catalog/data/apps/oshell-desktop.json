@@ -4,6 +4,7 @@
 	"name": "OShell Desktop",
 	"author": "oshell-desktop",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/oshell-desktop/oshell-desktop",
 	"repo": "oshell-desktop/oshell-desktop",

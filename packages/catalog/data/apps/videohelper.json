@@ -4,6 +4,7 @@
 	"name": "VideoHelper",
 	"author": "realOzine",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/realOzine/videohelper",
 	"repo": "realOzine/videohelper",

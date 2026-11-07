@@ -4,6 +4,7 @@
 	"name": "Clipboard-go",
 	"author": "1e4DouWine",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/1e4DouWine/clipboard_go",
 	"repo": "1e4DouWine/clipboard_go",

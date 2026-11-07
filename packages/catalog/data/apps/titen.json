@@ -4,6 +4,7 @@
 	"name": "Titen",
 	"author": "nggalek-co",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "BusinessApplication",
 	"group": "media",
 	"url": "https://github.com/nggalek-co/titen",

@@ -4,6 +4,7 @@
 	"name": "快速扫描（quick-scan）",
 	"author": "xiyaowong",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "devices",
 	"url": "https://github.com/xiyaowong/quick-scan",
 	"repo": "xiyaowong/quick-scan",

@@ -4,6 +4,7 @@
 	"name": "Zakki",
 	"author": "gomeen",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "notes",
 	"url": "https://github.com/gomeen/Zakki",
 	"repo": "gomeen/Zakki",

@@ -4,6 +4,7 @@
 	"name": "Floater",
 	"author": "Uninen",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/Uninen/floater",
 	"repo": "Uninen/floater",

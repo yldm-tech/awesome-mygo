@@ -4,6 +4,7 @@
 	"name": "DARKSLIDE GR",
 	"author": "LiorMoment",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/LiorMoment/darkslide-gr",

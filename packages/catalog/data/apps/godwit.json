@@ -4,6 +4,7 @@
 	"name": "Godwit",
 	"author": "baranwang",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "CommunicationApplication",
 	"group": "chat",
 	"url": "https://godwit.email",

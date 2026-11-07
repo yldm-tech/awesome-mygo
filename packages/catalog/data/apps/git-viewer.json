@@ -4,6 +4,7 @@
 	"name": "Git Viewer",
 	"author": "SinCOS",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/SinCOS/Git-Viewer",
 	"repo": "SinCOS/Git-Viewer",

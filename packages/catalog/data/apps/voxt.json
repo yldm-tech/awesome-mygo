@@ -4,6 +4,7 @@
 	"name": "Voxt",
 	"author": "sgl-project",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/sgl-project/sglang-omni/tree/main/Voxt",
 	"repo": "sgl-project/sglang-omni",

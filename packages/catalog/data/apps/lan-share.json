@@ -4,6 +4,7 @@
 	"name": "LAN Share",
 	"author": "renyijiu",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/renyijiu/lan-share",
 	"repo": "renyijiu/lan-share",

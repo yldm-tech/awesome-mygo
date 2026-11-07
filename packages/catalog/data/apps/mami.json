@@ -4,6 +4,7 @@
 	"name": "Mami",
 	"author": "margbug01",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "ai",
 	"url": "https://margbug01.github.io/mami/",
 	"repo": "margbug01/mami",

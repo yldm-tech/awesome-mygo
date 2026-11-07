@@ -4,6 +4,7 @@
 	"name": "HD2 Font Maker",
 	"author": "cainiao524",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "game",
 	"url": "https://github.com/cainiao524/hd2-font-maker-go",
 	"repo": "cainiao524/hd2-font-maker-go",

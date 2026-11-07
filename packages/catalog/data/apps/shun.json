@@ -4,6 +4,7 @@
 	"name": "Shun",
 	"author": "sorrycc",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/sorrycc/Shun",

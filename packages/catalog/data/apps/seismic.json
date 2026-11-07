@@ -4,6 +4,7 @@
 	"name": "Seismic",
 	"author": "bernylinville",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/bernylinville/seismic",
 	"repo": "bernylinville/seismic",

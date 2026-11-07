@@ -4,6 +4,7 @@
 	"name": "Keeps",
 	"author": "reixie",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "media",
 	"url": "https://github.com/reixie/keeps",
 	"repo": "reixie/keeps",

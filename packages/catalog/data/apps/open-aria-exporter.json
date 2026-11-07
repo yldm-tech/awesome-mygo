@@ -4,6 +4,7 @@
 	"name": "Open Aria Exporter",
 	"author": "Alpenl",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/Alpenl/openaria-bridge-sdk/tree/main/desktop/exporter",
 	"repo": "Alpenl/openaria-bridge-sdk",

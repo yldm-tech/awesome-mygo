@@ -4,6 +4,7 @@
 	"name": "Pi Web Desktop",
 	"author": "Clearzero22",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "agents",
 	"url": "https://github.com/Clearzero22/pi-web-desktop",
 	"repo": "Clearzero22/pi-web-desktop",

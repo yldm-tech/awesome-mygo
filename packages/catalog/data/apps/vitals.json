@@ -4,6 +4,7 @@
 	"name": "Vitals",
 	"author": "xbenduan",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/xbenduan/vitals",
 	"repo": "xbenduan/vitals",

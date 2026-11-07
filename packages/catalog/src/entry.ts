@@ -1,5 +1,5 @@
 import { CatalogError } from './validate';
-import { AI_KIND, AI_TOOLS, APP_KIND, APPS, ARTICLE_KIND, ARTICLES, COMMUNITY_PLUGINS, DATA_DIR, ENTRY_GROUPS, type EntryGroup, type Kind, PLUGIN_KIND, PLUGINS, SITE_REPO, SITE_URL, STATE_KIND, STATE_SOLUTIONS, TEMPLATE_KIND, TEMPLATES, UI_KIND, UI_LIBS, hostOf, readEntry, readEntryFile } from './catalog';
+import { AI_KIND, AI_TOOLS, APP_KIND, APPS, APP_PLATFORMS, ARTICLE_KIND, ARTICLES, COMMUNITY_PLUGINS, DATA_DIR, ENTRY_GROUPS, type EntryGroup, type Kind, PLUGIN_KIND, PLUGINS, SITE_REPO, SITE_URL, STATE_KIND, STATE_SOLUTIONS, TEMPLATE_KIND, TEMPLATES, UI_KIND, UI_LIBS, hostOf, readEntry, readEntryFile } from './catalog';
 import { LOCALES } from './strings';
 
 // Submission form: it writes the JSON entry for the category. The site's bot opens a pull request with it, or a contributor with a GitHub account sends it as an issue or adds it themselves. Every entry gets a file of its own, data/<dir>/<slug>.json, so entries submitted together never conflict.
@@ -43,7 +43,8 @@ function fileProblem(cat: SubmitCat, entry: Record<string, unknown>): string | u
 // The entry's file as the repository keeps it: its schema first, the entry, and when it was added.
 function fileOf(cat: SubmitCat, entry: Record<string, unknown>, added: string): Record<string, unknown> {
 	const { $schema: _schema, added: _added, ...rest } = entry;
-	return { $schema: SUBMIT_KINDS[cat].schema, ...rest, added };
+	const normalized = cat === 'showcase' && rest.platforms === undefined ? { ...rest, platforms: [...APP_PLATFORMS] } : rest;
+	return { $schema: SUBMIT_KINDS[cat].schema, ...normalized, added };
 }
 
 // The entry's file as text, added now unless given. Throws a CatalogError, naming the field, when it would not pass the file's check.
@@ -166,7 +167,7 @@ export function buildEntry(cat: SubmitCat, d: EntryDraft, mode: 'native' | 'web'
 	const repo = repoOf(url);
 	switch (cat) {
 		case 'showcase':
-			return { slug: entrySlug(name, url), name, author, kind: mode, ...(d.group ? { group: d.group } : {}), url, ...(repoOf(d.repo ?? '') ? { repo: repoOf(d.repo ?? '') } : {}), summary, description: summary };
+			return { slug: entrySlug(name, url), name, author, kind: mode, platforms: [...APP_PLATFORMS], ...(d.group ? { group: d.group } : {}), url, ...(repoOf(d.repo ?? '') ? { repo: repoOf(d.repo ?? '') } : {}), summary, description: summary };
 		case 'ui':
 			return { slug: entrySlug(name, url), name, author, tag: 'theme', surface: 'native', summary, repo: repo ?? ENTRY_PLACEHOLDERS.repo, url };
 		case 'state':

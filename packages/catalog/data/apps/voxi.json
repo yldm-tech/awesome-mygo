@@ -4,6 +4,7 @@
 	"name": "有听有记Voxi",
 	"author": "Beeta",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "BusinessApplication",
 	"group": "ai",
 	"url": "https://github.com/Beeta/voxi",

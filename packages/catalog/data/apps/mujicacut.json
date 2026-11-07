@@ -4,6 +4,7 @@
 	"name": "MujicaCut",
 	"author": "HycJack",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/HycJack/mujicacut",
 	"repo": "HycJack/mujicacut",

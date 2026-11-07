@@ -4,6 +4,7 @@
 	"name": "Candle",
 	"author": "margbug01",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "BusinessApplication",
 	"group": "notes",
 	"url": "https://github.com/margbug01/Candle",

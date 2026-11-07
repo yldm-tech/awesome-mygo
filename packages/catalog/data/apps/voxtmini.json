@@ -4,6 +4,7 @@
 	"name": "VoxtMini",
 	"author": "hehehai",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/hehehai/VoxtMini",
 	"repo": "hehehai/VoxtMini",

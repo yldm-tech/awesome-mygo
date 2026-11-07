@@ -4,6 +4,7 @@
 	"name": "留白 Liubai",
 	"author": "echoVic",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://liubai.echovic.com",

@@ -4,6 +4,7 @@
 	"name": "Agent Runner",
 	"author": "walm",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/walm/agent-runner",

@@ -4,6 +4,7 @@
 	"name": "Twintrail",
 	"author": "zachzhao1984",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/zachzhao1984/twintrail",
 	"repo": "zachzhao1984/twintrail",

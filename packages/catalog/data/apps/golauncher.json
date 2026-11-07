@@ -4,6 +4,7 @@
 	"name": "golauncher",
 	"author": "eziq1",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/eziq1/golauncher",
 	"repo": "eziq1/golauncher",

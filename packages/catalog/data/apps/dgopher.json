@@ -4,6 +4,7 @@
 	"name": "DGopher",
 	"author": "saanuregh",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/saanuregh/dgopher",

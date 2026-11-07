@@ -4,6 +4,7 @@
 	"name": "AI Usage",
 	"author": "ixxxxoooo",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/ixxxxoooo/ai-usage",
 	"repo": "ixxxxoooo/ai-usage",

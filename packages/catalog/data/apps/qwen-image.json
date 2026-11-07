@@ -4,6 +4,7 @@
 	"name": "Qwen-Image 2.1 本地部署",
 	"author": "zcf0508",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "ai",
 	"url": "https://github.com/zcf0508/qwen-image-2.1-windows-sdcpp-deploy",
 	"repo": "zcf0508/qwen-image-2.1-windows-sdcpp-deploy",

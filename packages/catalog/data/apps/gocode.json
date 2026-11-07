@@ -4,6 +4,7 @@
 	"name": "GoCode",
 	"author": "ijry",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/ijry/GoCode",
 	"repo": "ijry/GoCode",

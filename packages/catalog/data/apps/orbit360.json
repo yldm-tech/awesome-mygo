@@ -4,6 +4,7 @@
 	"name": "Orbit360",
 	"author": "owocc",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://orbit360.owocc.website",

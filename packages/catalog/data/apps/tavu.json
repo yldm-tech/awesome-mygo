@@ -4,6 +4,7 @@
 	"name": "Tavu",
 	"author": "ychuo",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/ychuo/tavu",
 	"repo": "ychuo/tavu",

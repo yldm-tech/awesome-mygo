@@ -4,6 +4,7 @@
 	"name": "wgm",
 	"author": "qmaru",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "network",
 	"url": "https://github.com/qmaru/wgm",
 	"repo": "qmaru/wgm",

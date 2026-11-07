@@ -4,6 +4,7 @@
 	"name": "Muo",
 	"author": "yaffalhakim1",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "notes",
 	"url": "https://yaffalhakim1.github.io/muo/",
 	"repo": "yaffalhakim1/muo",

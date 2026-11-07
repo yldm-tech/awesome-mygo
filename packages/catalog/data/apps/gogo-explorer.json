@@ -4,6 +4,7 @@
 	"name": "gogo-explorer",
 	"author": "sugarbearr",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/sugarbearr/gogo-explorer",
 	"repo": "sugarbearr/gogo-explorer",

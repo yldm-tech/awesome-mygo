@@ -4,6 +4,7 @@
 	"name": "winswx",
 	"author": "quantulr",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/quantulr/winswx",
 	"repo": "quantulr/winswx",

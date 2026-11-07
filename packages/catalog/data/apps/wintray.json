@@ -4,6 +4,7 @@
 	"name": "WinTray",
 	"author": "OUBIGFA",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/OUBIGFA/WinTray",

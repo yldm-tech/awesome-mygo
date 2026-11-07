@@ -1,7 +1,7 @@
 import { AI_TOOLS, APPS, INSTALL_CMDS, INSTALL_TABS, type InstallTab, MYGO_SITE, PLUGINS, STATE_SOLUTIONS, TEMPLATES, UI_LIBS, appBySlug, fill, langDef, pad2, pick } from '@awesome-mygo/catalog';
 import { Link, createFileRoute, useNavigate } from '@tanstack/react-router';
 import { type CSSProperties, type PointerEvent, useRef } from 'react';
-import { AppLink, KindTag, MonoTile, WinBar, appView } from '../components/bits';
+import { AppLink, KindTag, MonoTile, PlatformTags, WinBar, appView } from '../components/bits';
 import { useLang, useT } from '../lib/lang';
 import { prefersReducedMotion, tilt, useCountUp } from '../lib/motion';
 import { validateHomeSearch } from '../lib/page-search';
@@ -241,7 +241,7 @@ function Hero() {
 											<MonoTile view={v} size={52} />
 											<span className='m-0 text-[19px] font-black tracking-normal'>{v.app.name}</span>
 											<span className='text-[13px] leading-[1.6] text-fg-2'>{pick(v.app.desc, lang)}</span>
-											<KindTag app={v.app} label={v.app.kind === 'native' ? t.surf_native : t.web_fe} />
+											<span className='flex flex-wrap items-center gap-2'><KindTag app={v.app} label={v.app.kind === 'native' ? t.surf_native : t.web_fe} /><PlatformTags app={v.app} /></span>
 										</span>
 									</AppLink>
 								</div>

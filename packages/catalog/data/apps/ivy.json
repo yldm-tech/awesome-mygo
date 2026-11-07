@@ -4,6 +4,7 @@
 	"name": "Ivy",
 	"author": "xwjdsh",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://github.com/xwjdsh/ivy",

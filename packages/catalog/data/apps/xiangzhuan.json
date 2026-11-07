@@ -4,6 +4,7 @@
 	"name": "香篆",
 	"author": "iwangjie",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/iwangjie/xiangzhuan",

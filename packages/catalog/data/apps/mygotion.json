@@ -4,6 +4,7 @@
 	"name": "MyGotion",
 	"author": "LZD121",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/LZD121/my-gotion",

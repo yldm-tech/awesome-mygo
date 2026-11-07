@@ -4,6 +4,7 @@
 	"name": "Agentic Accounting",
 	"author": "CHEUKFUNGWU",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "ai",
 	"url": "https://github.com/CHEUKFUNGWU/agentic-accounting-system/tree/main/frontend",
 	"repo": "CHEUKFUNGWU/agentic-accounting-system",

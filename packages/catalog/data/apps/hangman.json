@@ -4,6 +4,7 @@
 	"name": "Hangman",
 	"author": "zerebos",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "game",
 	"url": "https://zerebos.github.io/hangman-mygo/",
 	"repo": "zerebos/hangman-mygo",

@@ -4,6 +4,7 @@
 	"name": "Wada Cowork",
 	"author": "xleotranx",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/xleotranx/wada_desktop_go",
 	"repo": "xleotranx/wada_desktop_go",

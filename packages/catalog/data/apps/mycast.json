@@ -4,6 +4,7 @@
 	"name": "MyCast",
 	"author": "feiniao233",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/feiniao233/MyCast",
 	"repo": "feiniao233/MyCast",

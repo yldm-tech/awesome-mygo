@@ -4,6 +4,7 @@
 	"name": "Lilt",
 	"author": "tangqiu0205",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "media",
 	"url": "https://github.com/tangqiu0205/mygo-qyin",
 	"repo": "tangqiu0205/mygo-qyin",

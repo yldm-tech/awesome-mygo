@@ -4,6 +4,7 @@
 	"name": "Moniflip",
 	"author": "qzz0518",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/qzz0518/Moniflip",

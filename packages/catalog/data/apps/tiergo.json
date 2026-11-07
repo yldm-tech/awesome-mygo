@@ -4,6 +4,7 @@
 	"name": "TierGo",
 	"author": "zdyxry",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/zdyxry/TierGo",

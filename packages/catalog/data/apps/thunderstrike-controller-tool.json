@@ -4,6 +4,7 @@
 	"name": "Thunderstrike Controller Tool",
 	"author": "0xletleon",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/0xletleon/ThunderstrikeControllerTool",

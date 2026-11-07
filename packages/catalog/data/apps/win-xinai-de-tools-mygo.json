@@ -4,6 +4,7 @@
 	"name": "Win-XinAi-De-Tools-MyGo",
 	"author": "logdns",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/logdns/Win-XinAi-De-Tools",
 	"repo": "logdns/Win-XinAi-De-Tools",

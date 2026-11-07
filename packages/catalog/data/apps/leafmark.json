@@ -4,6 +4,7 @@
 	"name": "Leafmark",
 	"author": "KevinXC5",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "notes",
 	"url": "https://kevinxc5.github.io/leafmark/",
 	"repo": "KevinXC5/leafmark",

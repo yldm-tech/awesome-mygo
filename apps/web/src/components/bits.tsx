@@ -1,6 +1,7 @@
 import { APPS, type App, hostOf, pad2 } from '@awesome-mygo/catalog';
 import { Link } from '@tanstack/react-router';
 import type { ReactNode } from 'react';
+import { useT } from '../lib/lang';
 import { useSite } from '../lib/site';
 
 // macOS-style title bar: three traffic lights followed by a label (a host, a file name…). The bar itself is the winbar class (styles/primitives.css), as each page sizes it with its own class (card-bar, panel-bar) or utilities; the large bar has larger lights.
@@ -75,6 +76,11 @@ export function KindTag({ app, label }: { app: App; label: string }) {
 			{label}
 		</span>
 	);
+}
+
+export function PlatformTags({ app }: { app: App }) {
+	const t = useT();
+	return <span className='flex flex-wrap items-center gap-1' aria-label={t.f_platform}>{app.platforms.map((p) => <span key={p} className='platform-tag' title={t[`platform_${p}`]}>{p === 'win' ? 'Win' : p === 'linux' ? 'Linux' : 'macOS'}</span>)}</span>;
 }
 
 // The 32 px icon on standard screens; high-density screens fall back to the 192 px icon, as there is no 64 px one. fetchPriority='low' keeps React from preloading the image ahead of the stylesheets on every page: the mark is small and never the LCP element.

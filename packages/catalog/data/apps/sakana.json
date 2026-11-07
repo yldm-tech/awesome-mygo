@@ -4,6 +4,7 @@
 	"name": "Sakana",
 	"author": "fimars",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/fimars/sakana",
 	"repo": "fimars/sakana",

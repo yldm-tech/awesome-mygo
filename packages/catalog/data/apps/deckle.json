@@ -4,6 +4,7 @@
 	"name": "Deckle",
 	"author": "sorrycc",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/sorrycc/Deckle",

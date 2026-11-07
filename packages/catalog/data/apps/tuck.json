@@ -4,6 +4,7 @@
 	"name": "Tuck",
 	"author": "m3hu1",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/m3hu1/tuck",
 	"repo": "m3hu1/tuck",

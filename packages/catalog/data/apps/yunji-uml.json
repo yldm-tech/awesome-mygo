@@ -4,6 +4,7 @@
 	"name": "云吉 UML",
 	"author": "kiwiflydream",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/kiwiflydream/yunji-uml",
 	"repo": "kiwiflydream/yunji-uml",

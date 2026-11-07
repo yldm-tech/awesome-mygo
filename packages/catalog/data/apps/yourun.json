@@ -4,6 +4,7 @@
 	"name": "YouRun",
 	"author": "gantrol",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "dev",
 	"url": "https://apps.microsoft.com/store/detail/9MWXXGC8H67D?cid=DevShareMCLPCS",
 	"repo": "gantrol/YouRun",

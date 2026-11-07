@@ -4,6 +4,7 @@
 	"name": "Aurelia",
 	"author": "j4ckxyz",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/j4ckxyz/Aurelia",

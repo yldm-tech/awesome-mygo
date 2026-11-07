@@ -4,6 +4,7 @@
 	"name": "Zeus",
 	"author": "J4ck1e2000",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "dev",
 	"url": "https://github.com/J4ck1e2000/Zeus",
 	"repo": "J4ck1e2000/Zeus",

@@ -9,6 +9,7 @@
 		"name",
 		"author",
 		"kind",
+		"platforms",
 		"url",
 		"summary",
 		"description",
@@ -36,6 +37,7 @@
 			],
 			"description": "native: its windows draw MyGo native UI; web: they show a web frontend."
 		},
+		"platforms": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["win", "linux", "mac"] }, "description": "Operating systems the app supports: win (Windows), linux or mac (macOS)." },
 		"category": {
 			"enum": [
 				"BusinessApplication",

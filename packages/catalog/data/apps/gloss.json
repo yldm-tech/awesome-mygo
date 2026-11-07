@@ -4,6 +4,7 @@
 	"name": "Gloss",
 	"author": "CarlOpenLab",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://carlopenlab.github.io/Gloss/",
 	"repo": "CarlOpenLab/Gloss",

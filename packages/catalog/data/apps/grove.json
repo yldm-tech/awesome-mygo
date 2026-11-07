@@ -4,6 +4,7 @@
 	"name": "Grove",
 	"author": "lemoeade",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/lemoeade/grove",
 	"repo": "lemoeade/grove",

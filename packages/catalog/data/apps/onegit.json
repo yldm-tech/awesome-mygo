@@ -4,6 +4,7 @@
 	"name": "Onegit",
 	"author": "oneo-me",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/oneo-me/onegit",

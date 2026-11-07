@@ -4,6 +4,7 @@
 	"name": "omaterm",
 	"author": "fachrihawari",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://fachrihawari.github.io/omaterm/",

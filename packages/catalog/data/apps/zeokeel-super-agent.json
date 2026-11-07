@@ -4,6 +4,7 @@
 	"name": "ZeoKeel Super Agent",
 	"author": "zeokeel",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/zeokeel/ZeoKeel-Super-Agent",
 	"repo": "zeokeel/ZeoKeel-Super-Agent",

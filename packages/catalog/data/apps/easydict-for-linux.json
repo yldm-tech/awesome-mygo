@@ -4,6 +4,7 @@
 	"name": "Easydict for Linux",
 	"author": "dddaniel1",
 	"kind": "web",
+	"platforms": ["linux"],
 	"group": "ai",
 	"url": "https://dddaniel1.github.io/easy-dict-linux/",
 	"repo": "dddaniel1/easy-dict-linux",

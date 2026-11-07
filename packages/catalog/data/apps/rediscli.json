@@ -4,6 +4,7 @@
 	"name": "RedisCli",
 	"author": "preceeder",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/preceeder/gui-redis",

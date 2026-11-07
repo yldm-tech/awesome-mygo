@@ -4,6 +4,7 @@
 	"name": "Videopress",
 	"author": "Shirolin",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "media",
 	"url": "https://github.com/Shirolin/videopress/releases",
 	"repo": "Shirolin/videopress",

@@ -4,6 +4,7 @@
 	"name": "Skills Reader",
 	"author": "songlairui",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/songlairui/skills-reader",
 	"repo": "songlairui/skills-reader",

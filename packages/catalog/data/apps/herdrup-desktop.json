@@ -4,6 +4,7 @@
 	"name": "Herdrup Desktop",
 	"author": "jerryfane",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/jerryfane/herdrup-desktop",

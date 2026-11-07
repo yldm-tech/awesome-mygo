@@ -4,6 +4,7 @@
 	"name": "LanScout",
 	"author": "Qsnh",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/Qsnh/lanscout",

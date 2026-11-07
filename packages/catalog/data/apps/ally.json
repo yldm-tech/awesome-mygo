@@ -4,6 +4,7 @@
 	"name": "Ally",
 	"author": "Bronya0",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://bronya0.github.io/ally-agent/",

@@ -4,6 +4,7 @@
 	"name": "Copilot Chat",
 	"author": "fondoger",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "ai",
 	"url": "https://github.com/fondoger/copilotchat",
 	"repo": "fondoger/copilotchat",

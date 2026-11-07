@@ -4,6 +4,7 @@
 	"name": "MiniMuse",
 	"author": "Ahdeyyy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/Ahdeyyy/minimuse",
 	"repo": "Ahdeyyy/minimuse",

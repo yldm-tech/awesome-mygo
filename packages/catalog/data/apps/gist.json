@@ -4,6 +4,7 @@
 	"name": "Gist管理器",
 	"author": "Oranjekop",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "dev",
 	"url": "https://github.com/Oranjekop/GistManager",
 	"repo": "Oranjekop/GistManager",

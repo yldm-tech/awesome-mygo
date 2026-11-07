@@ -4,6 +4,7 @@
 	"name": "Nether",
 	"author": "fzn0x",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://fzn0x.github.io/Nether/",

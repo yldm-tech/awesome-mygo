@@ -4,6 +4,7 @@
 	"name": "Numbo",
 	"author": "benpops89",
 	"kind": "web",
+	"platforms": ["linux"],
 	"group": "game",
 	"url": "https://github.com/benpops89/numbo",
 	"repo": "benpops89/numbo",

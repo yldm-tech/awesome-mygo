@@ -4,6 +4,7 @@
 	"name": "2048",
 	"author": "egoist",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "GameApplication",
 	"group": "game",
 	"url": "https://github.com/egoist/2048",

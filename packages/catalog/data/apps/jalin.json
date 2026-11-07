@@ -4,6 +4,7 @@
 	"name": "Jalin",
 	"author": "firdausmntp",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/firdausmntp/Jalin",
 	"repo": "firdausmntp/Jalin",

@@ -4,6 +4,7 @@
 	"name": "Video Player",
 	"author": "fazi-gondal",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/fazi-gondal/video",
 	"repo": "fazi-gondal/video",

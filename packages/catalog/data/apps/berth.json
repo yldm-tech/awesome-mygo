@@ -4,6 +4,7 @@
 	"name": "Berth",
 	"author": "xusenlin",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/xusenlin/berth",
 	"repo": "xusenlin/berth",

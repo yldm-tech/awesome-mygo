@@ -4,6 +4,7 @@
 	"name": "Viper",
 	"author": "qzh200",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "devices",
 	"url": "https://github.com/qzh200/Viper",
 	"repo": "qzh200/Viper",

@@ -4,6 +4,7 @@
 	"name": "Moko",
 	"author": "qzz0518",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://qzz0518.github.io/moko/",

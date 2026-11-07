@@ -4,6 +4,7 @@
 	"name": "OpenSynapse",
 	"author": "JohnsonRan",
 	"kind": "web",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://github.com/JohnsonRan/OpenSynapse",

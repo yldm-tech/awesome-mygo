@@ -4,6 +4,7 @@
 	"name": "BootEase",
 	"author": "voidksa",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://loaderly.app/",

@@ -4,6 +4,7 @@
 	"name": "Quosparr",
 	"author": "Licoy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "agents",
 	"url": "https://quosparr.com",

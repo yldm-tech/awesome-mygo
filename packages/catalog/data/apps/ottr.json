@@ -4,6 +4,7 @@
 	"name": "Ottr",
 	"author": "QinYangWang",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "media",
 	"url": "https://github.com/QinYangWang/ottr",
 	"repo": "QinYangWang/ottr",

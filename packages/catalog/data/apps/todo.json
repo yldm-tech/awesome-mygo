@@ -4,6 +4,7 @@
 	"name": "Todo",
 	"author": "m3hu1",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/m3hu1/mygo-todo",
 	"repo": "m3hu1/mygo-todo",

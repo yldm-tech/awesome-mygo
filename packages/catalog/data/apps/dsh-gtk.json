@@ -4,6 +4,7 @@
 	"name": "DSH GTK",
 	"author": "baka-world",
 	"kind": "web",
+	"platforms": ["linux"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/baka-world/dsh-gtk",

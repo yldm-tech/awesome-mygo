@@ -4,6 +4,7 @@
 	"name": "BIGO Live Recorder",
 	"author": "SamiNassim",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/SamiNassim/bigo-live-recorder",
 	"repo": "SamiNassim/bigo-live-recorder",

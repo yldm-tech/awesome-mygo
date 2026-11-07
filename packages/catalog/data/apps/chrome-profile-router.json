@@ -4,6 +4,7 @@
 	"name": "Chrome Profile Router",
 	"author": "chinnsenn",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/chinnsenn/chrome-profile-router",
 	"repo": "chinnsenn/chrome-profile-router",

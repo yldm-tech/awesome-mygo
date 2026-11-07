@@ -4,6 +4,7 @@
 	"name": "Denova",
 	"author": "alfredxw",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "ai",
 	"url": "https://denova-ai.com/",
 	"repo": "alfredxw/denova",

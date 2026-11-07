@@ -4,6 +4,7 @@
 	"name": "llama.cpp Manager",
 	"author": "bunnywaffle",
 	"kind": "web",
+	"platforms": ["win"],
 	"category": "DeveloperApplication",
 	"group": "ai",
 	"url": "https://github.com/bunnywaffle/llama-manager",

@@ -4,6 +4,7 @@
 	"name": "LeagueAkari-MyGo",
 	"author": "zhengchalei",
 	"kind": "web",
+	"platforms": ["win"],
 	"category": "GameApplication",
 	"group": "game",
 	"url": "https://github.com/zhengchalei/LeagueAkari-MyGo",

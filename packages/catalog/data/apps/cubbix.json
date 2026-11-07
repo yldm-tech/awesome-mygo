@@ -4,6 +4,7 @@
 	"name": "Cubbix",
 	"author": "ConteMan",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/ConteMan/cubbix",

@@ -4,6 +4,7 @@
 	"name": "Kyokai",
 	"author": "YuanZhe-99",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/YuanZhe-99/Kyokai",

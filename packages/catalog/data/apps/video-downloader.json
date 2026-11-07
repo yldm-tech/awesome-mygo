@@ -4,6 +4,7 @@
 	"name": "Video-Downloader",
 	"author": "Faizan",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/fazi-gondal/video-downloader-mygo",

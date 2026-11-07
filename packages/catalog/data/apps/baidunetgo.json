@@ -4,6 +4,7 @@
 	"name": "BaiduNetGo",
 	"author": "pengstem",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/pengstem/baidunetgo",
 	"repo": "pengstem/baidunetgo",

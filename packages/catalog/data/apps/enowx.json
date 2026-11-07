@@ -4,6 +4,7 @@
 	"name": "enowX",
 	"author": "enowdev",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://enowx.ai",

@@ -4,6 +4,7 @@
 	"name": "FSearch GUI",
 	"author": "aouyitanaka",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/aouyitanaka/Fsearch-Mygo-GUI",
 	"repo": "aouyitanaka/Fsearch-Mygo-GUI",

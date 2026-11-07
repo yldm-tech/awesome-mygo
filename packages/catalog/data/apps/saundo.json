@@ -4,6 +4,7 @@
 	"name": "saundo",
 	"author": "4202217",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "media",
 	"url": "https://github.com/4202217/saundo",

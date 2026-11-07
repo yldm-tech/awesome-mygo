@@ -4,6 +4,7 @@
 	"name": "Nihongo Stack",
 	"author": "fishknowsss",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/fishknowsss/Nihongo-Stack",
 	"repo": "fishknowsss/Nihongo-Stack",

@@ -4,6 +4,7 @@
 	"name": "Felicia",
 	"author": "azusachino",
 	"kind": "web",
+	"platforms": ["mac"],
 	"category": "MultimediaApplication",
 	"group": "notes",
 	"url": "https://azusachino.github.io/felicia/",

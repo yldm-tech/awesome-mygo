@@ -4,6 +4,7 @@
 	"name": "MyGit",
 	"author": "Binaryify",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://binaryify.com/mygit/",

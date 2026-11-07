@@ -4,6 +4,7 @@
 	"name": "Cyrene Terminal",
 	"author": "YanChenBai",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "agents",
 	"url": "https://github.com/YanChenBai/cyrene-terminal",
 	"repo": "YanChenBai/cyrene-terminal",

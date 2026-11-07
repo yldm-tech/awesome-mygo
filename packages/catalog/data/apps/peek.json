@@ -4,6 +4,7 @@
 	"name": "Peek",
 	"author": "hyoban",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/hyoban/peek",

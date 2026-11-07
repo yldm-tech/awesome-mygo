@@ -4,6 +4,7 @@
 	"name": "Marginalia",
 	"author": "cliecy",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/cliecy/Marginalia",

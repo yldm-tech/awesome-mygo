@@ -4,6 +4,7 @@
 	"name": "fx Desktop",
 	"author": "sluke",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/sluke/fx-desktop",
 	"repo": "sluke/fx-desktop",

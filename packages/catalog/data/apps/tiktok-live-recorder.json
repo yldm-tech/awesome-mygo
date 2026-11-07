@@ -4,6 +4,7 @@
 	"name": "TikTok Live Recorder",
 	"author": "SamiNassim",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/SamiNassim/tiktok-live-recorder",
 	"repo": "SamiNassim/tiktok-live-recorder",

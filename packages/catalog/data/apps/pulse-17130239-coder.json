@@ -4,6 +4,7 @@
 	"name": "Pulse",
 	"author": "17130239-coder",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/17130239-coder/Pulse",
 	"repo": "17130239-coder/Pulse",

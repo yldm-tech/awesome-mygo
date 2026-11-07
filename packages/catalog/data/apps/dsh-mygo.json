@@ -4,6 +4,7 @@
 	"name": "dsh-mygo",
 	"author": "denislov",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "agents",
 	"url": "https://github.com/denislov/dsh-mygo",
 	"repo": "denislov/dsh-mygo",

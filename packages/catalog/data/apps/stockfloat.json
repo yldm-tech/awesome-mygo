@@ -4,6 +4,7 @@
 	"name": "StockFloat",
 	"author": "lesenelir",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/lesenelir/stock-float-mygo",
 	"repo": "lesenelir/stock-float-mygo",

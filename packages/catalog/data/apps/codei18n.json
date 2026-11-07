@@ -4,6 +4,7 @@
 	"name": "Codei18n",
 	"author": "CairnPack",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "dev",
 	"url": "https://github.com/CairnPack/Codei18nDesktop",
 	"repo": "CairnPack/Codei18nDesktop",

@@ -4,6 +4,7 @@
 	"name": "GoPaste",
 	"author": "viewhang",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/viewhang/go_paste",
 	"repo": "viewhang/go_paste",

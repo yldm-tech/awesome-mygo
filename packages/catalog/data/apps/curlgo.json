@@ -4,6 +4,7 @@
 	"name": "CurlGo",
 	"author": "echoVic",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/echoVic/curlgo",
 	"repo": "echoVic/curlgo",

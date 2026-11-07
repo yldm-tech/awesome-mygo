@@ -4,6 +4,7 @@
 	"name": "DayBee",
 	"author": "nexmoe",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://daybee.co",

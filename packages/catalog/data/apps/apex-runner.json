@@ -4,6 +4,7 @@
 	"name": "Apex Runner",
 	"author": "wan-kong",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "game",
 	"url": "https://github.com/wan-kong/apex-helper",
 	"repo": "wan-kong/apex-helper",

@@ -4,6 +4,7 @@
 	"name": "番茄钟",
 	"author": "azzliang6",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/azzliang6/pomodoro-mygo",
 	"repo": "azzliang6/pomodoro-mygo",

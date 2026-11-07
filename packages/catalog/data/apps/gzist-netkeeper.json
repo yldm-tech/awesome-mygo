@@ -4,6 +4,7 @@
 	"name": "GZIST NetKeeper",
 	"author": "xiaomai1011",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "network",
 	"url": "https://xiaomai1011.github.io/GZIST-NetKeeper/",
 	"repo": "xiaomai1011/GZIST-NetKeeper",

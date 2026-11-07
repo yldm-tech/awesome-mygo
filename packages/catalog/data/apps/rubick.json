@@ -4,6 +4,7 @@
 	"name": "Rubick",
 	"author": "a8b7",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/a8b7/Rubick",
 	"repo": "a8b7/Rubick",

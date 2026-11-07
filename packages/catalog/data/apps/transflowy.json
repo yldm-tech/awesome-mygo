@@ -4,6 +4,7 @@
 	"name": "transflowy",
 	"author": "narusenia",
 	"kind": "web",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/narusenia/transflowy",
 	"repo": "narusenia/transflowy",

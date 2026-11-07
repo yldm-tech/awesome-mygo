@@ -4,6 +4,7 @@
 	"name": "Trot",
 	"author": "sorrycc",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/sorrycc/Trot",
 	"repo": "sorrycc/Trot",

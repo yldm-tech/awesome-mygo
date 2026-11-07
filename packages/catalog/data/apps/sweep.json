@@ -4,6 +4,7 @@
 	"name": "Sweep",
 	"author": "yaffalhakim1",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://yaffalhakim1.github.io/sweep/",

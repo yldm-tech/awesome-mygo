@@ -4,6 +4,7 @@
 	"name": "跨向更名器 New Century Renamer",
 	"author": "eachgo",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/eachgo/New-Century-Renamer",

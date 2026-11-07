@@ -4,6 +4,7 @@
 	"name": "Inkgo",
 	"author": "ikexing-cn",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://github.com/ikexing-cn/inkgo",

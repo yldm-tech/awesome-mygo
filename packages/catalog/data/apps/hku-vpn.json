@@ -4,6 +4,7 @@
 	"name": "HKU VPN",
 	"author": "jialiangZ",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://jialiangZ.github.io/hkuvpn/",

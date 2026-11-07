@@ -4,6 +4,7 @@
 	"name": "Keyboard Lock",
 	"author": "uxuz",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/uxuz/keyboardlock",
 	"repo": "uxuz/keyboardlock",

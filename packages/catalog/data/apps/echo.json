@@ -4,6 +4,7 @@
 	"name": "Echo云音乐",
 	"author": "Simqiqi",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/Simqiqi/simqiqi-music",

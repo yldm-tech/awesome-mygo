@@ -4,6 +4,7 @@
 	"name": "Desk",
 	"author": "jitunayak",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/jitunayak/android-desk",
 	"repo": "jitunayak/android-desk",

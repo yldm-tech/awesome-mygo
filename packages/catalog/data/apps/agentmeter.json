@@ -4,6 +4,7 @@
 	"name": "AgentMeter",
 	"author": "oysterhyd",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/oysterhyd/AgentMeter",

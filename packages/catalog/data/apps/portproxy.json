@@ -4,6 +4,7 @@
 	"name": "PortProxy",
 	"author": "vicnoah",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/vicnoah/PortProxy",
 	"repo": "vicnoah/PortProxy",

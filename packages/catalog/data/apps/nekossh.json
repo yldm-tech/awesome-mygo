@@ -4,6 +4,7 @@
 	"name": "NekoSSH",
 	"author": "neko233-com",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/neko233-com/nekossh",

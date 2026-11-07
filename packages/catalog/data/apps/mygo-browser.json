@@ -4,6 +4,7 @@
 	"name": "MyGo Browser",
 	"author": "cecil-su",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "network",
 	"url": "https://github.com/cecil-su/mygo-browser",
 	"repo": "cecil-su/mygo-browser",

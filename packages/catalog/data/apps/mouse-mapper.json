@@ -4,6 +4,7 @@
 	"name": "Mouse Mapper",
 	"author": "fondoger",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "devices",
 	"url": "https://github.com/fondoger/mouse-mapper",
 	"repo": "fondoger/mouse-mapper",

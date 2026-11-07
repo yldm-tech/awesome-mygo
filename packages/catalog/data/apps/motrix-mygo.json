@@ -4,6 +4,7 @@
 	"name": "Motrix (MyGo)",
 	"author": "missuo",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/missuo/motrix-mygo",

@@ -4,6 +4,7 @@
 	"name": "Pith Desk",
 	"author": "minifish-org",
 	"kind": "web",
+	"platforms": ["linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/minifish-org/pith-desk",
 	"repo": "minifish-org/pith-desk",

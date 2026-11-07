@@ -4,6 +4,7 @@
 	"name": "Distill",
 	"author": "M2tHane",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/M2tHane/Distill",
 	"repo": "M2tHane/Distill",

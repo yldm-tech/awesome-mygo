@@ -4,6 +4,7 @@
 	"name": "Voicemore",
 	"author": "wherexml",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/wherexml/Voicemore",
 	"repo": "wherexml/Voicemore",

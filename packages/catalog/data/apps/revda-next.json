@@ -4,6 +4,7 @@
 	"name": "Revda-Next",
 	"author": "xmengnet",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/xmengnet/Revda-Next",

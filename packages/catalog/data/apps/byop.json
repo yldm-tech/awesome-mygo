@@ -4,6 +4,7 @@
 	"name": "BYOP",
 	"author": "lexleizou",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "agents",
 	"url": "https://github.com/lexleizou/byop",
 	"repo": "lexleizou/byop",

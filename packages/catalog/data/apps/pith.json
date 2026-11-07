@@ -4,6 +4,7 @@
 	"name": "Pith",
 	"author": "Kel077",
 	"kind": "native",
+	"platforms": ["mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/Kel077/pith",

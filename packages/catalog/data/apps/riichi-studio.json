@@ -4,6 +4,7 @@
 	"name": "Riichi Studio",
 	"author": "Ahdeyyy",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "game",
 	"url": "https://github.com/Ahdeyyy/riichi-studio",
 	"repo": "Ahdeyyy/riichi-studio",

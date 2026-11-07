@@ -4,6 +4,7 @@
 	"name": "Image Min",
 	"author": "lyuehh",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "media",
 	"url": "https://github.com/lyuehh/image-min-go",
 	"repo": "lyuehh/image-min-go",

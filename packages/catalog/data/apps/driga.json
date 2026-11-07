@@ -4,6 +4,7 @@
 	"name": "Driga",
 	"author": "labstack",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://github.com/labstack/driga",

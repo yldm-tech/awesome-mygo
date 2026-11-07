@@ -4,6 +4,7 @@
 	"name": "HyperAI",
 	"author": "lesenelir",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "ai",
 	"url": "https://github.com/lesenelir/hyperai-desktop",
 	"repo": "lesenelir/hyperai-desktop",

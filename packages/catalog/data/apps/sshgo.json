@@ -4,6 +4,7 @@
 	"name": "sshgo",
 	"author": "rzh0504",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/rzh0504/sshgo",
 	"repo": "rzh0504/sshgo",

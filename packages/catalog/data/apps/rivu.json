@@ -4,6 +4,7 @@
 	"name": "Rivu",
 	"author": "ntnyq",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://rivu.ntnyq.dev",
 	"repo": "ntnyq/rivu",

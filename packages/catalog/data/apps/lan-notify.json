@@ -4,6 +4,7 @@
 	"name": "LAN Notify",
 	"author": "sanqiandamowang",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "chat",
 	"url": "https://github.com/sanqiandamowang/beebee",
 	"repo": "sanqiandamowang/beebee",

@@ -4,6 +4,7 @@
 	"name": "TextRouter",
 	"author": "dandibbert",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "system",
 	"url": "https://github.com/dandibbert/textrouter",
 	"repo": "dandibbert/textrouter",

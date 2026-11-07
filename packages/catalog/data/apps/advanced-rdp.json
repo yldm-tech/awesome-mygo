@@ -4,6 +4,7 @@
 	"name": "Advanced RDP",
 	"author": "Gongzhui",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/Gongzhui/Advanced-RDP",
 	"repo": "Gongzhui/Advanced-RDP",

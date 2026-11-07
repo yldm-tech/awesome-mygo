@@ -4,6 +4,7 @@
 	"name": "trae",
 	"author": "frei-l",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/frei-l/trae",
 	"repo": "frei-l/trae",

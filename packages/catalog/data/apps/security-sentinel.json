@@ -4,6 +4,7 @@
 	"name": "Security Sentinel",
 	"author": "sixban6",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/sixban6/security-sentinel",
 	"repo": "sixban6/security-sentinel",

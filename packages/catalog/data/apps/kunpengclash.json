@@ -4,6 +4,7 @@
 	"name": "KunpengClash",
 	"author": "wyq09",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/wyq09/kunpeng-clash",

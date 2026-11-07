@@ -4,6 +4,7 @@
 	"name": "MyShoes",
 	"author": "margbug01",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/margbug01/ShoesGUI",

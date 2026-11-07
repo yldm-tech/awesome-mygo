@@ -1,7 +1,7 @@
-import { APPS, type AppKind, HAS_SCORES, likeKey, pad2, pick } from '@awesome-mygo/catalog';
+import { APPS, APP_PLATFORMS, type AppKind, type AppPlatform, HAS_SCORES, likeKey, pad2, pick } from '@awesome-mygo/catalog';
 import { DEFAULT_SORT, groupChips, shownSort, sortApps, validateShowcaseSearch } from '../lib/showcase';
 import { createFileRoute, useNavigate } from '@tanstack/react-router';
-import { AppLink, KindTag, MonoTile, WinBar, appView } from '../components/bits';
+import { AppLink, KindTag, MonoTile, PlatformTags, WinBar, appView } from '../components/bits';
 import { showBy, showDesc, showGrid, showId, showIdText, showName } from '../components/EntryCard';
 import { FilterBar, FilterChip, FilterChips, FilterSelect, FilterSelects } from '../components/FilterBar';
 import { LikeButton } from '../components/Like';
@@ -20,15 +20,16 @@ export const Route = createFileRoute('/showcase')({
 function ShowcasePage() {
 	const t = useT();
 	const lang = useLang();
-	const { cat: group, ui: kind, sort: sortParam } = Route.useSearch();
+	const { cat: group, ui: kind, platform, sort: sortParam } = Route.useSearch();
 	const navigate = useNavigate({ from: '/showcase' });
-	const setFilter = (next: { cat?: typeof group; ui?: AppKind; sort?: typeof sortParam }) => void navigate({ search: (prev) => ({ ...prev, ...next }), replace: true, resetScroll: false });
+	const setFilter = (next: { cat?: typeof group; ui?: AppKind; platform?: AppPlatform; sort?: typeof sortParam }) => void navigate({ search: (prev) => ({ ...prev, ...next }), replace: true, resetScroll: false });
 	const { status: likes, counts } = useLikes();
 	const sort = shownSort(sortParam, likes);
 
-	const nNative = APPS.filter((a) => a.kind === 'native').length;
+	const ofPlatform = APPS.filter((a) => !platform || a.platforms.includes(platform));
+	const nNative = ofPlatform.filter((a) => a.kind === 'native').length;
 	// The groups count the apps of the chosen interface, so a chip never leads to an empty list.
-	const ofKind = APPS.filter((a) => !kind || a.kind === kind);
+	const ofKind = ofPlatform.filter((a) => !kind || a.kind === kind);
 	const chips = groupChips(ofKind, group);
 	const list = sortApps(
 		ofKind.filter((a) => !group || chips.some((c) => c.key === group && c.apps.includes(a))),
@@ -62,6 +63,10 @@ function ShowcasePage() {
 						<option value='native'>{`${t.surf_native} · ${nNative}`}</option>
 						<option value='web'>{`${t.web_fe} · ${APPS.length - nNative}`}</option>
 					</FilterSelect>
+					<FilterSelect id='platform' label={t.f_platform} value={platform ?? 'all'} onChange={(v) => setFilter({ platform: v === 'all' ? undefined : (v as AppPlatform) })}>
+						<option value='all'>{`${t.all} · ${ofKind.length}`}</option>
+						{APP_PLATFORMS.map((p) => <option key={p} value={p}>{`${t[`platform_${p}`]} · ${ofKind.filter((a) => a.platforms.includes(p)).length}`}</option>)}
+					</FilterSelect>
 					<FilterSelect id='sort' label={t.sort} value={sort} onChange={(v) => setFilter({ sort: v === DEFAULT_SORT ? undefined : (v as typeof sortParam) })}>
 						<option value='natural'>{t.sort_natural}</option>
 						<option value='newest'>{t.sort_new}</option>
@@ -91,6 +96,7 @@ function ShowcasePage() {
 													<span lang='en'>by</span> {a.author}
 												</span>
 												<KindTag app={a} label={a.kind === 'native' ? t.surf_native : t.web_fe} />
+												<PlatformTags app={a} />
 											</span>
 										</div>
 									</div>
@@ -107,7 +113,7 @@ function ShowcasePage() {
 			{list.length === 0 && (
 				<div className='flex flex-wrap items-center gap-x-4 gap-y-3 rounded-[14px] border border-dashed border-line-3 p-7 text-[15px] text-fg-2'>
 					<p className='m-0'>{t.f_none}</p>
-					<button type='button' className='btn-g btn-44 btn-outline' onClick={() => setFilter({ cat: undefined, ui: undefined })}>
+					<button type='button' className='btn-g btn-44 btn-outline' onClick={() => setFilter({ cat: undefined, ui: undefined, platform: undefined })}>
 						{t.f_clear}
 					</button>
 				</div>

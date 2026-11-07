@@ -4,6 +4,7 @@
 	"name": "WaveAlign",
 	"author": "Itoktsnhc",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/Itoktsnhc/WaveAlign",

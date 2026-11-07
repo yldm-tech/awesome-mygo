@@ -4,6 +4,7 @@
 	"name": "OpenDL",
 	"author": "kindred-7",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/kindred-7/openDL",
 	"repo": "kindred-7/openDL",

@@ -4,6 +4,7 @@
 	"name": "mygo-snake",
 	"author": "Yurbin",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"group": "game",
 	"url": "https://github.com/Yurbin/mygo-snake",
 	"repo": "Yurbin/mygo-snake",

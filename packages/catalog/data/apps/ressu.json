@@ -4,6 +4,7 @@
 	"name": "Ressu",
 	"author": "sdttttt",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"group": "notes",
 	"url": "https://github.com/sdttttt/ressu",
 	"repo": "sdttttt/ressu",

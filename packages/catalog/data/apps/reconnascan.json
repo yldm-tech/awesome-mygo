@@ -4,6 +4,7 @@
 	"name": "ReconnaScan",
 	"author": "thepearson",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/thepearson/reconnascan",
 	"repo": "thepearson/reconnascan",

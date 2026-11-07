@@ -4,6 +4,7 @@
 	"name": "MyVNC",
 	"author": "si-mods",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/si-mods/MyVNC",

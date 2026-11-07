@@ -4,6 +4,7 @@
 	"name": "Bootie",
 	"author": "ngobach",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "system",
 	"url": "https://github.com/ngobach/bootie",
 	"repo": "ngobach/bootie",

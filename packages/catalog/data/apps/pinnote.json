@@ -4,6 +4,7 @@
 	"name": "PinNote",
 	"author": "yangchaojun",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/yangchaojun/PinNote",
 	"repo": "yangchaojun/PinNote",

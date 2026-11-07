@@ -4,6 +4,7 @@
 	"name": "SleepDock",
 	"author": "javatoai",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/javatoai/sleepdock",
 	"repo": "javatoai/sleepdock",

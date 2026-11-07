@@ -4,6 +4,7 @@
 	"name": "QuickCleaner",
 	"author": "meimingqi222",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "system",
 	"url": "https://github.com/meimingqi222/quick-cleaner",

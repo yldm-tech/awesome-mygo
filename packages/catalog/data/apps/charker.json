@@ -4,6 +4,7 @@
 	"name": "Charker",
 	"author": "qzz0518",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "devices",
 	"url": "https://qzz0518.github.io/Charker/",

@@ -4,6 +4,7 @@
 	"name": "Live MyGo",
 	"author": "anamaxlec",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/anamaxlec/live-mygo",

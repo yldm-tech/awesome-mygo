@@ -4,6 +4,7 @@
 	"name": "NanoAPI",
 	"author": "geeker-xiao",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/geeker-xiao/NanoAPI",
 	"repo": "geeker-xiao/NanoAPI",

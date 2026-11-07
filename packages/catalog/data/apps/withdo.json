@@ -4,6 +4,7 @@
 	"name": "Withdo",
 	"author": "QingYunA",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://qingyuna.github.io/withdo/",

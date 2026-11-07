@@ -4,6 +4,7 @@
 	"name": "Magpie Native Routing",
 	"author": "Fan-chou",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/Fan-chou/magpie-native-routing",
 	"repo": "Fan-chou/magpie-native-routing",

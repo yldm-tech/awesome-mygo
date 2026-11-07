@@ -4,6 +4,7 @@
 	"name": "Cove",
 	"author": "foyoodo",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "ai",
 	"url": "https://github.com/foyoodo/Cove",
 	"repo": "foyoodo/Cove",

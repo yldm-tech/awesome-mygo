@@ -4,6 +4,7 @@
 	"name": "See",
 	"author": "wibus-wee",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/wibus-wee/see",

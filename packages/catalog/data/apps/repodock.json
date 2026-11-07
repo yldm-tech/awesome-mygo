@@ -4,6 +4,7 @@
 	"name": "RepoDock",
 	"author": "javatoai",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "dev",
 	"url": "https://github.com/javatoai/repodock",
 	"repo": "javatoai/repodock",

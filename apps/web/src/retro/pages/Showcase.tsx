@@ -1,6 +1,6 @@
-import { APPS, type AppKind, HAS_SCORES, fill, likeKey, pick } from '@awesome-mygo/catalog';
+import { APPS, APP_PLATFORMS, type AppKind, type AppPlatform, HAS_SCORES, fill, likeKey, pick } from '@awesome-mygo/catalog';
 import { Link, useNavigate, useSearch } from '@tanstack/react-router';
-import { AppLink } from '../../components/bits';
+import { AppLink, PlatformTags } from '../../components/bits';
 import { LikeButton } from '../../components/Like';
 import { ScoreChip } from '../../components/Score';
 import { useLang, useT } from '../../lib/lang';
@@ -30,10 +30,10 @@ export function Showcase() {
 	const lang = useLang();
 	const { openSubmit } = useSite();
 	// The whole view is kept in the address (?cat=, ?ui=, ?sort=, ?author=), so a link reproduces it.
-	const { cat: group, ui, sort: sortParam, author: authorParam } = useSearch({ from: '/showcase' });
+	const { cat: group, ui, platform, sort: sortParam, author: authorParam } = useSearch({ from: '/showcase' });
 	const kind = ui ?? 'all';
 	const navigate = useNavigate({ from: '/showcase' });
-	const setFilter = (next: { cat?: typeof group; ui?: AppKind; sort?: typeof sortParam; author?: string }) => void navigate({ search: (prev) => ({ ...prev, ...next }), replace: true, resetScroll: false });
+	const setFilter = (next: { cat?: typeof group; ui?: AppKind; platform?: AppPlatform; sort?: typeof sortParam; author?: string }) => void navigate({ search: (prev) => ({ ...prev, ...next }), replace: true, resetScroll: false });
 	const author = authorParam ?? null;
 	const setAuthor = (name: string | null) => setFilter({ author: name ?? undefined });
 	const { status: likes, counts } = useLikes();
@@ -45,7 +45,8 @@ export function Showcase() {
 		{ key: 'web', label: t.web_fe, n: N_WEB },
 	] as const;
 
-	const ofKind = APPS.filter((a) => kind === 'all' || a.kind === kind);
+	const ofPlatform = APPS.filter((a) => !platform || a.platforms.includes(platform));
+	const ofKind = ofPlatform.filter((a) => kind === 'all' || a.kind === kind);
 	const groups = groupChips(ofKind, group);
 	const inGroup = group ? (groups.find((g) => g.key === group)?.apps ?? []) : ofKind;
 	const list = sortApps(
@@ -71,6 +72,7 @@ export function Showcase() {
 							</button>
 						))}
 					</div>
+					<div role='group' aria-label={t.f_platform} className='flex'><button type='button' aria-pressed={!platform} onClick={() => setFilter({ platform: undefined })} className={`${btnSm} ${seg}`}>{t.all}</button>{APP_PLATFORMS.map((p) => <button key={p} type='button' aria-pressed={platform === p} onClick={() => setFilter({ platform: platform === p ? undefined : p })} className={`${btnSm} ${seg}`}>{t[`platform_${p}`]}</button>)}</div>
 					{/* Below the desktop width the side panel is hidden, so the groups are a menu here. */}
 					<label className='flex items-center gap-1.5 whitespace-nowrap desk:hidden'>
 						{t.a_cats}
@@ -149,19 +151,20 @@ export function Showcase() {
 										<ScoreChip item={likeKey.app(a)} name={a.name} className='ml-auto shrink-0' />
 									</span>
 									<span className='truncate pl-[30px] leading-[14px] text-muted'>{a.author}</span>
+									<PlatformTags app={a} />
 									<span className='sr-only'>{pick(a.desc, lang)}</span>
 								</AppLink>
 								<LikeButton item={likeKey.app(a)} name={a.name} className={`${likeBtn} absolute top-1.5 right-1.5`} size={12} />
 							</div>
 						))}
 						{list.length === 0 &&
-							(group || ui || author !== null ? (
+										(group || ui || platform || author !== null ? (
 								<p className='col-span-full m-0'>
 									{t.f_none}{' '}
 									<button
 										type='button'
 										className={`${lnk} cursor-pointer border-0 bg-transparent p-0`}
-										onClick={() => setFilter({ cat: undefined, ui: undefined, author: undefined })}
+										onClick={() => setFilter({ cat: undefined, ui: undefined, platform: undefined, author: undefined })}
 									>
 										{t.f_clear}
 									</button>

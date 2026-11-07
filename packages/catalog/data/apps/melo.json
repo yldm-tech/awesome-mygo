@@ -4,6 +4,7 @@
 	"name": "Melo",
 	"author": "douglarek",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/douglarek/melo",
 	"repo": "douglarek/melo",

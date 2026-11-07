@@ -4,6 +4,7 @@
 	"name": "mangatrans",
 	"author": "roketskiy",
 	"kind": "native",
+	"platforms": ["win"],
 	"group": "ai",
 	"url": "https://github.com/roketskiy/mangatrans",
 	"repo": "roketskiy/mangatrans",

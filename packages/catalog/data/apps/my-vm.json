@@ -4,6 +4,7 @@
 	"name": "My VM",
 	"author": "xiaozhu1337",
 	"kind": "native",
+	"platforms": ["win", "linux"],
 	"group": "system",
 	"url": "https://github.com/xiaozhu1337/my-vm",
 	"repo": "xiaozhu1337/my-vm",

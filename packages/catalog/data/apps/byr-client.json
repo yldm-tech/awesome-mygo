@@ -4,6 +4,7 @@
 	"name": "BYR Client",
 	"author": "VeinsureLee",
 	"kind": "native",
+	"platforms": ["win"],
 	"category": "CommunicationApplication",
 	"group": "chat",
 	"url": "https://github.com/VeinsureLee/BYR-Client",

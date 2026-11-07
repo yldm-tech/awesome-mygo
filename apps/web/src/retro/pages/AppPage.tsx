@@ -1,7 +1,7 @@
 import { type App, APPS, HAS_SCORES, appBySlug, appSource, entryScore, fill, hostOf, likeKey, pick } from '@awesome-mygo/catalog';
 import { Link, useParams } from '@tanstack/react-router';
 import { neighbours } from '../../components/AppDetail';
-import { AppLink, type AppView, appView } from '../../components/bits';
+import { AppLink, PlatformTags, type AppView, appView } from '../../components/bits';
 import { LikeButton } from '../../components/Like';
 import { ScoreBreakdown } from '../../components/Score';
 import { useLang, useT } from '../../lib/lang';
@@ -66,6 +66,8 @@ export function AppFacts({ view }: { view: AppView }) {
 			<dd className='m-0 break-words'>{app.author}</dd>
 			<dt className='text-faint'>{t.f_ui}</dt>
 			<dd className='m-0'>{app.kind === 'native' ? t.surf_native : t.web_fe}</dd>
+			<dt className='text-faint'>{t.f_platform}</dt>
+			<dd className='m-0'><PlatformTags app={app} /></dd>
 			<dt className='text-faint'>{t.f_site}</dt>
 			<dd lang='en' className='m-0 font-mono wrap-break-word'>
 				{view.host}

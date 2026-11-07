@@ -4,6 +4,7 @@
 	"name": "Yoho Music",
 	"author": "Yohoia",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "media",
 	"url": "https://github.com/Yohoia/yoho-music",
 	"repo": "Yohoia/yoho-music",

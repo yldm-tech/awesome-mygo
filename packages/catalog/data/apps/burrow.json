@@ -4,6 +4,7 @@
 	"name": "Burrow",
 	"author": "zeroy1024",
 	"kind": "native",
+	"platforms": ["linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/zeroy1024/Burrow",
 	"repo": "zeroy1024/Burrow",

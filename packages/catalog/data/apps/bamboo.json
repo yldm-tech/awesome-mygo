@@ -4,6 +4,7 @@
 	"name": "Bamboo",
 	"author": "OldPanda",
 	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "dev",
 	"url": "https://getbamboo.app/",

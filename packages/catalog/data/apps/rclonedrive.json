@@ -4,6 +4,7 @@
 	"name": "RcloneDrive",
 	"author": "younland",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "dev",
 	"url": "https://github.com/younland/RcloneDrive",
 	"repo": "younland/RcloneDrive",

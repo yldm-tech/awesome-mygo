@@ -4,6 +4,7 @@
 	"name": "Voir",
 	"author": "eliottwantz",
 	"kind": "native",
+	"platforms": ["mac"],
 	"group": "dev",
 	"url": "https://github.com/eliottwantz/Voir",
 	"repo": "eliottwantz/Voir",

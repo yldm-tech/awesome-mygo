@@ -4,6 +4,7 @@
 	"name": "Tolk",
 	"author": "Achordchan",
 	"kind": "web",
+	"platforms": ["win", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "ai",
 	"url": "https://github.com/Achordchan/tolk",

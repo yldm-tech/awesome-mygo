@@ -4,6 +4,7 @@
 	"name": "APIGo",
 	"author": "younland",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/younland/apigo",

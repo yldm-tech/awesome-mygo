@@ -4,6 +4,7 @@
 	"name": "Kanso",
 	"author": "zephyr-qu",
 	"kind": "web",
+	"platforms": ["win"],
 	"group": "notes",
 	"url": "https://github.com/zephyr-qu/kanso",
 	"repo": "zephyr-qu/kanso",

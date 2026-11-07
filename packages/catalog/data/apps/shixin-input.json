@@ -4,6 +4,7 @@
 	"name": "Shixin Input",
 	"author": "shixin-labs",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "system",
 	"url": "https://github.com/shixin-labs/shixin-input",
 	"repo": "shixin-labs/shixin-input",

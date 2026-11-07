@@ -4,6 +4,7 @@
 	"name": "MyTwig",
 	"author": "HeroSizy",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://mytwig.herosizy.dev",

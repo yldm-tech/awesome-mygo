@@ -4,6 +4,7 @@
 	"name": "BaudScan",
 	"author": "j4ckzh0u",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "devices",
 	"url": "https://github.com/j4ckzh0u/BaudScan",
 	"repo": "j4ckzh0u/BaudScan",

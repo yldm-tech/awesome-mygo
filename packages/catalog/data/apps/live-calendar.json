@@ -4,6 +4,7 @@
 	"name": "Live Calendar",
 	"author": "Lonely0710",
 	"kind": "native",
+	"platforms": ["win", "mac"],
 	"group": "media",
 	"url": "https://jpop-live-calendar.pages.dev/",
 	"repo": "Lonely0710/jpop-live-calendar",

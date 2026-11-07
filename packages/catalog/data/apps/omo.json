@@ -4,6 +4,7 @@
 	"name": "omo",
 	"author": "QinYangWang",
 	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
 	"group": "agents",
 	"url": "https://github.com/QinYangWang/omo",
 	"repo": "QinYangWang/omo",
