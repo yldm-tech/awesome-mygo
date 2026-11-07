@@ -12,6 +12,8 @@ declare module 'cloudflare:workers' {
 		SHOT_LIMIT?: { limit(options: { key: string }): Promise<{ success: boolean }> };
 		// Likes (/api/likes): the D1 database and the salt that turns an IP into an anonymous voter id. Both are missing in pull request previews, which turns likes off there.
 		DB?: import('./server/likes').D1Like;
+		// Page views (/api/views, /api/metrics): the same D1 database stores anonymous daily counters.
+		VIEW_LIMIT?: { limit(options: { key: string }): Promise<{ success: boolean }> };
 		LIKE_SALT?: string;
 		LIKE_LIMIT?: { limit(options: { key: string }): Promise<{ success: boolean }> };
 		// Chrome's WebMCP origin-trial token for the production origin (developer.chrome.com/origintrials), which turns on document.modelContext for its visitors; it expires with the trial. Unset (as in previews and locally), the pages carry no token.

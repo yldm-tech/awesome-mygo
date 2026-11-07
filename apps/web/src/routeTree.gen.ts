@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AiRouteImport } from './routes/ai'
 import { Route as LearnRouteImport } from './routes/learn'
+import { Route as MetricsRouteImport } from './routes/metrics'
 import { Route as PluginsRouteImport } from './routes/plugins'
 import { Route as ShowcaseRouteImport } from './routes/showcase'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -19,8 +20,10 @@ import { Route as StateRouteImport } from './routes/state'
 import { Route as TemplatesRouteImport } from './routes/templates'
 import { Route as UiRouteImport } from './routes/ui'
 import { Route as ApiLikesRouteImport } from './routes/api/likes'
+import { Route as ApiMetricsRouteImport } from './routes/api/metrics'
 import { Route as ApiShotRouteImport } from './routes/api/shot'
 import { Route as ApiSubmitRouteImport } from './routes/api/submit'
+import { Route as ApiViewsRouteImport } from './routes/api/views'
 import { Route as AppsSlugRouteImport } from './routes/apps/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -36,6 +39,11 @@ const AiRoute = AiRouteImport.update({
 const LearnRoute = LearnRouteImport.update({
   id: '/learn',
   path: '/learn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetricsRoute = MetricsRouteImport.update({
+  id: '/metrics',
+  path: '/metrics',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PluginsRoute = PluginsRouteImport.update({
@@ -73,6 +81,11 @@ const ApiLikesRoute = ApiLikesRouteImport.update({
   path: '/api/likes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiMetricsRoute = ApiMetricsRouteImport.update({
+  id: '/api/metrics',
+  path: '/api/metrics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiShotRoute = ApiShotRouteImport.update({
   id: '/api/shot',
   path: '/api/shot',
@@ -81,6 +94,11 @@ const ApiShotRoute = ApiShotRouteImport.update({
 const ApiSubmitRoute = ApiSubmitRouteImport.update({
   id: '/api/submit',
   path: '/api/submit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiViewsRoute = ApiViewsRouteImport.update({
+  id: '/api/views',
+  path: '/api/views',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppsSlugRoute = AppsSlugRouteImport.update({
@@ -93,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ai': typeof AiRoute
   '/learn': typeof LearnRoute
+  '/metrics': typeof MetricsRoute
   '/plugins': typeof PluginsRoute
   '/showcase': typeof ShowcaseRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -100,14 +119,17 @@ export interface FileRoutesByFullPath {
   '/templates': typeof TemplatesRoute
   '/ui': typeof UiRoute
   '/api/likes': typeof ApiLikesRoute
+  '/api/metrics': typeof ApiMetricsRoute
   '/api/shot': typeof ApiShotRoute
   '/api/submit': typeof ApiSubmitRoute
+  '/api/views': typeof ApiViewsRoute
   '/apps/$slug': typeof AppsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ai': typeof AiRoute
   '/learn': typeof LearnRoute
+  '/metrics': typeof MetricsRoute
   '/plugins': typeof PluginsRoute
   '/showcase': typeof ShowcaseRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -115,8 +137,10 @@ export interface FileRoutesByTo {
   '/templates': typeof TemplatesRoute
   '/ui': typeof UiRoute
   '/api/likes': typeof ApiLikesRoute
+  '/api/metrics': typeof ApiMetricsRoute
   '/api/shot': typeof ApiShotRoute
   '/api/submit': typeof ApiSubmitRoute
+  '/api/views': typeof ApiViewsRoute
   '/apps/$slug': typeof AppsSlugRoute
 }
 export interface FileRoutesById {
@@ -124,6 +148,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/ai': typeof AiRoute
   '/learn': typeof LearnRoute
+  '/metrics': typeof MetricsRoute
   '/plugins': typeof PluginsRoute
   '/showcase': typeof ShowcaseRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -131,8 +156,10 @@ export interface FileRoutesById {
   '/templates': typeof TemplatesRoute
   '/ui': typeof UiRoute
   '/api/likes': typeof ApiLikesRoute
+  '/api/metrics': typeof ApiMetricsRoute
   '/api/shot': typeof ApiShotRoute
   '/api/submit': typeof ApiSubmitRoute
+  '/api/views': typeof ApiViewsRoute
   '/apps/$slug': typeof AppsSlugRoute
 }
 export interface FileRouteTypes {
@@ -141,6 +168,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai'
     | '/learn'
+    | '/metrics'
     | '/plugins'
     | '/showcase'
     | '/sitemap.xml'
@@ -148,14 +176,17 @@ export interface FileRouteTypes {
     | '/templates'
     | '/ui'
     | '/api/likes'
+    | '/api/metrics'
     | '/api/shot'
     | '/api/submit'
+    | '/api/views'
     | '/apps/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/ai'
     | '/learn'
+    | '/metrics'
     | '/plugins'
     | '/showcase'
     | '/sitemap.xml'
@@ -163,14 +194,17 @@ export interface FileRouteTypes {
     | '/templates'
     | '/ui'
     | '/api/likes'
+    | '/api/metrics'
     | '/api/shot'
     | '/api/submit'
+    | '/api/views'
     | '/apps/$slug'
   id:
     | '__root__'
     | '/'
     | '/ai'
     | '/learn'
+    | '/metrics'
     | '/plugins'
     | '/showcase'
     | '/sitemap.xml'
@@ -178,8 +212,10 @@ export interface FileRouteTypes {
     | '/templates'
     | '/ui'
     | '/api/likes'
+    | '/api/metrics'
     | '/api/shot'
     | '/api/submit'
+    | '/api/views'
     | '/apps/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -187,6 +223,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AiRoute: typeof AiRoute
   LearnRoute: typeof LearnRoute
+  MetricsRoute: typeof MetricsRoute
   PluginsRoute: typeof PluginsRoute
   ShowcaseRoute: typeof ShowcaseRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -194,8 +231,10 @@ export interface RootRouteChildren {
   TemplatesRoute: typeof TemplatesRoute
   UiRoute: typeof UiRoute
   ApiLikesRoute: typeof ApiLikesRoute
+  ApiMetricsRoute: typeof ApiMetricsRoute
   ApiShotRoute: typeof ApiShotRoute
   ApiSubmitRoute: typeof ApiSubmitRoute
+  ApiViewsRoute: typeof ApiViewsRoute
   AppsSlugRoute: typeof AppsSlugRoute
 }
 
@@ -220,6 +259,13 @@ declare module '@tanstack/react-router' {
       path: '/learn'
       fullPath: '/learn'
       preLoaderRoute: typeof LearnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metrics': {
+      id: '/metrics'
+      path: '/metrics'
+      fullPath: '/metrics'
+      preLoaderRoute: typeof MetricsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/plugins': {
@@ -271,6 +317,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiLikesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/metrics': {
+      id: '/api/metrics'
+      path: '/api/metrics'
+      fullPath: '/api/metrics'
+      preLoaderRoute: typeof ApiMetricsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/shot': {
       id: '/api/shot'
       path: '/api/shot'
@@ -283,6 +336,13 @@ declare module '@tanstack/react-router' {
       path: '/api/submit'
       fullPath: '/api/submit'
       preLoaderRoute: typeof ApiSubmitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/views': {
+      id: '/api/views'
+      path: '/api/views'
+      fullPath: '/api/views'
+      preLoaderRoute: typeof ApiViewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/apps/$slug': {
@@ -299,6 +359,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AiRoute: AiRoute,
   LearnRoute: LearnRoute,
+  MetricsRoute: MetricsRoute,
   PluginsRoute: PluginsRoute,
   ShowcaseRoute: ShowcaseRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -306,8 +367,10 @@ const rootRouteChildren: RootRouteChildren = {
   TemplatesRoute: TemplatesRoute,
   UiRoute: UiRoute,
   ApiLikesRoute: ApiLikesRoute,
+  ApiMetricsRoute: ApiMetricsRoute,
   ApiShotRoute: ApiShotRoute,
   ApiSubmitRoute: ApiSubmitRoute,
+  ApiViewsRoute: ApiViewsRoute,
   AppsSlugRoute: AppsSlugRoute,
 }
 export const routeTree = rootRouteImport

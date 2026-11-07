@@ -9,6 +9,7 @@ import { Header } from '../components/Header';
 import { SubmitModal } from '../components/SubmitModal';
 import { retainLang, useLang, useT } from '../lib/lang';
 import { useReveal, useScrolledPast } from '../lib/motion';
+import { usePageView } from '../lib/pageviews';
 import { SITE_NAME, ogLocaleAlternates } from '../lib/seo';
 import { SiteProvider, useSite } from '../lib/site';
 import { type Theme, readTheme } from '../lib/theme';
@@ -78,6 +79,7 @@ export const Route = createRootRoute({
 
 function RootComponent() {
 	const { theme } = Route.useRouteContext();
+	usePageView();
 	return (
 		<RootDocument theme={theme}>
 			<SiteProvider quickView={theme === 'retro'}>

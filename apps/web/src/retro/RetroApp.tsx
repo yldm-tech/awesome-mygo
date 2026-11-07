@@ -12,6 +12,7 @@ import { RetroSubmit } from './Submit';
 import { AppPage } from './pages/AppPage';
 import { Home } from './pages/Home';
 import { Learn } from './pages/Learn';
+import { Metrics } from './pages/Metrics';
 import { NotFound } from './pages/NotFound';
 import { Plugins } from './pages/Plugins';
 import { Showcase } from './pages/Showcase';
@@ -30,6 +31,7 @@ const PAGES: Record<string, ComponentType> = {
 	'/plugins': Plugins,
 	'/showcase': Showcase,
 	'/learn': Learn,
+	'/metrics': Metrics,
 	'/apps/$slug': AppPage,
 };
 
@@ -232,6 +234,7 @@ function Foot() {
 						{t[n.key]}
 					</Link>
 				))}
+				<Link to='/metrics' className={lnk}>{t.metrics_title}</Link>
 			</nav>
 			<span className='flex-1' />
 			<a className={`${lnk} inline-flex items-center gap-1.5`} href={MYGO_REPO} target='_blank' rel='noopener'>

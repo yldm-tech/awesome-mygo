@@ -9,7 +9,7 @@
 		"build": "vite build --configLoader runner",
 		"preview": "vite preview --configLoader runner",
 		"typecheck": "tsc --noEmit",
-		"deploy": "pnpm run build && wrangler deploy",
+		"deploy": "pnpm run build && wrangler d1 migrations apply awesome-mygo --remote && wrangler deploy",
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {

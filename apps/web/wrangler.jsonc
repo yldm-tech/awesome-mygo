@@ -22,7 +22,8 @@
 	"ratelimits": [
 		{ "name": "SUBMIT_LIMIT", "namespace_id": "4170", "simple": { "limit": 3, "period": 60 } },
 		{ "name": "LIKE_LIMIT", "namespace_id": "4172", "simple": { "limit": 30, "period": 60 } },
-		{ "name": "SHOT_LIMIT", "namespace_id": "4174", "simple": { "limit": 20, "period": 60 } }
+		{ "name": "SHOT_LIMIT", "namespace_id": "4174", "simple": { "limit": 20, "period": 60 } },
+		{ "name": "VIEW_LIMIT", "namespace_id": "4176", "simple": { "limit": 120, "period": 60 } }
 	],
 	// Likes: one row per entry and visitor (migrations/), at most 30 likes or unlikes a minute from one visitor. The salt that hashes a visitor's IP is the LIKE_SALT secret.
 	"d1_databases": [{ "binding": "DB", "database_name": "awesome-mygo", "database_id": "78813521-ece3-4b59-a62d-499b92cd0f5e", "migrations_dir": "migrations" }],
@@ -31,7 +32,8 @@
 		"ratelimits": [
 			{ "name": "SUBMIT_LIMIT", "namespace_id": "4171", "simple": { "limit": 3, "period": 60 } },
 			{ "name": "LIKE_LIMIT", "namespace_id": "4173", "simple": { "limit": 30, "period": 60 } },
-			{ "name": "SHOT_LIMIT", "namespace_id": "4175", "simple": { "limit": 20, "period": 60 } }
+			{ "name": "SHOT_LIMIT", "namespace_id": "4175", "simple": { "limit": 20, "period": 60 } },
+			{ "name": "VIEW_LIMIT", "namespace_id": "4177", "simple": { "limit": 120, "period": 60 } }
 		]
 	}
 }
