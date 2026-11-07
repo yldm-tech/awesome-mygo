@@ -1,0 +1,31 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "wagyu-music",
+	"name": "肥牛音乐",
+	"author": "vicnoah",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"category": "MultimediaApplication",
+	"group": "media",
+	"url": "https://github.com/vicnoah/mygo-cloudmusic",
+	"repo": "vicnoah/mygo-cloudmusic",
+	"summary": {
+		"en": "Desktop client for your own music servers: FN Music, Songloft and any Subsonic-compatible service.",
+		"zh-CN": "自建与私有云音乐平台的桌面客户端：支持飞牛音乐（FN Music）、Songloft，以及 Navidrome / Jellyfin / Gonic 等 Subsonic 兼容服务。",
+		"zh-TW": "自架與私有雲音樂平台的桌面用戶端：支援飛牛音樂（FN Music）、Songloft，以及 Navidrome / Jellyfin / Gonic 等 Subsonic 相容服務。",
+		"ja": "自前の音楽サーバー向けデスクトップクライアント。飛牛音楽（FN Music）、Songloft、Navidrome / Jellyfin / Gonic などの Subsonic 互換サービスに対応。",
+		"ko": "자체 호스팅 음악 서버용 데스크톱 클라이언트. 飛牛 뮤직(FN Music), Songloft, Navidrome / Jellyfin / Gonic 등 Subsonic 호환 서비스를 지원합니다."
+	},
+	"description": {
+		"en": "Written in Go and drawn with MyGo's native UI, with no web view, it connects to FN Music on a NAS, a self-hosted Songloft server, or any Subsonic / OpenSubsonic service such as Navidrome, Jellyfin and Gonic. Each platform keeps its own accounts, playlists, favourites and playback settings, while the bottom player, now-playing page, word-by-word lyrics and cache are shared. It also decodes DSD, DTS, FLAC, APE, ALAC and CUE sheets locally, casts to DLNA / UPnP speakers and TVs on the LAN, and can show a mini player in the notch.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制，没有 WebView。可连接 NAS 上的飞牛音乐（FN Music）、自建 Songloft 服务器，以及 Navidrome、Jellyfin、Gonic 等 Subsonic / OpenSubsonic 兼容服务；各平台的账号、歌单、收藏与播放设置互相独立，底部播放器、正在播放页、逐字歌词与缓存共用同一套体验。还能在本地解码 DSD、DTS、FLAC、APE、ALAC 与 CUE 分轨，把音乐投送到局域网内的 DLNA / UPnP 音箱与电视，并在屏幕刘海处显示迷你播放器。",
+		"zh-TW": "以 Go 撰寫、由 MyGo 原生 UI 繪製，沒有 WebView。可連線 NAS 上的飛牛音樂（FN Music）、自架 Songloft 伺服器，以及 Navidrome、Jellyfin、Gonic 等 Subsonic / OpenSubsonic 相容服務；各平台的帳號、歌單、收藏與播放設定互相獨立，底部播放器、正在播放頁、逐字歌詞與快取共用同一套體驗。也能在本機解碼 DSD、DTS、FLAC、APE、ALAC 與 CUE 分軌，把音樂投送到區域網路內的 DLNA / UPnP 喇叭與電視，並在螢幕瀏海處顯示迷你播放器。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた WebView なしのデスクトップクライアントです。NAS 上の飛牛音楽（FN Music）、セルフホストの Songloft、Navidrome・Jellyfin・Gonic などの Subsonic / OpenSubsonic 互換サービスに接続できます。プラットフォームごとにアカウント、プレイリスト、お気に入り、再生設定を分けて保ちながら、下部プレーヤー、再生中ページ、一文字ずつ進む歌詞、キャッシュは共通の体験として使えます。DSD、DTS、FLAC、APE、ALAC、CUE シートをローカルでデコードし、LAN 内の DLNA / UPnP スピーカーやテレビへキャスト、画面上部のノッチにミニプレーヤーを表示することもできます。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 WebView 없는 데스크톱 클라이언트입니다. NAS의 飛牛 뮤직(FN Music), 자체 호스팅 Songloft, Navidrome·Jellyfin·Gonic 같은 Subsonic / OpenSubsonic 호환 서비스에 연결합니다. 플랫폼마다 계정, 플레이리스트, 즐겨찾기, 재생 설정을 따로 보관하면서 하단 플레이어, 재생 중 화면, 글자 단위 가사, 캐시는 하나의 경험으로 공유합니다. DSD, DTS, FLAC, APE, ALAC, CUE 시트를 로컬에서 디코딩하고, 같은 네트워크의 DLNA / UPnP 스피커와 TV로 전송하며, 화면 상단 노치에 미니 플레이어를 표시할 수 있습니다."
+	},
+	"added": "2026-11-07T02:39:33Z"
+}
