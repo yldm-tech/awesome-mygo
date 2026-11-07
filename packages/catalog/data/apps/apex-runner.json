@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "apex-runner",
-	"name": "Apex Runner",
-	"author": "wan-kong",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "game",
-	"url": "https://github.com/wan-kong/apex-helper",
-	"repo": "wan-kong/apex-helper",
-	"summary": {
-		"en": "Switches Windows between game and daily profiles for the Win key, input method and audio output.",
-		"zh-CN": "Windows 游戏/日常方案切换工具：Win 键、快捷键、输入法与声音输出一键切换。",
-		"zh-TW": "Windows 遊戲／日常設定檔切換工具：Win 鍵、快速鍵、輸入法與聲音輸出一鍵切換。",
-		"ja": "Win キー、ショートカット、入力方式、音声出力をゲーム用と普段用で切り替える Windows ツール。",
-		"ko": "Win 키, 단축키, 입력기, 오디오 출력을 게임용과 일상용 설정으로 전환하는 Windows 도구."
-	},
-	"description": {
-		"en": "A Windows tool drawn with MyGo's native UI, written entirely in Go with no web view. It keeps separate game and daily profiles for the Win key, Ctrl+Esc, Alt+Shift, input method and default audio output, switches between them with a recordable global hotkey, and can launch your accelerator, voice app and Steam. It can optimize settings at startup and restore them on exit.",
-		"zh-CN": "用 MyGo 原生 UI 编写的 Windows 工具，界面与系统服务均为 Go，没有 WebView。游戏与日常两套方案分别设置 Win 键、Ctrl+Esc、Alt+Shift、输入法和默认声音输出，可用可录制的全局快捷键切换，还能启动加速器、语音软件和 Steam。支持启动时自动优化、退出时自动恢复。",
-		"zh-TW": "以 MyGo 原生 UI 撰寫的 Windows 工具，介面與系統服務皆為 Go，沒有 WebView。遊戲與日常兩套設定檔分別設定 Win 鍵、Ctrl+Esc、Alt+Shift、輸入法和預設聲音輸出，可用可錄製的全域快速鍵切換，還能啟動加速器、語音軟體和 Steam。支援啟動時自動最佳化、結束時自動還原。",
-		"ja": "MyGo のネイティブ UI で書かれた Windows ツールで、画面もシステムサービスもすべて Go 製、WebView はありません。ゲーム用と普段用の 2 つのプロファイルで Win キー、Ctrl+Esc、Alt+Shift、入力方式、既定の音声出力を個別に設定し、録り直せるグローバルホットキーで切り替えます。アクセラレーター、ボイスチャットソフト、Steam の起動もでき、起動時に自動で最適化し、終了時に元に戻します。",
-		"ko": "MyGo의 네이티브 UI로 만든 Windows 도구로, 화면과 시스템 서비스 모두 Go로 작성했으며 WebView가 없습니다. 게임용과 일상용 두 가지 설정으로 Win 키, Ctrl+Esc, Alt+Shift, 입력기, 기본 오디오 출력을 따로 지정하고, 직접 녹화해 바꿀 수 있는 전역 단축키로 전환합니다. 가속기, 음성 채팅 앱, Steam도 실행할 수 있으며, 시작할 때 자동으로 최적화하고 종료할 때 원래대로 되돌립니다."
-	},
-	"icon": {
-		"file": "apex-runner.webp"
-	},
-	"screenshot": "apex-runner.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T17:24:29Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "apex-runner",
+  "name": "Apex Runner",
+  "author": "wan-kong",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "game",
+  "url": "https://github.com/wan-kong/apex-helper",
+  "repo": "wan-kong/apex-helper",
+  "summary": {
+    "en": "Switches Windows between game and daily profiles for the Win key, input method and audio output.",
+    "zh-CN": "Windows 游戏/日常方案切换工具：Win 键、快捷键、输入法与声音输出一键切换。",
+    "zh-TW": "Windows 遊戲／日常設定檔切換工具：Win 鍵、快速鍵、輸入法與聲音輸出一鍵切換。",
+    "ja": "Win キー、ショートカット、入力方式、音声出力をゲーム用と普段用で切り替える Windows ツール。",
+    "ko": "Win 키, 단축키, 입력기, 오디오 출력을 게임용과 일상용 설정으로 전환하는 Windows 도구."
+  },
+  "description": {
+    "en": "A Windows tool drawn with MyGo's native UI, written entirely in Go with no web view. It keeps separate game and daily profiles for the Win key, Ctrl+Esc, Alt+Shift, input method and default audio output, switches between them with a recordable global hotkey, and can launch your accelerator, voice app and Steam. It can optimize settings at startup and restore them on exit.",
+    "zh-CN": "用 MyGo 原生 UI 编写的 Windows 工具，界面与系统服务均为 Go，没有 WebView。游戏与日常两套方案分别设置 Win 键、Ctrl+Esc、Alt+Shift、输入法和默认声音输出，可用可录制的全局快捷键切换，还能启动加速器、语音软件和 Steam。支持启动时自动优化、退出时自动恢复。",
+    "zh-TW": "以 MyGo 原生 UI 撰寫的 Windows 工具，介面與系統服務皆為 Go，沒有 WebView。遊戲與日常兩套設定檔分別設定 Win 鍵、Ctrl+Esc、Alt+Shift、輸入法和預設聲音輸出，可用可錄製的全域快速鍵切換，還能啟動加速器、語音軟體和 Steam。支援啟動時自動最佳化、結束時自動還原。",
+    "ja": "MyGo のネイティブ UI で書かれた Windows ツールで、画面もシステムサービスもすべて Go 製、WebView はありません。ゲーム用と普段用の 2 つのプロファイルで Win キー、Ctrl+Esc、Alt+Shift、入力方式、既定の音声出力を個別に設定し、録り直せるグローバルホットキーで切り替えます。アクセラレーター、ボイスチャットソフト、Steam の起動もでき、起動時に自動で最適化し、終了時に元に戻します。",
+    "ko": "MyGo의 네이티브 UI로 만든 Windows 도구로, 화면과 시스템 서비스 모두 Go로 작성했으며 WebView가 없습니다. 게임용과 일상용 두 가지 설정으로 Win 키, Ctrl+Esc, Alt+Shift, 입력기, 기본 오디오 출력을 따로 지정하고, 직접 녹화해 바꿀 수 있는 전역 단축키로 전환합니다. 가속기, 음성 채팅 앱, Steam도 실행할 수 있으며, 시작할 때 자동으로 최적화하고 종료할 때 원래대로 되돌립니다."
+  },
+  "icon": {
+    "file": "apex-runner.webp"
+  },
+  "screenshot": "apex-runner.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T17:24:29Z"
 }
