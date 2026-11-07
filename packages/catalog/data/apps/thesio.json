@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "thesio",
+	"name": "Thesio",
+	"author": "cheetahbyte",
+	"kind": "native",
+	"group": "notes",
+	"url": "https://github.com/cheetahbyte/thesio",
+	"repo": "cheetahbyte/thesio",
+	"summary": {
+		"en": "An editor for Typst documents with a live preview and one vault for notes, papers and citations.",
+		"zh-CN": "带实时预览的 Typst 编辑器，笔记、论文与引用集中在同一资料库。",
+		"zh-TW": "附即時預覽的 Typst 編輯器，筆記、論文與引用集中在同一資料庫。",
+		"ja": "ライブプレビュー付きの Typst エディター。ノート、論文、引用を一つの保管庫で管理。",
+		"ko": "실시간 미리보기가 있는 Typst 편집기. 노트, 논문, 인용을 하나의 볼트에 모읍니다."
+	},
+	"description": {
+		"en": "A local-first workspace for academic writing that its author calls Obsidian for Typst: a vault is a folder of plain .typ files, and Typst compiles a live preview next to the document you are editing. Notes, papers and citations sit together in one vault, and the app is drawn with MyGo's native UI.",
+		"zh-CN": "作者称之为“Typst 版 Obsidian”的本地优先学术写作工具：资料库就是一个存放普通 .typ 文件的文件夹，正在编辑的文档旁边是由 Typst 编译的实时预览。笔记、论文和引用都放在同一个资料库里，界面由 MyGo 原生 UI 绘制。",
+		"zh-TW": "作者稱之為「Typst 版 Obsidian」的本機優先學術寫作工具：資料庫就是一個存放一般 .typ 檔案的資料夾，正在編輯的文件旁邊是由 Typst 編譯的即時預覽。筆記、論文與引用都放在同一個資料庫裡，介面由 MyGo 原生 UI 繪製。",
+		"ja": "作者が「Typst 版の Obsidian」と呼ぶ、ローカルファーストな学術執筆用ワークスペース。保管庫は普通の .typ ファイルが入ったフォルダーで、編集中の文書の横に Typst がコンパイルしたライブプレビューが表示されます。ノート、論文、引用を一つの保管庫にまとめて扱え、画面は MyGo のネイティブ UI で描かれています。",
+		"ko": "작성자가 'Typst를 위한 Obsidian'이라고 부르는 로컬 우선 학술 글쓰기 작업 공간입니다. 볼트는 일반 .typ 파일이 담긴 폴더이며, 편집 중인 문서 옆에 Typst가 컴파일한 실시간 미리보기가 표시됩니다. 노트, 논문, 인용을 하나의 볼트에서 함께 다루며, 화면은 MyGo의 네이티브 UI로 그립니다."
+	},
+	"icon": {
+		"file": "thesio.webp"
+	},
+	"screenshot": "thesio.webp",
+	"added": "2026-11-07T08:59:06Z"
+}
