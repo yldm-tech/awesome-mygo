@@ -9,7 +9,7 @@ import templateSchema from '../data/schema/template.schema.json';
 import aiSchema from '../data/schema/ai.schema.json';
 import uiSchema from '../data/schema/ui.schema.json';
 import scoresFile from '../data/scores.json';
-import { AI_KIND, AI_TOOL_TYPES, AI_TOOLS, AILOGO_CDN, APP_CATEGORIES, APP_GROUPS, APP_KIND, APPS, ARTICLE_KIND, DOC_KIND, ENTRY_GROUPS, type EntryGroup, GROUP_CATEGORY, PLUGIN_KIND, STATE_KIND, TEMPLATE_KIND, TEMPLATES, UI_KIND, appGroup, appSource, ARTICLES, COMMUNITY_PLUGINS, DOCS, PLUGINS, STATE_SOLUTIONS, UI_LIBS, appBySlug, authorProfile, byAdded, byName, byNewest, hostOf, readAppEntry, readAppFile, readApps, readEntry, readDocs, readEntryFile, readAiTools, readPlugins, readTemplates, readUiLibs } from './catalog';
+import { AI_KIND, AI_TOOL_TYPES, AI_TOOLS, AILOGO_CDN, APP_CATEGORIES, APP_GROUPS, APP_KIND, APP_PLATFORMS, APPS, ARTICLE_KIND, DOC_KIND, ENTRY_GROUPS, type EntryGroup, GROUP_CATEGORY, PLUGIN_KIND, STATE_KIND, TEMPLATE_KIND, TEMPLATES, UI_KIND, appGroup, appSource, ARTICLES, COMMUNITY_PLUGINS, DOCS, PLUGINS, STATE_SOLUTIONS, UI_LIBS, appBySlug, authorProfile, byAdded, byName, byNewest, hostOf, readAppEntry, readAppFile, readApps, readEntry, readDocs, readEntryFile, readAiTools, readPlugins, readTemplates, readUiLibs } from './catalog';
 import { AGENT_FIELDS, AGENT_INPUT_SCHEMA, AGENT_MAX_BYTES, type AgentSubmission, ENTRY_PLACEHOLDERS, MAX_SUBMISSION, SUBMIT_CATS, SUBMIT_KINDS, type SubmitCat, agentSubmissionReport, alreadyListed, buildEntry, codeFence, descMax, editUrl, entryCats, entryFileText, entryPath, entryProblem, guessFromLink, isBadShot, isBadUrl, isEntryComplete, issueMarker, issueUrl, jsonEntry, missingFields, parseEntryJson, parseSubmission, pastedEntryProblem, pastedName, pastedShotRepo, placeholderProblem, readAgentSubmission, shotRepo, slugify, submissionBody, submissionFromIssue, submittedIssue, takesShot, withScheme } from './entry';
 import { LANGS, type LangCode, type Text, fill, langRedirectScript, negotiateLang, pick, validateRootSearch } from './lang';
 import { buildSearchIndex, searchCatalog } from './search';
@@ -192,6 +192,14 @@ describe('catalog data', () => {
 		const entry = { slug: 'kit', name: 'Kit', author: 'someone', kind: 'native', url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' } };
 		expect(readAppEntry(entry).category).toBeUndefined();
 		expect(() => readAppEntry({ ...entry, category: 'DesktopApplication' })).toThrow(/category must be one of/);
+	});
+
+	it('takes app platforms from the allowed values and defaults older entries to all platforms', () => {
+		const entry = { slug: 'kit', name: 'Kit', author: 'someone', kind: 'native', url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' } };
+		expect(readAppEntry(entry).platforms).toEqual(APP_PLATFORMS);
+		expect(readAppEntry({ ...entry, platforms: ['win', 'mac'] }).platforms).toEqual(['win', 'mac']);
+		expect(() => readAppEntry({ ...entry, platforms: ['playstation'] })).toThrow(/platforms must contain only/);
+		expect(() => readAppEntry({ ...entry, platforms: ['win', 'win'] })).toThrow(/platforms lists a platform twice/);
 	});
 
 	it('lists as provisional only images the entry has, and only kinds of image its category shows', () => {
