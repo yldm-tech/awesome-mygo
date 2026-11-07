@@ -1,34 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "cliprecorder",
-	"name": "ClipRecorder",
-	"author": "soidaken",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "system",
-	"url": "https://github.com/soidaken/ClipRecorder",
-	"repo": "soidaken/ClipRecorder",
-	"summary": {
-		"en": "A Windows tray tool for annotated screenshots, MP4 screen recording and in-place translation.",
-		"zh-CN": "常驻托盘的 Windows 工具：截图标注、录屏为 MP4，框选英文原地翻译成中文。",
-		"zh-TW": "常駐系統匣的 Windows 工具：截圖標註、錄影存成 MP4，框選英文原地翻成中文。",
-		"ja": "Windows のトレイ常駐ツール。注釈付きスクショ、MP4 録画、英語を中国語にその場で翻訳。",
-		"ko": "Windows 트레이 도구. 주석 스크린샷, MP4 화면 녹화, 영어를 그 자리에서 중국어로 번역."
-	},
-	"description": {
-		"en": "A Windows 10 and 11 tray tool drawn with MyGo's native UI, with no WebView and no FFmpeg. It takes region screenshots you can mark up with pen, blur, numbered markers and boxes, records a region to H.264 MP4 with system sound and microphone, and replaces selected English text with Chinese in place, keeping the original layout. Translation needs your own DeepSeek API key and sends the selection to DeepSeek.",
-		"zh-CN": "常驻托盘的 Windows 10/11 工具，界面由 MyGo 原生 UI 绘制，不用 WebView，也不依赖 FFmpeg。可框选截图并用画笔、模糊、序号和标记框标注；框选区域可录制为 H.264 MP4，同时录系统声音和麦克风；框选英文后原地换成中文，保留原有排版。翻译需自备 DeepSeek API Key，选区截图会发送给 DeepSeek。",
-		"zh-TW": "常駐系統匣的 Windows 10/11 工具，介面由 MyGo 原生 UI 繪製，不用 WebView，也不依賴 FFmpeg。可框選截圖並以畫筆、模糊、序號和標記框標註；框選區域可錄製為 H.264 MP4，同時錄系統聲音和麥克風；框選英文後原地換成中文，保留原有版面。翻譯需自備 DeepSeek API Key，選取範圍的截圖會傳送給 DeepSeek。",
-		"ja": "MyGo のネイティブ UI で描かれた Windows 10/11 用のトレイ常駐ツール。WebView も FFmpeg も使いません。範囲を選んでスクリーンショットを撮り、ペン、ぼかし、番号、枠で注釈を付けられます。選んだ範囲はシステム音とマイクの音声付きで H.264 の MP4 に録画でき、英文を選ぶとレイアウトを保ったままその場で中国語に置き換えます。翻訳には自分の DeepSeek API キーが必要で、選択範囲の画像は DeepSeek に送られます。",
-		"ko": "MyGo의 네이티브 UI로 그린 Windows 10/11용 트레이 상주 도구로, WebView도 FFmpeg도 쓰지 않습니다. 영역을 골라 스크린샷을 찍고 펜, 흐림, 번호, 강조 상자로 주석을 달 수 있으며, 선택 영역을 시스템 소리와 마이크를 함께 담아 H.264 MP4로 녹화합니다. 영어 영역을 고르면 레이아웃을 유지한 채 그 자리에서 중국어로 바꿔 줍니다. 번역에는 본인의 DeepSeek API 키가 필요하며 선택 영역 이미지가 DeepSeek로 전송됩니다."
-	},
-	"icon": {
-		"file": "cliprecorder.webp"
-	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
-	"screenshot": "cliprecorder.webp",
-	"added": "2026-11-06T03:34:18Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "cliprecorder",
+  "name": "ClipRecorder",
+  "author": "soidaken",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "system",
+  "url": "https://github.com/soidaken/ClipRecorder",
+  "repo": "soidaken/ClipRecorder",
+  "summary": {
+    "en": "A Windows tray tool for annotated screenshots, MP4 screen recording and in-place translation.",
+    "zh-CN": "常驻托盘的 Windows 工具：截图标注、录屏为 MP4，框选英文原地翻译成中文。",
+    "zh-TW": "常駐系統匣的 Windows 工具：截圖標註、錄影存成 MP4，框選英文原地翻成中文。",
+    "ja": "Windows のトレイ常駐ツール。注釈付きスクショ、MP4 録画、英語を中国語にその場で翻訳。",
+    "ko": "Windows 트레이 도구. 주석 스크린샷, MP4 화면 녹화, 영어를 그 자리에서 중국어로 번역."
+  },
+  "description": {
+    "en": "A Windows 10 and 11 tray tool drawn with MyGo's native UI, with no WebView and no FFmpeg. It takes region screenshots you can mark up with pen, blur, numbered markers and boxes, records a region to H.264 MP4 with system sound and microphone, and replaces selected English text with Chinese in place, keeping the original layout. Translation needs your own DeepSeek API key and sends the selection to DeepSeek.",
+    "zh-CN": "常驻托盘的 Windows 10/11 工具，界面由 MyGo 原生 UI 绘制，不用 WebView，也不依赖 FFmpeg。可框选截图并用画笔、模糊、序号和标记框标注；框选区域可录制为 H.264 MP4，同时录系统声音和麦克风；框选英文后原地换成中文，保留原有排版。翻译需自备 DeepSeek API Key，选区截图会发送给 DeepSeek。",
+    "zh-TW": "常駐系統匣的 Windows 10/11 工具，介面由 MyGo 原生 UI 繪製，不用 WebView，也不依賴 FFmpeg。可框選截圖並以畫筆、模糊、序號和標記框標註；框選區域可錄製為 H.264 MP4，同時錄系統聲音和麥克風；框選英文後原地換成中文，保留原有版面。翻譯需自備 DeepSeek API Key，選取範圍的截圖會傳送給 DeepSeek。",
+    "ja": "MyGo のネイティブ UI で描かれた Windows 10/11 用のトレイ常駐ツール。WebView も FFmpeg も使いません。範囲を選んでスクリーンショットを撮り、ペン、ぼかし、番号、枠で注釈を付けられます。選んだ範囲はシステム音とマイクの音声付きで H.264 の MP4 に録画でき、英文を選ぶとレイアウトを保ったままその場で中国語に置き換えます。翻訳には自分の DeepSeek API キーが必要で、選択範囲の画像は DeepSeek に送られます。",
+    "ko": "MyGo의 네이티브 UI로 그린 Windows 10/11용 트레이 상주 도구로, WebView도 FFmpeg도 쓰지 않습니다. 영역을 골라 스크린샷을 찍고 펜, 흐림, 번호, 강조 상자로 주석을 달 수 있으며, 선택 영역을 시스템 소리와 마이크를 함께 담아 H.264 MP4로 녹화합니다. 영어 영역을 고르면 레이아웃을 유지한 채 그 자리에서 중국어로 바꿔 줍니다. 번역에는 본인의 DeepSeek API 키가 필요하며 선택 영역 이미지가 DeepSeek로 전송됩니다."
+  },
+  "icon": {
+    "file": "cliprecorder.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "cliprecorder.webp",
+  "added": "2026-11-06T03:34:18Z"
 }
