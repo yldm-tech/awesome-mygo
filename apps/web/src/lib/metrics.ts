@@ -4,6 +4,7 @@ export type MetricsRange = 7 | 30 | 90;
 
 export interface MetricsPayload {
 	enabled: boolean;
+	reason?: 'not_configured' | 'unavailable';
 	days: number;
 	start: string;
 	end: string;
@@ -16,6 +17,7 @@ export interface MetricsPayload {
 interface MetricsState {
 	loading: boolean;
 	error: boolean;
+	reason?: MetricsPayload['reason'];
 	data?: MetricsPayload;
 }
 
@@ -30,10 +32,10 @@ export function useMetrics(days: MetricsRange): MetricsState {
 				return (await response.json()) as MetricsPayload;
 			})
 			.then((data) => {
-				if (live) setState({ loading: false, error: !data.enabled, data: data.enabled ? data : undefined });
+				if (live) setState({ loading: false, error: !data.enabled, reason: data.reason, data: data.enabled ? data : undefined });
 			})
 			.catch(() => {
-				if (live) setState({ loading: false, error: true });
+				if (live) setState({ loading: false, error: true, reason: 'unavailable' });
 			});
 		return () => {
 			live = false;

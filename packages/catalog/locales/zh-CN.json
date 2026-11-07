@@ -22,6 +22,7 @@
 	"metrics_no_data": "还没有页面浏览记录。",
 	"metrics_loading": "正在加载统计…",
 	"metrics_unavailable": "当前环境暂时无法读取统计。",
+	"metrics_not_configured": "当前预览环境未连接统计数据库；正式部署时会自动启用。",
 	"metrics_updated": "UTC · 按天聚合",
 	"nav_showcase": "作品",
 	"nav_learn": "文档",

@@ -10,13 +10,13 @@ export const Route = createFileRoute('/api/metrics')({
 	server: {
 		handlers: {
 			GET: async ({ request }) => {
-				if (!env.DB) return json({ enabled: false });
+				if (!env.DB) return json({ enabled: false, reason: 'not_configured' });
 				const requested = Number(new URL(request.url).searchParams.get('days'));
 				try {
 					return json({ enabled: true, ...await pageViewMetrics(env.DB, requested) });
 				} catch (error) {
 					console.error('reading page view metrics failed', error);
-					return json({ enabled: false }, 503);
+					return json({ enabled: false, reason: 'unavailable' }, 503);
 				}
 			},
 		},

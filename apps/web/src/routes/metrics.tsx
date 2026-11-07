@@ -68,7 +68,7 @@ function MetricsPage() {
 	const lang = useLang();
 	const locale = lang === 'zh-CN' ? 'zh-CN' : lang === 'zh-TW' ? 'zh-TW' : lang;
 	const [range, setRange] = useState<MetricsRange>(30);
-	const { loading, error, data } = useMetrics(range);
+	const { loading, error, reason, data } = useMetrics(range);
 	const peak = useMemo(() => (data?.daily.length ? data.daily.reduce((best, row) => (row.views > best.views ? row : best), data.daily[0]) : undefined), [data]);
 	const today = data?.daily.at(-1)?.views ?? 0;
 	const maxPath = Math.max(1, ...(data?.topPaths.map((row) => row.views) ?? []));
@@ -91,7 +91,7 @@ function MetricsPage() {
 					{RANGES.map((days) => <button key={days} type='button' role='tab' aria-selected={range === days} onClick={() => setRange(days)} className='min-h-9 rounded-[9px] border-0 px-3.5 text-[13px] font-semibold text-fg-2 transition-colors aria-selected:bg-cyan aria-selected:text-bg'>{t[`metrics_${days}d` as 'metrics_7d' | 'metrics_30d' | 'metrics_90d']}</button>)}
 				</div>
 			</div>
-			{loading ? <div className='rounded-[18px] border border-line-2 bg-panel p-10 text-center text-fg-3'>{t.metrics_loading}</div> : error || !data ? <div className='rounded-[18px] border border-dashed border-line-3 bg-panel p-10 text-center text-fg-2'>{t.metrics_unavailable}</div> : (
+			{loading ? <div className='rounded-[18px] border border-line-2 bg-panel p-10 text-center text-fg-3'>{t.metrics_loading}</div> : error || !data ? <div className='rounded-[18px] border border-dashed border-line-3 bg-panel p-10 text-center text-fg-2'>{reason === 'not_configured' ? t.metrics_not_configured : t.metrics_unavailable}</div> : (
 				<>
 					<div className='grid grid-cols-4 gap-3 max-md:grid-cols-2'>
 						<MetricCard label={t.metrics_views} value={number(data.total, locale)} accent />

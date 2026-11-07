@@ -22,6 +22,7 @@
 	"metrics_no_data": "還沒有頁面瀏覽記錄。",
 	"metrics_loading": "正在載入統計…",
 	"metrics_unavailable": "目前環境暫時無法讀取統計。",
+	"metrics_not_configured": "目前預覽環境未連接統計資料庫；正式部署時會自動啟用。",
 	"metrics_updated": "UTC · 按天彙總",
 	"nav_showcase": "作品",
 	"nav_learn": "文件",

@@ -22,6 +22,7 @@
 	"metrics_no_data": "아직 페이지 조회 기록이 없습니다.",
 	"metrics_loading": "통계를 불러오는 중…",
 	"metrics_unavailable": "이 환경에서는 통계를 사용할 수 없습니다.",
+	"metrics_not_configured": "이 프리뷰 환경에는 통계 데이터베이스가 없습니다. 프로덕션에서는 자동으로 활성화됩니다.",
 	"metrics_updated": "UTC · 일별 집계",
 	"nav_showcase": "쇼케이스",
 	"nav_learn": "문서",

@@ -22,6 +22,7 @@
 	"metrics_no_data": "No page views yet.",
 	"metrics_loading": "Loading metrics…",
 	"metrics_unavailable": "Metrics are unavailable in this environment.",
+	"metrics_not_configured": "This preview environment has no metrics database; production enables it automatically.",
 	"metrics_updated": "UTC · aggregated daily",
 	"nav_showcase": "Showcase",
 	"nav_learn": "Learn",
