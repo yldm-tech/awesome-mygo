@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "sona",
+	"name": "Sona",
+	"author": "coredev-uk",
+	"kind": "native",
+	"group": "media",
+	"url": "https://github.com/coredev-uk/sona-go",
+	"repo": "coredev-uk/sona-go",
+	"summary": {
+		"en": "An Apple Music desktop client, built first for Linux, with lyrics, media controls and a tray.",
+		"zh-CN": "Apple Music 桌面客户端，以 Linux 为主，支持歌词、媒体控制与托盘。",
+		"zh-TW": "Apple Music 桌面用戶端，以 Linux 為主，支援歌詞、媒體控制與系統匣。",
+		"ja": "Linux 優先の Apple Music デスクトップクライアント。歌詞、メディア操作、トレイに対応。",
+		"ko": "Linux 우선 Apple Music 데스크톱 클라이언트. 가사, 미디어 컨트롤, 트레이 지원."
+	},
+	"description": {
+		"en": "An Apple Music client built first for Linux, its interface drawn by MyGo's native UI over GTK3, AppKit or Win32, with no web view. On Linux it plays with lyrics, media controls, notifications and a tray, and on macOS with media keys and Now Playing; on Windows it browses the library but cannot play yet. It needs an Apple Music subscription and is in early development.",
+		"zh-CN": "优先为 Linux 打造的 Apple Music 客户端，界面由 MyGo 原生 UI 在 GTK3、AppKit 或 Win32 上绘制，没有 Web 视图。在 Linux 上可播放，支持歌词、媒体控制、通知与托盘；macOS 上可播放，支持媒体键与 Now Playing；Windows 版目前只能浏览资料库，尚不能播放。需要 Apple Music 订阅，仍处于早期开发阶段。",
+		"zh-TW": "優先為 Linux 打造的 Apple Music 用戶端，介面由 MyGo 原生 UI 在 GTK3、AppKit 或 Win32 上繪製，沒有 Web 視圖。在 Linux 上可播放，支援歌詞、媒體控制、通知與系統匣；macOS 上可播放，支援媒體鍵與 Now Playing；Windows 版目前只能瀏覽資料庫，尚無法播放。需要 Apple Music 訂閱，仍處於早期開發階段。",
+		"ja": "Linux を最優先に作られた Apple Music クライアント。画面は MyGo のネイティブ UI が GTK3・AppKit・Win32 の上に描き、Web ビューはありません。Linux では歌詞、メディア操作、通知、トレイ付きで再生でき、macOS ではメディアキーと Now Playing に対応します。Windows 版はライブラリの閲覧のみで、まだ再生できません。Apple Music のサブスクリプションが必要で、開発初期の段階です。",
+		"ko": "Linux를 우선으로 만든 Apple Music 클라이언트로, 화면은 MyGo의 네이티브 UI가 GTK3, AppKit, Win32 위에 그리며 웹 뷰가 없습니다. Linux에서는 가사, 미디어 컨트롤, 알림, 트레이와 함께 재생하고, macOS에서는 미디어 키와 Now Playing을 지원합니다. Windows에서는 보관함 탐색만 되고 아직 재생할 수 없습니다. Apple Music 구독이 필요하며 초기 개발 단계입니다."
+	},
+	"icon": {
+		"file": "sona.webp"
+	},
+	"screenshot": "sona.webp",
+	"added": "2026-11-07T08:59:06Z"
+}
