@@ -1,9 +1,10 @@
-import { DEFAULT_LANG, fill, t } from '@awesome-mygo/catalog';
-import { createFileRoute } from '@tanstack/react-router';
-import { type PointerEvent, useMemo, useState } from 'react';
+import { DEFAULT_LANG, type Translations, fill, t } from '@awesome-mygo/catalog';
+import { Link, createFileRoute } from '@tanstack/react-router';
+import { type PointerEvent, type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import { SITE_NAV } from '../components/Header';
 import { MetricsGlobe } from '../components/MetricsGlobe';
 import { useLang, useT } from '../lib/lang';
-import { MetricsRange, number, pathLabel, shortDay, useMetrics } from '../lib/metrics';
+import { type MetricsPayload, type MetricsRange, compact, number, pathLabel, percent, shortDay, trackedDays, useMetrics } from '../lib/metrics';
 import { SITE_NAME } from '../lib/seo';
 
 export const Route = createFileRoute('/metrics')({
@@ -16,47 +17,81 @@ export const Route = createFileRoute('/metrics')({
 
 const RANGES: MetricsRange[] = [7, 30, 90];
 
-function MetricCard({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {
+function MetricCard({ label, value, hint, accent = false }: { label: string; value: string; hint?: string; accent?: boolean }) {
 	return (
-		<div className={`rounded-[18px] border p-5 ${accent ? 'border-cyan/40 bg-[linear-gradient(135deg,rgba(63,211,245,0.15),rgba(63,211,245,0.03))]' : 'border-line-2 bg-panel'}`}>
+		<div className={`flex min-w-0 flex-col rounded-[18px] border p-5 max-sm:p-4 ${accent ? 'border-cyan/40 bg-[linear-gradient(135deg,rgba(63,211,245,0.15),rgba(63,211,245,0.03))]' : 'border-line-2 bg-panel'}`}>
 			<p className='m-0 text-[13px] font-semibold tracking-[0.04em] text-fg-3'>{label}</p>
-			<p className='m-0 mt-3 font-display text-[34px] leading-none font-black tracking-[-0.04em] text-fg'>{value}</p>
+			<p className='m-0 mt-3 font-display text-[34px] leading-none font-black tracking-[-0.04em] text-fg tabular-nums max-sm:text-[28px]'>{value}</p>
+			{hint && <p className='m-0 mt-2.5 truncate font-mono text-[11px] text-fg-3' title={hint}>{hint}</p>}
 		</div>
 	);
 }
 
-function ViewChart({ days, locale }: { days: { day: string; views: number }[]; locale: string }) {
+function Panel({ id, title, aside, children }: { id: string; title: string; aside?: ReactNode; children: ReactNode }) {
+	const t = useT();
+	return (
+		<section className='rounded-[18px] border border-line-2 bg-panel p-5 max-sm:p-4' aria-labelledby={id}>
+			<div className='mb-4 flex flex-wrap items-start justify-between gap-x-4 gap-y-1'>
+				<div><h2 id={id} className='m-0 text-[20px] font-black'>{title}</h2><p className='m-0 mt-1 font-mono text-[11px] text-fg-3'>{t.metrics_updated}</p></div>
+				{aside}
+			</div>
+			{children}
+		</section>
+	);
+}
+
+// Round the axis maximum up to 1, 2 or 5 times a power of ten so the tick labels are readable numbers.
+function niceMax(value: number): number {
+	if (value <= 0) return 1;
+	const power = 10 ** Math.floor(Math.log10(value));
+	const step = [1, 2, 5, 10].find((m) => m * power >= value) ?? 10;
+	return step * power;
+}
+
+function ViewChart({ days, locale, label }: { days: { day: string; views: number }[]; locale: string; label: string }) {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null);
-	const width = 860;
-	const height = 280;
-	const left = 24;
-	const right = 16;
-	const top = 20;
-	const bottom = 34;
-	const max = Math.max(1, ...days.map((d) => d.views));
+	// Drawn at the container's real pixel width, so axis text stays 12 px on a phone instead of shrinking with a fixed viewBox.
+	const frame = useRef<HTMLDivElement>(null);
+	const [width, setWidth] = useState(1080);
+	useEffect(() => {
+		const node = frame.current;
+		if (!node || typeof ResizeObserver === 'undefined') return;
+		const observer = new ResizeObserver(([entry]) => { if (entry) setWidth(Math.max(260, Math.round(entry.contentRect.width))); });
+		observer.observe(node);
+		return () => observer.disconnect();
+	}, []);
+	const height = Math.round(Math.max(220, Math.min(300, width * 0.3)));
+	const left = 52;
+	const right = 20;
+	const top = 22;
+	const bottom = 36;
+	const max = niceMax(Math.max(...days.map((d) => d.views), 0));
 	const plotWidth = width - left - right;
 	const plotHeight = height - top - bottom;
-	const point = (value: number, i: number) => ({ x: left + (days.length <= 1 ? plotWidth / 2 : (i / (days.length - 1)) * plotWidth), y: top + plotHeight - (value / max) * plotHeight });
-	const points = days.map((d, i) => point(d.views, i));
+	const x = (i: number) => left + (days.length <= 1 ? plotWidth / 2 : (i / (days.length - 1)) * plotWidth);
+	const y = (value: number) => top + plotHeight - (value / max) * plotHeight;
+	const points = days.map((d, i) => ({ x: x(i), y: y(d.views) }));
 	const line = points.map((p) => `${p.x},${p.y}`).join(' ');
-	const area = points.length > 0 ? `${left},${top + plotHeight} ${line} ${left + plotWidth},${top + plotHeight}` : '';
-	const labels = days.filter((_, i) => i === 0 || i === days.length - 1 || i === Math.floor(days.length / 2));
+	const area = points.length > 1 ? `${points[0]!.x},${top + plotHeight} ${line} ${points.at(-1)!.x},${top + plotHeight}` : '';
+	const labelEvery = Math.max(1, Math.ceil(days.length / Math.max(2, Math.floor(width / 110))));
+	const dense = days.length > 45;
+	const active = activeIndex === null ? undefined : days[activeIndex];
 	const activePoint = activeIndex === null ? undefined : points[activeIndex];
 	const setActiveFromPointer = (event: PointerEvent<SVGSVGElement>) => {
 		if (days.length === 0) return;
 		const bounds = event.currentTarget.getBoundingClientRect();
 		const viewX = ((event.clientX - bounds.left) / bounds.width) * width;
 		const normalized = (viewX - left) / plotWidth;
-		const index = days.length <= 1 ? 0 : Math.round(Math.max(0, Math.min(1, normalized)) * (days.length - 1));
-		setActiveIndex(index);
+		setActiveIndex(days.length <= 1 ? 0 : Math.round(Math.max(0, Math.min(1, normalized)) * (days.length - 1)));
 	};
 	return (
-		<div className='relative min-h-[280px] overflow-hidden rounded-[14px] border border-line-2 bg-bg/45 p-3'>
-			{activePoint && activeIndex !== null && <div className='pointer-events-none absolute top-3 z-10 -translate-x-1/2 rounded-lg border border-cyan/35 bg-panel/95 px-3 py-2 text-center font-mono text-[11px] shadow-[0_8px_24px_rgba(0,0,0,0.28)]' style={{ left: `${(activePoint.x / width) * 100}%` }}>
-				<div className='text-fg-3'>{shortDay(days[activeIndex]?.day ?? '', locale)}</div>
-				<div className='mt-0.5 text-[15px] font-bold text-cyan'>{number(days[activeIndex]?.views ?? 0, locale)}</div>
+		<div className='relative overflow-hidden rounded-[14px] border border-line-2 bg-bg/45 p-3'>
+			<div ref={frame} className='absolute inset-x-3 top-0 h-0' aria-hidden='true' />
+			{active && activePoint && <div className='pointer-events-none absolute top-3 z-10 -translate-x-1/2 rounded-lg border border-cyan/35 bg-panel/95 px-3 py-2 text-center font-mono text-[11px] whitespace-nowrap shadow-[0_8px_24px_rgba(0,0,0,0.28)]' style={{ left: `clamp(56px, ${(activePoint.x / width) * 100}%, calc(100% - 56px))` }}>
+				<div className='text-fg-3'>{shortDay(active.day, locale)}</div>
+				<div className='mt-0.5 text-[15px] font-bold text-cyan'>{number(active.views, locale)}</div>
 			</div>}
-			<svg viewBox={`0 0 ${width} ${height}`} role='img' aria-label='Page views over time' className='block h-auto w-full' onPointerMove={setActiveFromPointer} onPointerLeave={() => setActiveIndex(null)}>
+			<svg viewBox={`0 0 ${width} ${height}`} role='img' aria-label={label} className='block h-auto w-full touch-pan-y' onPointerMove={setActiveFromPointer} onPointerDown={setActiveFromPointer} onPointerLeave={() => setActiveIndex(null)}>
 				<defs>
 					<linearGradient id='metrics-area' x1='0' y1='0' x2='0' y2='1'>
 						<stop offset='0%' stopColor='#3fd3f5' stopOpacity='0.32' />
@@ -64,74 +99,109 @@ function ViewChart({ days, locale }: { days: { day: string; views: number }[]; l
 					</linearGradient>
 				</defs>
 				<rect width={width} height={height} fill='transparent' pointerEvents='all' />
-				{[0, 0.5, 1].map((fraction) => {
-					const y = top + plotHeight * fraction;
-					return <line key={fraction} x1={left} x2={left + plotWidth} y1={y} y2={y} stroke='currentColor' strokeOpacity='0.12' strokeDasharray='3 7' />;
+				{[0, 0.25, 0.5, 0.75, 1].map((fraction) => {
+					const value = max * fraction;
+					const lineY = y(value);
+					return (
+						<g key={fraction}>
+							<line x1={left} x2={left + plotWidth} y1={lineY} y2={lineY} stroke='currentColor' strokeOpacity={fraction === 0 ? 0.22 : 0.1} strokeDasharray={fraction === 0 ? undefined : '3 7'} />
+							<text x={left - 10} y={lineY + 4} textAnchor='end' fill='currentColor' fillOpacity='0.45' fontSize='12' fontFamily='ui-monospace, SFMono-Regular, Menlo, monospace'>{compact(value, locale)}</text>
+						</g>
+					);
 				})}
-				{area && <polygon points={area} fill='url(#metrics-area)' className='metrics-chart-area motion-safe:animate-[metrics-area-in_0.8s_ease-out_both] motion-reduce:animate-none' />}
-				{line && <polyline points={line} pathLength='1' fill='none' stroke='#3fd3f5' strokeWidth='4' strokeLinecap='round' strokeLinejoin='round' className='metrics-chart-line motion-safe:animate-[metrics-line-draw_1.1s_cubic-bezier(0.2,0.7,0.2,1)_both] motion-reduce:animate-none' />}
-				{points.map((p, i) => <circle key={days[i]?.day} cx={p.x} cy={p.y} r={activeIndex === i ? (days.length > 45 ? 4 : 6) : days.length > 45 ? 2.5 : 4} fill={activeIndex === i ? '#3fd3f5' : '#0b0d10'} stroke='#3fd3f5' strokeWidth='2' className='metrics-chart-point motion-safe:animate-[metrics-point-pop_0.35s_ease-out_both] motion-reduce:animate-none' style={{ animationDelay: `${Math.min(i * 22, 420)}ms` }} />)}
+				{days.map((d, i) => (i % labelEvery === 0 || i === days.length - 1) && (i === days.length - 1 || days.length - 1 - i >= labelEvery / 2) ? <text key={d.day} x={x(i)} y={height - 10} textAnchor={days.length === 1 ? 'middle' : i === 0 ? 'start' : i === days.length - 1 ? 'end' : 'middle'} fill='currentColor' fillOpacity='0.45' fontSize='12' fontFamily='ui-monospace, SFMono-Regular, Menlo, monospace'>{shortDay(d.day, locale)}</text> : null)}
+				{activePoint && <line x1={activePoint.x} x2={activePoint.x} y1={top} y2={top + plotHeight} stroke='#3fd3f5' strokeOpacity='0.35' strokeDasharray='2 4' />}
+				{area && <polygon points={area} fill='url(#metrics-area)' className='motion-safe:animate-[metrics-area-in_0.8s_ease-out_both] motion-reduce:animate-none' />}
+				{points.length > 1 && <polyline points={line} pathLength='1' fill='none' stroke='#3fd3f5' strokeWidth='3.5' strokeLinecap='round' strokeLinejoin='round' className='motion-safe:animate-[metrics-line-draw_1.1s_cubic-bezier(0.2,0.7,0.2,1)_both] motion-reduce:animate-none' />}
+				{points.map((p, i) => <circle key={days[i]?.day} cx={p.x} cy={p.y} r={activeIndex === i ? (dense ? 4.5 : 6) : dense ? 2 : 4} fill={activeIndex === i ? '#3fd3f5' : '#0b0d10'} stroke='#3fd3f5' strokeWidth='2' className='[transform-box:fill-box] motion-safe:animate-[metrics-point-pop_0.35s_ease-out_both] motion-reduce:animate-none' style={{ animationDelay: `${Math.min(i * 22, 420)}ms` }} />)}
 			</svg>
-			<div className='pointer-events-none absolute inset-x-4 bottom-2 flex justify-between font-mono text-[11px] text-fg-3'>
-				{labels.map((d) => <span key={d.day}>{shortDay(d.day, locale)}</span>)}
-			</div>
 		</div>
+	);
+}
+
+function PageLink({ path, className, children }: { path: string; className: string; children: ReactNode }) {
+	if (path.startsWith('/apps/')) return <Link to='/apps/$slug' params={{ slug: path.slice('/apps/'.length) }} className={className}>{children}</Link>;
+	const nav = path === '/' ? { to: '/' as const } : SITE_NAV.find((n) => n.to === path);
+	if (nav) return <Link to={nav.to} className={className}>{children}</Link>;
+	return <span className={className}>{children}</span>;
+}
+
+function TopPages({ rows, total, locale, t }: { rows: MetricsPayload['topPaths']; total: number; locale: string; t: Translations }) {
+	if (rows.length === 0) return <p className='m-0 text-[14px] text-fg-3'>{t.metrics_no_data}</p>;
+	const max = Math.max(1, rows[0]?.views ?? 1);
+	return (
+		<ol className='m-0 grid list-none grid-cols-2 gap-x-8 gap-y-1 p-0 max-lg:grid-cols-1'>
+			{rows.map((row, i) => (
+				<li key={row.path}>
+					<PageLink path={row.path} className='group -mx-2 flex flex-col gap-1.5 rounded-lg px-2 py-2 text-inherit no-underline transition-colors hover:bg-white/4'>
+						<span className='flex items-center gap-3 text-[13px]'>
+							<span className='w-5 shrink-0 font-mono text-[11px] text-fg-3'>{i + 1}</span>
+							<span className='min-w-0 flex-1 truncate text-fg-2 group-hover:text-cyan' title={row.path}>{pathLabel(row.path, t)}</span>
+							<span className='font-mono text-[12px] text-fg-3 tabular-nums'>{number(row.views, locale)}</span>
+							<span className='w-12 text-right font-mono text-[11px] text-cyan tabular-nums'>{percent(row.views, total, locale)}</span>
+						</span>
+						<span className='ml-8 h-1.5 overflow-hidden rounded-full bg-line-2'><span className={`block h-full rounded-full transition-[width] duration-500 ${i === 0 ? 'bg-cyan' : 'bg-cyan/45'}`} style={{ width: `${(row.views / max) * 100}%` }} /></span>
+					</PageLink>
+				</li>
+			))}
+		</ol>
 	);
 }
 
 function MetricsPage() {
 	const t = useT();
-	const lang = useLang();
-	const locale = lang === 'zh-CN' ? 'zh-CN' : lang === 'zh-TW' ? 'zh-TW' : lang;
+	const locale = useLang();
 	const [range, setRange] = useState<MetricsRange>(30);
-	const { loading, error, reason, data } = useMetrics(range);
-	const peak = useMemo(() => (data?.daily.length ? data.daily.reduce((best, row) => (row.views > best.views ? row : best), data.daily[0]) : undefined), [data]);
-	const today = data?.daily.at(-1)?.views ?? 0;
-	const maxPath = Math.max(1, ...(data?.topPaths.map((row) => row.views) ?? []));
+	const { loading, refreshing, error, reason, data, updatedAt } = useMetrics(range);
+	const days = useMemo(() => (data ? trackedDays(data.daily, data.since) : []), [data]);
+	const peak = useMemo(() => (days.length ? days.reduce((best, row) => (row.views > best.views ? row : best), days[0]!) : undefined), [days]);
+	const today = days.at(-1);
+	const yesterday = days.length > 1 ? days.at(-2) : undefined;
+	const partialRange = Boolean(data?.since && data.since > data.start);
+	const range0 = days[0]?.day ?? data?.start ?? '';
+	const updated = updatedAt ? new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(updatedAt) : undefined;
+	const rangeTag = data && <span className='font-mono text-[12px] text-cyan'>{range0} → {data.end}</span>;
 	return (
 		<section className='page enter gap-7 max-sm:gap-5'>
 			<header className='flex flex-wrap items-end justify-between gap-5'>
 				<div className='flex flex-col gap-3.5'>
-					<span className='kicker' lang='en'>~/METRICS · {t.metrics_live.toUpperCase()}</span>
+					<span className='kicker' lang='en'>~/METRICS</span>
 					<h1 className='page-h1'>{t.metrics_h}</h1>
 					<p className='page-p max-w-[680px]'>{t.metrics_p}</p>
 				</div>
-				<div className='flex items-center gap-2 rounded-full border border-green/35 bg-green/8 px-3.5 py-2 font-mono text-[12px] text-green'>
-					<span className='size-2 rounded-full bg-green shadow-[0_0_14px_rgba(155,227,138,0.9)]' aria-hidden='true' />
+				<div className='flex items-center gap-2 rounded-full border border-green/35 bg-green/8 px-3.5 py-2 font-mono text-[12px] text-green' aria-live='polite'>
+					<span className={`size-2 rounded-full bg-green shadow-[0_0_14px_rgba(155,227,138,0.9)] ${refreshing ? 'motion-safe:animate-pulse' : ''}`} aria-hidden='true' />
 					{t.metrics_live}
+					{updated && <span className='text-green/70'>· {fill(t.metrics_updated_at, { x: updated })}</span>}
 				</div>
 			</header>
 			<div className='flex flex-wrap items-center justify-between gap-3 rounded-[14px] border border-line bg-well/70 p-2.5'>
-				<span className='px-2 text-[13px] font-semibold text-fg-3'>{t.metrics_range}</span>
+				<div className='flex flex-wrap items-center gap-x-3 gap-y-1 px-2'>
+					<span className='text-[13px] font-semibold text-fg-3'>{t.metrics_range}</span>
+					{partialRange && data?.since && <span className='rounded-full border border-amber/30 bg-amber/8 px-2.5 py-0.5 font-mono text-[11px] text-amber'>{fill(t.metrics_since, { x: shortDay(data.since, locale) })}</span>}
+				</div>
 				<div role='tablist' aria-label={t.metrics_range} className='flex gap-1'>
-					{RANGES.map((days) => <button key={days} type='button' role='tab' aria-selected={range === days} onClick={() => setRange(days)} className='min-h-9 rounded-[9px] border-0 bg-transparent px-3.5 text-[13px] font-semibold text-fg-2 transition-colors hover:bg-white/6 hover:text-fg aria-selected:bg-cyan aria-selected:text-bg'>{t[`metrics_${days}d` as 'metrics_7d' | 'metrics_30d' | 'metrics_90d']}</button>)}
+					{RANGES.map((n) => <button key={n} type='button' role='tab' aria-selected={range === n} onClick={() => setRange(n)} className='min-h-9 rounded-[9px] border-0 bg-transparent px-3.5 text-[13px] font-semibold text-fg-2 transition-colors hover:bg-white/6 hover:text-fg aria-selected:bg-cyan aria-selected:text-bg'>{t[`metrics_${n}d` as 'metrics_7d' | 'metrics_30d' | 'metrics_90d']}</button>)}
 				</div>
 			</div>
 			{loading ? <div className='rounded-[18px] border border-line-2 bg-panel p-10 text-center text-fg-3'>{t.metrics_loading}</div> : error || !data ? <div className='rounded-[18px] border border-dashed border-line-3 bg-panel p-10 text-center text-fg-2'>{reason === 'not_configured' ? t.metrics_not_configured : t.metrics_unavailable}</div> : (
-				<>
+				<div className={`flex flex-col gap-7 transition-opacity max-sm:gap-5 ${refreshing && data.days !== range ? 'opacity-60' : ''}`}>
 					<div className='grid grid-cols-4 gap-3 max-md:grid-cols-2'>
-						<MetricCard label={t.metrics_views} value={number(data.total, locale)} accent />
-						<MetricCard label={t.metrics_today} value={number(today, locale)} />
-						<MetricCard label={t.metrics_peak} value={peak ? `${number(peak.views, locale)} · ${shortDay(peak.day, locale)}` : '—'} />
-						<MetricCard label={t.metrics_pages} value={number(data.pageCount, locale)} />
+						<MetricCard label={t.metrics_views} value={number(data.total, locale)} hint={days.length ? fill(t.metrics_avg, { n: number(Math.round(data.total / days.length), locale) }) : undefined} accent />
+						<MetricCard label={t.metrics_today} value={number(today?.views ?? 0, locale)} hint={yesterday ? fill(t.metrics_yesterday, { n: number(yesterday.views, locale) }) : today ? `${shortDay(today.day, locale)} · UTC` : undefined} />
+						<MetricCard label={t.metrics_peak} value={peak ? number(peak.views, locale) : '—'} hint={peak ? shortDay(peak.day, locale) : undefined} />
+						<MetricCard label={t.metrics_pages} value={number(data.pageCount, locale)} hint={data.topPaths[0] ? fill(t.metrics_top_page, { x: pathLabel(data.topPaths[0].path, t) }) : undefined} />
 					</div>
-					<section className='rounded-[18px] border border-line-2 bg-panel p-5 max-sm:p-4' aria-labelledby='metrics-regions'>
-						<div className='mb-4 flex items-start justify-between gap-4'><div><h2 id='metrics-regions' className='m-0 text-[20px] font-black'>{t.metrics_regions}</h2><p className='m-0 mt-1 font-mono text-[11px] text-fg-3'>{t.metrics_updated}</p></div><span className='font-mono text-[12px] text-cyan'>{data.start} → {data.end}</span></div>
-						<MetricsGlobe regions={data.regions} locale={locale} label={t.metrics_regions} liveLabel={t.metrics_globe_live} edgeLabel={(count) => fill(t.metrics_globe_edge, { n: count })} centerLabel={t.metrics_globe_center} hintLabel={t.metrics_globe_hint} />
-					</section>
-					<div className='grid grid-cols-[minmax(0,1.55fr)_minmax(300px,0.9fr)] gap-4 max-lg:grid-cols-1'>
-						<section className='rounded-[18px] border border-line-2 bg-panel p-5 max-sm:p-4' aria-labelledby='metrics-distribution'>
-							<div className='mb-4 flex items-start justify-between gap-4'><div><h2 id='metrics-distribution' className='m-0 text-[20px] font-black'>{t.metrics_distribution}</h2><p className='m-0 mt-1 font-mono text-[11px] text-fg-3'>{t.metrics_updated}</p></div><span className='font-mono text-[12px] text-cyan'>{data.start} → {data.end}</span></div>
-							<ViewChart days={data.daily} locale={locale} />
-						</section>
-						<section className='rounded-[18px] border border-line-2 bg-panel p-5 max-sm:p-4' aria-labelledby='metrics-top-pages'>
-							<div className='mb-5'><h2 id='metrics-top-pages' className='m-0 text-[20px] font-black'>{t.metrics_top_pages}</h2><p className='m-0 mt-1 font-mono text-[11px] text-fg-3'>{t.metrics_updated}</p></div>
-							<div className='flex flex-col gap-4'>
-								{data.topPaths.length === 0 ? <p className='m-0 text-[14px] text-fg-3'>{t.metrics_no_data}</p> : data.topPaths.map((row, i) => <div key={row.path} className='flex flex-col gap-1.5'><div className='flex items-center justify-between gap-3 font-mono text-[12px]'><span className='min-w-0 truncate text-fg-2'>{pathLabel(row.path)}</span><span className='text-fg-3'>{number(row.views, locale)}</span></div><div className='h-2 overflow-hidden rounded-full bg-line-2'><div className={`h-full rounded-full ${i === 0 ? 'bg-cyan' : 'bg-cyan/45'}`} style={{ width: `${(row.views / maxPath) * 100}%` }} /></div></div>)}
-							</div>
-						</section>
-					</div>
-				</>
+					<Panel id='metrics-regions' title={t.metrics_regions} aside={rangeTag}>
+						<MetricsGlobe regions={data.regions} regionTotal={data.regionTotal} locale={locale} labels={{ title: t.metrics_regions, live: t.metrics_globe_live, edge: (n) => fill(t.metrics_globe_edge, { n }), center: t.metrics_globe_center, hint: t.metrics_globe_hint, unknown: t.metrics_region_unknown, share: t.metrics_share }} />
+					</Panel>
+					<Panel id='metrics-distribution' title={t.metrics_distribution} aside={rangeTag}>
+						<ViewChart days={days} locale={locale} label={t.metrics_distribution} />
+					</Panel>
+					<Panel id='metrics-top-pages' title={t.metrics_top_pages}>
+						<TopPages rows={data.topPaths} total={data.total} locale={locale} t={t} />
+					</Panel>
+				</div>
 			)}
 		</section>
 	);

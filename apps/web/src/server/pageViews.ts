@@ -31,9 +31,11 @@ export interface PageViewMetrics {
 	end: string;
 	total: number;
 	pageCount: number;
+	since: string | null;
 	daily: DailyViews[];
 	topPaths: PathViews[];
 	regions: RegionViews[];
+	regionTotal: number;
 }
 
 function utcDay(date = new Date()): string {
@@ -73,12 +75,16 @@ export async function pageViewMetrics(db: D1PageViews, requestedDays: number): P
 	const days = requestedDays === 7 || requestedDays === 90 ? requestedDays : 30;
 	const end = utcDay();
 	const start = dayBefore(days - 1);
-	const [dailyResult, pathResult, totalResult, pageCountResult, regionsResult] = await Promise.all([
+	const [dailyResult, pathResult, totalResult, pageCountResult, regionsResult, regionTotalResult, sinceResult] = await Promise.all([
 		db.prepare('SELECT day, SUM(views) AS views FROM page_views WHERE day BETWEEN ? AND ? GROUP BY day ORDER BY day').bind(start, end).all<DailyViews>(),
 		db.prepare('SELECT path, SUM(views) AS views FROM page_views WHERE day BETWEEN ? AND ? GROUP BY path ORDER BY views DESC, path LIMIT 12').bind(start, end).all<PathViews>(),
 		db.prepare('SELECT COALESCE(SUM(views), 0) AS views FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ views: number }>(),
 		db.prepare('SELECT COUNT(DISTINCT path) AS n FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ n: number }>(),
-		db.prepare('SELECT country, SUM(views) AS views FROM page_view_regions WHERE day BETWEEN ? AND ? GROUP BY country ORDER BY views DESC, country LIMIT 48').bind(start, end).all<RegionViews>(),
+		db.prepare('SELECT country, SUM(views) AS views FROM page_view_regions WHERE day BETWEEN ? AND ? GROUP BY country ORDER BY views DESC, country LIMIT 260').bind(start, end).all<RegionViews>(),
+		// Region shares are measured against every region row, not just the listed ones, so a long tail cut by the LIMIT does not inflate the leaders.
+		db.prepare('SELECT COALESCE(SUM(views), 0) AS views FROM page_view_regions WHERE day BETWEEN ? AND ?').bind(start, end).all<{ views: number }>(),
+		// The first day anything was recorded, so the dashboard can tell "no traffic" apart from "not tracked yet".
+		db.prepare('SELECT MIN(day) AS day FROM page_views').all<{ day: string | null }>(),
 	]);
 	const byDay = new Map(dailyResult.results.map((row) => [row.day, Number(row.views) || 0]));
 	const daily: DailyViews[] = [];
@@ -94,8 +100,10 @@ export async function pageViewMetrics(db: D1PageViews, requestedDays: number): P
 		end,
 		total: Number(totalResult.results[0]?.views) || 0,
 		pageCount: Number(pageCountResult.results[0]?.n) || 0,
+		since: sinceResult.results[0]?.day ?? null,
 		daily,
 		topPaths: pathResult.results.map((row) => ({ path: row.path, views: Number(row.views) || 0 })),
 		regions: regionsResult.results.map((row) => ({ country: row.country, views: Number(row.views) || 0 })),
+		regionTotal: Number(regionTotalResult.results[0]?.views) || 0,
 	};
 }
