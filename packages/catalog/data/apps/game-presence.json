@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "game-presence",
-	"name": "Game Presence",
-	"author": "JoaoVitorOli",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "game",
-	"url": "https://github.com/JoaoVitorOli/gamepresence",
-	"repo": "JoaoVitorOli/gamepresence",
-	"summary": {
-		"en": "Windows tray app that shows any game on your Discord profile, with the name and cover you choose.",
-		"zh-CN": "Windows 托盘应用：把任意游戏显示到 Discord 资料上，名称和封面自选。",
-		"zh-TW": "Windows 系統匣程式：讓任何遊戲出現在 Discord 個人檔案，名稱與封面自選。",
-		"ja": "どのゲームでも名前とカバーを選んで Discord に表示する Windows 常駐アプリ。",
-		"ko": "어떤 게임이든 원하는 이름과 커버로 Discord 프로필에 표시하는 Windows 트레이 앱."
-	},
-	"description": {
-		"en": "A Windows tray app that shows any game on your Discord profile with the name and cover you choose, including PC ports and emulated games Discord doesn't recognize. It talks to the Discord desktop app over local IPC with no bot or login, and takes covers from IGDB, an image URL or an uploaded local file. Its UI is drawn natively by MyGo with Direct3D 11, with no WebView2.",
-		"zh-CN": "Windows 托盘应用，按你选的名称和封面把任意游戏显示在 Discord 个人资料上，包括 Discord 识别不了的 PC 移植版和模拟器游戏。它通过本地 IPC 与 Discord 桌面版通信，不需要机器人或登录；封面可从 IGDB 搜索、粘贴图片链接或上传本地文件。界面由 MyGo 原生 UI 用 Direct3D 11 绘制，没有 WebView2。",
-		"zh-TW": "Windows 系統匣程式，依你選的名稱與封面把任何遊戲顯示在 Discord 個人檔案上，包括 Discord 認不出的 PC 移植版與模擬器遊戲。它透過本機 IPC 與 Discord 桌面版溝通，不需要機器人或登入；封面可從 IGDB 搜尋、貼上圖片網址或上傳本機檔案。介面由 MyGo 原生 UI 以 Direct3D 11 繪製，沒有 WebView2。",
-		"ja": "選んだ名前とカバーで、どのゲームでも Discord のプロフィールに表示する Windows のトレイ常駐アプリ。Discord が認識しない PC 移植版やエミュレーターのゲームにも使えます。ローカル IPC で Discord デスクトップアプリとやり取りするのでボットもログインも不要で、カバーは IGDB の検索、画像 URL、ローカルファイルのアップロードから選べます。UI は MyGo のネイティブ UI で Direct3D 11 により描かれ、WebView2 は使いません。",
-		"ko": "선택한 이름과 커버로 어떤 게임이든 Discord 프로필에 표시하는 Windows 트레이 앱으로, Discord가 인식하지 못하는 PC 이식판과 에뮬레이터 게임도 다룹니다. 로컬 IPC로 Discord 데스크톱 앱과 통신해 봇이나 로그인이 필요 없고, 커버는 IGDB 검색, 이미지 URL, 로컬 파일 업로드로 지정합니다. UI는 MyGo의 네이티브 UI가 Direct3D 11로 그리며 WebView2를 쓰지 않습니다."
-	},
-	"icon": {
-		"file": "game-presence.webp"
-	},
-	"screenshot": "game-presence.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T16:49:05Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "game-presence",
+  "name": "Game Presence",
+  "author": "JoaoVitorOli",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "game",
+  "url": "https://github.com/JoaoVitorOli/gamepresence",
+  "repo": "JoaoVitorOli/gamepresence",
+  "summary": {
+    "en": "Windows tray app that shows any game on your Discord profile, with the name and cover you choose.",
+    "zh-CN": "Windows 托盘应用：把任意游戏显示到 Discord 资料上，名称和封面自选。",
+    "zh-TW": "Windows 系統匣程式：讓任何遊戲出現在 Discord 個人檔案，名稱與封面自選。",
+    "ja": "どのゲームでも名前とカバーを選んで Discord に表示する Windows 常駐アプリ。",
+    "ko": "어떤 게임이든 원하는 이름과 커버로 Discord 프로필에 표시하는 Windows 트레이 앱."
+  },
+  "description": {
+    "en": "A Windows tray app that shows any game on your Discord profile with the name and cover you choose, including PC ports and emulated games Discord doesn't recognize. It talks to the Discord desktop app over local IPC with no bot or login, and takes covers from IGDB, an image URL or an uploaded local file. Its UI is drawn natively by MyGo with Direct3D 11, with no WebView2.",
+    "zh-CN": "Windows 托盘应用，按你选的名称和封面把任意游戏显示在 Discord 个人资料上，包括 Discord 识别不了的 PC 移植版和模拟器游戏。它通过本地 IPC 与 Discord 桌面版通信，不需要机器人或登录；封面可从 IGDB 搜索、粘贴图片链接或上传本地文件。界面由 MyGo 原生 UI 用 Direct3D 11 绘制，没有 WebView2。",
+    "zh-TW": "Windows 系統匣程式，依你選的名稱與封面把任何遊戲顯示在 Discord 個人檔案上，包括 Discord 認不出的 PC 移植版與模擬器遊戲。它透過本機 IPC 與 Discord 桌面版溝通，不需要機器人或登入；封面可從 IGDB 搜尋、貼上圖片網址或上傳本機檔案。介面由 MyGo 原生 UI 以 Direct3D 11 繪製，沒有 WebView2。",
+    "ja": "選んだ名前とカバーで、どのゲームでも Discord のプロフィールに表示する Windows のトレイ常駐アプリ。Discord が認識しない PC 移植版やエミュレーターのゲームにも使えます。ローカル IPC で Discord デスクトップアプリとやり取りするのでボットもログインも不要で、カバーは IGDB の検索、画像 URL、ローカルファイルのアップロードから選べます。UI は MyGo のネイティブ UI で Direct3D 11 により描かれ、WebView2 は使いません。",
+    "ko": "선택한 이름과 커버로 어떤 게임이든 Discord 프로필에 표시하는 Windows 트레이 앱으로, Discord가 인식하지 못하는 PC 이식판과 에뮬레이터 게임도 다룹니다. 로컬 IPC로 Discord 데스크톱 앱과 통신해 봇이나 로그인이 필요 없고, 커버는 IGDB 검색, 이미지 URL, 로컬 파일 업로드로 지정합니다. UI는 MyGo의 네이티브 UI가 Direct3D 11로 그리며 WebView2를 쓰지 않습니다."
+  },
+  "icon": {
+    "file": "game-presence.webp"
+  },
+  "screenshot": "game-presence.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T16:49:05Z"
 }
