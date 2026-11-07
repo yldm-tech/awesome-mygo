@@ -23,5 +23,11 @@
 		"ko": "순수 Go로 작성하고 MyGo의 네이티브 UI로 그린 macOS용 Git 데스크톱 클라이언트로, WebView를 쓰지 않습니다. 로컬 저장소나 시스템 OpenSSH를 통해 SSH 호스트의 폴더를 엽니다. 상태, 디프, 히스토리 그래프, 브랜치와 워크트리, 3방향 충돌 해결, 편집기, 전체 검색·바꾸기, 통합 터미널을 제공합니다. 현재 빌드는 내부 개발 프리뷰입니다."
 	},
 	"screenshot": "git-viewer.webp",
+	"icon": {
+		"file": "git-viewer.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"added": "2026-11-05T09:41:01Z"
 }

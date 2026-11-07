@@ -22,6 +22,12 @@
 		"ja": "CapCut 風の動画編集アプリのデモで、MyGo のネイティブな GPU 描画 UI と MujicaUI コンポーネントライブラリで作られており、WebView も HTML も JavaScript も使いません。4 トラックのタイムライン上でクリップを移動・トリム・分割・スナップでき、取り消しにも対応し、プロジェクトは EDL JSON として書き出せます。デコーダーはなく、プレビューはプログラムで合成した仮の映像で、完成した動画のレンダリングはできません。",
 		"ko": "CapCut 스타일의 동영상 편집기 데모로, MyGo의 네이티브 GPU 렌더링 UI와 MujicaUI 컴포넌트 라이브러리로 만들었으며 WebView, HTML, JavaScript를 쓰지 않습니다. 4트랙 타임라인에서 클립을 옮기고 트리밍하고 분할하고 스냅할 수 있고, 실행 취소를 지원하며 프로젝트를 EDL JSON으로 내보냅니다. 디코더가 없어 미리보기는 프로그램으로 합성한 임시 화면이고, 완성된 영상으로 렌더링하지는 않습니다."
 	},
+	"icon": {
+		"file": "mujicacut.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "mujicacut.webp",
 	"added": "2026-11-06T09:35:08Z"
 }

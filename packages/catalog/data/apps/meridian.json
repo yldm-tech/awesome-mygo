@@ -22,6 +22,12 @@
 		"ja": "MyGo のネイティブ UI で描かれた Linux 向け VPN クライアント。Web ビューは使いません。接続プロファイルを管理し、パスワードや証明書で認証し、ルートや DNS の変更は毎回確認したうえで、AnyConnect/OpenConnect と L2TP/IPsec の接続を NetworkManager に任せます。開発中で、実際の企業ゲートウェイでは未検証です。Windows 版と macOS 版は画面のみで、VPN バックエンドはありません。",
 		"ko": "MyGo의 네이티브 UI로 그린 Linux용 VPN 클라이언트로, 웹 뷰를 쓰지 않습니다. 연결 프로필을 관리하고 비밀번호와 인증서로 인증하며, 경로나 DNS 변경은 매번 확인한 뒤 AnyConnect/OpenConnect와 L2TP/IPsec 연결을 NetworkManager에 맡깁니다. 아직 개발 중이며 실제 기업 게이트웨이에서는 검증되지 않았습니다. Windows·macOS 버전은 화면만 있고 VPN 백엔드가 없습니다."
 	},
+	"icon": {
+		"file": "meridian.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "meridian.webp",
 	"added": "2026-11-05T08:08:34Z"
 }

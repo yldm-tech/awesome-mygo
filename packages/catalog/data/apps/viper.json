@@ -22,6 +22,12 @@
 		"ja": "Windows 10・11 用の Acer Predator・Nitro ノート向けコントロールセンター。GUI の viperui は MyGo のネイティブ UI で描かれ、スクリプト向け CLI の viper は別プログラムです。温度とファン回転数を読み、ファンのデューティ比、電源モード、GPU の MUX 切り替え、4 ゾーン RGB キーボードライトを設定します。動作には Acer の AcerAgentService が必要で、同梱スクリプトで導入できます。",
 		"ko": "Windows 10·11에서 쓰는 Acer Predator·Nitro 노트북용 제어 센터입니다. GUI인 viperui는 MyGo의 네이티브 UI로 그리며 웹 뷰를 쓰지 않고, 스크립트용 CLI인 viper는 별도 프로그램입니다. 둘 다 온도와 팬 속도를 읽고 팬 듀티, 전원 모드, GPU MUX 모드, 4구역 RGB 키보드 조명을 설정하며, Acer 순정 AcerAgentService를 통해 동작합니다. 이 서비스는 함께 제공되는 스크립트로 설치합니다."
 	},
+	"icon": {
+		"file": "viper.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "viper.webp",
 	"added": "2026-11-05T12:35:14Z"
 }

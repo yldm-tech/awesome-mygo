@@ -24,5 +24,11 @@
 		"ko": "tldraw 스타일의 화이트보드로, Go로 작성하고 MyGo의 네이티브 UI로 그렸으며 웹 뷰도 JavaScript도 없습니다. tldraw와 별개로 다시 구현했지만 tldraw의 .tldr 파일을 읽고 쓸 수 있어 두 앱 사이에 그림을 주고받을 수 있고, 서식 있는 텍스트는 일반 텍스트로 표시됩니다. 펜, 화살표, 메모, 프레임, 도형 도구를 갖췄고, 그림마다 별도 창에서 열려 자동 저장되며, PNG와 SVG로 내보낼 수 있습니다."
 	},
 	"screenshot": "godraw.webp",
+	"icon": {
+		"file": "godraw.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"added": "2026-11-05T00:58:48Z"
 }

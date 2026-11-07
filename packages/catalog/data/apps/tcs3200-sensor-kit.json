@@ -22,6 +22,12 @@
 		"ja": "RP2040-Zero と TCS3200 で画面の色を測るキットの Linux 用ホストアプリで、MyGo のネイティブ UI で描かれています。ファームウェアは Pico SDK と TinyUSB で別に作られています。USB CDC でデバイスにつなぎ、RGB と C の4チャンネルの直近10秒をリアルタイムでグラフにし、X 軸の拡大縮小や一時停止スナップショットに対応します。ハードウェアがなくても合成信号のデモで試せます。",
 		"ko": "RP2040-Zero와 TCS3200으로 화면 색을 측정하는 키트의 Linux 호스트 앱으로, MyGo의 네이티브 UI로 그렸습니다. 펌웨어는 Pico SDK와 TinyUSB로 따로 만듭니다. USB CDC로 장치에 연결해 RGB와 C 네 채널의 최근 10초를 실시간 그래프로 보여 주며, X축 확대·축소와 일시 정지 스냅숏을 지원합니다. 하드웨어가 없어도 합성 신호 데모로 써 볼 수 있습니다."
 	},
+	"icon": {
+		"file": "tcs3200-sensor-kit.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "tcs3200-sensor-kit.webp",
 	"added": "2026-11-05T16:30:17Z"
 }

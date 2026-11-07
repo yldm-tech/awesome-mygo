@@ -24,6 +24,12 @@
     "ja": "macOS 用のローカル MCP ゲートウェイ。stdio の MCP サーバーは一度宣言するだけで、launchd のデーモンが共有プロセスとして動かし、ループバック上の HTTP で Claude Code、Codex、Claude Desktop などのクライアントに提供します。トークンはキーチェーンに保管されます。MyGo のネイティブ UI で描かれているのはメニューバーアプリだけで、各サーバーの状態表示、オン・オフ、再起動ができます。デーモンと mcpctl CLI はこれがなくても動きます。",
     "ko": "macOS용 로컬 MCP 게이트웨이입니다. stdio MCP 서버를 한 번만 선언하면 launchd 데몬이 공유 프로세스 하나로 실행하고, 루프백의 HTTP로 Claude Code, Codex, Claude Desktop 등 클라이언트에 제공하며, 토큰은 키체인에 보관합니다. MyGo의 네이티브 UI로 그린 것은 메뉴 막대 앱뿐으로, 서버별 상태를 보고 켜고 끄고 재시작합니다. 데몬과 mcpctl CLI는 앱 없이도 동작합니다."
   },
+  "icon": {
+    "file": "mcpctl.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
   "screenshot": "mcpctl.webp",
   "added": "2026-11-05T14:40:59Z"
 }

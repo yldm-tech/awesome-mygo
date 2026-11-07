@@ -22,6 +22,12 @@
 		"ja": "実物のビジュアルタイマーを模した Windows 用デスクトップタイマー。左の 30 セグメントのバーが時間とともに消え、右の 7 セグメント LCD が分と秒を表示し、常に最前面に表示されます。カウントダウンのほか、自分で組んだ 1 日の時間割に沿って作業と休憩を繰り返し、時計の時刻どおりにベルを鳴らします。MyGo と、WebView2 上で動くプレーンな HTML・CSS・JS のフロントエンドで作られ、約 9 MB の timer.exe 一つで動きます。",
 		"ko": "실물 비주얼 타이머를 본뜬 Windows 데스크톱 타이머로, 왼쪽의 30칸 막대가 시간이 지나며 꺼지고 오른쪽 7세그먼트 LCD가 분과 초를 보여 주며 항상 위에 떠 있습니다. 카운트다운 외에 직접 짠 하루 시간표에 따라 작업과 휴식을 번갈아 하고 정해진 시각에 종을 울립니다. MyGo와 WebView2에서 도는 순수 HTML·CSS·JS 프런트엔드로 만들었고, 약 9MB의 timer.exe 하나로 배포됩니다."
 	},
+	"icon": {
+		"file": "always-on-top-desktop-timer.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "always-on-top-desktop-timer.webp",
 	"added": "2026-11-05T15:15:40Z"
 }

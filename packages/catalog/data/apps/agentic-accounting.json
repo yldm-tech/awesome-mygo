@@ -23,5 +23,11 @@
 		"ko": "중소기업, 1인 회사, 개인사업자를 위한 에이전트 기반 회계 시스템의 데스크톱 클라이언트로, 중국 본토와 홍콩부터 유럽까지 6개 지역을 지원합니다. 작업 조서와 3대 재무제표를 작성하고, 개인용과 사업용이 섞인 비용을 나눕니다. MyGo는 React 웹 프런트엔드를 패키징하며, Python과 PostgreSQL 백엔드는 별도로 실행됩니다."
 	},
 	"screenshot": "agentic-accounting.webp",
+	"icon": {
+		"file": "agentic-accounting.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"added": "2026-11-05T12:35:14Z"
 }

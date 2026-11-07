@@ -23,6 +23,12 @@
 		"ja": "MyGo のネイティブ UI で描かれた Windows 用ツールで、NVIDIA SHIELD TV 2017 の Thunderstrike コントローラーのファームウェアを Bluetooth 経由でアップグレード・ダウングレード・再書き込みし、デバイス情報も読み取れます。ファームウェアは tsct.exe と同じ場所の blkz/ フォルダーに置く .blkz パッケージで、いくつか同梱されています。バージョン番号は確認しないため、署名が一致すればどのパッケージでも書き込めます。",
 		"ko": "MyGo의 네이티브 UI로 그린 Windows 도구로, NVIDIA SHIELD TV 2017 Thunderstrike 컨트롤러의 펌웨어를 블루투스로 업그레이드, 다운그레이드, 재기록하고 기기 정보를 읽습니다. 펌웨어는 tsct.exe와 같은 위치의 blkz/ 폴더에 두는 .blkz 패키지이며 일부는 함께 들어 있습니다. 버전 번호를 확인하지 않으므로 서명만 맞으면 어떤 패키지든 기록할 수 있습니다."
 	},
+	"icon": {
+		"file": "thunderstrike-controller-tool.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "thunderstrike-controller-tool.webp",
 	"added": "2026-11-05T05:02:32Z"
 }

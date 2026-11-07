@@ -23,6 +23,12 @@
 		"ja": "ローカルのファイルやディレクトリを OCI 互換のレジストリへまとめて送り、取り戻すためのツール。AES-256-GCM による暗号化を選べ、認証情報は設定ファイルか Docker credential store から読みます。MyGo が描くのはネイティブのデスクトップ GUI（oci-sync gui、中国語の画面）だけで、リポジトリの閲覧と artifact のプッシュ・プル・削除ができます。CLI とターミナル UI は別に作られています。",
 		"ko": "로컬 파일이나 디렉터리를 OCI 호환 레지스트리에 올리고 다시 받아 오는 도구로, AES-256-GCM 암호화를 선택할 수 있고 인증 정보는 설정 파일이나 Docker credential store에서 가져옵니다. MyGo는 네이티브 데스크톱 GUI(oci-sync gui, 중국어 화면)만 그리며, 저장소를 둘러보고 artifact를 푸시·풀·삭제할 수 있습니다. CLI와 터미널 UI는 따로 만들어졌습니다."
 	},
+	"icon": {
+		"file": "oci-sync.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "oci-sync.webp",
 	"added": "2026-11-05T05:57:31Z"
 }

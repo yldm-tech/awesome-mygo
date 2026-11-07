@@ -22,6 +22,12 @@
 		"ja": "ドメインと IP の偵察ツールで、デスクトップ版の rscan-ui は MyGo のネイティブ UI で描かれています。同じプロジェクトのコマンドラインツール rscan は MyGo を使わずに作られています。WHOIS、DNS と DNSSEC、SPF・DMARC・DKIM、TLS 証明書、WAF、ブラックリスト、開いているポートを調べ、すべてのスキャンをローカルの SQLite に履歴として残し、見つかったドメインや IP はワンクリックでさらにスキャンできます。",
 		"ko": "도메인과 IP 정찰 도구로, 데스크톱 앱 rscan-ui는 MyGo의 네이티브 UI로 그렸고 같은 프로젝트의 명령줄 도구 rscan은 MyGo 없이 만들어졌습니다. WHOIS, DNS와 DNSSEC, SPF·DMARC·DKIM, TLS 인증서, WAF, 블랙리스트, 열린 포트를 확인하고, 모든 스캔을 로컬 SQLite 기록에 저장하며, 발견한 도메인이나 IP를 클릭 한 번으로 이어서 스캔합니다."
 	},
+	"icon": {
+		"file": "reconnascan.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "reconnascan.webp",
 	"added": "2026-11-05T13:45:02Z"
 }

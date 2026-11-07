@@ -23,6 +23,12 @@
 		"ja": "中国語 UI のデスクトップ音楽プレーヤー。MyGo のネイティブ UI で描かれ、プロセス内の libmpv で再生し、Web UI もバックグラウンドサービスもありません。Navidrome や Subsonic・OpenSubsonic サーバーに接続し、再生キュー、10 バンドイコライザー、キャッシュしたジャケットとメタデータのオフライン閲覧に対応します。Linux で動作確認済みで、Windows・macOS 向けにもビルドでき、再生にはシステムの libmpv が必要です。",
 		"ko": "중국어 인터페이스의 데스크톱 음악 플레이어로, MyGo의 네이티브 UI로 그리고 프로세스 안의 libmpv로 재생하며 웹 UI도 백그라운드 서비스도 없습니다. Navidrome이나 Subsonic·OpenSubsonic 서버에 연결해 재생 대기열, 10밴드 이퀄라이저, 캐시한 커버와 메타데이터의 오프라인 탐색을 제공합니다. Linux에서 검증되었고 Windows와 macOS용으로도 빌드되며, 재생에는 시스템의 libmpv가 필요합니다."
 	},
+	"icon": {
+		"file": "godrome.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "godrome.webp",
 	"added": "2026-11-05T04:45:28Z"
 }

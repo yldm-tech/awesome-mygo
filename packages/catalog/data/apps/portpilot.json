@@ -23,5 +23,11 @@
 		"ko": "Windows 작업 관리자와 비슷한 가벼운 포트 관리 도구로, 포트를 쓰는 프로세스만 보여 줍니다. Go와 MyGo의 웹 프런트엔드로 만들었고 WebView2에서 실행됩니다. Windows IP Helper API로 TCP·UDP 포트를 읽고 포트, 프로세스 이름, PID, 주소로 검색하며 5초마다 자동으로 새로 고칩니다. 종료 전에 영향받는 포트를 보여 주고, 시스템 핵심 프로세스를 보호하며 PID 재사용으로 인한 오종료를 막습니다."
 	},
 	"screenshot": "portpilot.webp",
+	"icon": {
+		"file": "portpilot.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"added": "2026-11-05T17:38:35Z"
 }

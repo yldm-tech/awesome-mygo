@@ -22,6 +22,12 @@
 		"ja": "gbootie は、レスキューディスク作成ツール Bootie のデスクトップ GUI で、MyGo のネイティブ UI で描かれ、macOS・Linux・Windows で動きます。USB ドライブか .img イメージファイルに書き込み、内蔵ドライブは表示しません。EFI とデータの 2 パーティション構成か FAT32 の単一構成を選べ、パーティション配置のプレビューと進捗のリアルタイム表示があります。CLI と、ベアメタル C で書かれたブートメニューやゲームは MyGo を使わずに作られています。",
 		"ko": "gbootie는 복구 디스크 제작 도구 Bootie의 데스크톱 GUI로, MyGo의 네이티브 UI로 그렸으며 macOS, Linux, Windows에서 동작합니다. USB 드라이브나 .img 이미지 파일에 쓰며 내장 드라이브는 숨깁니다. EFI와 데이터의 이중 파티션 또는 단일 FAT32 파티션 구성을 고르고, 파티션 배치를 미리 보며 진행 상황을 실시간으로 보여 줍니다. CLI와 베어메탈 C로 작성한 부트 메뉴와 게임은 MyGo 없이 만들어졌습니다."
 	},
+	"icon": {
+		"file": "bootie.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "bootie.webp",
 	"added": "2026-11-05T17:38:35Z"
 }

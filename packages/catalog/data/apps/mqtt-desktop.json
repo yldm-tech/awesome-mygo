@@ -23,5 +23,11 @@
 		"ko": "기기 디버깅용 Windows x64 MQTT 클라이언트로, MyGo의 네이티브 UI로 그렸고 Electron이나 Node.js가 필요 없습니다. 여러 Broker에 동시에 연결하며 MQTT 3.1.1·5.0과 TCP, TLS, WebSocket, WSS를 지원합니다. 구독은 연결별로 묶어 보여 주고, Text, JSON, Hex, Base64로 발행하며, 메시지를 키워드와 Topic으로 걸러 봅니다. 비밀번호는 시스템 자격 증명 저장소에 저장합니다."
 	},
 	"screenshot": "mqtt-desktop.webp",
+	"icon": {
+		"file": "mqtt-desktop.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"added": "2026-11-05T17:38:35Z"
 }

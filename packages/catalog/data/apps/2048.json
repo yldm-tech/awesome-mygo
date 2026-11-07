@@ -24,5 +24,11 @@
 		"ko": "고전 2048 퍼즐. 화살표 키, 드래그, 트랙패드 스와이프로 플레이합니다. WebAssembly 빌드는 브라우저에서도 실행됩니다."
 	},
 	"screenshot": "2048.webp",
+	"icon": {
+		"file": "2048.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"added": "2026-11-04T02:24:49Z"
 }

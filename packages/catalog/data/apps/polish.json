@@ -23,6 +23,12 @@
 		"ja": "MyGo のネイティブ UI で描かれた、Linux の Wayland デスクトップ向け文章アシスタント。CGo も WebKitGTK も不要です。Wayland の PRIMARY 選択、クリップボード、手入力からテキストを取り込み、OpenAI 互換のエンドポイントで自然・フォーマル・簡潔のいずれかの文体に推敲するか、簡体字中国語か英語に翻訳します。結果は確認してから元のアプリへコピーできます。",
 		"ko": "MyGo의 네이티브 UI로 그린 Linux Wayland 데스크톱용 글쓰기 도우미로, CGo나 WebKitGTK가 필요 없습니다. Wayland PRIMARY 선택 영역, 클립보드, 직접 입력한 텍스트를 OpenAI 호환 엔드포인트로 자연스럽게, 격식 있게 또는 간결하게 다듬거나 간체 중국어나 영어로 번역하고, 결과를 확인한 뒤 원래 앱에 복사해 넣을 수 있습니다."
 	},
+	"icon": {
+		"file": "polish.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "polish.webp",
 	"added": "2026-11-05T05:19:24Z"
 }

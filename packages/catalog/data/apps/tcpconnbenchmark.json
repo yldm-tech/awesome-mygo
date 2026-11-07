@@ -22,6 +22,12 @@
 		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた TCP 同時接続テストツール。macOS・Windows・Linux に対応し、コマンドラインでも動きます。DNS 解決と TCP 接続だけを行って 80・443 番ポートまたは両方を試し、HTTP リクエストや TLS ハンドシェイクはせず、統計をリアルタイムに表示します。送信元のインターフェースか IPv4/IPv6 アドレスを選び、テスト時間、接続レート、失敗時の停止しきい値を設定でき、結果は CSV で保存できます。",
 		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 TCP 동시 연결 테스트 도구로, macOS, Windows, Linux를 지원하며 명령줄로도 실행할 수 있습니다. DNS 조회와 TCP 연결만 수행해 80, 443 또는 두 포트를 시험하고, HTTP 요청이나 TLS 핸드셰이크는 하지 않으며 통계를 실시간으로 보여 줍니다. 송신 인터페이스나 IPv4/IPv6 출발지 주소를 고르고 테스트 시간, 연결 속도, 실패 중단 기준을 정할 수 있으며 결과는 CSV로 저장됩니다."
 	},
+	"icon": {
+		"file": "tcpconnbenchmark.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "tcpconnbenchmark.webp",
 	"added": "2026-11-05T11:28:55Z"
 }

@@ -22,6 +22,12 @@
 		"ja": "Linux デスクトップ向けの辞書・翻訳ツールで、MyGo と React の Web フロントエンドで作られています。有道、Bing、Google、DeepL、そして DeepSeek やローカルの Ollama など OpenAI 互換の AI サービスを並行して引き、選択したテキストはポップアップで、画面の範囲は OCR で翻訳します。Wayland と X11 に対応。起動後はトレイに常駐し、ショートカットやコマンドライン引数から呼び出せます。",
 		"ko": "MyGo와 React 웹 프런트엔드로 만든 Linux 데스크톱용 사전·번역 도구입니다. 유다오, Bing, Google, DeepL과 DeepSeek, 로컬 Ollama 같은 OpenAI 호환 AI 서비스를 동시에 조회하고, 선택한 텍스트는 팝업으로, 화면 영역은 OCR로 번역하며 Wayland와 X11을 지원합니다. 트레이에 상주하며 단축키나 명령줄 인수로 불러올 수 있습니다."
 	},
+	"icon": {
+		"file": "easydict-for-linux.webp"
+	},
+	"provisional": [
+		"icon"
+	],
 	"screenshot": "easydict-for-linux.webp",
 	"added": "2026-11-05T16:30:17Z"
 }
