@@ -4,7 +4,7 @@
 	"name": "Corra",
 	"author": "Maidang1",
 	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
+	"platforms": ["mac"],
 	"group": "notes",
 	"url": "https://github.com/Maidang1/corra",
 	"repo": "Maidang1/corra",

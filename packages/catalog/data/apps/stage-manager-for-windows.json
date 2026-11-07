@@ -4,7 +4,7 @@
 	"name": "Stage Manager for Windows",
 	"author": "e1roy",
 	"kind": "native",
-	"platforms": ["win", "mac"],
+	"platforms": ["win"],
 	"group": "system",
 	"url": "https://github.com/e1roy/stage-manager-for-windows",
 	"repo": "e1roy/stage-manager-for-windows",

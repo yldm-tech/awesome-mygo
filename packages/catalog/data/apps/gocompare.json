@@ -4,7 +4,7 @@
 	"name": "GoCompare",
 	"author": "jhzhang09",
 	"kind": "native",
-	"platforms": ["win"],
+	"platforms": ["win", "linux", "mac"],
 	"category": "DeveloperApplication",
 	"group": "dev",
 	"url": "https://github.com/jhzhang09/gocompare",

@@ -4,7 +4,7 @@
 	"name": "Clash Traffic",
 	"author": "lufficc",
 	"kind": "web",
-	"platforms": ["mac"],
+	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "network",
 	"url": "https://github.com/lufficc/clash-traffic",

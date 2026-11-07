@@ -4,7 +4,7 @@
 	"name": "nvflasher",
 	"author": "ca-x",
 	"kind": "web",
-	"platforms": ["win", "linux", "mac"],
+	"platforms": ["linux"],
 	"group": "devices",
 	"url": "https://github.com/ca-x/nvflasher",
 	"repo": "ca-x/nvflasher",
