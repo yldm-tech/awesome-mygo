@@ -27,9 +27,6 @@
   "icon": {
     "file": "png-to-ico.webp"
   },
-  "provisional": [
-    "icon"
-  ],
   "screenshot": "png-to-ico.webp",
   "added": "2026-11-05T15:37:24Z"
 }

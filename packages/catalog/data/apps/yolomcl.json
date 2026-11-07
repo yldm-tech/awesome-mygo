@@ -26,9 +26,6 @@
 	"icon": {
 		"file": "yolomcl.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "yolomcl.webp",
 	"added": "2026-11-05T03:22:12Z"
 }
