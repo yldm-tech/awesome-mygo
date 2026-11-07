@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "wondervision",
+	"name": "WonderVision",
+	"author": "jewei",
+	"kind": "native",
+	"group": "notes",
+	"url": "https://github.com/jewei/wondervision",
+	"repo": "jewei/wondervision",
+	"summary": {
+		"en": "A native text and Markdown editor with a file explorer, live preview, Quick Open and search.",
+		"zh-CN": "原生文本与 Markdown 编辑器，带文件浏览、实时预览、Quick Open 和搜索。",
+		"zh-TW": "原生文字與 Markdown 編輯器，附檔案瀏覽、即時預覽、Quick Open 與搜尋。",
+		"ja": "ファイル一覧とライブプレビュー、検索を備えたネイティブなテキスト・Markdown エディター。",
+		"ko": "파일 탐색기와 실시간 미리보기, 검색을 갖춘 네이티브 텍스트·Markdown 편집기."
+	},
+	"description": {
+		"en": "A text and Markdown editor for Linux, drawn with MyGo's native UI with no web view or network access. It opens a folder with an explorer and tabs, previews GitHub-flavored Markdown beside the text, offers Quick Open, a command palette and workspace search, and keeps recovery copies of unsaved edits for after a crash. Windows and macOS builds exist but have not been run.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Linux 文本与 Markdown 编辑器，没有 Web 视图，也不联网。打开文件夹后可用文件浏览器和标签页工作，GitHub 风格的 Markdown 可在正文旁实时预览，还提供 Quick Open、命令面板和工作区搜索；未保存的修改会留有恢复副本，崩溃后可以找回。Windows 与 macOS 版本已能构建，但还没有实际运行过。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Linux 文字與 Markdown 編輯器，沒有 Web 視圖，也不連網。開啟資料夾後可用檔案瀏覽器和分頁工作，GitHub 風格的 Markdown 可在本文旁即時預覽，還提供 Quick Open、命令面板與工作區搜尋；未儲存的修改會留有復原副本，當機後可以找回。Windows 與 macOS 版本已能建置，但還沒有實際執行過。",
+		"ja": "MyGo のネイティブ UI で描かれた Linux 向けのテキスト・Markdown エディター。Web ビューはなく、ネットワークにも接続しません。フォルダーを開いてファイル一覧とタブで作業でき、GitHub 形式の Markdown をテキストの横でプレビューし、Quick Open、コマンドパレット、ワークスペース検索も備えます。未保存の編集には復元用のコピーが残り、クラッシュ後に取り戻せます。Windows 版と macOS 版はビルドされていますが、まだ実際には動かされていません。",
+		"ko": "MyGo의 네이티브 UI로 그린 Linux용 텍스트·Markdown 편집기로, 웹 뷰가 없고 네트워크에도 연결하지 않습니다. 폴더를 열어 파일 탐색기와 탭으로 작업하고, GitHub 형식 Markdown을 텍스트 옆에서 미리 보며, Quick Open, 명령 팔레트, 작업 공간 검색을 제공합니다. 저장하지 않은 편집은 복구 사본으로 남아 충돌 후에도 되찾을 수 있습니다. Windows와 macOS 빌드도 있지만 아직 실행해 본 적은 없습니다."
+	},
+	"icon": {
+		"file": "wondervision.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "wondervision.webp",
+	"added": "2026-11-07T08:59:06Z"
+}
