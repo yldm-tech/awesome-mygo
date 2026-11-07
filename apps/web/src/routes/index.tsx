@@ -64,8 +64,8 @@ function HomePage() {
 			{/* fetchPriority='low' keeps React from preloading the icons ahead of the stylesheets. They are not lazy: the strip clips them with overflow:hidden and slides them in with a transform, so a lazy icon could start loading only as it enters and show as a blank square at the edge. */}
 			{/* On phones the strip fades out over the gutter at both edges instead of being cut at the screen's edge. */}
 			<section aria-label={t.a_marquee} className='overflow-hidden border-b border-line bg-bg/50 px-0 py-[22px] max-sm:py-4 max-sm:[mask-image:linear-gradient(to_right,transparent,#000_16px,#000_calc(100%_-_16px),transparent)]'>
-				{/* The strip's duration follows its length (--marq-n), keeping its speed whatever the number of apps on it: 1.2 s an app, the pace the strip had at 40 apps in 48 s. A fixed duration made it run faster with every app listed, until at 175 it moved too fast to read. */}
-				<div className='flex w-max gap-14 animate-[marq_calc(var(--marq-n,40)*1.2s)_linear_infinite] hover:[animation-play-state:paused] motion-reduce:animate-none max-sm:gap-10' style={{ '--marq-n': marqN } as CSSProperties}>
+				{/* The strip's duration follows its length, keeping its speed whatever the number of apps on it: 1.2 s an app, the pace the strip had at 40 apps in 48 s. Set only the duration inline so older Windows browsers do not reject a calculated animation value. */}
+				<div className='flex w-max gap-14 animate-[marq_1s_linear_infinite] hover:[animation-play-state:paused] motion-reduce:animate-none max-sm:gap-10' style={{ animationDuration: `${marqN * 1.2}s` }}>
 					{[...MARQUEE_APPS, ...MARQUEE_APPS].map((a, i) => (
 						<AppLink key={`${a.slug}-${i}`} slug={a.slug} className='inline-flex items-center gap-3.5 whitespace-nowrap border-0 bg-transparent p-0 font-display text-[26px] font-bold tracking-[-0.02em] text-fg-3 no-underline max-sm:min-h-10 max-sm:gap-2.5 max-sm:text-[20px]' tabIndex={i >= marqN ? -1 : undefined} hidden={i >= marqN}>
 							{a.icon ? (
