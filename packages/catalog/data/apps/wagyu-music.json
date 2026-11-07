@@ -15,10 +15,10 @@
 	"repo": "vicnoah/mygo-cloudmusic",
 	"summary": {
 		"en": "Desktop client for your own music servers: FN Music, Songloft and any Subsonic-compatible service.",
-		"zh-CN": "自建与私有云音乐平台的桌面客户端：支持飞牛音乐（FN Music）、Songloft，以及 Navidrome / Jellyfin / Gonic 等 Subsonic 兼容服务。",
-		"zh-TW": "自架與私有雲音樂平台的桌面用戶端：支援飛牛音樂（FN Music）、Songloft，以及 Navidrome / Jellyfin / Gonic 等 Subsonic 相容服務。",
-		"ja": "自前の音楽サーバー向けデスクトップクライアント。飛牛音楽（FN Music）、Songloft、Navidrome / Jellyfin / Gonic などの Subsonic 互換サービスに対応。",
-		"ko": "자체 호스팅 음악 서버용 데스크톱 클라이언트. 飛牛 뮤직(FN Music), Songloft, Navidrome / Jellyfin / Gonic 등 Subsonic 호환 서비스를 지원합니다."
+		"zh-CN": "私有云音乐平台桌面客户端：支持飞牛音乐、Songloft 和 Navidrome、Jellyfin、Gonic 等 Subsonic 服务。",
+		"zh-TW": "私有雲音樂桌面客戶端：支援飛牛音樂、Songloft 與 Navidrome、Jellyfin、Gonic 等 Subsonic 服務。",
+		"ja": "プライベート音楽サーバー向けデスクトップクライアント。FN Music、Songloft、Navidrome、Jellyfin、Gonic に対応。",
+		"ko": "프라이빗 음악 서버용 데스크톱 클라이언트. FN Music, Songloft, Navidrome, Jellyfin, Gonic을 지원합니다."
 	},
 	"description": {
 		"en": "Written in Go and drawn with MyGo's native UI, with no web view, it connects to FN Music on a NAS, a self-hosted Songloft server, or any Subsonic / OpenSubsonic service such as Navidrome, Jellyfin and Gonic. Each platform keeps its own accounts, playlists, favourites and playback settings, while the bottom player, now-playing page, word-by-word lyrics and cache are shared. It also decodes DSD, DTS, FLAC, APE, ALAC and CUE sheets locally, casts to DLNA / UPnP speakers and TVs on the LAN, and can show a mini player in the notch.",
