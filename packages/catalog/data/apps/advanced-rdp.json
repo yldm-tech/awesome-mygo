@@ -1,33 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "advanced-rdp",
-	"name": "Advanced RDP",
-	"author": "Gongzhui",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "system",
-	"url": "https://github.com/Gongzhui/Advanced-RDP",
-	"repo": "Gongzhui/Advanced-RDP",
-	"summary": {
-		"en": "A Windows remote desktop client that saves your hosts and explains why a connection fails.",
-		"zh-CN": "Windows 远程桌面客户端：保存主机，连接失败时说明原因。",
-		"zh-TW": "Windows 遠端桌面用戶端：儲存主機，連線失敗時說明原因。",
-		"ja": "ホストを保存し、接続できない理由も示す Windows 用リモートデスクトップクライアント。",
-		"ko": "호스트를 저장하고 연결 실패 원인도 알려 주는 Windows 원격 데스크톱 클라이언트."
-	},
-	"description": {
-		"en": "A Windows remote desktop client whose interface is drawn with MyGo's native UI, while the remote screen comes from the system's own Remote Desktop control embedded in the window. It is a single 10 MB executable without .NET or WebView2, keeps saved hosts and their passwords in Credential Manager, and on a failed connection shows the reason and checks DNS, port and the RDP handshake.",
-		"zh-CN": "Windows 远程桌面客户端，界面由 MyGo 原生 UI 绘制，远程画面则由系统自带的远程桌面控件绘制并嵌入窗口。单个 10 MB 可执行文件，不依赖 .NET 或 WebView2；保存的主机密码放在系统凭据管理器中，连接失败时显示系统给出的原因，并自动检查域名、端口和 RDP 握手。",
-		"zh-TW": "Windows 遠端桌面用戶端，介面由 MyGo 原生 UI 繪製，遠端畫面則由系統內建的遠端桌面控制項繪製並嵌入視窗。單一 10 MB 執行檔，不依賴 .NET 或 WebView2；儲存的主機密碼放在系統認證管理員中，連線失敗時顯示系統提供的原因，並自動檢查網域名稱、連接埠和 RDP 交握。",
-		"ja": "Windows 用のリモートデスクトップクライアント。UI は MyGo のネイティブ UI で描かれ、リモート画面は Windows 標準のリモートデスクトップコントロールをウィンドウに埋め込んで表示します。10 MB の単一実行ファイルで、.NET も WebView2 も要りません。保存したホストのパスワードは資格情報マネージャーに置き、接続に失敗するとその理由を表示して、DNS、ポート、RDP ハンドシェイクを自動で確認します。",
-		"ko": "Windows용 원격 데스크톱 클라이언트로, 인터페이스는 MyGo의 네이티브 UI로 그리고 원격 화면은 시스템 기본 원격 데스크톱 컨트롤을 창에 넣어 표시합니다. .NET이나 WebView2 없이 10MB 단일 실행 파일로 동작하며, 저장한 호스트의 비밀번호는 자격 증명 관리자에 두고, 연결에 실패하면 시스템이 알려 준 원인을 보여 주고 DNS, 포트, RDP 핸드셰이크를 자동으로 점검합니다."
-	},
-	"icon": {
-		"file": "advanced-rdp.webp"
-	},
-	"screenshot": "advanced-rdp.webp",
-	"provisional": [
-		"screenshot"
-	],
-	"added": "2026-11-05T11:28:55Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "advanced-rdp",
+  "name": "Advanced RDP",
+  "author": "Gongzhui",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "system",
+  "url": "https://github.com/Gongzhui/Advanced-RDP",
+  "repo": "Gongzhui/Advanced-RDP",
+  "summary": {
+    "en": "A Windows remote desktop client that saves your hosts and explains why a connection fails.",
+    "zh-CN": "Windows 远程桌面客户端：保存主机，连接失败时说明原因。",
+    "zh-TW": "Windows 遠端桌面用戶端：儲存主機，連線失敗時說明原因。",
+    "ja": "ホストを保存し、接続できない理由も示す Windows 用リモートデスクトップクライアント。",
+    "ko": "호스트를 저장하고 연결 실패 원인도 알려 주는 Windows 원격 데스크톱 클라이언트."
+  },
+  "description": {
+    "en": "A Windows remote desktop client whose interface is drawn with MyGo's native UI, while the remote screen comes from the system's own Remote Desktop control embedded in the window. It is a single 10 MB executable without .NET or WebView2, keeps saved hosts and their passwords in Credential Manager, and on a failed connection shows the reason and checks DNS, port and the RDP handshake.",
+    "zh-CN": "Windows 远程桌面客户端，界面由 MyGo 原生 UI 绘制，远程画面则由系统自带的远程桌面控件绘制并嵌入窗口。单个 10 MB 可执行文件，不依赖 .NET 或 WebView2；保存的主机密码放在系统凭据管理器中，连接失败时显示系统给出的原因，并自动检查域名、端口和 RDP 握手。",
+    "zh-TW": "Windows 遠端桌面用戶端，介面由 MyGo 原生 UI 繪製，遠端畫面則由系統內建的遠端桌面控制項繪製並嵌入視窗。單一 10 MB 執行檔，不依賴 .NET 或 WebView2；儲存的主機密碼放在系統認證管理員中，連線失敗時顯示系統提供的原因，並自動檢查網域名稱、連接埠和 RDP 交握。",
+    "ja": "Windows 用のリモートデスクトップクライアント。UI は MyGo のネイティブ UI で描かれ、リモート画面は Windows 標準のリモートデスクトップコントロールをウィンドウに埋め込んで表示します。10 MB の単一実行ファイルで、.NET も WebView2 も要りません。保存したホストのパスワードは資格情報マネージャーに置き、接続に失敗するとその理由を表示して、DNS、ポート、RDP ハンドシェイクを自動で確認します。",
+    "ko": "Windows용 원격 데스크톱 클라이언트로, 인터페이스는 MyGo의 네이티브 UI로 그리고 원격 화면은 시스템 기본 원격 데스크톱 컨트롤을 창에 넣어 표시합니다. .NET이나 WebView2 없이 10MB 단일 실행 파일로 동작하며, 저장한 호스트의 비밀번호는 자격 증명 관리자에 두고, 연결에 실패하면 시스템이 알려 준 원인을 보여 주고 DNS, 포트, RDP 핸드셰이크를 자동으로 점검합니다."
+  },
+  "icon": {
+    "file": "advanced-rdp.webp"
+  },
+  "screenshot": "advanced-rdp.webp",
+  "provisional": [
+    "icon"
+  ],
+  "added": "2026-11-05T11:28:55Z"
 }
