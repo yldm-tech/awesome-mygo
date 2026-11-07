@@ -1,34 +1,35 @@
 {
-	"$schema": "../schema/app.schema.json",
-	"slug": "qwen-image",
-	"name": "Qwen-Image 2.1 本地部署",
-	"author": "zcf0508",
-	"kind": "native",
-	"platforms": ["win"],
-	"group": "ai",
-	"url": "https://github.com/zcf0508/qwen-image-2.1-windows-sdcpp-deploy",
-	"repo": "zcf0508/qwen-image-2.1-windows-sdcpp-deploy",
-	"summary": {
-		"en": "Runs Qwen-Image-2.1 locally on Windows with an NVIDIA GPU for text-to-image and image editing.",
-		"zh-CN": "Windows 本地跑 Qwen-Image-2.1，文生图与图像编辑。",
-		"zh-TW": "Windows 本機執行 Qwen-Image-2.1，文生圖與圖像編輯。",
-		"ja": "Windows で Qwen-Image-2.1 をローカルで動かし、画像生成と画像編集。",
-		"ko": "Windows에서 Qwen-Image-2.1을 로컬로 돌려 이미지를 생성하고 편집합니다."
-	},
-	"description": {
-		"en": "A Windows app that runs Qwen-Image-2.1 locally on NVIDIA GPUs with 12 GB of VRAM or more, through stable-diffusion.cpp and without ComfyUI. Its interface, drawn with MyGo's native UI, does text-to-image and editing from several reference images and keeps the sd-server.exe backend loaded between images. Setup and the command-line tools are PowerShell and Python.",
-		"zh-CN": "在 12 GB 显存以上的 NVIDIA 显卡上本地运行 Qwen-Image-2.1 的 Windows 应用，基于 stable-diffusion.cpp，不依赖 ComfyUI。图形界面由 MyGo 原生 UI 绘制，支持文生图和多张参考图的图像编辑，sd-server.exe 后端常驻，连续出图不重复加载模型；安装脚本和命令行工具用 PowerShell 与 Python 编写。",
-		"zh-TW": "在 VRAM 12 GB 以上的 NVIDIA 顯卡上本機執行 Qwen-Image-2.1 的 Windows 程式，基於 stable-diffusion.cpp，免裝 ComfyUI。介面以 MyGo 原生 UI 繪製，支援文生圖與多張參考圖的圖像編輯，sd-server.exe 後端常駐，出圖免重載模型；安裝腳本與命令列工具以 PowerShell 和 Python 撰寫。",
-		"ja": "VRAM 12 GB 以上の NVIDIA GPU で Qwen-Image-2.1 をローカル実行する Windows アプリ。stable-diffusion.cpp を使い、ComfyUI は不要です。GUI は MyGo のネイティブ UI で描かれ、テキストからの画像生成と複数の参照画像による編集ができ、sd-server.exe バックエンドが常駐するので連続生成でもモデルを読み直しません。セットアップとコマンドラインツールは PowerShell と Python 製です。",
-		"ko": "VRAM 12GB 이상의 NVIDIA GPU에서 Qwen-Image-2.1을 로컬로 실행하는 Windows 앱으로, stable-diffusion.cpp 기반이며 ComfyUI가 필요 없습니다. MyGo의 네이티브 UI로 그린 GUI에서 텍스트로 이미지를 만들거나 여러 참조 이미지로 편집하고, sd-server.exe 백엔드가 상주해 모델을 다시 읽지 않습니다. 설치와 명령줄 도구는 PowerShell과 Python입니다."
-	},
-	"icon": {
-		"file": "qwen-image.webp"
-	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
-	"screenshot": "qwen-image.webp",
-	"added": "2026-11-05T17:38:35Z"
+  "$schema": "../schema/app.schema.json",
+  "slug": "qwen-image",
+  "name": "Qwen-Image 2.1 本地部署",
+  "author": "zcf0508",
+  "kind": "native",
+  "platforms": [
+    "win"
+  ],
+  "group": "ai",
+  "url": "https://github.com/zcf0508/qwen-image-2.1-windows-sdcpp-deploy",
+  "repo": "zcf0508/qwen-image-2.1-windows-sdcpp-deploy",
+  "summary": {
+    "en": "Runs Qwen-Image-2.1 locally on Windows with an NVIDIA GPU for text-to-image and image editing.",
+    "zh-CN": "Windows 本地跑 Qwen-Image-2.1，文生图与图像编辑。",
+    "zh-TW": "Windows 本機執行 Qwen-Image-2.1，文生圖與圖像編輯。",
+    "ja": "Windows で Qwen-Image-2.1 をローカルで動かし、画像生成と画像編集。",
+    "ko": "Windows에서 Qwen-Image-2.1을 로컬로 돌려 이미지를 생성하고 편집합니다."
+  },
+  "description": {
+    "en": "A Windows app that runs Qwen-Image-2.1 locally on NVIDIA GPUs with 12 GB of VRAM or more, through stable-diffusion.cpp and without ComfyUI. Its interface, drawn with MyGo's native UI, does text-to-image and editing from several reference images and keeps the sd-server.exe backend loaded between images. Setup and the command-line tools are PowerShell and Python.",
+    "zh-CN": "在 12 GB 显存以上的 NVIDIA 显卡上本地运行 Qwen-Image-2.1 的 Windows 应用，基于 stable-diffusion.cpp，不依赖 ComfyUI。图形界面由 MyGo 原生 UI 绘制，支持文生图和多张参考图的图像编辑，sd-server.exe 后端常驻，连续出图不重复加载模型；安装脚本和命令行工具用 PowerShell 与 Python 编写。",
+    "zh-TW": "在 VRAM 12 GB 以上的 NVIDIA 顯卡上本機執行 Qwen-Image-2.1 的 Windows 程式，基於 stable-diffusion.cpp，免裝 ComfyUI。介面以 MyGo 原生 UI 繪製，支援文生圖與多張參考圖的圖像編輯，sd-server.exe 後端常駐，出圖免重載模型；安裝腳本與命令列工具以 PowerShell 和 Python 撰寫。",
+    "ja": "VRAM 12 GB 以上の NVIDIA GPU で Qwen-Image-2.1 をローカル実行する Windows アプリ。stable-diffusion.cpp を使い、ComfyUI は不要です。GUI は MyGo のネイティブ UI で描かれ、テキストからの画像生成と複数の参照画像による編集ができ、sd-server.exe バックエンドが常駐するので連続生成でもモデルを読み直しません。セットアップとコマンドラインツールは PowerShell と Python 製です。",
+    "ko": "VRAM 12GB 이상의 NVIDIA GPU에서 Qwen-Image-2.1을 로컬로 실행하는 Windows 앱으로, stable-diffusion.cpp 기반이며 ComfyUI가 필요 없습니다. MyGo의 네이티브 UI로 그린 GUI에서 텍스트로 이미지를 만들거나 여러 참조 이미지로 편집하고, sd-server.exe 백엔드가 상주해 모델을 다시 읽지 않습니다. 설치와 명령줄 도구는 PowerShell과 Python입니다."
+  },
+  "icon": {
+    "file": "qwen-image.webp"
+  },
+  "provisional": [
+    "icon"
+  ],
+  "screenshot": "qwen-image.webp",
+  "added": "2026-11-05T17:38:35Z"
 }
