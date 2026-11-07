@@ -1,0 +1,21 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "media-player",
+	"name": "Media Player",
+	"author": "fazi-gondal",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/fazi-gondal/video",
+	"summary": {
+		"en": "A high-performance, lightweight video and audio player built with MyGo native UI in pure Go. Engineered for responsive media playback, extensive format compatibility, zero-dependency standalone execution on Windows, and hardware-accelerated HD/4K playback."
+	},
+	"description": {
+		"en": "A high-performance, lightweight video and audio player built with MyGo native UI in pure Go. Engineered for responsive media playback, extensive format compatibility, zero-dependency standalone execution on Windows, and hardware-accelerated HD/4K playback."
+	},
+	"added": "2026-11-07T14:25:15Z"
+}
