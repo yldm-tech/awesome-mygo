@@ -25,9 +25,6 @@
 	"icon": {
 		"file": "tcpconnbenchmark.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "tcpconnbenchmark.webp",
 	"added": "2026-11-05T11:28:55Z"
 }
