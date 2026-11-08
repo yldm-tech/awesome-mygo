@@ -1,0 +1,30 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mygo-music",
+	"name": "MyGo Music",
+	"author": "egoist",
+	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
+	"group": "media",
+	"url": "https://music.egoist.dev",
+	"repo": "egoist/mygo-music",
+	"summary": {
+		"en": "Native Go music player for local files, playlists, lyrics and plugin-powered music services.",
+		"zh-CN": "原生桌面音乐播放器：播放本地文件，支持歌单、歌词，并通过插件扩展音乐服务。",
+		"zh-TW": "原生桌面音樂播放器：播放本機檔案，支援歌單、歌詞，並透過外掛擴充音樂服務。",
+		"ja": "ローカルファイル、プレイリスト、歌詞に対応し、プラグインで音楽サービスを広げられるネイティブ音楽プレーヤー。",
+		"ko": "로컬 파일, 재생 목록, 가사를 지원하고 플러그인으로 음악 서비스를 확장하는 네이티브 음악 플레이어입니다."
+	},
+	"description": {
+		"en": "A native desktop music player written in Go with MyGo, without a WebView. It plays local MP3, FLAC, Ogg, WAV and AAC files with tags, covers and lyrics, and adds playlists, search, queue, fades, normalization and podcast captions. Plugins provide accounts, catalogs, stations and other services on macOS, Windows and Linux.",
+		"zh-CN": "用 Go 与 MyGo 编写的原生桌面音乐播放器，不使用 WebView。支持带标签、封面和歌词的本地 MP3、FLAC、Ogg、WAV 与 AAC 文件，并提供歌单、搜索、播放队列、淡入淡出、响度标准化和播客字幕。插件可在 macOS、Windows 与 Linux 上接入账号、音乐目录、电台等服务。",
+		"zh-TW": "用 Go 與 MyGo 編寫的原生桌面音樂播放器，不使用 WebView。支援帶標籤、封面和歌詞的本機 MP3、FLAC、Ogg、WAV 與 AAC 檔案，並提供歌單、搜尋、播放佇列、淡入淡出、響度標準化和播客字幕。外掛可在 macOS、Windows 與 Linux 上接入帳號、音樂目錄、電台等服務。",
+		"ja": "Go と MyGo で作られた WebView 不使用のネイティブ音楽プレーヤー。タグ、アートワーク、歌詞付きのローカル MP3・FLAC・Ogg・WAV・AAC を再生し、プレイリスト、検索、キュー、フェード、ラウドネス正規化、ポッドキャスト字幕を備えます。プラグインで macOS・Windows・Linux にアカウント、カタログ、ステーションなどを追加できます。",
+		"ko": "Go와 MyGo로 만든 WebView 없는 네이티브 데스크톱 음악 플레이어입니다. 태그, 커버, 가사가 있는 로컬 MP3·FLAC·Ogg·WAV·AAC 파일을 재생하고 재생 목록, 검색, 대기열, 페이드, 음량 정규화, 팟캐스트 자막을 제공합니다. 플러그인으로 macOS·Windows·Linux에서 계정, 카탈로그, 스테이션 등의 서비스를 추가할 수 있습니다."
+	},
+	"icon": {
+		"file": "mygo-music.webp"
+	},
+	"screenshot": "mygo-music.webp",
+	"added": "2026-11-08T23:53:54Z"
+}
