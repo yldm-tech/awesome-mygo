@@ -1,0 +1,19 @@
+{
+	"$schema": "../schema/ui.schema.json",
+	"slug": "lobe-mygo",
+	"name": "Lobe MyGo",
+	"author": "LobeHub",
+	"tag": "theme",
+	"surface": "native",
+	"summary": {
+		"en": "Lobe UI components for MyGo native Go apps, drawn on the GPU in pure Go, with 70+ components, shared design tokens, themes, motion and Lucide icons.",
+		"zh-CN": "面向 MyGo 原生 Go 应用的 Lobe UI 组件库，以纯 Go 在 GPU 上绘制，提供 70 多个组件、共享设计令牌、主题、动效与 Lucide 图标。",
+		"zh-TW": "面向 MyGo 原生 Go 應用的 Lobe UI 元件庫，以純 Go 在 GPU 上繪製，提供 70 多個元件、共享設計令牌、主題、動效與 Lucide 圖示。",
+		"ja": "MyGo ネイティブ Go アプリ向けの Lobe UI コンポーネント集。純粋な Go で GPU 描画し、70 以上のコンポーネント、共有デザイントークン、テーマ、モーション、Lucide アイコンを提供します。",
+		"ko": "MyGo 네이티브 Go 앱을 위한 Lobe UI 컴포넌트 라이브러리로, 순수 Go로 GPU에 렌더링하며 70개 이상의 컴포넌트, 공유 디자인 토큰, 테마, 모션, Lucide 아이콘을 제공합니다."
+	},
+	"repo": "lobehub/lobe-mygo",
+	"url": "https://mygo.lobehub.com/?v1",
+	"screenshot": "lobe-mygo.webp",
+	"added": "2026-11-08T23:30:36Z"
+}
