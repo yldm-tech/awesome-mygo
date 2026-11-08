@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "db-g",
+	"name": "DB-G",
+	"author": "Kuangcp",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/Kuangcp/DB-G",
+	"repo": "Kuangcp/DB-G",
+	"summary": {
+		"en": "数据库客户端支持 MySQL PostgreSQL Sqlite Clickhouse"
+	},
+	"description": {
+		"en": "数据库客户端支持 MySQL PostgreSQL Sqlite Clickhouse"
+	},
+	"added": "2026-11-08T14:04:18Z"
+}
