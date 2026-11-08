@@ -1,7 +1,7 @@
 import { LIKE_KEYS } from '@awesome-mygo/catalog';
 import { createFileRoute } from '@tanstack/react-router';
 import { env } from 'cloudflare:workers';
-import { likeCounts, likedBy, setLike, voterId } from '../../server/likes';
+import { cachedLikeCounts, likedBy, setLike, voterId } from '../../server/likes';
 
 // GET: every entry's like count and the entries this visitor has liked. POST {item, liked}: likes or unlikes one entry, answering its new count. Likes are off (GET says so, POST answers 503) where the database or the salt is missing, as in pull request previews.
 
@@ -20,7 +20,7 @@ export const Route = createFileRoute('/api/likes')({
 			GET: async ({ request }) => {
 				const who = await voter(request);
 				if (!who || !env.DB) return json({ enabled: false });
-				const [counts, mine] = await Promise.all([likeCounts(env.DB), likedBy(env.DB, who)]);
+				const [counts, mine] = await Promise.all([cachedLikeCounts(env.DB, request), likedBy(env.DB, who)]);
 				return json({ enabled: true, counts, mine });
 			},
 			POST: async ({ request }) => {

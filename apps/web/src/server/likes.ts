@@ -20,6 +20,21 @@ export async function likeCounts(db: D1Like): Promise<Record<string, number>> {
 	return Object.fromEntries(results.map((r) => [r.item, r.n]));
 }
 
+// The counts are public and identical for every visitor, but the page also needs that visitor's private `mine` list. Cache only this aggregate for five minutes so every page load does not rescan the whole likes table in D1.
+export async function cachedLikeCounts(db: D1Like, request: Request): Promise<Record<string, number>> {
+	const cache = (globalThis as typeof globalThis & { caches?: { default?: Cache } }).caches?.default;
+	if (!cache) return likeCounts(db);
+	const url = new URL(request.url);
+	url.pathname = '/__cache/likes-counts';
+	url.search = '';
+	const key = new Request(url, { method: 'GET' });
+	const hit = await cache.match(key);
+	if (hit) return (await hit.json()) as Record<string, number>;
+	const counts = await likeCounts(db);
+	await cache.put(key, Response.json(counts, { headers: { 'cache-control': 'public, max-age=300' } }));
+	return counts;
+}
+
 export async function likedBy(db: D1Like, voter: string): Promise<string[]> {
 	const { results } = await db.prepare('SELECT item FROM likes WHERE voter = ?').bind(voter).all<{ item: string }>();
 	return results.map((r) => r.item);
