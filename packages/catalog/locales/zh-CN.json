@@ -310,7 +310,7 @@
 	"score_na_shared": "无法测量：它在 {x} 仓库的一个目录里，仓库的 Star 不算它自己的，按一半计入",
 	"score_neutral": "中性值",
 	"score_archived": "仓库已归档 ×{n}",
-	"score_asof": "{x} 这一周的评分，每周一更新",
+	"score_asof": "{x} 的评分，每日更新",
 	"score_formula": "计算方式",
 	"score_history": "历史记录",
 	"score_pending": "待评分",

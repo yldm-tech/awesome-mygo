@@ -14,7 +14,7 @@
 			"const": "./schema/scores.schema.json"
 		},
 		"asOf": {
-			"description": "The Monday (UTC) the counted weeks end on; null until the workflow first runs.",
+			"description": "The UTC day the signals were taken on; null until the workflow first runs.",
 			"oneOf": [
 				{
 					"$ref": "#/$defs/day"
@@ -97,7 +97,7 @@
 					"type": "integer",
 					"minimum": 0,
 					"maximum": 84,
-					"description": "On how many days in the 12 full weeks before asOf the repository published a release or had a tag."
+					"description": "On how many days in the rolling 12-week window through asOf the repository published a release or had a tag."
 				},
 				"archived": {
 					"const": true

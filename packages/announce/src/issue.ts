@@ -71,19 +71,19 @@ export interface RepoFacts {
 
 const DAY = 86_400_000;
 
-// The start of the weeks a score run at the time run counts releases in, as epoch milliseconds: ACTIVITY_WEEKS weeks before the Monday (UTC) of run's week, the run's asOf (weekStart and weekWindows in packages/enrich/src/signals.ts). A release from then up to the run counts.
+// The start of the rolling release window a score run at time run counts, as epoch milliseconds: ACTIVITY_WEEKS weeks before run's UTC day. A release from then through that day counts.
 export function releaseWindowStart(run: number): number {
 	const d = new Date(run);
-	const monday = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) - ((d.getUTCDay() + 6) % 7) * DAY;
-	return monday - ACTIVITY_WEEKS * 7 * DAY;
+	const day = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+	return day - ACTIVITY_WEEKS * 7 * DAY;
 }
 
 // The time of day (UTC) the Update scores workflow runs, in milliseconds after midnight: its cron is '41 3 * * *' (.github/workflows/score.yml).
 const SCORE_RUN_TIME = (3 * 60 + 41) * 60_000;
 
-// A time on the UTC day of the score run that next measures the entry, which is all releaseWindowStart reads of it: for an entry without a record, the next daily run, today's when it has not run yet and otherwise tomorrow's; for one already measured, whose record a later run that week keeps, the first run of the next week, this Monday's when it has not run yet (planRun in packages/enrich/src/signals.ts).
-export function nextScoreRun(now: number, measured: boolean): number {
-	return now - SCORE_RUN_TIME + (measured ? 7 : 1) * DAY;
+// A time on the UTC day of the score run that next measures the entry, which is all releaseWindowStart reads of it: today's run when it has not happened yet, otherwise tomorrow's. Every entry is measured again each day.
+export function nextScoreRun(now: number, _measured: boolean): number {
+	return now - SCORE_RUN_TIME + DAY;
 }
 
 // The newest of the times of a repository's releases and tags that is not after now, or null when there is none: a tag's date is its commit's, which anyone can set, so one in the future is not believed (latestRelease in packages/enrich/src/signals.ts).
@@ -179,7 +179,7 @@ export function composeIssue({ kind, entry, postUrl, tips = [], measured = false
 		...(standEn.length
 			? [`For now the page shows ${standEn.join(' and ')}, in place of the project's own. It would look much better with yours: reply here with a link to the image, or send a pull request to https://github.com/yldm-tech/awesome-mygo that replaces ${standFiles.join(' and ')} and drops ${standNames.join(' and ')} from \`provisional\` in \`${file}\`.`]
 			: []),
-		...(scored ? [`The site scores each project out of 100 from its stars, recent commits, license, likes on the site and releases. ${name}'s score shows at ${where} ${measured ? 'and is updated weekly' : 'from the next daily measurement, and is updated weekly'}.`] : []),
+		...(scored ? [`The site scores each project out of 100 from its stars, recent commits, license, likes on the site and releases. ${name}'s score shows at ${where} ${measured ? 'and is updated daily' : 'from the next daily measurement, and is updated daily'}.`] : []),
 		...(scored && tips.length ? [`To raise it:\n${tips.map((t) => `- ${tipEn(t)}`).join('\n')}`] : []),
 		"If anything on the page is wrong, such as the description, the screenshot or the icon, reply here or open an issue or pull request at https://github.com/yldm-tech/awesome-mygo. If you would rather not be listed, say so and it will be taken down. Feel free to close this issue.",
 		'---',
@@ -187,7 +187,7 @@ export function composeIssue({ kind, entry, postUrl, tips = [], measured = false
 		...(postUrl ? [`X 上的收录推文：${postUrl}`] : []),
 		...(lacksZh.length ? [`页面上目前还没有${lacksZh.join('和')}${missing.icon ? '（应用暂时显示为字母图块）' : ''}，建议补上：直接在这里回复图片链接，或者给 https://github.com/yldm-tech/awesome-mygo 提 PR，按上面英文说明放好图片文件并在 \`${file}\` 里登记。`] : []),
 		...(standZh.length ? [`页面上的${standZh.join('和')}暂时是替代图，换成项目自己的会好很多：直接在这里回复图片链接，或者给 https://github.com/yldm-tech/awesome-mygo 提 PR，替换上面英文说明里的图片文件，并把 \`${file}\` 里 \`provisional\` 中的对应项删掉。`] : []),
-		...(scored ? [`本站按 Star 数、近期提交、许可证、站内点赞和发布情况给每个项目打分（满分 100）${measured ? '，每周更新' : '。下次每日测量后会显示分数，之后每周更新'}：${where}`] : []),
+		...(scored ? [`本站按 Star 数、近期提交、许可证、站内点赞和发布情况给每个项目打分（满分 100）${measured ? '，每日更新' : '。下次每日测量后会显示分数，之后每日更新'}：${where}`] : []),
 		...(scored && tips.length ? [`提高分数的方法：\n${tips.map((t) => `- ${tipZh(t)}`).join('\n')}`] : []),
 		'欢迎在 README 里加上上面的 badge 互相链接。页面上的介绍、截图或图标有误，直接在这里回复，或到 https://github.com/yldm-tech/awesome-mygo 提 issue 或 PR；不希望被收录也请告诉我们，会尽快下架。',
 	];

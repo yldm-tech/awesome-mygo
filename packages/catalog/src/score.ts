@@ -35,7 +35,7 @@ export interface ScoreSignals {
 	osi?: boolean;
 	// The day of the latest release or tag, YYYY-MM-DD.
 	released?: string;
-	// On how many days in the counted weeks, the 12 full weeks before asOf, the repository published a release or had a tag; left out for a record written before it was counted.
+	// On how many days in the rolling 12-week release window through asOf, the repository published a release or had a tag; left out for a record written before it was counted.
 	releaseDays?: number;
 	archived?: boolean;
 	likes: number;

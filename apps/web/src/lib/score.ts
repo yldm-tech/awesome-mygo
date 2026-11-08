@@ -58,14 +58,14 @@ function license(s: ScoreSignals, t: Translations): string {
 	return fill(s.osi ? t.score_lic_osi : t.score_lic_other, { x: s.license });
 }
 
-// The release row: on how many days of the counted weeks it was released or tagged, or for a record written before those were counted, its latest release, as the score counts it then (knownReleaseDays).
+// The release row: on how many days of the rolling release window it was released or tagged, or for a record written before those were counted, its latest release, as the score counts it then (knownReleaseDays).
 function release(s: ScoreSignals, t: Translations, lang: LangCode, num: Intl.NumberFormat): string {
 	if (s.releaseDays === undefined) return s.released ? fill(t.score_v_rel, { x: dayOf(s.released, lang) }) : t.score_v_rel_none;
 	if (s.releaseDays === 0 && !s.released) return t.score_v_rel_none;
 	return fill(t.score_v_rel_days, { x: num.format(ACTIVITY_WEEKS), n: num.format(s.releaseDays) });
 }
 
-// Why a signal counted at NEUTRAL could not be measured: the source is closed, the stars of the repository an entry lives in are not its own, or there is no week of history to judge the activity on yet. day is the week's, as the page writes it.
+// Why a signal counted at NEUTRAL could not be measured: the source is closed, the stars of the repository an entry lives in are not its own, or there is no week of history to judge the activity on yet. day is the score snapshot's, as the page writes it.
 function neutralReason(signal: ScoreSignal, s: ScoreSignals, t: Translations, day: string): string {
 	if (!s.repo) return t.score_na_closed;
 	if (signal === 'stars' && s.path) return fill(t.score_na_shared, { x: s.repo });
@@ -80,7 +80,7 @@ export function scoreRows(score: Score, signals: ScoreSignals, asOf: string, t: 
 		stars: () => fill(t.score_v_stars, { n: num.format(signals.stars ?? 0) }),
 		activity: () => fill(t.score_v_weeks, { x: num.format(signals.weeks ?? 0), n: num.format(signals.activeWeeks ?? 0) }),
 		openness: () => license(signals, t),
-		// As of the week's start, like every signal: the heart beside the name counts likes as they come, so the row says which day its count is from.
+		// As of the score snapshot, like every signal: the heart beside the name counts likes as they come, so the row says which day its count is from.
 		likes: () => fill(t.score_v_likes, { n: num.format(signals.likes), x: day }),
 		release: () => release(signals, t, lang, num),
 	};

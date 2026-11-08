@@ -310,7 +310,7 @@
 	"score_na_shared": "無法測量：它位於 {x} 倉庫的一個目錄中，倉庫的 Star 不算它自己的，以一半計入",
 	"score_neutral": "中性值",
 	"score_archived": "倉庫已封存 ×{n}",
-	"score_asof": "{x} 這一週的評分，每週一更新",
+	"score_asof": "{x} 的評分，每日更新",
 	"score_formula": "計算方式",
 	"score_history": "歷史紀錄",
 	"score_pending": "待評分",

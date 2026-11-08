@@ -310,7 +310,7 @@
 	"score_na_shared": "測定不可：{x} リポジトリ内のフォルダーにあり、リポジトリのスターはそれ自身のものではないため、半分として計算",
 	"score_neutral": "中間値",
 	"score_archived": "リポジトリはアーカイブ済み ×{n}",
-	"score_asof": "{x} の週のスコア、毎週月曜日に更新",
+	"score_asof": "{x} 時点のスコア、毎日更新",
 	"score_formula": "計算方法",
 	"score_history": "履歴",
 	"score_pending": "未評価",

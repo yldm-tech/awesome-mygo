@@ -310,7 +310,7 @@
 	"score_na_shared": "측정 불가: {x} 저장소의 한 폴더에 있어 저장소의 스타는 그 자체의 것이 아니므로 절반으로 계산",
 	"score_neutral": "중간값",
 	"score_archived": "저장소 보관됨 ×{n}",
-	"score_asof": "{x} 주의 점수, 매주 월요일 업데이트",
+	"score_asof": "{x} 점수, 매일 업데이트",
 	"score_formula": "계산 방식",
 	"score_history": "변경 기록",
 	"score_pending": "평가 전",

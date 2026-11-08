@@ -310,7 +310,7 @@
 	"score_na_shared": "Not measurable: it lives in a folder of the {x} repository, whose stars are not its own, so it counts at half",
 	"score_neutral": "Neutral",
 	"score_archived": "Repository archived ×{n}",
-	"score_asof": "Scores for the week of {x}, updated every Monday",
+	"score_asof": "Scores as of {x}, updated daily",
 	"score_formula": "How it is computed",
 	"score_history": "History",
 	"score_pending": "Not scored yet",

@@ -86,6 +86,8 @@ describe('the release and the license', () => {
 		expect(releaseDays([iso(start), iso(start - 1000), iso(MONDAY - 1000), iso(MONDAY), '2026-11-03T12:00:00Z', iso(NOW)], windows)).toBe(2);
 		// A tag dated in the future is not believed, as for the latest release.
 		expect(releaseDays(['2099-01-01T00:00:00Z', iso(NOW + 1000)], windows)).toBe(0);
+		// A daily release window includes the current UTC day through the next midnight.
+		expect(releaseDays(['2026-11-03T12:00:00Z'], weekWindows('2026-11-05'), NOW)).toBe(1);
 		expect(releaseDays(Array.from({ length: 30 }, (_, i) => iso(start + i * DAY)), windows)).toBe(30);
 		expect(releaseDays(Array.from({ length: 90 }, (_, i) => iso(start + i * DAY)), windows)).toBe(84);
 	});
@@ -453,7 +455,7 @@ describe('anomalies', () => {
 });
 
 describe('the commit message', () => {
-	it('names the week of a full run and the entries whose score moved by 5 or more', () => {
+	it('names the day of a full run and the entries whose score moved by 5 or more', () => {
 		const targets = new Map<string, ScoreTarget>([
 			['app:kero', { repo: 'egoist/kero' }],
 			['app:pulse', {}],
@@ -461,7 +463,7 @@ describe('the commit message', () => {
 		const prev: ScoresFile = { asOf: '2026-10-26', entries: { 'app:kero': kero, 'app:pulse': pulse, 'app:gone': pulse } };
 		const next: ScoresFile = { asOf: ASOF, entries: { 'app:kero': { ...kero, activeWeeks: 4 }, 'app:pulse': { likes: 3 } } };
 		const plan = planRun(prev, targets, ASOF, false);
-		expect(commitMessage(plan, prev, next)).toBe('chore(scores): weekly signals as of 2026-11-02\n\n- app:kero: 85 → 72\n- app:gone: removed\n');
+		expect(commitMessage(plan, prev, next)).toBe('chore(scores): daily signals as of 2026-11-02\n\n- app:kero: 85 → 72\n- app:gone: removed\n');
 	});
 
 	it('counts the entries a later run fills in', () => {

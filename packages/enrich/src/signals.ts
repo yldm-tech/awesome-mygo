@@ -4,7 +4,7 @@ import spdx from 'spdx-license-list';
 import { ACTIVITY_WEEKS, type ScoreSignals, type ScoreTarget, scoreKey, scoreOf, scoreTarget } from '../../catalog/src/score.ts';
 import type { Entry, EntryKind } from './source.ts';
 
-// data/scores.json as the catalog reads it (packages/catalog/src/scores.ts, which the scripts cannot import): the Monday the counted weeks end on, null before the first run, and each entry's signals by its key.
+// data/scores.json as the catalog reads it (packages/catalog/src/scores.ts, which the scripts cannot import): the UTC day the signals were taken on, null before the first run, and each entry's signals by its key.
 export interface ScoresFile {
 	asOf: string | null;
 	entries: Record<string, ScoreSignals>;
@@ -49,20 +49,20 @@ export function eligibleWeeks(createdAt: string, active: readonly boolean[], pre
 
 // ---- release and license ----
 
-// The day of the latest of the latest release and the newest tags, YYYY-MM-DD, or undefined when there is none: a Go library is often only tagged. A time after now is left out: a tag's date is its commit's, which anyone can set, and one dated in 2099 would otherwise count as a fresh release for ever.
+// The day of the latest release or newest tag, YYYY-MM-DD, or undefined when there is none: a Go library is often only tagged. A time after now is left out: a tag's date is its commit's, which anyone can set, and one dated in 2099 would otherwise count as a fresh release for ever.
 export function latestRelease(releaseAt: string | null | undefined, tagsAt: readonly (string | null | undefined)[], now: number): string | undefined {
 	const times = [releaseAt, ...tagsAt].filter((t): t is string => Boolean(t)).map((t) => Date.parse(t)).filter((t) => t <= now);
 	return times.length ? day(Math.max(...times)) : undefined;
 }
 
-// On how many days (UTC) there was a release or tag in the windows, the counted weeks, the same for every run of a week: several on one day, or a monorepo's tags of all its packages, count once; a tag with a release is dated by that release alone (parseBatch), so that a release and its own tag count once even when the tag's commit is from an earlier day; and one on asOf or later, this week's or a tag dated in the future, is left out, as activity leaves out this week's commits. The times are the newest 100 releases and the newest 100 tags (REPO_FIELDS): a repository with more in the windows (droi, golder, lark-music and quosparr had more than 100 by November 2026) is counted from those alone, which already reach well past RELEASE_ANCHOR's days, so its points are exact and only the raw count the tie-break reads is a lower bound.
-export function releaseDays(times: readonly (string | null | undefined)[], windows: readonly Window[]): number {
+// On how many UTC days there was a release or tag in the windows: several on one day, or a monorepo's tags of all its packages, count once; a tag with a release is dated by that release alone (parseBatch), so that a release and its own tag count once even when the tag's commit is from an earlier day. Times after the run are left out. The times are the newest 100 releases and the newest 100 tags (REPO_FIELDS): a repository with more in the windows is counted from those alone, which already reach well past RELEASE_ANCHOR's days, so its points are exact and only the raw count the tie-break reads is a lower bound.
+export function releaseDays(times: readonly (string | null | undefined)[], windows: readonly Window[], now = Number.POSITIVE_INFINITY): number {
 	const start = windows[windows.length - 1].start;
 	const end = windows[0].end;
 	const days = new Set<number>();
 	for (const t of times) {
 		const at = t ? Date.parse(t) : Number.NaN;
-		if (at >= start && at < end) days.add(Math.floor(at / DAY));
+		if (at >= start && at < end && at <= now) days.add(Math.floor(at / DAY));
 	}
 	return days.size;
 }
@@ -96,7 +96,7 @@ export function scoredEntry(kind: EntryKind, e: Entry): Scored | undefined {
 // ---- what a run measures ----
 
 export interface Plan {
-	// Every entry is measured again: the first run of a week (asOf moved on), or FULL=true.
+// Every entry is measured again: the first run of a day (asOf moved on), or FULL=true.
 	full: boolean;
 	// The keys measured in this run, and why: the whole catalog in a full run, otherwise the entries without a record, those whose repository or folder changed since theirs (moved), and those whose record is from before a signal was recorded (stale).
 	measure: string[];
@@ -110,7 +110,7 @@ export interface Plan {
 
 const sameTarget = (s: ScoreSignals | undefined, t: ScoreTarget) => s !== undefined && s.repo === t.repo && s.path === t.path;
 
-// Which entries a run measures. The first run of a week measures all of them, so that a week's signals are one snapshot; a later run that week only fills in what is missing, so the scores do not move within the week, and a Monday that failed is made up the next day. Both drop the entries that are gone. While the file is from before a signal was recorded (no record has releaseDays), a record without it is measured again, so a formula change needs no manual full run: an entry with a repository whose record has no releaseDays. Runs record all they measure or nothing, so after the first one that succeeds every record whose repository was found has releaseDays, and a record kept because its repository was not found is kept again rather than measured on every run, which would leave no run idle.
+// Which entries a run measures. The first run of a day measures all of them, so that a day's signals are one snapshot; a later run that day only fills in what is missing. Both drop the entries that are gone. While the file is from before a signal was recorded (no record has releaseDays), a record without it is measured again, so a formula change needs no manual full run: an entry with a repository whose record has no releaseDays. Runs record all they measure or nothing, so after the first one that succeeds every record whose repository was found has releaseDays, and a record kept because its repository was not found is kept again rather than measured on every run, which would leave no run idle.
 export function planRun(prev: ScoresFile, targets: ReadonlyMap<string, ScoreTarget>, asOf: string, full: boolean): Plan {
 	const all = full || prev.asOf !== asOf;
 	const measure: string[] = [];
@@ -198,7 +198,7 @@ export interface RepoInfo {
 	// The SPDX id GitHub detects, NOASSERTION for a license it cannot name, null for none.
 	license: string | null;
 	released?: string;
-	// The days with a release or tag in the counted weeks, the 12 full weeks before asOf (releaseDays).
+	// The days with a release or tag in the rolling 12-week release window (releaseDays).
 	releaseDays: number;
 }
 
@@ -233,8 +233,8 @@ interface GqlRepo {
 }
 
 // Reads the answer to buildQuery(batch). A repository GitHub does not find (NOT_FOUND) leaves its entries in notFound, for the caller to keep their last record or leave them out; any other error, or an answer without data, throws, so that a run never records part of what it asked.
-// now is the run's time, past which a release or tag date is not believed (latestRelease).
-export function parseBatch(batch: Batch, answer: GraphqlAnswer, windows: readonly Window[], now: number): BatchResult {
+// now is the run's time, past which a release or tag date is not believed (latestRelease). activityWindows are the full weeks used for commit activity; releaseWindows is the rolling release window, ending at the next UTC day so today's releases count.
+export function parseBatch(batch: Batch, answer: GraphqlAnswer, activityWindows: readonly Window[], now: number, releaseWindows: readonly Window[] = activityWindows): BatchResult {
 	const missing = new Set<number>();
 	for (const e of answer.errors ?? []) {
 		const alias = typeof e.path?.[0] === 'string' ? /^r(\d+)$/.exec(e.path[0]) : null;
@@ -266,13 +266,13 @@ export function parseBatch(batch: Batch, answer: GraphqlAnswer, windows: readonl
 				license: lic ? (lic.spdxId ?? 'NOASSERTION') : null,
 				// The newest tags by their commits' dates, every one of them, so that one dated in the future does not hide the real ones.
 				released: latestRelease(repo.latestRelease?.publishedAt, refs.map(tagDate), now),
-				releaseDays: releaseDays([...releases.map((n) => n.publishedAt), ...refs.filter((n) => !withRelease.has(n.name)).map(tagDate)], windows),
+				releaseDays: releaseDays([...releases.map((n) => n.publishedAt), ...refs.filter((n) => !withRelease.has(n.name)).map(tagDate)], releaseWindows, now),
 			});
 		}
 		const counts = repo.defaultBranchRef?.target ?? {};
 		r.targets.forEach((t, k) => {
 			const n = first + k;
-			const active = windows.map((_, w) => (counts[`t${n}w${w}`]?.totalCount ?? 0) > 0);
+			const active = activityWindows.map((_, w) => (counts[`t${n}w${w}`]?.totalCount ?? 0) > 0);
 			// A repository's count before the windows left out of the answer is unknown, and its weeks then count from its creation; a folder's is 0.
 			const pre = counts[`t${n}pre`]?.totalCount;
 			out.activity.set(t.key, t.path === undefined ? { active, pre } : { active, pre: pre ?? 0, ever: counts[`t${n}ever`]?.totalCount ?? 0 });
@@ -316,8 +316,8 @@ export interface Assembled {
 	skipped: string[];
 }
 
-// The file a run writes: the records it keeps, and the ones it measured, from GitHub's answers and the likes. Throws when too many repositories were not found, before anything is written.
-export function assemble(plan: Plan, prev: ScoresFile, targets: ReadonlyMap<string, ScoreTarget>, found: BatchResult, likes: Readonly<Record<string, number>>, asOf: string): Assembled {
+// The file a run writes: the records it keeps, and the ones it measured, from GitHub's answers and the likes. Throws when too many repositories were not found, before anything is written. scoreAsOf is the daily snapshot; activityAsOf keeps commit activity anchored to the latest complete Monday-ending week.
+export function assemble(plan: Plan, prev: ScoresFile, targets: ReadonlyMap<string, ScoreTarget>, found: BatchResult, likes: Readonly<Record<string, number>>, scoreAsOf: string, activityAsOf = scoreAsOf): Assembled {
 	const open = [...targets.values()].filter((t) => t.repo).length;
 	if (found.notFound.length > NOT_FOUND_MIN && found.notFound.length > open * NOT_FOUND_LIMIT) throw new Error(`GitHub did not find the repositories of ${found.notFound.length} of the ${open} entries with a repository (${found.notFound.join(', ')}), more than ${NOT_FOUND_LIMIT * 100}%: is the token able to read public repositories?`);
 	const notFound = new Set(found.notFound);
@@ -341,9 +341,9 @@ export function assemble(plan: Plan, prev: ScoresFile, targets: ReadonlyMap<stri
 			} else skipped.push(key);
 			continue;
 		}
-		entries[key] = signalsOf(target, repo, activity, count, asOf);
+		entries[key] = signalsOf(target, repo, activity, count, activityAsOf);
 	}
-	return { file: { asOf, entries }, kept, skipped };
+	return { file: { asOf: scoreAsOf, entries }, kept, skipped };
 }
 
 // The likes of each entry from the site's /api/likes answer. Throws unless likes are enabled there, rather than record everyone at 0.
@@ -431,7 +431,7 @@ export function commitMessage(plan: Plan, prev: ScoresFile, next: ScoresFile): s
 	// The entries the site no longer lists, and one whose repository changed and is not found.
 	const gone = ordered(Object.keys(prev.entries).filter((key) => !Object.hasOwn(next.entries, key)));
 	const subject = plan.full
-		? `chore(scores): weekly signals as of ${next.asOf}`
+		? `chore(scores): daily signals as of ${next.asOf}`
 		: measured.length
 			? `chore(scores): signals for ${measured.length} ${kind} ${entriesWord(measured.length)}`
 			: `chore(scores): drop the signals of ${gone.length} ${entriesWord(gone.length)}`;

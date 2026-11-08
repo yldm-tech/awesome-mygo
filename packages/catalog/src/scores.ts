@@ -6,7 +6,7 @@ import { CatalogError, Reader } from './validate';
 // The signals the scheduled Update scores workflow records in data/scores.json, checked as they load, and each entry's score from them (score.ts). The file keeps only raw signals, so a change to the formula takes effect on the next build without the workflow running again. Only the workflow writes the file, and it runs the tests before it commits: a mistake in it fails them with the entry's key and the field.
 
 export interface ScoresFile {
-	// The Monday (UTC) the counted weeks end on, YYYY-MM-DD; null until the workflow first runs.
+	// The UTC day the signals were taken on, YYYY-MM-DD; null until the workflow first runs.
 	asOf: string | null;
 	// Each entry's signals by its key (scoreKey).
 	entries: Record<string, ScoreSignals>;
@@ -19,7 +19,7 @@ export const SCORE_FIELDS = ['repo', 'path', 'stars', 'weeks', 'activeWeeks', 'l
 const KEY = /^(app|ui|state|template|ai|plugin):\S+$/;
 const REPO = /^[^/\s]+\/[^/\s]+$/;
 const DAY = /^\d{4}-\d{2}-\d{2}$/;
-// The most release days a record can have: they are counted in the ACTIVITY_WEEKS full weeks before asOf, at most one a day.
+// The most release days a record can have: they are counted in the rolling ACTIVITY_WEEKS-week window through asOf, at most one a day.
 const RELEASE_DAYS_MAX = ACTIVITY_WEEKS * 7;
 
 // A calendar day as YYYY-MM-DD, and one that exists.
