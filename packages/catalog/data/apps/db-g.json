@@ -13,10 +13,22 @@
 	"url": "https://github.com/Kuangcp/DB-G",
 	"repo": "Kuangcp/DB-G",
 	"summary": {
-		"en": "数据库客户端支持 MySQL PostgreSQL Sqlite Clickhouse"
+		"en": "A native database client for SQLite, MySQL, PostgreSQL and ClickHouse in one executable.",
+		"zh-CN": "原生数据库客户端：SQLite、MySQL、PostgreSQL、ClickHouse",
+		"zh-TW": "原生資料庫用戶端：SQLite、MySQL、PostgreSQL、ClickHouse",
+		"ja": "SQLite・MySQL・PostgreSQL・ClickHouse 対応のデータベースクライアント。",
+		"ko": "SQLite, MySQL, PostgreSQL, ClickHouse용 네이티브 DB 클라이언트."
 	},
 	"description": {
-		"en": "数据库客户端支持 MySQL PostgreSQL Sqlite Clickhouse"
+		"en": "A local-first database client for SQLite, MySQL, PostgreSQL and ClickHouse, drawn with MyGo's native UI and shipped as one executable each for Windows and Linux, with no Java, Electron or WebView. It runs SQL from a keyboard-driven editor with completion, edits results from a single table in one transaction and exports them to CSV, JSON or SQL INSERT. ClickHouse is read-only.",
+		"zh-CN": "本地优先的数据库客户端，支持 SQLite、MySQL、PostgreSQL 与 ClickHouse，由 MyGo 原生 UI 绘制，Windows 与 Linux 各一个独立可执行文件，无需 Java、Electron 或 WebView。用带补全的 SQL 编辑器执行查询，单表结果可编辑并以单个事务提交，还能导出为 CSV、JSON 或 SQL INSERT；ClickHouse 为只读。",
+		"zh-TW": "本機優先的資料庫用戶端，支援 SQLite、MySQL、PostgreSQL 與 ClickHouse，由 MyGo 原生 UI 繪製，Windows 與 Linux 各一個獨立執行檔，不需要 Java、Electron 或 WebView。用具備自動完成的 SQL 編輯器執行查詢，單一資料表的結果可編輯並以單一交易提交，也能匯出為 CSV、JSON 或 SQL INSERT；ClickHouse 為唯讀。",
+		"ja": "SQLite・MySQL・PostgreSQL・ClickHouse に対応したローカルファーストのデータベースクライアント。MyGo のネイティブ UI で描かれ、Windows と Linux 向けにそれぞれ単一の実行ファイルで配布されており、Java も Electron も WebView も不要です。補完付きの SQL エディターで実行し、単一テーブルの結果は 1 つのトランザクションで編集でき、CSV・JSON・SQL INSERT に書き出せます。ClickHouse は読み取り専用です。",
+		"ko": "SQLite, MySQL, PostgreSQL, ClickHouse를 지원하는 로컬 우선 데이터베이스 클라이언트로, MyGo의 네이티브 UI로 그렸으며 Windows와 Linux용 단일 실행 파일로 배포되어 Java, Electron, WebView가 필요 없습니다. 자동 완성이 있는 SQL 편집기로 쿼리를 실행하고, 단일 테이블 결과를 한 트랜잭션으로 편집하며, CSV, JSON, SQL INSERT로 내보냅니다. ClickHouse는 읽기 전용입니다."
 	},
+	"icon": {
+		"file": "db-g.webp"
+	},
+	"screenshot": "db-g.webp",
 	"added": "2026-11-08T14:04:18Z"
 }
