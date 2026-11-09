@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "open-tj",
+	"name": "Open TJ",
+	"author": "sitdownkevin",
+	"kind": "native",
+	"group": "network",
+	"url": "https://github.com/sitdownkevin/open_tj",
+	"repo": "sitdownkevin/open_tj",
+	"summary": {
+		"en": "A native client for the Tongji University campus VPN, with traffic stats and auto-reconnect.",
+		"zh-CN": "同济大学校园 VPN 原生客户端，带流量统计与自动重连。",
+		"zh-TW": "同濟大學校園 VPN 原生用戶端，具流量統計與自動重新連線。",
+		"ja": "同済大学キャンパス VPN のネイティブクライアント。通信量の統計と自動再接続つき。",
+		"ko": "통지대학교 캠퍼스 VPN 네이티브 클라이언트. 트래픽 통계와 자동 재연결 지원."
+	},
+	"description": {
+		"en": "A client for the Tongji University campus VPN, with traffic stats and automatic reconnection. The macOS version is written in Go and drawn with MyGo's native UI on Metal, with no Swift or WebView, and keeps running in the menu bar after its window is closed. A Windows build from the same code is experimental, and the Android client is a separate Kotlin/Compose app.",
+		"zh-CN": "同济大学校园 VPN 客户端，提供流量统计与自动重连。macOS 版用 Go 编写，由 MyGo 原生 UI 在 Metal 上绘制，不依赖 Swift 或 WebView，关闭窗口后仍在菜单栏运行。同一套代码构建的 Windows 版尚属实验性质，Android 客户端则是另行用 Kotlin/Compose 开发的应用。",
+		"zh-TW": "同濟大學校園 VPN 用戶端，提供流量統計與自動重新連線。macOS 版以 Go 撰寫，由 MyGo 原生 UI 在 Metal 上繪製，不依賴 Swift 或 WebView，關閉視窗後仍在選單列執行。同一套程式碼建置的 Windows 版仍屬實驗性質，Android 用戶端則是另以 Kotlin/Compose 開發的 App。",
+		"ja": "同済大学のキャンパス VPN 用クライアントで、通信量の統計と自動再接続に対応します。macOS 版は Go で書かれ、MyGo のネイティブ UI で Metal 上に描かれており、Swift も WebView も使いません。ウィンドウを閉じてもメニューバーで動き続けます。同じコードからの Windows 版は実験的な扱いで、Android クライアントは Kotlin/Compose で別に作られたアプリです。",
+		"ko": "통지대학교 캠퍼스 VPN 클라이언트로, 트래픽 통계와 자동 재연결을 지원합니다. macOS 버전은 Go로 작성하고 MyGo의 네이티브 UI로 Metal 위에 그려 Swift나 WebView를 쓰지 않으며, 창을 닫아도 메뉴 막대에서 계속 실행됩니다. 같은 코드로 만든 Windows 버전은 실험 단계이고, Android 클라이언트는 Kotlin/Compose로 따로 만든 앱입니다."
+	},
+	"icon": {
+		"file": "open-tj.webp"
+	},
+	"screenshot": "open-tj.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-09T02:30:16Z"
+}
