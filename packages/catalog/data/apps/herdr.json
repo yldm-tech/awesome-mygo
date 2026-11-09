@@ -4,10 +4,14 @@
 	"name": "Herdr",
 	"author": "TengYangTuoHai",
 	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "agents",
-	"url": "https://github.com/TengYangTuoHai/herdr-mygo",
-	"repo": "TengYangTuoHai/herdr-mygo",
+	"url": "https://github.com/TengYangTuoHai/rove",
+	"repo": "TengYangTuoHai/rove",
 	"summary": {
 		"en": "A native desktop window for Herdr's spaces, tabs and split terminals where coding agents run.",
 		"zh-CN": "Herdr 的原生桌面窗口：为编程智能体管理空间、标签页与分屏终端。",
