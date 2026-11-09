@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "finallyshell",
+	"name": "Finallyshell",
+	"author": "TooonyChen",
+	"kind": "native",
+	"group": "dev",
+	"url": "https://github.com/TooonyChen/finallyshell",
+	"repo": "TooonyChen/finallyshell",
+	"summary": {
+		"en": "An SSH and SFTP client laid out like FinalShell, with vertical session tabs and a server monitor.",
+		"zh-CN": "沿用 FinalShell 布局的 SSH/SFTP 客户端，标签竖排，带服务器监控。",
+		"zh-TW": "沿用 FinalShell 版面的 SSH/SFTP 用戶端，分頁直排，附伺服器監控。",
+		"ja": "FinalShell 風レイアウトの SSH・SFTP クライアント。縦並びのタブとサーバー監視つき。",
+		"ko": "FinalShell 레이아웃을 따른 SSH·SFTP 클라이언트. 세로 탭과 서버 모니터 제공."
+	},
+	"description": {
+		"en": "An SSH and SFTP client for macOS, Windows and Linux with FinalShell's layout and vertical session tabs, drawn with MyGo's native UI on Ghostty's terminal engine, with no Java runtime. It monitors Linux servers, edits remote files in place, reaches hosts through proxies, jump hosts and tunnels, imports connections from FinalShell, Xshell and others, and keeps passwords in the system keychain.",
+		"zh-CN": "沿用 FinalShell 布局的 SSH 与 SFTP 客户端，会话标签纵向排列，支持 macOS、Windows 和 Linux。由 MyGo 原生 UI 绘制，终端采用 Ghostty 的引擎，无需安装 Java 运行时。可监控 Linux 服务器，直接编辑远程文件，经代理和跳板机连接并转发端口，能从 FinalShell、Xshell 等导入连接，密码存入系统钥匙串。",
+		"zh-TW": "沿用 FinalShell 版面的 SSH 與 SFTP 用戶端，工作階段分頁直向排列，支援 macOS、Windows 與 Linux。由 MyGo 原生 UI 繪製，終端機採用 Ghostty 的引擎，不必安裝 Java 執行環境。可監控 Linux 伺服器、直接編輯遠端檔案、透過代理與跳板機連線並轉送連接埠，也能從 FinalShell、Xshell 等匯入連線，密碼存進系統鑰匙圈。",
+		"ja": "FinalShell のレイアウトを受け継ぎ、セッションタブを縦に並べた macOS・Windows・Linux 向けの SSH・SFTP クライアント。MyGo のネイティブ UI で描かれ、ターミナルには Ghostty のエンジンを使い、Java ランタイムは不要です。Linux サーバーの監視、リモートファイルのその場での編集、プロキシや踏み台サーバー経由の接続とポート転送ができ、FinalShell や Xshell などから接続先を取り込めます。パスワードはシステムのキーチェーンに保存します。",
+		"ko": "FinalShell의 레이아웃을 따르고 세션 탭을 세로로 늘어놓은 macOS·Windows·Linux용 SSH·SFTP 클라이언트입니다. MyGo의 네이티브 UI로 그리고 터미널은 Ghostty의 엔진을 써서 Java 런타임이 필요 없습니다. Linux 서버를 모니터링하고, 원격 파일을 그 자리에서 편집하며, 프록시와 점프 호스트를 거쳐 접속하고 포트를 포워딩합니다. FinalShell, Xshell 등에서 연결을 가져올 수 있고 비밀번호는 시스템 키체인에 저장합니다."
+	},
+	"icon": {
+		"file": "finallyshell.webp"
+	},
+	"screenshot": "finallyshell.webp",
+	"added": "2026-11-09T02:30:16Z"
+}
