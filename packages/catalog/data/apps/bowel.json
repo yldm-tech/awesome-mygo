@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "bowel",
+	"name": "bowel",
+	"author": "21stware",
+	"kind": "native",
+	"group": "network",
+	"url": "https://21stware.github.io/bowel/",
+	"repo": "21stware/bowel",
+	"summary": {
+		"en": "A native macOS client for the mihomo proxy core, with connection logs and a menu bar panel.",
+		"zh-CN": "mihomo 代理内核的 macOS 原生客户端，含分流、连接日志与菜单栏面板。",
+		"zh-TW": "mihomo 代理核心的 macOS 原生用戶端，含分流、連線紀錄與選單列面板。",
+		"ja": "mihomo プロキシの macOS ネイティブクライアント。経路、接続ログ、メニューバーパネル付き。",
+		"ko": "mihomo 프록시 코어용 macOS 네이티브 클라이언트. 연결 로그와 메뉴 막대 패널 제공."
+	},
+	"description": {
+		"en": "A mihomo client for macOS drawn on the GPU with MyGo's native UI, with no WebView. It routes traffic by purpose with exit nodes picked by hand or by speed, shows each connection's app, rule and exit, imports subscriptions, node links, YAML or QR codes, and offers TUN, a LAN gateway mode and an MCP server for agents. Released builds are for Apple silicon on macOS 12 or later.",
+		"zh-CN": "macOS 上的 mihomo 客户端，界面由 MyGo 原生 UI 经 GPU 直接绘制，没有 WebView。可按用途分流，手动或按速度选择出口节点；逐条查看连接的应用、规则与出口；可导入订阅链接、节点链接、YAML 或二维码；另有 TUN、局域网网关模式和供智能体使用的 MCP 服务器。发布版面向 Apple 芯片，需 macOS 12 及以上。",
+		"zh-TW": "macOS 上的 mihomo 用戶端，介面由 MyGo 原生 UI 經 GPU 直接繪製，沒有 WebView。可依用途分流，手動或依速度選擇出口節點；逐條檢視連線的應用程式、規則與出口；可匯入訂閱連結、節點連結、YAML 或 QR 碼；另有 TUN、區域網路閘道模式和供 AI 代理使用的 MCP 伺服器。發行版本適用 Apple 晶片，需 macOS 12 以上。",
+		"ja": "macOS 向けの mihomo クライアント。MyGo のネイティブ UI で GPU に直接描画され、WebView はありません。用途ごとにトラフィックを振り分け、出口ノードは手動か速度で選択。接続ごとにアプリ、ルール、出口を確認でき、サブスクリプション、ノードリンク、YAML、QR コードを取り込めます。TUN、LAN ゲートウェイモード、エージェント向けの MCP サーバーも備えます。配布版は Apple シリコン用で、macOS 12 以降が必要です。",
+		"ko": "macOS용 mihomo 클라이언트로, MyGo의 네이티브 UI를 GPU로 직접 그리며 WebView가 없습니다. 용도별로 트래픽을 나누고 출구 노드를 직접 또는 속도 기준으로 고르며, 연결마다 앱, 규칙, 출구를 확인하고 구독 링크, 노드 링크, YAML, QR 코드를 가져옵니다. TUN, LAN 게이트웨이 모드, 에이전트용 MCP 서버도 있습니다. 배포 빌드는 Apple 실리콘용이며 macOS 12 이상이 필요합니다."
+	},
+	"icon": {
+		"file": "bowel.webp"
+	},
+	"screenshot": "bowel.webp",
+	"added": "2026-11-09T02:30:16Z"
+}
