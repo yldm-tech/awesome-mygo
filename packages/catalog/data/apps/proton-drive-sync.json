@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "proton-drive-sync",
+	"name": "Proton Drive Sync",
+	"author": "Christopher2K",
+	"kind": "native",
+	"group": "dev",
+	"url": "https://github.com/Christopher2K/proton-drive-sync-linux",
+	"repo": "Christopher2K/proton-drive-sync-linux",
+	"summary": {
+		"en": "Unofficial Linux client that syncs a folder with Proton Drive, downloading files only when opened.",
+		"zh-CN": "非官方 Linux 版 Proton Drive 同步客户端，文件打开时才下载。",
+		"zh-TW": "非官方 Linux 版 Proton Drive 同步用戶端，檔案開啟時才下載。",
+		"ja": "非公式の Linux 向け Proton Drive 同期クライアント。ファイルは開いたときに取得。",
+		"ko": "비공식 Linux용 Proton Drive 동기화 클라이언트. 파일은 열 때 내려받습니다."
+	},
+	"description": {
+		"en": "An unofficial, experimental Linux client for Proton Drive, not affiliated with Proton. Your whole Drive shows up in ~/ProtonDrive and files download when opened, or a Settings toggle mirrors everything; local deletes go to the Drive Trash. MyGo draws only the native window and tray icon; syncing is done by a separate Go engine and a Node.js sidecar running Proton's official SDK.",
+		"zh-CN": "非官方、实验性的 Linux 版 Proton Drive 客户端，与 Proton 无关。整个云盘会出现在 ~/ProtonDrive 中，文件打开时才下载，也可在设置中切换为完整镜像；本地删除的文件会移入云端回收站。MyGo 只负责原生窗口和托盘图标，同步由独立的 Go 引擎和运行 Proton 官方 SDK 的 Node.js 辅助进程完成。",
+		"zh-TW": "非官方、實驗性的 Linux 版 Proton Drive 用戶端，與 Proton 無關。整個雲端硬碟會出現在 ~/ProtonDrive 中，檔案開啟時才下載，也可在設定中切換為完整鏡像；本機刪除的檔案會移到雲端垃圾桶。MyGo 只負責原生視窗與系統匣圖示，同步則由獨立的 Go 引擎和執行 Proton 官方 SDK 的 Node.js 輔助程序完成。",
+		"ja": "Proton とは無関係の、非公式かつ実験的な Linux 向け Proton Drive クライアント。ドライブ全体が ~/ProtonDrive に現れ、ファイルは開いたときにダウンロードされます。設定ですべてをミラーする方式にも切り替えられ、ローカルで削除したファイルはドライブのゴミ箱に送られます。MyGo が担うのはネイティブのウィンドウとトレイアイコンだけで、同期は別の Go エンジンと、Proton 公式 SDK を動かす Node.js サイドカーが行います。",
+		"ko": "Proton과 무관한 비공식·실험적 Linux용 Proton Drive 클라이언트입니다. 드라이브 전체가 ~/ProtonDrive에 나타나고 파일은 열 때 내려받으며, 설정에서 전체 미러 방식으로 바꿀 수도 있고 로컬에서 지운 파일은 드라이브 휴지통으로 갑니다. MyGo는 네이티브 창과 트레이 아이콘만 맡고, 동기화는 별도의 Go 엔진과 Proton 공식 SDK를 실행하는 Node.js 사이드카가 담당합니다."
+	},
+	"icon": {
+		"file": "proton-drive-sync.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "proton-drive-sync.webp",
+	"added": "2026-11-09T02:30:16Z"
+}
