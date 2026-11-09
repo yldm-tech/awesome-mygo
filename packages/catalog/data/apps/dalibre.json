@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "dalibre",
+	"name": "Dalibre",
+	"author": "djyde",
+	"kind": "native",
+	"group": "notes",
+	"url": "https://dalibre.randynamic.org",
+	"repo": "djyde/dalibre",
+	"summary": {
+		"en": "A desktop e-book library that reads and writes calibre libraries and gets books through plugins.",
+		"zh-CN": "读写 calibre 书库的桌面电子书库，可通过插件获取图书。",
+		"zh-TW": "讀寫 calibre 書庫的桌面電子書庫，可透過外掛取得書籍。",
+		"ja": "calibre ライブラリを読み書きするデスクトップ向け電子書籍ライブラリ。プラグインで本も入手できる。",
+		"ko": "calibre 서재를 읽고 쓰는 데스크톱 전자책 서재. 플러그인으로 책도 가져옵니다."
+	},
+	"description": {
+		"en": "An e-book library written in Go and drawn with MyGo's native UI, with no webview. It opens and edits calibre libraries the way calibre does, keeping its metadata.db schema, folder naming and metadata.opf files, so calibre sees every change. Get books searches sources such as the built-in Project Gutenberg, and anyone can add one as a sandboxed JavaScript plugin.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的电子书库，没有 WebView。它按 calibre 的方式读写 calibre 书库，沿用其 metadata.db 结构、文件夹命名和 metadata.opf，修改在 calibre 中同样可见。侧边栏的 Get books 可搜索内置的 Project Gutenberg 等书源，任何人都能用 JavaScript 插件添加书源。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的電子書庫，沒有 WebView。它依照 calibre 的方式讀寫 calibre 書庫，沿用其 metadata.db 結構、資料夾命名和 metadata.opf，修改在 calibre 中同樣看得到。側邊欄的 Get books 可搜尋內建的 Project Gutenberg 等書源，任何人都能用 JavaScript 外掛新增書源。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた電子書籍ライブラリで、WebView は使いません。calibre ライブラリを calibre と同じ方法で読み書きし、metadata.db のスキーマ、フォルダー名、metadata.opf を守るので、変更は calibre にも反映されます。サイドバーの Get books では内蔵の Project Gutenberg などを検索でき、ソースは JavaScript プラグインとして誰でも追加できます。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 전자책 서재로, 웹뷰를 쓰지 않습니다. calibre 서재를 calibre와 같은 방식으로 읽고 쓰며 metadata.db 스키마, 폴더 이름, metadata.opf를 따르므로 변경 내용이 calibre에도 반영됩니다. 사이드바의 Get books로 내장된 Project Gutenberg 등을 검색하고, 누구나 JavaScript 플러그인으로 소스를 추가할 수 있습니다."
+	},
+	"icon": {
+		"file": "dalibre.webp"
+	},
+	"screenshot": "dalibre.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-09T02:30:16Z"
+}
