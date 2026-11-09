@@ -1,33 +1,33 @@
 {
-  "$schema": "../schema/app.schema.json",
-  "slug": "echo",
-  "name": "Echo云音乐",
-  "author": "Simqiqi",
-  "kind": "native",
-  "platforms": [
-    "mac"
-  ],
-  "category": "MultimediaApplication",
-  "group": "media",
-  "url": "https://github.com/Simqiqi/simqiqi-music",
-  "repo": "Simqiqi/simqiqi-music",
-  "summary": {
-    "en": "A third-party NetEase Cloud Music client for macOS, with word-by-word lyrics and a vinyl mode.",
-    "zh-CN": "macOS 上的第三方网易云音乐客户端，带逐字歌词、黑胶唱机模式与听歌周报。",
-    "zh-TW": "macOS 上的第三方網易雲音樂用戶端，有逐字歌詞、黑膠唱機模式與聽歌週報。",
-    "ja": "macOS 用の非公式 NetEase Cloud Music クライアント。歌詞は一文字ずつ点灯。",
-    "ko": "macOS용 비공식 NetEase Cloud Music 앱. 글자 단위 가사와 바이닐 모드."
-  },
-  "description": {
-    "en": "An unofficial NetEase Cloud Music client for macOS, drawn with MyGo's native UI and no web view. It signs in with a QR code, plays daily picks, playlists, personal FM and podcasts in up to lossless and Hi-Res quality, and lights up lyrics word by word. It adds a vinyl player mode, a weekly listening report and a sleep timer.",
-    "zh-CN": "macOS 上的非官方网易云音乐客户端，界面由 MyGo 原生 UI 绘制，没有 WebView。扫码登录后可以听每日推荐、歌单、私人 FM 与播客，音质最高到无损与 Hi-Res，歌词逐字点亮。另外还有黑胶唱机模式、听歌周报和睡眠定时器。",
-    "zh-TW": "macOS 上的非官方網易雲音樂用戶端，介面由 MyGo 原生 UI 繪製，沒有 WebView。掃碼登入後可以聽每日推薦、歌單、私人 FM 與 Podcast，音質最高到無損與 Hi-Res，歌詞逐字點亮。另外還有黑膠唱機模式、聽歌週報和睡眠定時器。",
-    "ja": "MyGo のネイティブ UI で描かれた、macOS 用の非公式 NetEase Cloud Music クライアント。WebView は使っていません。QR コードでログインし、毎日のおすすめ、プレイリスト、パーソナル FM、ポッドキャストをロスレスや Hi-Res までの音質で再生でき、歌詞は一文字ずつ点灯します。レコードプレーヤーモード、週間リスニングレポート、スリープタイマーも備えています。",
-    "ko": "MyGo의 네이티브 UI로 그린 macOS용 비공식 NetEase Cloud Music 클라이언트로, WebView를 쓰지 않습니다. QR 코드로 로그인해 일일 추천, 플레이리스트, 개인 FM, 팟캐스트를 무손실과 Hi-Res 음질까지 들을 수 있고, 가사는 글자 단위로 밝아집니다. 바이닐 플레이어 모드, 주간 감상 리포트, 수면 타이머도 있습니다."
-  },
-  "icon": {
-    "file": "echo.webp"
-  },
-  "screenshot": "echo.webp",
-  "added": "2026-11-05T03:22:12Z"
+	"$schema": "../schema/app.schema.json",
+	"slug": "echo",
+	"name": "Echo云音乐",
+	"author": "Simqiqi",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"category": "MultimediaApplication",
+	"group": "media",
+	"url": "https://github.com/Simqiqi/Echo-music",
+	"repo": "Simqiqi/Echo-music",
+	"summary": {
+		"en": "A third-party NetEase Cloud Music client for macOS, with word-by-word lyrics and a vinyl mode.",
+		"zh-CN": "macOS 上的第三方网易云音乐客户端，带逐字歌词、黑胶唱机模式与听歌周报。",
+		"zh-TW": "macOS 上的第三方網易雲音樂用戶端，有逐字歌詞、黑膠唱機模式與聽歌週報。",
+		"ja": "macOS 用の非公式 NetEase Cloud Music クライアント。歌詞は一文字ずつ点灯。",
+		"ko": "macOS용 비공식 NetEase Cloud Music 앱. 글자 단위 가사와 바이닐 모드."
+	},
+	"description": {
+		"en": "An unofficial NetEase Cloud Music client for macOS, drawn with MyGo's native UI and no web view. It signs in with a QR code, plays daily picks, playlists, personal FM and podcasts in up to lossless and Hi-Res quality, and lights up lyrics word by word. It adds a vinyl player mode, a weekly listening report and a sleep timer.",
+		"zh-CN": "macOS 上的非官方网易云音乐客户端，界面由 MyGo 原生 UI 绘制，没有 WebView。扫码登录后可以听每日推荐、歌单、私人 FM 与播客，音质最高到无损与 Hi-Res，歌词逐字点亮。另外还有黑胶唱机模式、听歌周报和睡眠定时器。",
+		"zh-TW": "macOS 上的非官方網易雲音樂用戶端，介面由 MyGo 原生 UI 繪製，沒有 WebView。掃碼登入後可以聽每日推薦、歌單、私人 FM 與 Podcast，音質最高到無損與 Hi-Res，歌詞逐字點亮。另外還有黑膠唱機模式、聽歌週報和睡眠定時器。",
+		"ja": "MyGo のネイティブ UI で描かれた、macOS 用の非公式 NetEase Cloud Music クライアント。WebView は使っていません。QR コードでログインし、毎日のおすすめ、プレイリスト、パーソナル FM、ポッドキャストをロスレスや Hi-Res までの音質で再生でき、歌詞は一文字ずつ点灯します。レコードプレーヤーモード、週間リスニングレポート、スリープタイマーも備えています。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS용 비공식 NetEase Cloud Music 클라이언트로, WebView를 쓰지 않습니다. QR 코드로 로그인해 일일 추천, 플레이리스트, 개인 FM, 팟캐스트를 무손실과 Hi-Res 음질까지 들을 수 있고, 가사는 글자 단위로 밝아집니다. 바이닐 플레이어 모드, 주간 감상 리포트, 수면 타이머도 있습니다."
+	},
+	"icon": {
+		"file": "echo.webp"
+	},
+	"screenshot": "echo.webp",
+	"added": "2026-11-05T03:22:12Z"
 }
