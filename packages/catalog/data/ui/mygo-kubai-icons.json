@@ -1,0 +1,19 @@
+{
+	"$schema": "../schema/ui.schema.json",
+	"slug": "mygo-kubai-icons",
+	"name": "Kubai Icons for MyGo",
+	"author": "yldm-tech",
+	"tag": "icons",
+	"surface": "native",
+	"summary": {
+		"en": "The 2,871 icons of Kubai Icons for MyGo native UI, moving on hover as on the web: a folder opens, an envelope unseals. Typed Go functions with a colour, a soft look and corner badges; an unofficial port of kubai087/kubai-icons.",
+		"zh-CN": "Kubai Icons 的 2,871 个图标，用于 MyGo 原生 UI，悬停时和网页版一样会动：文件夹打开，信封拆开。以 Go 函数调用，可设主色、清透风格和角标；kubai087/kubai-icons 的非官方移植。",
+		"zh-TW": "Kubai Icons 的 2,871 個圖示，用於 MyGo 原生 UI，滑鼠移上去時和網頁版一樣會動：資料夾打開，信封拆開。以 Go 函式呼叫，可設主色、清透風格和角標；kubai087/kubai-icons 的非官方移植。",
+		"ja": "Kubai Icons の 2,871 個のアイコンを MyGo のネイティブ UI で。ホバーすると Web 版と同じように動きます：フォルダーが開き、封筒の封が切れます。型付きの Go 関数で使え、アクセント色、ソフトな見た目、角のバッジも指定できます。kubai087/kubai-icons の非公式移植です。",
+		"ko": "Kubai Icons의 아이콘 2,871개를 MyGo 네이티브 UI에서 씁니다. 마우스를 올리면 웹과 똑같이 움직입니다: 폴더가 열리고 봉투가 뜯깁니다. 타입이 있는 Go 함수로 부르며 강조 색, 부드러운 스타일, 모서리 배지를 정할 수 있습니다. kubai087/kubai-icons의 비공식 포팅입니다."
+	},
+	"repo": "yldm-tech/mygo-kubai-icons",
+	"url": "https://github.com/yldm-tech/mygo-kubai-icons",
+	"screenshot": "mygo-kubai-icons.webp",
+	"added": "2026-11-09T07:21:12Z"
+}
