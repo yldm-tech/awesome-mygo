@@ -1,0 +1,30 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "clips",
+	"name": "Clips",
+	"author": "5KM Tech",
+	"kind": "native",
+	"platforms": ["win", "mac"],
+	"group": "system",
+	"category": "UtilitiesApplication",
+	"url": "https://clips.5km.tech/",
+	"summary": {
+		"en": "A clipboard history for Windows and Mac that saves copied text, images, files and links.",
+		"zh-CN": "Windows 与 Mac 剪贴板历史：保存复制的文字、图片、文件和链接，一键找回。",
+		"zh-TW": "Windows 與 Mac 剪貼簿歷史：保存複製的文字、圖片、檔案和連結，一鍵找回。",
+		"ja": "Windows と Mac のクリップボード履歴。文字・画像・ファイル・リンクを保存し、ショートカットで呼び出せます。",
+		"ko": "Windows와 Mac용 클립보드 기록 앱. 복사한 텍스트, 이미지, 파일, 링크를 저장하고 단축키로 다시 찾습니다."
+	},
+	"description": {
+		"en": "A clipboard history app for Windows and Mac. It saves copied text, images, files and links locally, lets you search and pin items, and opens with a global shortcut; cross-device sync is optional.",
+		"zh-CN": "适用于 Windows 与 Mac 的剪贴板历史应用。它在本地保存复制的文字、图片、文件和链接，可搜索和固定条目，并通过全局快捷键呼出；跨设备同步可选。",
+		"zh-TW": "適用於 Windows 與 Mac 的剪貼簿歷史應用程式。它在本機保存複製的文字、圖片、檔案和連結，可搜尋與固定項目，並透過全域快捷鍵呼出；跨裝置同步可選。",
+		"ja": "Windows と Mac 向けのクリップボード履歴アプリ。コピーしたテキスト、画像、ファイル、リンクをローカルに保存し、検索やピン留め、グローバルショートカットでの呼び出しに対応します。デバイス間同期は任意です。",
+		"ko": "Windows와 Mac용 클립보드 기록 앱입니다. 복사한 텍스트, 이미지, 파일, 링크를 로컬에 저장하고 검색과 고정, 전역 단축키 호출을 지원하며 기기 간 동기화는 선택 사항입니다."
+	},
+	"icon": {
+		"file": "clips.webp"
+	},
+	"screenshot": "clips-home.webp",
+	"added": "2026-11-09T01:48:20Z"
+}
