@@ -46,21 +46,12 @@ a:focus-visible {
 	outline-offset: 2px;
 }
 
-/* Each language gets its own CJK face; English pairs Inter with the SC fallback. On the site's root element (routes/__root.tsx), which keeps the class for this alone: a utility cannot select on the html element's language without an arbitrary variant per language, which reads worse than these five rules. */
+/* English uses the downloaded Latin face; CJK text uses the platform's native face so the page does not download Google's large per-glyph CJK stylesheet. */
 .site {
 	font-family: var(--font-sans);
 }
-html:lang(zh-TW) .site {
-	font-family: 'Noto Sans TC', system-ui, sans-serif;
-}
 html:lang(en) .site {
-	font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
-}
-html:lang(ja) .site {
-	font-family: 'Noto Sans JP', system-ui, sans-serif;
-}
-html:lang(ko) .site {
-	font-family: 'Noto Sans KR', system-ui, sans-serif;
+	font-family: 'Inter', var(--font-sans);
 }
 
 /* Page layout shared by every route of the original look: the page container, its heading and lead paragraph, and the mono kicker above headings. They stay named classes because every page repeats them; a page adds its own gap and extras with utilities beside the class (`page enter gap-10`). */

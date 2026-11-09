@@ -53,6 +53,6 @@ describe('generated catalog images', () => {
 		expect(existsSync(out)).toBe(false);
 		expect(await writeIcon(pixel, out, 1)).toBe(true);
 		expect(sniffImage(await readFile(out))).toBe('webp');
-		expect(await dimensions(out)).toBe('256 256');
+		expect(await dimensions(out)).toBe('128 128');
 	});
 });

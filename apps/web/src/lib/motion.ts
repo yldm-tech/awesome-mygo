@@ -17,11 +17,18 @@ export function useReducedMotion(): boolean {
 	return useSyncExternalStore(subscribe, prefersReducedMotion, () => false);
 }
 
-// 3D tilt and glare position on pointer move, used by the category, plugin and article tiles.
+// 3D tilt and glare position on pointer move, used by the category, plugin and article tiles. The bounds are read once when the pointer enters so a style write from the previous frame cannot force a synchronous layout on every move.
+const tiltBounds = new WeakMap<HTMLElement, DOMRect>();
+
+export function tiltEnter(e: PointerEvent<HTMLElement>): void {
+	if (!prefersReducedMotion()) tiltBounds.set(e.currentTarget, e.currentTarget.getBoundingClientRect());
+}
+
 export function tiltMove(e: PointerEvent<HTMLElement>): void {
 	if (prefersReducedMotion()) return;
 	const el = e.currentTarget;
-	const r = el.getBoundingClientRect();
+	const r = tiltBounds.get(el);
+	if (!r) return;
 	const px = (e.clientX - r.left) / r.width;
 	const py = (e.clientY - r.top) / r.height;
 	el.style.transform = `perspective(1000px) rotateX(${((0.5 - py) * 7).toFixed(2)}deg) rotateY(${((px - 0.5) * 9).toFixed(2)}deg) translateY(-3px)`;
@@ -30,10 +37,11 @@ export function tiltMove(e: PointerEvent<HTMLElement>): void {
 }
 
 export function tiltLeave(e: PointerEvent<HTMLElement>): void {
+	tiltBounds.delete(e.currentTarget);
 	e.currentTarget.style.transform = '';
 }
 
-export const tilt = { onPointerMove: tiltMove, onPointerLeave: tiltLeave };
+export const tilt = { onPointerEnter: tiltEnter, onPointerMove: tiltMove, onPointerLeave: tiltLeave };
 
 const ease = (x: number) => 1 - (1 - x) ** 3;
 

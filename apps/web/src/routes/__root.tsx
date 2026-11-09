@@ -22,17 +22,9 @@ const RetroApp = lazy(() => import('../retro/RetroApp'));
 
 const LANG_REDIRECT = langRedirectScript();
 
-// Only the CJK face of the page's language is requested (the others' stylesheets alone are large). The CJK family is limited to 400, 600 and 700: every weight adds about a hundred @font-face rules to this render-blocking stylesheet, and font matching renders the styles' 500 with the 400 face and 800/900 with the 700 face. English keeps Simplified Chinese as the fallback for app names such as 留白.
-const CJK: Record<LangCode, string> = {
-	'zh-CN': 'Noto+Sans+SC',
-	'zh-TW': 'Noto+Sans+TC',
-	en: 'Noto+Sans+SC',
-	ja: 'Noto+Sans+JP',
-	ko: 'Noto+Sans+KR',
-};
-
 function fontsHref(lang: LangCode): string {
-	const families = ['Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800', 'JetBrains+Mono:wght@400;700', `${CJK[lang]}:wght@400;600;700`];
+	// CJK faces are intentionally left to the platform fonts. Google Fonts emits a large unicode-range rule for every CJK family (about 90 KB of CSS), while the Latin display and mono faces are small and preserve the site's visual hierarchy.
+	const families = ['Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800', 'JetBrains+Mono:wght@400;700'];
 	if (lang === 'en') families.unshift('Inter:wght@400;500;600;700;800;900');
 	return `https://fonts.googleapis.com/css2?${families.map((f) => `family=${f}`).join('&')}&display=swap`;
 }
@@ -65,11 +57,10 @@ export const Route = createRootRoute({
 			{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon-32.png' },
 			{ rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
 			{ rel: 'manifest', href: '/site.webmanifest' },
-			// Each look loads only its own stylesheet: the original with its Google Fonts, the desktop look with the reader's system fonts.
+			// Each look loads only its own stylesheet. The original stylesheet is preloaded and applied by the inline loader below so it does not block first paint.
 			...(retro
 				? [{ rel: 'stylesheet', href: retroStyles }]
-				: // The Google Fonts stylesheet is only preloaded here; RootDocument applies it without blocking the first paint.
-					[{ rel: 'preload', as: 'style', href: fontsHref(lang) }, { rel: 'stylesheet', href: styles }]),
+				: [{ rel: 'preload', as: 'style', href: styles }, { rel: 'preload', as: 'style', href: fontsHref(lang) }]),
 		],
 		};
 	},
@@ -96,7 +87,10 @@ function RootComponent() {
 	);
 }
 
-// Applies the Google Fonts stylesheet from an inline script in <head>. As a <link rel="stylesheet"> in the markup it blocked the first paint until Google answered (about 90 KB of @font-face rules for a CJK family), and the text it styles is set with display=swap anyway, so the page now paints in the fallback fonts and swaps them in. A stylesheet inserted by script does not block rendering; the preload in the route head starts the download as early as before.
+// Applies a preloaded stylesheet from an inline script in <head>. A stylesheet inserted by script does not block the first paint; the preload in the route head starts the download as early as a normal link.
+const styleLoader = (href: string) => `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href=${JSON.stringify(href)};l.media='print';l.onload=function(){l.media='all'};document.head.appendChild(l)})()`;
+
+// Applies the Google Fonts stylesheet from an inline script in <head>. The text it styles uses display=swap, so the page paints in fallback fonts and swaps them in.
 const fontLoader = (href: string) => `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href=${JSON.stringify(href)};l.setAttribute('data-fonts','');document.head.appendChild(l)})()`;
 
 // Keeps the loader's stylesheet on the page's language after a client-side language switch, which changes the CJK family.
@@ -130,12 +124,14 @@ function RootDocument({ theme, children }: { theme: Theme; children: ReactNode }
 				{/* A bare URL is Simplified Chinese. A first visit with a saved choice or another browser language goes to its ?lang= page before anything renders, so the server serves that language and React never switches it mid-hydration. */}
 				<script dangerouslySetInnerHTML={{ __html: LANG_REDIRECT }} />
 				<HeadContent />
+				{theme !== 'retro' && <script dangerouslySetInnerHTML={{ __html: styleLoader(styles) }} />}
 				{fonts && <script dangerouslySetInnerHTML={{ __html: fontLoader(fonts) }} />}
 				{ogLocaleAlternates(lang).map((locale) => (
 					<meta key={locale} property='og:locale:alternate' content={locale} />
 				))}
 				<noscript>
 					<style>{'.rv{opacity:1;transform:none}'}</style>
+					{theme !== 'retro' && <link rel='stylesheet' href={styles} />}
 					{fonts && <link rel='stylesheet' href={fonts} />}
 				</noscript>
 			</head>

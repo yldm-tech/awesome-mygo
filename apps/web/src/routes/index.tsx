@@ -1,6 +1,6 @@
 import { AI_TOOLS, APPS, INSTALL_CMDS, INSTALL_TABS, type InstallTab, MYGO_SITE, PLUGINS, STATE_SOLUTIONS, TEMPLATES, UI_LIBS, appBySlug, fill, langDef, pad2, pick } from '@awesome-mygo/catalog';
 import { Link, createFileRoute, useNavigate } from '@tanstack/react-router';
-import { type CSSProperties, type PointerEvent, useRef } from 'react';
+import { type CSSProperties, type PointerEvent, useEffect, useRef } from 'react';
 import { AppLink, KindTag, MonoTile, PlatformTags, WinBar, appView } from '../components/bits';
 import { useLang, useT } from '../lib/lang';
 import { prefersReducedMotion, tilt, useCountUp } from '../lib/motion';
@@ -125,13 +125,26 @@ function Hero() {
 	const tab: InstallTab = install ?? 'bun';
 	const setTab = (k: InstallTab) => void navigate({ search: (prev) => ({ ...prev, install: k === 'bun' ? undefined : k }), replace: true, resetScroll: false });
 	const heroRef = useRef<HTMLElement>(null);
+	const heroBounds = useRef<DOMRect | null>(null);
 	const e = useCountUp();
 	const words = langDef(lang).words;
 
+	useEffect(() => {
+		const el = heroRef.current;
+		if (!el) return;
+		const update = () => {
+			heroBounds.current = el.getBoundingClientRect();
+		};
+		update();
+		const observer = new ResizeObserver(update);
+		observer.observe(el);
+		return () => observer.disconnect();
+	}, []);
+
 	const onMove = (ev: PointerEvent<HTMLElement>) => {
 		const el = heroRef.current;
-		if (!el || prefersReducedMotion()) return;
-		const r = el.getBoundingClientRect();
+		const r = heroBounds.current;
+		if (!el || !r || prefersReducedMotion()) return;
 		el.style.setProperty('--px', (((ev.clientX - r.left) / r.width - 0.5) * 2).toFixed(3));
 		el.style.setProperty('--py', (((ev.clientY - r.top) / r.height - 0.5) * 2).toFixed(3));
 	};

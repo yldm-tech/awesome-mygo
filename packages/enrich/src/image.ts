@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { iconCut, shotProblem, sniffImage } from './source.ts';
 
-// Icons and screenshots as the site keeps them: a 256 px WebP icon filling its square, and a WebP screenshot at most 1200 px wide. ImageMagick does the work; the runner has it, so the bot needs no image library.
+// Icons and screenshots as the site keeps them: a 128 px WebP icon filling its square, and a WebP screenshot at most 1200 px wide. The largest icon tile on the site is 96 px, so 128 px keeps it sharp on a high-density display without shipping 256–1024 px source images to small cards. ImageMagick does the work; the runner has it, so the bot needs no image library.
 
 const run = promisify(execFile);
 const MAX_BYTES = 10 * 1024 * 1024;
@@ -124,14 +124,14 @@ async function withInput<T>(img: Downloaded, fn: (input: string, dir: string) =>
 
 const size = (input: string) => magick(['-ping', input, '-format', '%w %h', 'info:']);
 
-// Writes the icon to out as the site's 256 px WebP. A macOS icon sits on a plate inside transparent margins with a faint shadow; the box around its mostly opaque pixels is that plate, so the icon is cut to it and centred on a square, as the official icons in apps/web/public/icons are. Returns false for an icon smaller than min; callers use the 128 px default for project icons, while a last-resort owner avatar may opt into upscaling a smaller source.
+// Writes the icon to out as the site's 128 px WebP. A macOS icon sits on a plate inside transparent margins with a faint shadow; the box around its mostly opaque pixels is that plate, so the icon is cut to it and centred on a square, as the official icons in apps/web/public/icons are. Returns false for an icon smaller than min; callers use the 128 px default for project icons, while a last-resort owner avatar may opt into upscaling a smaller source.
 export async function writeIcon(img: Downloaded, out: string, min = ICON_MIN): Promise<boolean> {
 	return withInput(img, async (input) => {
 		const [w, h] = (await size(input)).split(' ').map(Number);
 		if (Math.min(w, h) < min) return false;
 		const { crop, side } = iconCut(await magick([input, '-alpha', 'extract', '-threshold', '50%', '-format', '%@', 'info:']), w, h);
 		if (side < min) return false;
-		await magick([input, ...(crop ? ['-crop', crop, '+repage'] : []), '-background', 'none', '-gravity', 'center', '-extent', `${side}x${side}`, '-resize', '256x256', '-strip', '-quality', '90', '-define', 'webp:method=6', `webp:${out}`]);
+		await magick([input, ...(crop ? ['-crop', crop, '+repage'] : []), '-background', 'none', '-gravity', 'center', '-extent', `${side}x${side}`, '-resize', '128x128', '-strip', '-quality', '82', '-define', 'webp:method=6', `webp:${out}`]);
 		return true;
 	});
 }

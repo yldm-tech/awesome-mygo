@@ -48,7 +48,7 @@ What utilities cannot say, or what many pages share and adjust by class, is kept
 	--color-green: #9be38a;
 	--color-err: #ff8a80;
 
-	--font-sans: 'Noto Sans SC', system-ui, sans-serif;
+	--font-sans: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans', 'Apple SD Gothic Neo', 'Noto Sans CJK SC', sans-serif;
 	--font-display: 'Bricolage Grotesque', sans-serif;
 	--font-mono: 'JetBrains Mono', monospace;
 }
