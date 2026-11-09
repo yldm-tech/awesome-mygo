@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "gospeak",
+	"name": "GOSpeak",
+	"author": "NoelOrin",
+	"kind": "web",
+	"group": "chat",
+	"url": "https://noelorin.github.io/GOSpeak/",
+	"repo": "NoelOrin/GOSpeak",
+	"summary": {
+		"en": "Desktop client for GOSpeak, a self-hosted voice chat for gamers, with tray and in-game overlay.",
+		"zh-CN": "自托管游戏语音平台 GOSpeak 的桌面客户端，带托盘常驻与游戏内覆盖层。",
+		"zh-TW": "自架遊戲語音平台 GOSpeak 的桌面用戶端，具備系統匣常駐與遊戲內覆蓋層。",
+		"ja": "セルフホスト型ゲーム音声チャット GOSpeak のデスクトップ版。トレイ常駐とゲーム内オーバーレイ付き。",
+		"ko": "자체 호스팅 게임 음성 채팅 GOSpeak의 데스크톱 앱. 트레이와 게임 내 오버레이 지원."
+	},
+	"description": {
+		"en": "The desktop client of GOSpeak, a self-hosted game voice chat platform on LiveKit with voice rooms, speaking indicators and per-member volume. MyGo wraps the same React frontend as the web version in the system WebView and adds a tray icon, launch at login, global shortcuts, notifications and an in-game overlay. The server is a separate Go backend you host yourself.",
+		"zh-CN": "自托管游戏语音平台 GOSpeak 的桌面客户端，基于 LiveKit，提供语音房间、发言检测和成员独立音量。MyGo 用系统 WebView 承载与网页版相同的 React 前端，并加入托盘常驻、开机自启、全局快捷键、系统通知和游戏内覆盖层。服务端是需要另行部署的 Go 后端。",
+		"zh-TW": "自架遊戲語音平台 GOSpeak 的桌面用戶端，以 LiveKit 為基礎，提供語音房間、發言偵測與成員個別音量。MyGo 以系統 WebView 承載與網頁版相同的 React 前端，並加入系統匣常駐、開機自動啟動、全域快捷鍵、系統通知與遊戲內覆蓋層。伺服器端是需另行架設的 Go 後端。",
+		"ja": "LiveKit を使ったセルフホスト型ゲーム音声チャット GOSpeak のデスクトップクライアント。ボイスルーム、発話インジケーター、メンバーごとの音量調整を備えます。MyGo が Web 版と同じ React フロントエンドをシステムの WebView で包み、トレイ常駐、ログイン時の自動起動、グローバルショートカット、システム通知、ゲーム内オーバーレイを加えています。サーバーは別途自分で運用する Go バックエンドです。",
+		"ko": "LiveKit 기반의 자체 호스팅 게임 음성 채팅 GOSpeak의 데스크톱 클라이언트로, 음성 방, 발언 표시, 멤버별 음량 조절을 제공합니다. MyGo가 웹 버전과 같은 React 프런트엔드를 시스템 WebView로 감싸고 트레이 상주, 로그인 시 자동 실행, 전역 단축키, 시스템 알림, 게임 내 오버레이를 더합니다. 서버는 따로 직접 운영하는 Go 백엔드입니다."
+	},
+	"icon": {
+		"file": "gospeak.webp"
+	},
+	"screenshot": "gospeak.webp",
+	"added": "2026-11-09T02:30:16Z"
+}
