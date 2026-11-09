@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "openbee",
+	"name": "OpenBee",
+	"author": "theopenbee",
+	"kind": "native",
+	"group": "agents",
+	"url": "https://www.theopenbee.com/",
+	"repo": "theopenbee/openbee",
+	"summary": {
+		"en": "OpenBee's desktop app: hand tasks by chat to a team of Claude Code, Codex or pi workers.",
+		"zh-CN": "OpenBee 桌面版：通过聊天把任务派给由 AI 编程代理组成的团队。",
+		"zh-TW": "OpenBee 桌面版：透過聊天把任務派給由 AI 程式代理組成的團隊。",
+		"ja": "OpenBee のデスクトップ版。チャットで AI コーディングエージェントのチームに仕事を任せる。",
+		"ko": "OpenBee 데스크톱 앱. 채팅으로 AI 코딩 에이전트 팀에게 작업을 맡깁니다."
+	},
+	"description": {
+		"en": "The desktop app of OpenBee, drawn with MyGo's native UI with the OpenBee server built in; the standalone server and CLI for an always-on machine are installed from npm. Message Bee, the coordinator, and it hands each task to a worker running Claude Code, Codex or pi in its own folder, now, later or on a cron schedule. You need one of those CLIs installed; OpenBee ships no model of its own.",
+		"zh-CN": "OpenBee 的桌面应用，由 MyGo 原生 UI 绘制，并内置 OpenBee 服务器；供常驻机器使用的独立服务器与 CLI 另通过 npm 安装。给协调者 Bee 发消息，它会把任务分派给运行 Claude Code、Codex 或 pi 的 worker，每个 worker 在自己的工作文件夹中，立即、延后或按 cron 计划执行任务。需事先安装其中一个 CLI，OpenBee 本身不附带模型。",
+		"zh-TW": "OpenBee 的桌面應用程式，由 MyGo 原生 UI 繪製，並內建 OpenBee 伺服器；供常駐機器使用的獨立伺服器與 CLI 另透過 npm 安裝。傳訊息給協調者 Bee，它會把任務分派給執行 Claude Code、Codex 或 pi 的 worker，每個 worker 在自己的工作資料夾中，立即、延後或依 cron 排程執行任務。需事先安裝其中一個 CLI，OpenBee 本身不附帶模型。",
+		"ja": "OpenBee のデスクトップアプリで、MyGo のネイティブ UI で描かれ、OpenBee サーバーを内蔵しています。常時稼働用のサーバーと CLI は npm から別途インストールします。コーディネーターの Bee にメッセージを送ると、Claude Code、Codex、pi を動かすワーカーにタスクを振り分け、各ワーカーは専用の作業フォルダーで、すぐに、時間をおいて、または cron スケジュールで作業します。いずれかの CLI が必要で、OpenBee 自体はモデルを同梱しません。",
+		"ko": "MyGo의 네이티브 UI로 그린 OpenBee 데스크톱 앱으로, OpenBee 서버가 내장되어 있습니다. 상시 가동용 서버와 CLI는 npm으로 따로 설치합니다. 코디네이터 Bee에게 메시지를 보내면 Claude Code, Codex, pi를 실행하는 워커에게 작업을 나눠 주고, 각 워커는 자기 작업 폴더에서 즉시, 일정 시간 뒤 또는 cron 일정에 따라 작업합니다. 이 CLI 중 하나가 필요하며 OpenBee 자체에는 모델이 없습니다."
+	},
+	"icon": {
+		"file": "openbee.webp"
+	},
+	"screenshot": "openbee.webp",
+	"added": "2026-11-09T02:30:16Z"
+}
