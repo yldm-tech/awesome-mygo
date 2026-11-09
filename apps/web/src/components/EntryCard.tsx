@@ -9,7 +9,9 @@ import { ScoreButton } from './Score';
 export const showGrid = 'grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-4';
 
 // A card's head: the tile (when the card has one), then the name and the line under it.
-export const showId = 'flex items-center gap-3';
+// Keep the icon aligned with the name when the metadata wraps on narrow cards.
+// Centering against a multi-line metadata block makes the icon float halfway down the card head.
+export const showId = 'flex items-start gap-3';
 export const showIdText = 'flex min-w-0 flex-col gap-[3px]';
 export const showName = 'm-0 truncate text-[17px] font-black tracking-[-0.01em]';
 // The name in a card's head, beside its score and like buttons: up to two lines, using normal word and hyphen opportunities before breaking an unusually long token as a last resort.
