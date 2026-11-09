@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "bookdesk",
+	"name": "书桌",
+	"author": "DaviRain-Su",
+	"kind": "web",
+	"group": "notes",
+	"url": "https://github.com/DaviRain-Su/bookdesk",
+	"repo": "DaviRain-Su/bookdesk",
+	"summary": {
+		"en": "A macOS EPUB reader on an infinite canvas, with highlights, note cards and cross-book search.",
+		"zh-CN": "在无限画布上读 EPUB 的 macOS 阅读器，可划线、做卡片、跨书搜索。",
+		"zh-TW": "在無限畫布上讀 EPUB 的 macOS 閱讀器，可畫線、做卡片、跨書搜尋。",
+		"ja": "無限キャンバスで EPUB を読む macOS 向けリーダー。ハイライト、カード、本をまたぐ検索に対応。",
+		"ko": "무한 캔버스에서 EPUB을 읽는 macOS 리더. 하이라이트, 노트 카드, 책 간 검색 지원."
+	},
+	"description": {
+		"en": "A local EPUB reader for macOS that lays books on infinite canvases beside text and image cards, or opens one full screen, with highlights, vertical Chinese text and search across all books. Optional AI questions, translation and character chats go to an installed agent such as Pi or Codex, or to the Anthropic API. Built with MyGo and a React web frontend in the system WKWebView.",
+		"zh-CN": "只在本机运行的 macOS EPUB 阅读器：把书摊在无限画布上，旁边放文字卡和图片卡，也可以切到全屏阅读；支持划线、中文竖排和跨书搜索。可选的 AI 提问、翻译和角色对话交给本机已安装的 Pi、Codex 等 Agent，或内置的 Anthropic API。由 MyGo 构建，React 前端运行在系统 WKWebView 中。",
+		"zh-TW": "只在本機執行的 macOS EPUB 閱讀器：把書攤在無限畫布上，旁邊放文字卡和圖片卡，也可以切到全螢幕閱讀；支援畫線、中文直排和跨書搜尋。可選的 AI 提問、翻譯和角色對話交給本機已安裝的 Pi、Codex 等 Agent，或內建的 Anthropic API。以 MyGo 建置，React 前端執行於系統 WKWebView 中。",
+		"ja": "ローカルだけで動く macOS 向け EPUB リーダー。無限キャンバスに本とカードを並べるほか、1冊を全画面で読むこともでき、ハイライト、中国語の縦書き、本をまたぐ検索に対応します。AI への質問、翻訳、登場人物との対話は任意で、Pi や Codex などローカルにインストールした Agent か Anthropic API が担います。MyGo で作られ、React の Web フロントエンドをシステムの WKWebView で表示します。",
+		"ko": "로컬에서만 동작하는 macOS용 EPUB 리더입니다. 무한 캔버스에 책과 텍스트·이미지 카드를 펼치거나 한 권을 전체 화면으로 읽을 수 있고, 하이라이트, 중국어 세로쓰기, 책 간 검색을 지원합니다. AI 질문, 번역, 인물 대화는 선택 사항이며 로컬에 설치된 Pi, Codex 등의 Agent나 Anthropic API가 맡습니다. MyGo로 만들었으며 React 웹 프런트엔드를 시스템 WKWebView에서 띄웁니다."
+	},
+	"icon": {
+		"file": "bookdesk.webp"
+	},
+	"screenshot": "bookdesk.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-09T02:30:16Z"
+}
