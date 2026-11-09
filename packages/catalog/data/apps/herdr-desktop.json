@@ -5,8 +5,8 @@
 	"author": "cxnaive",
 	"kind": "native",
 	"group": "agents",
-	"url": "https://github.com/cxnaive/herder_relay_extra",
-	"repo": "cxnaive/herder_relay_extra",
+	"url": "https://github.com/cxnaive/herdr_link",
+	"repo": "cxnaive/herdr_link",
 	"summary": {
 		"en": "Desktop client for Herdr Relay to control remote coding agents, terminals and workspace files.",
 		"zh-CN": "Herdr Relay 桌面客户端，远程操控编程 Agent、终端与工作区文件。",
