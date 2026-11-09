@@ -4,10 +4,13 @@
 	"name": "GoPaste",
 	"author": "viewhang",
 	"kind": "native",
-	"platforms": ["win", "mac"],
+	"platforms": [
+		"win",
+		"mac"
+	],
 	"group": "system",
-	"url": "https://github.com/viewhang/go_paste",
-	"repo": "viewhang/go_paste",
+	"url": "https://github.com/viewhang/GoPaste",
+	"repo": "viewhang/GoPaste",
 	"summary": {
 		"en": "A native clipboard manager for macOS and Windows with searchable history, lists and quick paste.",
 		"zh-CN": "原生 macOS 与 Windows 剪贴板管理器：可搜索的历史、列表与快速粘贴。",
