@@ -4,6 +4,9 @@
 	"name": "Lintel",
 	"author": "DaviRain-Su",
 	"kind": "native",
+	"platforms": [
+		"mac"
+	],
 	"group": "system",
 	"url": "https://github.com/DaviRain-Su/lintel",
 	"repo": "DaviRain-Su/lintel",
