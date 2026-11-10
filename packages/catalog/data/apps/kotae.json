@@ -1,0 +1,20 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "kotae",
+	"name": "Kotae",
+	"author": "fayvo-hub",
+	"kind": "web",
+	"platforms": [
+		"win"
+	],
+	"group": "dev",
+	"url": "https://github.com/fayvo-hub/Kotae",
+	"repo": "fayvo-hub/Kotae",
+	"summary": {
+		"en": "Kotae：一个纯本地的轻量 API 调试客户端，请求构建、脚本、环境变量与流式连接全部在本机完成，适合不想把接口数据传到云端、又嫌 Postman 太重的后端与前端开发者。"
+	},
+	"description": {
+		"en": "Kotae：一个纯本地的轻量 API 调试客户端，请求构建、脚本、环境变量与流式连接全部在本机完成，适合不想把接口数据传到云端、又嫌 Postman 太重的后端与前端开发者。"
+	},
+	"added": "2026-11-09T09:04:14Z"
+}
