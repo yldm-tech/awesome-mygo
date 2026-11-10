@@ -4,14 +4,22 @@
 	"name": "openbee",
 	"author": "theopenbee",
 	"summary": {
-		"en": "OpenBee turns the agent CLIs you already use — Claude Code, Codex or pi — into a team of always-on workers."
+		"en": "A self-hosted coordinator that turns Claude Code, Codex or pi into a team of always-on workers you message from a desktop app, the browser or chat apps.",
+		"zh-CN": "自托管的协调工具，把 Claude Code、Codex 或 pi 变成常驻的工作团队，可从桌面应用、浏览器或聊天应用下达任务。",
+		"zh-TW": "自架的協調工具，把 Claude Code、Codex 或 pi 變成常駐的工作團隊，可從桌面應用程式、瀏覽器或聊天軟體交辦任務。",
+		"ja": "Claude Code、Codex、pi を常時稼働のワーカーチームにする自己ホスト型のコーディネーター。デスクトップアプリ、ブラウザ、チャットアプリから指示できる。",
+		"ko": "Claude Code, Codex, pi를 상시 가동되는 작업자 팀으로 만드는 셀프 호스팅 코디네이터입니다. 데스크톱 앱, 브라우저, 채팅 앱에서 지시할 수 있습니다."
 	},
 	"repo": "theopenbee/openbee",
 	"url": "https://github.com/theopenbee/openbee",
-	"type": "skill",
+	"type": "other",
 	"install": "npx skills add theopenbee/openbee",
 	"tags": [
-		"ai"
+		"agents",
+		"orchestration",
+		"self-hosted"
 	],
+	"homepage": "https://www.theopenbee.com/",
+	"screenshot": "openbee.webp",
 	"added": "2026-11-10T02:59:19Z"
 }
