@@ -4,6 +4,9 @@
 	"name": "La Pluma",
 	"author": "mps233",
 	"kind": "web",
+	"platforms": [
+		"mac"
+	],
 	"group": "game",
 	"url": "https://github.com/mps233/La-pluma",
 	"repo": "mps233/La-pluma",
