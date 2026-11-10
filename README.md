@@ -91,6 +91,7 @@ An app's file, `apps/my-app.json`, looks like this:
   "name": "My App",
   "author": "your-github-login",
   "kind": "native",
+  "platforms": ["win", "linux", "mac"],
   "url": "https://my-app.dev",
   "repo": "you/my-app",
   "summary": { "en": "One line about the app.", "ja": "アプリの一行説明。" },
@@ -101,10 +102,11 @@ An app's file, `apps/my-app.json`, looks like this:
 
 - The file is named after `slug`. `added` is when the entry joined the site, in UTC; the site bot sets it, and by hand you write the current time. Every category but the guides has it: the showcase can list apps newest first by it, and UI libraries, state management, templates, AI tools, articles and community plugins are listed oldest first. Official plugins and the guides are listed by name. Keeping each entry in its own file means pull requests that add entries at the same time never conflict.
 - The other categories' files have the same `$schema`, `slug` and (but for the guides) `added` around their fields; their schemas in `data/schema/` list the fields.
+- `platforms` lists the operating systems the app runs on, at least one of `win`, `linux` and `mac`. CI rejects an app without it.
 - `url` is the app's homepage: its website, or its repository if it has none; it need not be on GitHub. An open-source app adds its GitHub repository as `repo` (`owner/name`); a closed-source one leaves it out.
 - Text fields hold one string per language. `en` is required; `zh-CN`, `zh-TW`, `ja` and `ko` are optional, and a missing language shows the English text.
 - Each file names its JSON Schema (in `data/schema/`) in `$schema`, so VS Code and other editors complete and check the fields as you type.
-- Links must be https. For a screenshot, add a WebP about 1200px wide to `apps/web/public/shots/` and set `"screenshot": "my-app.webp"`. For an app icon, set `"icon": { "ailogo": "<id>" }` with an [ai-logo](https://github.com/yldm-tech/ai-logo) id; for the app's own icon, add a 256px WebP to `apps/web/public/icons/` and set `"icon": { "file": "my-app.webp" }`. Leave it out for a letter tile.
+- Links must be https. For a screenshot, add a WebP about 1200px wide to `apps/web/public/shots/` and set `"screenshot": "my-app.webp"`. For an app icon, set `"icon": { "ailogo": "<id>" }` with an [ai-logo](https://github.com/yldm-tech/ai-logo) id; for the app's own icon, add a 128px WebP to `apps/web/public/icons/` and set `"icon": { "file": "my-app.webp" }`. Leave it out for a letter tile.
 - `pnpm test` checks every entry and names the file, entry and field of each mistake. CI runs it on every pull request.
 
 The UI copy is in `packages/catalog/locales/`, one JSON file per language with the same keys. `zh-CN.json` is the reference: add a new key there and to the other four files; `pnpm typecheck` and `pnpm test` report a missing key or a mismatched `{x}`/`{n}` placeholder.

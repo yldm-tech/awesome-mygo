@@ -89,6 +89,7 @@ bot がプルリクエストを開くと、*Complete submission* ワークフロ
   "name": "My App",
   "author": "your-github-login",
   "kind": "native",
+  "platforms": ["win", "linux", "mac"],
   "url": "https://my-app.dev",
   "repo": "you/my-app",
   "summary": { "en": "One line about the app.", "ja": "アプリの一行説明。" },
@@ -99,10 +100,11 @@ bot がプルリクエストを開くと、*Complete submission* ワークフロ
 
 - ファイル名は `slug` と同じです。`added` は項目がサイトに加わった日時（UTC）で、サイトの bot が書き入れます。手で追加するときは現在時刻を書きます。公式ガイド以外のカテゴリにはすべてあり、ショーケースはこれで新しいアプリから並べられ、UI コンポーネントライブラリ、状態管理、テンプレート、AI ツール、記事、コミュニティのプラグインは古い順に並びます。公式プラグインと公式ガイドは名前順です。項目ごとにファイルが分かれているので、同時に項目を追加するプルリクエストどうしが衝突しません。
 - ほかのカテゴリのファイルも同じように `$schema`、`slug`、`added` を持ちます（公式ガイドには `added` がありません）。フィールドは `data/schema/` のそれぞれのスキーマにあります。
+- `platforms` にはアプリが動く OS を `win`・`linux`・`mac` から一つ以上書きます。この項目がないと CI でエラーになります。
 - `url` はアプリのホームページです。公式サイト、なければリポジトリの URL で、GitHub でなくてもかまいません。オープンソースのアプリは `repo` に GitHub リポジトリ（`owner/name`）を書き、クローズドソースなら省きます。
 - テキストの欄は言語ごとに 1 つずつ書きます。`en` は必須で、`zh-CN`、`zh-TW`、`ja`、`ko` は任意です。欠けている言語では英語が表示されます。
 - 各ファイルは `$schema` で自分の JSON Schema（`data/schema/`）を指しているので、VS Code などのエディタが入力中に補完とチェックをします。
-- リンクは https のみです。スクリーンショットは幅 1200px 程度の WebP を `apps/web/public/shots/` に置き、`"screenshot": "my-app.webp"` と書きます。アプリのアイコンは [ai-logo](https://github.com/yldm-tech/ai-logo) の id で `"icon": { "ailogo": "<id>" }` と書きます。アプリ自身のアイコンを使うときは 256px の WebP を `apps/web/public/icons/` に置き、`"icon": { "file": "my-app.webp" }` と書きます。省略すると文字のタイルになります。
+- リンクは https のみです。スクリーンショットは幅 1200px 程度の WebP を `apps/web/public/shots/` に置き、`"screenshot": "my-app.webp"` と書きます。アプリのアイコンは [ai-logo](https://github.com/yldm-tech/ai-logo) の id で `"icon": { "ailogo": "<id>" }` と書きます。アプリ自身のアイコンを使うときは 128px の WebP を `apps/web/public/icons/` に置き、`"icon": { "file": "my-app.webp" }` と書きます。省略すると文字のタイルになります。
 - `pnpm test` は全項目を検証し、誤りのあるファイル、項目、欄を示します。CI はすべてのプルリクエストで実行します。
 
 UI の文言は `packages/catalog/locales/` にあり、言語ごとに同じキーを持つ JSON ファイルが 1 つずつあります。基準は `zh-CN.json` です。キーを追加するときは残り 4 ファイルにも加えてください。キーの抜けや `{x}`/`{n}` プレースホルダーの不一致は `pnpm typecheck` と `pnpm test` が検出します。

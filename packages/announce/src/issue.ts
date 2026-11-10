@@ -156,13 +156,13 @@ export function composeIssue({ kind, entry, postUrl, tips = [], measured = false
 	const stand = standInImages(kind, entry);
 	const standEn = [...(stand.icon ? ["your GitHub avatar as the app's icon"] : []), ...(stand.screenshot ? ['a card of the repository as its screenshot'] : [])];
 	const standZh = [...(stand.icon ? ['图标（你的 GitHub 头像）'] : []), ...(stand.screenshot ? ['截图（仓库的卡片）'] : [])];
-	const standFiles = [...(stand.screenshot ? [`\`apps/web/public/shots/${slug}.webp\` (WebP, up to 1200 px wide)`] : []), ...(stand.icon ? [`\`apps/web/public/icons/${slug}.webp\` (a 256 px square WebP)`] : [])];
+	const standFiles = [...(stand.screenshot ? [`\`apps/web/public/shots/${slug}.webp\` (WebP, up to 1200 px wide)`] : []), ...(stand.icon ? [`\`apps/web/public/icons/${slug}.webp\` (a 128 px square WebP)`] : [])];
 	const standNames = [...(stand.icon ? ['"icon"'] : []), ...(stand.screenshot ? ['"screenshot"'] : [])];
 	const lacks = [...(missing.screenshot ? ['screenshot'] : []), ...(missing.icon ? ['icon'] : [])];
 	const lacksZh = [...(missing.screenshot ? ['截图'] : []), ...(missing.icon ? ['图标'] : [])];
 	const how = [
 		...(missing.screenshot ? [`a screenshot as \`apps/web/public/shots/${slug}.webp\` (WebP, up to 1200 px wide) with \`"screenshot": "${slug}.webp"\``] : []),
-		...(missing.icon ? [`an icon as \`apps/web/public/icons/${slug}.webp\` (a 256 px square WebP) with \`"icon": { "file": "${slug}.webp" }\``] : []),
+		...(missing.icon ? [`an icon as \`apps/web/public/icons/${slug}.webp\` (a 128 px square WebP) with \`"icon": { "file": "${slug}.webp" }\``] : []),
 	];
 	// An entry without a record has no score yet: the daily Update scores run measures it first.
 	const scored = isScored(kind, entry);

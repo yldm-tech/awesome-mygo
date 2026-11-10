@@ -89,6 +89,7 @@ bot 開出 PR 後，*Complete submission* workflow 會補上表單問不到的�
   "name": "My App",
   "author": "your-github-login",
   "kind": "native",
+  "platforms": ["win", "linux", "mac"],
   "url": "https://my-app.dev",
   "repo": "you/my-app",
   "summary": { "en": "One line about the app.", "ja": "アプリの一行説明。" },
@@ -99,10 +100,11 @@ bot 開出 PR 後，*Complete submission* workflow 會補上表單問不到的�
 
 - 檔名與 `slug` 相同。`added` 是條目加入網站的時間（UTC），網站 bot 會自動填寫，手動新增時寫目前時間。除官方指南外每個類別都有這個欄位：作品集可以依它把最新的應用排在前面，UI 元件庫、狀態管理、範本、AI 工具、文章和社群外掛依它從早到晚排列；官方外掛和官方指南依名稱排列。每個條目一個檔案，所以同時新增條目的多個 PR 不會互相衝突。
 - 其他類別的檔案同樣在欄位外帶 `$schema`、`slug` 和 `added`（官方指南沒有 `added`），具體欄位見 `data/schema/` 裡對應的 schema。
+- `platforms` 列出應用程式支援的作業系統，從 `win`、`linux`、`mac` 中至少選一個。缺少這個欄位時 CI 會報錯。
 - `url` 是應用首頁：官網，沒有官網就填倉庫網址，不要求在 GitHub 上。開源應用再用 `repo` 填 GitHub 倉庫（`owner/name`），閉源應用不填。
 - 文字欄位依語言各寫一份。`en` 必填；`zh-CN`、`zh-TW`、`ja`、`ko` 可選，缺少的語言顯示英文。
 - 每個檔案都在 `$schema` 裡指向自己的 JSON Schema（在 `data/schema/`），VS Code 等編輯器會在你輸入時補全並檢查欄位。
-- 連結必須是 https。截圖請把寬約 1200px 的 WebP 放進 `apps/web/public/shots/`，並寫 `"screenshot": "my-app.webp"`。應用圖示寫 `"icon": { "ailogo": "<id>" }`，id 來自 [ai-logo](https://github.com/yldm-tech/ai-logo)；用應用自己的圖示時，把 256px 的 WebP 放進 `apps/web/public/icons/`，並寫 `"icon": { "file": "my-app.webp" }`。不寫則顯示字母圖示。
+- 連結必須是 https。截圖請把寬約 1200px 的 WebP 放進 `apps/web/public/shots/`，並寫 `"screenshot": "my-app.webp"`。應用圖示寫 `"icon": { "ailogo": "<id>" }`，id 來自 [ai-logo](https://github.com/yldm-tech/ai-logo)；用應用自己的圖示時，把 128px 的 WebP 放進 `apps/web/public/icons/`，並寫 `"icon": { "file": "my-app.webp" }`。不寫則顯示字母圖示。
 - `pnpm test` 會驗證每個條目，出錯時指出檔案、條目和欄位。CI 會在每個 PR 上執行它。
 
 介面文案在 `packages/catalog/locales/`，每種語言一個 JSON 檔案，鍵完全相同。`zh-CN.json` 是基準：新增的鍵要同時加進其餘四個檔案；缺鍵或 `{x}`/`{n}` 佔位符不一致時，`pnpm typecheck` 和 `pnpm test` 會報錯。

@@ -89,6 +89,7 @@ bot이 풀 리퀘스트를 열면 *Complete submission* 워크플로가 양식�
   "name": "My App",
   "author": "your-github-login",
   "kind": "native",
+  "platforms": ["win", "linux", "mac"],
   "url": "https://my-app.dev",
   "repo": "you/my-app",
   "summary": { "en": "One line about the app.", "ja": "アプリの一行説明。" },
@@ -99,10 +100,11 @@ bot이 풀 리퀘스트를 열면 *Complete submission* 워크플로가 양식�
 
 - 파일 이름은 `slug`와 같습니다. `added`는 항목이 사이트에 들어온 시각(UTC)으로, 사이트 bot이 채우며 직접 추가할 때는 현재 시각을 씁니다. 공식 가이드를 뺀 모든 카테고리에 있으며, 쇼케이스는 이것으로 최신 앱부터 보여 줄 수 있고 UI 컴포넌트 라이브러리, 상태 관리, 템플릿, AI 도구, 글, 커뮤니티 플러그인은 오래된 순으로 나열됩니다. 공식 플러그인과 공식 가이드는 이름순입니다. 항목마다 파일이 따로 있어서 동시에 항목을 추가하는 풀 리퀘스트끼리 충돌하지 않습니다.
 - 다른 카테고리의 파일도 같은 `$schema`, `slug`, `added`를 가지며(공식 가이드에는 `added`가 없습니다), 필드는 `data/schema/`의 각 스키마에 있습니다.
+- `platforms`에는 앱이 실행되는 운영체제를 `win`, `linux`, `mac` 중 하나 이상 적습니다. 이 항목이 없으면 CI에서 오류가 납니다.
 - `url`은 앱의 홈페이지입니다. 공식 웹사이트, 없으면 저장소 주소이며 GitHub가 아니어도 됩니다. 오픈 소스 앱은 `repo`에 GitHub 저장소(`owner/name`)를 적고, 비공개 소스 앱은 생략합니다.
 - 텍스트 필드는 언어별로 하나씩 씁니다. `en`은 필수이고 `zh-CN`, `zh-TW`, `ja`, `ko`는 선택이며, 빠진 언어에서는 영어가 표시됩니다.
 - 각 파일은 `$schema`로 자신의 JSON Schema(`data/schema/`)를 가리키므로 VS Code 등의 편집기가 입력하는 동안 필드를 자동 완성하고 검사합니다.
-- 링크는 https여야 합니다. 스크린샷은 너비 약 1200px의 WebP를 `apps/web/public/shots/`에 두고 `"screenshot": "my-app.webp"`로 씁니다. 앱 아이콘은 [ai-logo](https://github.com/yldm-tech/ai-logo) id로 `"icon": { "ailogo": "<id>" }`를 씁니다. 앱 자체 아이콘을 쓰려면 256px WebP를 `apps/web/public/icons/`에 두고 `"icon": { "file": "my-app.webp" }`로 씁니다. 생략하면 글자 타일이 표시됩니다.
+- 링크는 https여야 합니다. 스크린샷은 너비 약 1200px의 WebP를 `apps/web/public/shots/`에 두고 `"screenshot": "my-app.webp"`로 씁니다. 앱 아이콘은 [ai-logo](https://github.com/yldm-tech/ai-logo) id로 `"icon": { "ailogo": "<id>" }`를 씁니다. 앱 자체 아이콘을 쓰려면 128px WebP를 `apps/web/public/icons/`에 두고 `"icon": { "file": "my-app.webp" }`로 씁니다. 생략하면 글자 타일이 표시됩니다.
 - `pnpm test`는 모든 항목을 검증하고 오류가 있는 파일, 항목, 필드를 알려 줍니다. CI가 모든 풀 리퀘스트에서 실행합니다.
 
 UI 문구는 `packages/catalog/locales/`에 있으며, 언어마다 키가 같은 JSON 파일이 하나씩 있습니다. 기준은 `zh-CN.json`입니다. 키를 추가할 때는 나머지 네 파일에도 넣어야 하며, 빠진 키나 `{x}`/`{n}` 자리표시자 불일치는 `pnpm typecheck`와 `pnpm test`가 잡아냅니다.
