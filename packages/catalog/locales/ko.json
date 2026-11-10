@@ -166,6 +166,7 @@
 	"guides_h": "공식 가이드",
 	"article": "글",
 	"footer_l": "Awesome MyGo는 MIT 라이선스 오픈소스 · MyGo는 egoist 제작, MIT 라이선스",
+	"footer_by": "관리: {x}",
 	"sponsor": "egoist 후원",
 	"to_top": "맨 위로",
 	"close_detail": "상세 닫기",

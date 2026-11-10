@@ -1,4 +1,4 @@
-import { DEFAULT_LANG, LANGS, MYGO_REPO, type RootSearch, SITE_REPO, langDef } from '@awesome-mygo/catalog';
+import { DEFAULT_LANG, LANGS, MAINTAINER_URL, MYGO_REPO, type RootSearch, SITE_REPO, langDef } from '@awesome-mygo/catalog';
 import { Link, useLocation, useMatches } from '@tanstack/react-router';
 import { type ComponentType, useEffect, useRef, useState } from 'react';
 import { GitHubMark } from '../components/bits';
@@ -227,7 +227,13 @@ function Foot() {
 	const t = useT();
 	return (
 		<footer className='mt-14 flex min-h-[30px] flex-none flex-wrap items-center gap-x-[18px] gap-y-1.5 border-t border-line bg-paper/85 px-4 py-1 text-xs text-muted backdrop-blur-md desk:mt-0 desk:flex-nowrap desk:overflow-hidden desk:whitespace-nowrap'>
-			<span>{t.footer_l}</span>
+			<span>
+				{t.footer_l} · {t.footer_by.split('{x}')[0]}
+				<a className={lnk} href={MAINTAINER_URL} target='_blank' rel='noopener'>
+					YLDM
+				</a>
+				{t.footer_by.split('{x}')[1]}
+			</span>
 			<nav aria-label={t.a_site_nav} className='flex flex-wrap gap-x-3'>
 				{NAV.map((n) => (
 					<Link key={n.to} to={n.to} className={lnk}>

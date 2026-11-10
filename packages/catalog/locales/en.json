@@ -166,6 +166,7 @@
 	"guides_h": "Official guides",
 	"article": "Article",
 	"footer_l": "Awesome MyGo is open source under MIT · MyGo by egoist, MIT licensed",
+	"footer_by": "Maintained by {x}",
 	"sponsor": "Sponsor egoist",
 	"to_top": "Back to top",
 	"close_detail": "Close details",

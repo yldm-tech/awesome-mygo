@@ -166,6 +166,7 @@
 	"guides_h": "官方指南",
 	"article": "文章",
 	"footer_l": "Awesome MyGo 以 MIT 许可开源 · MyGo 由 egoist 创建，MIT 许可",
+	"footer_by": "由 {x} 维护",
 	"sponsor": "赞助 egoist",
 	"to_top": "回到顶部",
 	"close_detail": "关闭详情",
