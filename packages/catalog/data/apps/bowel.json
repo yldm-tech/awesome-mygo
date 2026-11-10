@@ -4,22 +4,27 @@
 	"name": "bowel",
 	"author": "21stware",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "network",
 	"url": "https://21stware.github.io/bowel/",
 	"repo": "21stware/bowel",
 	"summary": {
-		"en": "A native macOS client for the mihomo proxy core, with connection logs and a menu bar panel.",
-		"zh-CN": "mihomo 代理内核的 macOS 原生客户端，含分流、连接日志与菜单栏面板。",
-		"zh-TW": "mihomo 代理核心的 macOS 原生用戶端，含分流、連線紀錄與選單列面板。",
-		"ja": "mihomo プロキシの macOS ネイティブクライアント。経路、接続ログ、メニューバーパネル付き。",
-		"ko": "mihomo 프록시 코어용 macOS 네이티브 클라이언트. 연결 로그와 메뉴 막대 패널 제공."
+		"en": "A native mihomo proxy client for macOS, Windows and Linux, with routing, connection logs and a tray panel.",
+		"zh-CN": "mihomo 代理内核的原生客户端，支持 macOS、Windows 与 Linux，含分流、连接日志与托盘面板。",
+		"zh-TW": "mihomo 代理核心的原生用戶端，支援 macOS、Windows 與 Linux，含分流、連線紀錄與系統匣面板。",
+		"ja": "macOS・Windows・Linux 対応の mihomo ネイティブクライアント。経路、接続ログ、トレイパネル付き。",
+		"ko": "macOS, Windows, Linux용 mihomo 네이티브 클라이언트. 라우팅, 연결 로그와 트레이 패널 제공."
 	},
 	"description": {
-		"en": "A mihomo client for macOS drawn on the GPU with MyGo's native UI, with no WebView. It routes traffic by purpose with exit nodes picked by hand or by speed, shows each connection's app, rule and exit, imports subscriptions, node links, YAML or QR codes, and offers TUN, a LAN gateway mode and an MCP server for agents. Released builds are for Apple silicon on macOS 12 or later.",
-		"zh-CN": "macOS 上的 mihomo 客户端，界面由 MyGo 原生 UI 经 GPU 直接绘制，没有 WebView。可按用途分流，手动或按速度选择出口节点；逐条查看连接的应用、规则与出口；可导入订阅链接、节点链接、YAML 或二维码；另有 TUN、局域网网关模式和供智能体使用的 MCP 服务器。发布版面向 Apple 芯片，需 macOS 12 及以上。",
-		"zh-TW": "macOS 上的 mihomo 用戶端，介面由 MyGo 原生 UI 經 GPU 直接繪製，沒有 WebView。可依用途分流，手動或依速度選擇出口節點；逐條檢視連線的應用程式、規則與出口；可匯入訂閱連結、節點連結、YAML 或 QR 碼；另有 TUN、區域網路閘道模式和供 AI 代理使用的 MCP 伺服器。發行版本適用 Apple 晶片，需 macOS 12 以上。",
-		"ja": "macOS 向けの mihomo クライアント。MyGo のネイティブ UI で GPU に直接描画され、WebView はありません。用途ごとにトラフィックを振り分け、出口ノードは手動か速度で選択。接続ごとにアプリ、ルール、出口を確認でき、サブスクリプション、ノードリンク、YAML、QR コードを取り込めます。TUN、LAN ゲートウェイモード、エージェント向けの MCP サーバーも備えます。配布版は Apple シリコン用で、macOS 12 以降が必要です。",
-		"ko": "macOS용 mihomo 클라이언트로, MyGo의 네이티브 UI를 GPU로 직접 그리며 WebView가 없습니다. 용도별로 트래픽을 나누고 출구 노드를 직접 또는 속도 기준으로 고르며, 연결마다 앱, 규칙, 출구를 확인하고 구독 링크, 노드 링크, YAML, QR 코드를 가져옵니다. TUN, LAN 게이트웨이 모드, 에이전트용 MCP 서버도 있습니다. 배포 빌드는 Apple 실리콘용이며 macOS 12 이상이 필요합니다."
+		"en": "A mihomo client for macOS, Windows and Linux whose desktop UI is drawn on the GPU with MyGo's native UI, with no WebView; a separate Flutter app covers Android. It routes traffic by purpose with exit nodes picked by hand or by speed, shows each connection's app, rule and exit, imports subscriptions, node links, YAML or QR codes, and offers an MCP server for agents. TUN and a LAN gateway mode are macOS only, and on Linux it cannot set the system proxy yet.",
+		"zh-CN": "支持 macOS、Windows 与 Linux 的 mihomo 客户端，桌面界面由 MyGo 原生 UI 经 GPU 直接绘制，没有 WebView；Android 版另用 Flutter 编写。可按用途分流，手动或按速度选择出口节点；逐条查看连接的应用、规则与出口；可导入订阅链接、节点链接、YAML 或二维码；另有供智能体使用的 MCP 服务器。TUN 与局域网网关模式仅限 macOS，Linux 上暂时无法设置系统代理。",
+		"zh-TW": "支援 macOS、Windows 與 Linux 的 mihomo 用戶端，桌面介面由 MyGo 原生 UI 經 GPU 直接繪製，沒有 WebView；Android 版另以 Flutter 撰寫。可依用途分流，手動或依速度選擇出口節點；逐條檢視連線的應用程式、規則與出口；可匯入訂閱連結、節點連結、YAML 或 QR 碼；另有供 AI 代理使用的 MCP 伺服器。TUN 與區域網路閘道模式僅限 macOS，Linux 上暫時無法設定系統代理。",
+		"ja": "macOS・Windows・Linux 向けの mihomo クライアント。デスクトップ版の UI は MyGo のネイティブ UI で GPU に直接描画され、WebView はありません。Android 版は Flutter で別に作られています。用途ごとにトラフィックを振り分け、出口ノードは手動か速度で選択。接続ごとにアプリ、ルール、出口を確認でき、サブスクリプション、ノードリンク、YAML、QR コードを取り込めます。エージェント向けの MCP サーバーも備えます。TUN と LAN ゲートウェイモードは macOS のみで、Linux ではまだシステムプロキシを設定できません。",
+		"ko": "macOS, Windows, Linux용 mihomo 클라이언트로, 데스크톱 UI는 MyGo의 네이티브 UI를 GPU로 직접 그리며 WebView가 없습니다. Android 앱은 Flutter로 따로 만들었습니다. 용도별로 트래픽을 나누고 출구 노드를 직접 또는 속도 기준으로 고르며, 연결마다 앱, 규칙, 출구를 확인하고 구독 링크, 노드 링크, YAML, QR 코드를 가져옵니다. 에이전트용 MCP 서버도 있습니다. TUN과 LAN 게이트웨이 모드는 macOS 전용이며, Linux에서는 아직 시스템 프록시를 설정할 수 없습니다."
 	},
 	"icon": {
 		"file": "bowel.webp"
