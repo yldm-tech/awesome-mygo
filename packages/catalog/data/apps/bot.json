@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "bot",
+	"name": "bot",
+	"author": "deskwand",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "ai",
+	"url": "https://deskwand.com/zh/bot",
+	"repo": "deskwand/bot",
+	"summary": {
+		"en": "一键部署到 cloudflare 的个人助理（免费套餐即可）。支持自我唤醒自主运行，支持微信、telegram 接入。"
+	},
+	"description": {
+		"en": "一键部署到 cloudflare 的个人助理（免费套餐即可）。支持自我唤醒自主运行，支持微信、telegram 接入。"
+	},
+	"added": "2026-11-10T13:59:05Z"
+}
