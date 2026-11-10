@@ -11,12 +11,22 @@
 	"url": "https://github.com/love1017best/shijing",
 	"repo": "love1017best/shijing",
 	"summary": {
-		"en": "A random wallpaper picker for wallpaper hoarders.",
-		"zh-CN": "适合壁纸囤积症患者的随机图库筛选工具"
+		"en": "Picks random high-resolution landscape photos from your NAS for macOS's folder wallpaper shuffle.",
+		"zh-CN": "从 NAS 图库随机挑一批高分辨率横屏图片，供 macOS 文件夹壁纸轮换。",
+		"zh-TW": "從 NAS 圖庫隨機挑一批高解析度橫向圖片，供 macOS 資料夾桌布輪播。",
+		"ja": "NAS の写真から高解像度の横長画像を無作為に選び、macOS の壁紙フォルダーに入れるアプリ。",
+		"ko": "NAS 사진 중 고해상도 가로 이미지를 무작위로 골라 macOS 폴더 배경화면 순환에 넣는 앱."
 	},
 	"description": {
-		"en": "Filters a large photo library on your NAS down to landscape images that are big enough, picks a random batch for macOS folder wallpaper shuffle, and refreshes the system wallpaper so the new batch shows up right away.",
-		"zh-CN": "从 NAS 上的大型图库里筛出分辨率够高的横屏图片，随机拾一批放进壁纸文件夹给 macOS 轮换，并刷新系统壁纸让新图立刻生效。"
+		"en": "A macOS app in MyGo's native UI that picks wallpapers from a large photo library on a NAS. It filters out portrait, square and low-resolution images, samples a random batch spread across subfolders into the folder macOS rotates through, and restarts the wallpaper service so the new batch shows at once. Rejected originals in filtered folders are deleted for good unless you choose a dry run.",
+		"zh-CN": "用 MyGo 原生 UI 写成的 macOS 应用，从 NAS 上的大型图库里挑壁纸。它剔除竖屏、正方形和分辨率不够的图片，按子文件夹平衡地随机拾一批，放进 macOS 轮换的壁纸文件夹，再重启系统壁纸服务让新图立刻生效。筛选目录里不合格的原图会被直接删除，可先关掉删除模拟运行。",
+		"zh-TW": "以 MyGo 原生 UI 寫成的 macOS 應用程式，從 NAS 上的大型圖庫挑選桌布。它剔除直向、正方形與解析度不足的圖片，依子資料夾平均地隨機挑一批，放進 macOS 輪播的桌布資料夾，再重新啟動系統桌布服務，讓新圖立刻生效。篩選目錄中不合格的原圖會被直接刪除，可先關閉刪除功能模擬執行。",
+		"ja": "MyGo のネイティブ UI で作られた macOS アプリで、NAS 上の大きな写真ライブラリから壁紙を選びます。縦長・正方形・解像度不足の画像を除き、サブフォルダーに偏らないよう無作為に選んだ一式を macOS が順に切り替える壁紙フォルダーへ入れ、壁紙サービスを再起動して新しい画像をすぐ反映させます。フィルター対象のフォルダーでは不合格の元画像が完全に削除されますが、削除を切ったテスト実行もできます。",
+		"ko": "MyGo의 네이티브 UI로 만든 macOS 앱으로, NAS에 있는 대용량 사진 라이브러리에서 배경화면을 고릅니다. 세로·정사각형·저해상도 이미지를 걸러 내고, 하위 폴더별로 고르게 무작위 한 묶음을 뽑아 macOS가 순환하는 배경화면 폴더에 넣은 뒤, 배경화면 서비스를 다시 시작해 새 이미지를 바로 적용합니다. 필터 대상 폴더의 부적합한 원본은 영구 삭제되며, 삭제를 끄고 모의 실행할 수도 있습니다."
 	},
+	"icon": {
+		"file": "shijing.webp"
+	},
+	"screenshot": "shijing.webp",
 	"added": "2026-11-10T13:46:15Z"
 }
