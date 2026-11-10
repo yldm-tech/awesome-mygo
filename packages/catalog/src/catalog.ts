@@ -11,8 +11,8 @@ export const MYGO_REPO = 'https://github.com/egoist/mygo';
 // This site's own repository, where submissions arrive.
 export const SITE_REPO = 'https://github.com/yldm-tech/awesome-mygo';
 export const DATA_DIR = 'packages/catalog/data';
-// Who maintains this site, credited in the footer.
-export const MAINTAINER_URL = 'https://github.com/yldm-tech';
+// Who maintains this site, credited in the footer: the maintainer's own site.
+export const MAINTAINER_URL = 'https://yldm.ai';
 export const SPONSOR_URL = 'https://github.com/sponsors/egoist';
 export const DOCS_BASE = 'https://github.com/egoist/mygo/blob/main/docs/';
 export const BINDINGS_DOC = `${DOCS_BASE}bindings.md`;
