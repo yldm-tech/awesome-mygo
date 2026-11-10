@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "sessionary",
+	"name": "Sessionary",
+	"author": "onlynor",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "ai",
+	"url": "https://github.com/onlynor/Sessionary-Desktop",
+	"repo": "onlynor/Sessionary-Desktop",
+	"summary": {
+		"en": "面向 AI 编程智能体的跨平台桌面管理工作台，统一管理 Claude Code、Codex、OpenCode、Pi 等智能体的项目、会话、远程机器、模型路由及 Token 使用情况"
+	},
+	"description": {
+		"en": "面向 AI 编程智能体的跨平台桌面管理工作台，统一管理 Claude Code、Codex、OpenCode、Pi 等智能体的项目、会话、远程机器、模型路由及 Token 使用情况"
+	},
+	"added": "2026-11-10T12:29:41Z"
+}
