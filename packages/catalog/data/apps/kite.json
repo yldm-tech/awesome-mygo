@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "kite",
+	"name": "kite",
+	"author": "kite-org",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://kitehq.dev/",
+	"repo": "kite-org/kite",
+	"summary": {
+		"en": "Kite is the lightweight, open-source Kubernetes workspace for clusters, observability, access control, and AI operations."
+	},
+	"description": {
+		"en": "Kite is the lightweight, open-source Kubernetes workspace for clusters, observability, access control, and AI operations."
+	},
+	"added": "2026-11-10T14:19:48Z"
+}
