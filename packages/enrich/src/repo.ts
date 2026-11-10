@@ -48,6 +48,12 @@ export async function repoFacts(repo: string, note: (line: string) => void): Pro
 	return facts;
 }
 
+// The file names of the repository's latest release, prereleases included, as the platforms it ships for (a .dmg, a windows-amd64 archive, a .deb); empty when it has no release. Read only when an app's platforms are picked, so the check of listed entries (verify.ts) does not pay a request per entry for it.
+export async function latestReleaseAssets(repo: string): Promise<string[]> {
+	const releases = await github<{ tag_name: string; assets: { name: string }[] }[]>(`/repos/${repo}/releases?per_page=1`);
+	return releases?.[0]?.assets.map((a) => a.name) ?? [];
+}
+
 export const rawUrl = (facts: RepoFacts, path: string) => rawRepoUrl(facts.repo, facts.branch, path);
 
 // Where the app's own icon is: where MyGo takes it from, or, without a MyGo configuration to name it (as in a repository that keeps MyGo as a submodule), an icon file where projects usually keep one (guessed); why there is none otherwise.

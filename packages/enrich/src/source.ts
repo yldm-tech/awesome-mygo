@@ -225,24 +225,51 @@ export const CHOICE_HINTS: Record<ChoiceField, string> = {
 	type: 'skill for an agent skill (a SKILL.md), mcp for an MCP server or library, rules for instructions for coding agents (AGENTS.md, Cursor rules), other for anything else',
 };
 
-// What the model picks along with the copy: the fields the site's form fills in without asking (buildEntry in packages/catalog), as long as they still hold its default. An app's showcase group, which the form leaves out unless its author picked one (its schema.org category then follows from the group); a UI library's tag and surface, which it sets to theme and native; a template's surface, which it sets to native; an AI tool's type, which it sets to skill; a plugin's surface, which it sets to web; and the tags of a state management library (just state), a template (just template), an AI tool (just ai) and a plugin (none). An entry the discover workflow adds was triaged with these already, and one still at the default is only picked again.
-export function formDefaults(kind: EntryKind, entry: Entry): { choices: ChoiceField[]; tags: boolean } {
+// The operating systems an app may list, in the order the catalog keeps them (APP_PLATFORMS in packages/catalog). The site's form never asks which an app runs on and writes all three (buildEntry), and the discover workflow writes none, which the catalog's check rejects.
+export const APP_PLATFORMS = ['win', 'linux', 'mac'] as const;
+
+// Whether the entry's platforms still hold what the form writes without asking, all three, or are missing, as in an entry the discover workflow adds.
+export function platformsAtDefault(entry: Entry): boolean {
+	const list = entry.platforms;
+	if (list === undefined) return true;
+	return Array.isArray(list) && list.length === APP_PLATFORMS.length && APP_PLATFORMS.every((p) => list.includes(p));
+}
+
+// What the model picks along with the copy: the fields the site's form fills in without asking (buildEntry in packages/catalog), as long as they still hold its default. An app's showcase group, which the form leaves out unless its author picked one (its schema.org category then follows from the group), and its platforms, which the form sets to all three (platformsAtDefault); a UI library's tag and surface, which it sets to theme and native; a template's surface, which it sets to native; an AI tool's type, which it sets to skill; a plugin's surface, which it sets to web; and the tags of a state management library (just state), a template (just template), an AI tool (just ai) and a plugin (none). An entry the discover workflow adds was triaged with these already, and one still at the default is only picked again.
+export function formDefaults(kind: EntryKind, entry: Entry): { choices: ChoiceField[]; tags: boolean; platforms: boolean } {
 	const tags = Array.isArray(entry.tags) ? entry.tags : [];
 	const at = (field: ChoiceField, def?: string) => (entry[field] === undefined || entry[field] === def ? [field] : []);
 	switch (kind) {
 		case 'app':
-			return { choices: at('group'), tags: false };
+			return { choices: at('group'), tags: false, platforms: platformsAtDefault(entry) };
 		case 'ui':
-			return { choices: [...at('tag', 'theme'), ...at('surface', 'native')], tags: false };
+			return { choices: [...at('tag', 'theme'), ...at('surface', 'native')], tags: false, platforms: false };
 		case 'state':
-			return { choices: [], tags: tags.length === 0 || (tags.length === 1 && tags[0] === 'state') };
+			return { choices: [], tags: tags.length === 0 || (tags.length === 1 && tags[0] === 'state'), platforms: false };
 		case 'template':
-			return { choices: at('surface', 'native'), tags: tags.length === 0 || (tags.length === 1 && tags[0] === 'template') };
+			return { choices: at('surface', 'native'), tags: tags.length === 0 || (tags.length === 1 && tags[0] === 'template'), platforms: false };
 		case 'ai':
-			return { choices: at('type', 'skill'), tags: tags.length === 0 || (tags.length === 1 && tags[0] === 'ai') };
+			return { choices: at('type', 'skill'), tags: tags.length === 0 || (tags.length === 1 && tags[0] === 'ai'), platforms: false };
 		case 'plugin':
-			return { choices: at('surface', 'web'), tags: tags.length === 0 };
+			return { choices: at('surface', 'web'), tags: tags.length === 0, platforms: false };
 	}
+}
+
+// The platforms the model gave, as the catalog keeps them: only win, linux and mac, each once, in APP_PLATFORMS order; empty when it gave none of them.
+export function cleanPlatforms(platforms: readonly string[]): string[] {
+	const given = new Set(platforms.map((p) => p.trim().toLowerCase()));
+	return APP_PLATFORMS.filter((p) => given.has(p));
+}
+
+// Sets the app's platforms in place, right after its kind as the form writes them, since the entry is written back in its key order.
+export function setPlatforms(entry: Entry, platforms: readonly string[]): void {
+	const fields = Object.entries(entry).filter(([k]) => k !== 'platforms');
+	for (const k of Object.keys(entry)) delete entry[k];
+	for (const [k, v] of fields) {
+		entry[k] = v;
+		if (k === 'kind') entry.platforms = [...platforms];
+	}
+	if (!('platforms' in entry)) entry.platforms = [...platforms];
 }
 
 // Up to four tags as the site keeps them: lowercase words, each once.

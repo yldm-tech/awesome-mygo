@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { repoIcons, repoLikelyScreenshots, repoShotSources, shotProblem, stagedShot, stagedShotOf, addedFiles, appNameFrom, knownFiles, cleanTags, formDefaults, homepageOf, hasAllLanguages, markProvisional, iconCut, iconOf, isArtwork, isBanner, isPortrait, isSquarish, lengthCaps, overCaps, joinRepoPath, scriptConfig, parseMygoConfig, pickMygoConfig, readmeImages, repoOfEntry, repoScreenshots, resolveImage, schemaEnum, setCategory, setGroup, sniffImage, submittedScreenshot } from './source.ts';
+import { repoIcons, repoLikelyScreenshots, repoShotSources, shotProblem, stagedShot, stagedShotOf, addedFiles, appNameFrom, knownFiles, cleanPlatforms, cleanTags, formDefaults, homepageOf, hasAllLanguages, markProvisional, iconCut, iconOf, isArtwork, isBanner, isPortrait, isSquarish, lengthCaps, overCaps, joinRepoPath, scriptConfig, parseMygoConfig, pickMygoConfig, readmeImages, repoOfEntry, repoScreenshots, resolveImage, schemaEnum, platformsAtDefault, setCategory, setGroup, setPlatforms, sniffImage, submittedScreenshot } from './source.ts';
 
 describe('app names', () => {
 	it('takes mygo.json’s spelling of the same name only', () => {
@@ -256,21 +256,44 @@ describe("the form's defaults", () => {
 	});
 
 	it('asks the model for what the form fills in without asking, while it holds the default', () => {
-		expect(formDefaults('app', { kind: 'native' })).toEqual({ choices: ['group'], tags: false });
-		expect(formDefaults('app', { kind: 'native', category: 'GameApplication' })).toEqual({ choices: ['group'], tags: false });
-		expect(formDefaults('app', { kind: 'native', group: 'game' })).toEqual({ choices: [], tags: false });
+		expect(formDefaults('app', { kind: 'native' })).toEqual({ choices: ['group'], tags: false, platforms: true });
+		expect(formDefaults('app', { kind: 'native', category: 'GameApplication' })).toEqual({ choices: ['group'], tags: false, platforms: true });
+		expect(formDefaults('app', { kind: 'native', group: 'game' })).toEqual({ choices: [], tags: false, platforms: true });
 		// flagicons, submitted through the form: an icon set left at theme.
-		expect(formDefaults('ui', { tag: 'theme', surface: 'native' })).toEqual({ choices: ['tag', 'surface'], tags: false });
-		expect(formDefaults('ui', { tag: 'icons', surface: 'native' })).toEqual({ choices: ['surface'], tags: false });
-		expect(formDefaults('ui', { tag: 'icons', surface: 'both' })).toEqual({ choices: [], tags: false });
-		expect(formDefaults('state', { tags: ['state'] })).toEqual({ choices: [], tags: true });
-		expect(formDefaults('state', { tags: ['store', 'reactive'] })).toEqual({ choices: [], tags: false });
-		expect(formDefaults('template', { surface: 'native', tags: ['template'] })).toEqual({ choices: ['surface'], tags: true });
-		expect(formDefaults('template', { surface: 'web', tags: ['react'] })).toEqual({ choices: [], tags: false });
-		expect(formDefaults('ai', { type: 'skill', tags: ['ai'] })).toEqual({ choices: ['type'], tags: true });
-		expect(formDefaults('ai', { type: 'mcp', tags: ['testing'] })).toEqual({ choices: [], tags: false });
-		expect(formDefaults('plugin', { surface: 'web', tags: [] })).toEqual({ choices: ['surface'], tags: true });
-		expect(formDefaults('plugin', { surface: 'native', tags: ['shaders'] })).toEqual({ choices: [], tags: false });
+		expect(formDefaults('ui', { tag: 'theme', surface: 'native' })).toEqual({ choices: ['tag', 'surface'], tags: false, platforms: false });
+		expect(formDefaults('ui', { tag: 'icons', surface: 'native' })).toEqual({ choices: ['surface'], tags: false, platforms: false });
+		expect(formDefaults('ui', { tag: 'icons', surface: 'both' })).toEqual({ choices: [], tags: false, platforms: false });
+		expect(formDefaults('state', { tags: ['state'] })).toEqual({ choices: [], tags: true, platforms: false });
+		expect(formDefaults('state', { tags: ['store', 'reactive'] })).toEqual({ choices: [], tags: false, platforms: false });
+		expect(formDefaults('template', { surface: 'native', tags: ['template'] })).toEqual({ choices: ['surface'], tags: true, platforms: false });
+		expect(formDefaults('template', { surface: 'web', tags: ['react'] })).toEqual({ choices: [], tags: false, platforms: false });
+		expect(formDefaults('ai', { type: 'skill', tags: ['ai'] })).toEqual({ choices: ['type'], tags: true, platforms: false });
+		expect(formDefaults('ai', { type: 'mcp', tags: ['testing'] })).toEqual({ choices: [], tags: false, platforms: false });
+		expect(formDefaults('plugin', { surface: 'web', tags: [] })).toEqual({ choices: ['surface'], tags: true, platforms: false });
+		expect(formDefaults('plugin', { surface: 'native', tags: ['shaders'] })).toEqual({ choices: [], tags: false, platforms: false });
+	});
+
+	it("asks for an app's platforms while they are missing or the form's all three", () => {
+		expect(formDefaults('app', { kind: 'native', group: 'game', platforms: ['win', 'linux', 'mac'] }).platforms).toBe(true);
+		expect(formDefaults('app', { kind: 'native', group: 'game', platforms: ['mac', 'win', 'linux'] }).platforms).toBe(true);
+		expect(formDefaults('app', { kind: 'native', group: 'game', platforms: ['win'] }).platforms).toBe(false);
+		expect(formDefaults('app', { kind: 'native', group: 'game', platforms: ['win', 'mac'] }).platforms).toBe(false);
+		expect(platformsAtDefault({})).toBe(true);
+		expect(platformsAtDefault({ platforms: ['linux'] })).toBe(false);
+	});
+
+	it('keeps only known platforms, each once, in the catalog order', () => {
+		expect(cleanPlatforms(['Mac', 'win', 'mac', 'android', ' linux '])).toEqual(['win', 'linux', 'mac']);
+		expect(cleanPlatforms(['macos', 'ios'])).toEqual([]);
+	});
+
+	it("puts an app's platforms right after its kind", () => {
+		const bare: Record<string, unknown> = { slug: 'a', kind: 'native', group: 'dev', url: 'https://a.dev' };
+		setPlatforms(bare, ['mac']);
+		expect(Object.keys(bare)).toEqual(['slug', 'kind', 'platforms', 'group', 'url']);
+		setPlatforms(bare, ['win', 'mac']);
+		expect(bare.platforms).toEqual(['win', 'mac']);
+		expect(Object.keys(bare)).toEqual(['slug', 'kind', 'platforms', 'group', 'url']);
 	});
 
 	it('keeps up to four lowercase tags, each once', () => {

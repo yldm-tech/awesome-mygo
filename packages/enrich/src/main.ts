@@ -5,10 +5,10 @@ import { promisify } from 'node:util';
 import { DEFAULT_MODEL, README_LIMIT, type LlmConfig, writeCopy } from './copy.ts';
 import { github } from './github.ts';
 import { downloadImage, writeCard, writeIcon, writeShot } from './image.ts';
-import { type RepoFacts, type ShotSource, firstShot, ownIcon, repoFacts as readRepoFacts } from './repo.ts';
-import { type ChoiceField, ENTRY_DIRS, STAGED_SHOTS, type Entry, type EntryKind, addedFiles, appNameFrom, knownFiles, formDefaults, hasAllLanguages, homepageOf, markProvisional, repoOfEntry, repoShotSources, schemaEnum, setCategory, setGroup, sniffImage, stagedShotOf, submittedScreenshot } from './source.ts';
+import { type RepoFacts, type ShotSource, firstShot, latestReleaseAssets, ownIcon, repoFacts as readRepoFacts } from './repo.ts';
+import { APP_PLATFORMS, type ChoiceField, ENTRY_DIRS, STAGED_SHOTS, type Entry, type EntryKind, addedFiles, appNameFrom, knownFiles, formDefaults, hasAllLanguages, homepageOf, markProvisional, repoOfEntry, repoShotSources, schemaEnum, setCategory, setGroup, setPlatforms, sniffImage, stagedShotOf, submittedScreenshot } from './source.ts';
 
-// Run by .github/workflows/enrich-submission.yml on a pull request the submission bot opened, and by discover.ts on each entry it proposes. It finds the entries the branch adds, then for each fills in what the form cannot ask for: an app's icon (from its mygo.json); the screenshot of an app, a UI library or a state management library (the first landscape one in its README, or else in a screenshot folder of the repository); a UI library's or state management library's homepage (from the repository's settings); what the form fills in with a default (an app's category, a UI library's tag and surface, a plugin's surface, the tags of state management and plugins), picked by the model; and the copy in every site language. An entry with a repository is never left without an image: an app without an icon of its own gets its owner's GitHub avatar, and an entry without a screenshot gets the repository's social preview, or else a card drawn here from the owner's avatar, and the report says so. It changes files in the working tree and writes a Markdown report for the pull request; the workflow runs the catalog checks and commits.
+// Run by .github/workflows/enrich-submission.yml on a pull request the submission bot opened, and by discover.ts on each entry it proposes. It finds the entries the branch adds, then for each fills in what the form cannot ask for: an app's icon (from its mygo.json); the screenshot of an app, a UI library or a state management library (the first landscape one in its README, or else in a screenshot folder of the repository); a UI library's or state management library's homepage (from the repository's settings); what the form fills in with a default (an app's category and platforms, a UI library's tag and surface, a plugin's surface, the tags of state management and plugins), picked by the model; and the copy in every site language. An entry with a repository is never left without an image: an app without an icon of its own gets its owner's GitHub avatar, and an entry without a screenshot gets the repository's social preview, or else a card drawn here from the owner's avatar, and the report says so. It changes files in the working tree and writes a Markdown report for the pull request; the workflow runs the catalog checks and commits.
 //
 // Environment: BASE_REF (the branch the entries are compared with, default origin/main), REPORT_FILE (where the report goes), GITHUB_TOKEN (for the GitHub API), and LLM_API_KEY with optional LLM_BASE_URL and LLM_MODEL for the copy; without LLM_API_KEY the copy is left as submitted.
 
@@ -112,11 +112,15 @@ function addHomepage(entry: Entry, facts: RepoFacts): void {
 	say(`- Homepage: ${home}, from the repository's settings.`);
 }
 
-const FIELD_NAMES: Record<ChoiceField | 'tags', string> = { category: 'Category', group: 'Group', tag: 'Tag', surface: 'Surface', type: 'Type', tags: 'Tags' };
+const FIELD_NAMES: Record<ChoiceField | 'tags' | 'platforms', string> = { category: 'Category', group: 'Group', tag: 'Tag', surface: 'Surface', type: 'Type', tags: 'Tags', platforms: 'Platforms' };
 
-// What the report says of a field the form filled in with a default that the model did not pick: an app with no category fails the catalog checks, the rest still pass at the default but are likely wrong.
-function unpicked(field: ChoiceField | 'tags', entry: Entry, why: string): string {
+// What the report says of a field the form filled in with a default that the model did not pick: an app with no category fails the catalog checks, the rest still pass at the default but are likely wrong. An app with no platforms, as the discover workflow adds it, fails the checks too, so it gets all three, the form's default, and the report asks for a look.
+function unpicked(field: ChoiceField | 'tags' | 'platforms', entry: Entry, why: string): string {
 	if (field === 'group' || field === 'category') return `- ${FIELD_NAMES[field]}: none submitted, and none picked, ${why}. **Add one before merging.**`;
+	if (field === 'platforms' && entry.platforms === undefined) {
+		setPlatforms(entry, APP_PLATFORMS);
+		return `- Platforms: none submitted, and none picked, ${why}, so the entry lists all three. **Check them before merging.**`;
+	}
 	return `- ${FIELD_NAMES[field]}: left at the form's default, ${JSON.stringify(entry[field])}, ${why}. Check it before merging.`;
 }
 
@@ -124,7 +128,7 @@ function unpicked(field: ChoiceField | 'tags', entry: Entry, why: string): strin
 // used: the categories of the apps on the site.
 async function addCopy(cfg: LlmConfig | undefined, kind: EntryKind, entry: Entry, facts: RepoFacts | undefined, examples: Entry[], used: ReadonlySet<string>): Promise<void> {
 	const picks = formDefaults(kind, entry);
-	const left = (why: string) => [...picks.choices.map((f) => unpicked(f, entry, why)), ...(picks.tags ? [unpicked('tags', entry, why)] : [])];
+	const left = (why: string) => [...picks.choices.map((f) => unpicked(f, entry, why)), ...(picks.tags ? [unpicked('tags', entry, why)] : []), ...(picks.platforms ? [unpicked('platforms', entry, why)] : [])];
 	if (hasAllLanguages(entry.summary) && (kind !== 'app' || hasAllLanguages(entry.description))) {
 		say('- Copy: kept, as it is already in every site language.');
 		return left('as the copy was kept').forEach(say);
@@ -140,7 +144,9 @@ async function addCopy(cfg: LlmConfig | undefined, kind: EntryKind, entry: Entry
 			const allowed = schemaEnum(schema, field);
 			return { field, values: field === 'group' ? allowed.filter((g) => used.has(g)) : allowed };
 		});
-		const copy = await writeCopy(cfg, { kind, entry, readme: facts?.readme?.text, mygoConfig: facts?.mygo ? { path: facts.mygo.path, text: facts.mygo.text } : undefined, examples, choices, tags: picks.tags });
+		// The release's file names say which platforms the app ships for; a failed request only leaves the model with the README and the configuration.
+		const releaseAssets = picks.platforms && facts ? await latestReleaseAssets(facts.repo).catch(() => undefined) : undefined;
+		const copy = await writeCopy(cfg, { kind, entry, readme: facts?.readme?.text, mygoConfig: facts?.mygo ? { path: facts.mygo.path, text: facts.mygo.text } : undefined, examples, choices, tags: picks.tags, platforms: picks.platforms, releaseAssets });
 		entry.summary = copy.summary;
 		if (kind === 'app' && copy.description) entry.description = copy.description;
 		say(`- Copy: written by ${cfg.model} in all five languages from the submission${facts?.readme ? ' and the README' : ''}. Read it before merging.`);
@@ -159,6 +165,12 @@ async function addCopy(cfg: LlmConfig | undefined, kind: EntryKind, entry: Entry
 			entry.tags = copy.tags;
 			say(`- Tags: ${copy.tags.join(', ')}, written by the model, as the form leaves them at a default. Check them.`);
 		} else if (picks.tags) say(unpicked('tags', entry, 'as the model gave none'));
+		if (picks.platforms && copy.platforms) {
+			const was = entry.platforms;
+			setPlatforms(entry, copy.platforms);
+			const from = releaseAssets?.length ? "the latest release's files and the README" : 'the README and the MyGo configuration';
+			say(`- Platforms: ${copy.platforms.join(', ')}, picked by the model from ${from}, as the ${was === undefined ? 'entry had none' : 'form writes all three without asking'}. Check them.`);
+		} else if (picks.platforms) say(unpicked('platforms', entry, 'as the model gave none'));
 		if (copy.notes) say(`- Model's notes: ${copy.notes.replace(/\s+/g, ' ')}`);
 		if (copy.tooLong.length) say(`- Still longer than the hand-written examples after one rewrite (length/limit): ${copy.tooLong.join(', ')}. Shorten before merging.`);
 	} catch (err) {
