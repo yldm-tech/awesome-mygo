@@ -4,6 +4,11 @@
 	"name": "Finallyshell",
 	"author": "TooonyChen",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "dev",
 	"url": "https://github.com/TooonyChen/finallyshell",
 	"repo": "TooonyChen/finallyshell",
