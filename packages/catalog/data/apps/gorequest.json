@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "gorequest",
+	"name": "GoRequest",
+	"author": "Flyinsky2004",
+	"kind": "native",
+	"group": "dev",
+	"url": "https://github.com/Flyinsky2004/GoRequest",
+	"repo": "Flyinsky2004/GoRequest",
+	"summary": {
+		"en": "A local-first API client that stores requests, environments and docs as plain text in Git.",
+		"zh-CN": "本地优先的 API 客户端，请求、环境与文档都以纯文本存进 Git 仓库。",
+		"zh-TW": "本機優先的 API 用戶端，請求、環境與文件都以純文字存進 Git 儲存庫。",
+		"ja": "リクエスト・環境・ドキュメントを Git にテキストで保存するローカルファーストの API クライアント。",
+		"ko": "요청, 환경, 문서를 Git 저장소에 일반 텍스트로 두는 로컬 우선 API 클라이언트."
+	},
+	"description": {
+		"en": "An API client for macOS and Windows, drawn with MyGo's native UI with no web view. No account is needed: requests, environments and Markdown docs are plain text in your Git repository, which it can commit, pull and push. It sends HTTP and WebSocket requests, keeps secrets in the system credential store instead of the project, runs test suites and local mocks, and imports OpenAPI, Postman and cURL.",
+		"zh-CN": "用 MyGo 原生 UI 绘制、不使用 WebView 的 macOS 与 Windows API 客户端。无需登录账号，请求、环境和 Markdown 接口文档都以纯文本存放在你的 Git 仓库里，可直接提交、拉取与推送。它能调试 HTTP 与 WebSocket 请求，把密钥留在系统凭据中而不是项目里，运行测试集与本地 Mock，并支持导入导出 OpenAPI、Postman 与 cURL。",
+		"zh-TW": "用 MyGo 原生 UI 繪製、不使用 WebView 的 macOS 與 Windows API 用戶端。不必登入帳號，請求、環境和 Markdown 介面文件都以純文字存放在你的 Git 儲存庫中，可直接提交、拉取與推送。它能測試 HTTP 與 WebSocket 請求，將金鑰留在系統憑證中而非專案裡，執行測試集與本機 Mock，並支援匯入匯出 OpenAPI、Postman 與 cURL。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS・Windows 向けの API クライアントで、WebView は使いません。アカウントは不要で、リクエスト、環境、Markdown の API ドキュメントはプレーンテキストとして Git リポジトリに置かれ、アプリからコミット、プル、プッシュもできます。HTTP と WebSocket のリクエストを送り、シークレットはプロジェクトではなくシステムの資格情報に保管し、テストスイートとローカルモックを実行し、OpenAPI、Postman、cURL を読み込めます。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS·Windows용 API 클라이언트로, WebView를 쓰지 않습니다. 계정 없이 요청, 환경, Markdown API 문서를 Git 저장소에 일반 텍스트로 두며, 앱에서 바로 커밋, 풀, 푸시할 수 있습니다. HTTP와 WebSocket 요청을 보내고, 시크릿은 프로젝트가 아닌 시스템 자격 증명 저장소에 보관하며, 테스트 스위트와 로컬 Mock을 실행하고 OpenAPI, Postman, cURL을 가져올 수 있습니다."
+	},
+	"icon": {
+		"file": "gorequest.webp"
+	},
+	"screenshot": "gorequest.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-10T02:29:18Z"
+}
