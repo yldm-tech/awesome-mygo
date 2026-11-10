@@ -4,6 +4,9 @@
 	"name": "Proton Drive Sync",
 	"author": "Christopher2K",
 	"kind": "native",
+	"platforms": [
+		"linux"
+	],
 	"group": "dev",
 	"url": "https://github.com/Christopher2K/proton-drive-sync-linux",
 	"repo": "Christopher2K/proton-drive-sync-linux",
