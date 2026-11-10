@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "lintel",
+	"name": "Lintel",
+	"author": "DaviRain-Su",
+	"kind": "native",
+	"group": "system",
+	"url": "https://github.com/DaviRain-Su/lintel",
+	"repo": "DaviRain-Su/lintel",
+	"summary": {
+		"en": "A multi-chain crypto wallet with keys in the OS keychain and sandboxed JavaScript plugin apps.",
+		"zh-CN": "多链加密货币钱包：私钥存于系统钥匙串，可运行沙箱化的 JavaScript 插件应用。",
+		"zh-TW": "多鏈加密貨幣錢包：私鑰存於系統鑰匙圈，可執行沙箱化的 JavaScript 外掛應用。",
+		"ja": "鍵を OS のキーチェーンに置くマルチチェーン暗号資産ウォレット。プラグインはサンドボックスで実行。",
+		"ko": "키를 OS 키체인에 두고 샌드박스 플러그인 앱을 돌리는 멀티체인 암호화폐 지갑."
+	},
+	"description": {
+		"en": "A macOS-first crypto wallet drawn with MyGo's native UI. Each wallet holds EVM, NEAR and Solana accounts with keys in the OS keychain, and every signature goes through an approval window the app draws itself; so far only NEAR can sign. Apps are sandboxed JavaScript plugins whose pages are drawn natively, and web apps open in an isolated web view.",
+		"zh-CN": "以 macOS 为主、由 MyGo 原生 UI 绘制的加密货币钱包。每个钱包同时包含 EVM、NEAR 和 Solana 账户，私钥留在系统钥匙串，每次签名都要经过应用自己绘制的批准窗口；目前只有 NEAR 能签名。应用是在沙箱中运行的 JavaScript 插件，页面由原生 UI 绘制，网页应用则在隔离的 WebView 中打开。",
+		"zh-TW": "以 macOS 為主、由 MyGo 原生 UI 繪製的加密貨幣錢包。每個錢包同時包含 EVM、NEAR 與 Solana 帳戶，私鑰留在系統鑰匙圈，每次簽署都須經過應用程式自行繪製的核准視窗；目前只有 NEAR 能簽署。應用程式是在沙箱中執行的 JavaScript 外掛，頁面以原生 UI 繪製，網頁應用則在隔離的 WebView 中開啟。",
+		"ja": "macOS を主な対象とし、MyGo のネイティブ UI で描かれた暗号資産ウォレット。各ウォレットは EVM・NEAR・Solana のアカウントをまとめて持ち、鍵は OS のキーチェーンに保管され、署名はすべてアプリ自身が描く承認ウィンドウを通ります。現時点で署名できるのは NEAR のみです。アプリはサンドボックスで動く JavaScript プラグインで画面はネイティブに描画され、Web アプリは隔離された Web ビューで開きます。",
+		"ko": "macOS를 우선으로 하며 MyGo의 네이티브 UI로 그린 암호화폐 지갑입니다. 지갑마다 EVM, NEAR, Solana 계정을 함께 두고 키는 OS 키체인에 보관하며, 모든 서명은 앱이 직접 그린 승인 창을 거칩니다. 현재 서명할 수 있는 체인은 NEAR뿐입니다. 앱은 샌드박스에서 실행되는 JavaScript 플러그인으로 화면은 네이티브로 그려지고, 웹 앱은 격리된 웹 뷰에서 열립니다."
+	},
+	"icon": {
+		"file": "lintel.webp"
+	},
+	"screenshot": "lintel.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-10T02:29:18Z"
+}
