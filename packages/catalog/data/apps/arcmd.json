@@ -13,12 +13,22 @@
 	"url": "https://github.com/Ciao1019/ArcMD",
 	"repo": "Ciao1019/ArcMD",
 	"summary": {
-		"en": "An Arc-inspired native document editor built with Go and MyGo, combining rich-text editing with Markdown workflows.",
-		"zh-CN": "受 Arc 启发的原生文档编辑器，使用 Go 与 MyGo 构建，将富文本编辑与 Markdown 写作习惯结合。"
+		"en": "A native rich-text document editor with Arc-style spaces, Markdown import and export.",
+		"zh-CN": "借鉴 Arc 空间与侧边栏的原生富文本文档编辑器，可导入导出 Markdown。",
+		"zh-TW": "借鏡 Arc 空間與側邊欄的原生富文字文件編輯器，可匯入匯出 Markdown。",
+		"ja": "Arc のスペースとサイドバーに倣ったネイティブなリッチテキストエディター。Markdown にも対応。",
+		"ko": "Arc의 스페이스와 사이드바를 본뜬 네이티브 리치 텍스트 편집기. Markdown도 지원."
 	},
 	"description": {
-		"en": "ArcMD brings Arc-inspired spaces, a vertical sidebar, and global favorites to a local-first rich-text editor built with Go and MyGo Native UI. It supports Markdown import/export, tables, code blocks, backlinks, full-text search, and split editing for up to four documents; the project is currently in early preview.",
-		"zh-CN": "ArcMD 使用 Go 与 MyGo Native UI 原生构建，以 Arc 风格的多彩空间、竖向侧边栏和全局收藏组织本地文档。支持 Markdown 导入导出、表格、代码块、双链、全文搜索，以及最多四篇文档的分屏编辑；项目目前处于早期预览阶段。"
+		"en": "A rich-text editor for macOS, Windows and Linux, drawn with MyGo's native UI, with no WebView or Electron. Like Arc, it gives each folder a colored space, a vertical sidebar and favorites shared across spaces, and adds tables, backlinks, full-text search and split editing of up to four documents. It imports and exports Markdown and is an early preview.",
+		"zh-CN": "面向 macOS、Windows 与 Linux 的富文本文档编辑器，界面完全由 MyGo 原生 UI 绘制，没有 WebView 和 Electron。它借鉴 Arc，每个文件夹是一个有自己配色的空间，配有竖向侧边栏和跨空间共享的收藏，并支持表格、双链、全文搜索与最多四篇文档的分屏编辑。可导入导出 Markdown，目前处于早期预览阶段。",
+		"zh-TW": "macOS、Windows 與 Linux 上的富文字文件編輯器，介面完全由 MyGo 原生 UI 繪製，沒有 WebView 和 Electron。它借鏡 Arc，每個資料夾是一個有自己配色的空間，搭配直向側邊欄和跨空間共用的收藏，並支援表格、雙向連結、全文搜尋與最多四份文件的分割編輯。可匯入匯出 Markdown，目前仍是早期預覽版。",
+		"ja": "macOS・Windows・Linux 向けのリッチテキスト文書エディター。画面はすべて MyGo のネイティブ UI で描かれ、WebView も Electron も使いません。Arc に倣って、フォルダーごとに配色を持つスペース、縦のサイドバー、スペースをまたぐお気に入りを備え、表、バックリンク、全文検索、最大 4 文書の分割編集に対応します。Markdown の読み込みと書き出しもでき、現在は初期プレビューです。",
+		"ko": "macOS, Windows, Linux용 리치 텍스트 문서 편집기로, 화면 전체를 MyGo의 네이티브 UI로 그리며 WebView나 Electron을 쓰지 않습니다. Arc처럼 폴더마다 고유한 색의 스페이스, 세로 사이드바, 스페이스를 넘나드는 즐겨찾기를 두고, 표, 백링크, 전체 텍스트 검색, 최대 4개 문서 분할 편집을 지원합니다. Markdown을 가져오고 내보낼 수 있으며, 현재 초기 프리뷰 단계입니다."
 	},
+	"icon": {
+		"file": "arcmd.webp"
+	},
+	"screenshot": "arcmd.webp",
 	"added": "2026-11-09T10:04:43Z"
 }
