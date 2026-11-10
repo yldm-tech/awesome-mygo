@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ooxml-translator",
+	"name": "OOXML Translator",
+	"author": "lemos1235",
+	"kind": "native",
+	"group": "ai",
+	"url": "https://github.com/lemos1235/excel-translator",
+	"repo": "lemos1235/excel-translator",
+	"summary": {
+		"en": "Translates Excel, Word and PowerPoint files with an AI model while keeping the original formatting.",
+		"zh-CN": "用 AI 模型翻译 Excel、Word 和 PowerPoint 文件，保留原有格式。",
+		"zh-TW": "用 AI 模型翻譯 Excel、Word 和 PowerPoint 檔案，保留原有格式。",
+		"ja": "Excel・Word・PowerPoint ファイルを AI モデルで翻訳し、元の書式を保ちます。",
+		"ko": "Excel, Word, PowerPoint 파일을 AI 모델로 번역하고 원래 서식을 유지합니다."
+	},
+	"description": {
+		"en": "A desktop tool for macOS and Windows that translates XLSX, DOCX and PPTX files with an AI model, covering cells, shapes, slides and tables while keeping the original styles and layout. The model is set in a config file with a base URL, API key, model name and prompt, and translation can be limited to CJK text. The interface is drawn with MyGo's native UI in pure Go, with no Qt or cgo.",
+		"zh-CN": "适用于 macOS 与 Windows 的桌面工具，用 AI 模型翻译 XLSX、DOCX 和 PPTX 文件，涵盖单元格、形状、幻灯片和表格，并保留原有样式与版式。模型在配置文件中通过 base URL、API 密钥、模型名和提示词设置，也可以只翻译中日韩文字。界面由 MyGo 原生 UI 绘制，纯 Go 实现，不依赖 Qt 或 cgo。",
+		"zh-TW": "適用於 macOS 與 Windows 的桌面工具，用 AI 模型翻譯 XLSX、DOCX 和 PPTX 檔案，涵蓋儲存格、圖形、投影片和表格，並保留原有樣式與版面。模型在設定檔中透過 base URL、API 金鑰、模型名稱和提示詞設定，也可以只翻譯中日韓文字。介面由 MyGo 原生 UI 繪製，純 Go 實作，不依賴 Qt 或 cgo。",
+		"ja": "macOS と Windows で使えるデスクトップツールで、XLSX・DOCX・PPTX ファイルを AI モデルで翻訳します。セル、図形、スライド、表を対象に、元のスタイルとレイアウトを保ちます。モデルは設定ファイルで base URL、API キー、モデル名、プロンプトを指定し、CJK のテキストだけを翻訳することもできます。UI は MyGo のネイティブ UI で描かれ、純粋な Go で書かれていて Qt も cgo も使いません。",
+		"ko": "macOS와 Windows용 데스크톱 도구로, XLSX, DOCX, PPTX 파일을 AI 모델로 번역합니다. 셀, 도형, 슬라이드, 표를 번역하면서 원래 스타일과 레이아웃을 유지합니다. 모델은 설정 파일에서 base URL, API 키, 모델 이름, 프롬프트로 지정하며, CJK 텍스트만 번역하도록 할 수도 있습니다. 화면은 MyGo의 네이티브 UI로 그렸고 Qt나 cgo 없이 순수 Go로 작성되었습니다."
+	},
+	"icon": {
+		"file": "ooxml-translator.webp"
+	},
+	"screenshot": "ooxml-translator.webp",
+	"added": "2026-11-10T02:29:18Z"
+}
