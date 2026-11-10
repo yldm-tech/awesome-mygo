@@ -4,6 +4,9 @@
 	"name": "书桌",
 	"author": "DaviRain-Su",
 	"kind": "web",
+	"platforms": [
+		"mac"
+	],
 	"group": "notes",
 	"url": "https://github.com/DaviRain-Su/bookdesk",
 	"repo": "DaviRain-Su/bookdesk",
