@@ -4,6 +4,11 @@
 	"name": "Kando",
 	"author": "yldm-tech",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "media",
 	"url": "https://github.com/yldm-tech/Kando",
 	"repo": "yldm-tech/Kando",

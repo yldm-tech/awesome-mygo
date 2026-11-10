@@ -4,6 +4,10 @@
 	"name": "aTrust Hub",
 	"author": "weigram",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
 	"group": "network",
 	"url": "https://github.com/weigram/aTrustHub",
 	"repo": "weigram/aTrustHub",

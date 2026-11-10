@@ -4,6 +4,10 @@
 	"name": "Redis Manager",
 	"author": "duanyongcheng",
 	"kind": "web",
+	"platforms": [
+		"win",
+		"mac"
+	],
 	"group": "dev",
 	"url": "https://github.com/duanyongcheng/redis-manager",
 	"repo": "duanyongcheng/redis-manager",

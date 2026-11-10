@@ -4,6 +4,11 @@
 	"name": "HealthSync",
 	"author": "HeroSizy",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "devices",
 	"url": "https://github.com/HeroSizy/healthsync-server",
 	"repo": "HeroSizy/healthsync-server",

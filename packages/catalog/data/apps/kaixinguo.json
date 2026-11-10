@@ -4,6 +4,9 @@
 	"name": "开心果",
 	"author": "kadaliao",
 	"kind": "native",
+	"platforms": [
+		"mac"
+	],
 	"group": "media",
 	"url": "https://github.com/kadaliao/kaixinguo",
 	"repo": "kadaliao/kaixinguo",

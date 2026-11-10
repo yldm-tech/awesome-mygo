@@ -4,6 +4,9 @@
 	"name": "Menubloom",
 	"author": "lzhgus",
 	"kind": "native",
+	"platforms": [
+		"mac"
+	],
 	"group": "system",
 	"url": "https://menubloom.lzhgus.com",
 	"repo": "lzhgus/menubloom",

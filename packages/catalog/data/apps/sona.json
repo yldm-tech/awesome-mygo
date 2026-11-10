@@ -4,6 +4,11 @@
 	"name": "Sona",
 	"author": "coredev-uk",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "media",
 	"url": "https://github.com/coredev-uk/sona-go",
 	"repo": "coredev-uk/sona-go",

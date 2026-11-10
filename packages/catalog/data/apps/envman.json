@@ -4,6 +4,9 @@
 	"name": "EnvMan",
 	"author": "zhimoe",
 	"kind": "native",
+	"platforms": [
+		"win"
+	],
 	"group": "system",
 	"url": "https://github.com/zhimoe/envMan",
 	"repo": "zhimoe/envMan",

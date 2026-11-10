@@ -4,6 +4,10 @@
 	"name": "Meow Craft Launcher",
 	"author": "Lingwcy",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
 	"group": "game",
 	"url": "https://github.com/Lingwcy/mcl",
 	"repo": "Lingwcy/mcl",

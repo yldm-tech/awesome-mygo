@@ -4,6 +4,10 @@
 	"name": "Ferry",
 	"author": "ayuayue",
 	"kind": "web",
+	"platforms": [
+		"win",
+		"linux"
+	],
 	"group": "network",
 	"url": "https://github.com/ayuayue/ferry",
 	"repo": "ayuayue/ferry",

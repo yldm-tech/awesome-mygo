@@ -4,6 +4,10 @@
 	"name": "Klip",
 	"author": "Achordchan",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
 	"group": "system",
 	"url": "https://github.com/Achordchan/klip",
 	"repo": "Achordchan/klip",

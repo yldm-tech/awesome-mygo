@@ -4,6 +4,9 @@
 	"name": "Hoyo Gacha",
 	"author": "quantulr",
 	"kind": "native",
+	"platforms": [
+		"win"
+	],
 	"group": "game",
 	"url": "https://github.com/quantulr/hoyo-gacha",
 	"repo": "quantulr/hoyo-gacha",

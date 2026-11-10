@@ -4,6 +4,11 @@
 	"name": "RcloneGo",
 	"author": "DeliciousBuding",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "dev",
 	"url": "https://github.com/DeliciousBuding/rclonego#readme",
 	"repo": "DeliciousBuding/rclonego",

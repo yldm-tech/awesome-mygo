@@ -4,6 +4,11 @@
 	"name": "WonderVision",
 	"author": "jewei",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "notes",
 	"url": "https://github.com/jewei/wondervision",
 	"repo": "jewei/wondervision",

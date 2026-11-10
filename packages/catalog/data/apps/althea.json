@@ -4,6 +4,9 @@
 	"name": "Althea",
 	"author": "JoaoVitorOli",
 	"kind": "native",
+	"platforms": [
+		"win"
+	],
 	"group": "system",
 	"url": "https://github.com/JoaoVitorOli/althea",
 	"repo": "JoaoVitorOli/althea",

@@ -4,6 +4,11 @@
 	"name": "Herdr Desktop",
 	"author": "cxnaive",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "agents",
 	"url": "https://github.com/cxnaive/herdr_link",
 	"repo": "cxnaive/herdr_link",
