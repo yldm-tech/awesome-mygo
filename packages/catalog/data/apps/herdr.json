@@ -1,7 +1,7 @@
 {
 	"$schema": "../schema/app.schema.json",
 	"slug": "herdr",
-	"name": "Herdr",
+	"name": "Rove",
 	"author": "TengYangTuoHai",
 	"kind": "native",
 	"platforms": [
@@ -13,18 +13,18 @@
 	"url": "https://github.com/TengYangTuoHai/rove",
 	"repo": "TengYangTuoHai/rove",
 	"summary": {
-		"en": "A native desktop window for Herdr's spaces, tabs and split terminals where coding agents run.",
-		"zh-CN": "Herdr 的原生桌面窗口：为编程智能体管理空间、标签页与分屏终端。",
-		"zh-TW": "Herdr 的原生桌面視窗：為程式設計代理管理空間、分頁與分割終端機。",
-		"ja": "Herdr のネイティブなデスクトップ版。コーディングエージェントのスペース、タブ、分割ターミナルを管理。",
-		"ko": "Herdr의 네이티브 데스크톱 창. 코딩 에이전트의 스페이스, 탭, 분할 터미널을 관리합니다."
+		"en": "A native desktop workspace for terminals and coding agents, with spaces, split panes and SSH machines.",
+		"zh-CN": "面向终端与编程智能体的原生桌面工作区：空间、分屏终端与 SSH 主机。",
+		"zh-TW": "面向終端機與程式設計代理的原生桌面工作區：空間、分割終端機與 SSH 主機。",
+		"ja": "ターミナルとコーディングエージェントのためのネイティブな作業環境。分割ペインと SSH に対応。",
+		"ko": "터미널과 코딩 에이전트를 위한 네이티브 데스크톱 워크스페이스. 스페이스, 분할 창, SSH 머신을 지원합니다."
 	},
 	"description": {
-		"en": "Herdr's desktop UI, rebuilt with MyGo's native UI for macOS, Windows and Linux. MyGo makes only the window: the bundled herdr-core still runs every terminal and agent, so agents keep working after the window closes. It arranges spaces, tabs and split terminals, lists agents by their status with system notifications, and opens spaces on SSH machines through the same core.",
-		"zh-CN": "用 MyGo 原生 UI 重写的 Herdr 桌面界面，支持 macOS、Windows 与 Linux。MyGo 只负责窗口：随应用附带的 herdr-core 仍运行所有终端与智能体，关掉窗口后智能体照常工作。它管理空间、标签页与分屏终端，按状态列出智能体并发送系统通知，还能通过同一个核心在 SSH 主机上开启空间。",
-		"zh-TW": "以 MyGo 原生 UI 重寫的 Herdr 桌面介面，支援 macOS、Windows 與 Linux。MyGo 只負責視窗：隨應用程式附帶的 herdr-core 仍執行所有終端機與代理程式，關掉視窗後代理程式照常運作。它管理空間、分頁與分割終端機，依狀態列出代理程式並發送系統通知，還能透過同一個核心在 SSH 主機上開啟空間。",
-		"ja": "MyGo のネイティブ UI で作り直した Herdr のデスクトップ UI で、macOS・Windows・Linux に対応します。MyGo が担うのはウィンドウだけで、同梱の herdr-core が引き続きすべてのターミナルとエージェントを動かすため、ウィンドウを閉じてもエージェントは動き続けます。スペース、タブ、分割ターミナルを扱い、エージェントを状態ごとに一覧してシステム通知を送り、同じコア経由で SSH マシン上にもスペースを開けます。",
-		"ko": "MyGo의 네이티브 UI로 다시 만든 Herdr 데스크톱 UI로, macOS, Windows, Linux를 지원합니다. MyGo는 창만 맡고, 함께 들어 있는 herdr-core가 모든 터미널과 에이전트를 계속 실행하므로 창을 닫아도 에이전트는 계속 일합니다. 스페이스, 탭, 분할 터미널을 관리하고, 에이전트를 상태별로 보여 주며 시스템 알림을 보내고, 같은 코어로 SSH 머신에서도 스페이스를 엽니다."
+		"en": "Rove, formerly the Herdr desktop app, is a workspace for terminals and coding agents, drawn with MyGo's native UI for macOS, Windows and Linux. MyGo makes only the window: the bundled herdr-core runs every terminal in the background, so sessions keep going after the window closes. It arranges spaces, tabs and split panes, lists agents by status with system notifications, and works on SSH machines with their terminals, files and Git changes beside local sessions.",
+		"zh-CN": "Rove 原名 Herdr 桌面版，是面向终端与编程智能体的工作区，界面用 MyGo 原生 UI 绘制，支持 macOS、Windows 与 Linux。MyGo 只负责窗口：随应用附带的 herdr-core 在后台运行所有终端，关掉窗口后会话照常继续。它管理空间、标签页与分屏，按状态列出智能体并发送系统通知，还能连上 SSH 主机，把远程的终端、文件与 Git 改动和本地会话放在一起。",
+		"zh-TW": "Rove 原名 Herdr 桌面版，是面向終端機與程式設計代理的工作區，介面以 MyGo 原生 UI 繪製，支援 macOS、Windows 與 Linux。MyGo 只負責視窗：隨應用程式附帶的 herdr-core 在背景執行所有終端機，關掉視窗後工作階段照常繼續。它管理空間、分頁與分割窗格，依狀態列出代理程式並發送系統通知，還能連上 SSH 主機，把遠端的終端機、檔案與 Git 變更和本機工作階段放在一起。",
+		"ja": "Rove は旧 Herdr デスクトップ版で、ターミナルとコーディングエージェントのためのワークスペースです。MyGo のネイティブ UI で描かれ、macOS・Windows・Linux に対応します。MyGo が担うのはウィンドウだけで、同梱の herdr-core がすべてのターミナルをバックグラウンドで動かすため、ウィンドウを閉じてもセッションは続きます。スペース、タブ、分割ペインを扱い、エージェントを状態ごとに一覧してシステム通知を送り、SSH マシンのターミナル、ファイル、Git の変更もローカルのセッションと並べて扱えます。",
+		"ko": "Rove는 Herdr 데스크톱 앱의 새 이름으로, 터미널과 코딩 에이전트를 위한 워크스페이스입니다. MyGo의 네이티브 UI로 그렸고 macOS, Windows, Linux를 지원합니다. MyGo는 창만 맡고, 함께 들어 있는 herdr-core가 모든 터미널을 백그라운드에서 실행하므로 창을 닫아도 세션이 이어집니다. 스페이스, 탭, 분할 창을 관리하고, 에이전트를 상태별로 보여 주며 시스템 알림을 보내고, SSH 머신의 터미널, 파일, Git 변경 사항도 로컬 세션과 나란히 다룹니다."
 	},
 	"icon": {
 		"file": "herdr.webp"
