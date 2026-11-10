@@ -5,7 +5,6 @@
 	"author": "egoist",
 	"kind": "native",
 	"platforms": ["win", "linux", "mac"],
-	"featured": true,
 	"category": "DeveloperApplication",
 	"group": "agents",
 	"url": "https://kero.sh",

@@ -1,4 +1,4 @@
-import { AI_TOOLS, APPS, FEATURED_APPS, INSTALL_CMDS, INSTALL_TABS, type InstallTab, MYGO_SITE, PLUGINS, STATE_SOLUTIONS, TEMPLATES, UI_LIBS, appBySlug, fill, langDef, pad2, pick } from '@awesome-mygo/catalog';
+import { AI_TOOLS, APPS, INSTALL_CMDS, INSTALL_TABS, type InstallTab, MYGO_SITE, PLUGINS, STATE_SOLUTIONS, TEMPLATES, UI_LIBS, appBySlug, fill, langDef, pad2, pick } from '@awesome-mygo/catalog';
 import { Link, createFileRoute, useNavigate } from '@tanstack/react-router';
 import { type CSSProperties, type PointerEvent, useEffect, useRef } from 'react';
 import { AppLink, KindTag, MonoTile, PlatformTags, WinBar, appView } from '../components/bits';
@@ -9,8 +9,14 @@ import { pageHead } from '../lib/seo';
 import { DEFAULT_SORT, sortApps } from '../lib/showcase';
 import { useSite } from '../lib/site';
 
+// The apps in the showcase's default order: by score, from scores.json, which the scores workflow updates each day (DEFAULT_SORT in lib/showcase.ts).
+const RANKED_APPS = sortApps(APPS, DEFAULT_SORT, {});
+
 // The marquee's apps: the first 30 in the showcase's default order, not the whole catalog. With every app twice, the strip grew past 80,000px with 400 links and icons, a layer too wide for Firefox to animate on the compositor, so it moved it on the main thread every frame.
-const MARQUEE_APPS = sortApps(APPS, DEFAULT_SORT, {}).slice(0, 30);
+const MARQUEE_APPS = RANKED_APPS.slice(0, 30);
+
+// The featured section's apps: the four highest scores, so they change as the scores do.
+const FEATURED_APPS = RANKED_APPS.slice(0, 4);
 
 export const Route = createFileRoute('/')({
 	// ?install= keeps the install command's tab in the address, so a link reproduces the view.
@@ -92,11 +98,10 @@ function HomePage() {
 					</Link>
 				</div>
 				<div className='grid grid-cols-[repeat(auto-fit,minmax(min(100%,270px),1fr))] gap-4'>
-					{/* The apps whose files say "featured": true (FEATURED_APPS). */}
 					{FEATURED_APPS.map((app, k) => {
 						const v = appView(app);
 						return (
-							<div key={app.slug} className={`rv d${k % 6} flex`}>
+							<div key={app.slug} className={`rv d${k} flex`}>
 								{/* A link to the app's page that keeps the look it had as a button instead of the link colour and underline. */}
 								<AppLink slug={app.slug} className='win card text-fg no-underline' dialog>
 									<WinBar label={v.host} size='sm' className='card-bar' />

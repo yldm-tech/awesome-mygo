@@ -265,8 +265,6 @@ export function pastedEntryProblem(cat: SubmitCat, entry: Record<string, unknown
 	if (problem) return problem;
 	// Images live in the repository, and a visitor cannot add one; a maintainer adds them after merging.
 	if (entry.screenshot !== undefined || (entry.icon as { file?: unknown } | undefined)?.file !== undefined) return 'screenshot and icon.file name images in the repository, which a maintainer adds; leave them out';
-	// The home page's featured apps are the maintainers' pick.
-	if (entry.featured !== undefined) return "featured is picked by the site's maintainers; leave it out";
 	const name = pastedName(entry);
 	if (name.length > 80 || /[\u0000-\u001f\u007f]/.test(name)) return 'the name must be a single line of at most 80 characters';
 	const url = String(entry.url ?? entry.docs ?? '');

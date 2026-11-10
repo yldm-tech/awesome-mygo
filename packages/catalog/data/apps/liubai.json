@@ -5,7 +5,6 @@
 	"author": "echoVic",
 	"kind": "web",
 	"platforms": ["win", "mac"],
-	"featured": true,
 	"category": "UtilitiesApplication",
 	"group": "notes",
 	"url": "https://liubai.echovic.com",

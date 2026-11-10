@@ -146,8 +146,6 @@ export interface App {
 	author: string;
 	kind: AppKind;
 	platforms: readonly AppPlatform[];
-	// Whether the home page's featured section shows it. The site's maintainers pick these by hand in the data; a submission leaves it out.
-	featured: boolean;
 	// The showcase's group (appGroup).
 	group?: EntryGroup;
 	// For structured data only: the entry's own, or else its group's (GROUP_CATEGORY).
@@ -186,7 +184,7 @@ const readProvisional = (r: Reader, allowed: readonly ProvisionalImage[]): Provi
 };
 
 const readApp = (r: Reader): App => {
-	r.only(['$schema', 'slug', 'name', 'author', 'kind', 'platforms', 'featured', 'category', 'group', 'url', 'repo', 'summary', 'description', 'screenshot', 'icon', 'provisional', 'added']);
+	r.only(['$schema', 'slug', 'name', 'author', 'kind', 'platforms', 'category', 'group', 'url', 'repo', 'summary', 'description', 'screenshot', 'icon', 'provisional', 'added']);
 	const group = r.raw.group === undefined ? undefined : r.oneOf('group', ENTRY_GROUPS);
 	const platforms = r.strings('platforms', 1);
 	if (platforms.some((platform) => !(APP_PLATFORMS as readonly string[]).includes(platform))) r.fail('platforms', `must contain only ${APP_PLATFORMS.join(', ')}`);
@@ -204,7 +202,6 @@ const readApp = (r: Reader): App => {
 		author: r.str('author'),
 		kind: r.oneOf('kind', ['native', 'web'] as const),
 		platforms: platforms as AppPlatform[],
-		featured: r.raw.featured === undefined ? false : r.bool('featured'),
 		group,
 		category: r.raw.category === undefined ? (group ? GROUP_CATEGORY[group] : undefined) : r.oneOf('category', APP_CATEGORIES),
 		url: r.url('url'),
@@ -245,9 +242,6 @@ export function readApps(files: Record<string, unknown>): App[] {
 
 // Every file in data/apps/, through Vite (the site's build and the tests both run on it). Vite needs each glob written out, so every category has its own.
 export const APPS: readonly App[] = readApps(byFileName(import.meta.glob<unknown>('../data/apps/*.json', { eager: true, import: 'default' })));
-
-// The home page's featured apps: those whose file says "featured": true, in the order of APPS.
-export const FEATURED_APPS: readonly App[] = APPS.filter((a) => a.featured);
 
 // The app's GitHub repository link, unless its homepage is that repository already.
 export function appSource(app: { url: string; repo?: string }): string | undefined {

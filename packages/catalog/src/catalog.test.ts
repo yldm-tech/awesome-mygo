@@ -9,7 +9,7 @@ import templateSchema from '../data/schema/template.schema.json';
 import aiSchema from '../data/schema/ai.schema.json';
 import uiSchema from '../data/schema/ui.schema.json';
 import scoresFile from '../data/scores.json';
-import { AI_KIND, AI_TOOL_TYPES, AI_TOOLS, AILOGO_CDN, APP_CATEGORIES, APP_GROUPS, APP_KIND, APPS, ARTICLE_KIND, DOC_KIND, ENTRY_GROUPS, type EntryGroup, FEATURED_APPS, GROUP_CATEGORY, PLUGIN_KIND, STATE_KIND, TEMPLATE_KIND, TEMPLATES, UI_KIND, appGroup, appSource, ARTICLES, COMMUNITY_PLUGINS, DOCS, PLUGINS, STATE_SOLUTIONS, UI_LIBS, appBySlug, authorProfile, byAdded, byName, byNewest, hostOf, readAppEntry, readAppFile, readApps, readEntry, readDocs, readEntryFile, readAiTools, readPlugins, readTemplates, readUiLibs } from './catalog';
+import { AI_KIND, AI_TOOL_TYPES, AI_TOOLS, AILOGO_CDN, APP_CATEGORIES, APP_GROUPS, APP_KIND, APPS, ARTICLE_KIND, DOC_KIND, ENTRY_GROUPS, type EntryGroup, GROUP_CATEGORY, PLUGIN_KIND, STATE_KIND, TEMPLATE_KIND, TEMPLATES, UI_KIND, appGroup, appSource, ARTICLES, COMMUNITY_PLUGINS, DOCS, PLUGINS, STATE_SOLUTIONS, UI_LIBS, appBySlug, authorProfile, byAdded, byName, byNewest, hostOf, readAppEntry, readAppFile, readApps, readEntry, readDocs, readEntryFile, readAiTools, readPlugins, readTemplates, readUiLibs } from './catalog';
 import { AGENT_FIELDS, AGENT_INPUT_SCHEMA, AGENT_MAX_BYTES, type AgentSubmission, ENTRY_PLACEHOLDERS, MAX_SUBMISSION, SUBMIT_CATS, SUBMIT_KINDS, type SubmitCat, agentSubmissionReport, alreadyListed, buildEntry, codeFence, descMax, editUrl, entryCats, entryFileText, entryPath, entryProblem, guessFromLink, isBadShot, isBadUrl, isEntryComplete, issueMarker, issueUrl, jsonEntry, missingFields, parseEntryJson, parseSubmission, pastedEntryProblem, pastedName, pastedShotRepo, placeholderProblem, readAgentSubmission, shotRepo, slugify, submissionBody, submissionFromIssue, submittedIssue, takesShot, withScheme } from './entry';
 import { LANGS, type LangCode, type Text, fill, langRedirectScript, negotiateLang, pick, validateRootSearch } from './lang';
 import { buildSearchIndex, searchCatalog } from './search';
@@ -75,15 +75,6 @@ describe('catalog data', () => {
 		expect(() => readPlugins({ 'kit.json': { ...plugin, import: 'github.com/you/kit', npm: '@you/kit' } })).not.toThrow();
 		expect(() => readPlugins({ 'kit.json': { ...plugin, import: 'go get github.com/you/kit' } })).toThrow(/plugins\/kit.json \(Kit\): import must be a Go import path/);
 		expect(() => readPlugins({ 'kit.json': { ...plugin, npm: 'bun add @you/kit' } })).toThrow(/npm must be an npm package name/);
-	});
-
-	it('features at least one app on the home page, and reads featured as true or false', () => {
-		expect(FEATURED_APPS.length).toBeGreaterThan(0);
-		for (const a of FEATURED_APPS) expect(a.featured).toBe(true);
-		const app = { $schema: '../schema/app.schema.json', slug: 'kit', name: 'Kit', author: 'you', kind: 'native', platforms: ['mac'], url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' }, added: '2026-11-04T12:00:00Z' };
-		expect(readApps({ 'kit.json': app })[0]?.featured).toBe(false);
-		expect(readApps({ 'kit.json': { ...app, featured: true } })[0]?.featured).toBe(true);
-		expect(() => readApps({ 'kit.json': { ...app, featured: 'yes' } })).toThrow(/featured must be true or false/);
 	});
 
 	it('falls back to English for a missing language', () => {
@@ -757,12 +748,11 @@ describe('bot submission', () => {
 		expect(pastedEntryProblem('ui', pail)).toBeDefined();
 	});
 
-	it('refuses images a visitor cannot add, a featured pick, and names that are not one short line', () => {
+	it('refuses images a visitor cannot add, and names that are not one short line', () => {
 		const pail = { slug: 'pail', name: 'Pail', author: 'DejavuMoe', kind: 'native', url: 'https://github.com/DejavuMoe/Pail', summary: { en: 'S3 manager.' }, description: { en: 'S3 manager.' } };
 		expect(pastedEntryProblem('showcase', { ...pail, screenshot: 'pail.webp' })).toMatch(/screenshot/);
 		expect(pastedEntryProblem('showcase', { ...pail, icon: { file: 'pail.webp' } })).toMatch(/icon/);
 		expect(pastedEntryProblem('showcase', { ...pail, icon: { ailogo: 'abc' } })).toBeUndefined();
-		expect(pastedEntryProblem('showcase', { ...pail, featured: true })).toMatch(/featured/);
 		expect(pastedEntryProblem('showcase', { ...pail, name: 'a\nb' })).toMatch(/single line/);
 		expect(pastedEntryProblem('showcase', { ...pail, name: 'x'.repeat(81) })).toMatch(/80/);
 		expect(pastedName({ title: ' An article ' })).toBe('An article');

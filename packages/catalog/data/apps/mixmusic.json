@@ -5,7 +5,6 @@
 	"author": "fzn0x",
 	"kind": "native",
 	"platforms": ["win", "linux", "mac"],
-	"featured": true,
 	"category": "MultimediaApplication",
 	"group": "media",
 	"url": "https://github.com/fzn0x/mixmusic",

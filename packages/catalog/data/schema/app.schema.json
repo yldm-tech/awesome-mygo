@@ -38,7 +38,6 @@
 			"description": "native: its windows draw MyGo native UI; web: they show a web frontend."
 		},
 		"platforms": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["win", "linux", "mac"] }, "description": "Operating systems the app supports: win (Windows), linux or mac (macOS)." },
-		"featured": { "type": "boolean", "description": "Whether the home page's featured section shows the app. Picked by the site's maintainers; leave it out when submitting." },
 		"category": {
 			"enum": [
 				"BusinessApplication",
