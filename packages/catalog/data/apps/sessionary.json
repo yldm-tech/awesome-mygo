@@ -13,10 +13,22 @@
 	"url": "https://github.com/onlynor/Sessionary-Desktop",
 	"repo": "onlynor/Sessionary-Desktop",
 	"summary": {
-		"en": "面向 AI 编程智能体的跨平台桌面管理工作台，统一管理 Claude Code、Codex、OpenCode、Pi 等智能体的项目、会话、远程机器、模型路由及 Token 使用情况"
+		"en": "One desktop window for AI coding agents' projects, sessions, model routing and token usage.",
+		"zh-CN": "在一个桌面窗口里管理 AI 编程智能体的项目、会话、模型路由和 Token 用量。",
+		"zh-TW": "在桌面視窗管理 AI 程式設計代理的專案、工作階段、模型路由與 Token 用量。",
+		"ja": "AI コーディングエージェントのセッション、モデル、トークン使用量をまとめて管理するデスクトップアプリ。",
+		"ko": "AI 코딩 에이전트의 프로젝트, 세션, 모델 라우팅, 토큰 사용량을 한 창에서 관리합니다."
 	},
 	"description": {
-		"en": "面向 AI 编程智能体的跨平台桌面管理工作台，统一管理 Claude Code、Codex、OpenCode、Pi 等智能体的项目、会话、远程机器、模型路由及 Token 使用情况"
+		"en": "The desktop build of Sessionary, a control center for AI coding agents such as Claude Code, Codex, OpenCode and Pi. It reads the session history each agent CLI already keeps, here or on a remote machine over SSH, and adds chat, a terminal, model routing and token usage. MyGo packages Sessionary's web client and server, which are made separately, in a native window.",
+		"zh-CN": "Sessionary 的桌面版，一个面向 Claude Code、Codex、OpenCode、Pi 等 AI 编程智能体的管理工作台。它读取各智能体 CLI 已保存在本机或经 SSH 连接的远程机器上的会话记录，并提供聊天、终端、模型路由和 Token 用量统计。MyGo 将另行开发的 Sessionary Web 客户端与服务端封装进原生窗口。",
+		"zh-TW": "Sessionary 的桌面版，一個面向 Claude Code、Codex、OpenCode、Pi 等 AI 程式設計代理的管理工作台。它讀取各代理 CLI 已存放在本機或透過 SSH 連線的遠端機器上的工作階段紀錄，並提供聊天、終端機、模型路由與 Token 用量統計。MyGo 將另行開發的 Sessionary Web 用戶端與伺服器包進原生視窗。",
+		"ja": "Claude Code、Codex、OpenCode、Pi などの AI コーディングエージェントを管理する Sessionary のデスクトップ版。各エージェントの CLI がこのマシンや SSH 先のリモートマシンに残しているセッション履歴を読み込み、チャット、ターミナル、モデルルーティング、トークン使用量をまとめて扱えます。別途開発されている Sessionary の Web クライアントとサーバーを、MyGo がネイティブウィンドウに収めています。",
+		"ko": "Claude Code, Codex, OpenCode, Pi 같은 AI 코딩 에이전트를 관리하는 Sessionary의 데스크톱 버전입니다. 각 에이전트 CLI가 이 컴퓨터나 SSH로 연결한 원격 머신에 남긴 세션 기록을 읽어 채팅, 터미널, 모델 라우팅, 토큰 사용량을 한곳에서 다룹니다. 따로 개발되는 Sessionary의 웹 클라이언트와 서버를 MyGo가 네이티브 창에 담았습니다."
 	},
+	"icon": {
+		"file": "sessionary.webp"
+	},
+	"screenshot": "sessionary.webp",
 	"added": "2026-11-10T12:29:41Z"
 }
