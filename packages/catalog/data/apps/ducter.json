@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ducter",
+	"name": "Ducter",
+	"author": "wey-gu",
+	"kind": "native",
+	"group": "agents",
+	"url": "https://ducter.ai",
+	"repo": "wey-gu/ducter",
+	"summary": {
+		"en": "A Mac client for Ducter, a self-hosted personal AI that hands tasks to Claude Code and Codex.",
+		"zh-CN": "自托管个人 AI Ducter 的 Mac 客户端，把任务交给编程 agent。",
+		"zh-TW": "自架個人 AI Ducter 的 Mac 用戶端，把任務交給程式設計 agent。",
+		"ja": "セルフホストの個人 AI、Ducter の Mac クライアント。作業をコーディングエージェントに任せる。",
+		"ko": "코딩 에이전트에 작업을 맡기는 셀프 호스팅 개인 AI, Ducter의 Mac 클라이언트."
+	},
+	"description": {
+		"en": "The Mac (Apple silicon) client for Ducter, a personal AI that runs on your Mac or a Linux server and hands work to Claude Code, Codex, pi or DeepSeek Harness. It reports back with the result and its proof, and when a decision is yours it asks with a default already chosen. Only this client is drawn with MyGo's native UI, with no webview; the server, the phone web app and the iPhone app are built otherwise.",
+		"zh-CN": "Ducter 的 Mac（Apple 芯片）客户端。Ducter 是运行在你自己的 Mac 或 Linux 服务器上的个人 AI，把工作交给 Claude Code、Codex、pi 或 DeepSeek Harness。做完后它会附上结果和证据，需要你拍板时先给出默认做法。只有这个客户端用 MyGo 原生 UI 绘制，没有 Web 视图；服务端、手机网页版和 iPhone 应用另行开发。",
+		"zh-TW": "Ducter 的 Mac（Apple 晶片）用戶端。Ducter 是在你自己的 Mac 或 Linux 伺服器上執行的個人 AI，把工作交給 Claude Code、Codex、pi 或 DeepSeek Harness。完成後會附上結果與佐證，需要你決定時會先備好預設做法。只有這個用戶端以 MyGo 原生 UI 繪製，沒有 Web 視圖；伺服器端、手機網頁版與 iPhone App 則另以其他方式開發。",
+		"ja": "Ducter の Mac（Apple シリコン）向けクライアント。Ducter は自分の Mac や Linux サーバーで動く個人 AI で、作業を Claude Code、Codex、pi、DeepSeek Harness に任せます。終わると結果とその根拠を報告し、判断が必要なときはデフォルトの案を添えて尋ねてきます。MyGo のネイティブ UI で描かれ Web ビューを使わないのはこのクライアントだけで、サーバー、スマートフォン用 Web アプリ、iPhone アプリは別の方法で作られています。",
+		"ko": "Ducter의 Mac(Apple 실리콘) 클라이언트입니다. Ducter는 내 Mac이나 Linux 서버에서 돌아가는 개인 AI로, 작업을 Claude Code, Codex, pi, DeepSeek Harness에 맡깁니다. 끝나면 결과와 그 근거를 알려 주고, 결정이 필요할 때는 기본안을 정해 두고 묻습니다. MyGo의 네이티브 UI로 웹뷰 없이 그린 것은 이 클라이언트뿐이며, 서버, 휴대폰용 웹 앱, iPhone 앱은 다른 방식으로 만들어졌습니다."
+	},
+	"icon": {
+		"file": "ducter.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "ducter.webp",
+	"added": "2026-11-10T02:29:18Z"
+}
