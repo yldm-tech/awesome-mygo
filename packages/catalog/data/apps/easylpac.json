@@ -4,6 +4,11 @@
 	"name": "EasyLPAC",
 	"author": "creamlike1024",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "devices",
 	"url": "https://github.com/creamlike1024/EasyLPAC",
 	"repo": "creamlike1024/EasyLPAC",
