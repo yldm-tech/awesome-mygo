@@ -9,12 +9,22 @@
 		"linux",
 		"mac"
 	],
+	"group": "ai",
 	"url": "https://deskwand.com/zh/voice",
 	"summary": {
-		"en": "一个听写工具，也是一个语音 agent，支持本地语音模型和云端语音模型，润色需要云端大模型。支持 BYOK。"
+		"en": "A dictation tool and voice agent that works with local or cloud speech models, with BYOK support.",
+		"zh-CN": "听写工具兼语音 agent，可用本地或云端语音模型，支持 BYOK。",
+		"zh-TW": "聽寫工具兼語音 agent，可用本機或雲端語音模型，支援 BYOK。",
+		"ja": "ディクテーションツール兼音声エージェント。ローカルとクラウドの音声モデルに対応し、BYOK も可能。",
+		"ko": "받아쓰기 도구이자 음성 에이전트. 로컬·클라우드 음성 모델을 쓰고 BYOK를 지원합니다."
 	},
 	"description": {
-		"en": "一个听写工具，也是一个语音 agent，支持本地语音模型和云端语音模型，润色需要云端大模型。支持 BYOK。"
+		"en": "A dictation tool that also works as a voice agent, built with MyGo's native UI. It recognizes speech with either a local or a cloud speech model, while polishing the text requires a cloud large language model. It supports BYOK, so you can bring your own API keys.",
+		"zh-CN": "一款听写工具，同时也是语音 agent，基于 MyGo 原生 UI 构建。语音识别可以使用本地或云端语音模型，文字润色则需要云端大模型。支持 BYOK，可以填入自己的 API 密钥。",
+		"zh-TW": "一款聽寫工具，同時也是語音 agent，以 MyGo 原生 UI 打造。語音辨識可使用本機或雲端語音模型，文字潤飾則需要雲端大型語言模型。支援 BYOK，可填入自己的 API 金鑰。",
+		"ja": "音声エージェントとしても使えるディクテーションツールで、MyGo のネイティブ UI で作られています。音声認識にはローカルとクラウドのどちらの音声モデルも使えますが、文章の整形にはクラウドの大規模言語モデルが必要です。BYOK に対応しており、自分の API キーを使えます。",
+		"ko": "음성 에이전트로도 쓸 수 있는 받아쓰기 도구로, MyGo의 네이티브 UI로 만들었습니다. 음성 인식에는 로컬과 클라우드 음성 모델을 모두 쓸 수 있고, 문장 다듬기에는 클라우드 대형 언어 모델이 필요합니다. BYOK를 지원해 자신의 API 키를 쓸 수 있습니다."
 	},
+	"screenshot": "voice.webp",
 	"added": "2026-11-10T14:03:52Z"
 }
