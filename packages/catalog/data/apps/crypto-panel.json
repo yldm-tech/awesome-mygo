@@ -4,6 +4,9 @@
 	"name": "Crypto Panel",
 	"author": "DaviRain-Su",
 	"kind": "native",
+	"platforms": [
+		"mac"
+	],
 	"group": "system",
 	"url": "https://github.com/DaviRain-Su/crypto-panel",
 	"repo": "DaviRain-Su/crypto-panel",
@@ -12,14 +15,14 @@
 		"zh-CN": "加密货币桌面壳：原生 NEAR、EVM 钱包，沙箱 JS 插件，签名前解码确认。",
 		"zh-TW": "加密貨幣桌面殼：原生 NEAR、EVM 錢包，沙箱 JS 外掛，簽署前解碼確認。",
 		"ja": "暗号資産向けデスクトップシェル。NEAR・EVM ウォレットとサンドボックス化した JS アプリ。",
-		"ko": "암호화폐 데스크톱 셸. 네이티브 NEAR·EVM 지갑, 샌드박스 JS 앱, 해독된 서명 승인."
+		"ko": "암호화폐 데스크톱 셸. 네이티브 NEAR·EVM 지갑, 샌드박스 JS 앱, 디코딩된 서명 승인."
 	},
 	"description": {
 		"en": "A crypto desktop shell drawn with MyGo's native UI, made for macOS first. Apps are JavaScript plugins run in a sandbox, and their pages are drawn by the shell. EVM and NEAR keys stay in the OS keychain, and nothing is signed without the shell's own decoded approval. DApps open in an isolated web view with a NEAR wallet bridge; Solana is read-only.",
 		"zh-CN": "用 MyGo 原生 UI 绘制的加密货币桌面壳，以 macOS 为主。应用是在沙箱中运行的 JavaScript 插件，页面由壳自己绘制。EVM 与 NEAR 密钥保存在系统钥匙串中，每次签名都要经过壳自己解码的确认窗口。DApp 在隔离的 Web 视图中打开，并注入 NEAR 钱包桥；Solana 仅支持只读。",
 		"zh-TW": "用 MyGo 原生 UI 繪製的加密貨幣桌面殼，以 macOS 為主。應用程式是在沙箱中執行的 JavaScript 外掛，頁面由殼自行繪製。EVM 與 NEAR 金鑰存放在系統鑰匙圈，每次簽署都必須經過殼自行解碼的確認視窗。DApp 在隔離的 Web 視圖中開啟，並注入 NEAR 錢包橋接；Solana 僅支援唯讀。",
-		"ja": "MyGo のネイティブ UI で描かれた暗号資産向けのデスクトップシェルで、主に macOS 向けです。アプリはサンドボックスで動く JavaScript プラグインで、その画面はシェル自身が描きます。EVM と NEAR の鍵は OS のキーチェーンに保管され、署名は必ずシェルが内容を解読して示す承認ウィンドウを通ります。DApp は NEAR ウォレットのブリッジを注入した隔離 Web ビューで開き、Solana は閲覧のみです。",
-		"ko": "MyGo의 네이티브 UI로 그린 암호화폐 데스크톱 셸로, macOS를 우선으로 합니다. 앱은 샌드박스에서 실행되는 JavaScript 플러그인이며 그 화면은 셸이 직접 그립니다. EVM과 NEAR 키는 OS 키체인에 보관되고, 서명은 항상 셸이 직접 해독해 보여 주는 승인 창을 거칩니다. DApp은 NEAR 지갑 브리지를 넣은 격리된 웹 뷰에서 열리며, Solana는 조회만 됩니다."
+		"ja": "MyGo のネイティブ UI で描かれた暗号資産向けのデスクトップシェルで、主に macOS 向けです。アプリはサンドボックスで動く JavaScript プラグインで、その画面はシェル自身が描きます。EVM と NEAR の鍵は OS のキーチェーンに保管され、署名は必ずシェルが内容をデコードして示す承認ウィンドウを通ります。DApp は NEAR ウォレットのブリッジを注入した隔離 Web ビューで開き、Solana は閲覧のみです。",
+		"ko": "MyGo의 네이티브 UI로 그린 암호화폐 데스크톱 셸로, macOS를 우선으로 합니다. 앱은 샌드박스에서 실행되는 JavaScript 플러그인이며 그 화면은 셸이 직접 그립니다. EVM과 NEAR 키는 OS 키체인에 보관되고, 서명은 항상 셸이 직접 디코딩해 보여 주는 승인 창을 거칩니다. DApp은 NEAR 지갑 브리지를 넣은 격리된 웹 뷰에서 열리며, Solana는 조회만 됩니다."
 	},
 	"icon": {
 		"file": "crypto-panel.webp"
