@@ -4,6 +4,9 @@
 	"name": "Ducter",
 	"author": "wey-gu",
 	"kind": "native",
+	"platforms": [
+		"mac"
+	],
 	"group": "agents",
 	"url": "https://ducter.ai",
 	"repo": "wey-gu/ducter",
