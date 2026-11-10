@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "shijing",
+	"name": "拾景",
+	"author": "love1017best",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/love1017best/shijing",
+	"repo": "love1017best/shijing",
+	"summary": {
+		"en": "A random wallpaper picker for wallpaper hoarders.",
+		"zh-CN": "适合壁纸囤积症患者的随机图库筛选工具"
+	},
+	"description": {
+		"en": "Filters a large photo library on your NAS down to landscape images that are big enough, picks a random batch for macOS folder wallpaper shuffle, and refreshes the system wallpaper so the new batch shows up right away.",
+		"zh-CN": "从 NAS 上的大型图库里筛出分辨率够高的横屏图片，随机拾一批放进壁纸文件夹给 macOS 轮换，并刷新系统壁纸让新图立刻生效。"
+	},
+	"added": "2026-11-10T13:46:15Z"
+}
