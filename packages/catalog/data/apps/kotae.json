@@ -5,7 +5,8 @@
 	"author": "fayvo-hub",
 	"kind": "web",
 	"platforms": [
-		"win"
+		"win",
+		"mac"
 	],
 	"group": "dev",
 	"url": "https://github.com/fayvo-hub/Kotae",
