@@ -4,6 +4,9 @@
 	"name": "VoxFlow 声流",
 	"author": "webkubor",
 	"kind": "web",
+	"platforms": [
+		"mac"
+	],
 	"group": "media",
 	"url": "https://github.com/webkubor/voxflow",
 	"repo": "webkubor/voxflow",
@@ -15,11 +18,11 @@
 		"ko": "VoxFlow의 macOS 앱. 로컬 AI로 음성 복제, 음색 디자인, Suno 음악 생성."
 	},
 	"description": {
-		"en": "The macOS desktop app for VoxFlow, a local AI audio workbench for voice cloning, voice design from a text prompt, multi-voice dialogue and Suno music. MyGo shows the project's web UI in a native window; the Python and MLX backend and the models are installed separately with the CLI, on Apple Silicon Macs only. Audio stays on the machine, in ~/.voxflow/, shared with the CLI.",
-		"zh-CN": "VoxFlow 声流的 macOS 桌面版。VoxFlow 是本地运行的 AI 音频工作台，可以做声音克隆、凭文字描述设计音色、多角色对白合成和 Suno 音乐生成。MyGo 用原生窗口承载项目的网页界面，Python 与 MLX 后端及模型需先按 CLI 说明另行安装，仅支持 Apple Silicon Mac。音频不离开本机，保存在 ~/.voxflow/，与 CLI 共用。",
-		"zh-TW": "VoxFlow 声流的 macOS 桌面版。VoxFlow 是在本機執行的 AI 音訊工作台，可做聲音複製、憑文字描述設計音色、多角色對白合成與 Suno 音樂生成。MyGo 以原生視窗承載專案的網頁介面，Python 與 MLX 後端及模型須先依 CLI 說明另行安裝，僅支援 Apple Silicon Mac。音訊不離開本機，存放在 ~/.voxflow/，與 CLI 共用。",
-		"ja": "ローカルで動く AI 音声ワークベンチ VoxFlow の macOS デスクトップ版です。音声クローン、テキストの説明だけでの声質デザイン、複数キャラクターの対話合成、Suno による音楽生成ができます。MyGo はプロジェクトの Web UI をネイティブウィンドウで表示するだけで、Python と MLX のバックエンドやモデルは CLI の手順で別途インストールし、Apple Silicon の Mac でのみ動きます。音声は外に出ず ~/.voxflow/ に保存され、CLI と共有されます。",
-		"ko": "로컬에서 실행되는 AI 오디오 작업대 VoxFlow의 macOS 데스크톱 앱입니다. 음성 복제, 텍스트 설명만으로 하는 음색 디자인, 여러 캐릭터의 대화 합성, Suno 음악 생성을 지원합니다. MyGo는 프로젝트의 웹 UI를 네이티브 창에 띄우며, Python·MLX 백엔드와 모델은 CLI 안내에 따라 따로 설치해야 하고 Apple Silicon Mac에서만 동작합니다. 오디오는 기기 밖으로 나가지 않고 ~/.voxflow/에 저장되어 CLI와 함께 씁니다."
+		"en": "The macOS desktop app for VoxFlow, a local AI audio workbench for voice cloning, voice design from a text prompt, multi-voice dialogue and Suno music. MyGo shows the project's web UI in a native window; the Python and MLX backend and the models are installed separately with the CLI, on Apple Silicon Macs only. Generated audio is kept in ~/.voxflow/, shared with the CLI.",
+		"zh-CN": "VoxFlow 声流的 macOS 桌面版。VoxFlow 是本地运行的 AI 音频工作台，可以做声音克隆、凭文字描述设计音色、多角色对白合成和 Suno 音乐生成。MyGo 用原生窗口承载项目的网页界面，Python 与 MLX 后端及模型需先按 CLI 说明另行安装，仅支持 Apple Silicon Mac。生成的音频保存在 ~/.voxflow/，与 CLI 共用。",
+		"zh-TW": "VoxFlow 声流的 macOS 桌面版。VoxFlow 是在本機執行的 AI 音訊工作台，可做聲音複製、憑文字描述設計音色、多角色對白合成與 Suno 音樂生成。MyGo 以原生視窗承載專案的網頁介面，Python 與 MLX 後端及模型須先依 CLI 說明另行安裝，僅支援 Apple Silicon Mac。生成的音訊存放在 ~/.voxflow/，與 CLI 共用。",
+		"ja": "ローカルで動く AI 音声ワークベンチ VoxFlow の macOS デスクトップ版です。音声クローン、テキストの説明だけでの声質デザイン、複数キャラクターの対話合成、Suno による音楽生成ができます。MyGo はプロジェクトの Web UI をネイティブウィンドウで表示するだけで、Python と MLX のバックエンドやモデルは CLI の手順で別途インストールし、Apple Silicon の Mac でのみ動きます。生成した音声は ~/.voxflow/ に保存され、CLI と共有されます。",
+		"ko": "로컬에서 실행되는 AI 오디오 작업대 VoxFlow의 macOS 데스크톱 앱입니다. 음성 복제, 텍스트 설명만으로 하는 음색 디자인, 여러 캐릭터의 대화 합성, Suno 음악 생성을 지원합니다. MyGo는 프로젝트의 웹 UI를 네이티브 창에 띄우며, Python·MLX 백엔드와 모델은 CLI 안내에 따라 따로 설치해야 하고 Apple Silicon Mac에서만 동작합니다. 생성한 오디오는 ~/.voxflow/에 저장되어 CLI와 함께 씁니다."
 	},
 	"icon": {
 		"file": "voxflow.webp"
