@@ -186,7 +186,7 @@ const readProvisional = (r: Reader, allowed: readonly ProvisionalImage[]): Provi
 const readApp = (r: Reader): App => {
 	r.only(['$schema', 'slug', 'name', 'author', 'kind', 'platforms', 'category', 'group', 'url', 'repo', 'summary', 'description', 'screenshot', 'icon', 'provisional', 'added']);
 	const group = r.raw.group === undefined ? undefined : r.oneOf('group', ENTRY_GROUPS);
-	const platforms = r.raw.platforms === undefined ? [...APP_PLATFORMS] : r.strings('platforms', 1);
+	const platforms = r.strings('platforms', 1);
 	if (platforms.some((platform) => !(APP_PLATFORMS as readonly string[]).includes(platform))) r.fail('platforms', `must contain only ${APP_PLATFORMS.join(', ')}`);
 	if (new Set(platforms).size !== platforms.length) r.fail('platforms', 'lists a platform twice');
 	const icon = r.raw.icon as { ailogo?: unknown; file?: unknown } | undefined;

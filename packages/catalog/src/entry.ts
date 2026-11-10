@@ -24,9 +24,14 @@ export function entryPath(cat: SubmitCat, entry: Record<string, unknown>): strin
 	return `${SUBMIT_KINDS[cat].dir}/${slugOf(entry)}.json`;
 }
 
+// The entry as its file holds it: an app submitted without platforms, as a pasted entry may be, gets all three, as the form writes them without asking; the submission workflow then picks the ones it runs on.
+function withPlatforms(cat: SubmitCat, entry: Record<string, unknown>): Record<string, unknown> {
+	return cat === 'showcase' && entry.platforms === undefined ? { ...entry, platforms: [...APP_PLATFORMS] } : entry;
+}
+
 // Throws a CatalogError, naming the field, when entry would not pass its file's check.
 export function checkEntry(cat: SubmitCat, entry: Record<string, unknown>): void {
-	readEntry(SUBMIT_KINDS[cat], entry);
+	readEntry(SUBMIT_KINDS[cat], withPlatforms(cat, entry));
 }
 
 // What checkEntry would throw for entry, as text, or undefined when it passes.
@@ -43,8 +48,7 @@ function fileProblem(cat: SubmitCat, entry: Record<string, unknown>): string | u
 // The entry's file as the repository keeps it: its schema first, the entry, and when it was added.
 function fileOf(cat: SubmitCat, entry: Record<string, unknown>, added: string): Record<string, unknown> {
 	const { $schema: _schema, added: _added, ...rest } = entry;
-	const normalized = cat === 'showcase' && rest.platforms === undefined ? { ...rest, platforms: [...APP_PLATFORMS] } : rest;
-	return { $schema: SUBMIT_KINDS[cat].schema, ...normalized, added };
+	return { $schema: SUBMIT_KINDS[cat].schema, ...withPlatforms(cat, rest), added };
 }
 
 // The entry's file as text, added now unless given. Throws a CatalogError, naming the field, when it would not pass the file's check.

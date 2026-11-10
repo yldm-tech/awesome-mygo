@@ -166,8 +166,11 @@ describe('catalog data', () => {
 
 	// Apps are one file each so that submissions arriving together never edit the same file; their order comes from when each was added.
 	it('keeps each app in a file named after its slug, and lists them by name in natural order', () => {
-		const app = { $schema: '../schema/app.schema.json', slug: 'kit', name: 'Kit', author: 'someone', kind: 'native', url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' }, added: '2026-11-04T12:00:00Z' };
+		const app = { $schema: '../schema/app.schema.json', slug: 'kit', name: 'Kit', author: 'someone', kind: 'native', platforms: ['mac'], url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' }, added: '2026-11-04T12:00:00Z' };
 		expect(readAppFile('kit.json', app).added).toBe('2026-11-04T12:00:00Z');
+		// No default: an entry without platforms would be listed under all three, which put single-platform apps under the wrong filters.
+		expect(() => readAppFile('kit.json', { ...app, platforms: undefined })).toThrow(/platforms must be a list of at least 1/);
+		expect(() => readAppFile('kit.json', { ...app, platforms: ['macos'] })).toThrow(/platforms must contain only win, linux, mac/);
 		expect(() => readAppFile('other.json', app)).toThrow(/apps\/other.json \(Kit\): slug must match the file name/);
 		expect(() => readAppFile('kit.json', { ...app, added: undefined })).toThrow(/added is required/);
 		expect(() => readAppFile('kit.json', { ...app, added: '2026-11-04' })).toThrow(/added must be a UTC time/);
@@ -189,13 +192,13 @@ describe('catalog data', () => {
 		const schemaEnum = APP_SCHEMA.properties.category.enum;
 		expect(schemaEnum).toEqual([...APP_CATEGORIES]);
 		for (const a of APPS) if (a.category !== undefined) expect(APP_CATEGORIES, a.slug).toContain(a.category);
-		const entry = { slug: 'kit', name: 'Kit', author: 'someone', kind: 'native', url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' } };
+		const entry = { slug: 'kit', name: 'Kit', author: 'someone', kind: 'native', platforms: ['mac'], url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' } };
 		expect(readAppEntry(entry).category).toBeUndefined();
 		expect(() => readAppEntry({ ...entry, category: 'DesktopApplication' })).toThrow(/category must be one of/);
 	});
 
 	it('lists as provisional only images the entry has, and only kinds of image its category shows', () => {
-		const app = { slug: 'kit', name: 'Kit', author: 'a', kind: 'native', url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' }, screenshot: 'kit.webp', icon: { file: 'kit.webp' } };
+		const app = { slug: 'kit', name: 'Kit', author: 'a', kind: 'native', platforms: ['mac'], url: 'https://x.dev', summary: { en: 'A kit.' }, description: { en: 'A kit.' }, screenshot: 'kit.webp', icon: { file: 'kit.webp' } };
 		expect(readAppEntry({ ...app, provisional: ['icon', 'screenshot'] }).provisional).toEqual(['icon', 'screenshot']);
 		expect(readAppEntry(app).provisional).toBeUndefined();
 		expect(() => readAppEntry({ ...app, provisional: ['banner'] })).toThrow(/provisional may list only icon and screenshot/);
