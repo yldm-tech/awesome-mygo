@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mygo-store",
+	"name": "MyGo Store",
+	"author": "tk103331",
+	"kind": "native",
+	"group": "system",
+	"url": "https://github.com/tk103331/mygo-store",
+	"repo": "tk103331/mygo-store",
+	"summary": {
+		"en": "A native store for MyGo apps: browse the showcase and download each app's installer from GitHub.",
+		"zh-CN": "MyGo 应用的原生商店：浏览展示页，从 GitHub Releases 下载对应安装包。",
+		"zh-TW": "MyGo 應用的原生商店：瀏覽展示頁，從 GitHub Releases 下載對應安裝檔。",
+		"ja": "MyGo アプリのネイティブストア。ショーケースを閲覧し、各アプリのインストーラーを入手。",
+		"ko": "MyGo 앱 네이티브 스토어. 쇼케이스를 둘러보고 각 앱의 설치 파일을 받습니다."
+	},
+	"description": {
+		"en": "A store for apps built with MyGo, drawn with MyGo's native UI on macOS, Windows and Linux. It browses the Awesome MyGo showcase by category with scores and screenshots, and works offline from a bundled catalog that it refreshes in the background. Get picks the installer for your OS and architecture from the project's GitHub Releases and saves it to Downloads without running it.",
+		"zh-CN": "为 MyGo 应用打造的商店，由 MyGo 原生 UI 绘制，支持 macOS、Windows 与 Linux。可按分类浏览 Awesome MyGo 展示页，附带评分与截图；内置目录可离线使用，并在后台自动刷新。点击获取后，它会从项目的 GitHub Releases 中挑选适合当前系统与架构的安装包，保存到下载文件夹，但不会自动运行。",
+		"zh-TW": "為 MyGo 應用打造的商店，由 MyGo 原生 UI 繪製，支援 macOS、Windows 與 Linux。可依分類瀏覽 Awesome MyGo 展示頁，附有評分與截圖；內建目錄可離線使用，並在背景自動更新。按下取得後，它會從專案的 GitHub Releases 挑選符合目前系統與架構的安裝檔，存到下載資料夾，但不會自動執行。",
+		"ja": "MyGo で作られたアプリのためのストアで、MyGo のネイティブ UI で描かれ、macOS・Windows・Linux で動きます。Awesome MyGo のショーケースをカテゴリー別に、スコアやスクリーンショットとともに閲覧でき、同梱のカタログでオフラインでも使え、カタログはバックグラウンドで更新されます。「Get」を押すと、OS とアーキテクチャに合うインストーラーをプロジェクトの GitHub Releases から選んでダウンロードフォルダーに保存します。自動で実行はしません。",
+		"ko": "MyGo로 만든 앱을 위한 스토어로, MyGo의 네이티브 UI로 그렸으며 macOS, Windows, Linux에서 실행됩니다. Awesome MyGo 쇼케이스를 카테고리별로 점수, 스크린샷과 함께 둘러볼 수 있고, 내장 카탈로그 덕분에 오프라인에서도 쓸 수 있으며 카탈로그는 백그라운드에서 갱신됩니다. Get을 누르면 프로젝트의 GitHub Releases에서 OS와 아키텍처에 맞는 설치 파일을 골라 다운로드 폴더에 저장하며, 자동으로 실행하지는 않습니다."
+	},
+	"icon": {
+		"file": "mygo-store.webp"
+	},
+	"screenshot": "mygo-store.webp",
+	"added": "2026-11-10T02:29:18Z"
+}
