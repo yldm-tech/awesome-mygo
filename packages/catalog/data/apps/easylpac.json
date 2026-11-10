@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "easylpac",
+	"name": "EasyLPAC",
+	"author": "creamlike1024",
+	"kind": "native",
+	"group": "devices",
+	"url": "https://github.com/creamlike1024/EasyLPAC",
+	"repo": "creamlike1024/EasyLPAC",
+	"summary": {
+		"en": "Manage eSIM profiles on removable eUICCs through a card reader or modem.",
+		"zh-CN": "通过读卡器或调制解调器管理可插拔 eUICC 上的 eSIM 配置文件。",
+		"zh-TW": "透過讀卡機或數據機管理可插拔 eUICC 上的 eSIM 設定檔。",
+		"ja": "カードリーダーやモデム経由で、取り外し可能な eUICC の eSIM プロファイルを管理。",
+		"ko": "카드 리더나 모뎀으로 착탈식 eUICC의 eSIM 프로필을 관리합니다."
+	},
+	"description": {
+		"en": "A GUI LPA for managing eSIM profiles on removable eUICCs, drawn with MyGo's native UI. Pick a card reader or modem in Settings and it reads the card, then installs, enables, disables and deletes profiles, sending each operation's notification to the operator's server unless you turn that off. Since 0.9.0 it links lpac's libeuicc directly, so no separate lpac executable is needed.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的图形化 LPA，用于管理可插拔 eUICC 上的 eSIM 配置文件。在设置中选择读卡器或调制解调器即可读取卡片，进行配置文件的安装、启用、停用和删除；每次操作的通知默认会发送到运营商服务器，也可以关闭。自 0.9.0 起直接链接 lpac 的 libeuicc，不再需要单独的 lpac 可执行文件。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的圖形化 LPA，用來管理可插拔 eUICC 上的 eSIM 設定檔。在設定中選擇讀卡機或數據機即可讀取卡片，進行設定檔的安裝、啟用、停用與刪除；每次操作的通知預設會傳送到電信業者的伺服器，也可以關閉。自 0.9.0 起直接連結 lpac 的 libeuicc，不再需要另外的 lpac 執行檔。",
+		"ja": "MyGo のネイティブ UI で描かれた GUI の LPA で、取り外し可能な eUICC 上の eSIM プロファイルを管理します。設定でカードリーダーかモデムを選ぶとカードを読み込み、プロファイルのインストール、有効化、無効化、削除ができます。各操作の通知は既定で通信事業者のサーバーに送られ、オフにもできます。0.9.0 からは lpac の libeuicc を直接リンクしており、lpac の実行ファイルは別途必要ありません。",
+		"ko": "MyGo의 네이티브 UI로 그린 GUI LPA로, 착탈식 eUICC의 eSIM 프로필을 관리합니다. 설정에서 카드 리더나 모뎀을 고르면 카드를 읽어 프로필을 설치, 활성화, 비활성화, 삭제할 수 있고, 각 작업의 알림은 기본적으로 통신사 서버로 보내지며 끌 수도 있습니다. 0.9.0부터는 lpac의 libeuicc를 직접 링크하므로 별도의 lpac 실행 파일이 필요 없습니다."
+	},
+	"icon": {
+		"file": "easylpac.webp"
+	},
+	"screenshot": "easylpac.webp",
+	"added": "2026-11-10T02:29:18Z"
+}
