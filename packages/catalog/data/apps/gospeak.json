@@ -4,6 +4,11 @@
 	"name": "GOSpeak",
 	"author": "NoelOrin",
 	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "chat",
 	"url": "https://noelorin.github.io/GOSpeak/",
 	"repo": "NoelOrin/GOSpeak",
