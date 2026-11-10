@@ -11,10 +11,22 @@
 	"url": "https://github.com/fayvo-hub/Kotae",
 	"repo": "fayvo-hub/Kotae",
 	"summary": {
-		"en": "Kotae：一个纯本地的轻量 API 调试客户端，请求构建、脚本、环境变量与流式连接全部在本机完成，适合不想把接口数据传到云端、又嫌 Postman 太重的后端与前端开发者。"
+		"en": "A lightweight, local-only API client like Postman, with no cloud account or backend service.",
+		"zh-CN": "纯本地的轻量 API 调试客户端，类似 Postman，不连云端也无需后端服务。",
+		"zh-TW": "純本機的輕量 API 除錯用戶端，類似 Postman，不連雲端也不需後端服務。",
+		"ja": "Postman のような軽量 API クライアント。クラウドもバックエンドも使わずローカルで完結。",
+		"ko": "Postman처럼 쓰는 가벼운 API 클라이언트. 클라우드나 백엔드 없이 로컬에서만 동작합니다."
 	},
 	"description": {
-		"en": "Kotae：一个纯本地的轻量 API 调试客户端，请求构建、脚本、环境变量与流式连接全部在本机完成，适合不想把接口数据传到云端、又嫌 Postman 太重的后端与前端开发者。"
+		"en": "A local-only Postman-style API client: a Vite/TypeScript frontend in MyGo's web view, with requests sent from Go so browser CORS limits do not apply. It builds HTTP, GraphQL, SSE and WebSocket requests, runs Postman-style scripts before and after them, and imports cURL, Postman collections and HAR files. The interface is in Chinese, and all data stays in a local SQLite file.",
+		"zh-CN": "本地 Postman 式 API 调试工具：Vite/TypeScript 前端跑在 MyGo 的 webview 里，请求由 Go 发出，不受浏览器 CORS 限制。支持 HTTP、GraphQL、SSE 与 WebSocket，可在发送前后运行 Postman 风格脚本，能导入 cURL、Postman 集合与 HAR。界面为中文，数据存于本机 SQLite 文件。",
+		"zh-TW": "本機 Postman 式 API 除錯工具：Vite/TypeScript 前端跑在 MyGo 的 webview 裡，請求由 Go 送出，不受瀏覽器 CORS 限制。支援 HTTP、GraphQL、SSE 與 WebSocket，可在送出前後執行 Postman 風格腳本，能匯入 cURL、Postman 集合與 HAR。介面為中文，資料存於本機 SQLite 檔案。",
+		"ja": "Postman 風の API クライアントで、すべてローカルで動きます。Vite/TypeScript のフロントエンドを MyGo の Web ビューで表示し、リクエストは Go 側から送るため、ブラウザの CORS 制限を受けません。HTTP、GraphQL、SSE、WebSocket のリクエストを組み立て、送信の前後に Postman 風のスクリプトを実行でき、cURL、Postman コレクション、HAR を読み込めます。画面は中国語で、データはローカルの SQLite ファイルに保存されます。",
+		"ko": "로컬에서만 동작하는 Postman 스타일 API 클라이언트입니다. Vite/TypeScript 프런트엔드를 MyGo 웹 뷰에 띄우고 요청은 Go에서 보내 브라우저 CORS 제한이 없습니다. HTTP, GraphQL, SSE, WebSocket을 지원하고 전송 전후로 Postman식 스크립트를 돌리며 cURL, Postman 컬렉션, HAR을 가져옵니다. 화면은 중국어이고 데이터는 로컬 SQLite 파일에 저장됩니다."
 	},
+	"icon": {
+		"file": "kotae.webp"
+	},
+	"screenshot": "kotae.webp",
 	"added": "2026-11-09T09:04:14Z"
 }
