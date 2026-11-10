@@ -6,17 +6,28 @@
 	"kind": "native",
 	"platforms": [
 		"win",
-		"linux",
 		"mac"
 	],
 	"group": "ai",
 	"url": "https://deskwand.com/zh/bot",
 	"repo": "deskwand/bot",
 	"summary": {
-		"en": "一键部署到 cloudflare 的个人助理（免费套餐即可）。支持自我唤醒自主运行，支持微信、telegram 接入。"
+		"en": "A personal bot that runs in your own Cloudflare account and talks to you on Telegram or WeChat.",
+		"zh-CN": "住在你自己 Cloudflare 账号里的个人助理，用 Telegram 或微信对话。",
+		"zh-TW": "住在你自己 Cloudflare 帳號裡的個人助理，用 Telegram 或微信對話。",
+		"ja": "自分の Cloudflare アカウントで動く個人ボット。Telegram や WeChat で対話。",
+		"ko": "내 Cloudflare 계정에서 도는 개인 비서 봇. Telegram, WeChat으로 대화."
 	},
 	"description": {
-		"en": "一键部署到 cloudflare 的个人助理（免费套餐即可）。支持自我唤醒自主运行，支持微信、telegram 接入。"
+		"en": "The desktop client for DeskWand Bot on macOS and Windows, built with MyGo and a React web frontend. It signs in to your Cloudflare account and deploys and manages the bot without Node.js, Git or Wrangler. The bot itself is a Cloudflare Worker written separately: it has its own mission and memory, decides when to wake up, and talks to you over Telegram or WeChat.",
+		"zh-CN": "DeskWand Bot 的 macOS 与 Windows 桌面客户端，用 MyGo 搭配 React 网页前端构建。登录 Cloudflare 账号后即可部署和管理 bot，无需 Node.js、Git 或 Wrangler。bot 本身是另行编写的 Cloudflare Worker，有自己的使命和记忆，自己安排什么时候醒，通过 Telegram 或微信与你对话。",
+		"zh-TW": "DeskWand Bot 的 macOS 與 Windows 桌面用戶端，以 MyGo 搭配 React 網頁前端打造。登入 Cloudflare 帳號後即可部署與管理 bot，不需要 Node.js、Git 或 Wrangler。bot 本身是另外撰寫的 Cloudflare Worker，有自己的使命和記憶，自己安排何時醒來，透過 Telegram 或微信與你對話。",
+		"ja": "DeskWand Bot の macOS・Windows 向けデスクトップクライアントで、MyGo と React の Web フロントエンドで作られています。Cloudflare アカウントでログインすれば、Node.js や Git、Wrangler なしでボットをデプロイ・管理できます。ボット本体は別に書かれた Cloudflare Worker で、自分の使命と記憶を持ち、起きる時刻を自分で決め、Telegram か WeChat でやり取りします。",
+		"ko": "DeskWand Bot의 macOS·Windows용 데스크톱 클라이언트로, MyGo와 React 웹 프런트엔드로 만들었습니다. Cloudflare 계정으로 로그인하면 Node.js, Git, Wrangler 없이 봇을 배포하고 관리할 수 있습니다. 봇 자체는 따로 작성된 Cloudflare Worker로, 자기 임무와 기억을 갖고 깨어날 시간을 스스로 정하며 Telegram이나 WeChat으로 대화합니다."
 	},
+	"icon": {
+		"file": "bot.webp"
+	},
+	"screenshot": "bot.webp",
 	"added": "2026-11-10T13:59:05Z"
 }
