@@ -6,17 +6,31 @@
 	"kind": "web",
 	"platforms": [
 		"win",
-		"linux",
 		"mac"
 	],
 	"group": "system",
 	"url": "https://kitehq.dev/",
 	"repo": "kite-org/kite",
 	"summary": {
-		"en": "Kite is the lightweight, open-source Kubernetes workspace for clusters, observability, access control, and AI operations."
+		"en": "A Kubernetes workspace for running and monitoring multiple clusters, with an AI assistant.",
+		"zh-CN": "管理和监控多个 Kubernetes 集群的工作台，内置 AI 助手。",
+		"zh-TW": "管理與監控多個 Kubernetes 叢集的工作台，內建 AI 助理。",
+		"ja": "複数の Kubernetes クラスターを操作・監視するワークスペース。AI アシスタント付き。",
+		"ko": "여러 Kubernetes 클러스터를 운영하고 모니터링하는 워크스페이스. AI 어시스턴트 내장."
 	},
 	"description": {
-		"en": "Kite is the lightweight, open-source Kubernetes workspace for clusters, observability, access control, and AI operations."
+		"en": "Kite Desktop (beta) is the macOS and Windows build of Kite, a Kubernetes workspace with a web frontend, and works from your local kubeconfig files without a Kite server. It manages resources, CRDs and Helm releases across clusters, streams pod logs, shows Prometheus metrics and edits live YAML. Kite's shared web console is deployed separately with Helm or Docker.",
+		"zh-CN": "Kite Desktop（测试版）是 Kubernetes 工作台 Kite 的 macOS 与 Windows 版本，采用 Web 前端，直接使用本地 kubeconfig 文件，无需部署 Kite 服务器。它可跨集群管理资源、CRD 和 Helm 发布，查看 Pod 日志与 Prometheus 指标，并直接编辑线上 YAML。共享的 Web 控制台则另行通过 Helm 或 Docker 部署。",
+		"zh-TW": "Kite Desktop（測試版）是 Kubernetes 工作台 Kite 的 macOS 與 Windows 版本，採用 Web 前端，直接使用本機 kubeconfig 檔案，不必部署 Kite 伺服器。它可跨叢集管理資源、CRD 與 Helm 發行版本，查看 Pod 日誌與 Prometheus 指標，並直接編輯線上 YAML。共用的 Web 主控台則另外透過 Helm 或 Docker 部署。",
+		"ja": "Kite Desktop（ベータ）は、Web フロントエンドを持つ Kubernetes ワークスペース Kite の macOS・Windows 版で、Kite サーバーを用意せずローカルの kubeconfig ファイルで動きます。複数クラスターのリソース、CRD、Helm リリースを管理し、Pod のログや Prometheus のメトリクスを確認し、稼働中の YAML を直接編集できます。共有の Web コンソールは別途 Helm や Docker でデプロイします。",
+		"ko": "Kite Desktop(베타)는 웹 프런트엔드를 쓰는 Kubernetes 워크스페이스 Kite의 macOS·Windows 버전으로, Kite 서버 없이 로컬 kubeconfig 파일로 동작합니다. 여러 클러스터의 리소스, CRD, Helm 릴리스를 관리하고 Pod 로그와 Prometheus 지표를 확인하며 실행 중인 YAML을 바로 편집합니다. 공유 웹 콘솔은 Helm이나 Docker로 따로 배포합니다."
 	},
+	"icon": {
+		"file": "kite.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "kite.webp",
 	"added": "2026-11-10T14:19:48Z"
 }
