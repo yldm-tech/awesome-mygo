@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "moli-tutu",
+	"name": "Moli TuTu",
+	"author": "gusibi",
+	"kind": "native",
+	"group": "media",
+	"url": "https://tutu.eztoolab.com/",
+	"repo": "gusibi/moli-tutu",
+	"summary": {
+		"en": "Compresses images, uploads them to Cloudflare R2 and copies their links.",
+		"zh-CN": "压缩图片并上传到 Cloudflare R2，一键复制图片链接。",
+		"zh-TW": "壓縮圖片並上傳到 Cloudflare R2，一鍵複製圖片連結。",
+		"ja": "画像を圧縮して Cloudflare R2 にアップロードし、リンクをコピーするツール。",
+		"ko": "이미지를 압축해 Cloudflare R2에 올리고 링크를 복사하는 도구."
+	},
+	"description": {
+		"en": "An image compressor and uploader for Cloudflare R2: drop in pictures, it compresses them, uploads them to your bucket and copies the link in one click. It handles JPEG, PNG, WebP and other common formats in batches and shows file sizes before and after compression. The main Moli TuTu app is built with Tauri, React and Rust; this entry is a separate version built with MyGo's native UI.",
+		"zh-CN": "集图片压缩与图床上传于一体的工具：拖入图片后自动压缩，上传到 Cloudflare R2 存储桶，一键复制链接。支持 JPEG、PNG、WebP 等常见格式的批量处理，并显示压缩前后的文件大小对比。Moli TuTu 主程序用 Tauri、React 与 Rust 构建，这里收录的是用 MyGo 原生 UI 另行构建的版本。",
+		"zh-TW": "結合圖片壓縮與圖床上傳的工具：拖入圖片後自動壓縮，上傳到 Cloudflare R2 儲存貯體，一鍵複製連結。支援 JPEG、PNG、WebP 等常見格式的批次處理，並顯示壓縮前後的檔案大小對比。Moli TuTu 主程式以 Tauri、React 與 Rust 打造，這裡收錄的是用 MyGo 原生 UI 另行打造的版本。",
+		"ja": "画像の圧縮と Cloudflare R2 へのアップロードをまとめたツール。画像をドロップすると自動で圧縮してバケットにアップロードし、リンクをワンクリックでコピーできます。JPEG・PNG・WebP などをまとめて処理でき、圧縮前後のファイルサイズも表示します。Moli TuTu 本体は Tauri・React・Rust で作られており、ここで紹介するのは MyGo のネイティブ UI で作られた別バージョンです。",
+		"ko": "이미지 압축과 Cloudflare R2 업로드를 하나로 묶은 도구입니다. 이미지를 끌어다 놓으면 자동으로 압축해 버킷에 올리고, 링크를 클릭 한 번으로 복사합니다. JPEG, PNG, WebP 등 흔한 형식을 여러 장 한꺼번에 처리하며 압축 전후 파일 크기를 보여 줍니다. Moli TuTu 본체는 Tauri, React, Rust로 만들어졌고, 여기 소개하는 것은 MyGo의 네이티브 UI로 만든 별도 버전입니다."
+	},
+	"icon": {
+		"file": "moli-tutu.webp"
+	},
+	"screenshot": "moli-tutu.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-10T02:29:18Z"
+}
