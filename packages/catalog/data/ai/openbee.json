@@ -1,0 +1,17 @@
+{
+	"$schema": "../schema/ai.schema.json",
+	"slug": "openbee",
+	"name": "openbee",
+	"author": "theopenbee",
+	"summary": {
+		"en": "OpenBee turns the agent CLIs you already use — Claude Code, Codex or pi — into a team of always-on workers."
+	},
+	"repo": "theopenbee/openbee",
+	"url": "https://github.com/theopenbee/openbee",
+	"type": "skill",
+	"install": "npx skills add theopenbee/openbee",
+	"tags": [
+		"ai"
+	],
+	"added": "2026-11-10T02:59:19Z"
+}
