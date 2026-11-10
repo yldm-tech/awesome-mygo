@@ -4,6 +4,10 @@
 	"name": "OOXML Translator",
 	"author": "lemos1235",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
 	"group": "ai",
 	"url": "https://github.com/lemos1235/excel-translator",
 	"repo": "lemos1235/excel-translator",
