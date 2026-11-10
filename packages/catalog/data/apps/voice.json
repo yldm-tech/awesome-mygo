@@ -1,0 +1,20 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "voice",
+	"name": "voice",
+	"author": "deskwand",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"url": "https://deskwand.com/zh/voice",
+	"summary": {
+		"en": "一个听写工具，也是一个语音 agent，支持本地语音模型和云端语音模型，润色需要云端大模型。支持 BYOK。"
+	},
+	"description": {
+		"en": "一个听写工具，也是一个语音 agent，支持本地语音模型和云端语音模型，润色需要云端大模型。支持 BYOK。"
+	},
+	"added": "2026-11-10T14:03:52Z"
+}
