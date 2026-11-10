@@ -1,0 +1,24 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "arcmd",
+	"name": "ArcMD",
+	"author": "Ciao1019",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/Ciao1019/ArcMD",
+	"repo": "Ciao1019/ArcMD",
+	"summary": {
+		"en": "An Arc-inspired native document editor built with Go and MyGo, combining rich-text editing with Markdown workflows.",
+		"zh-CN": "受 Arc 启发的原生文档编辑器，使用 Go 与 MyGo 构建，将富文本编辑与 Markdown 写作习惯结合。"
+	},
+	"description": {
+		"en": "ArcMD brings Arc-inspired spaces, a vertical sidebar, and global favorites to a local-first rich-text editor built with Go and MyGo Native UI. It supports Markdown import/export, tables, code blocks, backlinks, full-text search, and split editing for up to four documents; the project is currently in early preview.",
+		"zh-CN": "ArcMD 使用 Go 与 MyGo Native UI 原生构建，以 Arc 风格的多彩空间、竖向侧边栏和全局收藏组织本地文档。支持 Markdown 导入导出、表格、代码块、双链、全文搜索，以及最多四篇文档的分屏编辑；项目目前处于早期预览阶段。"
+	},
+	"added": "2026-11-09T10:04:43Z"
+}
