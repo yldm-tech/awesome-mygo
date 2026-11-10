@@ -4,6 +4,9 @@
 	"name": "RightConvert",
 	"author": "Itoktsnhc",
 	"kind": "native",
+	"platforms": [
+		"win"
+	],
 	"group": "media",
 	"url": "https://github.com/Itoktsnhc/RightConvert",
 	"repo": "Itoktsnhc/RightConvert",
@@ -15,7 +18,7 @@
 		"ko": "Windows 파일 탐색기 오른쪽 클릭 메뉴에서 ffmpeg로 오디오·동영상 파일을 변환합니다."
 	},
 	"description": {
-		"en": "A Windows app in MyGo's native UI that adds a Convert to entry to Explorer's right-click menu for audio and video files, with formats like MP3, FLAC, WAV, M4A, MP4 and MOV, and leaves the conversion to ffmpeg. It installs for the current user without admin rights, queues selected files in one window, writes output beside the source without overwriting, and takes custom rules from rules.toml.",
+		"en": "A Windows app in MyGo's native UI that adds a \"Convert to\" entry to Explorer's right-click menu for audio and video files, with formats like MP3, FLAC, WAV, M4A, MP4 and MOV, and leaves the conversion to ffmpeg. It installs for the current user without admin rights, queues selected files in one window, writes output beside the source without overwriting, and takes custom rules from rules.toml.",
 		"zh-CN": "用 MyGo 原生 UI 构建的 Windows 应用，在资源管理器的右键菜单里为音视频文件加上“转换为”，可转成 MP3、FLAC、WAV、M4A、MP4、MOV 等格式，转换由 ffmpeg 完成。无需管理员权限，只为当前用户安装；多选的文件会在同一个队列窗口里处理，输出放在源文件旁且不覆盖已有文件，还可以在 rules.toml 里自定义转换规则。",
 		"zh-TW": "以 MyGo 原生 UI 打造的 Windows 應用程式，在檔案總管的右鍵選單中為影音檔案加上「轉換為」，可轉成 MP3、FLAC、WAV、M4A、MP4、MOV 等格式，轉換交由 ffmpeg 完成。不需系統管理員權限，只為目前使用者安裝；多選的檔案會在同一個佇列視窗中處理，輸出放在原始檔旁且不覆寫既有檔案，也能在 rules.toml 自訂轉換規則。",
 		"ja": "MyGo のネイティブ UI で作られた Windows アプリ。エクスプローラーの右クリックメニューに音声・動画ファイル向けの「変換」を追加し、MP3、FLAC、WAV、M4A、MP4、MOV などへの変換を ffmpeg に任せます。管理者権限は不要で現在のユーザーにだけインストールされ、複数選択したファイルは一つのキューウィンドウで処理します。出力は元ファイルの隣に置かれて既存のファイルは上書きされず、変換ルールは rules.toml で追加できます。",
