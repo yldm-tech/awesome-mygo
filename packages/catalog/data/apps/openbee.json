@@ -4,6 +4,11 @@
 	"name": "OpenBee",
 	"author": "theopenbee",
 	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "agents",
 	"url": "https://www.theopenbee.com/",
 	"repo": "theopenbee/openbee",
