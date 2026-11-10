@@ -1,0 +1,29 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "la-pluma",
+	"name": "La Pluma",
+	"author": "mps233",
+	"kind": "web",
+	"group": "game",
+	"url": "https://github.com/mps233/La-pluma",
+	"repo": "mps233/La-pluma",
+	"summary": {
+		"en": "Arknights automation console that drives the maa CLI and ADB, with a live emulator preview.",
+		"zh-CN": "明日方舟自动化控制台，调用 maa CLI 与 ADB，可实时预览模拟器。",
+		"zh-TW": "明日方舟自動化主控台，呼叫 maa CLI 與 ADB，可即時預覽模擬器。",
+		"ja": "maa CLI と ADB を操作し、エミュレーターをライブ表示するアークナイツ自動化コンソール。",
+		"ko": "maa CLI와 ADB를 구동하고 에뮬레이터를 실시간으로 보여 주는 명일방주 자동화 콘솔."
+	},
+	"description": {
+		"en": "The desktop build of La Pluma, a self-hosted console for Arknights automation: MyGo wraps its React web frontend around the Go backend, while the headless server and Docker image are built separately. It drives the maa CLI and ADB to run a scheduled daily task flow, copilot plans and roguelike runs, with a live WebRTC preview of the emulator. The interface is in Chinese.",
+		"zh-CN": "自托管的明日方舟自动化控制台 La Pluma 的桌面版：MyGo 将其 React Web 前端与 Go 后端打包成桌面应用，无界面服务器与 Docker 镜像则另行构建。它调用 maa CLI 和 ADB，按计划运行每日任务流程，执行作业与肉鸽，并通过 WebRTC 实时预览模拟器。界面目前为中文。",
+		"zh-TW": "自架的明日方舟自動化主控台 La Pluma 的桌面版：MyGo 將其 React 網頁前端與 Go 後端包裝成桌面應用程式，無介面伺服器與 Docker 映像檔則另外建置。它呼叫 maa CLI 和 ADB，依排程執行每日任務流程、作業與肉鴿，並透過 WebRTC 即時預覽模擬器。介面目前為中文。",
+		"ja": "セルフホスト型のアークナイツ自動化コンソール La Pluma のデスクトップ版です。MyGo が React の Web フロントエンドと Go のバックエンドをデスクトップアプリにまとめ、ヘッドレスサーバーと Docker イメージは別にビルドされます。maa CLI と ADB を操作して日課のタスクフローをスケジュール実行し、作戦の自動指揮やローグライクを進め、WebRTC でエミュレーターをライブ表示します。画面は現在中国語のみです。",
+		"ko": "셀프 호스팅형 명일방주 자동화 콘솔 La Pluma의 데스크톱 버전입니다. MyGo가 React 웹 프런트엔드와 Go 백엔드를 데스크톱 앱으로 묶고, 헤드리스 서버와 Docker 이미지는 따로 빌드됩니다. maa CLI와 ADB로 일일 작업 흐름을 예약 실행하고 자동 지휘 작전과 로그라이크를 돌리며, WebRTC로 에뮬레이터를 실시간으로 보여 줍니다. 인터페이스는 현재 중국어입니다."
+	},
+	"icon": {
+		"file": "la-pluma.webp"
+	},
+	"screenshot": "la-pluma.webp",
+	"added": "2026-11-10T02:29:18Z"
+}
