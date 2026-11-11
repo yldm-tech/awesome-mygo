@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "axonhub",
+	"name": "AxonHub",
+	"author": "looplj",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://axonhub.reveric.app",
+	"repo": "looplj/axonhub",
+	"summary": {
+		"en": "Desktop build of AxonHub, an AI gateway that lets any AI SDK call models from many providers.",
+		"zh-CN": "AxonHub 的桌面版：AI 网关，用任意 AI SDK 调用各家模型。",
+		"zh-TW": "AxonHub 的桌面版：AI 閘道，用任意 AI SDK 呼叫各家模型。",
+		"ja": "AI ゲートウェイ AxonHub のデスクトップ版。任意の AI SDK で各社のモデルを呼べる。",
+		"ko": "AI 게이트웨이 AxonHub의 데스크톱 버전. 어떤 AI SDK로든 각 사의 모델을 호출합니다."
+	},
+	"description": {
+		"en": "The desktop build of AxonHub, an AI gateway that lets code written for the OpenAI or Anthropic SDK call Claude, GPT, Gemini, DeepSeek and other providers' models by changing only configuration. It traces every request, tracks cost per request and fails over between channels. The desktop app is built with MyGo and a web frontend; the server is built and deployed separately.",
+		"zh-CN": "AxonHub 的桌面版。AxonHub 是一个 AI 网关，为 OpenAI 或 Anthropic SDK 编写的代码只需改配置，就能调用 Claude、GPT、Gemini、DeepSeek 等各家模型，并提供完整的请求追踪、按请求的成本统计和渠道间自动故障转移。桌面版由 MyGo 以 Web 前端构建，服务端另行构建和部署。",
+		"zh-TW": "AxonHub 的桌面版。AxonHub 是一個 AI 閘道，為 OpenAI 或 Anthropic SDK 撰寫的程式只需改設定，就能呼叫 Claude、GPT、Gemini、DeepSeek 等各家模型，並提供完整的請求追蹤、逐筆請求的成本統計與通道間自動容錯移轉。桌面版由 MyGo 以 Web 前端建置，伺服器端另行建置與部署。",
+		"ja": "AI ゲートウェイ AxonHub のデスクトップ版。OpenAI や Anthropic の SDK で書いたコードから、設定を変えるだけで Claude、GPT、Gemini、DeepSeek など各社のモデルを呼び出せます。リクエストごとのトレースとコスト集計、チャネル間の自動フェイルオーバーも備えます。デスクトップ版は MyGo と Web フロントエンドで作られ、サーバー本体は別にビルド・デプロイされます。",
+		"ko": "AI 게이트웨이 AxonHub의 데스크톱 버전입니다. OpenAI나 Anthropic SDK로 작성한 코드에서 설정만 바꾸면 Claude, GPT, Gemini, DeepSeek 등 여러 공급자의 모델을 호출할 수 있고, 요청별 추적과 비용 집계, 채널 간 자동 장애 조치를 제공합니다. 데스크톱 버전은 MyGo와 웹 프런트엔드로 만들었고, 서버는 별도로 빌드하고 배포합니다."
+	},
+	"icon": {
+		"file": "axonhub.webp"
+	},
+	"screenshot": "axonhub.webp",
+	"added": "2026-11-11T02:28:27Z"
+}
