@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "chairlift",
+	"name": "ChairLift",
+	"author": "frostyard",
+	"kind": "native",
+	"platforms": [
+		"linux"
+	],
+	"group": "system",
+	"url": "https://github.com/frostyard/chairlift",
+	"repo": "frostyard/chairlift",
+	"summary": {
+		"en": "Snow Linux's command center: updates the system image, apps, packages and firmware in one window.",
+		"zh-CN": "Snow Linux 的控制中心：在一个窗口里更新系统镜像、应用、软件包和固件。",
+		"zh-TW": "Snow Linux 的控制中心：在一個視窗裡更新系統映像、應用程式、套件與韌體。",
+		"ja": "Snow Linux のコマンドセンター。システムイメージやアプリ、ファームウェアをまとめて更新。",
+		"ko": "Snow Linux의 커맨드 센터. 시스템 이미지, 앱, 펌웨어를 한 창에서 업데이트."
+	},
+	"description": {
+		"en": "A desktop app for Snow Linux, written in Go and drawn with MyGo's native UI on GTK 3 and OpenGL. In one window it updates the system image (bootc or native A/B), features, Flatpak apps, Homebrew packages and firmware, lists installed apps and runs cleanups. It shows each command it runs with its output and makes one change at a time.",
+		"zh-CN": "面向 Snow Linux 的桌面应用，用 Go 编写，由 MyGo 原生 UI 在 GTK 3 与 OpenGL 上绘制。它在一个窗口里更新系统镜像（bootc 或原生 A/B）、功能扩展、Flatpak 应用、Homebrew 软件包和固件，还能列出已安装的应用并执行清理。运行的每条命令都会连同输出一起显示，一次只做一项更改。",
+		"zh-TW": "為 Snow Linux 打造的桌面應用程式，以 Go 撰寫，由 MyGo 原生 UI 在 GTK 3 與 OpenGL 上繪製。它在一個視窗裡更新系統映像（bootc 或原生 A/B）、功能擴充、Flatpak 應用程式、Homebrew 套件與韌體，也能列出已安裝的應用程式並執行清理。執行的每道指令都會連同輸出一起顯示，一次只做一項變更。",
+		"ja": "Snow Linux 向けのデスクトップアプリで、Go で書かれ、MyGo のネイティブ UI で GTK 3 と OpenGL の上に描かれます。一つのウィンドウでシステムイメージ（bootc またはネイティブ A/B）、機能拡張、Flatpak アプリ、Homebrew パッケージ、ファームウェアを更新し、インストール済みアプリの一覧やクリーンアップも扱います。実行するコマンドは出力とともに表示され、変更は一度に一つずつ行います。",
+		"ko": "Snow Linux용 데스크톱 앱으로, Go로 작성하고 MyGo의 네이티브 UI로 GTK 3와 OpenGL 위에 그립니다. 한 창에서 시스템 이미지(bootc 또는 네이티브 A/B), 기능 확장, Flatpak 앱, Homebrew 패키지, 펌웨어를 업데이트하고, 설치된 앱 목록과 정리 작업도 다룹니다. 실행하는 명령은 출력과 함께 보여 주며 한 번에 하나씩만 변경합니다."
+	},
+	"icon": {
+		"file": "chairlift.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "chairlift.webp",
+	"added": "2026-11-11T02:28:27Z"
+}
