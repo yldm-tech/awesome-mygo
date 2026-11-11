@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "restify",
+	"name": "Restify",
+	"author": "lichunqiang",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/lichunqiang/restify",
+	"repo": "lichunqiang/restify",
+	"summary": {
+		"en": "A macOS menu bar app that enforces full-screen breaks from work and reminds you to drink water.",
+		"zh-CN": "macOS 菜单栏应用：工作到点强制全屏休息，并定时提醒喝水。",
+		"zh-TW": "macOS 選單列應用程式：工作到點強制全螢幕休息，並定時提醒喝水。",
+		"ja": "作業時間が来たら全画面で休憩させ、水分補給も促す macOS のメニューバーアプリ。",
+		"ko": "작업 시간이 끝나면 전체 화면 휴식을 강제하고 물 마시기를 알려 주는 macOS 메뉴 막대 앱."
+	},
+	"description": {
+		"en": "A macOS menu bar app drawn with MyGo's native UI and Lobe MyGo components, shipped as a single binary with no third-party runtime. When the work timer runs out, a full-screen overlay counts down your break. It also reminds you to drink water toward a daily goal, charts intake by day, week and month, and has global shortcuts and signed in-app updates from GitHub Releases.",
+		"zh-CN": "用 MyGo 原生 UI 与 Lobe MyGo 组件绘制的 macOS 菜单栏应用，单个二进制文件，无第三方运行时依赖。工作计时到期后以全屏遮罩倒计时强制休息；它还会定时提醒喝水并记录每日目标进度，按日、周、月绘制饮水图表，支持全局快捷键，并能从 GitHub Release 安装签名更新。",
+		"zh-TW": "以 MyGo 原生 UI 與 Lobe MyGo 元件繪製的 macOS 選單列應用程式，單一執行檔，不依賴第三方執行環境。工作計時到期後以全螢幕遮罩倒數，強制休息；它也會定時提醒喝水並記錄每日目標進度，按日、週、月繪製飲水圖表，支援全域快速鍵，並能從 GitHub Release 安裝簽章更新。",
+		"ja": "MyGo のネイティブ UI と Lobe MyGo のコンポーネントで描かれた macOS のメニューバーアプリで、単一バイナリでサードパーティのランタイムに依存しません。作業タイマーが切れると全画面のオーバーレイで休憩をカウントダウンします。一定間隔で水分補給を促して 1 日の目標を記録し、日・週・月ごとの飲水グラフ、グローバルショートカット、GitHub Release からの署名付きアプリ内アップデートも備えます。",
+		"ko": "MyGo의 네이티브 UI와 Lobe MyGo 컴포넌트로 그린 macOS 메뉴 막대 앱으로, 단일 바이너리이며 서드파티 런타임에 의존하지 않습니다. 작업 타이머가 끝나면 전체 화면 오버레이로 휴식 시간을 카운트다운합니다. 일정 간격으로 물 마시기를 알려 하루 목표를 기록하고, 일·주·월별 음수 차트, 전역 단축키, GitHub Release를 통한 서명된 앱 내 업데이트도 지원합니다."
+	},
+	"icon": {
+		"file": "restify.webp"
+	},
+	"screenshot": "restify.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-11T02:28:27Z"
+}
