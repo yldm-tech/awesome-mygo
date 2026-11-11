@@ -1,7 +1,7 @@
 {
 	"$schema": "../schema/app.schema.json",
 	"slug": "ciipapp",
-	"name": "ciipapp",
+	"name": "ciip",
 	"author": "gnl00",
 	"kind": "web",
 	"platforms": [
