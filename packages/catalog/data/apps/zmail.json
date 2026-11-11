@@ -1,0 +1,23 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "zmail",
+	"name": "Zmail",
+	"author": "monoedge-labs",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"category": "CommunicationApplication",
+	"group": "chat",
+	"url": "https://zmail.zausau.com",
+	"repo": "monoedge-labs/zmail",
+	"summary": {
+		"en": "A local mail client for macOS that gives AI agents read-only CLI access to your mail.",
+		"zh-CN": "给和 AI agent 一起工作的人用的本地 macOS 邮件客户端。"
+	},
+	"description": {
+		"en": "A local mail client for people who work with AI agents. Your mail is synced to your own Mac over IMAP, shown in a frosted-glass window, and offered to your agents as read-only zmail CLI commands with optional local PII redaction.",
+		"zh-CN": "给和 AI agent 一起工作的人用的本地邮件客户端。邮件通过 IMAP 同步到你自己的 Mac，在毛玻璃窗口里展示，并以只读的 zmail 命令行工具交给你的 agent，支持对敏感信息自动打码。"
+	},
+	"added": "2026-11-11T16:15:11Z"
+}
