@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "aemeath",
+	"name": "Aemeath",
+	"author": "foliageSea",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "devices",
+	"url": "https://github.com/foliageSea/Aemeath",
+	"repo": "foliageSea/Aemeath",
+	"summary": {
+		"en": "Drives an ESP32-S3 touch screen as a PC stats display and voice assistant from your desktop.",
+		"zh-CN": "把 ESP32-S3 触摸屏变成电脑性能监控屏和语音助手的桌面端。",
+		"zh-TW": "把 ESP32-S3 觸控螢幕變成電腦效能監控螢幕與語音助理的桌面端。",
+		"ja": "ESP32-S3 のタッチ画面を PC の性能モニターと音声アシスタントにするデスクトップアプリ。",
+		"ko": "ESP32-S3 터치 화면을 PC 성능 모니터이자 음성 비서로 쓰게 해 주는 데스크톱 앱."
+	},
+	"description": {
+		"en": "A macOS and Windows client for the Waveshare ESP32-S3-Touch-LCD-4B. It streams CPU, memory, disk, network, temperature and GPU readings to the screen over Wi-Fi, and runs a voice assistant through the device's microphone and speaker, woken offline or by holding F8. The tray app is drawn with MyGo's native UI; the device firmware is built separately with ESP-IDF.",
+		"zh-CN": "用于 Waveshare ESP32-S3-Touch-LCD-4B 的 macOS 与 Windows 客户端：通过 Wi-Fi 把 CPU、内存、磁盘、网络、温度和 GPU 数据推送到屏幕上，并借助设备的麦克风和扬声器运行语音助手，可离线唤醒或按住 F8 说话。常驻托盘的桌面端用 MyGo 原生 UI 绘制，设备固件则基于 ESP-IDF 另行构建。",
+		"zh-TW": "用於 Waveshare ESP32-S3-Touch-LCD-4B 的 macOS 與 Windows 用戶端：透過 Wi-Fi 把 CPU、記憶體、磁碟、網路、溫度和 GPU 數據推送到螢幕上，並借助裝置的麥克風與喇叭執行語音助理，可離線喚醒或按住 F8 說話。常駐系統匣的桌面端以 MyGo 原生 UI 繪製，裝置韌體則以 ESP-IDF 另行建置。",
+		"ja": "Waveshare ESP32-S3-Touch-LCD-4B 用の macOS・Windows クライアント。CPU、メモリ、ディスク、ネットワーク、温度、GPU の値を Wi-Fi で画面に送り、デバイスのマイクとスピーカーで音声アシスタントを動かします。呼び出しはオフラインのウェイクワードか F8 の長押しです。トレイ常駐のデスクトップアプリは MyGo のネイティブ UI で描かれ、デバイスのファームウェアは ESP-IDF で別に作られています。",
+		"ko": "Waveshare ESP32-S3-Touch-LCD-4B용 macOS·Windows 클라이언트입니다. CPU, 메모리, 디스크, 네트워크, 온도, GPU 수치를 Wi-Fi로 화면에 보내고, 기기의 마이크와 스피커로 음성 비서를 실행하며, 오프라인 웨이크 워드나 F8 길게 누르기로 부릅니다. 트레이 상주 데스크톱 앱은 MyGo의 네이티브 UI로 그렸고, 기기 펌웨어는 ESP-IDF로 따로 만듭니다."
+	},
+	"icon": {
+		"file": "aemeath.webp"
+	},
+	"screenshot": "aemeath.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-11T02:28:27Z"
+}
