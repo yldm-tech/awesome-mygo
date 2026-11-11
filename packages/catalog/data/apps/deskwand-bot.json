@@ -1,15 +1,15 @@
 {
 	"$schema": "../schema/app.schema.json",
-	"slug": "bot",
-	"name": "bot",
+	"slug": "deskwand-bot",
+	"name": "DeskWand Bot",
 	"author": "deskwand",
-	"kind": "native",
+	"kind": "web",
 	"platforms": [
 		"win",
 		"mac"
 	],
 	"group": "ai",
-	"url": "https://deskwand.com/zh/bot",
+	"url": "https://deskwand.com/bot",
 	"repo": "deskwand/bot",
 	"summary": {
 		"en": "A personal bot that runs in your own Cloudflare account and talks to you on Telegram or WeChat.",
@@ -26,8 +26,8 @@
 		"ko": "DeskWand Bot의 macOS·Windows용 데스크톱 클라이언트로, MyGo와 React 웹 프런트엔드로 만들었습니다. Cloudflare 계정으로 로그인하면 Node.js, Git, Wrangler 없이 봇을 배포하고 관리할 수 있습니다. 봇 자체는 따로 작성된 Cloudflare Worker로, 자기 임무와 기억을 갖고 깨어날 시간을 스스로 정하며 Telegram이나 WeChat으로 대화합니다."
 	},
 	"icon": {
-		"file": "bot.webp"
+		"file": "deskwand-bot.webp"
 	},
-	"screenshot": "bot.webp",
+	"screenshot": "deskwand-bot.webp",
 	"added": "2026-11-10T13:59:05Z"
 }
