@@ -5,18 +5,28 @@
 	"author": "gnl00",
 	"kind": "web",
 	"platforms": [
-		"win",
-		"linux",
 		"mac"
 	],
 	"group": "system",
 	"url": "https://gnl00.github.io/ciipapp/",
 	"repo": "gnl00/ciipapp",
 	"summary": {
-		"en": "ciip 是一款基于 Go 和 MyGo 开发的 macOS 截图工具，支持多种方式截图、截图标注、OCR 文字识别和贴图。"
+		"en": "A macOS screenshot tool that annotates, pins images on top and reads text offline.",
+		"zh-CN": "macOS 截图工具：可标注、置顶贴图，并离线识别文字。",
+		"zh-TW": "macOS 截圖工具：可標註、置頂貼圖，並離線辨識文字。",
+		"ja": "注釈、最前面へのピン留め、オフライン文字認識ができる macOS 用スクリーンショットツール。",
+		"ko": "주석, 화면 위 이미지 고정, 오프라인 텍스트 인식을 지원하는 macOS 스크린샷 도구."
 	},
 	"description": {
-		"en": "ciip 是一款基于 Go 和 MyGo 开发的 macOS 截图工具，支持多种方式截图、截图标注、OCR 文字识别和贴图。"
+		"en": "A screenshot and pinning tool for macOS, with a TypeScript editor as its MyGo web frontend over Go and AppKit. It captures a region, window, element or the full screen to the clipboard, annotates in place or in a full editor, and pins images above other windows. Text recognition runs offline with Apple Vision or a local Tesseract install.",
+		"zh-CN": "macOS 截图与贴图工具，以 TypeScript 编辑器作为 MyGo 的 Web 前端，底层为 Go 与 AppKit。支持区域、窗口、元素和全屏截图并自动复制到剪贴板，可就地标注或切换到完整编辑器，还能把图片置顶贴在屏幕上。文字识别使用 Apple Vision 或本机 Tesseract，离线完成。",
+		"zh-TW": "macOS 截圖與貼圖工具，以 TypeScript 編輯器作為 MyGo 的 Web 前端，底層為 Go 與 AppKit。支援區域、視窗、元素和全螢幕截圖並自動複製到剪貼簿，可就地標註或切換到完整編輯器，還能把圖片置頂貼在螢幕上。文字辨識使用 Apple Vision 或本機 Tesseract，離線完成。",
+		"ja": "macOS 向けのスクリーンショット・ピン留めツールで、MyGo の Web フロントエンドとして TypeScript 製エディターを載せ、その下を Go と AppKit が支えています。範囲・ウィンドウ・要素・全画面を撮ってそのままクリップボードへコピーし、その場で注釈を付けるか完全なエディターに切り替えられ、画像を最前面にピン留めできます。文字認識は Apple Vision かローカルの Tesseract でオフラインで行います。",
+		"ko": "macOS용 스크린샷·고정 도구로, MyGo의 웹 프런트엔드로 TypeScript 편집기를 쓰고 그 아래는 Go와 AppKit으로 만들었습니다. 영역, 창, 요소, 전체 화면을 캡처해 바로 클립보드에 복사하고, 그 자리에서 주석을 달거나 전체 편집기로 전환할 수 있으며, 이미지를 다른 창 위에 고정해 둘 수 있습니다. 텍스트 인식은 Apple Vision이나 로컬 Tesseract로 오프라인에서 처리합니다."
 	},
+	"icon": {
+		"file": "ciipapp.webp"
+	},
+	"screenshot": "ciipapp.webp",
 	"added": "2026-11-11T02:12:38Z"
 }
