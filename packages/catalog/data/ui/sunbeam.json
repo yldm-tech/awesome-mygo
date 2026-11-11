@@ -1,0 +1,19 @@
+{
+	"$schema": "../schema/ui.schema.json",
+	"slug": "sunbeam",
+	"name": "Sunbeam",
+	"author": "AstraFoundry",
+	"tag": "theme",
+	"surface": "both",
+	"summary": {
+		"en": "AstraFoundry's design system, as Go components for MyGo's native UI and React components with Tailwind v4 tokens for the web, built from one set of tokens, with flat and raised layers in light and dark.",
+		"zh-CN": "AstraFoundry 的设计系统，为 MyGo 原生 UI 提供 Go 组件，为网页提供 React 组件和 Tailwind v4 令牌，两者共用同一份设计令牌，分平面与浮起两种材质，支持浅色和深色。",
+		"zh-TW": "AstraFoundry 的設計系統，為 MyGo 原生 UI 提供 Go 元件，為網頁提供 React 元件和 Tailwind v4 令牌，兩者共用同一份設計令牌，分平面與浮起兩種材質，支援淺色和深色。",
+		"ja": "AstraFoundry のデザインシステム。MyGo のネイティブ UI 向けの Go コンポーネントと、Web 向けの React コンポーネントと Tailwind v4 トークンを、同じデザイントークンから提供します。フラットと浮き上がりの 2 つの素材、ライトとダークに対応。",
+		"ko": "AstraFoundry의 디자인 시스템으로, MyGo 네이티브 UI용 Go 컴포넌트와 웹용 React 컴포넌트 및 Tailwind v4 토큰을 같은 디자인 토큰에서 제공합니다. 평면과 돋움 두 가지 재질, 라이트와 다크 모드를 지원합니다."
+	},
+	"repo": "AstraFoundry/design",
+	"url": "https://github.com/AstraFoundry/design",
+	"screenshot": "sunbeam.webp",
+	"added": "2026-11-11T02:28:27Z"
+}
