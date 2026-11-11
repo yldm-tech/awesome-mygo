@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ciipapp",
+	"name": "ciipapp",
+	"author": "gnl00",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://gnl00.github.io/ciipapp/",
+	"repo": "gnl00/ciipapp",
+	"summary": {
+		"en": "ciip 是一款基于 Go 和 MyGo 开发的 macOS 截图工具，支持多种方式截图、截图标注、OCR 文字识别和贴图。"
+	},
+	"description": {
+		"en": "ciip 是一款基于 Go 和 MyGo 开发的 macOS 截图工具，支持多种方式截图、截图标注、OCR 文字识别和贴图。"
+	},
+	"added": "2026-11-11T02:12:38Z"
+}
