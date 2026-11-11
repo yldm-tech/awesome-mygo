@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "nootify",
+	"name": "Nootify",
+	"author": "idy",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/idy/nootify",
+	"repo": "idy/nootify",
+	"summary": {
+		"en": "A tray app that relays Feishu replies to Claude Code, Codex and OpenCode sessions.",
+		"zh-CN": "托盘应用：飞书回复直达 Claude Code、Codex、OpenCode 会话。",
+		"zh-TW": "常駐程式：飛書回覆直達 Claude Code、Codex、OpenCode 對話。",
+		"ja": "Feishu の返信を Claude Code・Codex・OpenCode の会話へ届けるトレイアプリ。",
+		"ko": "Feishu 답장을 Claude Code·Codex·OpenCode 세션에 보내는 트레이 앱."
+	},
+	"description": {
+		"en": "A Windows and macOS tray app for following coding agents from Feishu: each Claude Code, Codex or OpenCode session gets its own destination, such as a Feishu group, and replies there go back to that session on your computer. It also tracks your GitHub pull requests with review, CI and merge-conflict status. Its web UI runs in MyGo's desktop shell on the system WebView.",
+		"zh-CN": "一款 Windows 与 macOS 托盘应用，让你在飞书里跟进编程智能体：每个 Claude Code、Codex 或 OpenCode 会话都有自己的通知去处，比如一个飞书群，在那里回复即可送回电脑上对应的会话。它还会列出你的 GitHub 拉取请求及其评审、CI 与合并冲突状态。界面是运行在 MyGo 桌面外壳与系统 WebView 中的 Web 前端。",
+		"zh-TW": "一款 Windows 與 macOS 系統匣應用程式，讓你在飛書上追蹤程式設計代理：每個 Claude Code、Codex 或 OpenCode 工作階段都有自己的通知去處，例如一個飛書群組，在那裡回覆即可送回電腦上對應的工作階段。它也會列出你的 GitHub 拉取請求及其審查、CI 與合併衝突狀態。介面是在 MyGo 桌面外殼與系統 WebView 中執行的 Web 前端。",
+		"ja": "Feishu からコーディングエージェントを見守る、Windows・macOS 向けのトレイアプリ。Claude Code・Codex・OpenCode のセッションごとに Feishu グループなどの通知先を割り当て、そこで返信するとパソコン上の対応する会話に届きます。GitHub のプルリクエストも、レビュー、CI、マージ競合の状態とともに表示します。UI は MyGo のデスクトップシェルとシステムの WebView で動く Web フロントエンドです。",
+		"ko": "Feishu에서 코딩 에이전트를 따라가는 Windows·macOS 트레이 앱입니다. Claude Code, Codex, OpenCode 세션마다 Feishu 그룹 같은 알림 대상을 두고, 거기서 답장하면 컴퓨터의 해당 대화로 돌아갑니다. GitHub 풀 리퀘스트도 리뷰, CI, 병합 충돌 상태와 함께 보여 줍니다. UI는 MyGo 데스크톱 셸과 시스템 WebView에서 동작하는 웹 프런트엔드입니다."
+	},
+	"icon": {
+		"file": "nootify.webp"
+	},
+	"screenshot": "nootify.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-11T02:28:27Z"
+}
