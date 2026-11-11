@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "agent-workshop",
+	"name": "Agent 工坊",
+	"author": "hubooooooo",
+	"kind": "native",
+	"platforms": [
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/hubooooooo/agent-workshop",
+	"repo": "hubooooooo/agent-workshop",
+	"summary": {
+		"en": "Turns an idea or PRD into an agent architecture plan, then checks the skeleton your AI writes.",
+		"zh-CN": "把点子或 PRD 推导成 Agent 架构方案，并验收你的 AI 写出的骨架。",
+		"zh-TW": "把點子或 PRD 推導成 Agent 架構方案，並驗收你的 AI 寫出的骨架。",
+		"ja": "アイデアや PRD から Agent の設計案を導き、AI が書いた骨組みを検収。",
+		"ko": "아이디어나 PRD로 Agent 설계안을 만들고 AI가 쓴 골격을 검수합니다."
+	},
+	"description": {
+		"en": "The desktop client, drawn with MyGo's native UI, for a local Python engine that turns an idea or PRD into an agent architecture plan with open questions and component choices. Your AI coding tool, such as Codex or Claude Code, writes the code skeleton, and the engine checks it against the PRD. The engine, made separately in Python, needs a model API key such as DeepSeek's.",
+		"zh-CN": "一个本地 Python 引擎的桌面客户端，用 MyGo 原生 UI 绘制。引擎把一句话点子或 PRD 推导成 Agent 架构方案，列出待确认问题和组件选型理由；代码骨架交给 Codex、Claude Code 等你自己的 AI 编程工具去写，再由引擎对照 PRD 验收。引擎本身另用 Python 编写，需要 DeepSeek 等模型的 API Key。",
+		"zh-TW": "一個本機 Python 引擎的桌面用戶端，以 MyGo 原生 UI 繪製。引擎把一句話點子或 PRD 推導成 Agent 架構方案，列出待確認問題與元件選型理由；程式碼骨架交給 Codex、Claude Code 等你自己的 AI 程式設計工具撰寫，再由引擎對照 PRD 驗收。引擎本身另以 Python 撰寫，需要 DeepSeek 等模型的 API Key。",
+		"ja": "ローカルで動く Python エンジンのデスクトップクライアントで、MyGo のネイティブ UI で描かれています。エンジンはひとことのアイデアや PRD から Agent のアーキテクチャ案を導き、未確定の論点とコンポーネント選定の理由を示します。コードの骨組みは Codex や Claude Code など手元の AI コーディングツールが書き、エンジンが PRD と照らして検収します。エンジン本体は別途 Python で作られ、DeepSeek などのモデルの API キーが必要です。",
+		"ko": "로컬 Python 엔진의 데스크톱 클라이언트로, MyGo의 네이티브 UI로 그렸습니다. 엔진은 한 줄 아이디어나 PRD로 Agent 아키텍처 계획을 세우고 확인할 질문과 컴포넌트 선택 이유를 정리합니다. 코드 골격은 Codex, Claude Code 같은 내 AI 코딩 도구가 쓰고, 엔진이 PRD와 대조해 검수합니다. 엔진 자체는 Python으로 따로 만들어졌고 DeepSeek 등 모델의 API 키가 필요합니다."
+	},
+	"icon": {
+		"file": "agent-workshop.webp"
+	},
+	"screenshot": "agent-workshop.webp",
+	"added": "2026-11-11T02:28:27Z"
+}
