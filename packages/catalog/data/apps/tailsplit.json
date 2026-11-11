@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "tailsplit",
+	"name": "TailSplit",
+	"author": "idy",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "network",
+	"url": "https://github.com/idy/tailsplit",
+	"repo": "idy/tailsplit",
+	"summary": {
+		"en": "Routes chosen traffic through Tailscale exit nodes and keeps the rest direct, with sing-box rules.",
+		"zh-CN": "按 sing-box 规则分流：指定流量走 Tailscale 出口节点，其余直连。",
+		"zh-TW": "依 sing-box 規則分流：指定流量走 Tailscale 出口節點，其餘直連。",
+		"ja": "sing-box のルールで、選んだ通信だけを Tailscale の出口ノード経由にし、残りは直接つなぐ。",
+		"ko": "sing-box 규칙으로 지정한 트래픽만 Tailscale 출구 노드로 보내고 나머지는 직접 연결."
+	},
+	"description": {
+		"en": "A Tailscale split-tunneling client: sing-box rules by domain and IP decide which traffic goes through an exit node and which stays direct, with exits in several Tailnets at once. Global mode blocks traffic if its exit goes offline. MyGo builds the macOS and Windows desktop app, a window and tray around a web configuration page; on Linux, TailSplit ships only as a CLI.",
+		"zh-CN": "Tailscale 分流客户端：按域名和 IP 用 sing-box 规则决定哪些流量走出口节点、哪些直连，还能同时使用多个 Tailnet 的出口。全局模式下出口一旦离线即阻断流量。MyGo 构建的是 macOS 与 Windows 桌面版，以窗口和托盘承载网页配置界面；Linux 上只提供 CLI。",
+		"zh-TW": "Tailscale 分流用戶端：依網域與 IP 以 sing-box 規則決定哪些流量走出口節點、哪些直連，還能同時使用多個 Tailnet 的出口。全域模式下出口一旦離線即阻斷流量。MyGo 建置的是 macOS 與 Windows 桌面版，以視窗和系統匣承載網頁設定介面；Linux 上只提供 CLI。",
+		"ja": "Tailscale 向けのスプリットトンネルクライアント。sing-box のルールでドメインと IP ごとに出口ノード経由か直接接続かを決め、複数の Tailnet の出口を同時に使えます。グローバルモードでは、出口がオフラインになると通信を遮断します。MyGo で作られているのは macOS・Windows のデスクトップ版で、ウィンドウとトレイから Web の設定画面を開きます。Linux 向けは CLI のみです。",
+		"ko": "Tailscale용 분할 터널링 클라이언트입니다. sing-box 규칙으로 도메인과 IP별로 출구 노드를 거칠 트래픽과 직접 연결할 트래픽을 나누고, 여러 Tailnet의 출구를 동시에 쓸 수 있습니다. 글로벌 모드에서는 출구가 오프라인이 되면 트래픽을 차단합니다. MyGo로 만든 것은 macOS·Windows 데스크톱 앱으로, 창과 트레이에서 웹 설정 화면을 엽니다. Linux에는 CLI만 제공합니다."
+	},
+	"icon": {
+		"file": "tailsplit.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "tailsplit.webp",
+	"added": "2026-11-11T02:28:27Z"
+}
