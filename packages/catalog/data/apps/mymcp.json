@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mymcp",
+	"name": "MyMCP",
+	"author": "tk103331",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/tk103331/mymcp",
+	"repo": "tk103331/mymcp",
+	"summary": {
+		"en": "A local MCP gateway that gives every MCP client one endpoint, managed from a menu bar app.",
+		"zh-CN": "本地 MCP 网关，所有 MCP 客户端共用一个端点，在菜单栏应用中管理。",
+		"zh-TW": "本機 MCP 閘道，所有 MCP 用戶端共用一個端點，在選單列應用程式中管理。",
+		"ja": "メニューバーから管理する、全 MCP クライアント共通のローカル MCP ゲートウェイ。",
+		"ko": "모든 MCP 클라이언트가 한 엔드포인트를 쓰는 로컬 MCP 게이트웨이. 메뉴 막대 앱으로 관리."
+	},
+	"description": {
+		"en": "A local gateway that serves every MCP client from one endpoint per profile, combining stdio, HTTP and SSE servers, with encrypted secrets, OAuth sign-in and usage records. The menu bar app, drawn with MyGo's native UI, manages servers, profiles and secrets and syncs the gateway into clients such as Cursor and Claude Desktop. The gateway daemon and CLI are separate Go programs.",
+		"zh-CN": "本地 MCP 网关：每个配置档对应一个端点，供所有 MCP 客户端共用，聚合 stdio、HTTP 与 SSE 服务器，支持加密密钥、OAuth 登录和用量记录。菜单栏应用由 MyGo 原生 UI 绘制，用来管理服务器、配置档和密钥，并把网关写入 Cursor、Claude Desktop 等客户端的配置。网关守护进程和 CLI 是另行构建的 Go 程序。",
+		"zh-TW": "本機 MCP 閘道：每個設定檔對應一個端點，供所有 MCP 用戶端共用，彙整 stdio、HTTP 與 SSE 伺服器，支援加密密鑰、OAuth 登入與用量紀錄。選單列應用程式由 MyGo 原生 UI 繪製，用來管理伺服器、設定檔與密鑰，並把閘道寫入 Cursor、Claude Desktop 等用戶端的設定。閘道常駐程式與 CLI 是另外建置的 Go 程式。",
+		"ja": "ローカルで動く MCP ゲートウェイ。プロファイルごとに一つのエンドポイントをすべての MCP クライアントで共有し、stdio・HTTP・SSE サーバーをまとめ、暗号化されたシークレット、OAuth ログイン、利用記録を扱います。メニューバーアプリは MyGo のネイティブ UI で描かれ、サーバー、プロファイル、シークレットを管理し、Cursor や Claude Desktop などのクライアント設定にゲートウェイを書き込みます。ゲートウェイのデーモンと CLI は別の Go プログラムです。",
+		"ko": "로컬 MCP 게이트웨이로, 프로필마다 하나의 엔드포인트를 모든 MCP 클라이언트가 함께 쓰며 stdio, HTTP, SSE 서버를 묶고 암호화된 시크릿, OAuth 로그인, 사용 기록을 지원합니다. 메뉴 막대 앱은 MyGo의 네이티브 UI로 그렸으며 서버, 프로필, 시크릿을 관리하고 Cursor, Claude Desktop 같은 클라이언트 설정에 게이트웨이를 기록합니다. 게이트웨이 데몬과 CLI는 별도의 Go 프로그램입니다."
+	},
+	"icon": {
+		"file": "mymcp.webp"
+	},
+	"screenshot": "mymcp.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-12T02:29:58Z"
+}
