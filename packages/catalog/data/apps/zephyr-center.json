@@ -1,0 +1,21 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "zephyr-center",
+	"name": "zephyr-center",
+	"author": "Ne0W0r1d",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/Ne0W0r1d/zephyr-center",
+	"summary": {
+		"en": "一个跨平台的华硕游戏本控制中心，适用于 Windows 的 Ghelper 后端与 Linux 下的 asusd 后端，使用 MPLv2 与 GPLv3 双协议发行"
+	},
+	"description": {
+		"en": "一个跨平台的华硕游戏本控制中心，适用于 Windows 的 Ghelper 后端与 Linux 下的 asusd 后端，使用 MPLv2 与 GPLv3 双协议发行"
+	},
+	"added": "2026-11-12T04:55:02Z"
+}
