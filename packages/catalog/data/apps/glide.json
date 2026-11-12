@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "glide",
+	"name": "Glide",
+	"author": "anghunk",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/anghunk/glide",
+	"repo": "anghunk/glide",
+	"summary": {
+		"en": "A lightweight native desktop word translation tool that supports macOS and Windows."
+	},
+	"description": {
+		"en": "A lightweight native desktop word translation tool that supports macOS and Windows."
+	},
+	"added": "2026-11-12T08:07:41Z"
+}
