@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/ui.schema.json",
+	"slug": "shadcn-ui-for-native-go",
+	"name": "shadcn/ui for Native Go",
+	"author": "Pylogmon",
+	"tag": "theme",
+	"surface": "native",
+	"summary": {
+		"en": "A port of shadcn/ui's components and theming to MyGo's native UI, with forms, menus, dialogs, tables, charts and chat components, light and dark modes, and a gallery app. Still a work in progress.",
+		"zh-CN": "将 shadcn/ui 的组件和主题移植到 MyGo 原生 UI 的 Go 组件库，含表单、菜单、对话框、表格、图表和会话组件，支持浅色和深色，附 Gallery 演示应用，仍在开发中。",
+		"zh-TW": "將 shadcn/ui 的元件和主題移植到 MyGo 原生 UI 的 Go 元件庫，含表單、選單、對話框、表格、圖表和對話元件，支援淺色和深色，附 Gallery 示範應用程式，仍在開發中。",
+		"ja": "shadcn/ui のコンポーネントとテーマを MyGo のネイティブ UI に移植した Go コンポーネントライブラリ。フォーム、メニュー、ダイアログ、テーブル、チャート、チャット向けのコンポーネントを備え、ライトとダークに対応し、Gallery アプリも付属します。開発途中です。",
+		"ko": "shadcn/ui의 컴포넌트와 테마를 MyGo 네이티브 UI로 옮긴 Go 컴포넌트 라이브러리로, 폼, 메뉴, 대화상자, 표, 차트, 채팅 컴포넌트와 라이트·다크 모드, Gallery 앱을 제공합니다. 아직 개발 중입니다."
+	},
+	"repo": "Pylogmon/shadcn-ui-mygo",
+	"url": "https://github.com/Pylogmon/shadcn-ui-mygo",
+	"screenshot": "shadcn-ui-for-native-go.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-12T02:29:58Z"
+}
