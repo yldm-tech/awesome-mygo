@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mypack",
+	"name": "mypack",
+	"author": "sinhong2011",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/sinhong2011/mypack",
+	"repo": "sinhong2011/mypack",
+	"summary": {
+		"en": "Turn websites into standalone desktop apps. Build, install, update, and manage your web apps — all locally."
+	},
+	"description": {
+		"en": "Turn websites into standalone desktop apps. Build, install, update, and manage your web apps — all locally."
+	},
+	"added": "2026-11-12T10:11:59Z"
+}
