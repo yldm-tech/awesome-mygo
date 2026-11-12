@@ -1,21 +1,32 @@
 {
 	"$schema": "../schema/app.schema.json",
 	"slug": "flintrade",
-	"name": "flintrade",
+	"name": "Flintrade",
 	"author": "UncertaintyDeterminesYou4ndMe",
 	"kind": "native",
 	"platforms": [
-		"win",
-		"linux",
 		"mac"
 	],
+	"group": "ai",
 	"url": "https://github.com/UncertaintyDeterminesYou4ndMe/flintrade",
 	"repo": "UncertaintyDeterminesYou4ndMe/flintrade",
 	"summary": {
-		"en": "An autonomous paper-trading agent that dreams, remembers, and reviews its own trades."
+		"en": "A macOS menu bar client for flintrade, an LLM agent that paper-trades US stocks.",
+		"zh-CN": "macOS 菜单栏客户端，查看以大模型模拟交易美股的 flintrade 智能体。",
+		"zh-TW": "macOS 選單列用戶端，查看以大型語言模型模擬交易美股的 flintrade。",
+		"ja": "LLM で米国株を模擬売買する flintrade の macOS メニューバーアプリ。",
+		"ko": "LLM으로 미국 주식을 모의 투자하는 flintrade의 macOS 메뉴 막대 앱."
 	},
 	"description": {
-		"en": "An autonomous paper-trading agent that dreams, remembers, and reviews its own trades."
+		"en": "A macOS menu bar app and window drawn with MyGo's native UI, the desktop client for flintrade, a Go daemon where LLMs propose paper trades in US stocks and plain code gates them by risk. It shows today's P&L, positions, fills, why intents did not fill, loop health and the agent's lessons, and edits the strategy config, but never places orders. The daemon and CLI are separate Go binaries.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 菜单栏应用与窗口，是 flintrade 的桌面客户端。flintrade 是一个 Go 守护进程，由大模型提出美股模拟交易，再由普通代码按风控规则把关。应用显示当日盈亏、持仓、成交、未成交的交易意图及原因、各循环的运行状况和智能体总结的经验，还能编辑策略配置，但从不下单。守护进程与命令行工具是另外的 Go 程序。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 macOS 選單列應用程式與視窗，是 flintrade 的桌面用戶端。flintrade 是一個 Go 常駐程式，由大型語言模型提出美股模擬交易，再由一般程式碼依風控規則把關。應用程式顯示當日損益、持倉、成交、未成交的交易意圖及原因、各迴圈的運作狀況和代理程式歸納的經驗，也能編輯策略設定，但從不下單。常駐程式與命令列工具是另外的 Go 程式。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS のメニューバーアプリとウィンドウで、flintrade のデスクトップクライアントです。flintrade は、LLM が米国株の模擬売買を提案し、通常のコードがリスク基準で判定する Go のデーモンです。当日の損益、保有ポジション、約定、約定しなかった注文意図とその理由、各ループの状態、エージェントが得た教訓を表示し、戦略の設定も編集できますが、発注は一切しません。デーモンと CLI は別の Go バイナリです。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS 메뉴 막대 앱이자 창으로, flintrade의 데스크톱 클라이언트입니다. flintrade는 LLM이 미국 주식 모의 매매를 제안하고 일반 코드가 위험 기준으로 걸러 내는 Go 데몬입니다. 오늘의 손익, 보유 포지션, 체결 내역, 체결되지 않은 주문 의도와 그 이유, 각 루프의 상태, 에이전트가 얻은 교훈을 보여 주고 전략 설정도 편집하지만 주문은 절대 내지 않습니다. 데몬과 CLI는 별도의 Go 바이너리입니다."
 	},
+	"icon": {
+		"file": "flintrade.webp"
+	},
+	"screenshot": "flintrade.webp",
 	"added": "2026-11-11T07:10:38Z"
 }
