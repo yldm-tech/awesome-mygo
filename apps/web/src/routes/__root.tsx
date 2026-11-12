@@ -57,10 +57,10 @@ export const Route = createRootRoute({
 			{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon-32.png' },
 			{ rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
 			{ rel: 'manifest', href: '/site.webmanifest' },
-			// Each look loads only its own stylesheet. The original stylesheet is preloaded and applied by the inline loader below so it does not block first paint.
+			// Each look loads only its own stylesheet, as an ordinary render-blocking link: the page is never painted without it. The original look's stylesheet used to be applied by an inline script so it would not block the first paint, but with no critical CSS inlined that painted the bare HTML for as long as the stylesheet took to arrive (about half a second on a first visit). It comes from the site's own origin and is cached. The Google Fonts stylesheet stays preloaded and applied by the inline loader below: it is a third-party origin, slow from some networks, and a blocking link would hold the page blank until it answered.
 			...(retro
 				? [{ rel: 'stylesheet', href: retroStyles }]
-				: [{ rel: 'preload', as: 'style', href: styles }, { rel: 'preload', as: 'style', href: fontsHref(lang) }]),
+				: [{ rel: 'stylesheet', href: styles }, { rel: 'preload', as: 'style', href: fontsHref(lang) }]),
 		],
 		};
 	},
@@ -87,10 +87,7 @@ function RootComponent() {
 	);
 }
 
-// Applies a preloaded stylesheet from an inline script in <head>. A stylesheet inserted by script does not block the first paint; the preload in the route head starts the download as early as a normal link.
-const styleLoader = (href: string) => `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href=${JSON.stringify(href)};l.media='print';l.onload=function(){l.media='all'};document.head.appendChild(l)})()`;
-
-// Applies the Google Fonts stylesheet from an inline script in <head>. The text it styles uses display=swap, so the page paints in fallback fonts and swaps them in.
+// Applies the preloaded Google Fonts stylesheet from an inline script in <head>. A stylesheet inserted by script does not block the first paint; the preload in the route head starts the download as early as a normal link. The text it styles uses display=swap, so the page paints in fallback fonts and swaps them in.
 const fontLoader = (href: string) => `(function(){var l=document.createElement('link');l.rel='stylesheet';l.href=${JSON.stringify(href)};l.setAttribute('data-fonts','');document.head.appendChild(l)})()`;
 
 // Keeps the loader's stylesheet on the page's language after a client-side language switch, which changes the CJK family.
@@ -124,14 +121,12 @@ function RootDocument({ theme, children }: { theme: Theme; children: ReactNode }
 				{/* A bare URL is Simplified Chinese. A first visit with a saved choice or another browser language goes to its ?lang= page before anything renders, so the server serves that language and React never switches it mid-hydration. */}
 				<script dangerouslySetInnerHTML={{ __html: LANG_REDIRECT }} />
 				<HeadContent />
-				{theme !== 'retro' && <script dangerouslySetInnerHTML={{ __html: styleLoader(styles) }} />}
 				{fonts && <script dangerouslySetInnerHTML={{ __html: fontLoader(fonts) }} />}
 				{ogLocaleAlternates(lang).map((locale) => (
 					<meta key={locale} property='og:locale:alternate' content={locale} />
 				))}
 				<noscript>
 					<style>{'.rv{opacity:1;transform:none}'}</style>
-					{theme !== 'retro' && <link rel='stylesheet' href={styles} />}
 					{fonts && <link rel='stylesheet' href={fonts} />}
 				</noscript>
 			</head>
