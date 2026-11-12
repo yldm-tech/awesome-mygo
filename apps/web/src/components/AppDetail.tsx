@@ -44,6 +44,21 @@ export function dayIn(day: string, lang: LangCode): string {
 // Keep URLs breakable when a narrow column needs it, but let the browser use normal punctuation opportunities first.
 const urlDd = 'font-mono text-[13px] wrap-break-word';
 
+// A URL as text, allowed to break after each slash, so that github.com/villatothesea/DumpingGround breaks between its parts before it breaks inside a word.
+function UrlText({ text }: { text: string }) {
+	const parts = text.split('/');
+	return parts.map((part, i) => (
+		<Fragment key={i}>
+			{part}
+			{i < parts.length - 1 && (
+				<>
+					/<wbr />
+				</>
+			)}
+		</Fragment>
+	));
+}
+
 export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string }) {
 	const t = useT();
 	const lang = useLang();
@@ -52,8 +67,9 @@ export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string
 	const profile = authorProfile(app.author);
 	const group = appGroup(app);
 	const score = entryScore(likeKey.app(app));
+	// The value column may shrink below its longest word (minmax(0,1fr)), so a homepage URL without a hyphen, such as github.com/villatothesea/DumpingGround, wraps instead of squeezing the labels into one character a line; labels never wrap.
 	return (
-		<dl className='m-0 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 rounded-[14px] border border-line-2 bg-panel px-5 py-[18px] text-[14px] max-sm:px-4 [&_a]:border-b [&_a]:border-line-3 [&_a]:text-fg [&_a]:no-underline [&_a:hover]:border-current [&_a:hover]:text-cyan [&>dd]:m-0 [&>dt]:text-fg-3'>
+		<dl className='m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-5 gap-y-3 rounded-[14px] border border-line-2 bg-panel px-5 py-[18px] text-[14px] max-sm:px-4 [&_a]:border-b [&_a]:border-line-3 [&_a]:text-fg [&_a]:no-underline [&_a:hover]:border-current [&_a:hover]:text-cyan [&>dd]:m-0 [&>dt]:whitespace-nowrap [&>dt]:text-fg-3'>
 			<dt>{t.f_author}</dt>
 			<dd>
 				{profile ? (
@@ -77,7 +93,7 @@ export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string
 			<dt>{t.f_site}</dt>
 			<dd className={urlDd}>
 				<a href={app.url} target='_blank' rel='noopener'>
-					{view.host}
+					<UrlText text={view.host} />
 				</a>
 			</dd>
 			{src && (
@@ -85,7 +101,7 @@ export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string
 					<dt>{t.f_src}</dt>
 					<dd className={urlDd}>
 						<a href={src} target='_blank' rel='noopener'>
-							{hostOf(src)}
+							<UrlText text={hostOf(src)} />
 						</a>
 					</dd>
 				</>
