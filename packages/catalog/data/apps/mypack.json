@@ -1,7 +1,7 @@
 {
 	"$schema": "../schema/app.schema.json",
 	"slug": "mypack",
-	"name": "mypack",
+	"name": "Mypack",
 	"author": "sinhong2011",
 	"kind": "native",
 	"platforms": [
@@ -13,10 +13,22 @@
 	"url": "https://github.com/sinhong2011/mypack",
 	"repo": "sinhong2011/mypack",
 	"summary": {
-		"en": "Turn websites into standalone desktop apps. Build, install, update, and manage your web apps — all locally."
+		"en": "Turns a website or local HTML project into a standalone desktop app and keeps it updated.",
+		"zh-CN": "把网站或本地 HTML 项目变成独立的桌面应用，并负责更新和管理。",
+		"zh-TW": "把網站或本機 HTML 專案變成獨立的桌面應用程式，並負責更新與管理。",
+		"ja": "Web サイトやローカルの HTML プロジェクトを単体のデスクトップアプリにし、更新や管理も行う。",
+		"ko": "웹사이트나 로컬 HTML 프로젝트를 독립된 데스크톱 앱으로 만들고 업데이트까지 관리합니다."
 	},
 	"description": {
-		"en": "Turn websites into standalone desktop apps. Build, install, update, and manage your web apps — all locally."
+		"en": "Mypack turns a website or local HTML project into a standalone desktop app with its own icon and sign-in, using the system WebView. It writes the settings into a small prebuilt runtime, so a build takes seconds, and its Library updates, repairs and uninstalls the apps. The builder is drawn with MyGo's native UI. macOS is its main platform, and Linux and Windows are still in testing.",
+		"zh-CN": "Mypack 把网站或本地 HTML 项目变成独立的桌面应用，每个应用都有自己的图标和登录状态，使用系统 WebView 运行。它不做编译，而是把设置写入一个预先构建的小型运行时，几秒就能完成构建；应用库可以更新、修复和卸载这些应用。构建器本身由 MyGo 原生 UI 绘制。macOS 是主要平台，Linux 与 Windows 仍在测试中。",
+		"zh-TW": "Mypack 把網站或本機 HTML 專案變成獨立的桌面應用程式，每個應用程式都有自己的圖示和登入狀態，使用系統 WebView 執行。它不做編譯，而是把設定寫入一個預先建置的小型執行環境，幾秒就能完成建置；應用程式庫可以更新、修復和解除安裝這些應用程式。建置器本身由 MyGo 原生 UI 繪製。macOS 是主要平台，Linux 與 Windows 仍在測試中。",
+		"ja": "Mypack は Web サイトやローカルの HTML プロジェクトを、独自のアイコンとログイン状態を持つ単体のデスクトップアプリにします。アプリはシステムの WebView で動きます。コンパイルはせず、ビルド済みの小さなランタイムに設定を書き込むので、ビルドは数秒で終わります。ライブラリからはアプリの更新、修復、アンインストールができます。ビルダー自体は MyGo のネイティブ UI で描かれています。主なプラットフォームは macOS で、Linux と Windows はまだテスト段階です。",
+		"ko": "Mypack은 웹사이트나 로컬 HTML 프로젝트를 고유한 아이콘과 로그인 상태를 가진 독립된 데스크톱 앱으로 만들며, 앱은 시스템 WebView로 실행됩니다. 컴파일 없이 미리 빌드된 작은 런타임에 설정을 써 넣어 몇 초 만에 빌드하고, 라이브러리에서 앱을 업데이트, 복구, 제거할 수 있습니다. 빌더는 MyGo의 네이티브 UI로 그렸습니다. 주 플랫폼은 macOS이고 Linux와 Windows는 아직 테스트 중입니다."
 	},
+	"icon": {
+		"file": "mypack.webp"
+	},
+	"screenshot": "mypack.webp",
 	"added": "2026-11-12T10:11:59Z"
 }
