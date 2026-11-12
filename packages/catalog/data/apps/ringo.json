@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ringo",
+	"name": "Ringo",
+	"author": "LYJW131",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/LYJW131/ringo",
+	"repo": "LYJW131/ringo",
+	"summary": {
+		"en": "An unofficial native Apple Music player with your library, search and word-synced lyrics.",
+		"zh-CN": "非官方的原生 Apple Music 客户端，含资料库、搜索与逐字歌词。",
+		"zh-TW": "非官方的原生 Apple Music 用戶端，含資料庫、搜尋與逐字歌詞。",
+		"ja": "非公式のネイティブ Apple Music クライアント。ライブラリ、検索、一語ずつ追う歌詞に対応。",
+		"ko": "비공식 네이티브 Apple Music 클라이언트. 보관함, 검색, 단어 단위 가사를 지원합니다."
+	},
+	"description": {
+		"en": "An unofficial Apple Music client for macOS, Windows and Linux, written in Go and drawn with MyGo's native UI rather than a web page. It browses, searches and plays your library with word-by-word lyrics in 256 kbps AAC, and with a self-hosted wrapper-manager adds lossless up to 24-bit/192 kHz and Dolby Atmos. It relies on the web player's private API, which Apple may change at any time.",
+		"zh-CN": "非官方的 Apple Music 桌面客户端，支持 macOS、Windows 和 Linux，用 Go 编写，界面由 MyGo 原生 UI 绘制，不套网页。可以浏览、搜索和播放资料库，歌词逐字跟随，默认以 256 kbps AAC 播放；自行部署 wrapper-manager 后，还能播放最高 24 位/192 kHz 的无损和杜比全景声。它使用网页播放器的非公开接口，Apple 随时可能更改。",
+		"zh-TW": "非官方的 Apple Music 桌面用戶端，支援 macOS、Windows 和 Linux，用 Go 撰寫，介面由 MyGo 原生 UI 繪製，不套網頁。可以瀏覽、搜尋和播放資料庫，歌詞逐字跟隨，預設以 256 kbps AAC 播放；自行架設 wrapper-manager 後，還能播放最高 24 位元/192 kHz 的無損和杜比全景聲。它使用網頁播放器的非公開介面，Apple 隨時可能更改。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた macOS・Windows・Linux 向けの非公式 Apple Music クライアント。ライブラリの閲覧・検索・再生ができ、歌詞は一語ずつ追従し、標準は 256 kbps AAC です。wrapper-manager を用意すれば、最大 24 ビット/192 kHz のロスレスとドルビーアトモスも再生できます。Web プレーヤーの非公開 API を使うため、Apple の変更で動かなくなることがあります。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 macOS·Windows·Linux용 비공식 Apple Music 클라이언트입니다. 보관함을 둘러보고 검색하고 재생하며, 가사는 단어 단위로 따라가고 기본은 256kbps AAC입니다. wrapper-manager를 배포하면 최대 24비트/192kHz 무손실과 Dolby Atmos도 재생합니다. 웹 플레이어의 비공개 API를 쓰므로 Apple이 언제든 바꿀 수 있습니다."
+	},
+	"icon": {
+		"file": "ringo.webp"
+	},
+	"screenshot": "ringo.webp",
+	"added": "2026-11-12T02:29:58Z"
+}
