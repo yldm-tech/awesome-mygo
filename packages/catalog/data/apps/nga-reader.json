@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "nga-reader",
+	"name": "NGA Reader",
+	"author": "apple-half",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/apple-half/nga-reader",
+	"repo": "apple-half/nga-reader",
+	"summary": {
+		"en": "An unofficial three-pane desktop reader for the NGA forum, with board search, posting and drafts.",
+		"zh-CN": "非官方 NGA 论坛三栏桌面阅读器，可搜索板块、发帖回复并保存草稿。",
+		"zh-TW": "非官方 NGA 論壇三欄桌面閱讀器，可搜尋版面、發文回覆並儲存草稿。",
+		"ja": "NGA フォーラムの非公式な3ペイン型デスクトップリーダー。板の検索、投稿、下書きに対応。",
+		"ko": "NGA 포럼의 비공식 3단 데스크톱 리더. 게시판 검색, 글쓰기, 임시 저장을 지원합니다."
+	},
+	"description": {
+		"en": "An unofficial NGA forum reader for Windows and macOS, written in Go with MyGo's native UI drawing the lists and posts; the system WebView is used only for the official login and image previews. Boards, topics and the thread sit in three columns, reading position is kept per account, and you can post, reply and quote with auto-saved drafts. Images load only when you click them.",
+		"zh-CN": "非官方的 NGA 论坛桌面阅读器，支持 Windows 与 macOS，用 Go 编写，列表和正文由 MyGo 原生 UI 绘制，只有官方登录和图片预览使用系统 WebView。板块、话题和正文分三栏排列，按账号记住阅读位置；可以发帖、回复和引用回复，草稿自动保存。图片默认折叠，点击后才加载。",
+		"zh-TW": "非官方的 NGA 論壇桌面閱讀器，支援 Windows 與 macOS，以 Go 撰寫，列表和內文由 MyGo 原生 UI 繪製，只有官方登入和圖片預覽使用系統 WebView。版面、話題和內文分三欄排列，依帳號記住閱讀位置；可以發文、回覆和引用回覆，草稿自動儲存。圖片預設摺疊，點擊後才載入。",
+		"ja": "Windows・macOS 向けの非公式 NGA フォーラムリーダー。Go で書かれ、一覧と本文は MyGo のネイティブ UI で描かれます。システムの WebView を使うのは公式ログインと画像プレビューだけです。板、スレッド一覧、本文を3列に並べ、読んだ位置はアカウントごとに記憶されます。新規投稿、返信、引用返信ができ、下書きは自動で保存されます。画像はクリックしたときだけ読み込みます。",
+		"ko": "Windows와 macOS용 비공식 NGA 포럼 리더입니다. Go로 작성했고 목록과 본문은 MyGo의 네이티브 UI로 그리며, 시스템 WebView는 공식 로그인과 이미지 미리보기에만 씁니다. 게시판, 글 목록, 본문을 세 칸으로 나눠 보여 주고 읽던 위치를 계정별로 기억합니다. 새 글, 답글, 인용 답글을 쓸 수 있고 임시 글은 자동 저장되며, 이미지는 클릭할 때만 불러옵니다."
+	},
+	"icon": {
+		"file": "nga-reader.webp"
+	},
+	"screenshot": "nga-reader.webp",
+	"added": "2026-11-12T02:29:58Z"
+}
