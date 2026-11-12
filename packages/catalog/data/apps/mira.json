@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mira",
+	"name": "Mira",
+	"author": "mrsibe",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "ai",
+	"url": "https://github.com/mrsibe/mira",
+	"repo": "mrsibe/mira",
+	"summary": {
+		"en": "A local-first, ChatGPT-style desktop chat client with web search, long-term memory and projects.",
+		"zh-CN": "本地优先的类 ChatGPT 桌面聊天客户端，支持联网搜索、长期记忆和项目整理。",
+		"zh-TW": "本機優先的類 ChatGPT 桌面聊天用戶端，支援聯網搜尋、長期記憶與專案整理。",
+		"ja": "ローカル優先の ChatGPT 風デスクトップチャット。Web 検索、長期記憶、プロジェクト整理に対応。",
+		"ko": "로컬 우선 ChatGPT 스타일 데스크톱 채팅 앱. 웹 검색, 장기 기억, 프로젝트 정리 지원."
+	},
+	"description": {
+		"en": "A local-first, ChatGPT-style desktop client built with MyGo and a web frontend, for OpenAI Responses and Chat Completions compatible services, including local ones such as Ollama and LM Studio. Chats, settings and memory stay on your computer, and no Mira account is needed. It also offers web search through DuckDuckGo or Tavily, long-term memory, and projects for sorting chats.",
+		"zh-CN": "本地优先的类 ChatGPT 桌面客户端，以 MyGo 搭配 Web 前端构建，支持 OpenAI Responses 与 Chat Completions 兼容接口，也能连接 Ollama、LM Studio 等本地服务。对话、设置和记忆保存在本机，无需 Mira 账号。另有 DuckDuckGo 或 Tavily 联网搜索、长期记忆和按项目整理对话。",
+		"zh-TW": "本機優先的類 ChatGPT 桌面用戶端，以 MyGo 搭配 Web 前端打造，支援 OpenAI Responses 與 Chat Completions 相容介面，也能連接 Ollama、LM Studio 等本機服務。對話、設定和記憶儲存在本機，不需要 Mira 帳號。另有 DuckDuckGo 或 Tavily 聯網搜尋、長期記憶和依專案整理對話。",
+		"ja": "MyGo と Web フロントエンドで作られた、ローカル優先の ChatGPT 風デスクトップクライアント。OpenAI Responses・Chat Completions 互換の API と、Ollama や LM Studio などのローカルサービスで使えます。会話、設定、記憶はこのコンピューターに保存され、Mira のアカウントは不要です。DuckDuckGo か Tavily での Web 検索、長期記憶、プロジェクトごとの会話整理にも対応します。",
+		"ko": "MyGo와 웹 프런트엔드로 만든 로컬 우선 ChatGPT 스타일 데스크톱 클라이언트입니다. OpenAI Responses·Chat Completions 호환 API와 Ollama, LM Studio 같은 로컬 서비스에서 쓸 수 있습니다. 대화, 설정, 기억은 이 컴퓨터에 저장되며 Mira 계정이 필요 없습니다. DuckDuckGo나 Tavily 웹 검색, 장기 기억, 프로젝트별 대화 정리도 지원합니다."
+	},
+	"icon": {
+		"file": "mira.webp"
+	},
+	"screenshot": "mira.webp",
+	"added": "2026-11-11T14:16:55Z"
+}

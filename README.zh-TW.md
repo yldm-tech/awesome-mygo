@@ -3,6 +3,8 @@
 [![Website](https://img.shields.io/badge/website-awesomemygo.dev-3fd3f5)](https://awesomemygo.dev)
 [![CI](https://github.com/yldm-tech/awesome-mygo/actions/workflows/ci.yml/badge.svg)](https://github.com/yldm-tech/awesome-mygo/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/yldm-tech/awesome-mygo)](LICENSE)
+[![X](https://img.shields.io/badge/X-%40suzukaze__haduki-000000?logo=x&logoColor=white)](https://x.com/suzukaze_haduki)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/houko)
 
 把圍繞 [MyGo](https://github.com/egoist/mygo) 的應用、外掛、元件和文件收集在一個網站裡：**[awesomemygo.dev](https://awesomemygo.dev)**。MyGo 是用 Go 打造桌面應用的工具包，介面可以是原生 UI，也可以是 Web 前端。
 

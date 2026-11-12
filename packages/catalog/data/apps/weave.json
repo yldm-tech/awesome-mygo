@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "weave",
+	"name": "Weave",
+	"author": "zyyv",
+	"kind": "web",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/zyyv/weave",
+	"repo": "zyyv/weave",
+	"summary": {
+		"en": "A macOS file browser for local and WeChat conversation folders, with previews, tags and export.",
+		"zh-CN": "支持微信会话目录的 macOS 文件浏览器，可预览、加标签和导出。",
+		"zh-TW": "支援微信對話目錄的 macOS 檔案瀏覽器，可預覽、加標籤與匯出。",
+		"ja": "WeChat の会話フォルダーも扱える macOS ファイルブラウザー。プレビュー、タグ、書き出し付き。",
+		"ko": "WeChat 대화 폴더도 다루는 macOS 파일 브라우저. 미리보기, 태그, 내보내기 지원."
+	},
+	"description": {
+		"en": "A macOS file browser that recognizes ordinary folders and WeChat conversation directories, so you can find, preview, tag and export images, videos, voice messages and documents without moving the originals. It previews PDF, Office, Markdown and code, and decodes WeChat voice messages locally. Built as a web frontend in a MyGo desktop shell.",
+		"zh-CN": "macOS 本地文件浏览器，能识别普通文件夹和微信会话目录，让你在不移动原文件的情况下查找、预览、加标签并导出图片、视频、语音消息和文档。可预览 PDF、Office 文档、Markdown 和代码，并在本地解码微信语音消息。界面是运行在 MyGo 桌面外壳中的 Web 前端。",
+		"zh-TW": "macOS 本機檔案瀏覽器，能辨識一般資料夾和微信對話目錄，讓你在不搬動原始檔案的情況下搜尋、預覽、加標籤並匯出圖片、影片、語音訊息和文件。可預覽 PDF、Office 文件、Markdown 和程式碼，並在本機解碼微信語音訊息。介面是在 MyGo 桌面外殼中執行的 Web 前端。",
+		"ja": "普通のフォルダーと WeChat の会話ディレクトリを見分ける macOS 用ファイルブラウザー。画像、動画、音声メッセージ、文書を、元のファイルをそのままにして検索、プレビュー、タグ付け、書き出しできます。PDF、Office、Markdown、コードをプレビューでき、WeChat の音声メッセージもローカルでデコードします。MyGo のデスクトップシェル上で動く Web フロントエンドで作られています。",
+		"ko": "일반 폴더와 WeChat 대화 디렉터리를 구분하는 macOS용 파일 브라우저입니다. 원본 파일은 그대로 둔 채 이미지, 동영상, 음성 메시지, 문서를 찾고 미리 보고 태그를 달고 내보낼 수 있습니다. PDF, Office, Markdown, 코드를 미리 보고 WeChat 음성 메시지를 로컬에서 디코딩하며, MyGo 데스크톱 셸 위의 웹 프런트엔드로 만들어졌습니다."
+	},
+	"icon": {
+		"file": "weave.webp"
+	},
+	"screenshot": "weave.webp",
+	"added": "2026-11-12T02:29:58Z"
+}

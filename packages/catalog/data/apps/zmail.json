@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "zmail",
+	"name": "Zmail",
+	"author": "monoedge-labs",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"category": "CommunicationApplication",
+	"group": "chat",
+	"url": "https://zmail.zausau.com",
+	"repo": "monoedge-labs/zmail",
+	"summary": {
+		"en": "A local macOS mail client that lets AI agents read and file your mail through its zmail CLI.",
+		"zh-CN": "本地 macOS 邮件客户端，AI agent 可通过 zmail 命令行阅读和整理邮件。",
+		"zh-TW": "本機 macOS 郵件用戶端，AI agent 可透過 zmail 命令列閱讀與整理郵件。",
+		"ja": "zmail CLI で AI エージェントがメールを読み整理できる macOS 用メールクライアント。",
+		"ko": "AI 에이전트가 zmail CLI로 메일을 읽고 정리할 수 있는 로컬 macOS 메일 클라이언트."
+	},
+	"description": {
+		"en": "A mail client for macOS on Apple silicon, drawn with MyGo's native UI. It syncs Gmail, Aliyun Mail, QQ Mail and iCloud Mail over IMAP into a local SQLite database on your Mac. AI agents work with it through zmail commands that read, mark, archive and move mail but cannot send, reply or delete, and an optional switch hides addresses, numbers and other private values from them.",
+		"zh-CN": "面向 Apple 芯片 Mac 的邮件客户端，由 MyGo 原生 UI 绘制。它通过 IMAP 把 Gmail、阿里邮箱、QQ 邮箱和 iCloud 邮件同步到 Mac 本地的 SQLite 数据库。AI agent 通过 zmail 命令使用它，可以阅读、标为已读、归档和移动邮件，但不能发送、回复或删除；还可以选择对 agent 隐藏邮箱地址、号码等敏感信息。",
+		"zh-TW": "適用於 Apple 晶片 Mac 的郵件用戶端，由 MyGo 原生 UI 繪製。它透過 IMAP 將 Gmail、阿里郵箱、QQ 郵箱與 iCloud 郵件同步到 Mac 本機的 SQLite 資料庫。AI agent 透過 zmail 指令使用它，可以閱讀、標為已讀、封存與移動郵件，但無法寄送、回覆或刪除；也可以選擇對 agent 隱藏電子郵件地址、號碼等敏感資訊。",
+		"ja": "MyGo のネイティブ UI で描かれた、Apple シリコン搭載 Mac 向けのメールクライアント。Gmail、Aliyun Mail、QQ Mail、iCloud Mail を IMAP で Mac 上の SQLite データベースに同期します。AI エージェントは zmail コマンドでメールを読み、既読にし、アーカイブや移動ができますが、送信・返信・削除はできません。メールアドレスや番号などの個人情報をエージェントから隠す設定もあります。",
+		"ko": "MyGo의 네이티브 UI로 그린 Apple 실리콘 Mac용 메일 클라이언트입니다. Gmail, Aliyun Mail, QQ Mail, iCloud Mail을 IMAP으로 Mac의 로컬 SQLite 데이터베이스에 동기화합니다. AI 에이전트는 zmail 명령으로 메일을 읽고 읽음 표시, 보관, 이동을 할 수 있지만 보내기, 답장, 삭제는 할 수 없으며, 이메일 주소나 번호 같은 민감한 정보를 에이전트에게 숨기는 옵션도 있습니다."
+	},
+	"icon": {
+		"file": "zmail.webp"
+	},
+	"screenshot": "zmail.webp",
+	"added": "2026-11-11T16:15:11Z"
+}

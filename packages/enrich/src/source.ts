@@ -352,6 +352,42 @@ export function overCaps(text: Record<string, string>, caps: Caps): string[] {
 	});
 }
 
+// The columns a search result gives a page's description, which the catalog's checks hold every app page's description to.
+export const SNIPPET_WIDTH = 160;
+
+// Display width as search results measure it, and as the catalog's checks do: CJK, kana, Hangul and full-width forms take two columns.
+export function displayWidth(s: string): number {
+	return Array.from(s).reduce((w, c) => w + (/[\u1100-\u115F\u2E80-\uA4CF\uAC00-\uD7A3\uF900-\uFAFF\uFE30-\uFE4F\uFF00-\uFF60\uFFE0-\uFFE6]/.test(c) ? 2 : 1), 0);
+}
+
+// The sentence that follows an app's summary in its page's meta description, in each site language, with the author's name already in it (app_desc_tail in packages/catalog/locales).
+export type Tails = Partial<Record<(typeof SITE_LANGS)[number], string>>;
+
+// An app page's meta description, put together as appDescription in packages/catalog/src/translate.ts does, which this package cannot import: the summary, then the tail, with a space between unless the summary ends in a full-width stop.
+export function snippetOf(summary: string, tail: string): string {
+	return `${summary}${summary.endsWith('。') ? '' : ' '}${tail}`;
+}
+
+// The columns each language's tail leaves the summary. The tail holds the author's name, so a long name leaves less than the longest example's summary takes; the space before the tail is counted, which a summary ending in a full-width stop gets back.
+export function summaryRoom(tails: Tails): Caps {
+	const room: Caps = {};
+	for (const l of SITE_LANGS) {
+		const tail = tails[l];
+		if (tail !== undefined) room[l] = Math.max(0, SNIPPET_WIDTH - displayWidth(snippetOf('', tail)));
+	}
+	return room;
+}
+
+// The languages in which a summary and its tail are together wider than a search result shows, as "en 164/160". Unlike overCaps this allows nothing past the limit, as the catalog's checks allow nothing.
+export function overSnippet(summary: Record<string, string>, tails: Tails): string[] {
+	return SITE_LANGS.flatMap((l) => {
+		const tail = tails[l];
+		if (tail === undefined || typeof summary[l] !== 'string') return [];
+		const w = displayWidth(snippetOf(summary[l], tail));
+		return w > SNIPPET_WIDTH ? [`${l} ${w}/${SNIPPET_WIDTH}`] : [];
+	});
+}
+
 // The app's name as its MyGo configuration spells it, when the submitted name is the same word in other letter case: the form offers the repository's name (myskills), while the app calls itself MySkills. A name the visitor chose differently is kept, and so is any name when the configuration's is all lower case, which is more often the executable's name than how the app writes itself (collate, where its README and site say Collate).
 export function appNameFrom(submitted: string, mygo: unknown): string | undefined {
 	const name = (mygo as { name?: unknown } | null)?.name;

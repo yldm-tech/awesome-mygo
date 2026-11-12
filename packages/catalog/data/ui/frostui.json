@@ -1,0 +1,19 @@
+{
+	"$schema": "../schema/ui.schema.json",
+	"slug": "frostui",
+	"name": "frostui",
+	"author": "frostyard",
+	"tag": "theme",
+	"surface": "native",
+	"summary": {
+		"en": "frostyard's Go components for MyGo's native UI: a command-center window with a palette, console and status bar, a job queue, dialogs, charts, Lucide icons and two Frostyard themes.",
+		"zh-CN": "frostyard 为 MyGo 原生 UI 打造的 Go 组件：带命令面板、控制台和状态栏的指挥中心窗口，任务队列、对话框、图表、Lucide 图标，以及两款 Frostyard 主题。",
+		"zh-TW": "frostyard 為 MyGo 原生 UI 打造的 Go 元件：附命令面板、主控台和狀態列的指揮中心視窗，任務佇列、對話方塊、圖表、Lucide 圖示，以及兩款 Frostyard 主題。",
+		"ja": "frostyard による MyGo ネイティブ UI 向けの Go コンポーネント。コマンドパレット、コンソール、ステータスバーを備えたコマンドセンター型ウィンドウ、ジョブキュー、ダイアログ、チャート、Lucide アイコン、2 種類の Frostyard テーマ。",
+		"ko": "frostyard가 만든 MyGo 네이티브 UI용 Go 컴포넌트로, 명령 팔레트, 콘솔, 상태 표시줄을 갖춘 커맨드 센터 창, 작업 큐, 대화 상자, 차트, Lucide 아이콘, 두 가지 Frostyard 테마를 제공합니다."
+	},
+	"repo": "frostyard/frostui",
+	"url": "https://github.com/frostyard/frostui",
+	"screenshot": "frostui.webp",
+	"added": "2026-11-12T02:29:58Z"
+}

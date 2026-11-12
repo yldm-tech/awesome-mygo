@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mcode",
+	"name": "MCode",
+	"author": "miniers",
+	"kind": "native",
+	"platforms": [
+		"mac",
+		"win"
+	],
+	"group": "agents",
+	"url": "https://github.com/miniers/MCode",
+	"repo": "miniers/MCode",
+	"summary": {
+		"en": "Runs many AI coding agent threads in one window, with sub-agents and phone remote control.",
+		"zh-CN": "在一个窗口里运行多个 AI 编码代理线程，支持子代理编排和手机远程控制。",
+		"zh-TW": "在一個視窗裡執行多個 AI 程式設計代理，支援子代理編排與手機遠端控制。",
+		"ja": "複数の AI コーディングエージェントを1つのウィンドウで動かし、サブエージェントとスマホ操作に対応。",
+		"ko": "여러 AI 코딩 에이전트를 한 창에서 돌리고, 서브 에이전트와 휴대폰 원격 제어를 지원합니다."
+	},
+	"description": {
+		"en": "A pure Go desktop client for AI coding agents, drawn with MyGo's native UI. It runs Claude Code, Codex, Antigravity and other CLI agents as threads in one window, with a terminal, Git changes and cross-session search, and a lead agent can split work across sub-agents. A separate React web client takes over the same sessions from a phone. macOS comes first; Windows is best effort.",
+		"zh-CN": "纯 Go 编写的 AI 编码桌面客户端，界面由 MyGo 原生 UI 绘制。在一个窗口里以线程形式运行 Claude Code、Codex、Antigravity 等 CLI 代理，配有终端、Git 变更和跨会话搜索，主代理还能把任务拆给子代理。仓库另附一个用 React 编写的 Web 远程端，可在手机上接管同一批会话。以 macOS 为主，Windows 尽力支持。",
+		"zh-TW": "以純 Go 撰寫的 AI 程式設計桌面用戶端，介面由 MyGo 原生 UI 繪製。在一個視窗裡以執行緒形式執行 Claude Code、Codex、Antigravity 等 CLI 代理，配有終端機、Git 變更與跨工作階段搜尋，主代理還能把任務分派給子代理。另附一個以 React 撰寫的 Web 遠端介面，可在手機上接手同一批工作階段。以 macOS 為主，Windows 盡力支援。",
+		"ja": "Go だけで書かれ、MyGo のネイティブ UI で描かれた AI コーディング用デスクトップクライアント。Claude Code、Codex、Antigravity などの CLI エージェントを1つのウィンドウでスレッドとして動かし、ターミナル、Git の変更、セッション横断検索を備えます。メインのエージェントは作業をサブエージェントに分担できます。別の React 製 Web クライアントで、スマホから同じセッションを操作できます。macOS が主な対象で、Windows は可能な範囲での対応です。",
+		"ko": "순수 Go로 작성하고 MyGo의 네이티브 UI로 그린 AI 코딩 데스크톱 클라이언트입니다. Claude Code, Codex, Antigravity 등 CLI 에이전트를 한 창에서 스레드로 실행하고 터미널, Git 변경, 세션 간 검색을 갖췄으며, 작업을 서브 에이전트에 나눠 맡길 수 있습니다. 별도의 React 웹 클라이언트로 휴대폰에서 같은 세션을 이어받습니다. macOS가 주 대상이고 Windows는 가능한 범위에서 지원합니다."
+	},
+	"icon": {
+		"file": "mcode.webp"
+	},
+	"screenshot": "mcode.webp",
+	"added": "2026-11-11T15:35:53Z"
+}

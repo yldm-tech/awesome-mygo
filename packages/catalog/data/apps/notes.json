@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "notes",
+	"name": "Notes",
+	"author": "mcxen",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/mcxen/notes",
+	"repo": "mcxen/notes",
+	"summary": {
+		"en": "Block-editor notes with nested pages and databases, in a folder you can sync over WebDAV or SMB.",
+		"zh-CN": "块编辑器笔记，支持嵌套页面与数据库，笔记文件夹可通过 WebDAV 或 SMB 同步。",
+		"zh-TW": "區塊編輯器筆記，支援巢狀頁面與資料庫，筆記資料夾可透過 WebDAV 或 SMB 同步。",
+		"ja": "ブロックエディターのノートアプリ。入れ子のページとデータベースを備え、WebDAV や SMB で同期。",
+		"ko": "중첩 페이지와 데이터베이스를 갖춘 블록 편집기 노트 앱, WebDAV나 SMB로 동기화."
+	},
+	"description": {
+		"en": "A notes app with a block editor, nested pages, databases, backlinks and a graph view. Its React interface runs in the system's webview inside a MyGo app written in Go. Notes live in a vault, a folder of JSON files and plain attachments, that can sync with a WebDAV folder or an SMB share, merging pages edited on both sides paragraph by paragraph. Search and Markdown export are not built yet.",
+		"zh-CN": "带块编辑器、嵌套页面、数据库、反向链接和关系图谱的笔记应用，React 界面运行在系统自带的 WebView 中，外壳基于 MyGo、用 Go 编写。笔记保存在“库”里，即由 JSON 文件和原样附件组成的文件夹，可与 WebDAV 文件夹或 SMB 共享同步，两边都改过的页面会逐段合并。目前还没有搜索和 Markdown 导出功能。",
+		"zh-TW": "具備區塊編輯器、巢狀頁面、資料庫、反向連結與關聯圖的筆記應用程式，React 介面在系統內建的 WebView 中執行，外殼以 MyGo、用 Go 撰寫。筆記存放在「庫」裡，也就是由 JSON 檔與原樣附件組成的資料夾，可與 WebDAV 資料夾或 SMB 共用資料夾同步，兩邊都改過的頁面會逐段合併。目前還沒有搜尋與 Markdown 匯出功能。",
+		"ja": "ブロックエディター、入れ子のページ、データベース、バックリンク、グラフビューを備えたノートアプリ。React で作られた画面をシステムの WebView に表示し、外側は MyGo を使って Go で書かれています。ノートは JSON ファイルとそのままの添付ファイルからなるフォルダー「保管庫」に保存され、WebDAV フォルダーや SMB 共有と同期できます。両方で編集されたページは段落ごとにマージされます。検索と Markdown 書き出しはまだありません。",
+		"ko": "블록 편집기, 중첩 페이지, 데이터베이스, 백링크, 그래프 뷰를 갖춘 노트 앱입니다. React로 만든 화면을 시스템 웹뷰에 띄우고, 바깥은 MyGo로 Go로 작성했습니다. 노트는 JSON 파일과 원본 그대로의 첨부 파일로 이루어진 폴더인 보관소에 저장되며, WebDAV 폴더나 SMB 공유와 동기화할 수 있고 양쪽에서 고친 페이지는 문단 단위로 병합됩니다. 검색과 Markdown 내보내기는 아직 없습니다."
+	},
+	"icon": {
+		"file": "notes.webp"
+	},
+	"screenshot": "notes.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-11T02:28:27Z"
+}

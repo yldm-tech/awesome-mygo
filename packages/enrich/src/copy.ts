@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod';
 import { z } from 'zod';
-import { APP_PLATFORMS, CHOICE_HINTS, type Caps, type ChoiceField, type Entry, type EntryKind, KIND_NAMES, cleanPlatforms, cleanTags, lengthCaps, overCaps } from './source.ts';
+import { APP_PLATFORMS, CHOICE_HINTS, type Caps, type ChoiceField, type Entry, type EntryKind, KIND_NAMES, SNIPPET_WIDTH, type Tails, cleanPlatforms, cleanTags, lengthCaps, overCaps, overSnippet, summaryRoom } from './source.ts';
 
 // The entry's copy in the five site languages, written by Claude from what the visitor typed and the project's README. The README and the submission are written by strangers, so they go in as data the model is told not to obey, and what comes back is only ever text fields that the catalog's checks and a maintainer's review still stand between and the site.
 
@@ -37,6 +37,8 @@ export interface Copy {
 	notes: string;
 	// Texts still longer than the examples allow after one rewrite, as "description en 580/405"; empty when all fit.
 	tooLong: string[];
+	// The languages in which an app's summary and the author's sentence after it are still wider than a search result after one rewrite, as "en 164/160"; empty when all fit. The catalog's checks fail on any.
+	overSnippet: string[];
 }
 
 const SYSTEM = `You write the catalog copy for awesomemygo.dev, a directory of apps, UI components, state management libraries and plugins built with MyGo, a Go toolkit for desktop apps with a native UI or a web frontend.
@@ -62,6 +64,8 @@ export interface CopyInput {
 	// The app's MyGo configuration, mygo.json or mygo.config.ts.
 	mygoConfig?: { path: string; text: string };
 	examples: Entry[];
+	// For an app, the sentence its page's meta description puts after the summary, in each language and with the author's name in it: the summary has to leave it room in the search snippet.
+	tails?: Tails;
 	// The fields the site's form filled in with a default rather than asking (formDefaults), each with the values its schema allows, one of which the model picks.
 	choices?: readonly { field: ChoiceField; values: readonly string[] }[];
 	// Whether the model writes the entry's tags, which the form left at a default.
@@ -88,6 +92,8 @@ export async function writeCopy(cfg: LlmConfig, input: CopyInput): Promise<Copy>
 	const readme = input.readme === undefined ? '(none found)' : input.readme.slice(0, README_LIMIT);
 	const caps = { summary: lengthCaps(input.examples, 'summary'), description: lengthCaps(input.examples, 'description') };
 	const limits = [capsLine('summary', caps.summary), ...(isApp ? [capsLine('description', caps.description)] : [])];
+	const tails = isApp ? (input.tails ?? {}) : {};
+	const room = summaryRoom(tails);
 	const parts = [
 		`Entry: ${KIND_NAMES[input.kind]}`,
 		`<examples>\n${JSON.stringify(input.examples, null, 2)}\n</examples>`,
@@ -96,6 +102,7 @@ export async function writeCopy(cfg: LlmConfig, input: CopyInput): Promise<Copy>
 		...(asksPlatforms ? [`<latest_release_files>\n${input.releaseAssets?.length ? input.releaseAssets.join('\n') : '(no release)'}\n</latest_release_files>`] : []),
 		`<readme>\n${readme}\n</readme>`,
 		`Length limits in characters, the longest example in each language; keep every text within its limit, choosing what to leave out rather than compressing the wording:\n${limits.join('\n')}`,
+		...(Object.keys(room).length ? [`The app's page describes it to search engines with the summary followed by a fixed sentence naming its author, and the two must fit the ${SNIPPET_WIDTH} columns of a search result, where a CJK, kana, Hangul or full-width character takes two columns and any other takes one. After that sentence the summary has this many columns, a limit with no allowance that comes before the one above:\n${capsLine('summary', room)}`] : []),
 		...choices.map((c) => `The submission's ${c.field} is not its author's pick: the form leaves it ${c.field === 'category' ? 'out' : 'at a default'}. As choices.${c.field}, pick its ${c.field} from: ${c.values.join(', ')}; ${CHOICE_HINTS[c.field]}.`),
 		...(input.tags ? ["The submission's tags are the form's default, not its author's. Write its tags."] : []),
 		...(asksPlatforms ? [`The submission's platforms are not its author's pick: the form writes all three without asking. Give the platforms it runs on, from: ${APP_PLATFORMS.join(', ')}.`] : []),
@@ -117,6 +124,7 @@ export async function writeCopy(cfg: LlmConfig, input: CopyInput): Promise<Copy>
 		const long = tooLong(o);
 		return [
 			...(long.length ? [`These texts are longer than their limits (length/limit): ${long.join(', ')}. Rewrite all the copy so every text is within its limit, keeping only facts from the README.`] : []),
+			...(overSnippet(o.summary, tails).length ? [`With the author's sentence after it, the summary is wider than a search result (columns/limit): ${overSnippet(o.summary, tails).join(', ')}. Shorten the summary to the columns it has (${capsLine('summary', room)}), leaving out detail rather than compressing the wording.`] : []),
 			...choices.filter((c) => !c.values.includes(pickOf(o, c.field))).map((c) => `choices.${c.field}, its ${c.field}, must be one of: ${c.values.join(', ')}.`),
 		];
 	};
@@ -136,7 +144,7 @@ export async function writeCopy(cfg: LlmConfig, input: CopyInput): Promise<Copy>
 	}
 	const tags = input.tags && out.tags ? cleanTags(out.tags) : [];
 	const platforms = asksPlatforms && out.platforms ? cleanPlatforms(out.platforms) : [];
-	return { summary: out.summary, description: isApp ? out.description : undefined, choices: picked, badChoices: bad, tags: tags.length ? tags : undefined, platforms: platforms.length ? platforms : undefined, notes: out.notes.trim(), tooLong: tooLong(out) };
+	return { summary: out.summary, description: isApp ? out.description : undefined, choices: picked, badChoices: bad, tags: tags.length ? tags : undefined, platforms: platforms.length ? platforms : undefined, notes: out.notes.trim(), tooLong: tooLong(out), overSnippet: overSnippet(out.summary, tails) };
 }
 
 // The parsed copy of a finished response; a refusal or a cut-off answer is an error the report shows.

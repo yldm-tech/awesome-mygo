@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "acton",
+	"name": "acton",
+	"author": "auron-labs",
+	"kind": "native",
+	"platforms": [
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/auron-labs/acton/",
+	"repo": "auron-labs/acton",
+	"summary": {
+		"en": "Runs GitHub Actions workflows locally with nektos/act, showing jobs, steps and output.",
+		"zh-CN": "用 nektos/act 在本地运行 GitHub Actions，查看作业与输出。",
+		"zh-TW": "用 nektos/act 在本機執行 GitHub Actions，查看作業與輸出。",
+		"ja": "nektos/act で GitHub Actions をローカル実行し、ジョブと出力を表示するアプリ。",
+		"ko": "nektos/act로 GitHub Actions를 로컬에서 실행하고 작업과 출력을 보여 줍니다."
+	},
+	"description": {
+		"en": "A macOS and Linux desktop app drawn with MyGo's native UI that runs GitHub Actions workflows locally with the embedded nektos/act runner. Windows is not built. Pick a project folder and workflows, then follow jobs, steps and output as they run, with settings kept in the project's .actrc. Projects open in tabs that can run at once, and container workflows need a running Docker engine.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 与 Linux 桌面应用，内嵌 nektos/act 运行器，在本地运行 GitHub Actions 工作流；不提供 Windows 版本。选好项目文件夹和工作流后，可实时查看作业、步骤和输出，设置保存在项目的 .actrc 中。每个项目在各自的标签页中打开，可同时运行；使用容器的工作流需要 Docker 引擎正在运行。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 macOS 與 Linux 桌面應用程式，內嵌 nektos/act 執行器，在本機執行 GitHub Actions 工作流程；不提供 Windows 版本。選好專案資料夾和工作流程後，可即時查看作業、步驟和輸出，設定儲存在專案的 .actrc 中。每個專案在各自的分頁中開啟，可同時執行；使用容器的工作流程需要 Docker 引擎正在執行。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS・Linux 向けのデスクトップアプリで、組み込みの nektos/act ランナーにより GitHub Actions のワークフローをローカルで実行します。Windows 版はビルドされていません。プロジェクトフォルダーとワークフローを選ぶと、ジョブ、ステップ、出力を実行中に確認でき、設定はプロジェクトの .actrc に保存されます。プロジェクトごとのタブは同時に実行でき、コンテナを使うワークフローには Docker エンジンの起動が必要です。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS·Linux용 데스크톱 앱으로, 내장된 nektos/act 러너로 GitHub Actions 워크플로를 로컬에서 실행합니다. Windows 버전은 빌드되지 않습니다. 프로젝트 폴더와 워크플로를 고르면 작업, 단계, 출력을 실행 중에 볼 수 있고, 설정은 프로젝트의 .actrc에 저장됩니다. 프로젝트마다 탭이 열려 동시에 실행할 수 있으며, 컨테이너를 쓰는 워크플로에는 실행 중인 Docker 엔진이 필요합니다."
+	},
+	"icon": {
+		"file": "acton.webp"
+	},
+	"screenshot": "acton.webp",
+	"added": "2026-11-12T01:46:07Z"
+}

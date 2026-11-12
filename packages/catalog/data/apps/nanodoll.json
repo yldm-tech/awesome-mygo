@@ -1,0 +1,30 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "nanodoll",
+	"name": "NanoDoll",
+	"author": "Moonvy",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "ai",
+	"url": "https://moonvy.com/apps/nano-doll/",
+	"summary": {
+		"en": "A minimal desktop container for using AI services through their web versions.",
+		"zh-CN": "用来使用网页版 AI 服务的极简桌面容器。",
+		"zh-TW": "用來使用網頁版 AI 服務的極簡桌面容器。",
+		"ja": "Web 版の AI サービスを使うための、最小限のデスクトップコンテナー。",
+		"ko": "웹 버전 AI 서비스를 쓰기 위한 최소한의 데스크톱 컨테이너."
+	},
+	"description": {
+		"en": "NanoDoll is a minimal desktop container for using AI services through their web versions. Its listing states it is built with MyGo's native UI. No README was available, so this page describes only what the project's own one-line summary says.",
+		"zh-CN": "NanoDoll 是一个极简的桌面容器，用来使用网页版的 AI 服务。提交信息称它使用 MyGo 原生 UI 构建。由于没有 README，本页内容仅依据项目自己的一句话简介。",
+		"zh-TW": "NanoDoll 是一個極簡的桌面容器，用來使用網頁版的 AI 服務。提交資訊表示它以 MyGo 原生 UI 打造。由於沒有 README，本頁內容僅依據專案自己的一句話簡介。",
+		"ja": "NanoDoll は、AI サービスを Web 版のまま使うための最小限のデスクトップコンテナーです。掲載情報では MyGo のネイティブ UI で作られているとされています。README がないため、このページの内容はプロジェクト自身の一行紹介に基づいています。",
+		"ko": "NanoDoll은 AI 서비스를 웹 버전 그대로 쓰기 위한 최소한의 데스크톱 컨테이너입니다. 등록 정보에 따르면 MyGo의 네이티브 UI로 만들어졌습니다. README가 없어 이 페이지는 프로젝트가 직접 밝힌 한 줄 소개만을 바탕으로 합니다."
+	},
+	"screenshot": "nanodoll.webp",
+	"added": "2026-11-11T06:29:23Z"
+}
