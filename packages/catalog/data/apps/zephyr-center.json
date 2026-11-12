@@ -6,16 +6,30 @@
 	"kind": "native",
 	"platforms": [
 		"win",
-		"linux",
-		"mac"
+		"linux"
 	],
 	"group": "system",
 	"url": "https://github.com/Ne0W0r1d/zephyr-center",
 	"summary": {
-		"en": "一个跨平台的华硕游戏本控制中心，适用于 Windows 的 Ghelper 后端与 Linux 下的 asusd 后端，使用 MPLv2 与 GPLv3 双协议发行"
+		"en": "An ASUS ROG laptop control center for Linux and Windows: profiles, fans, lighting and GPU modes.",
+		"zh-CN": "华硕 ROG 笔记本控制中心（Linux 与 Windows），可调性能、风扇和灯效。",
+		"zh-TW": "華碩 ROG 筆電控制中心（Linux 與 Windows），可調效能、風扇與燈效。",
+		"ja": "ASUS ROG ノート向けコントロールセンター。Linux・Windows でファンや性能を調整。",
+		"ko": "Linux·Windows용 ASUS ROG 노트북 제어 센터. 성능, 팬, 조명을 조절합니다."
 	},
 	"description": {
-		"en": "一个跨平台的华硕游戏本控制中心，适用于 Windows 的 Ghelper 后端与 Linux 下的 asusd 后端，使用 MPLv2 与 GPLv3 双协议发行"
+		"en": "A control center for ASUS ROG laptops on Linux and Windows, drawn with MyGo's native UI and CrychicUI. It talks to asusd on Linux and to G-Helper's ACPI layer through a small helper on Windows, and covers performance profiles, power limits, the battery charge limit, fan curves, keyboard lighting and graphics modes. Anime Matrix, Slash lighting and autostart are not in yet.",
+		"zh-CN": "适用于 Linux 和 Windows 的华硕 ROG 笔记本控制中心，用 MyGo 原生 UI 与 CrychicUI 绘制。Linux 上通过 asusd 工作，Windows 上则借助一个小型辅助程序调用 G-Helper 的 ACPI 层，可调整性能模式与功耗上限、电池充电上限、风扇曲线、键盘灯效和显卡模式。Anime Matrix、Slash 灯效和开机自启暂未支持。",
+		"zh-TW": "適用於 Linux 與 Windows 的華碩 ROG 筆電控制中心，以 MyGo 原生 UI 與 CrychicUI 繪製。在 Linux 上透過 asusd 運作，在 Windows 上則藉由一個小型輔助程式呼叫 G-Helper 的 ACPI 層，可調整效能模式與功耗上限、電池充電上限、風扇曲線、鍵盤燈效和顯示卡模式。Anime Matrix、Slash 燈效與開機自動啟動尚未支援。",
+		"ja": "Linux と Windows で動く ASUS ROG ノート PC のコントロールセンター。MyGo のネイティブ UI と CrychicUI で描かれています。Linux では asusd、Windows では小さなヘルパー経由で G-Helper の ACPI レイヤーを使い、プロファイルと電力制限、充電上限、ファンカーブ、キーボードライティング、グラフィックモードを設定できます。Anime Matrix、Slash ライティング、自動起動は未対応です。",
+		"ko": "Linux·Windows용 ASUS ROG 노트북 제어 센터로, MyGo의 네이티브 UI와 CrychicUI로 그렸습니다. Linux에서는 asusd와, Windows에서는 도우미를 거쳐 G-Helper의 ACPI 계층과 통신하며, 성능 프로필과 전력 제한, 충전 한도, 팬 곡선, 키보드 조명, 그래픽 모드를 설정할 수 있습니다. Anime Matrix, Slash 조명, 자동 실행은 아직 지원하지 않습니다."
 	},
+	"icon": {
+		"file": "zephyr-center.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "zephyr-center.webp",
 	"added": "2026-11-12T04:55:02Z"
 }
