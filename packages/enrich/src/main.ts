@@ -6,7 +6,7 @@ import { DEFAULT_MODEL, README_LIMIT, type LlmConfig, writeCopy } from './copy.t
 import { github } from './github.ts';
 import { downloadImage, writeCard, writeIcon, writeShot } from './image.ts';
 import { type RepoFacts, type ShotSource, firstShot, latestReleaseAssets, ownIcon, repoFacts as readRepoFacts } from './repo.ts';
-import { APP_PLATFORMS, type ChoiceField, ENTRY_DIRS, STAGED_SHOTS, type Entry, type EntryKind, addedFiles, appNameFrom, knownFiles, formDefaults, hasAllLanguages, homepageOf, markProvisional, repoOfEntry, repoShotSources, schemaEnum, setCategory, setGroup, setPlatforms, sniffImage, stagedShotOf, submittedScreenshot } from './source.ts';
+import { APP_PLATFORMS, type ChoiceField, ENTRY_DIRS, STAGED_SHOTS, type Entry, type EntryKind, addedFiles, appNameFrom, knownFiles, formDefaults, SITE_LANGS, type Tails, hasAllLanguages, homepageOf, markProvisional, repoOfEntry, repoShotSources, schemaEnum, setCategory, setGroup, setPlatforms, sniffImage, stagedShotOf, submittedScreenshot } from './source.ts';
 
 // Run by .github/workflows/enrich-submission.yml on a pull request the submission bot opened, and by discover.ts on each entry it proposes. It finds the entries the branch adds, then for each fills in what the form cannot ask for: an app's icon (from its mygo.json); the screenshot of an app, a UI library or a state management library (the first landscape one in its README, or else in a screenshot folder of the repository); a UI library's or state management library's homepage (from the repository's settings); what the form fills in with a default (an app's category and platforms, a UI library's tag and surface, a plugin's surface, the tags of state management and plugins), picked by the model; and the copy in every site language. An entry with a repository is never left without an image: an app without an icon of its own gets its owner's GitHub avatar, and an entry without a screenshot gets the repository's social preview, or else a card drawn here from the owner's avatar, and the report says so. It changes files in the working tree and writes a Markdown report for the pull request; the workflow runs the catalog checks and commits.
 //
@@ -25,6 +25,16 @@ const report: string[] = [];
 const say = (line: string): void => {
 	report.push(line);
 };
+
+// The sentence an app page's meta description puts after the summary, in each site language, with the author's name in place of its {x} (app_desc_tail in the catalog's locales, filled in as appDescription in packages/catalog/src/translate.ts does).
+async function descriptionTails(author: string): Promise<Tails> {
+	const tails: Tails = {};
+	for (const l of SITE_LANGS) {
+		const locale = JSON.parse(await readFile(join(ROOT, `packages/catalog/locales/${l}.json`), 'utf8')) as { app_desc_tail: string };
+		tails[l] = locale.app_desc_tail.replace('{x}', author);
+	}
+	return tails;
+}
 
 // The repository's facts, with a MyGo configuration that cannot be read noted in the report.
 const repoFacts = (repo: string) => readRepoFacts(repo, say);
@@ -146,7 +156,8 @@ async function addCopy(cfg: LlmConfig | undefined, kind: EntryKind, entry: Entry
 		});
 		// The release's file names say which platforms the app ships for; a failed request only leaves the model with the README and the configuration.
 		const releaseAssets = picks.platforms && facts ? await latestReleaseAssets(facts.repo).catch(() => undefined) : undefined;
-		const copy = await writeCopy(cfg, { kind, entry, readme: facts?.readme?.text, mygoConfig: facts?.mygo ? { path: facts.mygo.path, text: facts.mygo.text } : undefined, examples, choices, tags: picks.tags, platforms: picks.platforms, releaseAssets });
+		const tails = kind === 'app' && typeof entry.author === 'string' ? await descriptionTails(entry.author) : undefined;
+		const copy = await writeCopy(cfg, { kind, entry, readme: facts?.readme?.text, mygoConfig: facts?.mygo ? { path: facts.mygo.path, text: facts.mygo.text } : undefined, examples, tails, choices, tags: picks.tags, platforms: picks.platforms, releaseAssets });
 		entry.summary = copy.summary;
 		if (kind === 'app' && copy.description) entry.description = copy.description;
 		say(`- Copy: written by ${cfg.model} in all five languages from the submission${facts?.readme ? ' and the README' : ''}. Read it before merging.`);
@@ -173,6 +184,7 @@ async function addCopy(cfg: LlmConfig | undefined, kind: EntryKind, entry: Entry
 		} else if (picks.platforms) say(unpicked('platforms', entry, 'as the model gave none'));
 		if (copy.notes) say(`- Model's notes: ${copy.notes.replace(/\s+/g, ' ')}`);
 		if (copy.tooLong.length) say(`- Still longer than the hand-written examples after one rewrite (length/limit): ${copy.tooLong.join(', ')}. Shorten before merging.`);
+		if (copy.overSnippet.length) say(`- The summary and the author's sentence after it are still wider than a search result after one rewrite (columns/limit): ${copy.overSnippet.join(', ')}. The catalog's checks fail on this: shorten the summary.`);
 	} catch (err) {
 		say(`- Copy: left as submitted, as writing it failed: ${err instanceof Error ? err.message : String(err)}`);
 		left('as writing the copy failed').forEach(say);

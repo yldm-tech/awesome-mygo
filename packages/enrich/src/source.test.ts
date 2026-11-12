@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { repoIcons, repoLikelyScreenshots, repoShotSources, shotProblem, stagedShot, stagedShotOf, addedFiles, appNameFrom, knownFiles, cleanPlatforms, cleanTags, formDefaults, homepageOf, hasAllLanguages, markProvisional, iconCut, iconOf, isArtwork, isBanner, isPortrait, isSquarish, lengthCaps, overCaps, joinRepoPath, scriptConfig, parseMygoConfig, pickMygoConfig, readmeImages, repoOfEntry, repoScreenshots, resolveImage, schemaEnum, platformsAtDefault, setCategory, setGroup, setPlatforms, sniffImage, submittedScreenshot } from './source.ts';
+import { repoIcons, repoLikelyScreenshots, repoShotSources, shotProblem, stagedShot, stagedShotOf, addedFiles, appNameFrom, knownFiles, cleanPlatforms, cleanTags, formDefaults, homepageOf, hasAllLanguages, markProvisional, iconCut, iconOf, isArtwork, isBanner, isPortrait, isSquarish, lengthCaps, overCaps, displayWidth, overSnippet, snippetOf, summaryRoom, joinRepoPath, scriptConfig, parseMygoConfig, pickMygoConfig, readmeImages, repoOfEntry, repoScreenshots, resolveImage, schemaEnum, platformsAtDefault, setCategory, setGroup, setPlatforms, sniffImage, submittedScreenshot } from './source.ts';
 
 describe('app names', () => {
 	it('takes mygo.json’s spelling of the same name only', () => {
@@ -19,6 +19,20 @@ describe('app names', () => {
 		expect(overCaps({ en: 'x'.repeat(445), ja: 'あ'.repeat(300) }, caps)).toEqual(['ja 300/248']);
 		expect(overCaps({ en: 'x'.repeat(446) }, caps)).toEqual(['en 446/405']);
 		expect(overCaps({ en: 'x', 'zh-CN': '很长'.repeat(500) }, caps)).toEqual([]);
+	});
+
+	it('leaves an app summary the columns its author\'s sentence does not take in the search snippet', () => {
+		const tails = { en: 'A desktop app by UncertaintyDeterminesYou4ndMe, built with Go and MyGo.', 'zh-CN': '由 UncertaintyDeterminesYou4ndMe 用 Go 与 MyGo 开发的桌面应用。' };
+		expect(displayWidth('Go 与 MyGo。')).toBe(12);
+		expect(snippetOf('Runs act.', 'By x.')).toBe('Runs act. By x.');
+		expect(snippetOf('本地运行。', '由 x 开发。')).toBe('本地运行。由 x 开发。');
+		// 160 columns less the 71 of the English sentence and the space before it.
+		expect(summaryRoom(tails)).toEqual({ en: 88, 'zh-CN': 160 - displayWidth(` ${tails['zh-CN']}`) });
+		const en = 'A macOS menu bar view of the flintrade paper-trading agent: P&L, positions, fills and loops.';
+		expect(overSnippet({ en, 'zh-CN': '查看 flintrade 模拟交易代理的 macOS 菜单栏应用。' }, tails)).toEqual(['en 164/160']);
+		expect(overSnippet({ en: en.slice(0, 88) }, tails)).toEqual([]);
+		expect(overSnippet({ en: en.slice(0, 89) }, tails)).toEqual(['en 161/160']);
+		expect(overSnippet({ en }, {})).toEqual([]);
 	});
 
 	it('keeps copy already in every site language', () => {
