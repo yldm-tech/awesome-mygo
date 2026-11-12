@@ -6,17 +6,28 @@
 	"kind": "native",
 	"platforms": [
 		"win",
-		"linux",
 		"mac"
 	],
 	"group": "system",
 	"url": "https://github.com/anghunk/glide",
 	"repo": "anghunk/glide",
 	"summary": {
-		"en": "A lightweight native desktop word translation tool that supports macOS and Windows."
+		"en": "Native selection and screenshot translator for macOS and Windows, comparing several services.",
+		"zh-CN": "原生划词与截图翻译工具，支持 macOS 与 Windows，多服务对照。",
+		"zh-TW": "原生劃詞與截圖翻譯工具，支援 macOS 與 Windows，多服務對照。",
+		"ja": "macOS・Windows 向けのネイティブな選択テキスト・スクリーンショット翻訳ツール。複数サービスを並べて比較。",
+		"ko": "macOS·Windows용 네이티브 번역 도구. 선택한 텍스트와 스크린샷을 여러 서비스로 번역."
 	},
 	"description": {
-		"en": "A lightweight native desktop word translation tool that supports macOS and Windows."
+		"en": "A selection translator for macOS and Windows that lives in the system tray, drawn with MyGo's native UI and no WebView. It translates selected, typed or clipboard text, and text it recognizes locally in screenshots and images, sending it to several services at once, from built-in Google and Bing to DeepL, AI models and a local Ollama, with each result shown separately in a compact floating window.",
+		"zh-CN": "常驻系统托盘的 macOS 与 Windows 划词翻译工具，由 MyGo 原生 UI 绘制，无需 WebView。可翻译选中、输入或剪贴板中的文字，也能在本机识别截图和图片里的文字再翻译；同时请求多个翻译服务，从内置的谷歌、必应到 DeepL、AI 模型和本机 Ollama，结果在紧凑浮窗中分别显示。",
+		"zh-TW": "常駐系統匣的 macOS 與 Windows 劃詞翻譯工具，由 MyGo 原生 UI 繪製，無需 WebView。可翻譯選取、輸入或剪貼簿中的文字，也能在本機辨識截圖與圖片中的文字再翻譯；同時向多個翻譯服務發出請求，從內建的 Google、Bing 到 DeepL、AI 模型與本機 Ollama，結果在精簡的浮動視窗中分別顯示。",
+		"ja": "システムトレイに常駐する macOS・Windows 向けの選択テキスト翻訳ツールで、MyGo のネイティブ UI で描かれ、WebView は使いません。選択・入力・クリップボードのテキストに加え、スクリーンショットや画像の文字もローカルで認識して翻訳します。内蔵の Google・Bing から DeepL、AI モデル、ローカルの Ollama まで複数のサービスに同時に問い合わせ、結果はコンパクトなフローティングウィンドウにサービスごとに表示されます。",
+		"ko": "시스템 트레이에 상주하는 macOS·Windows용 선택 텍스트 번역 도구로, MyGo의 네이티브 UI로 그려 WebView가 없습니다. 선택하거나 입력한 텍스트와 클립보드 텍스트를 번역하고, 스크린샷과 이미지 속 글자도 로컬에서 인식해 번역합니다. 내장 Google·Bing부터 DeepL, AI 모델, 로컬 Ollama까지 여러 서비스에 동시에 요청하며, 결과는 작은 플로팅 창에 서비스별로 보여 줍니다."
 	},
+	"icon": {
+		"file": "glide.webp"
+	},
+	"screenshot": "glide.webp",
 	"added": "2026-11-12T08:07:41Z"
 }
