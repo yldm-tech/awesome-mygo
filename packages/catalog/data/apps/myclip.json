@@ -25,9 +25,7 @@
 	"icon": {
 		"file": "myclip.webp"
 	},
-	"provisional": [
-		"icon"
-	],
+	"provisional": [],
 	"screenshot": "myclip.webp",
 	"added": "2026-11-06T05:15:05Z"
 }
