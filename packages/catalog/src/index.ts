@@ -8,3 +8,4 @@ export { CatalogError } from './validate';
 export * from './likes';
 export * from './score';
 export * from './scores';
+export * from './distribution';

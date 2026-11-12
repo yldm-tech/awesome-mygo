@@ -1,6 +1,7 @@
-import { type App, APPS, HAS_SCORES, appBySlug, appSource, entryScore, fill, hostOf, likeKey, pick } from '@awesome-mygo/catalog';
+import { type App, APPS, DISTRIBUTION_AS_OF, HAS_SCORES, appBySlug, appDistribution, appSource, entryScore, fill, hostOf, likeKey, pick } from '@awesome-mygo/catalog';
 import { Link, useParams } from '@tanstack/react-router';
-import { neighbours } from '../../components/AppDetail';
+import { Fragment } from 'react';
+import { DIST_GUIDES, type DistTone, dayIn, distFormat, distParts, distReleaseUrl, distSign, distUpdater, neighbours } from '../../components/AppDetail';
 import { AppLink, PlatformTags, type AppView, appView } from '../../components/bits';
 import { LikeButton } from '../../components/Like';
 import { ScoreBreakdown } from '../../components/Score';
@@ -93,6 +94,63 @@ export function AppFacts({ view }: { view: AppView }) {
 				</>
 			)}
 		</dl>
+	);
+}
+
+// The theme has no green, so the good marker takes the green the score's top band is written in (retro.css); the hairline keeps the yellow one visible on paper.
+const TONE_DOT: Record<DistTone, string> = { good: 'bg-[#1f7a45]', warn: 'bg-yel', bad: 'bg-red', neutral: 'bg-slate' };
+
+// How the app's latest release is shipped, as on the original look's page but compact: for each system a line of format chips with the state of its signature, a line with its updater, then the release, the day the distribution data was last updated and MyGo's guides. The signer, the checked file, the note and the day of the check are in the state's tooltip. It sits in the column that scrolls, after the score's breakdown: the column of facts beside it is only as tall as the window, and three systems' lines would push the actions and the badge out of it. Nothing for an app without a record.
+function AppDistribution({ app }: { app: App }) {
+	const t = useT();
+	const lang = useLang();
+	const rec = appDistribution(app);
+	if (!rec) return null;
+	return (
+		<section aria-labelledby='app-dist-h' className='grid min-w-0 gap-1'>
+			<h2 id='app-dist-h' className='m-0 text-[13px] font-normal text-muted'>
+				{t.dist_h}
+			</h2>
+			<dl className='m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1'>
+				{distParts(rec).map(({ os, part }) => {
+					const sign = os === 'linux' ? undefined : distSign(os, part, t, lang);
+					return (
+						<Fragment key={os}>
+							<dt className='text-faint'>{t[`platform_${os}`]}</dt>
+							<dd className='m-0 min-w-0'>
+								<span className='flex flex-wrap items-center gap-x-1 gap-y-0.5'>
+									{part.formats.map((f) => (
+										<span key={f} className='platform-tag'>
+											{distFormat(f, t)}
+										</span>
+									))}
+									{sign && (
+										<span className='ml-1 inline-flex items-center gap-1.5' title={sign.title}>
+											<span aria-hidden='true' className={`size-2 flex-none rounded-full border border-ink/30 ${TONE_DOT[sign.tone]}`} />
+											{sign.label}
+											{sign.stapled && <span className='text-muted'>· {t.dist_stapled}</span>}
+										</span>
+									)}
+								</span>
+								<span className='block text-muted'>{distUpdater(part, t)}</span>
+							</dd>
+						</Fragment>
+					);
+				})}
+			</dl>
+			<p className='m-0 flex flex-wrap items-center gap-x-3 text-xs text-muted'>
+				<a className={`${lnk} font-mono`} href={distReleaseUrl(rec)} target='_blank' rel='noopener'>
+					{fill(t.dist_release, { x: rec.tag })}
+				</a>
+				{rec.prerelease && <span className='platform-tag'>{t.dist_prerelease}</span>}
+				{DISTRIBUTION_AS_OF && <time dateTime={DISTRIBUTION_AS_OF}>{fill(t.dist_updated, { x: dayIn(DISTRIBUTION_AS_OF, lang) })}</time>}
+				{DIST_GUIDES.map((g) => (
+					<a key={g.key} className={lnk} href={g.url} target='_blank' rel='noopener'>
+						{t[g.key]} <span aria-hidden='true'>↗</span>
+					</a>
+				))}
+			</p>
+		</section>
 	);
 }
 
@@ -200,14 +258,15 @@ function Page({ app }: { app: App }) {
 						</li>
 					</ol>
 				</nav>
-				{/* On a phone the name comes first, then the screenshot, then the facts; on the desktop the screenshot takes the left column and the name and facts stack on the right. The score's breakdown follows the description, in the column that scrolls. */}
-				{/* On the desktop the panel takes the height the window has left. The screenshot column is no wider than 1.6 times that height (less the padding and room for the description), so on a short screen the screenshot shrinks and the description under it stays in view. The author's other apps scroll on their own under the facts, and the left column scrolls too if a long description still does not fit. */}
+				{/* On a phone the name comes first, then the screenshot, then the facts; on the desktop the screenshot takes the left column and the name and facts stack on the right. The score's breakdown and how the release is shipped follow the description, in the column that scrolls. */}
+				{/* On the desktop the panel takes the height the window has left. The screenshot column is no wider than 1.6 times that height (less the padding and room for the description), so on a short screen the screenshot shrinks and the description under it stays in view. The author's other apps scroll on their own under the facts, and the left column scrolls too if a long description, the score's breakdown and how the release is shipped still do not fit. */}
 				<article className={`${well} grid gap-4 p-3.5 desk:min-h-0 desk:flex-1 desk:grid-cols-[minmax(0,calc((100dvh_-_400px)_*_1.6))_300px] desk:grid-rows-[auto_minmax(0,1fr)] desk:justify-center desk:gap-x-7 desk:gap-y-3.5 desk:p-5`}>
 					<AppHead app={app} kindLabel={kindLabel} className='desk:col-start-2 desk:row-start-1' />
 					<div className='relative grid content-start gap-4 desk:col-start-1 desk:row-span-2 desk:row-start-1 desk:min-h-0 desk:overflow-y-auto'>
 						<AppShot view={v} priority fit />
 						<p className='m-0 leading-[22px] [&:lang(ko)]:break-keep'>{pick(app.about, lang)}</p>
 						<ScoreBreakdown item={likeKey.app(app)} id='score' />
+						<AppDistribution app={app} />
 					</div>
 					<div className='grid content-start gap-3.5 desk:col-start-2 desk:row-start-2 desk:flex desk:min-h-0 desk:flex-col'>
 						<AppFacts view={v} />

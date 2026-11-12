@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import appSchema from '../data/schema/app.schema.json';
 import articleSchema from '../data/schema/article.schema.json';
+import distributionSchema from '../data/schema/distribution.schema.json';
 import docSchema from '../data/schema/doc.schema.json';
 import pluginSchema from '../data/schema/plugin.schema.json';
 import scoresSchema from '../data/schema/scores.schema.json';
@@ -9,6 +10,7 @@ import templateSchema from '../data/schema/template.schema.json';
 import aiSchema from '../data/schema/ai.schema.json';
 import uiSchema from '../data/schema/ui.schema.json';
 import scoresFile from '../data/scores.json';
+import distributionFile from '../data/distribution.json';
 import { AI_KIND, AI_TOOL_TYPES, AI_TOOLS, AILOGO_CDN, APP_CATEGORIES, APP_GROUPS, APP_KIND, APPS, ARTICLE_KIND, DOC_KIND, ENTRY_GROUPS, type EntryGroup, GROUP_CATEGORY, PLUGIN_KIND, STATE_KIND, TEMPLATE_KIND, TEMPLATES, UI_KIND, appGroup, appSource, ARTICLES, COMMUNITY_PLUGINS, DOCS, PLUGINS, STATE_SOLUTIONS, UI_LIBS, appBySlug, authorProfile, byAdded, byName, byNewest, hostOf, readAppEntry, readAppFile, readApps, readEntry, readDocs, readEntryFile, readAiTools, readPlugins, readTemplates, readUiLibs } from './catalog';
 import { AGENT_FIELDS, AGENT_INPUT_SCHEMA, AGENT_MAX_BYTES, type AgentSubmission, ENTRY_PLACEHOLDERS, MAX_SUBMISSION, SUBMIT_CATS, SUBMIT_KINDS, type SubmitCat, agentSubmissionReport, alreadyListed, buildEntry, codeFence, descMax, editUrl, entryCats, entryFileText, entryPath, entryProblem, guessFromLink, isBadShot, isBadUrl, isEntryComplete, issueMarker, issueUrl, jsonEntry, missingFields, parseEntryJson, parseSubmission, pastedEntryProblem, pastedName, pastedShotRepo, placeholderProblem, readAgentSubmission, shotRepo, slugify, submissionBody, submissionFromIssue, submittedIssue, takesShot, withScheme } from './entry';
 import { LANGS, type LangCode, type Text, fill, langRedirectScript, negotiateLang, pick, validateRootSearch } from './lang';
@@ -16,6 +18,7 @@ import { buildSearchIndex, searchCatalog } from './search';
 import { LIKE_KEYS, likeKey } from './likes';
 import { ACTIVITY_WEEKS, type ScoreSignals, scoreKey, scoreOf } from './score';
 import { type EntryScore, HAS_SCORES, SCORE_FIELDS, SCORE_TARGETS, SCORES_AS_OF, compareByScore, compareScores, entryScore, entrySignals, readScores, scoreRank, scoresFor } from './scores';
+import { DIST_CHECK_FIELDS, DIST_FORMATS, DIST_PLATFORM_FIELDS, DIST_RECORD_FIELDS, DIST_UPDATERS, DISTRIBUTION_AS_OF, type DistRecord, MAC_SIGN, WIN_SIGN, appDistribution, distributionFor, readDistribution } from './distribution';
 import { LOCALES } from './strings';
 import { appDescription, t } from './translate';
 import { CatalogError, Reader, unique } from './validate';
@@ -1204,5 +1207,120 @@ describe('scores', () => {
 		expect(scoresSchema.$defs.signals.required).toEqual(['likes']);
 		expect(scoresSchema.$defs.signals.properties.weeks.maximum).toBe(ACTIVITY_WEEKS);
 		expect(scoresSchema.$defs.signals.properties.releaseDays.maximum).toBe(ACTIVITY_WEEKS * 7);
+	});
+});
+
+describe('distribution', () => {
+	const kit: DistRecord = {
+		repo: 'someone/kit',
+		tag: 'v1.2.0',
+		published: '2026-11-01',
+		mac: { formats: ['dmg', 'tar.gz', 'install.sh'], updates: 'mygo', deltas: true, check: { file: 'kit-1.2.0-arm64.dmg', asset: 301, status: 'notarized', signer: 'Developer ID Application: Someone (TEAM123456)', stapled: true, checked: '2026-11-02' } },
+		win: { formats: ['setup', 'tar.gz', 'install.ps1'], updates: 'mygo', check: { file: 'kit-setup-1.2.0-amd64.exe', asset: 302, status: 'unsigned', checked: '2026-11-02' } },
+		linux: { formats: ['deb', 'rpm', 'tar.gz', 'install.sh'], updates: 'mygo' },
+	};
+	const file = (entries: Record<string, unknown>, asOf: string | null = '2026-11-02') => ({ $schema: './schema/distribution.schema.json', asOf, entries });
+	const read = (entry: unknown, key = 'app:kit') => () => readDistribution(file({ [key]: entry }));
+
+	it('reads the bundled file', () => {
+		expect(() => readDistribution(distributionFile)).not.toThrow();
+		expect(DISTRIBUTION_AS_OF).toBe(readDistribution(distributionFile).asOf);
+		expect(readDistribution(file({}, null))).toEqual({ asOf: null, entries: {} });
+		expect(readDistribution(file({ 'app:kit': kit })).entries['app:kit']).toEqual(kit);
+		// A release of prereleases only, for one system, without an updater or a check yet, and a file that could not be checked.
+		const pre = { repo: 'someone/pre', tag: 'v0.1.0-beta.1', published: '2026-10-30', prerelease: true, mac: { formats: ['zip'], check: { file: 'pre.zip', asset: 9, status: 'unknown', checked: '2026-11-02', note: 'No app bundle in the archive.' } }, win: { formats: ['exe'] } };
+		expect(readDistribution(file({ 'app:pre': pre })).entries['app:pre']).toEqual(pre);
+		// An unsigned installer package, and an app whose signature no longer verifies.
+		const pkg = { repo: 'someone/pkg', tag: 'v1', published: '2026-10-30', mac: { formats: ['pkg'], check: { file: 'pkg.pkg', asset: 10, status: 'unsigned', pkg: true, checked: '2026-11-02' } } };
+		expect(readDistribution(file({ 'app:pkg': pkg })).entries['app:pkg']).toEqual(pkg);
+		const broken = { ...kit, mac: { ...kit.mac, check: { file: 'kit.dmg', asset: 11, status: 'invalid', signer: 'Developer ID Application: Someone (TEAM123456)', checked: '2026-11-02', note: 'the signature does not verify: a sealed resource is missing or invalid' } } };
+		expect(readDistribution(file({ 'app:kit': broken })).entries['app:kit']).toEqual(broken);
+	});
+
+	it('names the app\'s key and the field of each mistake', () => {
+		const mac = kit.mac!;
+		const win = kit.win!;
+		const check = mac.check!;
+		expect(read({ ...kit, stars: 3 })).toThrow(/distribution.json \(app:kit\): stars is not a known field/);
+		expect(read({ ...kit, repo: 'kit' })).toThrow(/\(app:kit\): repo must be owner\/name/);
+		expect(read({ ...kit, tag: '' })).toThrow(/\(app:kit\): tag must be a non-empty string/);
+		expect(read({ ...kit, published: '2026-11-1' })).toThrow(/\(app:kit\): published must be a day like 2026-11-02/);
+		expect(read({ ...kit, published: '2026-02-30' })).toThrow(/\(app:kit\): published must be a day that exists/);
+		expect(read({ ...kit, prerelease: false })).toThrow(/\(app:kit\): prerelease is written only as true/);
+		expect(read({ repo: 'someone/kit', tag: 'v1', published: '2026-11-01' })).toThrow(/\(app:kit\): mac or win or linux is required/);
+		expect(read({ ...kit, mac: ['dmg'] })).toThrow(/\(app:kit\): mac must be an object/);
+		expect(read({ ...kit, mac: { ...mac, size: 1 } })).toThrow(/\(app:kit\): mac.size is not a known field/);
+		expect(read({ ...kit, mac: { ...mac, formats: [] } })).toThrow(/\(app:kit\): mac.formats must be a list of at least 1 non-empty strings/);
+		expect(read({ ...kit, mac: { ...mac, formats: ['dmg', 'msi'] } })).toThrow(/\(app:kit\): mac.formats must hold only formats of mac \(dmg, pkg, zip, tar.gz, binary, install.sh\), got "msi"/);
+		expect(read({ ...kit, mac: { ...mac, formats: ['zip', 'dmg'] } })).toThrow(/\(app:kit\): mac.formats must list each format once, in the order dmg, pkg/);
+		expect(read({ ...kit, linux: { formats: ['deb', 'deb'] } })).toThrow(/\(app:kit\): linux.formats must list each format once/);
+		expect(read({ ...kit, win: { ...win, updates: 'squirrel' } })).toThrow(/\(app:kit\): win.updates must be one of mygo, sparkle, tauri, electron, got "squirrel"/);
+		expect(read({ ...kit, mac: { ...mac, updates: 'sparkle' } })).toThrow(/\(app:kit\): mac.deltas is recorded only with the MyGo updater/);
+		expect(read({ ...kit, mac: { ...mac, updates: undefined } })).toThrow(/\(app:kit\): mac.deltas is recorded only with the MyGo updater/);
+		expect(read({ ...kit, win: { ...win, deltas: false } })).toThrow(/\(app:kit\): win.deltas is written only as true/);
+		expect(read({ ...kit, linux: { formats: ['deb'], check: { ...check, status: 'unsigned', signer: undefined } } })).toThrow(/\(app:kit\): linux.check is not recorded on linux/);
+		expect(read({ ...kit, mac: { ...mac, check: 'notarized' } })).toThrow(/\(app:kit\): mac.check must be an object/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, sha256: 'ab' } } })).toThrow(/\(app:kit\): mac.check.sha256 is not a known field/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, status: 'trusted' } } })).toThrow(/\(app:kit\): mac.check.status must be one of notarized, developer-id, untrusted, invalid, adhoc, unsigned, unknown, got "trusted"/);
+		expect(read({ ...kit, win: { ...win, check: { ...win.check!, status: 'notarized' } } })).toThrow(/\(app:kit\): win.check.status must be one of trusted, untrusted, invalid, unsigned, unknown, got "notarized"/);
+		expect(read({ ...kit, win: { ...win, check: { ...win.check!, stapled: false } } })).toThrow(/\(app:kit\): win.check.stapled is recorded only on mac/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, stapled: 'yes' } } })).toThrow(/\(app:kit\): mac.check.stapled must be true or false/);
+		expect(read({ ...kit, win: { ...win, check: { ...win.check!, pkg: true } } })).toThrow(/\(app:kit\): win.check.pkg is recorded only on mac/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, pkg: false } } })).toThrow(/\(app:kit\): mac.check.pkg is written only as true/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, asset: 0 } } })).toThrow(/\(app:kit\): mac.check.asset must be the release asset's GitHub id, a whole number from 1, got 0/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, asset: '301' } } })).toThrow(/\(app:kit\): mac.check.asset must be the release asset's GitHub id/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, file: undefined } } })).toThrow(/\(app:kit\): mac.check.file must be a non-empty string/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, checked: '2026-13-01' } } })).toThrow(/\(app:kit\): mac.check.checked must be a day that exists/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, status: 'adhoc' } } })).toThrow(/\(app:kit\): mac.check.signer is not recorded for a file that is adhoc/);
+		expect(read({ ...kit, win: { ...win, check: { ...win.check!, signer: 'Someone' } } })).toThrow(/\(app:kit\): win.check.signer is not recorded for a file that is unsigned/);
+		expect(read({ ...kit, mac: { ...mac, check: { ...check, status: 'unknown', signer: undefined } } })).toThrow(/\(app:kit\): mac.check.note is required when the status is unknown/);
+		expect(read(kit, 'ui:someone/kit')).toThrow(/distribution.json: entries.ui:someone\/kit is not an app key/);
+		expect(read('kit')).toThrow(/distribution.json \(app:kit\): must be an object/);
+		expect(() => readDistribution(file({ 'app:kit': kit }, null))).toThrow(/distribution.json: asOf is required once there are entries/);
+		expect(() => readDistribution(file({}, '2026/11/02'))).toThrow(/distribution.json: asOf must be a day/);
+		expect(() => readDistribution({ ...file({}), $schema: './schema/scores.schema.json' })).toThrow(/distribution.json: \$schema must be/);
+		expect(() => readDistribution({ ...file({}), checks: [] })).toThrow(/distribution.json: checks is not a known field/);
+		expect(read(kit)).not.toThrow();
+	});
+
+	it('shows a record only of the repository the app names now', () => {
+		const app = APPS.find((a) => a.repo)!;
+		// An app without a repo field is read from its link when that is a repository, and one with neither has no record.
+		const linked = { slug: 'linked', url: 'https://github.com/someone/linked/tree/main' };
+		const closed = { slug: 'closed', url: 'https://closed.example.com/' };
+		const records = readDistribution(file({
+			[`app:${app.slug}`]: { ...kit, repo: app.repo },
+			'app:linked': { ...kit, repo: 'someone/linked' },
+			'app:closed': kit,
+		}));
+		expect(distributionFor(records, app)).toEqual({ ...kit, repo: app.repo });
+		expect(distributionFor(records, linked)?.repo).toBe('someone/linked');
+		expect(distributionFor(records, closed)).toBeUndefined();
+		expect(distributionFor(records, { ...linked, repo: 'someone/renamed' })).toBeUndefined();
+		expect(distributionFor(records, APPS.find((a) => a.repo && a.repo !== app.repo)!)).toBeUndefined();
+		expect(distributionFor(readDistribution(file({ [`app:${app.slug}`]: { ...kit, repo: 'someone/elsewhere' } })), app)).toBeUndefined();
+		expect(distributionFor(readDistribution(file({}, null)), app)).toBeUndefined();
+		// The site's records are the bundled file's, shown by the same rule.
+		const bundled = readDistribution(distributionFile);
+		for (const a of APPS) expect(appDistribution(a), a.slug).toEqual(distributionFor(bundled, a));
+	});
+
+	it('describes in its schema exactly the fields and values of dist.ts', () => {
+		type Props = { properties: Record<string, { enum?: string[]; items?: { enum: string[] }; properties?: Record<string, unknown> } | false> };
+		const schema = distributionSchema as unknown as { $id: string; properties: Record<string, unknown>; $defs: Record<'record' | 'platform' | 'check' | 'mac' | 'win' | 'linux', Props & { required?: string[] }> };
+		const defs = schema.$defs;
+		expect(distributionFile.$schema).toBe(`./schema/${schema.$id}`);
+		expect(Object.keys(schema.properties).sort()).toEqual(['$schema', 'asOf', 'entries']);
+		expect(Object.keys(defs.record.properties)).toEqual([...DIST_RECORD_FIELDS]);
+		expect(Object.keys(defs.platform.properties)).toEqual([...DIST_PLATFORM_FIELDS]);
+		expect(Object.keys(defs.check.properties)).toEqual([...DIST_CHECK_FIELDS]);
+		expect(defs.record.required).toEqual(['repo', 'tag', 'published']);
+		expect(defs.platform.required).toEqual(['formats']);
+		expect(defs.check.required).toEqual(['file', 'asset', 'status', 'checked']);
+		expect((defs.platform.properties.updates as { enum: string[] }).enum).toEqual([...DIST_UPDATERS]);
+		for (const os of ['mac', 'win', 'linux'] as const) expect((defs[os].properties.formats as { items: { enum: string[] } }).items.enum, os).toEqual([...DIST_FORMATS[os]]);
+		expect(((defs.mac.properties.check as Props).properties.status as { enum: string[] }).enum).toEqual([...MAC_SIGN]);
+		expect(((defs.win.properties.check as Props).properties.status as { enum: string[] }).enum).toEqual([...WIN_SIGN]);
+		expect(defs.linux.properties.check).toBe(false);
 	});
 });

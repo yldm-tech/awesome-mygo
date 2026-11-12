@@ -1,5 +1,6 @@
-import { type App, APPS, HAS_SCORES, type LangCode, appGroup, appSource, authorProfile, entryScore, fill, hostOf, likeKey, pick } from '@awesome-mygo/catalog';
+import { type App, APPS, DISTRIBUTION_AS_OF, DIST_CHECK_FORMATS, DIST_OSES, DOCS, type DistFormat, type DistOs, type DistPlatform, type DistRecord, type DistUpdater, HAS_SCORES, type LangCode, type MacSign, type StringKey, type Translations, type WinSign, appDistribution, appGroup, appSource, authorProfile, entryScore, fill, hostOf, likeKey, pick } from '@awesome-mygo/catalog';
 import { Link } from '@tanstack/react-router';
+import { Fragment } from 'react';
 import { useLang, useT } from '../lib/lang';
 import { scoreTotal } from '../lib/score';
 import { appBadgeMarkdown } from '../lib/seo';
@@ -35,9 +36,9 @@ export function AppBadge({ app }: { app: App }) {
 	);
 }
 
-// The day the app joined the showcase, in the page's language. Formatted in UTC so the server's render and the visitor's browser agree on the day.
-function addedOn(added: string, lang: LangCode): string {
-	return new Intl.DateTimeFormat(lang, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(added));
+// A day of the catalog (the day the app joined the showcase, the day the distribution data was last updated or a signature checked), in the page's language. Formatted in UTC so the server's render and the visitor's browser agree on the day.
+export function dayIn(day: string, lang: LangCode): string {
+	return new Intl.DateTimeFormat(lang, { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(day));
 }
 
 // Keep URLs breakable when a narrow column needs it, but let the browser use normal punctuation opportunities first.
@@ -93,7 +94,7 @@ export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string
 				<>
 					<dt>{t.f_added}</dt>
 					<dd>
-						<time dateTime={app.added}>{addedOn(app.added, lang)}</time>
+						<time dateTime={app.added}>{dayIn(app.added, lang)}</time>
 					</dd>
 				</>
 			)}
@@ -105,6 +106,172 @@ export function AppFacts({ view, kindLabel }: { view: AppView; kindLabel: string
 				</>
 			)}
 		</dl>
+	);
+}
+
+// ---- distribution ----
+
+// How an app's latest release is shipped (data/distribution.json, through appDistribution), read the same way by both looks: the retro look's page imports these and draws the parts with its own classes.
+
+// How a signing state reads at a glance: good opens without a warning; warn opens only after the system warns or the user overrides it, as an unsigned installer package does; bad will not open (an unsigned app bundle on Apple silicon) or no longer matches its signature; neutral is not known or not checked yet. The words say the same, so the colour is never the only cue.
+export type DistTone = 'good' | 'warn' | 'bad' | 'neutral';
+
+// Each state's tone and words, by system.
+const SIGN_STATES: { mac: Record<MacSign, readonly [DistTone, StringKey]>; win: Record<WinSign, readonly [DistTone, StringKey]> } = {
+	mac: {
+		notarized: ['good', 'dist_mac_notarized'],
+		'developer-id': ['warn', 'dist_mac_devid'],
+		untrusted: ['warn', 'dist_untrusted'],
+		invalid: ['bad', 'dist_invalid'],
+		adhoc: ['warn', 'dist_mac_adhoc'],
+		unsigned: ['bad', 'dist_unsigned'],
+		unknown: ['neutral', 'dist_unknown'],
+	},
+	win: {
+		trusted: ['good', 'dist_win_trusted'],
+		untrusted: ['warn', 'dist_untrusted'],
+		unsigned: ['warn', 'dist_unsigned'],
+		invalid: ['bad', 'dist_invalid'],
+		unknown: ['neutral', 'dist_unknown'],
+	},
+};
+
+export interface DistSign {
+	tone: DistTone;
+	label: string;
+	// Lines under the state: who signed it, and the check's note (why it could not be checked, why the signature fails, or which executable of an archive was checked), which is the workflow's, in English.
+	detail: { text: string; en: boolean }[];
+	// Everything the check recorded, for the state's tooltip: the checked file, the signer as the certificate names it, the note and the day of the check.
+	title?: string;
+	stapled: boolean;
+}
+
+// The certificate's kind before a macOS signer's name, which the state already says.
+const DEV_ID_PREFIX = 'Developer ID Application: ';
+
+// What the system's own checks said of the file that stands for a system, that it has not been checked yet, or that the release offers the system nothing the checks open (only a bare binary or an install script). An unsigned installer package opens after the user overrides Gatekeeper, so it reads as a warning where an unsigned app bundle reads as bad.
+export function distSign(os: 'mac' | 'win', part: DistPlatform, t: Translations, lang: LangCode): DistSign {
+	const { check } = part;
+	if (!check) {
+		const checkable: readonly string[] = DIST_CHECK_FORMATS[os];
+		return { tone: 'neutral', label: part.formats.some((f) => checkable.includes(f)) ? t.dist_pending : t.dist_nocheck, detail: [], stapled: false };
+	}
+	// The reader holds each status to its system's states, so the lookup always finds one.
+	const [state, key] = (SIGN_STATES[os] as Record<string, readonly [DistTone, StringKey]>)[check.status];
+	const tone = os === 'mac' && check.status === 'unsigned' && check.pkg ? 'warn' : state;
+	// The Developer ID prefix is the certificate's kind, which the notarized and Developer ID states already say; any other state keeps it, as the kind is then what matters.
+	const signer = check.signer?.startsWith(DEV_ID_PREFIX) && (check.status === 'notarized' || check.status === 'developer-id') ? check.signer.slice(DEV_ID_PREFIX.length) : check.signer;
+	const detail = [...(signer ? [{ text: fill(t.dist_signer, { x: signer }), en: false }] : []), ...(check.note ? [{ text: check.note, en: true }] : [])];
+	const title = [fill(t.dist_file, { x: check.file }), check.signer && fill(t.dist_signer, { x: check.signer }), check.note, fill(t.dist_checked, { x: dayIn(check.checked, lang) })].filter(Boolean).join('\n');
+	return { tone, label: t[key], detail, title, stapled: check.stapled === true };
+}
+
+const UPDATER_KEYS: Record<DistUpdater, StringKey> = { mygo: 'dist_up_mygo', sparkle: 'dist_up_sparkle', tauri: 'dist_up_tauri', electron: 'dist_up_electron' };
+
+// How the app updates itself on a system, or that the release shows no updater, which is not proof that it has none.
+export function distUpdater(part: DistPlatform, t: Translations): string {
+	if (!part.updates) return t.dist_up_none;
+	const name = part.updates === 'mygo' && part.deltas ? t.dist_up_mygo_delta : t[UPDATER_KEYS[part.updates]];
+	return fill(t.dist_updates, { x: name });
+}
+
+// The formats a chip names in the page's language; the others by their extension or their own name. An executable whose name does not say it installs is only .exe: it may be a portable build or an installer named otherwise, which its name cannot tell.
+const FORMAT_KEYS: Partial<Record<DistFormat, StringKey>> = { setup: 'dist_fmt_setup', binary: 'dist_fmt_binary' };
+const FORMAT_NAMES: Partial<Record<DistFormat, string>> = { dmg: '.dmg', pkg: '.pkg', zip: '.zip', 'tar.gz': '.tar.gz', msi: '.msi', msix: '.msix', exe: '.exe', deb: '.deb', rpm: '.rpm', flatpak: 'Flatpak', snap: 'Snap', arch: 'Arch', apk: 'Alpine' };
+
+export function distFormat(format: DistFormat, t: Translations): string {
+	const key = FORMAT_KEYS[format];
+	return key ? t[key] : FORMAT_NAMES[format] ?? format;
+}
+
+// The systems the record has a part for, in DIST_OSES order.
+export function distParts(rec: DistRecord): { os: DistOs; part: DistPlatform }[] {
+	return DIST_OSES.flatMap((os) => {
+		const part: DistPlatform | undefined = rec[os];
+		return part ? [{ os, part }] : [];
+	});
+}
+
+// The release's page on GitHub. A tag can hold slashes, which stay path separators there.
+export function distReleaseUrl(rec: DistRecord): string {
+	return `https://github.com/${rec.repo}/releases/tag/${rec.tag.split('/').map(encodeURIComponent).join('/')}`;
+}
+
+// MyGo's guides to building, signing and shipping an app and to its updater, linked under the section.
+export const DIST_GUIDES: readonly { url: string; key: StringKey }[] = (
+	[
+		['distribution', 'dist_doc_dist'],
+		['updates', 'dist_doc_updates'],
+	] as const
+).flatMap(([slug, key]) => {
+	const doc = DOCS.find((d) => d.slug === slug);
+	return doc ? [{ url: doc.url, key }] : [];
+});
+
+const TONE_DOT: Record<DistTone, string> = { good: 'bg-green', warn: 'bg-amber', bad: 'bg-err', neutral: 'bg-fg-3' };
+
+// How the app's latest release is shipped, in a card beside its facts: for each system the release offers something for, the formats as chips, the state of its signature with a coloured marker (the day of the check in its tooltip), and how it updates itself; then the release, the day the distribution data was last updated and MyGo's guides. Nothing for an app without a record.
+export function AppDistribution({ app }: { app: App }) {
+	const t = useT();
+	const lang = useLang();
+	const rec = appDistribution(app);
+	if (!rec) return null;
+	return (
+		<section aria-labelledby='app-dist-h' className='flex flex-col gap-3.5 rounded-[14px] border border-line-2 bg-panel px-5 py-[18px] max-sm:px-4 [&_a]:border-b [&_a]:border-line-3 [&_a]:text-fg [&_a]:no-underline [&_a:hover]:border-current [&_a:hover]:text-cyan'>
+			<h2 id='app-dist-h' className={secH}>
+				{t.dist_h}
+			</h2>
+			<dl className='m-0 grid grid-cols-[auto_minmax(0,1fr)] gap-x-5 gap-y-3.5 text-[14px] [&>dd]:m-0 [&>dt]:text-fg-3'>
+				{distParts(rec).map(({ os, part }) => {
+					const sign = os === 'linux' ? undefined : distSign(os, part, t, lang);
+					return (
+						<Fragment key={os}>
+							<dt>{t[`platform_${os}`]}</dt>
+							<dd className='flex min-w-0 flex-col gap-1.5'>
+								<span className='flex flex-wrap gap-1'>
+									{part.formats.map((f) => (
+										<span key={f} className='platform-tag'>
+											{distFormat(f, t)}
+										</span>
+									))}
+								</span>
+								{sign && (
+									<span className='flex flex-wrap items-center gap-x-2 gap-y-0.5' title={sign.title}>
+										<span aria-hidden='true' className={`size-2 flex-none rounded-full ${TONE_DOT[sign.tone]}`} />
+										<span>{sign.label}</span>
+										{sign.stapled && <span className='text-[12px] text-fg-3'>· {t.dist_stapled}</span>}
+									</span>
+								)}
+								{sign?.detail.map((d) => (
+									<span key={d.text} lang={d.en ? 'en' : undefined} className='text-[12px] text-fg-3 wrap-break-word'>
+										{d.text}
+									</span>
+								))}
+								<span className='text-[13px] text-fg-2'>{distUpdater(part, t)}</span>
+							</dd>
+						</Fragment>
+					);
+				})}
+			</dl>
+			<p className='m-0 text-[12px] leading-[1.55] text-fg-3'>{t.dist_about}</p>
+			<p className='m-0 flex flex-wrap items-center gap-x-3 gap-y-1.5 font-mono text-[12px] text-fg-3'>
+				<a href={distReleaseUrl(rec)} target='_blank' rel='noopener'>
+					{fill(t.dist_release, { x: rec.tag })}
+				</a>
+				{rec.prerelease && <span className='platform-tag'>{t.dist_prerelease}</span>}
+				{DISTRIBUTION_AS_OF && <time dateTime={DISTRIBUTION_AS_OF}>{fill(t.dist_updated, { x: dayIn(DISTRIBUTION_AS_OF, lang) })}</time>}
+			</p>
+			{DIST_GUIDES.length > 0 && (
+				<p className='m-0 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[12px]'>
+					<span className='text-fg-3'>{t.dist_guides}</span>
+					{DIST_GUIDES.map((g) => (
+						<a key={g.key} href={g.url} target='_blank' rel='noopener'>
+							{t[g.key]} <span aria-hidden='true'>↗</span>
+						</a>
+					))}
+				</p>
+			)}
+		</section>
 	);
 }
 

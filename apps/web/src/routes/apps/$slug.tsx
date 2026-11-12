@@ -1,6 +1,6 @@
 import { appBySlug, appGroup, likeKey, pick } from '@awesome-mygo/catalog';
 import { Link, createFileRoute, notFound } from '@tanstack/react-router';
-import { AppActions, AppBadge, AppFacts, AppPager, MoreBy, secH } from '../../components/AppDetail';
+import { AppActions, AppBadge, AppDistribution, AppFacts, AppPager, MoreBy, secH } from '../../components/AppDetail';
 import { KindTag, MonoTile, PlatformTags, WinBar, appView } from '../../components/bits';
 import { ScoreBreakdown } from '../../components/Score';
 import { useLang, useT } from '../../lib/lang';
@@ -34,7 +34,7 @@ function AppPage() {
 	const kindLabel = app.kind === 'native' ? t.surf_native : t.web_fe;
 	const group = appGroup(app);
 
-	// The hero: the icon with its glow beside what the app is, then the actions. The body: the screenshot and the description, with the facts, the score and the badge beside them (under them below split), then the author's other apps and the previous and next apps.
+	// The hero: the icon with its glow beside what the app is, then the actions. The body: the screenshot and the description, with the facts, how the release is shipped, the score and the badge beside them (under them below split), then the author's other apps and the previous and next apps.
 	return (
 		<article className='page enter gap-11 max-sm:gap-8'>
 			<nav aria-label={t.a_crumbs}>
@@ -94,6 +94,7 @@ function AppPage() {
 				</div>
 				<aside className='sticky top-24 flex flex-col gap-7 max-split:static'>
 					<AppFacts view={v} kindLabel={kindLabel} />
+					<AppDistribution app={app} />
 					<ScoreBreakdown item={likeKey.app(app)} id='score' className='rounded-[14px] border border-line-2 bg-panel px-5 py-[18px] max-sm:px-4' />
 					<AppBadge app={app} />
 				</aside>

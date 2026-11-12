@@ -1,0 +1,279 @@
+name: Update distribution
+
+# Once a day this records in packages/catalog/data/distribution.json how every app is shipped (packages/catalog/src/dist.ts): for each operating system, the formats its repository's latest GitHub release offers, how the app updates itself, and whether the installer passes the system's own signature checks. It runs in three stages, with packages/enrich, and pushes the change to main as the site's GitHub App, so that CI and the deployment run on it; the site reads the file when it is built (packages/catalog/src/distribution.ts). A run that fails writes nothing, and the next day's run makes up for it.
+#
+# The plan (distribution.ts, on Linux) reads every app's latest release, sorts its files by system and format, and queues the installers to check: one per system for macOS and Windows, never for Linux. A check is queued again only when the release's installer changed or the last check is 30 days old, unless a manual run asks for a full pass. The checks (distribution-check.ts) run on a macOS runner (codesign, spctl and stapler) and on a Windows runner (Get-AuthenticodeSignature); each downloads the installers into a directory of its own and reads their signatures without ever running the downloaded code, and a job runs only when the plan queued checks for its system. The merge (distribution-merge.ts, on Linux) puts the results into the plan's records, fails when too many checks could not run, writes the file, and the catalog's tests check it before it is committed. The summaries of the plan and the merge list what was checked, what could not be, and the apps whose release offers no system.
+#
+# A pull request that changes this workflow or the code of its stages runs it as a dry run on a few apps, checking all of their installers again: the merge writes distribution.json in its checkout so that the catalog's tests check what the changed code wrote, and nothing is committed.
+#
+# Secrets: SUBMIT_APP_PRIVATE_KEY, as for the Update scores workflow. Variables: SUBMIT_APP_CLIENT_ID. No model is asked.
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: Check every installer again, even those checked in the last 30 days
+        type: boolean
+        default: false
+      only:
+        description: Apps to plan, space-separated slugs (e.g. mygo-music vitals); all when empty, and every other app keeps its record
+        default: ''
+      dry_run:
+        description: Only report what it found, without committing
+        type: boolean
+        default: false
+      max_checks:
+        description: Installers to check at most; unlimited when empty or 0
+        default: ''
+  pull_request:
+    paths:
+      - .github/workflows/distribution.yml
+      - packages/enrich/src/dist*.ts
+      - packages/enrich/src/distribution*.ts
+      - packages/catalog/src/dist.ts
+
+# The runs that commit distribution.json go one at a time. A pull request's dry run commits nothing, so it has a group of its own, where a newer push to the pull request cancels the run before it; in the shared group it would take the place of a scheduled run waiting there.
+concurrency:
+  group: update-distribution${{ github.event_name == 'pull_request' && format('-pr-{0}', github.event.pull_request.number) || '' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    if: github.repository == 'yldm-tech/awesome-mygo'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      sha: ${{ steps.queue.outputs.sha }}
+      mac: ${{ steps.queue.outputs.mac }}
+      win: ${{ steps.queue.outputs.win }}
+    steps:
+      # A pull request, which may come from a fork, has no secrets: it reads GitHub with the workflow's own token.
+      - id: app
+        if: github.event_name != 'pull_request'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.SUBMIT_APP_CLIENT_ID }}
+          private-key: ${{ secrets.SUBMIT_APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || 'main' }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Plan the records and the checks
+        env:
+          GITHUB_TOKEN: ${{ steps.app.outputs.token || github.token }}
+          PLAN_FILE: ${{ runner.temp }}/distribution-plan.json
+          REPORT_FILE: ${{ runner.temp }}/distribution-plan-report.md
+          # A pull request checks every installer of its sample again, so that the code it changes runs.
+          FULL: ${{ (github.event_name == 'pull_request' || inputs.full) && 'true' || 'false' }}
+          ONLY: ${{ github.event_name == 'pull_request' && 'mygo-music vitals lunabox translator233 pitstop chairlift' || inputs.only }}
+          MAX_CHECKS: ${{ inputs.max_checks }}
+        run: pnpm --filter @awesome-mygo/enrich distribution
+
+      # The check jobs run the commit the plan ran, and run only for a system with checks queued.
+      - id: queue
+        name: Count the queued checks
+        env:
+          PLAN_FILE: ${{ runner.temp }}/distribution-plan.json
+        run: |
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          node --input-type=module -e "
+            import { readFileSync } from 'node:fs';
+            const { checks } = JSON.parse(readFileSync(process.env.PLAN_FILE, 'utf8'));
+            for (const os of ['mac', 'win']) console.log(os + '=' + checks.filter((check) => check.os === os).length);
+          " >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: distribution-plan
+          path: ${{ runner.temp }}/distribution-plan.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Summary
+        if: always()
+        run: |
+          report="$RUNNER_TEMP/distribution-plan-report.md"
+          if [[ -s "$report" ]]; then cat "$report" >> "$GITHUB_STEP_SUMMARY"; fi
+
+  # No token reaches the check jobs: they download third parties' installers, which are public, and need nothing else from GitHub, so checkout keeps no credentials in the workspace.
+  check-mac:
+    needs: plan
+    if: github.repository == 'yldm-tech/awesome-mygo' && needs.plan.outputs.mac != '0'
+    runs-on: macos-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.plan.outputs.sha }}
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --filter @awesome-mygo/enrich
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: distribution-plan
+          path: ${{ runner.temp }}/plan
+
+      - name: Check the macOS installers
+        env:
+          PLAN_FILE: ${{ runner.temp }}/plan/distribution-plan.json
+          RESULTS_FILE: ${{ runner.temp }}/results/results-mac.json
+          WORK_DIR: ${{ runner.temp }}/distribution-work
+        run: pnpm --filter @awesome-mygo/enrich distribution-check
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: distribution-results-mac
+          path: ${{ runner.temp }}/results/results-mac.json
+          if-no-files-found: error
+          retention-days: 7
+
+  check-win:
+    needs: plan
+    if: github.repository == 'yldm-tech/awesome-mygo' && needs.plan.outputs.win != '0'
+    runs-on: windows-latest
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.plan.outputs.sha }}
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --filter @awesome-mygo/enrich
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: distribution-plan
+          path: ${{ runner.temp }}/plan
+
+      - name: Check the Windows installers
+        env:
+          PLAN_FILE: ${{ runner.temp }}/plan/distribution-plan.json
+          RESULTS_FILE: ${{ runner.temp }}/results/results-win.json
+          WORK_DIR: ${{ runner.temp }}/distribution-work
+        run: pnpm --filter @awesome-mygo/enrich distribution-check
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: distribution-results-win
+          path: ${{ runner.temp }}/results/results-win.json
+          if-no-files-found: error
+          retention-days: 7
+
+  # The merge runs when the plan succeeded and each check job succeeded or had nothing to check; a cancelled run merges nothing.
+  merge:
+    needs: [plan, check-mac, check-win]
+    if: >-
+      !cancelled() && github.repository == 'yldm-tech/awesome-mygo' && needs.plan.result == 'success'
+      && needs.check-mac.result != 'failure' && needs.check-mac.result != 'cancelled'
+      && needs.check-win.result != 'failure' && needs.check-win.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DRY_RUN: ${{ (github.event_name == 'pull_request' || inputs.dry_run) && 'true' || 'false' }}
+    steps:
+      # The app's token lasts an hour, less than the check jobs may take, so the merge mints its own.
+      - id: app
+        if: github.event_name != 'pull_request'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.SUBMIT_APP_CLIENT_ID }}
+          private-key: ${{ secrets.SUBMIT_APP_PRIVATE_KEY }}
+
+      # The merge writes onto the newest main, which the push needs; a pull request merges into its own head, whose code it tests.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || 'main' }}
+          token: ${{ steps.app.outputs.token || github.token }}
+          # The whole history, so that the push can rebase onto a main that moved during the run.
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Commit as the bot
+        if: env.DRY_RUN != 'true'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          BOT: ${{ steps.app.outputs.app-slug }}[bot]
+        run: |
+          git config user.name "$BOT"
+          git config user.email "$(gh api "users/$BOT" --jq .id)+$BOT@users.noreply.github.com"
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: distribution-plan
+          path: ${{ runner.temp }}/plan
+
+      - if: needs.plan.outputs.mac != '0' || needs.plan.outputs.win != '0'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: distribution-results-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/results
+
+      - name: Merge the checks into the records
+        env:
+          PLAN_FILE: ${{ runner.temp }}/plan/distribution-plan.json
+          RESULTS_DIR: ${{ runner.temp }}/results
+          REPORT_FILE: ${{ runner.temp }}/distribution-report.md
+          COMMIT_FILE: ${{ runner.temp }}/distribution-commit.txt
+        run: pnpm --filter @awesome-mygo/enrich distribution-merge
+
+      - name: Check the catalog
+        run: pnpm --filter @awesome-mygo/catalog test
+
+      - name: Commit and push
+        if: env.DRY_RUN != 'true'
+        run: |
+          git add packages/catalog/data/distribution.json
+          if git diff --cached --quiet; then echo 'No record changed'; exit 0; fi
+          git commit -q -F "$RUNNER_TEMP/distribution-commit.txt"
+          # Only this workflow writes distribution.json, so a rebase onto a main that moved meanwhile does not conflict.
+          # A main that moves during the run (several pull requests merged a few seconds apart) refuses the push: rebase onto it, check the rebased tree again, as an app may have been removed or its repository changed, and push, up to five times, waiting longer each time.
+          for try in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            [[ $try == 5 ]] && break
+            sleep $((try * 10))
+            git pull -q --rebase origin main
+            pnpm --filter @awesome-mygo/catalog test
+          done
+          echo "::error::main kept moving; distribution.json was not pushed"
+          exit 1
+
+      - name: Summary
+        if: always()
+        run: |
+          report="$RUNNER_TEMP/distribution-report.md"
+          if [[ -s "$report" ]]; then cat "$report" >> "$GITHUB_STEP_SUMMARY"; fi

@@ -1,0 +1,325 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "distribution.schema.json",
+	"title": "How each app is shipped, from its latest GitHub release: per system the formats it offers, how it updates itself and whether the installer passes the system's own signature checks (packages/catalog/src/dist.ts). Only the scheduled Update distribution workflow writes this file.",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"$schema",
+		"asOf",
+		"entries"
+	],
+	"properties": {
+		"$schema": {
+			"const": "./schema/distribution.schema.json"
+		},
+		"asOf": {
+			"description": "The UTC day of the workflow's last run; null until it first runs.",
+			"oneOf": [
+				{
+					"$ref": "#/$defs/day"
+				},
+				{
+					"type": "null"
+				}
+			]
+		},
+		"entries": {
+			"type": "object",
+			"description": "Each app's record by its key, app:<slug>.",
+			"propertyNames": {
+				"pattern": "^app:\\S+$"
+			},
+			"additionalProperties": {
+				"$ref": "#/$defs/record"
+			}
+		}
+	},
+	"$defs": {
+		"day": {
+			"type": "string",
+			"pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+			"description": "A day, YYYY-MM-DD."
+		},
+		"text": {
+			"type": "string",
+			"minLength": 1,
+			"pattern": "^[^\\r\\n\\u2028\\u2029]+$"
+		},
+		"record": {
+			"type": "object",
+			"description": "What the workflow recorded of one app's latest release; at least one system has a part.",
+			"additionalProperties": false,
+			"required": [
+				"repo",
+				"tag",
+				"published"
+			],
+			"anyOf": [
+				{
+					"required": [
+						"mac"
+					]
+				},
+				{
+					"required": [
+						"win"
+					]
+				},
+				{
+					"required": [
+						"linux"
+					]
+				}
+			],
+			"properties": {
+				"repo": {
+					"$ref": "common.schema.json#/$defs/repo",
+					"description": "The repository the release was read from; a record of a repository the app no longer names is not shown."
+				},
+				"tag": {
+					"$ref": "#/$defs/text",
+					"description": "The release's tag."
+				},
+				"published": {
+					"$ref": "#/$defs/day",
+					"description": "The UTC day the release was published."
+				},
+				"prerelease": {
+					"const": true,
+					"description": "Set when the repository has only prereleases, whose newest is then the one read."
+				},
+				"mac": {
+					"$ref": "#/$defs/mac"
+				},
+				"win": {
+					"$ref": "#/$defs/win"
+				},
+				"linux": {
+					"$ref": "#/$defs/linux"
+				}
+			}
+		},
+		"platform": {
+			"type": "object",
+			"description": "One system's part of a record.",
+			"additionalProperties": false,
+			"required": [
+				"formats"
+			],
+			"properties": {
+				"formats": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true
+				},
+				"updates": {
+					"enum": [
+						"mygo",
+						"sparkle",
+						"tauri",
+						"electron"
+					],
+					"description": "The updater the release shows; left out when it shows none."
+				},
+				"deltas": {
+					"const": true,
+					"description": "Set when the MyGo updater's release holds delta updates for the system."
+				},
+				"check": {
+					"$ref": "#/$defs/check"
+				}
+			},
+			"dependentSchemas": {
+				"deltas": {
+					"required": [
+						"updates"
+					],
+					"properties": {
+						"updates": {
+							"const": "mygo"
+						}
+					}
+				}
+			}
+		},
+		"check": {
+			"type": "object",
+			"description": "The check of the one file of the release that stands for the system.",
+			"additionalProperties": false,
+			"required": [
+				"file",
+				"asset",
+				"status",
+				"checked"
+			],
+			"properties": {
+				"file": {
+					"$ref": "#/$defs/text",
+					"description": "The checked file's name."
+				},
+				"asset": {
+					"type": "integer",
+					"minimum": 1,
+					"description": "The release asset's GitHub id."
+				},
+				"status": {
+					"type": "string"
+				},
+				"signer": {
+					"$ref": "#/$defs/text",
+					"description": "The certificate's common name; left out when unsigned or signed ad hoc."
+				},
+				"stapled": {
+					"type": "boolean",
+					"description": "macOS only: whether the notarization ticket is stapled to the file or its app."
+				},
+				"pkg": {
+					"const": true,
+					"description": "macOS only: the status is an installer package's own signature, not an app bundle's; left out otherwise."
+				},
+				"checked": {
+					"$ref": "#/$defs/day",
+					"description": "The UTC day of the check."
+				},
+				"note": {
+					"$ref": "#/$defs/text",
+					"description": "Why the check is unknown, untrusted or invalid, or which executable of an archive was checked."
+				}
+			},
+			"allOf": [
+				{
+					"if": {
+						"properties": {
+							"status": {
+								"enum": [
+									"unknown"
+								]
+							}
+						},
+						"required": [
+							"status"
+						]
+					},
+					"then": {
+						"required": [
+							"note"
+						]
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"status": {
+								"enum": [
+									"unsigned",
+									"adhoc"
+								]
+							}
+						},
+						"required": [
+							"status"
+						]
+					},
+					"then": {
+						"not": {
+							"required": [
+								"signer"
+							]
+						}
+					}
+				}
+			]
+		},
+		"mac": {
+			"$ref": "#/$defs/platform",
+			"properties": {
+				"formats": {
+					"items": {
+						"enum": [
+							"dmg",
+							"pkg",
+							"zip",
+							"tar.gz",
+							"binary",
+							"install.sh"
+						]
+					},
+					"description": "The formats the release offers macOS, each once, in this order."
+				},
+				"check": {
+					"properties": {
+						"status": {
+							"enum": [
+								"notarized",
+								"developer-id",
+								"untrusted",
+								"invalid",
+								"adhoc",
+								"unsigned",
+								"unknown"
+							]
+						}
+					}
+				}
+			}
+		},
+		"win": {
+			"$ref": "#/$defs/platform",
+			"properties": {
+				"formats": {
+					"items": {
+						"enum": [
+							"setup",
+							"msi",
+							"msix",
+							"exe",
+							"zip",
+							"tar.gz",
+							"install.ps1"
+						]
+					},
+					"description": "The formats the release offers Windows, each once, in this order."
+				},
+				"check": {
+					"properties": {
+						"status": {
+							"enum": [
+								"trusted",
+								"untrusted",
+								"invalid",
+								"unsigned",
+								"unknown"
+							]
+						},
+						"stapled": false,
+						"pkg": false
+					}
+				}
+			}
+		},
+		"linux": {
+			"$ref": "#/$defs/platform",
+			"properties": {
+				"formats": {
+					"items": {
+						"enum": [
+							"deb",
+							"rpm",
+							"AppImage",
+							"flatpak",
+							"snap",
+							"arch",
+							"apk",
+							"tar.gz",
+							"binary",
+							"install.sh"
+						]
+					},
+					"description": "The formats the release offers Linux, each once, in this order."
+				},
+				"check": false
+			}
+		}
+	}
+}

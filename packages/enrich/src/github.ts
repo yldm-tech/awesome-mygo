@@ -4,7 +4,7 @@ import { rawUrl } from './source.ts';
 const env = process.env;
 
 // A request, tried again twice when the connection drops or GitHub answers 5xx: across the hundreds of requests the discover script makes, one usually does.
-async function request(url: string, init: RequestInit): Promise<Response> {
+export async function request(url: string, init: RequestInit): Promise<Response> {
 	for (let attempt = 0; ; attempt++) {
 		try {
 			const res = await fetch(url, { ...init, signal: AbortSignal.timeout(30_000) });
