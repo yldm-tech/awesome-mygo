@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "acton",
+	"name": "acton",
+	"author": "auron-labs",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/auron-labs/acton/",
+	"repo": "auron-labs/acton",
+	"summary": {
+		"en": "Runs your Github Actions locally using https://nektosact.com in Docker"
+	},
+	"description": {
+		"en": "Runs your Github Actions locally using https://nektosact.com in Docker"
+	},
+	"added": "2026-11-12T01:46:07Z"
+}
