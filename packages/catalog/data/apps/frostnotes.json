@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "frostnotes",
+	"name": "Frostnotes",
+	"author": "frostyard",
+	"kind": "native",
+	"platforms": [
+		"linux"
+	],
+	"group": "notes",
+	"url": "https://github.com/frostyard/frostnotes",
+	"repo": "frostyard/frostnotes",
+	"summary": {
+		"en": "Plain Markdown notes in your own folder, in the spirit of Obsidian, synced through a hub you host.",
+		"zh-CN": "纯 Markdown 文件笔记应用，类似 Obsidian，经自建中心同步。",
+		"zh-TW": "純 Markdown 檔案筆記應用，類似 Obsidian，經自架中心同步。",
+		"ja": "Markdown ファイルのままノートを扱う Obsidian 風アプリ。自前のハブで同期。",
+		"ko": "Markdown 파일 그대로 노트를 다루는 Obsidian 풍 앱. 자체 호스팅 허브로 동기화."
+	},
+	"description": {
+		"en": "A Linux desktop app for notes kept as plain Markdown files in a folder you own, drawn with MyGo's native UI and frostui, with live preview. It opens Obsidian vaults as they are. Only the desktop app is built with MyGo: the notesd daemon, which indexes the notes, keeps versions and syncs them through a hub you host, and the React web app are made separately.",
+		"zh-CN": "用 MyGo 原生 UI 与 frostui 绘制的 Linux 桌面笔记应用，笔记就是你自己文件夹里的纯 Markdown 文件，支持实时预览，Obsidian 资料库可直接打开。MyGo 只用于桌面应用：负责建立索引、保留版本并通过自托管中心节点同步的 notesd 守护进程，以及 React 网页版，都是另行开发的。",
+		"zh-TW": "用 MyGo 原生 UI 與 frostui 繪製的 Linux 桌面筆記應用程式，筆記就是你自己資料夾裡的純 Markdown 檔案，支援即時預覽，Obsidian 資料庫可直接開啟。MyGo 只用於桌面應用程式：負責建立索引、保留版本並透過自架中心節點同步的 notesd 常駐程式，以及 React 網頁版，都是另行開發的。",
+		"ja": "MyGo のネイティブ UI と frostui で描かれた Linux 向けのデスクトップノートアプリ。ノートは自分のフォルダーにあるプレーンな Markdown ファイルそのもので、ライブプレビューで編集でき、Obsidian の保管庫もそのまま開けます。MyGo で作られているのはデスクトップアプリだけで、ノートの索引付け、バージョンの保存、自前のハブとの同期を担うデーモン notesd と、React 製の Web アプリは別に作られています。",
+		"ko": "MyGo의 네이티브 UI와 frostui로 그린 Linux용 데스크톱 노트 앱입니다. 노트는 직접 소유한 폴더 속 일반 Markdown 파일이며, 실시간 미리보기로 편집하고 Obsidian 보관소도 그대로 엽니다. MyGo로 만든 것은 데스크톱 앱뿐이며, 노트 색인과 버전 보관, 직접 운영하는 허브와의 동기화를 맡는 notesd 데몬과 React 웹 앱은 따로 만들어졌습니다."
+	},
+	"icon": {
+		"file": "frostnotes.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "frostnotes.webp",
+	"added": "2026-11-12T02:29:58Z"
+}
