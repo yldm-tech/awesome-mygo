@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "goshell",
+	"name": "GoShell",
+	"author": "tk103331",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/tk103331/goshell",
+	"repo": "tk103331/goshell",
+	"summary": {
+		"en": "A terminal client for SSH servers, Docker containers and Kubernetes pods, with shortcut commands.",
+		"zh-CN": "连接 SSH 服务器、Docker 容器和 Kubernetes Pod 的终端客户端。",
+		"zh-TW": "連線 SSH 伺服器、Docker 容器和 Kubernetes Pod 的終端機用戶端。",
+		"ja": "SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続するターミナルクライアント。",
+		"ko": "SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하는 터미널 클라이언트."
+	},
+	"description": {
+		"en": "A terminal client written in Go and drawn with MyGo's native UI that opens shells on SSH servers, Docker containers and Kubernetes pods, letting you pick the container from a list. Terminal emulation comes from Ghostty's libghostty-vt, it supports shortcut commands, and the interface is in English and Simplified Chinese. It is still a work in progress, and on Windows it needs administrator rights.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的终端客户端，可连接 SSH 服务器、Docker 容器和 Kubernetes Pod，并从列表中选择容器。终端仿真基于 Ghostty 的 libghostty-vt，支持快捷命令，界面提供英文和简体中文。项目仍在开发中，在 Windows 上需要以管理员权限运行。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的終端機用戶端，可連線 SSH 伺服器、Docker 容器和 Kubernetes Pod，並從清單中選擇容器。終端模擬以 Ghostty 的 libghostty-vt 實作，支援快捷指令，介面提供英文和簡體中文。專案仍在開發中，在 Windows 上需以系統管理員權限執行。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれたターミナルクライアント。SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続でき、コンテナは一覧から選べます。端末エミュレーションには Ghostty の libghostty-vt を使い、ショートカットコマンドに対応し、画面は英語と簡体字中国語で表示できます。まだ開発中で、Windows では管理者権限での実行が必要です。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 터미널 클라이언트입니다. SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하며 컨테이너는 목록에서 고를 수 있습니다. 터미널 에뮬레이션은 Ghostty의 libghostty-vt를 쓰고, 단축 명령을 지원하며, 화면은 영어와 중국어 간체로 볼 수 있습니다. 아직 개발 중이며 Windows에서는 관리자 권한으로 실행해야 합니다."
+	},
+	"icon": {
+		"file": "goshell.webp"
+	},
+	"screenshot": "goshell.webp",
+	"added": "2026-11-12T02:29:58Z"
+}
