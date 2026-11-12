@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "frostmail",
+	"name": "Frostmail",
+	"author": "frostyard",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux"
+	],
+	"group": "chat",
+	"url": "https://github.com/frostyard/frostmail",
+	"repo": "frostyard/frostmail",
+	"summary": {
+		"en": "A Linux and Windows mail client modeled on Apple Mail, with contacts, calendars and tasks.",
+		"zh-CN": "仿照 Apple Mail 的桌面邮件客户端，带联系人、日历和任务。",
+		"zh-TW": "仿照 Apple Mail 的桌面郵件用戶端，附聯絡人、行事曆與待辦事項。",
+		"ja": "Apple Mail のように使うメールクライアント。連絡先、カレンダー、タスクも扱う。",
+		"ko": "Apple Mail처럼 쓰는 데스크톱 메일 클라이언트. 연락처, 캘린더, 할 일도 다룹니다."
+	},
+	"description": {
+		"en": "A pre-release mail client for Linux and Windows that works like Apple Mail, drawn with MyGo's native UI. It syncs, searches and sends IMAP, Gmail, iCloud and Outlook.com mail, with contacts, calendars and tasks over CardDAV, CalDAV, Google Tasks and Microsoft Graph. MyGo builds the desktop app; sync runs in a separate Go daemon, and lodge serves a React web version.",
+		"zh-CN": "由 MyGo 原生 UI 绘制、用法仿照 Apple Mail 的 Linux 与 Windows 邮件客户端，尚在预发布阶段。可同步、搜索并发送 IMAP、Gmail、iCloud 与 Outlook.com 邮件，也通过 CardDAV、CalDAV 等管理联系人、日历和任务。MyGo 只构建桌面应用，同步由独立的 Go 守护进程完成，lodge 另以 React 提供网页版。",
+		"zh-TW": "由 MyGo 原生 UI 繪製、用法仿照 Apple Mail 的 Linux 與 Windows 郵件用戶端，仍為預發布版。可同步、搜尋並寄送 IMAP、Gmail、iCloud 與 Outlook.com 郵件，也透過 CardDAV、CalDAV 等管理聯絡人、行事曆與待辦。MyGo 只建置桌面應用程式，同步由獨立的 Go 常駐程式完成，lodge 另以 React 提供網頁版。",
+		"ja": "MyGo のネイティブ UI で描かれた、Apple Mail のように使える Linux・Windows 向けメールクライアントで、まだプレリリース版です。IMAP、Gmail、iCloud、Outlook.com のアカウントを同期・検索・送信でき、CardDAV や CalDAV などで連絡先、カレンダー、タスクも扱います。MyGo で作られているのはデスクトップアプリで、同期は別の Go デーモンが担い、Web 版は lodge が React で提供します。",
+		"ko": "MyGo의 네이티브 UI로 그린 Linux·Windows용 메일 클라이언트로, Apple Mail처럼 동작하며 아직 프리릴리스 단계입니다. IMAP, Gmail, iCloud, Outlook.com 계정을 동기화·검색·발송하고, CardDAV, CalDAV 등으로 연락처, 캘린더, 할 일도 관리합니다. MyGo로 만든 것은 데스크톱 앱이며, 동기화는 별도의 Go 데몬이 맡고 웹 버전은 lodge가 React로 제공합니다."
+	},
+	"icon": {
+		"file": "frostmail.webp"
+	},
+	"screenshot": "frostmail.webp",
+	"added": "2026-11-12T02:29:58Z"
+}
