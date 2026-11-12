@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "miya-desktop",
+	"name": "Miya Desktop",
+	"author": "lsongdev",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://miya.lsong.org",
+	"repo": "lsongdev/miya-desktop",
+	"summary": {
+		"en": "A native workspace for chatting with ACP agents, with MCP tools, skills and remote chat channels.",
+		"zh-CN": "原生 AI 智能体工作区：通过 ACP 对话，支持 MCP 工具、技能与远程聊天渠道。",
+		"zh-TW": "原生 AI 代理工作區：透過 ACP 對話，支援 MCP 工具、技能與遠端聊天頻道。",
+		"ja": "ACP で AI エージェントと話すネイティブなワークスペース。MCP・スキル・リモートチャット対応。",
+		"ko": "ACP로 AI 에이전트와 대화하는 네이티브 워크스페이스. MCP 도구, 스킬, 원격 채팅 채널 지원."
+	},
+	"description": {
+		"en": "An AI agent workspace drawn with MyGo's native UI, with no HTML, JavaScript or webview. It runs built-in Miya profiles and external stdio ACP agents such as OpenCode, streaming Markdown conversations with blocks for thoughts, tool calls and plans. It adds MCP tools from a marketplace, a Skills registry and an embedded gateway that links remote chat channels such as WeChat to the agents.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 AI 智能体工作区，不用 HTML、JavaScript，也没有 WebView。它可运行内置的 Miya 配置，也能通过 stdio 接入 OpenCode 等外部 ACP 智能体，以 Markdown 流式显示对话，并用区块呈现思考、工具调用与计划。另有 MCP 工具市场、Skills 注册表，以及把微信等远程聊天渠道接入智能体的内置网关。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 AI 代理工作區，不用 HTML、JavaScript，也沒有 WebView。它可執行內建的 Miya 設定檔，也能透過 stdio 接入 OpenCode 等外部 ACP 代理，以 Markdown 串流顯示對話，並用區塊呈現思考、工具呼叫與計畫。另有 MCP 工具市集、Skills 登錄庫，以及把微信等遠端聊天頻道接到代理的內建閘道。",
+		"ja": "MyGo のネイティブ UI で描かれた AI エージェント用のワークスペース。HTML も JavaScript も WebView も使いません。内蔵の Miya プロファイルと、OpenCode など stdio で接続する外部 ACP エージェントを動かし、思考・ツール呼び出し・計画をブロックで示しながら Markdown の会話をストリーミング表示します。MCP マーケットプレイス、Skills レジストリ、WeChat などのリモートチャットをエージェントにつなぐ内蔵ゲートウェイも備えています。",
+		"ko": "MyGo의 네이티브 UI로 그린 AI 에이전트 워크스페이스로, HTML도 JavaScript도 웹뷰도 쓰지 않습니다. 내장 Miya 프로필과 OpenCode 같은 stdio 기반 외부 ACP 에이전트를 실행하고, 생각, 도구 호출, 계획을 블록으로 보여 주며 Markdown 대화를 스트리밍합니다. MCP 마켓플레이스, Skills 레지스트리, WeChat 같은 원격 채팅 채널을 에이전트에 연결하는 내장 게이트웨이도 갖추고 있습니다."
+	},
+	"icon": {
+		"file": "miya-desktop.webp"
+	},
+	"screenshot": "miya-desktop.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-12T02:29:58Z"
+}
