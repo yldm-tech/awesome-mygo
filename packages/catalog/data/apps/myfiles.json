@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "myfiles",
+	"name": "MyFiles",
+	"author": "f1sherb0y",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "system",
+	"url": "https://github.com/f1sherb0y/MyFiles",
+	"repo": "f1sherb0y/MyFiles",
+	"summary": {
+		"en": "A fast, compact Windows file manager with tabs, split panes and instant search.",
+		"zh-CN": "快速、紧凑的 Windows 文件管理器，支持标签页、分屏和即时搜索。",
+		"zh-TW": "快速、精簡的 Windows 檔案管理工具，支援分頁、分割窗格與即時搜尋。",
+		"ja": "タブと画面分割、即時検索を備えた、高速でコンパクトな Windows 用ファイルマネージャー。",
+		"ko": "탭, 화면 분할, 즉시 검색을 갖춘 빠르고 가벼운 Windows 파일 관리자."
+	},
+	"description": {
+		"en": "A file manager for Windows meant to replace Explorer, written in pure Go and drawn on the GPU with MyGo's native UI, shipped as a single 16 MB exe. Folders open in a few milliseconds, tabs split into panes by dragging, and typing searches the folder or the whole computer, including file contents, without installing a system service. It can also be set as the default file manager.",
+		"zh-CN": "用来替代资源管理器的 Windows 文件管理器，以纯 Go 编写，由 MyGo 原生 UI 在 GPU 上绘制，只有一个 16 MB 的 exe。打开文件夹只需几毫秒，把标签拖到边缘即可分屏；直接打字就能搜索当前文件夹或整台电脑，连文件内容也能搜，且不安装系统服务。还可以设为默认文件管理器。",
+		"zh-TW": "用來取代檔案總管的 Windows 檔案管理工具，以純 Go 撰寫，由 MyGo 原生 UI 在 GPU 上繪製，只有一個 16 MB 的 exe。開啟資料夾只需幾毫秒，把分頁拖到邊緣即可分割窗格；直接打字就能搜尋目前資料夾或整台電腦，連檔案內容也能搜，且不安裝系統服務。也可以設為預設的檔案管理工具。",
+		"ja": "エクスプローラーの代わりとして作られた Windows 用ファイルマネージャー。純粋な Go で書かれ、MyGo のネイティブ UI で GPU に描画され、16 MB の exe ひとつで動きます。フォルダーは数ミリ秒で開き、タブをドラッグすれば画面を分割できます。文字を打つだけで今のフォルダーやパソコン全体を検索でき、ファイルの中身も対象になり、システムサービスは入れません。既定のファイルマネージャーにも設定できます。",
+		"ko": "탐색기를 대신하도록 만든 Windows 파일 관리자로, 순수 Go로 작성하고 MyGo의 네이티브 UI로 GPU에 그리며 16MB짜리 exe 하나로 동작합니다. 폴더는 몇 밀리초 만에 열리고, 탭을 끌어 놓아 화면을 나눌 수 있습니다. 바로 입력하면 현재 폴더나 컴퓨터 전체를 파일 내용까지 검색하며, 시스템 서비스는 설치하지 않습니다. 기본 파일 관리자로 설정할 수도 있습니다."
+	},
+	"icon": {
+		"file": "myfiles.webp"
+	},
+	"screenshot": "myfiles.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
