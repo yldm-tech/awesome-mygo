@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mygo-wallhaven",
+	"name": "MyGO Wallhaven",
+	"author": "MaLuns",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/MaLuns/wallhaven",
+	"repo": "MaLuns/wallhaven",
+	"summary": {
+		"en": "A native wallpaper client for wallhaven.cc: browse, filter, favorite and download wallpapers.",
+		"zh-CN": "原生 wallhaven.cc 壁纸客户端：浏览、筛选、收藏和下载壁纸。",
+		"zh-TW": "原生 wallhaven.cc 桌布用戶端：瀏覽、篩選、收藏和下載桌布。",
+		"ja": "wallhaven.cc の壁紙を閲覧・絞り込み・お気に入り・ダウンロードできるネイティブアプリ。",
+		"ko": "wallhaven.cc의 배경화면을 둘러보고, 필터링하고, 즐겨찾기하고, 내려받는 네이티브 앱."
+	},
+	"description": {
+		"en": "A wallhaven.cc wallpaper client written in Go and drawn with MyGo's native UI, keeping the layout and artwork of wallhaven-electron. It opens on recommendations, shows wallpapers in a waterfall grid with category and advanced filters, previews them full size, keeps favorites and downloads to a folder you choose. An API key in WALLHAVEN_API_KEY is sent with requests but never saved to disk.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的 wallhaven.cc 壁纸客户端，沿用 wallhaven-electron 的界面布局与素材。提供推荐首页、瀑布流浏览、分类与高级筛选、大图预览和收藏，壁纸默认下载到系统下载目录，可自行修改。API 密钥通过 WALLHAVEN_API_KEY 环境变量设置，只随请求发送，不写入磁盘。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的 wallhaven.cc 桌布用戶端，沿用 wallhaven-electron 的介面配置與素材。提供推薦首頁、瀑布流瀏覽、分類與進階篩選、大圖預覽和收藏，桌布預設下載到系統的下載資料夾，可自行更改。API 金鑰以 WALLHAVEN_API_KEY 環境變數設定，只隨請求送出，不寫入磁碟。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた wallhaven.cc の壁紙クライアント。wallhaven-electron の画面構成と素材を引き継いでいます。おすすめのホーム、ウォーターフォール表示の一覧、カテゴリーと詳細な絞り込み、大きなプレビュー、お気に入りを備え、壁紙は変更できる保存先にダウンロードします。API キーは環境変数 WALLHAVEN_API_KEY で渡し、ディスクには保存しません。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 wallhaven.cc 배경화면 클라이언트로, wallhaven-electron의 화면 구성과 소재를 그대로 씁니다. 추천 홈, 워터폴 형식의 목록, 카테고리와 고급 필터, 큰 이미지 미리보기, 즐겨찾기를 갖추고, 배경화면은 바꿀 수 있는 폴더에 내려받습니다. API 키는 WALLHAVEN_API_KEY 환경 변수로 넘기며 디스크에 저장하지 않습니다."
+	},
+	"icon": {
+		"file": "mygo-wallhaven.webp"
+	},
+	"screenshot": "mygo-wallhaven.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
