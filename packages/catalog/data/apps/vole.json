@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "vole",
+	"name": "Vole",
+	"author": "hellozhangran",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/hellozhangran/vole",
+	"repo": "hellozhangran/vole",
+	"summary": {
+		"en": "A native macOS disk analyzer, cache cleaner, app uninstaller and system monitor built on Mole.",
+		"zh-CN": "基于 Mole 的原生 macOS 工具：分析磁盘占用、清理缓存、卸载应用、监控系统。",
+		"zh-TW": "基於 Mole 的原生 macOS 工具：分析磁碟用量、清理快取、移除程式、監控系統。",
+		"ja": "Mole ベースの macOS ネイティブアプリ。ディスク分析、キャッシュ掃除、アプリ削除、システム監視。",
+		"ko": "Mole 기반의 네이티브 macOS 앱. 디스크 분석, 캐시 정리, 앱 제거, 시스템 모니터링."
+	},
+	"description": {
+		"en": "A macOS app for Apple silicon drawn with MyGo's native UI, bundling the disk analyzer and system monitor of tw93's Mole CLI and porting its cleanup and uninstall rules to Go. It draws disk use as a treemap, cleans caches after you review every item, uninstalls apps with their related files and shows live system stats in the menu bar. Its interface is in Simplified Chinese only.",
+		"zh-CN": "适用于 Apple 芯片 Mac 的 macOS 应用，由 MyGo 原生 UI 绘制；内置 tw93 的 Mole 命令行工具中的磁盘分析器与系统监视器，并把它的清理与卸载规则移植到 Go。磁盘占用以树状图呈现，缓存逐项确认后才清理，卸载应用时连同相关文件一起移除，菜单栏可随时查看系统状态。界面目前只有简体中文。",
+		"zh-TW": "適用於 Apple 晶片 Mac 的 macOS 應用程式，以 MyGo 原生 UI 繪製；內建 tw93 的 Mole 命令列工具中的磁碟分析器與系統監視器，並將其清理與解除安裝規則移植到 Go。磁碟用量以樹狀圖呈現，快取逐項確認後才清理，解除安裝 App 時連同相關檔案一併移除，選單列可隨時查看系統狀態。介面目前只有簡體中文。",
+		"ja": "Apple シリコン搭載 Mac 向けの macOS アプリで、MyGo のネイティブ UI で描かれています。tw93 の Mole CLI からディスク分析とシステムモニターを同梱し、クリーンアップとアンインストールのルールを Go に移植しています。ディスク使用量をツリーマップで表示し、キャッシュは項目ごとに確認してから削除、アプリは関連ファイルごと削除し、メニューバーでシステムの状態を確認できます。UI は現在、簡体字中国語のみです。",
+		"ko": "Apple 실리콘 Mac용 macOS 앱으로, MyGo의 네이티브 UI로 그렸습니다. tw93의 Mole CLI에서 디스크 분석기와 시스템 모니터를 번들하고, 정리·삭제 규칙을 Go로 옮겼습니다. 디스크 사용량을 트리맵으로 보여 주고, 캐시는 항목마다 확인한 뒤 지우며, 앱은 관련 파일까지 함께 제거하고, 메뉴 막대에서 시스템 상태를 볼 수 있습니다. 인터페이스는 현재 간체 중국어만 지원합니다."
+	},
+	"icon": {
+		"file": "vole.webp"
+	},
+	"screenshot": "vole.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
