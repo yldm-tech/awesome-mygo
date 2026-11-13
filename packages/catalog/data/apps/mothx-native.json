@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mothx-native",
+	"name": "MothX Native",
+	"author": "oschina",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://mothx.net/",
+	"repo": "oschina/mothx",
+	"summary": {
+		"en": "Native desktop client for MothX, a terminal AI coding assistant for many model providers.",
+		"zh-CN": "MothX 的原生桌面客户端，MothX 是支持多家模型服务商的终端 AI 编程助手。",
+		"zh-TW": "MothX 的原生桌面用戶端，MothX 是支援多家模型供應商的終端機 AI 程式助理。",
+		"ja": "ターミナル向け AI コーディングアシスタント MothX のネイティブなデスクトップクライアント。",
+		"ko": "여러 모델을 지원하는 터미널 AI 코딩 도우미 MothX의 네이티브 데스크톱 클라이언트."
+	},
+	"description": {
+		"en": "The desktop client of MothX, drawn with MyGo's native UI. MyGo builds only this client; the MothX terminal assistant itself, with its BubbleTea interface, is built separately. MothX reaches DeepSeek, OpenAI, Anthropic and other models through more than 20 vendor adapters, switches between Plan, Agent and YOLO modes, runs commands in a bwrap sandbox and keeps sessions in SQLite.",
+		"zh-CN": "MothX 的桌面客户端，由 MyGo 原生 UI 绘制。MyGo 只构建这个客户端，MothX 终端助手本身及其 BubbleTea 界面另行构建。MothX 通过 20 多个服务商适配器接入 DeepSeek、OpenAI、Anthropic 等模型，可在 Plan、Agent、YOLO 三种模式间切换，在 bwrap 沙箱中执行命令，并用 SQLite 保存会话。",
+		"zh-TW": "MothX 的桌面用戶端，由 MyGo 原生 UI 繪製。MyGo 只建置這個用戶端，MothX 終端機助理本身及其 BubbleTea 介面另行建置。MothX 透過 20 多個供應商轉接器使用 DeepSeek、OpenAI、Anthropic 等模型，可在 Plan、Agent、YOLO 三種模式間切換，在 bwrap 沙箱中執行指令，並以 SQLite 保存工作階段。",
+		"ja": "MothX のデスクトップクライアントで、MyGo のネイティブ UI で描かれています。MyGo でビルドされるのはこのクライアントだけで、MothX のターミナルアシスタント本体と BubbleTea による画面は別にビルドされます。MothX は 20 以上のベンダーアダプターで DeepSeek、OpenAI、Anthropic などのモデルを使え、Plan・Agent・YOLO の 3 モードを切り替え、bwrap サンドボックスでコマンドを実行し、セッションを SQLite に保存します。",
+		"ko": "MothX의 데스크톱 클라이언트로, MyGo의 네이티브 UI로 그렸습니다. MyGo로 만드는 것은 이 클라이언트뿐이며, MothX 터미널 도우미 본체와 BubbleTea 기반 화면은 따로 빌드됩니다. MothX는 20개가 넘는 벤더 어댑터로 DeepSeek, OpenAI, Anthropic 등의 모델을 쓰고, Plan, Agent, YOLO 세 모드를 오가며, bwrap 샌드박스에서 명령을 실행하고 세션을 SQLite에 저장합니다."
+	},
+	"icon": {
+		"file": "mothx-native.webp"
+	},
+	"screenshot": "mothx-native.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
