@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "colab-yoga",
+	"name": "Colab-yoga",
+	"author": "incredible404-rgb",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "ai",
+	"url": "https://github.com/incredible404-rgb/Colab-yoga",
+	"repo": "incredible404-rgb/Colab-yoga",
+	"summary": {
+		"en": "Windows tray console to wake, keep alive and release paid Google Colab GPUs running your own LLMs.",
+		"zh-CN": "常驻 Windows 托盘的 Colab GPU 管理台，唤醒、保活、释放大模型实例。",
+		"zh-TW": "常駐 Windows 系統匣的 Colab GPU 管理台，喚醒、保活、釋放大模型實例。",
+		"ja": "Windows トレイ常駐の Colab GPU 管理ツール。LLM 用のインスタンスを起動・維持・解放。",
+		"ko": "Windows 트레이에 상주하며 Colab GPU의 LLM 인스턴스를 깨우고 유지하고 해제합니다."
+	},
+	"description": {
+		"en": "A Windows tray console for running your own large models on paid Google Colab GPUs. It wakes an instance, loads and switches models, keeps it alive, releases it when idle, and shows balance, billing rate, VRAM and whether web chat, API, Magpie and local MCP are reachable. The console is drawn with MyGo's native UI; the bridge on the PC and the server on the Colab VM are written in Python.",
+		"zh-CN": "常驻 Windows 系统托盘的管理台，用来在 Google Colab 付费 GPU 上跑自己的大模型。它负责唤醒实例、加载与切换模型、保活，闲置时自动释放，并显示余额、计费速率、显存，以及网页对话、API、Magpie 和本机 MCP 是否连通。管理台由 MyGo 原生 UI 绘制，本机的 bridge 和 Colab VM 上的服务端则用 Python 编写。",
+		"zh-TW": "常駐 Windows 系統匣的管理工具，用來在 Google Colab 付費 GPU 上跑自己的大模型。它負責喚醒執行個體、載入與切換模型、維持運作，閒置時自動釋放，並顯示餘額、計費速率、顯示記憶體，以及網頁對話、API、Magpie 與本機 MCP 是否連通。介面由 MyGo 原生 UI 繪製，本機的 bridge 與 Colab VM 上的伺服端則以 Python 撰寫。",
+		"ja": "Windows のタスクトレイに常駐し、Google Colab の有料 GPU で自前の大規模モデルを動かすための管理ツール。インスタンスの起動、モデルの読み込みと切り替え、維持、アイドル時の自動解放を行い、残高、課金レート、VRAM、Web チャット、API、Magpie、ローカル MCP の接続状態を表示します。管理画面は MyGo のネイティブ UI で描かれ、PC 側のブリッジと Colab VM 上のサーバーは Python で書かれています。",
+		"ko": "Windows 트레이에 상주하며 Google Colab 유료 GPU에서 자신의 모델을 돌리기 위한 관리 도구입니다. 인스턴스를 깨우고 모델을 불러오거나 바꾸며, 연결을 유지하다가 유휴 시간이 지나면 해제하고, 잔액, 과금 속도, VRAM과 웹 채팅, API, Magpie, 로컬 MCP 연결 상태를 보여 줍니다. 관리 화면은 MyGo의 네이티브 UI로 그렸고, PC 쪽 브리지와 Colab VM의 서버는 Python으로 작성했습니다."
+	},
+	"icon": {
+		"file": "colab-yoga.webp"
+	},
+	"screenshot": "colab-yoga.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
