@@ -71,39 +71,89 @@ export async function recordPageView(db: D1PageViews, path: string, country = 'X
 		.run();
 }
 
-export async function pageViewMetrics(db: D1PageViews, requestedDays: number): Promise<PageViewMetrics> {
+// The finished days of a range: totals per day, per path and per country. They never change once the UTC day is over.
+interface HistoryAggregate {
+	daily: Record<string, number>;
+	paths: Record<string, number>;
+	regions: Record<string, number>;
+}
+
+// One scan of each table over the finished days. Aggregating the page rows here instead of in four GROUP BY queries reads every row once rather than four times.
+async function readHistory(db: D1PageViews, start: string, end: string): Promise<HistoryAggregate> {
+	const [pages, regions] = await Promise.all([
+		db.prepare('SELECT day, path, views FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ day: string; path: string; views: number }>(),
+		db.prepare('SELECT country, SUM(views) AS views FROM page_view_regions WHERE day BETWEEN ? AND ? GROUP BY country').bind(start, end).all<RegionViews>(),
+	]);
+	const history: HistoryAggregate = { daily: {}, paths: {}, regions: {} };
+	for (const row of pages.results) {
+		const views = Number(row.views) || 0;
+		history.daily[row.day] = (history.daily[row.day] ?? 0) + views;
+		history.paths[row.path] = (history.paths[row.path] ?? 0) + views;
+	}
+	for (const row of regions.results) history.regions[row.country] = Number(row.views) || 0;
+	return history;
+}
+
+// D1's free tier allows 5M rows read a day for the whole account. Rescanning every row of a 90-day range on each 30 s dashboard refresh used that up within hours and took every D1 query on the account down with it, so the finished days are read once per range and edge location and kept in the cache until the UTC day turns; the key carries the range, so the next day starts a fresh entry.
+async function cachedHistory(db: D1PageViews, start: string, end: string, request?: Request): Promise<HistoryAggregate> {
+	const cache = (globalThis as typeof globalThis & { caches?: { default?: Cache } }).caches?.default;
+	if (!cache || !request) return readHistory(db, start, end);
+	const url = new URL(request.url);
+	url.pathname = '/__cache/page-view-history';
+	url.search = new URLSearchParams({ start, end }).toString();
+	const key = new Request(url, { method: 'GET' });
+	const hit = await cache.match(key);
+	if (hit) return (await hit.json()) as HistoryAggregate;
+	const history = await readHistory(db, start, end);
+	await cache.put(key, Response.json(history, { headers: { 'cache-control': 'public, max-age=86400' } }));
+	return history;
+}
+
+function add(totals: Record<string, number>, rows: { key: string; views: number }[]): Map<string, number> {
+	const merged = new Map(Object.entries(totals));
+	for (const row of rows) merged.set(row.key, (merged.get(row.key) ?? 0) + (Number(row.views) || 0));
+	return merged;
+}
+
+// Most views first, ties by key, as the dashboard has always listed them.
+function ranked(totals: Map<string, number>): [string, number][] {
+	return [...totals].sort(([a, x], [b, y]) => y - x || (a < b ? -1 : a > b ? 1 : 0));
+}
+
+export async function pageViewMetrics(db: D1PageViews, requestedDays: number, request?: Request): Promise<PageViewMetrics> {
 	const days = requestedDays === 7 || requestedDays === 90 ? requestedDays : 30;
 	const end = utcDay();
 	const start = dayBefore(days - 1);
-	const [dailyResult, pathResult, totalResult, pageCountResult, regionsResult, regionTotalResult, sinceResult] = await Promise.all([
-		db.prepare('SELECT day, SUM(views) AS views FROM page_views WHERE day BETWEEN ? AND ? GROUP BY day ORDER BY day').bind(start, end).all<DailyViews>(),
-		db.prepare('SELECT path, SUM(views) AS views FROM page_views WHERE day BETWEEN ? AND ? GROUP BY path ORDER BY views DESC, path LIMIT 12').bind(start, end).all<PathViews>(),
-		db.prepare('SELECT COALESCE(SUM(views), 0) AS views FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ views: number }>(),
-		db.prepare('SELECT COUNT(DISTINCT path) AS n FROM page_views WHERE day BETWEEN ? AND ?').bind(start, end).all<{ n: number }>(),
-		db.prepare('SELECT country, SUM(views) AS views FROM page_view_regions WHERE day BETWEEN ? AND ? GROUP BY country ORDER BY views DESC, country LIMIT 260').bind(start, end).all<RegionViews>(),
-		// Region shares are measured against every region row, not just the listed ones, so a long tail cut by the LIMIT does not inflate the leaders.
-		db.prepare('SELECT COALESCE(SUM(views), 0) AS views FROM page_view_regions WHERE day BETWEEN ? AND ?').bind(start, end).all<{ views: number }>(),
+	const yesterday = dayBefore(1);
+	const [history, todayPaths, todayRegions, sinceResult] = await Promise.all([
+		cachedHistory(db, start, yesterday, request),
+		db.prepare('SELECT path, views FROM page_views WHERE day = ?').bind(end).all<PathViews>(),
+		db.prepare('SELECT country, views FROM page_view_regions WHERE day = ?').bind(end).all<RegionViews>(),
 		// The first day anything was recorded, so the dashboard can tell "no traffic" apart from "not tracked yet".
 		db.prepare('SELECT MIN(day) AS day FROM page_views').all<{ day: string | null }>(),
 	]);
-	const byDay = new Map(dailyResult.results.map((row) => [row.day, Number(row.views) || 0]));
+	const paths = add(history.paths, todayPaths.results.map((row) => ({ key: row.path, views: row.views })));
+	const regions = add(history.regions, todayRegions.results.map((row) => ({ key: row.country, views: row.views })));
+	const byDay = new Map(Object.entries(history.daily));
+	byDay.set(end, todayPaths.results.reduce((sum, row) => sum + (Number(row.views) || 0), 0));
 	const daily: DailyViews[] = [];
 	for (let i = 0; i < days; i++) {
 		const date = new Date(`${start}T00:00:00Z`);
 		date.setUTCDate(date.getUTCDate() + i);
 		const day = utcDay(date);
 		daily.push({ day, views: byDay.get(day) ?? 0 });
-	}
+	};
 	return {
 		days,
 		start,
 		end,
-		total: Number(totalResult.results[0]?.views) || 0,
-		pageCount: Number(pageCountResult.results[0]?.n) || 0,
+		total: daily.reduce((sum, row) => sum + row.views, 0),
+		pageCount: paths.size,
 		since: sinceResult.results[0]?.day ?? null,
 		daily,
-		topPaths: pathResult.results.map((row) => ({ path: row.path, views: Number(row.views) || 0 })),
-		regions: regionsResult.results.map((row) => ({ country: row.country, views: Number(row.views) || 0 })),
-		regionTotal: Number(regionTotalResult.results[0]?.views) || 0,
+		topPaths: ranked(paths).slice(0, 12).map(([path, views]) => ({ path, views })),
+		// Region shares are measured against every region, not just the listed ones, so a long tail cut by the limit does not inflate the leaders.
+		regions: ranked(regions).slice(0, 260).map(([country, views]) => ({ country, views })),
+		regionTotal: [...regions.values()].reduce((sum, views) => sum + views, 0),
 	};
 }

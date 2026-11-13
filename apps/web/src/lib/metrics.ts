@@ -51,10 +51,18 @@ export function useMetrics(days: MetricsRange): MetricsState {
 				});
 		};
 		void load();
-		const timer = window.setInterval(() => void load(), 30_000);
+		// Only a tab someone is looking at refreshes; a forgotten background tab would otherwise query all day. Coming back to it refreshes at once.
+		const timer = window.setInterval(() => {
+			if (!document.hidden) void load();
+		}, 30_000);
+		const onVisible = () => {
+			if (!document.hidden) void load();
+		};
+		document.addEventListener('visibilitychange', onVisible);
 		return () => {
 			live = false;
 			window.clearInterval(timer);
+			document.removeEventListener('visibilitychange', onVisible);
 		};
 	}, [days]);
 	return state;
