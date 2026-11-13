@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "lanflow",
+	"name": "澜流 Lanflow",
+	"author": "Owlbay",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "network",
+	"url": "https://github.com/Owlbay/lanflow",
+	"repo": "Owlbay/lanflow",
+	"summary": {
+		"en": "A native proxy client for macOS and Windows on the Mihomo core, with system proxy and TUN mode.",
+		"zh-CN": "基于 Mihomo 内核的原生桌面代理客户端，支持系统代理与 TUN 模式。",
+		"zh-TW": "以 Mihomo 為核心的原生桌面代理用戶端，支援系統代理與 TUN 模式。",
+		"ja": "Mihomo コアのネイティブなプロキシクライアント。システムプロキシと TUN モードに対応。",
+		"ko": "Mihomo 코어 기반의 네이티브 프록시 클라이언트. 시스템 프록시와 TUN 모드 지원."
+	},
+	"description": {
+		"en": "A desktop proxy client for macOS and Windows drawn with MyGo's native UI, running the Mihomo (Clash.Meta) core. System proxy, global or PAC, and TUN mode switch on separately; it imports subscriptions and keeps them updated, and offers custom rules with hit counts, a connections view, traffic stats and leak checks. The Windows build has not yet been run on real Windows.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 与 Windows 桌面代理客户端，内核为 Mihomo（Clash.Meta）。系统代理（全局或 PAC）与 TUN 模式可分别开关，支持订阅导入与自动更新、带命中统计的自定义规则、连接视图、流量统计和泄漏检查。Windows 版尚未在真实的 Windows 上运行过。",
+		"zh-TW": "以 MyGo 原生 UI 繪製的 macOS 與 Windows 桌面代理用戶端，核心為 Mihomo（Clash.Meta）。系統代理（全域或 PAC）與 TUN 模式可分別開關，支援訂閱匯入與自動更新、附命中統計的自訂規則、連線檢視、流量統計和洩漏檢查。Windows 版尚未在真正的 Windows 上執行過。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS・Windows 向けのデスクトップ用プロキシクライアントで、コアには Mihomo（Clash.Meta）を使います。システムプロキシ（グローバルまたは PAC）と TUN モードを個別に切り替えられ、サブスクリプションの読み込みと自動更新、ヒット数付きのカスタムルール、接続ビュー、通信量の統計、リークチェックを備えます。Windows 版はまだ実機の Windows で動かされていません。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS·Windows용 데스크톱 프록시 클라이언트로, Mihomo(Clash.Meta) 코어를 사용합니다. 시스템 프록시(전역 또는 PAC)와 TUN 모드를 따로 켜고 끌 수 있고, 구독 가져오기와 자동 업데이트, 적중 횟수를 보여 주는 사용자 규칙, 연결 보기, 트래픽 통계, 유출 검사를 제공합니다. Windows 버전은 아직 실제 Windows에서 실행해 보지 않았습니다."
+	},
+	"icon": {
+		"file": "lanflow.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "lanflow.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
