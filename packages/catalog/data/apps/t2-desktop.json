@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "t2-desktop",
+	"name": "T2 Desktop",
+	"author": "vhxubo",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "chat",
+	"url": "https://github.com/vhxubo/t2-desktop",
+	"repo": "vhxubo/t2-desktop",
+	"summary": {
+		"en": "Unofficial native desktop client for the 2Libra community: read, post, comment, get notified.",
+		"zh-CN": "2Libra 社区的非官方原生桌面客户端：浏览、发帖、评论与接收通知。",
+		"zh-TW": "2Libra 社群的非官方原生桌面用戶端：瀏覽、發文、留言與接收通知。",
+		"ja": "2Libra コミュニティの非公式ネイティブデスクトップクライアント。閲覧、投稿、コメント、通知に対応。",
+		"ko": "2Libra 커뮤니티의 비공식 네이티브 데스크톱 클라이언트. 열람, 글쓰기, 댓글, 알림."
+	},
+	"description": {
+		"en": "An unofficial 2Libra community client for Windows, macOS and Linux, written in Go and drawn with MyGo's native UI, with no web view. Sign in with a 2Libra account to read the hot and latest feeds and posts rendered from Markdown, write posts and comments in their own windows, get notifications as they arrive, and check coins and search. It has no affiliation with 2Libra.",
+		"zh-CN": "非官方的 2Libra 社区客户端，用 Go 编写、由 MyGo 原生 UI 绘制，没有 WebView，支持 Windows、macOS 与 Linux。用 2Libra 账号登录后，可以浏览热门与最新信息流、阅读 Markdown 渲染的帖子，在独立窗口中发帖和评论，实时接收通知，并查看金币、进行全文搜索。与 2Libra 无隶属关系。",
+		"zh-TW": "非官方的 2Libra 社群用戶端，以 Go 撰寫、由 MyGo 原生 UI 繪製，沒有 WebView，支援 Windows、macOS 與 Linux。用 2Libra 帳號登入後，可瀏覽熱門與最新動態、閱讀以 Markdown 呈現的文章，在獨立視窗中發文與留言，即時接收通知，並查看金幣、進行全文搜尋。與 2Libra 無隸屬關係。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた 2Libra コミュニティの非公式クライアント。WebView は使わず、Windows・macOS・Linux に対応します。2Libra アカウントでログインすると、人気・最新のフィードや Markdown で表示される投稿を読み、専用ウィンドウで投稿やコメントを書き、通知をリアルタイムで受け取り、コインの確認や全文検索ができます。2Libra とは関係のない個人開発です。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 2Libra 커뮤니티 비공식 클라이언트로, WebView 없이 Windows, macOS, Linux에서 동작합니다. 2Libra 계정으로 로그인해 인기·최신 피드와 Markdown으로 렌더링된 글을 읽고, 별도 창에서 글과 댓글을 쓰며, 알림을 실시간으로 받고, 코인 확인과 전체 검색을 할 수 있습니다. 2Libra와는 관련 없는 개인 프로젝트입니다."
+	},
+	"icon": {
+		"file": "t2-desktop.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "t2-desktop.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
