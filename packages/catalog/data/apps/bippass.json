@@ -1,0 +1,38 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "bippass",
+	"name": "bipPass",
+	"author": "cc-hearts",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/cc-hearts/cc-password",
+	"repo": "cc-hearts/cc-password",
+	"summary": {
+		"en": "A zero-knowledge password manager with a 24-word mnemonic account, local encrypted vaults and TOTP.",
+		"zh-CN": "零知识密码管理器：以 24 个助记词作账号，本地加密保险库，支持 TOTP 与密码生成。",
+		"zh-TW": "零知識密碼管理器：以 24 個助記詞作帳號，本機加密保險庫，支援 TOTP 與密碼產生。",
+		"ja": "ゼロ知識型のパスワード管理アプリ。24 語のニーモニックがアカウントで、暗号化した保管庫は手元に保存。",
+		"ko": "24단어 니모닉을 계정으로 쓰는 제로 지식 비밀번호 관리자. 로컬 암호화 보관함과 TOTP 지원."
+	},
+	"description": {
+		"en": "The desktop client of a self-hosted, zero-knowledge password manager, drawn with MyGo's native UI without a web view. The account is 24 mnemonic words, keys never leave the machine, and vaults are kept locally as ciphertext. It stores logins, notes, cards and identities with TOTP codes, a password generator and auto-lock. Sync with a self-hosted server and import are not built yet.",
+		"zh-CN": "一款自托管零知识密码管理器的桌面客户端，用 MyGo 原生 UI 绘制，不嵌 WebView。账号就是 24 个助记词，密钥只留在本机，保险库以密文存在本地。可保存登录、笔记、信用卡和身份四类条目，附带 TOTP 验证码、密码生成器和自动锁定。与自托管服务端的同步及导入导出尚未实现。",
+		"zh-TW": "一款自架零知識密碼管理器的桌面用戶端，以 MyGo 原生 UI 繪製，不嵌入 WebView。帳號就是 24 個助記詞，金鑰只留在本機，保險庫以密文存放在本地端。可儲存登入、筆記、信用卡和身分四類項目，並提供 TOTP 驗證碼、密碼產生器與自動鎖定。與自架伺服器的同步及匯入匯出尚未實作。",
+		"ja": "自前ホスト型のゼロ知識パスワードマネージャーのデスクトップクライアントで、MyGo のネイティブ UI で描かれ、WebView は使いません。アカウントは 24 語のニーモニックで、鍵は端末の外に出ず、保管庫は暗号化したまま手元に保存されます。ログイン、メモ、クレジットカード、ID の 4 種類の項目を扱い、TOTP コード、パスワード生成、自動ロックを備えます。自前サーバーとの同期やインポートはまだ実装されていません。",
+		"ko": "셀프 호스팅 제로 지식 비밀번호 관리자의 데스크톱 클라이언트로, MyGo의 네이티브 UI로 그렸고 웹뷰를 쓰지 않습니다. 계정은 24개의 니모닉 단어이며, 키는 기기 밖으로 나가지 않고 보관함은 암호화된 채 로컬에 저장됩니다. 로그인, 메모, 신용카드, 신원 네 종류의 항목을 다루고 TOTP 코드, 비밀번호 생성기, 자동 잠금을 갖췄습니다. 서버 동기화와 가져오기는 아직 없습니다."
+	},
+	"icon": {
+		"file": "bippass.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "bippass.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
