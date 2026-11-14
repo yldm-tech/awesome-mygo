@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "markgo",
+	"name": "MarkGo",
+	"author": "xddcode",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/xddcode/markgo",
+	"repo": "xddcode/markgo",
+	"summary": {
+		"en": "A local-first native Markdown editor with live preview, outline, find and replace and 12 themes.",
+		"zh-CN": "本地优先的原生 Markdown 编辑器：实时预览、大纲、查找替换，12 套写作主题。",
+		"zh-TW": "本機優先的原生 Markdown 編輯器：即時預覽、大綱、尋找取代，12 套寫作主題。",
+		"ja": "ローカルファーストのネイティブ Markdown エディター。ライブプレビューと 12 の執筆テーマ付き。",
+		"ko": "로컬 우선 네이티브 Markdown 편집기. 실시간 미리보기, 개요, 찾기·바꾸기, 12가지 테마."
+	},
+	"description": {
+		"en": "A Markdown editor written in Go and drawn with MyGo's native UI, with no Electron, WebView or JavaScript layer. It opens Markdown files or a folder and works without an account, offering source or live-preview editing, a reading view, an outline, find and replace, document tabs, focus mode and 12 writing themes. Saving is manual; drafts are kept in a separate local recovery copy.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的 Markdown 编辑器，没有 Electron、WebView，也没有 JavaScript 层。可打开 Markdown 文件或文件夹，无需账号即可使用，提供源码与实时预览两种编辑方式、阅读视图、大纲、查找替换、文档标签页、专注模式和 12 套写作主题。保存需手动进行，草稿会另存一份本地恢复副本。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的 Markdown 編輯器，沒有 Electron、WebView，也沒有 JavaScript 層。可開啟 Markdown 檔案或資料夾，不需帳號即可使用，提供原始碼與即時預覽兩種編輯方式、閱讀檢視、大綱、尋找取代、文件分頁、專注模式和 12 套寫作主題。儲存需手動進行，草稿會另存一份本機復原副本。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた Markdown エディター。Electron も WebView も JavaScript レイヤーもありません。Markdown ファイルやフォルダーを開いてアカウントなしで使え、ソース編集とライブプレビュー編集、閲覧ビュー、アウトライン、検索と置換、ドキュメントタブ、フォーカスモード、12 の執筆テーマを備えます。保存は手動で、下書きは別のローカル復元用コピーに残ります。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 Markdown 편집기로, Electron도 WebView도 JavaScript 계층도 없습니다. Markdown 파일이나 폴더를 열어 계정 없이 쓸 수 있고, 소스 편집과 실시간 미리보기 편집, 읽기 보기, 개요, 찾기와 바꾸기, 문서 탭, 집중 모드, 12가지 글쓰기 테마를 갖췄습니다. 저장은 직접 해야 하며, 초안은 별도의 로컬 복구 사본으로 보관됩니다."
+	},
+	"icon": {
+		"file": "markgo.webp"
+	},
+	"screenshot": "markgo.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
