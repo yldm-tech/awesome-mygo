@@ -1,0 +1,38 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "agent-discord-presence",
+	"name": "Agent Discord Presence",
+	"author": "LitoMore",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/LitoMore/agent-discord-presence",
+	"repo": "LitoMore/agent-discord-presence",
+	"summary": {
+		"en": "Desktop app for a local service that shows Codex, Claude Code and other agent sessions in Discord.",
+		"zh-CN": "在 Discord 状态中显示 Codex、Claude Code 等代理会话的桌面端。",
+		"zh-TW": "在 Discord 狀態顯示 Codex、Claude Code 等代理工作階段的桌面端。",
+		"ja": "Codex や Claude Code などの作業を Discord に表示するデスクトップアプリ。",
+		"ko": "Codex, Claude Code 등 에이전트 세션을 Discord 상태로 보여 주는 데스크톱 앱."
+	},
+	"description": {
+		"en": "The desktop app for Agent Discord Presence, drawn with MyGo's native UI with no webview. The local service that shows Codex, Claude Code, OpenCode, Pi and DeepSeek Harness sessions in Discord is a separate Node.js package. The app picks the live session, sets each agent's look and summaries, previews the Discord profile card and adds a tray quick panel.",
+		"zh-CN": "Agent Discord Presence 的桌面端，用 MyGo 原生 UI 绘制，没有 Web 视图。把 Codex、Claude Code、OpenCode、Pi 和 DeepSeek Harness 的会话显示到 Discord 的本地服务，是另外用 Node.js 编写的 npm 包。桌面端可以选择当前会话、为每个代理设置外观与摘要、预览 Discord 资料卡，并提供托盘快捷面板。",
+		"zh-TW": "Agent Discord Presence 的桌面端，以 MyGo 原生 UI 繪製，沒有 Web 視圖。將 Codex、Claude Code、OpenCode、Pi 與 DeepSeek Harness 的工作階段顯示在 Discord 上的本機服務，是另外以 Node.js 撰寫的 npm 套件。桌面端可選擇目前的工作階段、為每個代理設定外觀與摘要、預覽 Discord 個人資料卡，並提供系統匣快速面板。",
+		"ja": "Agent Discord Presence のデスクトップアプリで、MyGo のネイティブ UI で描かれ、Web ビューはありません。Codex、Claude Code、OpenCode、Pi、DeepSeek Harness のセッションを Discord に表示するローカルサービス本体は、Node.js 製の npm パッケージとして別に作られています。アプリでは表示するセッションの選択、エージェントごとの見た目と要約の設定、Discord プロフィールカードのプレビューができ、トレイのクイックパネルも備えます。",
+		"ko": "Agent Discord Presence의 데스크톱 앱으로, MyGo의 네이티브 UI로 그렸고 웹 뷰가 없습니다. Codex, Claude Code, OpenCode, Pi, DeepSeek Harness 세션을 Discord에 표시하는 로컬 서비스는 별도의 Node.js npm 패키지입니다. 앱에서는 표시할 세션을 고르고, 에이전트별 모양과 요약을 설정하고, Discord 프로필 카드를 미리 보며, 트레이 빠른 패널도 쓸 수 있습니다."
+	},
+	"icon": {
+		"file": "agent-discord-presence.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "agent-discord-presence.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
