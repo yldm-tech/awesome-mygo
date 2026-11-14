@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "yojigen-pocket",
+	"name": "Yojigen Pocket",
+	"author": "mytlx",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/mytlx/yojigen-pocket",
+	"repo": "mytlx/yojigen-pocket",
+	"summary": {
+		"en": "A uTools-style launcher for apps, files, math, clipboard history and your own scripts.",
+		"zh-CN": "类似 uTools 的启动器：打开应用、找文件、计算、搜剪贴板历史、跑自己的脚本。",
+		"zh-TW": "類似 uTools 的啟動器：開啟程式、找檔案、計算、查剪貼簿紀錄、執行腳本。",
+		"ja": "uTools 風のランチャー。アプリ起動、ファイル検索、計算、クリップボード履歴、自作スクリプト実行。",
+		"ko": "uTools 같은 런처. 앱 실행, 파일 검색, 계산, 클립보드 기록, 자작 스크립트 실행."
+	},
+	"description": {
+		"en": "A uTools-style launcher for macOS and Windows, with a Go backend and a web interface in the system WebView through MyGo. Press a hotkey to open apps (pinyin included), find files via Spotlight or Everything, calculate, paste from clipboard history and run your own scripts; translation, OCR and developer tools have their own pages. Settings are plain files and it needs no account.",
+		"zh-CN": "类似 uTools 的 macOS 与 Windows 启动器，后端用 Go，界面是经 MyGo 运行在系统 WebView 里的网页。按下快捷键即可打开应用（支持拼音）、用 Spotlight 或 Everything 搜文件、计算、从剪贴板历史粘贴、运行自己的脚本；翻译、截图识别和开发工具各有独立页面。无需账号，所有配置都是普通文件。",
+		"zh-TW": "類似 uTools 的 macOS 與 Windows 啟動器，後端用 Go，介面是透過 MyGo 在系統 WebView 中執行的網頁。按下快捷鍵即可開啟應用程式（支援拼音）、用 Spotlight 或 Everything 搜尋檔案、計算、從剪貼簿紀錄貼上、執行自己的腳本；翻譯、截圖辨識和開發工具各有獨立頁面。不需帳號，所有設定都是一般檔案。",
+		"ja": "uTools 風の macOS・Windows 向けランチャー。バックエンドは Go、画面は MyGo を通じてシステムの WebView で動く Web ページです。ショートカットキーで呼び出し、アプリ起動（ピンイン対応）、Spotlight や Everything でのファイル検索、計算、クリップボード履歴からの貼り付け、自作スクリプトの実行ができ、翻訳、OCR、開発ツールは専用ページで開きます。アカウントは不要で、設定はすべて普通のファイルです。",
+		"ko": "uTools와 비슷한 macOS·Windows용 런처로, 백엔드는 Go이고 화면은 MyGo를 통해 시스템 WebView에서 도는 웹 페이지입니다. 단축키로 불러내 앱 실행(병음 지원), Spotlight나 Everything으로 파일 검색, 계산, 클립보드 기록에서 붙여넣기, 직접 만든 스크립트 실행을 하고, 번역, OCR, 개발 도구는 전용 페이지로 열립니다. 계정이 필요 없고 설정은 모두 일반 파일입니다."
+	},
+	"icon": {
+		"file": "yojigen-pocket.webp"
+	},
+	"screenshot": "yojigen-pocket.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-14T02:29:31Z"
+}
