@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "dimina-desktop",
+	"name": "Dimina Desktop",
+	"author": "didi",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://didi.github.io/dimina/",
+	"repo": "didi/dimina",
+	"summary": {
+		"en": "Desktop client for DiDi's Dimina: runs compiled mini programs, each in its own window.",
+		"zh-CN": "滴滴 Dimina 小程序框架的桌面客户端，在独立窗口中运行编译好的小程序。",
+		"zh-TW": "滴滴 Dimina 小程式框架的桌面用戶端，在獨立視窗中執行編譯好的小程式。",
+		"ja": "DiDi のミニプログラム基盤 Dimina のデスクトップクライアント。各アプリを専用ウィンドウで実行。",
+		"ko": "DiDi의 Dimina 미니 프로그램용 데스크톱 클라이언트. 각 앱을 개별 창에서 실행."
+	},
+	"description": {
+		"en": "The desktop client of Dimina, DiDi's framework that compiles WXML, WXSS and JavaScript mini programs for Android, iOS, Harmony, the web and desktop. It opens compiled mini programs, each in its own window, with networking, storage, code scanning and BLE through the wx API. MyGo builds only this client, with a web frontend; the compiler and mobile containers are made separately.",
+		"zh-CN": "滴滴开源的跨端小程序框架 Dimina 的桌面客户端。Dimina 将 WXML、WXSS 与 JavaScript 源码编译为资源包，供 Android、iOS、Harmony、Web 和桌面加载；这个客户端在独立窗口中运行编译好的小程序，并通过 wx API 提供网络、存储、扫码和 BLE 等能力。MyGo 只构建这个采用 Web 前端的桌面客户端，编译器与移动端容器另行开发。",
+		"zh-TW": "滴滴開源的跨平台小程式框架 Dimina 的桌面用戶端。Dimina 將 WXML、WXSS 與 JavaScript 原始碼編譯為資源包，供 Android、iOS、Harmony、Web 和桌面載入；這個用戶端在獨立視窗中執行編譯好的小程式，並透過 wx API 提供網路、儲存、掃碼和 BLE 等能力。MyGo 只建置這個採用 Web 前端的桌面用戶端，編譯器與行動端容器另行開發。",
+		"ja": "DiDi のミニプログラム基盤 Dimina のデスクトップクライアント。Dimina は WXML・WXSS・JavaScript のソースを Android、iOS、Harmony、Web、デスクトップ向けにコンパイルします。本クライアントはコンパイル済みミニプログラムを専用ウィンドウで開き、ネットワーク、ストレージ、コード読み取り、BLE を wx API で提供します。MyGo が Web フロントエンドで作るのはこのクライアントだけで、コンパイラーやモバイル版は別に作られます。",
+		"ko": "DiDi의 크로스 플랫폼 미니 프로그램 프레임워크 Dimina의 데스크톱 클라이언트입니다. Dimina는 WXML, WXSS, JavaScript 소스를 Android, iOS, Harmony, 웹, 데스크톱용 패키지로 컴파일합니다. 이 클라이언트는 컴파일된 미니 프로그램을 각각 별도 창에서 열고, 네트워크, 저장소, 코드 스캔, BLE를 wx API로 제공합니다. MyGo는 웹 프런트엔드로 이 클라이언트만 빌드하며, 컴파일러와 모바일 컨테이너는 따로 만들어집니다."
+	},
+	"icon": {
+		"file": "dimina-desktop.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "dimina-desktop.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
