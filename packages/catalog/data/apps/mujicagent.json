@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mujicagent",
+	"name": "MujicAgent",
+	"author": "ji233-Sun",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/ji233-Sun/mujicagent",
+	"repo": "ji233-Sun/mujicagent",
+	"summary": {
+		"en": "A native desktop client for Codex, Pi, Droid and Claude Code, with sessions kept per project.",
+		"zh-CN": "按项目管理会话的 Codex、Pi、Droid、Claude Code 原生桌面客户端。",
+		"zh-TW": "按專案管理對話的 Codex、Pi、Droid、Claude Code 原生桌面用戶端。",
+		"ja": "Codex・Pi・Droid・Claude Code 用のネイティブなデスクトップクライアント。",
+		"ko": "Codex, Pi, Droid, Claude Code용 네이티브 데스크톱 클라이언트."
+	},
+	"description": {
+		"en": "A desktop client for the Codex, Pi, Droid and Claude Code CLIs installed locally, using their own logins and settings, drawn with MyGo's native UI. Sessions are kept per project, screenshots can be marked up with boxes, arrows and comments, and follow-up messages wait in a queue while the agent works. It ships for macOS and Windows, tested so far mainly on Apple Silicon Macs.",
+		"zh-CN": "连接本机 Codex、Pi、Droid 和 Claude Code CLI 的桌面客户端，沿用各自的登录和配置，界面由 MyGo 原生 UI 绘制。会话按项目归档，可以在截图上画框、加箭头、写评论，智能体工作时还能把后续消息排进队列。提供 macOS 与 Windows 安装包，目前主要在 Apple Silicon 的 Mac 上验证运行。",
+		"zh-TW": "連接本機 Codex、Pi、Droid 與 Claude Code CLI 的桌面用戶端，沿用各自的登入與設定，介面由 MyGo 原生 UI 繪製。對話依專案歸檔，可在截圖上畫框、加箭頭、寫評論，智慧代理工作時還能把後續訊息排進佇列。提供 macOS 與 Windows 安裝檔，目前主要在 Apple Silicon 的 Mac 上驗證執行。",
+		"ja": "手元の Codex・Pi・Droid・Claude Code の CLI につなぐデスクトップクライアントで、それぞれのログインと設定をそのまま使い、画面は MyGo のネイティブ UI で描かれています。会話はプロジェクトごとに整理され、スクリーンショットに枠・矢印・コメントを書き込めるほか、エージェントの作業中に次のメッセージをキューに積めます。macOS と Windows 向けで、動作確認は主に Apple Silicon の Mac で行われています。",
+		"ko": "로컬의 Codex, Pi, Droid, Claude Code CLI에 연결하는 데스크톱 클라이언트로, 각자의 로그인과 설정을 그대로 쓰며 MyGo의 네이티브 UI로 그려집니다. 대화는 프로젝트별로 정리되고, 스크린샷에 상자·화살표·코멘트를 그려 넣을 수 있으며, 에이전트 작업 중에는 다음 메시지를 대기열에 쌓아 둘 수 있습니다. macOS와 Windows용이며 주로 Apple Silicon Mac에서 검증되었습니다."
+	},
+	"icon": {
+		"file": "mujicagent.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "mujicagent.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
