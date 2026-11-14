@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "yesman",
+	"name": "yesman",
+	"author": "idy",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/idy/yesman",
+	"repo": "idy/yesman",
+	"summary": {
+		"en": "Tray app whose lead AI agent plans a project on a task board and hands each task to a pi worker.",
+		"zh-CN": "托盘应用：由主管 AI 智能体在任务板上规划项目，再把任务分派给 pi 智能体。",
+		"zh-TW": "系統匣應用程式：由主管 AI 代理在任務看板上規劃專案，再把工作分派給 pi 代理。",
+		"ja": "主任 AI エージェントがタスクボードで計画を立て、pi のワーカーに仕事を割り振るトレイアプリ。",
+		"ko": "리드 AI 에이전트가 작업 보드에 계획을 세우고 pi 워커에게 일을 맡기는 트레이 앱."
+	},
+	"description": {
+		"en": "A tray app for putting AI coding agents to work on a project, drawn as a web page in a MyGo window. A lead pi agent talks with you, turns your goal into tasks on a board and hands each to a worker in its own git worktree, bringing you only the decisions it cannot make. It needs pi installed, and so far only the macOS build has been run.",
+		"zh-CN": "让 AI 编程智能体为项目干活的托盘应用，界面是 MyGo 窗口中的网页。主管 pi 智能体与你对话，把目标拆成任务板上的任务，交给各自在独立 git worktree 中工作的 worker，只把它自己无法决定的事留给你。需要先安装 pi，目前只有 macOS 版本实际运行过。",
+		"zh-TW": "讓 AI 程式設計代理替專案做事的系統匣應用程式，介面是 MyGo 視窗中的網頁。主管 pi 代理與你對話，把目標拆成任務看板上的任務，交給各自在獨立 git worktree 中工作的 worker，只把它自己無法決定的事留給你。需要先安裝 pi，目前只有 macOS 版本實際執行過。",
+		"ja": "AI コーディングエージェントにプロジェクトの仕事を任せるトレイアプリで、MyGo のウィンドウに Web ページとして描かれます。主任の pi エージェントがあなたと話し、目標をタスクボードのタスクに分けて、それぞれ専用の git worktree で作業するワーカーに渡し、自分では決められない判断だけをあなたに持ってきます。pi のインストールが必要で、実際に動かされているのは今のところ macOS 版だけです。",
+		"ko": "AI 코딩 에이전트에게 프로젝트 작업을 맡기는 트레이 앱으로, MyGo 창 안의 웹 페이지로 화면을 그립니다. 리드 pi 에이전트가 사용자와 대화하며 목표를 작업 보드의 작업으로 나누고, 각자 별도의 git worktree에서 일하는 워커에게 맡긴 뒤, 스스로 정할 수 없는 결정만 사용자에게 가져옵니다. pi를 설치해야 하며, 지금까지 실제로 실행해 본 것은 macOS 빌드뿐입니다."
+	},
+	"icon": {
+		"file": "yesman.webp"
+	},
+	"screenshot": "yesman.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-14T02:29:31Z"
+}
