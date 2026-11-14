@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "fee-save-editor",
+	"name": "FEE Save Editor",
+	"author": "jinghaihan",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "game",
+	"url": "https://github.com/jinghaihan/fee-save-editor",
+	"repo": "jinghaihan/fee-save-editor",
+	"summary": {
+		"en": "Edits Fire Emblem Engage saves: roster, items, Emblems, Bond Rings, supports and achievements.",
+		"zh-CN": "Fire Emblem Engage 存档编辑器：角色、道具、纹章士、羁绊戒指、支援与成就。",
+		"zh-TW": "Fire Emblem Engage 存檔編輯器：角色、道具、紋章士、羈絆戒指、支援與成就。",
+		"ja": "Fire Emblem Engage のセーブエディター。ユニット、アイテム、紋章士、指輪、支援、実績。",
+		"ko": "Fire Emblem Engage 세이브 편집기: 캐릭터, 아이템, 문장사, 반지, 지원, 업적."
+	},
+	"description": {
+		"en": "A Fire Emblem Engage save editor drawn with MyGo's native UI, with a CLI for scripted edits. It edits the roster's levels, stats, classes, skills and items, the convoy and engravings, Emblem bonds and Bond Rings, supports, achievements and amiibo rewards, including DLC characters and items. Its interface and game-data names come in nine languages.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Fire Emblem Engage 存档编辑器，另有供脚本使用的命令行工具。可编辑角色的等级、能力值、职业、技能与持有道具，以及运输队与刻印、纹章士羁绊与羁绊戒指、支援、成就和 amiibo 奖励，也涵盖 DLC 角色与道具。界面和游戏数据名称支持九种语言。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Fire Emblem Engage 存檔編輯器，另有供腳本使用的命令列工具。可編輯角色的等級、能力值、職業、技能與持有道具，以及輸送隊與刻印、紋章士羈絆與羈絆戒指、支援、成就和 amiibo 獎勵，也涵蓋 DLC 角色與道具。介面和遊戲資料名稱支援九種語言。",
+		"ja": "MyGo のネイティブ UI で描かれた Fire Emblem Engage のセーブエディター。スクリプト用の CLI もあります。ユニットのレベル、能力値、クラス、スキル、所持品に加え、輸送隊と刻印、紋章士の絆と絆の指輪、支援、実績、amiibo 特典を編集でき、DLC のキャラクターとアイテムにも対応します。UI とゲームデータの名称は 9 言語で表示できます。",
+		"ko": "MyGo의 네이티브 UI로 그린 Fire Emblem Engage 세이브 편집기이며, 스크립트용 CLI도 있습니다. 캐릭터의 레벨, 능력치, 클래스, 스킬, 소지품과 함께 수송대와 각인, 문장사 인연과 인연의 반지, 지원, 업적, amiibo 보상을 편집할 수 있고 DLC 캐릭터와 아이템도 다룹니다. 인터페이스와 게임 데이터 이름은 9개 언어로 표시됩니다."
+	},
+	"icon": {
+		"file": "fee-save-editor.webp"
+	},
+	"screenshot": "fee-save-editor.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
