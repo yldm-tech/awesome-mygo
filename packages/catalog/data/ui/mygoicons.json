@@ -6,11 +6,11 @@
 	"tag": "icons",
 	"surface": "native",
 	"summary": {
-		"en": "Lucide and Twemoji icons as typed Go functions for MyGo native UI, with editor completion and a generator that adds other Iconify collections to your app.",
-		"zh-CN": "MyGo 原生 UI 的 Lucide 与 Twemoji 图标，以 Go 函数调用，可用生成器导入其他 Iconify 图标集。",
-		"zh-TW": "MyGo 原生 UI 的 Lucide 與 Twemoji 圖示，以 Go 函式呼叫，可用產生器匯入其他 Iconify 圖示集。",
-		"ja": "MyGo ネイティブ UI 向けの Lucide と Twemoji アイコン。型付きの Go 関数で使え、ほかの Iconify コレクションを取り込むジェネレーターも付属。",
-		"ko": "MyGo 네이티브 UI용 Lucide·Twemoji 아이콘을 타입이 있는 Go 함수로 제공하며, 다른 Iconify 컬렉션을 가져오는 생성기도 포함합니다."
+		"en": "Lucide and Twemoji icons as typed Go functions for MyGo native UI, with editor completion, a catalog package for building icon pickers, and a generator that adds other Iconify collections to your app.",
+		"zh-CN": "MyGo 原生 UI 的 Lucide 与 Twemoji 图标，以带类型的 Go 函数调用，支持编辑器补全；附带用于构建图标选择器的目录包，以及可导入其他 Iconify 图标集的生成器。",
+		"zh-TW": "MyGo 原生 UI 的 Lucide 與 Twemoji 圖示，以具型別的 Go 函式呼叫，支援編輯器補全；附帶用於建立圖示選擇器的目錄套件，以及可匯入其他 Iconify 圖示集的產生器。",
+		"ja": "MyGo ネイティブ UI 向けの Lucide と Twemoji アイコン。型付きの Go 関数で使えてエディタ補完が効き、アイコンピッカーを作るためのカタログパッケージと、ほかの Iconify コレクションを取り込むジェネレーターも付属。",
+		"ko": "MyGo 네이티브 UI용 Lucide·Twemoji 아이콘을 타입이 있는 Go 함수로 제공합니다. 에디터 자동 완성을 지원하며, 아이콘 선택기를 만들기 위한 카탈로그 패키지와 다른 Iconify 컬렉션을 가져오는 생성기도 포함합니다."
 	},
 	"repo": "Cyenoch/mygoicons",
 	"url": "https://github.com/Cyenoch/mygoicons",
