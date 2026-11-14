@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "forgeade",
+	"name": "ForgeADE",
+	"author": "Haslab-dev",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://forge-ade.pages.dev/",
+	"repo": "Haslab-dev/forge-ade",
+	"summary": {
+		"en": "An AI development environment built around an agent engine; MyGo builds its native desktop app.",
+		"zh-CN": "围绕智能体引擎打造的 AI 开发环境，MyGo 构建其原生桌面版。",
+		"zh-TW": "以代理引擎為核心的 AI 開發環境，MyGo 建置其原生桌面版。",
+		"ja": "エージェントエンジンを核にした AI 開発環境。MyGo がネイティブのデスクトップ版をビルド。",
+		"ko": "에이전트 엔진을 중심으로 한 AI 개발 환경. MyGo로 네이티브 데스크톱 버전을 빌드합니다."
+	},
+	"description": {
+		"en": "ForgeADE is an AI development environment whose shared Go core runs on the RakitKode agent engine and is delivered to several targets. MyGo builds the native desktop app, GPU-rendered as a single binary with no Node toolchain needed. A separate Wails desktop app with a React frontend, and headless CLIs such as forge-agent and forge-mcp, are built from the same core without MyGo.",
+		"zh-CN": "ForgeADE 是一款 AI 开发环境，共享的 Go 核心基于 RakitKode 智能体引擎，可交付为多种形态。MyGo 构建的是其原生桌面版：GPU 渲染，单一可执行文件，无需 Node 工具链。同一核心还另有采用 Wails 与 React 前端的桌面版，以及 forge-agent、forge-mcp 等无界面命令行工具，这些都不使用 MyGo。",
+		"zh-TW": "ForgeADE 是一款 AI 開發環境，共用的 Go 核心以 RakitKode 代理引擎為基礎，可交付為多種形態。MyGo 建置的是其原生桌面版：GPU 繪製，單一執行檔，不需要 Node 工具鏈。同一核心另有採用 Wails 與 React 前端的桌面版，以及 forge-agent、forge-mcp 等無介面命令列工具，這些都不使用 MyGo。",
+		"ja": "ForgeADE は、RakitKode エージェントエンジンの上に共通の Go コアを置き、複数の形で提供される AI 開発環境です。MyGo がビルドするのはネイティブのデスクトップ版で、GPU で描画される単一バイナリになっており、Node のツールチェーンは要りません。同じコアからは、React フロントエンドを持つ Wails 版のデスクトップアプリや、forge-agent・forge-mcp などのヘッドレス CLI も作られていますが、これらは MyGo を使っていません。",
+		"ko": "ForgeADE는 RakitKode 에이전트 엔진 위에 공용 Go 코어를 두고 여러 형태로 제공되는 AI 개발 환경입니다. MyGo로 만드는 것은 네이티브 데스크톱 버전으로, GPU로 렌더링되는 단일 바이너리이며 Node 툴체인이 필요 없습니다. 같은 코어로 React 프런트엔드를 쓰는 Wails 데스크톱 앱과 forge-agent, forge-mcp 같은 헤드리스 CLI도 만들지만, 이들은 MyGo를 쓰지 않습니다."
+	},
+	"icon": {
+		"file": "forgeade.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "forgeade.webp",
+	"added": "2026-11-14T02:29:31Z"
+}
