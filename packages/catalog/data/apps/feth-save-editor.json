@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "feth-save-editor",
+	"name": "FETH Save Editor",
+	"author": "jinghaihan",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "game",
+	"url": "https://github.com/jinghaihan/feth-save-editor",
+	"repo": "jinghaihan/feth-save-editor",
+	"summary": {
+		"en": "Edit Fire Emblem: Three Houses saves: characters, items, battalions, supports and New Game+.",
+		"zh-CN": "《火焰纹章：风花雪月》存档编辑器：角色、物品、骑士团、支援与新周目继承进度。",
+		"zh-TW": "《聖火降魔錄 風花雪月》存檔編輯器：角色、道具、騎士團、支援與新周目繼承進度。",
+		"ja": "『ファイアーエムブレム 風花雪月』のセーブエディター。キャラ、アイテム、騎士団、支援、周回引き継ぎを編集。",
+		"ko": "파이어 엠블렘 풍화설월 세이브 편집기. 캐릭터, 아이템, 기사단, 지원, 회차 계승까지 편집."
+	},
+	"description": {
+		"en": "A save editor for Fire Emblem: Three Houses v1.2.0, derived from imouto1994's fe3h-editor. It edits characters, items, battalions, quests and supports, along with the skill ranks, class mastery and supports carried into New Game+. The version drawn with MyGo's native UI is a rewrite on the refactor/mygo branch; published releases are still the earlier build from main.",
+		"zh-CN": "面向《火焰纹章：风花雪月》v1.2.0 的存档编辑器，源自 imouto1994 的 fe3h-editor。可编辑角色、物品、骑士团、任务与支援，以及继承到新周目的技能等级、兵种精通和支援。用 MyGo 原生 UI 重写的版本位于 refactor/mygo 分支，已发布的版本仍是 main 上的旧版构建。",
+		"zh-TW": "適用於《聖火降魔錄 風花雪月》v1.2.0 的存檔編輯器，衍生自 imouto1994 的 fe3h-editor。可編輯角色、道具、騎士團、任務與支援，以及繼承到新周目的技能等級、兵種精通和支援。以 MyGo 原生 UI 重寫的版本位於 refactor/mygo 分支，已發布的版本仍是 main 上的舊版建置。",
+		"ja": "『ファイアーエムブレム 風花雪月』v1.2.0 向けのセーブエディターで、imouto1994 の fe3h-editor をもとにしています。キャラクター、アイテム、騎士団、クエスト、支援に加え、周回で引き継ぐ技能ランク、兵種マスター、支援も編集できます。MyGo のネイティブ UI で書き直した版は refactor/mygo ブランチにあり、公開済みのリリースは main の旧ビルドのままです。",
+		"ko": "파이어 엠블렘 풍화설월 v1.2.0용 세이브 편집기로, imouto1994의 fe3h-editor를 바탕으로 합니다. 캐릭터, 아이템, 기사단, 퀘스트, 지원은 물론 다음 회차로 이어지는 기술 랭크, 병종 마스터, 지원도 편집할 수 있습니다. MyGo 네이티브 UI로 다시 만든 버전은 refactor/mygo 브랜치에 있으며, 공개된 릴리스는 아직 main의 이전 빌드입니다."
+	},
+	"icon": {
+		"file": "feth-save-editor.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "feth-save-editor.webp",
+	"added": "2026-11-13T02:27:52Z"
+}
