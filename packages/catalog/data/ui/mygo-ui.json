@@ -6,11 +6,11 @@
 	"tag": "theme",
 	"surface": "native",
 	"summary": {
-		"en": "A complete native UI solution for MyGo, written in Go: a large component library with forms, overlays, tables and native charts, light and dark theme tokens you can override or replace, window layouts, shader effects, and skills for coding agents.",
-		"zh-CN": "面向 MyGo 的完整原生 UI 方案，纯 Go 实现：包含表单、浮层、表格与原生图表的大型组件库，可覆盖或整体替换的明暗主题 Token，窗口布局、Shader 特效，以及供编码智能体使用的 Skills。",
-		"zh-TW": "面向 MyGo 的完整原生 UI 方案，純 Go 實作：包含表單、浮層、表格與原生圖表的大型元件庫，可覆寫或整體替換的深淺色主題 Token，視窗佈局、Shader 特效，以及供程式碼代理使用的 Skills。",
-		"ja": "MyGo 向けの完全なネイティブ UI ソリューション。Go 製で、フォーム、オーバーレイ、テーブル、ネイティブチャートを含む大規模なコンポーネント群、上書きも丸ごと差し替えもできる明暗テーマトークン、ウィンドウレイアウト、シェーダーエフェクト、コーディングエージェント向けスキルを収録。",
-		"ko": "MyGo를 위한 완전한 네이티브 UI 솔루션. Go로 작성되었으며 폼, 오버레이, 테이블, 네이티브 차트를 포함한 대규모 컴포넌트 라이브러리, 재정의하거나 통째로 교체할 수 있는 라이트·다크 테마 토큰, 창 레이아웃, 셰이더 효과, 코딩 에이전트용 스킬을 제공합니다."
+		"en": "A complete native UI solution for MyGo, written in Go: a large component library with forms, overlays, tables and native charts, light and dark theme tokens you can override or replace, window layouts, shader effects, and skills for coding agents. The live gallery shows every component with its source and a searchable Lucide icon browser.",
+		"zh-CN": "面向 MyGo 的完整原生 UI 方案，纯 Go 实现：包含表单、浮层、表格与原生图表的大型组件库，可覆盖或整体替换的明暗主题 Token，窗口布局、Shader 特效，以及供编码智能体使用的 Skills。在线 Gallery 展示每个组件及其源码，并带有可搜索的 Lucide 图标浏览器。",
+		"zh-TW": "面向 MyGo 的完整原生 UI 方案，純 Go 實作：包含表單、浮層、表格與原生圖表的大型元件庫，可覆寫或整體替換的深淺色主題 Token，視窗佈局、Shader 特效，以及供程式碼代理使用的 Skills。線上 Gallery 展示每個元件及其原始碼，並附有可搜尋的 Lucide 圖示瀏覽器。",
+		"ja": "MyGo 向けの完全なネイティブ UI ソリューション。Go 製で、フォーム、オーバーレイ、テーブル、ネイティブチャートを含む大規模なコンポーネント群、上書きも丸ごと差し替えもできる明暗テーマトークン、ウィンドウレイアウト、シェーダーエフェクト、コーディングエージェント向けスキルを収録。ライブギャラリーでは各コンポーネントをソース付きで確認でき、検索できる Lucide アイコンブラウザーも備えています。",
+		"ko": "MyGo를 위한 완전한 네이티브 UI 솔루션. Go로 작성되었으며 폼, 오버레이, 테이블, 네이티브 차트를 포함한 대규모 컴포넌트 라이브러리, 재정의하거나 통째로 교체할 수 있는 라이트·다크 테마 토큰, 창 레이아웃, 셰이더 효과, 코딩 에이전트용 스킬을 제공합니다. 라이브 갤러리에서 모든 컴포넌트를 소스와 함께 볼 수 있고, 검색 가능한 Lucide 아이콘 브라우저도 제공합니다."
 	},
 	"repo": "Cyenoch/mygoui",
 	"url": "https://github.com/Cyenoch/mygoui",
