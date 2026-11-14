@@ -6,14 +6,15 @@
 	"tag": "theme",
 	"surface": "native",
 	"summary": {
-		"en": "A Go component library for MyGo native UI that recreates the coss ui catalog and look, with light and dark themes whose colors you can override, forms and native charts.",
-		"zh-CN": "MyGo 原生 UI 的 Go 组件库，重现 coss ui 的组件目录与视觉风格，含可自定义配色的明暗主题、表单组件与原生图表。",
-		"zh-TW": "MyGo 原生 UI 的 Go 元件庫，重現 coss ui 的元件目錄與視覺風格，含可自訂配色的深淺色主題、表單元件與原生圖表。",
-		"ja": "MyGo ネイティブ UI 向けの Go コンポーネントライブラリ。coss ui のコンポーネント群と見た目を再現し、配色を変更できる明暗テーマ、フォーム、ネイティブのチャートを収録。",
-		"ko": "MyGo 네이티브 UI용 Go 컴포넌트 라이브러리. coss ui의 컴포넌트 구성과 디자인을 재현하며, 색상을 바꿀 수 있는 라이트·다크 테마, 폼, 네이티브 차트를 제공합니다."
+		"en": "A complete native UI solution for MyGo, written in Go: a large component library with forms, overlays, tables and native charts, light and dark theme tokens you can override or replace, window layouts, shader effects, and skills for coding agents. The live gallery shows every component with its source and a searchable Lucide icon browser.",
+		"zh-CN": "面向 MyGo 的完整原生 UI 方案，纯 Go 实现：包含表单、浮层、表格与原生图表的大型组件库，可覆盖或整体替换的明暗主题 Token，窗口布局、Shader 特效，以及供编码智能体使用的 Skills。在线 Gallery 展示每个组件及其源码，并带有可搜索的 Lucide 图标浏览器。",
+		"zh-TW": "面向 MyGo 的完整原生 UI 方案，純 Go 實作：包含表單、浮層、表格與原生圖表的大型元件庫，可覆寫或整體替換的深淺色主題 Token，視窗佈局、Shader 特效，以及供程式碼代理使用的 Skills。線上 Gallery 展示每個元件及其原始碼，並附有可搜尋的 Lucide 圖示瀏覽器。",
+		"ja": "MyGo 向けの完全なネイティブ UI ソリューション。Go 製で、フォーム、オーバーレイ、テーブル、ネイティブチャートを含む大規模なコンポーネント群、上書きも丸ごと差し替えもできる明暗テーマトークン、ウィンドウレイアウト、シェーダーエフェクト、コーディングエージェント向けスキルを収録。ライブギャラリーでは各コンポーネントをソース付きで確認でき、検索できる Lucide アイコンブラウザーも備えています。",
+		"ko": "MyGo를 위한 완전한 네이티브 UI 솔루션. Go로 작성되었으며 폼, 오버레이, 테이블, 네이티브 차트를 포함한 대규모 컴포넌트 라이브러리, 재정의하거나 통째로 교체할 수 있는 라이트·다크 테마 토큰, 창 레이아웃, 셰이더 효과, 코딩 에이전트용 스킬을 제공합니다. 라이브 갤러리에서 모든 컴포넌트를 소스와 함께 볼 수 있고, 검색 가능한 Lucide 아이콘 브라우저도 제공합니다."
 	},
 	"repo": "Cyenoch/mygoui",
 	"url": "https://github.com/Cyenoch/mygoui",
+	"homepage": "https://cyenoch.github.io/mygoui/",
 	"screenshot": "mygo-ui.webp",
 	"added": "2026-11-05T08:28:47Z"
 }
