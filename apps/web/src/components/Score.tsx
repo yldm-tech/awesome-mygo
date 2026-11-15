@@ -1,5 +1,5 @@
 import { SCORES_AS_OF, entryScore, entrySignals } from '@awesome-mygo/catalog';
-import { useId } from 'react';
+import { type MouseEvent, useId, useRef } from 'react';
 import { useLang, useT } from '../lib/lang';
 import { SCORE_FORMULA_URL, SCORE_HISTORY_URL, scoreLabel, scoreRows, scoreTier, scoreTotal } from '../lib/score';
 
@@ -90,22 +90,29 @@ export function ScoreBreakdown({ item, id, className = '' }: { item: string; id?
 	);
 }
 
-// The total on a button that opens the breakdown, for the entries that have no page of their own (UI libraries, state solutions, community plugins). A native popover: Escape, a click outside or the close button dismiss it, it works by touch, and it sits above everything else, so a card's transform or overflow cannot clip it. It sits beside a card's link rather than inside it.
+// The total on a button that opens the breakdown, for the entries that have no page of their own (UI libraries, state solutions, community plugins). A modal dialog: it sits in the top layer, so a card's transform or overflow cannot clip it, and while it is open the page behind it is inert, so a click outside it only closes it and never reaches the card underneath (a popover's light dismiss let that click through to the card's link). Escape, a click on the backdrop or the close button dismiss it, by touch too. It sits beside a card's link rather than inside it.
 export function ScoreButton({ item, name, className = '' }: { item: string; name: string; className?: string }) {
 	const t = useT();
-	const id = useId();
+	const dialog = useRef<HTMLDialogElement>(null);
 	if (!entryScore(item)) return null;
+	// A click on the backdrop targets the dialog itself, as does one on its padding, so only a click outside its box closes it. A click made with the keyboard lands on a control inside, never on the dialog.
+	const closeOutside = (e: MouseEvent<HTMLDialogElement>) => {
+		const d = e.currentTarget;
+		if (e.target !== d) return;
+		const r = d.getBoundingClientRect();
+		if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close();
+	};
 	return (
 		<>
-			<button type='button' popoverTarget={id} className={`score-btn ${className}`}>
+			<button type='button' aria-haspopup='dialog' onClick={() => dialog.current?.showModal()} className={`score-btn ${className}`}>
 				<ScoreChip item={item} name={name} />
 			</button>
-			<div popover='auto' id={id} className='score-pop'>
-				<button type='button' popoverTarget={id} popoverTargetAction='hide' className='score-x' aria-label={t.close} title={t.close}>
+			<dialog ref={dialog} aria-label={t.score_h} onClick={closeOutside} className='score-pop'>
+				<button type='button' onClick={() => dialog.current?.close()} className='score-x' aria-label={t.close} title={t.close}>
 					×
 				</button>
 				<ScoreBreakdown item={item} />
-			</div>
+			</dialog>
 		</>
 	);
 }

@@ -39,7 +39,7 @@ Below md the buttons grow to 40px, the smallest touch target the phone layout al
 .like-end {
 	margin-left: auto;
 }
-/* Scores (components/Score.tsx): the total as a small chip in a neutral tone (no star, no red or green), a button beside the like button that opens the breakdown in a popover, and the breakdown, each signal's points on a meter. */
+/* Scores (components/Score.tsx): the total as a small chip in a neutral tone (no star, no red or green), a button beside the like button that opens the breakdown in a modal dialog, and the breakdown, each signal's points on a meter. */
 
 .score-chip {
 	display: inline-flex;
@@ -159,7 +159,7 @@ Below md the buttons grow to 40px, the smallest touch target the phone layout al
 .score-total[data-tier='mid'] {
 	color: color-mix(in srgb, var(--color-cyan) 72%, var(--color-fg));
 }
-/* The popover sits in the top layer, centred in the window by the browser. */
+/* The modal dialog sits in the top layer, centred in the window by the browser. */
 .score-pop {
 	box-sizing: border-box;
 	width: min(440px, calc(100vw - 32px));

@@ -160,7 +160,7 @@
 	.score-total[data-tier='mid'] {
 		color: var(--color-pur);
 	}
-	/* Preflight takes every margin away, the browser's auto margins that centre a popover included. */
+	/* Preflight takes every margin away, the browser’s auto margins that centre a modal dialog included. */
 	.score-pop {
 		box-sizing: border-box;
 		margin: auto;
