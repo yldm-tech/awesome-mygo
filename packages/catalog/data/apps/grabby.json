@@ -1,0 +1,30 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "grabby",
+	"name": "Grabby",
+	"author": "gusibi",
+	"kind": "web",
+	"platforms": ["win", "linux", "mac"],
+	"group": "notes",
+	"url": "https://grabby.eztoolab.com",
+	"repo": "gusibi/grabby",
+	"summary": {
+		"en": "Captures pages, RSS and social feeds into Markdown, then has AI sort and read them.",
+		"zh-CN": "把网页、RSS 与社交平台内容采集为 Markdown，交给 AI 筛选与阅读。",
+		"zh-TW": "把網頁、RSS 與社群平台內容採集為 Markdown，交給 AI 篩選與閱讀。",
+		"ja": "ウェブ、RSS、SNS を Markdown としてローカルに集め、AI が選別して読むデスク。",
+		"ko": "웹, RSS, 소셜 피드를 Markdown으로 로컬에 모아 AI가 골라 읽는 데스크."
+	},
+	"description": {
+		"en": "Grabby drives a real Chrome window through its own extension, so pages behind a login come out as clean Markdown or a screenshot, and RSS subscriptions, X, Reddit and Xiaohongshu are captured the same way. Each item is scored, sorted, summarized and tagged by the model you pick among OpenAI, Anthropic, Google, DeepSeek, OpenRouter or a local server, and a morning and evening briefing is written from them. Everything is kept in a local SQLite file. The same process serves HTTP, WebSocket and MCP, so other tools can drive the browser through it, and the desktop app stays in the tray while the service runs.",
+		"zh-CN": "Grabby 通过自带的 Chrome 扩展驱动真实浏览器，登录态下的页面也能抓成干净的 Markdown 或截图，RSS 订阅与 X、Reddit、小红书同样如此。每条内容由你选择的模型评分、分类、摘要并打标签，可选 OpenAI、Anthropic、Google、DeepSeek、OpenRouter 或本地服务，再据此生成早报与晚报。数据只放在本机 SQLite；同一进程同时提供 HTTP、WebSocket 与 MCP，别的工具也能借它操作浏览器，桌面端关掉窗口后驻留托盘继续运行。",
+		"zh-TW": "Grabby 透過內建的 Chrome 擴充功能驅動真實瀏覽器，需要登入的頁面也能擷取成乾淨的 Markdown 或截圖，RSS 訂閱與 X、Reddit、小紅書同樣如此。每則內容由你選擇的模型評分、分類、摘要並加上標籤，可選 OpenAI、Anthropic、Google、DeepSeek、OpenRouter 或本機服務，再據此產生早報與晚報。資料只放在本機 SQLite；同一個行程同時提供 HTTP、WebSocket 與 MCP，其他工具也能透過它操作瀏覽器，桌面端關掉視窗後駐留選單列繼續執行。",
+		"ja": "Grabby は自前の Chrome 拡張で本物のブラウザーを動かすので、ログインが要るページもきれいな Markdown やスクリーンショットとして取り込め、RSS の購読や X、Reddit、小紅書も同じように集められます。取り込んだ内容は選んだモデルが採点・分類・要約・タグ付けし、そこから朝夕のダイジェストを作ります。モデルは OpenAI、Anthropic、Google、DeepSeek、OpenRouter、ローカルサーバーから選べます。データは手元の SQLite にだけ置き、同じプロセスが HTTP、WebSocket、MCP を兼ねるので、他のツールからブラウザーを動かすこともできます。ウインドウを閉じてもトレイに残ってサービスは動き続けます。",
+		"ko": "Grabby는 자체 Chrome 확장으로 실제 브라우저를 움직이므로 로그인이 필요한 페이지도 깔끔한 Markdown이나 스크린숏으로 담고, RSS 구독과 X, Reddit, 샤오홍슈도 같은 방식으로 모읍니다. 담은 글은 고른 모델이 점수를 매기고 분류하고 요약하며 태그를 붙여, 아침과 저녁 브리핑을 만듭니다. 모델은 OpenAI, Anthropic, Google, DeepSeek, OpenRouter, 로컬 서버 가운데 고를 수 있습니다. 데이터는 이 컴퓨터의 SQLite에만 두고, 한 프로세스가 HTTP, WebSocket, MCP를 함께 제공해 다른 도구가 브라우저를 조작할 수 있습니다. 창을 닫아도 트레이에 남아 서비스는 계속 돕니다."
+	},
+	"screenshot": "grabby.webp",
+	"icon": {
+		"file": "grabby.webp"
+	},
+	"added": "2026-11-15T04:13:27Z"
+}
