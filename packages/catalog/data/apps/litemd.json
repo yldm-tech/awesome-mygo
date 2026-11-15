@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "litemd",
+	"name": "LiteMd",
+	"author": "jorben",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://jorben.github.io/litemd/",
+	"repo": "jorben/litemd",
+	"summary": {
+		"en": "A lightweight Markdown editor that opens each .md file in its own window, with four views.",
+		"zh-CN": "轻量的 Markdown 编辑器：每个 .md 文件独占一个窗口，支持四种视图。",
+		"zh-TW": "輕量的 Markdown 編輯器：每個 .md 檔案獨佔一個視窗，提供四種檢視模式。",
+		"ja": "軽量な Markdown エディター。.md ファイルごとに別ウィンドウで開き、4つの表示で編集。",
+		"ko": "가벼운 Markdown 편집기. .md 파일마다 창을 따로 열고, 네 가지 보기를 제공합니다."
+	},
+	"description": {
+		"en": "A Markdown editor for macOS, Windows and Linux, with a web frontend shown in the system WebView through MyGo instead of a bundled browser. Double-click a .md file and it opens in its own window, without a file tree or tabs, in preview, WYSIWYG, source or split view. Saving rewrites only the blocks you edited, and it renders GFM, KaTeX math and Mermaid diagrams.",
+		"zh-CN": "适用于 macOS、Windows 和 Linux 的 Markdown 编辑器，网页前端经由 MyGo 运行在系统 WebView 中，不打包浏览器。双击 .md 文件即在独立窗口中打开，没有文件树和标签页，可在预览、所见即所得、源码和分屏四种视图间切换。保存时只改写你编辑过的段落，并支持 GFM、KaTeX 公式和 Mermaid 图表。",
+		"zh-TW": "適用於 macOS、Windows 與 Linux 的 Markdown 編輯器，網頁前端透過 MyGo 在系統 WebView 中執行，不內建瀏覽器。雙擊 .md 檔案即以獨立視窗開啟，沒有檔案樹與分頁，可在預覽、所見即所得、原始碼與分割四種檢視間切換。儲存時只改寫你編輯過的區塊，並支援 GFM、KaTeX 數學式與 Mermaid 圖表。",
+		"ja": "macOS・Windows・Linux 向けの Markdown エディター。Web フロントエンドを MyGo 経由でシステムの WebView に表示し、ブラウザーは同梱しません。.md ファイルをダブルクリックするとファイルごとに別ウィンドウで開き、ファイルツリーやタブはなく、プレビュー、WYSIWYG、ソース、分割の4つの表示を切り替えられます。保存時は編集したブロックだけを書き換え、GFM、KaTeX の数式、Mermaid の図を表示します。",
+		"ko": "macOS, Windows, Linux용 Markdown 편집기로, 웹 프런트엔드를 MyGo를 통해 시스템 WebView에서 띄우며 브라우저를 번들하지 않습니다. .md 파일을 더블클릭하면 파일마다 별도 창으로 열리고, 파일 트리나 탭 없이 미리보기, WYSIWYG, 소스, 분할 네 가지 보기를 오갈 수 있습니다. 저장할 때는 편집한 블록만 다시 쓰며, GFM, KaTeX 수식, Mermaid 다이어그램을 렌더링합니다."
+	},
+	"icon": {
+		"file": "litemd.webp"
+	},
+	"screenshot": "litemd.webp",
+	"added": "2026-11-15T02:30:04Z"
+}
