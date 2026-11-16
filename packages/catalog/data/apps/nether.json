@@ -7,8 +7,8 @@
 	"platforms": ["win", "linux", "mac"],
 	"category": "UtilitiesApplication",
 	"group": "notes",
-	"url": "https://fzn0x.github.io/Nether/",
-	"repo": "fzn0x/Nether",
+	"url": "https://fzn0x.github.io/nether/",
+	"repo": "fzn0x/nether",
 	"summary": {
 		"en": "Local-first Markdown notes with Notion-style databases and import from Obsidian and Notion.",
 		"zh-CN": "本地优先 Markdown 笔记，含 Notion 式数据库与 Obsidian 导入。",
