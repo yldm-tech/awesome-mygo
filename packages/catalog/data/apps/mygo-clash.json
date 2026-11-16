@@ -3,7 +3,7 @@
 	"slug": "mygo-clash",
 	"name": "MyGO-Clash",
 	"author": "Souitou-iop",
-	"kind": "web",
+	"kind": "native",
 	"platforms": ["win", "linux", "mac"],
 	"group": "network",
 	"url": "https://github.com/Souitou-iop/MyGO-Clash",
@@ -16,11 +16,11 @@
 		"ko": "mihomo 기반 프록시 클라이언트. Tailscale 내장, WebDAV 암호화 동기화 지원."
 	},
 	"description": {
-		"en": "A proxy client for macOS, Windows and Linux built on the mihomo (Clash Meta) core, with a React frontend in MyGo's web view. It runs system proxy or TUN mode, manages subscriptions, and includes a userspace Tailscale node that needs no separate install. Subscriptions and settings sync between computers over any WebDAV service with end-to-end encryption.",
-		"zh-CN": "基于 mihomo（Clash Meta）内核的 macOS、Windows 与 Linux 代理客户端，界面是运行在 MyGo 网页视图中的 React 前端。支持系统代理、TUN 模式和订阅管理，内置无需另装的用户态 Tailscale 节点；订阅和设置可通过任意 WebDAV 服务在多台电脑间端到端加密同步。",
-		"zh-TW": "基於 mihomo（Clash Meta）核心的 macOS、Windows 與 Linux 代理用戶端，介面是在 MyGo 網頁視圖中執行的 React 前端。支援系統代理、TUN 模式與訂閱管理，內建免另外安裝的使用者態 Tailscale 節點；訂閱與設定可透過任何 WebDAV 服務在多台電腦間端對端加密同步。",
-		"ja": "mihomo（Clash Meta）コアを使った macOS・Windows・Linux 向けのプロキシクライアントで、画面は MyGo の Web ビューで動く React フロントエンドです。システムプロキシと TUN モード、サブスクリプション管理に対応し、別途インストール不要のユーザー空間 Tailscale ノードを内蔵しています。サブスクリプションと設定は任意の WebDAV サービスを通じ、エンドツーエンド暗号化で複数のパソコン間で同期できます。",
-		"ko": "mihomo(Clash Meta) 코어 기반의 macOS·Windows·Linux용 프록시 클라이언트로, 화면은 MyGo 웹 뷰에서 실행되는 React 프런트엔드입니다. 시스템 프록시와 TUN 모드, 구독 관리를 지원하고, 따로 설치할 필요 없는 사용자 공간 Tailscale 노드를 내장했습니다. 구독과 설정은 어떤 WebDAV 서비스로든 여러 컴퓨터 간에 종단간 암호화로 동기화됩니다."
+		"en": "A proxy client for macOS, Windows and Linux built on the mihomo (Clash Meta) core, with its windows drawn in MyGo's native UI. It runs system proxy or TUN mode, manages subscriptions, and includes a userspace Tailscale node that needs no separate install. Subscriptions and settings sync between computers over any WebDAV service with end-to-end encryption.",
+		"zh-CN": "基于 mihomo（Clash Meta）内核的 macOS、Windows 与 Linux 代理客户端，窗口由 MyGo 原生 UI 绘制。支持系统代理、TUN 模式和订阅管理，内置无需另装的用户态 Tailscale 节点；订阅和设置可通过任意 WebDAV 服务在多台电脑间端到端加密同步。",
+		"zh-TW": "基於 mihomo（Clash Meta）核心的 macOS、Windows 與 Linux 代理用戶端，視窗由 MyGo 原生 UI 繪製。支援系統代理、TUN 模式與訂閱管理，內建免另外安裝的使用者態 Tailscale 節點；訂閱與設定可透過任何 WebDAV 服務在多台電腦間端對端加密同步。",
+		"ja": "mihomo（Clash Meta）コアを使った macOS・Windows・Linux 向けのプロキシクライアントで、ウィンドウは MyGo のネイティブ UI で描画されます。システムプロキシと TUN モード、サブスクリプション管理に対応し、別途インストール不要のユーザー空間 Tailscale ノードを内蔵しています。サブスクリプションと設定は任意の WebDAV サービスを通じ、エンドツーエンド暗号化で複数のパソコン間で同期できます。",
+		"ko": "mihomo(Clash Meta) 코어 기반의 macOS·Windows·Linux용 프록시 클라이언트로, 창은 MyGo 네이티브 UI로 그려집니다. 시스템 프록시와 TUN 모드, 구독 관리를 지원하고, 따로 설치할 필요 없는 사용자 공간 Tailscale 노드를 내장했습니다. 구독과 설정은 어떤 WebDAV 서비스로든 여러 컴퓨터 간에 종단간 암호화로 동기화됩니다."
 	},
 	"icon": {
 		"file": "mygo-clash.webp"
