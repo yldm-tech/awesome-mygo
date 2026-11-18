@@ -13,10 +13,22 @@
 	"url": "https://github.com/Kuangcp/Git-K",
 	"repo": "Kuangcp/Git-K",
 	"summary": {
-		"en": "轻量Git客户端"
+		"en": "A lightweight native Git client inspired by git-cola, running your local git for every operation.",
+		"zh-CN": "受 git-cola 启发的轻量原生 Git 客户端，所有操作都调用本机 git。",
+		"zh-TW": "受 git-cola 啟發的輕量原生 Git 用戶端，所有操作都呼叫本機 git。",
+		"ja": "git-cola に着想を得た軽量なネイティブ Git クライアント。操作は手元の git で実行。",
+		"ko": "git-cola에서 영감을 받은 가벼운 네이티브 Git 클라이언트로, 로컬 git을 호출합니다."
 	},
 	"description": {
-		"en": "轻量Git客户端"
+		"en": "A Git client drawn with MyGo's native UI, with no web view and no cgo, that runs every operation through your local git so behavior and hooks match the command line. It opens several repositories as tabs in one window, follows git-cola's layout for diffs, staging and commits, and shows a commit graph. Partial staging, branch switching, merge and rebase are not supported yet.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Git 客户端，无 WebView、无 cgo，所有操作都调用本机 git，行为和钩子与命令行一致。一个窗口以标签页打开多个仓库，工作区仿照 git-cola 布局，可查看差异、暂存和提交，分支页显示提交图。暂不支持部分暂存、切换分支、merge 和 rebase。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Git 用戶端，無 WebView、無 cgo，所有操作都呼叫本機 git，行為和 hook 與命令列一致。一個視窗以分頁開啟多個儲存庫，工作區仿照 git-cola 版面，可檢視差異、暫存和提交，分支頁顯示提交圖。暫不支援部分暫存、切換分支、merge 與 rebase。",
+		"ja": "MyGo のネイティブ UI で描かれた Git クライアント。WebView も cgo も使わず、すべての操作をローカルの git で実行するため、挙動やフックはコマンドラインと同じです。1 つのウィンドウで複数のリポジトリをタブで開き、git-cola にならったワークスペースで差分の確認、ステージ、コミットができ、ブランチページにはコミットグラフを表示します。部分ステージ、ブランチ切り替え、merge、rebase にはまだ対応していません。",
+		"ko": "MyGo의 네이티브 UI로 그린 Git 클라이언트로, WebView도 cgo도 쓰지 않고 모든 작업을 로컬 git으로 실행해 동작과 훅이 명령줄과 같습니다. 한 창에서 여러 저장소를 탭으로 열고, git-cola를 따른 작업 공간에서 diff 확인, 스테이징, 커밋을 하며, 브랜치 페이지에서 커밋 그래프를 보여 줍니다. 부분 스테이징, 브랜치 전환, merge와 rebase는 아직 지원하지 않습니다."
 	},
+	"icon": {
+		"file": "git-k.webp"
+	},
+	"screenshot": "git-k.webp",
 	"added": "2026-11-18T16:55:59Z"
 }
