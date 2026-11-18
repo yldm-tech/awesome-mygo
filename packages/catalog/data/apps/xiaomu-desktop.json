@@ -5,18 +5,28 @@
 	"author": "arixbit",
 	"kind": "native",
 	"platforms": [
-		"win",
-		"linux",
 		"mac"
 	],
 	"group": "media",
 	"url": "https://github.com/arixbit/xiaomu-desktop",
 	"repo": "arixbit/xiaomu-desktop",
 	"summary": {
-		"en": "一款 macOS 原生多源播放器。导入自己的 TVBox 配置、IPTV 列表，或直接打开视频链接。"
+		"en": "A native macOS player for your own TVBox configs, IPTV lists and video links.",
+		"zh-CN": "macOS 原生播放器，播放自备的 TVBox 配置、IPTV 列表和视频链接。",
+		"zh-TW": "macOS 原生播放器，播放自備的 TVBox 設定、IPTV 清單和影片連結。",
+		"ja": "自前の TVBox 設定、IPTV リスト、動画リンクを再生する macOS ネイティブプレーヤー。",
+		"ko": "자신의 TVBox 설정, IPTV 목록, 동영상 링크를 재생하는 macOS 네이티브 플레이어."
 	},
 	"description": {
-		"en": "一款 macOS 原生多源播放器。导入自己的 TVBox 配置、IPTV 列表，或直接打开视频链接。"
+		"en": "A player for macOS 13 and later, drawn with MyGo's native UI with no web frontend. You import your own TVBox configuration or IPTV list, then search titles across every source at once, choose a line and episode, and continue where you left off; direct mp4 and m3u8 links play too. It is only a player and provides no content of its own.",
+		"zh-CN": "适用于 macOS 13 及以上的播放器，界面由 MyGo 原生 UI 绘制，没有网页前端。导入自己的 TVBox 配置或 IPTV 列表后，可按片名跨站搜索、选择线路和分集播放，并从上次的进度继续观看；也能直接打开 mp4、m3u8 链接。小幕只是播放器，不提供任何影视内容。",
+		"zh-TW": "適用於 macOS 13 以上的播放器，介面由 MyGo 原生 UI 繪製，沒有網頁前端。匯入自己的 TVBox 設定或 IPTV 清單後，可依片名跨站搜尋、選擇線路與集數播放，並從上次的進度接著看；也能直接開啟 mp4、m3u8 連結。小幕只是播放器，不提供任何影視內容。",
+		"ja": "macOS 13 以降で動くプレーヤーで、画面は MyGo のネイティブ UI で描かれ、Web フロントエンドはありません。自分の TVBox 設定や IPTV リストを読み込むと、作品名で複数のソースをまとめて検索し、回線とエピソードを選んで再生でき、前回の続きから見られます。mp4 や m3u8 のリンクも直接開けます。小幕はプレーヤーにすぎず、映像コンテンツは提供しません。",
+		"ko": "macOS 13 이상에서 동작하는 플레이어로, MyGo의 네이티브 UI로 그렸으며 웹 프런트엔드가 없습니다. 자신의 TVBox 설정이나 IPTV 목록을 가져오면 제목으로 여러 소스를 한꺼번에 검색하고, 회선과 회차를 골라 재생하며, 지난번에 보던 곳부터 이어 볼 수 있습니다. mp4, m3u8 링크도 바로 열 수 있습니다. 小幕는 플레이어일 뿐 영상 콘텐츠를 제공하지 않습니다."
 	},
+	"icon": {
+		"file": "xiaomu-desktop.webp"
+	},
+	"screenshot": "xiaomu-desktop.webp",
 	"added": "2026-11-18T03:27:23Z"
 }
