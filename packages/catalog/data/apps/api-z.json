@@ -13,10 +13,22 @@
 	"url": "https://github.com/Kuangcp/Api-Z",
 	"repo": "Kuangcp/Api-Z",
 	"summary": {
-		"en": "本地轻量Api调试工具，支持常见Rest接口，支持AI接口协议"
+		"en": "A local-first API client for HTTP and SSE, with AG-UI streams, collections and environments.",
+		"zh-CN": "本地优先的 API 调试客户端，支持 HTTP、SSE 与 AG-UI 流式响应。",
+		"zh-TW": "本機優先的 API 除錯用戶端，支援 HTTP、SSE 與 AG-UI 串流回應。",
+		"ja": "ローカルファーストの API デバッグクライアント。HTTP、SSE、AG-UI ストリームに対応。",
+		"ko": "로컬 우선 API 디버깅 클라이언트. HTTP, SSE, AG-UI 스트리밍 응답을 지원합니다."
 	},
 	"description": {
-		"en": "本地轻量Api调试工具，支持常见Rest接口，支持AI接口协议"
+		"en": "A local-first API client written in Go and drawn with MyGo's native UI, replacing the author's Compose Desktop tool api-x. It sends HTTP requests with environments and inherited auth, renders large SSE and AG-UI streaming responses, and keeps HAR history. It imports Postman collections, cURL commands and OpenAPI specs, and can sync collections encrypted through a Git repository.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的本地优先 API 调试客户端，用来替代作者基于 Compose Desktop 的 api-x。它借助环境变量与认证继承发送 HTTP 请求，能渲染大体量的 SSE 与 AG-UI 流式响应，并保留 HAR 历史。可导入 Postman 集合、cURL 命令和 OpenAPI 文档，也能通过 Git 仓库加密同步集合。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的本機優先 API 除錯用戶端，用來取代作者以 Compose Desktop 開發的 api-x。它透過環境變數與認證繼承發送 HTTP 請求，能呈現大量的 SSE 與 AG-UI 串流回應，並保留 HAR 歷史紀錄。可匯入 Postman 集合、cURL 指令和 OpenAPI 文件，也能透過 Git 儲存庫加密同步集合。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれたローカルファーストの API クライアントで、作者が Compose Desktop で作った api-x の後継です。環境変数と認証の継承を使って HTTP リクエストを送り、大きな SSE や AG-UI のストリーミング応答を表示し、HAR 履歴を残します。Postman コレクション、cURL コマンド、OpenAPI を取り込め、Git リポジトリを通じてコレクションを暗号化して同期することもできます。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 로컬 우선 API 클라이언트로, 작성자가 Compose Desktop으로 만든 api-x를 대체합니다. 환경 변수와 인증 상속을 적용해 HTTP 요청을 보내고, 큰 SSE와 AG-UI 스트리밍 응답을 표시하며, HAR 기록을 남깁니다. Postman 컬렉션, cURL 명령, OpenAPI를 가져올 수 있고, Git 저장소를 통해 컬렉션을 암호화해 동기화할 수도 있습니다."
 	},
+	"icon": {
+		"file": "api-z.webp"
+	},
+	"screenshot": "api-z.webp",
 	"added": "2026-11-18T16:58:04Z"
 }
