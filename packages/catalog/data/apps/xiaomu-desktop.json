@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "xiaomu-desktop",
+	"name": "小幕",
+	"author": "arixbit",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/arixbit/xiaomu-desktop",
+	"repo": "arixbit/xiaomu-desktop",
+	"summary": {
+		"en": "一款 macOS 原生多源播放器。导入自己的 TVBox 配置、IPTV 列表，或直接打开视频链接。"
+	},
+	"description": {
+		"en": "一款 macOS 原生多源播放器。导入自己的 TVBox 配置、IPTV 列表，或直接打开视频链接。"
+	},
+	"added": "2026-11-18T03:27:23Z"
+}
