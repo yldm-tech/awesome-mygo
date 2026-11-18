@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "git-k",
+	"name": "Git-K",
+	"author": "Kuangcp",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/Kuangcp/Git-K",
+	"repo": "Kuangcp/Git-K",
+	"summary": {
+		"en": "轻量Git客户端"
+	},
+	"description": {
+		"en": "轻量Git客户端"
+	},
+	"added": "2026-11-18T16:55:59Z"
+}
