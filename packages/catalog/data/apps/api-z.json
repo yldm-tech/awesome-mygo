@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "api-z",
+	"name": "Api-Z",
+	"author": "Kuangcp",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/Kuangcp/Api-Z",
+	"repo": "Kuangcp/Api-Z",
+	"summary": {
+		"en": "本地轻量Api调试工具，支持常见Rest接口，支持AI接口协议"
+	},
+	"description": {
+		"en": "本地轻量Api调试工具，支持常见Rest接口，支持AI接口协议"
+	},
+	"added": "2026-11-18T16:58:04Z"
+}
