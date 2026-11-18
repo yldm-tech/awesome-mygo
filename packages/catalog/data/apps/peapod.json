@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "peapod",
+	"name": "Peapod",
+	"author": "JiChao99",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/JiChao99/peapod",
+	"repo": "JiChao99/peapod",
+	"summary": {
+		"en": "Run one flow across several versions of a site — side by side, in sync, with recorded evidence."
+	},
+	"description": {
+		"en": "Run one flow across several versions of a site — side by side, in sync, with recorded evidence."
+	},
+	"added": "2026-11-18T03:07:57Z"
+}
