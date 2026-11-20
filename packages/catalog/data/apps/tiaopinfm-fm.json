@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "tiaopinfm-fm",
+	"name": "TiaopinFM（调频 FM）",
+	"author": "tangqiu0205",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/tangqiu0205/tiaopin-fm",
+	"repo": "tangqiu0205/tiaopin-fm",
+	"summary": {
+		"en": "TiaopinFM（调频 FM）— 原生界面网络电台客户端，用 Go 和 MyGo 写成。"
+	},
+	"description": {
+		"en": "TiaopinFM（调频 FM）— 原生界面网络电台客户端，用 Go 和 MyGo 写成。"
+	},
+	"added": "2026-11-20T03:43:46Z"
+}
