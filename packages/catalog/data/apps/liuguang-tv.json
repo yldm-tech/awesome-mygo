@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "liuguang-tv",
+	"name": "liuguang-tv",
+	"author": "tangqiu0205",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/tangqiu0205/liuguang-tv",
+	"repo": "tangqiu0205/liuguang-tv",
+	"summary": {
+		"en": "Go + MyGo Native UI 的 IPTV 桌面客户端。纯 Go 界面，不使用 HTML / WebView。"
+	},
+	"description": {
+		"en": "Go + MyGo Native UI 的 IPTV 桌面客户端。纯 Go 界面，不使用 HTML / WebView。"
+	},
+	"added": "2026-11-20T03:07:02Z"
+}
