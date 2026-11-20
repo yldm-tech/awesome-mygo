@@ -1,0 +1,31 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "quickbo",
+	"name": "QuickBo",
+	"author": "harrylyx",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"category": "MultimediaApplication",
+	"group": "media",
+	"url": "https://quickbo.omnifate.xyz",
+	"repo": "harrylyx/QuickBo",
+	"summary": {
+		"en": "A TVBox / FongMi compatible desktop player: several subscriptions merge into one poster-wall home, with libmpv playing inside a native window; no sources are bundled.",
+		"zh-CN": "TVBox / FongMi 兼容的桌面播放器：多份订阅汇成一张海报墙首页，libmpv 在原生窗口内播放，不内置片源。",
+		"zh-TW": "TVBox / FongMi 相容的桌面播放器：多份訂閱彙整成一張海報牆首頁，libmpv 在原生視窗內播放，不內建片源。",
+		"ja": "TVBox / FongMi 対応のデスクトッププレーヤー。複数のサブスクリプションをポスター壁のホームにまとめ、libmpv でウィンドウ内に再生。ソースは同梱しません。",
+		"ko": "TVBox / FongMi 호환 데스크톱 플레이어. 여러 구독을 포스터 월 홈으로 모으고 libmpv로 창 안에서 재생하며, 소스는 내장하지 않습니다."
+	},
+	"description": {
+		"en": "A cross-platform player for TVBox and FongMi subscriptions, drawn entirely with MyGo's native GPU UI instead of a WebView, with libmpv rendering video inside the window. It ships as an empty shell with no sources, subscription URLs or parsers: add your own URLs or local JSON, then several subscriptions merge into one poster-wall home with a search across every source, per-title line switching and M3U live TV. Playback includes a borderless floating window, fullscreen, subtitles, speed control, skipping intros and resuming where you left off; builds are available for macOS, Windows and Linux.",
+		"zh-CN": "TVBox / FongMi 订阅的跨平台播放器，界面全部由 MyGo 的原生 GPU UI 绘制，不用 WebView，视频由 libmpv 在窗口内渲染。装好是空壳，不内置片源、订阅地址或解析接口，需要自己添加配置 URL 或本地 JSON；多份订阅会合并成一张海报墙首页，支持一次搜索全部片源、按片换线路，以及 M3U 直播。播放支持无边框悬浮小窗、全屏、字幕、倍速、跳过片头片尾和断点续播，提供 macOS、Windows、Linux 安装包。",
+		"zh-TW": "TVBox / FongMi 訂閱的跨平台播放器，介面全部由 MyGo 的原生 GPU UI 繪製，不用 WebView，影片由 libmpv 在視窗內算繪。裝好是空殼，不內建片源、訂閱位址或解析介面，需要自己新增設定 URL 或本機 JSON；多份訂閱會彙整成一張海報牆首頁，支援一次搜尋全部片源、依作品切換線路，以及 M3U 直播。播放支援無邊框懸浮小窗、全螢幕、字幕、倍速、跳過片頭片尾與斷點續播，提供 macOS、Windows、Linux 安裝檔。",
+		"ja": "TVBox / FongMi のサブスクリプションに対応するクロスプラットフォームのプレーヤー。画面はすべて MyGo のネイティブ GPU UI で描かれ、WebView は使わず、動画は libmpv がウィンドウ内に描画します。ソースや購読先、解析インターフェースは一切同梱されていない空の状態で、設定 URL またはローカル JSON を自分で追加します。複数のサブスクリプションはポスター壁のホームにまとまり、全ソース横断検索、作品ごとの回線切り替え、M3U のライブ配信に対応。再生は枠なしのフローティングウィンドウ、全画面、字幕、再生速度、オープニングのスキップ、続きからの再生に対応し、macOS・Windows・Linux 向けのインストーラーを提供しています。",
+		"ko": "TVBox / FongMi 구독용 크로스 플랫폼 플레이어. 화면 전체를 MyGo의 네이티브 GPU UI로 그리며 WebView를 쓰지 않고, 영상은 libmpv로 창 안에서 렌더링합니다. 소스·구독 주소·파서를 일절 내장하지 않은 빈 상태로 제공되므로 설정 URL이나 로컬 JSON을 직접 추가해야 합니다. 여러 구독을 포스터 월 홈으로 합쳐 모든 소스 통합 검색, 작품별 회선 전환, M3U 라이브 방송을 지원합니다. 재생은 테두리 없는 플로팅 창, 전체 화면, 자막, 배속, 오프닝 건너뛰기, 이어 보기를 지원하며 macOS·Windows·Linux 설치 패키지를 제공합니다."
+	},
+	"added": "2026-11-14T09:03:31Z"
+}
