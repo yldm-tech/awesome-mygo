@@ -13,10 +13,22 @@
 	"url": "https://github.com/tangqiu0205/tiaopin-fm",
 	"repo": "tangqiu0205/tiaopin-fm",
 	"summary": {
-		"en": "TiaopinFM（调频 FM）— 原生界面网络电台客户端，用 Go 和 MyGo 写成。"
+		"en": "A native internet radio player: find stations worldwide, save favorites and identify songs.",
+		"zh-CN": "原生界面的网络电台客户端：发现世界各地电台，收藏喜欢的台，还能听歌识曲。",
+		"zh-TW": "原生介面的網路電台用戶端：探索世界各地電台，收藏喜愛的台，還能聽歌識曲。",
+		"ja": "世界中の局を探して聴ける、ネイティブ UI のネットラジオクライアント。曲名の識別にも対応。",
+		"ko": "전 세계 방송국을 찾아 듣고 즐겨찾기하는 네이티브 인터넷 라디오 앱. 곡 인식도 지원합니다."
 	},
 	"description": {
-		"en": "TiaopinFM（调频 FM）— 原生界面网络电台客户端，用 Go 和 MyGo 写成。"
+		"en": "An internet radio desktop client drawn with MyGo's native UI, with no WebView. It browses the Radio-Browser directory by genre, region, language and name, keeps favorites and recently played stations, and identifies the song on air through an unofficial Shazam interface. A built-in player handles MP3, AAC, Opus, FLAC and HLS with no separate mpv or FFmpeg install.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的网络电台桌面客户端，没有 WebView。电台目录来自 Radio-Browser，可按内容、地区、语言和名称筛选，能收藏电台、保留最近收听记录，并通过非官方 Shazam 接口识别正在播放的歌曲。内置音频播放组件，无需另装 mpv 或 FFmpeg，支持 MP3、AAC、Opus、FLAC 和 HLS 等格式。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的網路電台桌面用戶端，沒有 WebView。電台目錄來自 Radio-Browser，可依內容、地區、語言和名稱篩選，能收藏電台、保留最近收聽紀錄，並透過非官方 Shazam 介面辨識正在播放的歌曲。內建音訊播放元件，不必另裝 mpv 或 FFmpeg，支援 MP3、AAC、Opus、FLAC 和 HLS 等格式。",
+		"ja": "MyGo のネイティブ UI で描かれたネットラジオのデスクトップクライアントで、WebView は使いません。Radio-Browser の局一覧をジャンル・地域・言語・名前で絞り込み、お気に入りや最近聴いた局を保存し、非公式の Shazam API で再生中の曲を識別します。音声プレーヤーを内蔵しており、mpv や FFmpeg を別途入れなくても MP3、AAC、Opus、FLAC、HLS などを再生できます。",
+		"ko": "MyGo의 네이티브 UI로 그린 인터넷 라디오 데스크톱 클라이언트로, WebView를 쓰지 않습니다. Radio-Browser 방송국 목록을 장르, 지역, 언어, 이름으로 걸러 보고, 즐겨찾기와 최근 들은 방송국을 저장하며, 비공식 Shazam 인터페이스로 재생 중인 곡을 인식합니다. 오디오 플레이어가 내장되어 mpv나 FFmpeg를 따로 설치하지 않아도 MP3, AAC, Opus, FLAC, HLS 등을 재생합니다."
 	},
+	"icon": {
+		"file": "tiaopinfm-fm.webp"
+	},
+	"screenshot": "tiaopinfm-fm.webp",
 	"added": "2026-11-20T03:43:46Z"
 }
