@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "tv-liuguangtv",
+	"name": "流光 TV（LiuguangTV）",
+	"author": "tangqiu0205",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/tangqiu0205/liuguang-tv",
+	"repo": "tangqiu0205/liuguang-tv",
+	"summary": {
+		"en": "An IPTV player with a native UI that plays M3U channel lists through mpv or a built-in WebView.",
+		"zh-CN": "原生界面的 IPTV 播放器，用 mpv 或内置 WebView 播放 M3U 频道。",
+		"zh-TW": "原生介面的 IPTV 播放器，用 mpv 或內建 WebView 播放 M3U 頻道。",
+		"ja": "ネイティブ UI の IPTV プレーヤー。mpv か内蔵 WebView でチャンネルを再生。",
+		"ko": "네이티브 UI의 IPTV 플레이어. M3U 채널을 mpv나 내장 WebView로 재생합니다."
+	},
+	"description": {
+		"en": "An IPTV desktop client with channels, settings and controls in MyGo's native UI; video plays in mpv, which you install yourself, or in a built-in WebView. It loads channel lists from HTTP(S) or local M3U, M3U8 and TXT files and XMLTV program guides, filters by group and favorites, and merges a channel's alternate streams. It comes with no channel sources.",
+		"zh-CN": "一款 IPTV 桌面客户端，频道、设置与播放控制用 MyGo 原生 UI 绘制，视频由需自行安装的 mpv 或内置 WebView 播放。频道订阅支持 HTTP(S) 或本地 M3U、M3U8、TXT，节目单支持 XMLTV，可按分组和收藏筛选，并合并同一频道的多条线路。应用不预置任何节目源。",
+		"zh-TW": "一款 IPTV 桌面用戶端，頻道、設定與播放控制以 MyGo 原生 UI 繪製，影片由需自行安裝的 mpv 或內建 WebView 播放。頻道訂閱支援 HTTP(S) 或本機 M3U、M3U8、TXT，節目表支援 XMLTV，可依分組和收藏篩選，並合併同一頻道的多條線路。應用程式不預載任何節目來源。",
+		"ja": "チャンネル一覧、設定、再生操作を MyGo のネイティブ UI で描いた IPTV デスクトップクライアント。映像は各自でインストールした mpv か内蔵 WebView で再生します。HTTP(S) またはローカルの M3U・M3U8・TXT のチャンネルリストと XMLTV の番組表を読み込み、グループやお気に入りで絞り込み、同じチャンネルの複数の配信元をまとめます。番組ソースは同梱していません。",
+		"ko": "채널 목록, 설정, 재생 조작을 MyGo의 네이티브 UI로 그린 IPTV 데스크톱 클라이언트로, 영상은 직접 설치한 mpv나 내장 WebView로 재생합니다. HTTP(S) 또는 로컬 M3U, M3U8, TXT 채널 목록과 XMLTV 편성표를 불러오고, 그룹과 즐겨찾기로 거르며, 같은 채널의 여러 스트림을 하나로 묶습니다. 채널 소스는 기본 제공하지 않습니다."
+	},
+	"icon": {
+		"file": "tv-liuguangtv.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "tv-liuguangtv.webp",
+	"added": "2026-11-20T03:41:53Z"
+}
