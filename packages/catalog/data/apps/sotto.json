@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "sotto",
+	"name": "Sotto",
+	"author": "doyuli",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "ai",
+	"url": "https://github.com/doyuli/sotto",
+	"repo": "doyuli/sotto",
+	"summary": {
+		"en": "A Windows translator for selected text and screen snips, comparing several services side by side.",
+		"zh-CN": "Windows 划词与截图翻译工具，离线 OCR，多个翻译服务结果并排对比。",
+		"zh-TW": "Windows 劃詞與截圖翻譯工具，離線 OCR，多個翻譯服務結果並排比較。",
+		"ja": "選択テキストや画面の一部を訳す Windows 翻訳ツール。複数サービスの結果を並べて比較。",
+		"ko": "선택한 텍스트와 화면 영역을 번역하는 Windows 번역기. 여러 서비스 결과를 나란히 비교."
+	},
+	"description": {
+		"en": "A Windows 10 and 11 translator drawn with MyGo's native UI. It translates selected text without touching the clipboard, screen regions recognized offline on the device, or text typed into its panel, and streams results from several services side by side, such as Google Translate, DeepL and OpenAI-compatible models. API keys are stored in Windows Credential Manager.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 10／11 翻译工具。可以翻译选中的文字（不动剪贴板）、在本机离线 OCR 识别的屏幕区域，或在面板中输入的文字，并把 Google Translate、DeepL、OpenAI 兼容模型等多个服务的结果以流式方式并排显示。API 密钥保存在 Windows 凭据管理器中。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 10／11 翻譯工具。可以翻譯選取的文字（不動剪貼簿）、在本機離線 OCR 辨識的螢幕區域，或在面板中輸入的文字，並把 Google Translate、DeepL、OpenAI 相容模型等多個服務的結果以串流方式並排顯示。API 金鑰儲存在 Windows 認證管理員中。",
+		"ja": "MyGo のネイティブ UI で描かれた Windows 10／11 用の翻訳ツール。クリップボードを汚さずに選択したテキストを読み取るほか、画面の範囲をデバイス上でオフライン OCR したり、パネルに入力したりして翻訳し、Google Translate、DeepL、OpenAI 互換モデルなど複数のサービスの結果をストリーミングで並べて表示します。API キーは Windows 資格情報マネージャーに保存されます。",
+		"ko": "MyGo의 네이티브 UI로 그린 Windows 10/11용 번역기입니다. 클립보드를 건드리지 않고 선택한 텍스트를 읽거나, 화면 영역을 기기에서 오프라인 OCR로 인식하거나, 패널에 입력한 텍스트를 번역하며, Google Translate, DeepL, OpenAI 호환 모델 등 여러 서비스의 결과를 스트리밍으로 나란히 보여 줍니다. API 키는 Windows 자격 증명 관리자에 저장됩니다."
+	},
+	"icon": {
+		"file": "sotto.webp"
+	},
+	"screenshot": "sotto.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-14T02:29:31Z"
+}
