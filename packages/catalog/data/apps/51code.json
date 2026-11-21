@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "51code",
+	"name": "51Code",
+	"author": "ysicing",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/ysicing/51code",
+	"repo": "ysicing/51code",
+	"summary": {
+		"en": "A lightweight native Git client for macOS covering the SourceTree workflows used day to day.",
+		"zh-CN": "轻量的 macOS 原生 Git 客户端，专注 SourceTree 中常用的工作流。",
+		"zh-TW": "輕量的 macOS 原生 Git 用戶端，專注 SourceTree 中常用的工作流程。",
+		"ja": "SourceTree の定番の作業に絞った、macOS 向けの軽量な Git クライアント。",
+		"ko": "SourceTree에서 자주 쓰는 작업에 집중한 macOS용 가벼운 네이티브 Git 클라이언트."
+	},
+	"description": {
+		"en": "A Git desktop client for macOS, written in Go and drawn with MyGo's native UI with no web view, using the system Git and its existing credentials. It stages by hunk or line, shows unified or side-by-side diffs and a searchable commit graph, and manages branches, tags, stashes, merge conflicts and worktrees. It opens repositories already on disk; cloning and interactive rebase are not there yet.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的 macOS Git 客户端（原名 XSourceTree），不用 WebView，直接使用系统 Git 与已有凭证。支持逐块、逐行暂存，统一或并排 Diff，可搜索的提交关系图，以及分支、标签、贮藏、冲突合并和工作树管理。目前只能打开本机已有的仓库，尚不支持克隆和交互式 rebase。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的 macOS Git 用戶端（原名 XSourceTree），不使用 WebView，直接使用系統 Git 與既有憑證。支援逐塊、逐行暫存，統一或並排 Diff，可搜尋的提交關係圖，以及分支、標籤、儲藏、衝突合併與工作樹管理。目前只能開啟本機既有的儲存庫，尚不支援複製與互動式 rebase。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた macOS 向けの Git クライアント（旧名 XSourceTree）。WebView は使わず、システムの Git と既存の認証情報で動きます。ハンクや行単位のステージング、統合表示と左右並べの差分、検索できるコミットグラフに加え、ブランチ、タグ、スタッシュ、コンフリクトの解消、ワークツリーを扱えます。開けるのは手元にある既存のリポジトリで、クローンと対話的 rebase にはまだ対応していません。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 macOS용 Git 클라이언트(이전 이름 XSourceTree)로, 웹 뷰 없이 시스템 Git과 기존 인증 정보를 그대로 씁니다. 헝크·줄 단위 스테이징, 통합 및 나란히 보기 diff, 검색 가능한 커밋 그래프와 함께 브랜치, 태그, 스태시, 충돌 병합, 워크트리를 다룹니다. 로컬에 있는 저장소만 열 수 있으며 클론과 대화형 rebase는 아직 지원하지 않습니다."
+	},
+	"icon": {
+		"file": "51code.webp"
+	},
+	"screenshot": "51code.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-15T02:30:04Z"
+}
