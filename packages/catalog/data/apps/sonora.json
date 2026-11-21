@@ -1,0 +1,28 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "sonora",
+	"name": "Sonora",
+	"author": "hfx123456",
+	"kind": "native",
+	"platforms": ["win", "mac"],
+	"category": "MultimediaApplication",
+	"group": "media",
+	"url": "https://github.com/hfx123456/Sonora",
+	"repo": "hfx123456/Sonora",
+	"summary": {
+		"en": "Windows & macOS Spotify and local player with bilingual lyrics, Dynamic Island & Flow.",
+		"zh-CN": "支持双语逐字歌词、跨屏灵动岛、流光背景与本地音乐的 Windows / macOS 播放器。",
+		"zh-TW": "支援雙語逐字歌詞、跨螢幕靈動島、流光背景與本機音樂的 Windows / macOS 播放器。",
+		"ja": "二言語歌詞・マルチモニター対応アイランド・Flow 背景を備えた Windows / macOS 向け音楽プレーヤー。",
+		"ko": "이중 언어 가사, 다중 모니터 다이내믹 아일랜드, Flow 배경을 지원하는 Windows·macOS 플레이어."
+	},
+	"description": {
+		"en": "An independent fork of MySpotify for Windows and macOS built with MyGo's native UI. Adds an embedded multi-source bilingual lyrics engine (NetEase, QQ Music, LRCLIB via Lyricify Lyrics Helper), a draggable multi-monitor Dynamic Island with instant click-through unlock, word-timed bilingual stage animations, Apple Music-style GPU Flow backdrop, iOS-style Liquid Glass controls, local music playback, and sticky playlist search.",
+		"zh-CN": "基于 MyGo 原生界面开发的 MySpotify 独立定制分支，支持 Windows 与 macOS。内置多源双语歌词检索（网易云、QQ 音乐、LRCLIB），提供可自由拖动跨屏的灵动岛（锁定点击穿透后点击直接浮出解锁按钮）、双语逐字弹跳律动模式、Apple Music 风格 GPU 流光背景、iOS 风格液态玻璃控件、本地音乐播放与歌单简繁吸顶搜索。"
+	},
+	"icon": {
+		"file": "sonora.webp"
+	},
+	"screenshot": "sonora.webp",
+	"added": "2026-11-21T12:53:00Z"
+}
