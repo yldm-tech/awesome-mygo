@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "flowlog",
+	"name": "FlowLog",
+	"author": "Mixsu",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/coder-xmtx/FlowLog-Desktop",
+	"repo": "coder-xmtx/FlowLog-Desktop",
+	"summary": {
+		"en": "A desktop log of daily study: notes by subject, chapter and key point, with the day's to-dos.",
+		"zh-CN": "记录每日学习的桌面应用：按科目、章节与要点整理学记，附带当天待办。",
+		"zh-TW": "記錄每日學習的桌面應用程式：依科目、章節與要點整理學記，附帶當天待辦。",
+		"ja": "毎日の学習を記録するデスクトップアプリ。科目・章・要点ごとに整理し、その日の ToDo も管理。",
+		"ko": "하루 공부를 기록하는 데스크톱 앱. 과목, 장, 요점별로 정리하고 그날의 할 일도 챙깁니다."
+	},
+	"description": {
+		"en": "A desktop app for logging each day's study, drawn with MyGo's native UI on the GPU, with no WebView. An entry holds a subject, chapter, section and key points you can mark as reviewed, searchable in full text, beside a separate journal, to-dos with due dates and a calendar of logged days. Data stays in a local SQLite file with daily automatic JSON backups.",
+		"zh-CN": "用 MyGo 原生 UI 在 GPU 上绘制的每日学习记录应用，不加载 WebView。每条学记包含科目、章、节和若干要点，要点可标记为已复习，并支持全文搜索；另有与学记分开的随笔、可设截止日期的待办，以及标出记录日的月历。数据保存在本地 SQLite 文件中，每天自动备份为 JSON。",
+		"zh-TW": "以 MyGo 原生 UI 在 GPU 上繪製的每日學習紀錄應用程式，不載入 WebView。每則學記包含科目、章、節和若干要點，要點可標記為已複習，並支援全文搜尋；另有與學記分開的隨筆、可設定截止日期的待辦，以及標出記錄日的月曆。資料儲存在本機 SQLite 檔案中，每天自動備份為 JSON。",
+		"ja": "MyGo のネイティブ UI で GPU 上に描かれた、毎日の学習を記録するデスクトップアプリ。WebView は使いません。記録は科目・章・節と複数の要点からなり、要点は復習済みにでき、全文検索にも対応します。学習記録とは別の随筆、期限を設定できる ToDo、記録した日に印が付くカレンダーも備えています。データはローカルの SQLite ファイルに保存され、毎日自動で JSON にバックアップされます。",
+		"ko": "MyGo의 네이티브 UI로 GPU에서 그린 하루 공부 기록 앱으로, WebView를 쓰지 않습니다. 기록마다 과목, 장, 절과 여러 요점을 담고, 요점은 복습 완료로 표시할 수 있으며 전문 검색도 됩니다. 학습 기록과 따로 쓰는 수필, 마감일을 정할 수 있는 할 일, 기록한 날이 표시되는 달력도 있습니다. 데이터는 로컬 SQLite 파일에 저장되고 매일 JSON으로 자동 백업됩니다."
+	},
+	"icon": {
+		"file": "flowlog.webp"
+	},
+	"screenshot": "flowlog.webp",
+	"added": "2026-11-21T12:06:17Z"
+}
