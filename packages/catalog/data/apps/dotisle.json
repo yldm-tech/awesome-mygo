@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "dotisle",
+	"name": "点屿 · DotIsle",
+	"author": "Heiamer",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "system",
+	"url": "https://github.com/Heiamer/DotIsle",
+	"repo": "Heiamer/DotIsle",
+	"summary": {
+		"en": "A Windows desktop island for lyrics, music control, focus timers, todos and notifications.",
+		"zh-CN": "Windows 桌面灵动岛：歌词、音乐控制、专注计时、待办和通知提醒。",
+		"zh-TW": "Windows 桌面動態島：歌詞、音樂控制、專注計時、待辦與通知提醒。",
+		"ja": "Windows のデスクトップアイランド。歌詞、音楽操作、集中タイマー、ToDo、通知を表示。",
+		"ko": "Windows 데스크톱 아일랜드. 가사, 음악 제어, 집중 타이머, 할 일, 알림을 한곳에."
+	},
+	"description": {
+		"en": "A desktop island for Windows 10 and 11 that shows lyrics and controls music, runs Pomodoro, countdown and stopwatch timers, keeps todos with reminders and shows device, weather and chat notifications, with desktop widgets beside it. MyGo builds only its control center, in Go with Direct3D and no WebView; the island and widgets are written in Rust with Win32 and wgpu.",
+		"zh-CN": "适用于 Windows 10 / 11 的桌面灵动岛：显示歌词并控制播放，提供番茄钟、倒计时和秒表，管理带提醒的待办，把设备、天气和聊天消息提醒放进岛体，另有可独立摆放的桌面组件。MyGo 只用于构建控制中心（Go 与 Direct3D，不依赖 WebView）；灵动岛和桌面组件用 Rust、Win32 与 wgpu 编写。",
+		"zh-TW": "適用於 Windows 10 / 11 的桌面動態島：顯示歌詞並控制播放，提供番茄鐘、倒數計時和碼錶，管理附提醒的待辦事項，把裝置、天氣和聊天訊息通知放進島體，另有可獨立擺放的桌面小工具。MyGo 只用於建置控制中心（Go 與 Direct3D，不依賴 WebView）；動態島和桌面小工具以 Rust、Win32 與 wgpu 撰寫。",
+		"ja": "Windows 10・11 向けのデスクトップアイランド。歌詞を表示して音楽を操作し、ポモドーロ、カウントダウン、ストップウォッチを動かし、リマインダー付きの ToDo を管理します。デバイス、天気、チャットの通知もアイランドに表示し、デスクトップウィジェットも置けます。MyGo で作られているのはコントロールセンターだけで、Go と Direct3D を使い WebView は使いません。アイランドとウィジェットは Rust、Win32、wgpu で書かれています。",
+		"ko": "Windows 10·11용 데스크톱 아일랜드입니다. 가사를 보여 주고 음악을 제어하며, 뽀모도로·카운트다운·스톱워치를 실행하고 알림이 있는 할 일을 관리합니다. 기기, 날씨, 채팅 알림도 아일랜드에 띄우고 데스크톱 위젯도 따로 둘 수 있습니다. MyGo로 만든 부분은 컨트롤 센터뿐이며 Go와 Direct3D를 쓰고 WebView는 쓰지 않습니다. 아일랜드와 위젯은 Rust, Win32, wgpu로 작성되었습니다."
+	},
+	"icon": {
+		"file": "dotisle.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "dotisle.webp",
+	"added": "2026-11-18T02:31:35Z"
+}
