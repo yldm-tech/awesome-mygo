@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "loveace",
+	"name": "LoveACE",
+	"author": "Sibuxiangx",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://loveace.tech",
+	"repo": "Sibuxiangx/LoveACE",
+	"summary": {
+		"en": "Campus toolbox for Anhui University of Finance and Economics: timetable, grades and exams.",
+		"zh-CN": "安徽财经大学校园工具箱：课程表、成绩、考试与一卡通。",
+		"zh-TW": "安徽財經大學校園工具箱：課表、成績、考試與一卡通。",
+		"ja": "安徽財経大学向けのキャンパスツール。時間割、成績、試験、学生カードをまとめて確認。",
+		"ko": "안후이재경대학 캠퍼스 도구 모음. 시간표, 성적, 시험, 캠퍼스 카드를 한곳에서."
+	},
+	"description": {
+		"en": "A campus toolbox that gathers timetables, grades, exams, the campus card, electricity bills, door access, repair requests and course evaluation help in one place. This entry is the desktop version in the repository's desktop-go folder, built with MyGo's native UI; the project's Android (Kotlin, Jetpack Compose), iOS (SwiftUI) and Flutter desktop clients are made otherwise.",
+		"zh-CN": "面向校园学习与生活的工具箱，把课程表、成绩、考试、一卡通、电费、门禁、报修和评教辅助集中在一处。本条目是仓库 desktop-go 目录中用 MyGo 原生 UI 构建的桌面版；项目的 Android（Kotlin + Jetpack Compose）、iOS（SwiftUI）和 Flutter 桌面端另行开发。",
+		"zh-TW": "面向校園學習與生活的工具箱，把課表、成績、考試、一卡通、電費、門禁、報修和評教輔助集中在一處。本條目是儲存庫 desktop-go 資料夾中以 MyGo 原生 UI 打造的桌面版；專案的 Android（Kotlin + Jetpack Compose）、iOS（SwiftUI）與 Flutter 桌面端則另行開發。",
+		"ja": "キャンパスでの学習と生活のためのツールボックスで、時間割、成績、試験、学生カード、電気代、入退館、修理依頼、授業評価の補助を一か所にまとめています。この掲載はリポジトリの desktop-go フォルダーにある、MyGo のネイティブ UI で作られたデスクトップ版です。Android（Kotlin と Jetpack Compose）、iOS（SwiftUI）、Flutter のデスクトップ版は別の方法で作られています。",
+		"ko": "캠퍼스 학습과 생활을 위한 도구 모음으로, 시간표, 성적, 시험, 캠퍼스 카드, 전기 요금, 출입, 수리 신청, 강의 평가 보조를 한곳에 모았습니다. 이 항목은 저장소의 desktop-go 폴더에 있는, MyGo의 네이티브 UI로 만든 데스크톱 버전입니다. Android(Kotlin, Jetpack Compose), iOS(SwiftUI), Flutter 데스크톱 클라이언트는 별도로 만들어집니다."
+	},
+	"icon": {
+		"file": "loveace.webp"
+	},
+	"screenshot": "loveace.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-18T02:31:35Z"
+}
