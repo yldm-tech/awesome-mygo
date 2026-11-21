@@ -13,18 +13,18 @@
 	"url": "https://github.com/tk103331/goshell",
 	"repo": "tk103331/goshell",
 	"summary": {
-		"en": "A terminal client for SSH servers, Docker containers and Kubernetes pods, with shortcut commands.",
-		"zh-CN": "连接 SSH 服务器、Docker 容器和 Kubernetes Pod 的终端客户端。",
-		"zh-TW": "連線 SSH 伺服器、Docker 容器和 Kubernetes Pod 的終端機用戶端。",
-		"ja": "SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続するターミナルクライアント。",
-		"ko": "SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하는 터미널 클라이언트."
+		"en": "A terminal client for SSH servers, Docker containers and Kubernetes pods, with a file sidebar, an editor, a Git view and web views.",
+		"zh-CN": "连接 SSH 服务器、Docker 容器和 Kubernetes Pod 的终端客户端，内置文件边栏、编辑器、Git 视图和网页视图。",
+		"zh-TW": "連線 SSH 伺服器、Docker 容器和 Kubernetes Pod 的終端機用戶端，內建檔案側欄、編輯器、Git 檢視與網頁檢視。",
+		"ja": "SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続するターミナルクライアント。ファイルサイドバー、エディター、Git ビュー、Web ビューを備えます。",
+		"ko": "SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하는 터미널 클라이언트입니다. 파일 사이드바, 편집기, Git 뷰, 웹 뷰를 갖추고 있습니다."
 	},
 	"description": {
-		"en": "A terminal client written in Go and drawn with MyGo's native UI that opens shells on SSH servers, Docker containers and Kubernetes pods, letting you pick the container from a list. Terminal emulation comes from Ghostty's libghostty-vt, it supports shortcut commands, and the interface is in English and Simplified Chinese. It is still a work in progress, and on Windows it needs administrator rights.",
-		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的终端客户端，可连接 SSH 服务器、Docker 容器和 Kubernetes Pod，并从列表中选择容器。终端仿真基于 Ghostty 的 libghostty-vt，支持快捷命令，界面提供英文和简体中文。项目仍在开发中，在 Windows 上需要以管理员权限运行。",
-		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的終端機用戶端，可連線 SSH 伺服器、Docker 容器和 Kubernetes Pod，並從清單中選擇容器。終端模擬以 Ghostty 的 libghostty-vt 實作，支援快捷指令，介面提供英文和簡體中文。專案仍在開發中，在 Windows 上需以系統管理員權限執行。",
-		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれたターミナルクライアント。SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続でき、コンテナは一覧から選べます。端末エミュレーションには Ghostty の libghostty-vt を使い、ショートカットコマンドに対応し、画面は英語と簡体字中国語で表示できます。まだ開発中で、Windows では管理者権限での実行が必要です。",
-		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 터미널 클라이언트입니다. SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하며 컨테이너는 목록에서 고를 수 있습니다. 터미널 에뮬레이션은 Ghostty의 libghostty-vt를 쓰고, 단축 명령을 지원하며, 화면은 영어와 중국어 간체로 볼 수 있습니다. 아직 개발 중이며 Windows에서는 관리자 권한으로 실행해야 합니다."
+		"en": "A terminal client written in Go and drawn with MyGo's native UI that opens shells on SSH servers, Docker containers and Kubernetes pods. Its file sidebar follows the shell's directory, opens files in an editor, renders Markdown and previews pictures. Its Git view shows the changed files with a checkbox each and a + for untracked ones, the diff of what HEAD holds, a commit box, the branch's commits and a graph, and switches branches. Command+click on a URL the terminal shows opens it in a web view in the pane beside the terminal. Terminal emulation comes from Ghostty's libghostty-vt, with shortcut commands, six color themes, and English and Simplified Chinese. It is still a work in progress, and on Windows it needs administrator rights.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的终端客户端，可连接 SSH 服务器、Docker 容器和 Kubernetes Pod。文件边栏跟随 shell 目录，可在内置编辑器中打开文件、渲染 Markdown、预览图片；Git 视图显示每个变更文件的勾选框和未跟踪文件的 +、与 HEAD 的差异、提交框、当前分支的提交记录与图谱，并可切换分支；Command+单击终端中的 URL 会在终端旁的网页视图中打开。终端仿真基于 Ghostty 的 libghostty-vt，支持快捷命令、六种配色主题以及英文和简体中文界面。项目仍在开发中，在 Windows 上需要以管理员权限运行。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的終端機用戶端，可連線 SSH 伺服器、Docker 容器和 Kubernetes Pod。檔案側欄跟隨 shell 目錄，可在內建編輯器中開啟檔案、渲染 Markdown、預覽圖片；Git 檢視顯示每個變更檔案的勾選框與未追蹤檔案的 +、與 HEAD 的差異、提交框、目前分支的提交記錄與圖譜，並可切換分支；Command+單擊終端機中的 URL 會在終端機旁的網頁檢視中開啟。終端模擬以 Ghostty 的 libghostty-vt 實作，支援快捷指令、六種配色主題以及英文與簡體中文介面。專案仍在開發中，在 Windows 上需以系統管理員權限執行。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれたターミナルクライアント。SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続できます。ファイルサイドバーはシェルのディレクトリを追い、ファイルをエディターで開き、Markdown を描画し、画像をプレビューします。Git ビューは変更ファイルごとのチェックボックスと未追跡ファイルの +、HEAD との差分、コミット欄、ブランチのコミット履歴とグラフ、ブランチの切り替えを備え、ターミナルに表示された URL を Command+クリックすると隣のペインの Web ビューで開きます。端末エミュレーションには Ghostty の libghostty-vt を使い、ショートカットコマンド、6 種類のカラーテーマ、英語と簡体字中国語に対応しています。まだ開発中で、Windows では管理者権限での実行が必要です。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 터미널 클라이언트입니다. SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하며, 파일 사이드바가 셸의 디렉터리를 따라가고 파일을 편집기에서 열고 Markdown을 렌더링하며 이미지를 미리 보여 줍니다. Git 뷰는 변경 파일마다 체크박스와 추적되지 않은 파일의 +, HEAD와의 diff, 커밋 입력란, 브랜치의 커밋 기록과 그래프, 브랜치 전환을 제공하고, 터미널에 표시된 URL을 Command+클릭하면 옆 패널의 웹 뷰에서 열립니다. 터미널 에뮬레이션은 Ghostty의 libghostty-vt를 쓰며, 단축 명령, 6가지 색상 테마, 영어와 중국어 간체를 지원합니다. 아직 개발 중이며 Windows에서는 관리자 권한으로 실행해야 합니다."
 	},
 	"icon": {
 		"file": "goshell.webp"
