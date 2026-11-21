@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mingle",
+	"name": "Mingle",
+	"author": "earayu",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://mingle.build/",
+	"repo": "earayu/Mingle",
+	"summary": {
+		"en": "Brings an agent companion, run on your own machine, into WeChat, Slack, Telegram and more.",
+		"zh-CN": "在本机运行智能体伙伴，并把它带进微信、Slack、Telegram 等聊天应用。",
+		"zh-TW": "在本機執行智慧代理夥伴，並把它帶進微信、Slack、Telegram 等聊天應用程式。",
+		"ja": "手元で動くエージェントの相棒を WeChat・Slack・Telegram などのチャットに参加させる。",
+		"ko": "내 컴퓨터의 에이전트 동료를 WeChat, Slack, Telegram 등 채팅 앱에 데려옵니다."
+	},
+	"description": {
+		"en": "Runs agent companions on your own computer, driven by a coding agent you already use such as Claude Code or Codex, with no Mingle server or account. Each agent joins WeChat, Feishu, Slack, Telegram and other chat apps as a bot and keeps one memory across them. MyGo builds the desktop app, a window and menu bar icon around Mingle's web console; the core and command line run on Node.js.",
+		"zh-CN": "在你自己的电脑上运行智能体伙伴，由你已在用的编程智能体驱动，如 Claude Code 或 Codex，不需要 Mingle 服务器或账号。每个智能体以机器人身份加入微信、飞书、Slack、Telegram 等聊天应用，并在它们之间共用一份记忆。MyGo 构建的是桌面版，把 Mingle 的网页控制台包进窗口和菜单栏图标；核心与命令行基于 Node.js 运行。",
+		"zh-TW": "在你自己的電腦上執行智慧代理夥伴，由你已在使用的程式設計代理驅動，例如 Claude Code 或 Codex，不需要 Mingle 伺服器或帳號。每個代理以機器人身分加入微信、飛書、Slack、Telegram 等聊天應用程式，並在其間共用同一份記憶。MyGo 建置的是桌面版，把 Mingle 的網頁控制台包進視窗與選單列圖示；核心與命令列則以 Node.js 執行。",
+		"ja": "自分のコンピューターでエージェントの相棒を動かすアプリ。Claude Code や Codex など、すでに使っているコーディングエージェントで動き、Mingle のサーバーもアカウントも要りません。各エージェントはボットとして WeChat・Feishu・Slack・Telegram などに参加し、そのすべてで一つの記憶を共有します。MyGo がビルドするのはデスクトップ版で、Mingle の Web コンソールをウィンドウとメニューバーアイコンに収めたもの。本体とコマンドラインは Node.js で動きます。",
+		"ko": "내 컴퓨터에서 에이전트 동료를 실행하는 앱으로, Claude Code나 Codex처럼 이미 쓰는 코딩 에이전트로 움직이며 Mingle 서버나 계정이 필요 없습니다. 각 에이전트는 봇으로 WeChat, Feishu, Slack, Telegram 등 채팅 앱에 들어가 모든 곳에서 하나의 기억을 공유합니다. MyGo로 만든 것은 데스크톱 앱으로, Mingle의 웹 콘솔을 창과 메뉴 막대 아이콘에 담았고, 본체와 명령줄은 Node.js로 실행됩니다."
+	},
+	"icon": {
+		"file": "mingle.webp"
+	},
+	"screenshot": "mingle.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-18T02:31:35Z"
+}
