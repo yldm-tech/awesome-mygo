@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "apilot",
+	"name": "Apilot",
+	"author": "alswl",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/alswl/apilot",
+	"repo": "alswl/apilot",
+	"summary": {
+		"en": "Runs local commands on a schedule from the macOS menu bar or a CLI, with history and logs.",
+		"zh-CN": "在 macOS 菜单栏或命令行中定时运行本地命令，并保留执行历史与日志。",
+		"zh-TW": "在 macOS 選單列或命令列中定時執行本機指令，並保留執行紀錄與日誌。",
+		"ja": "macOS のメニューバーや CLI から、ローカルのコマンドを定期実行し、履歴とログを残すアプリ。",
+		"ko": "macOS 메뉴 막대나 CLI에서 로컬 명령을 예약 실행하고 실행 기록과 로그를 남기는 앱."
+	},
+	"description": {
+		"en": "A macOS menu-bar app and CLI drawn with MyGo's native UI that runs local commands on cron schedules, fixed intervals or by hand, and keeps each run's status, exit code and logs in local SQLite. Its CLI returns versioned JSON with predictable exit codes for scripts and agents like Codex or Claude Code, and no account or cloud service is needed. Downloads are for Apple Silicon.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 菜单栏应用，附带命令行工具，可按 cron 表达式、固定间隔或手动运行本地命令，并把每次运行的状态、退出码和日志保存在本地 SQLite 中。CLI 输出带版本号的 JSON 和固定的退出码，方便脚本以及 Codex、Claude Code 等编程智能体调用；无需账号或云服务。目前的下载包仅支持 Apple Silicon。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 macOS 選單列應用程式，附帶命令列工具，可依 cron 排程、固定間隔或手動執行本機指令，並把每次執行的狀態、結束代碼和日誌存放在本機 SQLite 中。CLI 輸出帶版本號的 JSON 與固定的結束代碼，方便腳本以及 Codex、Claude Code 等程式設計代理呼叫；不需要帳號或雲端服務。目前的下載檔僅支援 Apple Silicon。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS のメニューバーアプリと CLI で、ローカルのコマンドを cron 式や一定間隔、または手動で実行し、実行ごとの状態、終了コード、ログをローカルの SQLite に残します。CLI はバージョン付きの JSON と決まった終了コードを返すので、スクリプトや Codex、Claude Code などのエージェントから扱えます。アカウントやクラウドサービスは不要で、配布ビルドは Apple Silicon 向けです。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS 메뉴 막대 앱이자 CLI로, 로컬 명령을 cron 일정이나 고정 간격, 또는 수동으로 실행하고 실행마다 상태, 종료 코드, 로그를 로컬 SQLite에 남깁니다. CLI는 버전이 붙은 JSON과 정해진 종료 코드를 돌려주어 스크립트나 Codex, Claude Code 같은 에이전트가 다루기 쉽습니다. 계정이나 클라우드 서비스가 필요 없으며, 배포 빌드는 Apple Silicon용입니다."
+	},
+	"icon": {
+		"file": "apilot.webp"
+	},
+	"screenshot": "apilot.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-13T02:27:52Z"
+}
