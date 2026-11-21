@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "masir",
+	"name": "Masir",
+	"author": "Gozargah",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "network",
+	"url": "https://github.com/Gozargah/Masir",
+	"repo": "Gozargah/Masir",
+	"summary": {
+		"en": "A menu bar and tray client for Xray: subscriptions, per-app and per-site routing, and a TUN mode.",
+		"zh-CN": "菜单栏与托盘中的 Xray 客户端：订阅管理、按应用和网站分流，支持 TUN 模式。",
+		"zh-TW": "選單列與系統匣裡的 Xray 用戶端：訂閱、依應用程式與網站分流，支援 TUN 模式。",
+		"ja": "メニューバーとトレイの Xray クライアント。購読管理、アプリ・サイト別の振り分け、TUN モード。",
+		"ko": "메뉴 막대와 트레이에서 쓰는 Xray 클라이언트. 구독, 앱·사이트별 라우팅, TUN 모드 지원."
+	},
+	"description": {
+		"en": "A menu bar and tray client for Xray on macOS, Linux and Windows, drawn with MyGo's native UI; the masir CLI and its daemon are made separately. It takes subscriptions and share links, routes by app, site, IP or port with full Xray rules, pins a rule to one server, and applies changes without restarting the core, either as a system-wide TUN or a local SOCKS5 and HTTP proxy.",
+		"zh-CN": "macOS、Linux 与 Windows 上常驻菜单栏和托盘的 Xray 客户端，桌面版用 MyGo 原生 UI 绘制，masir 命令行工具和后台守护进程另行构建。支持订阅与分享链接，可按应用、网站、IP 或端口编写完整的 Xray 规则，把规则固定到某台服务器，修改后无需重启核心即可生效；可用 TUN 接管整个系统，也可作为本地 SOCKS5 与 HTTP 代理。",
+		"zh-TW": "macOS、Linux 與 Windows 上常駐選單列和系統匣的 Xray 用戶端，桌面版以 MyGo 原生 UI 繪製，masir 命令列工具和背景服務另行建置。支援訂閱與分享連結，可依應用程式、網站、IP 或連接埠撰寫完整的 Xray 規則，把規則固定到某台伺服器，修改後不必重啟核心即可生效；可用 TUN 接管整個系統，也可當作本機 SOCKS5 與 HTTP 代理。",
+		"ja": "macOS・Linux・Windows のメニューバーとトレイに常駐する Xray クライアント。デスクトップアプリは MyGo のネイティブ UI で描かれ、masir CLI とデーモンは別に作られています。サブスクや共有リンクを取り込み、アプリ・サイト・IP・ポートごとに Xray のルールで振り分け、ルールを特定のサーバーに固定でき、変更はコアを再起動せずに反映されます。システム全体を TUN で通すほか、ローカルの SOCKS5・HTTP プロキシとしても使えます。",
+		"ko": "macOS, Linux, Windows의 메뉴 막대와 트레이에서 쓰는 Xray 클라이언트입니다. 데스크톱 앱은 MyGo의 네이티브 UI로 그렸고, masir CLI와 데몬은 따로 만들어집니다. 구독과 공유 링크를 가져오고, 앱·사이트·IP·포트별 Xray 규칙으로 트래픽을 나누며, 규칙을 특정 서버에 고정하고, 변경은 코어 재시작 없이 적용합니다. 시스템 전체를 TUN으로 보내거나 로컬 SOCKS5·HTTP 프록시로 쓸 수 있습니다."
+	},
+	"icon": {
+		"file": "masir.webp"
+	},
+	"screenshot": "masir.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-15T02:30:04Z"
+}
