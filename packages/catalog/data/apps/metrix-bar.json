@@ -1,0 +1,30 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "metrix-bar",
+	"name": "Metrix.Bar",
+	"author": "miantiao-me",
+	"kind": "native",
+	"platforms": ["win", "linux", "mac"],
+	"category": "UtilitiesApplication",
+	"group": "system",
+	"url": "https://metrix.bar",
+	"summary": {
+		"en": "Native dashboards for the menu bar, notch and widgets, built from one .bar file.",
+		"zh-CN": "用一个 .bar 文件做原生菜单栏、刘海屏与小组件看板。",
+		"zh-TW": "用一個 .bar 檔案做原生選單列、瀏海與小工具看板。",
+		"ja": "1 つの .bar ファイルで、ネイティブなメニューバー、ノッチ、ウィジェットのダッシュボードを作れます。",
+		"ko": "하나의 .bar 파일로 네이티브 메뉴 막대, 노치, 위젯 대시보드를 만듭니다."
+	},
+	"description": {
+		"en": "Metrix.Bar runs native dashboards in the menu bar or system tray, the notch, screen sidebars and system widgets on macOS, Windows and Linux (experimental). Each dashboard is one .bar file: start with an official one for Claude Code, GitHub, music or web analytics, or describe your own to Claude Code, Codex or Cursor.",
+		"zh-CN": "Metrix.Bar 在 macOS、Windows 与 Linux（体验版）上运行原生看板，可显示在菜单栏或系统托盘、刘海屏、屏幕侧栏和系统小组件中。每个看板都是一个 .bar 文件：可以从 Claude Code、GitHub、音乐或网站分析的官方看板开始，也可以把想要的内容讲给 Claude Code、Codex 或 Cursor 听。",
+		"zh-TW": "Metrix.Bar 在 macOS、Windows 與 Linux（體驗版）上執行原生看板，可顯示在選單列或系統匣、瀏海、螢幕側欄和系統小工具中。每個看板都是一個 .bar 檔案：可以從 Claude Code、GitHub、音樂或網站分析的官方看板開始，也可以把想要的內容講給 Claude Code、Codex 或 Cursor 聽。",
+		"ja": "Metrix.Bar は macOS、Windows、Linux（実験版）でネイティブなダッシュボードを動かし、メニューバーやシステムトレイ、ノッチ、画面サイドバー、システムウィジェットに表示できます。各ダッシュボードは 1 つの .bar ファイルです。Claude Code、GitHub、音楽、アクセス解析の公式ダッシュボードから始めることも、Claude Code、Codex、Cursor に作りたいものを伝えることもできます。",
+		"ko": "Metrix.Bar는 macOS, Windows, Linux(실험판)에서 네이티브 대시보드를 실행하며 메뉴 막대나 시스템 트레이, 노치, 화면 사이드바, 시스템 위젯에 표시할 수 있습니다. 각 대시보드는 하나의 .bar 파일입니다. Claude Code, GitHub, 음악, 웹 분석 공식 대시보드로 시작하거나 Claude Code, Codex, Cursor에게 원하는 대시보드를 설명할 수 있습니다."
+	},
+	"screenshot": "metrix-bar.webp",
+	"icon": {
+		"file": "metrix-bar.webp"
+	},
+	"added": "2026-11-21T05:07:01Z"
+}
