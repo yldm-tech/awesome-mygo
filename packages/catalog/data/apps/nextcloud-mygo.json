@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "nextcloud-mygo",
+	"name": "Nextcloud-MyGo",
+	"author": "YuanZhe-99",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "dev",
+	"url": "https://github.com/YuanZhe-99/Nextcloud-MyGo",
+	"repo": "YuanZhe-99/Nextcloud-MyGo",
+	"summary": {
+		"en": "A Windows Nextcloud sync client that switches between a server's public, LAN and VPN addresses.",
+		"zh-CN": "Windows 版 Nextcloud 同步客户端，切换公网、局域网与 VPN 地址。",
+		"zh-TW": "Windows 版 Nextcloud 同步用戶端，切換公網、區域網路與 VPN 位址。",
+		"ja": "公開・LAN・VPN アドレスを切り替える Windows 用 Nextcloud 同期クライアント。",
+		"ko": "공용·LAN·VPN 주소를 오가며 동기화하는 Windows용 Nextcloud 클라이언트."
+	},
+	"description": {
+		"en": "A Windows 11 client for Nextcloud file sync that lets one account reach a server through its public, LAN and VPN addresses and switch between them without re-transferring unchanged files. MyGo's native UI draws only the interface; sync runs in SyncD, a separate C++/Qt process built on the official Nextcloud Desktop engine. In early development: SyncD is not built yet, so nothing syncs.",
+		"zh-CN": "面向 Windows 11 的 Nextcloud 文件同步客户端，同一账号可通过服务器的公网、局域网和 VPN 地址访问，并在其间切换，不必重新传输未改动的文件。只有界面由 MyGo 原生 UI 绘制；同步由独立的 C++/Qt 进程 SyncD 负责，基于官方 Nextcloud Desktop 的同步引擎。目前处于早期开发阶段，SyncD 尚未完成，还不能同步。",
+		"zh-TW": "適用於 Windows 11 的 Nextcloud 檔案同步用戶端，同一帳號可透過伺服器的公網、區域網路與 VPN 位址連線，並在其間切換，不必重新傳輸未變更的檔案。只有介面由 MyGo 原生 UI 繪製；同步由獨立的 C++/Qt 行程 SyncD 負責，以官方 Nextcloud Desktop 的同步引擎為基礎。目前仍在早期開發階段，SyncD 尚未完成，還無法同步。",
+		"ja": "Windows 11 向けの Nextcloud ファイル同期クライアント。ひとつのアカウントで同じサーバーに公開・LAN・VPN の各アドレスから接続し、変更のないファイルを転送し直すことなくそれらを切り替えます。MyGo のネイティブ UI で描かれるのはインターフェースだけで、同期は公式 Nextcloud Desktop の同期エンジンを使う別の C++/Qt プロセス SyncD が担います。現在は開発初期で、SyncD はまだ完成しておらず、同期はできません。",
+		"ko": "Windows 11용 Nextcloud 파일 동기화 클라이언트로, 하나의 계정으로 같은 서버에 공용·LAN·VPN 주소로 접속하고 바뀌지 않은 파일을 다시 전송하지 않고 주소를 전환합니다. MyGo의 네이티브 UI로 그린 것은 인터페이스뿐이며, 동기화는 공식 Nextcloud Desktop 동기화 엔진을 쓰는 별도의 C++/Qt 프로세스 SyncD가 맡습니다. 아직 개발 초기 단계로 SyncD가 완성되지 않아 동기화는 되지 않습니다."
+	},
+	"icon": {
+		"file": "nextcloud-mygo.webp"
+	},
+	"screenshot": "nextcloud-mygo.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-13T02:27:52Z"
+}
