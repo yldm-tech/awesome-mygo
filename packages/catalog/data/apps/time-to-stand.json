@@ -1,0 +1,23 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "time-to-stand",
+	"name": "Time To Stand",
+	"author": "Salam Hiyali",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://hiyali.github.io/time-to-stand-releases/",
+	"summary": {
+		"en": "Focus and breaks, in rhythm. Menu-bar work timer that nudges you to stand when focus time is up.",
+		"zh-CN": "专注与休息，交替进行。菜单栏工时工具：到期提醒站起；锁屏自动休息；支持快捷键与今日汇总。"
+	},
+	"description": {
+		"en": "Focus and breaks, in rhythm. Menu-bar work timer that nudges you to stand when focus time is up.",
+		"zh-CN": "专注与休息，交替进行。菜单栏工时工具：到期提醒站起；锁屏自动休息；支持快捷键与今日汇总。"
+	},
+	"added": "2026-11-19T08:08:34Z"
+}
