@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "progen-desktop",
+	"name": "Progen Desktop",
+	"author": "sivaprasadreddy",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://sivaprasadreddy.github.io/progen/",
+	"repo": "sivaprasadreddy/progen",
+	"summary": {
+		"en": "A step-by-step desktop wizard that generates Spring Boot projects, like the progen CLI.",
+		"zh-CN": "progen CLI 的桌面版：分步向导生成 Spring Boot 项目。",
+		"zh-TW": "progen CLI 的桌面版：以分步精靈產生 Spring Boot 專案。",
+		"ja": "progen CLI のデスクトップ版。ウィザード形式で Spring Boot プロジェクトを生成。",
+		"ko": "progen CLI의 데스크톱 앱. 단계별 마법사로 Spring Boot 프로젝트를 만듭니다."
+	},
+	"description": {
+		"en": "The desktop version of the progen CLI, drawn with MyGo's native UI; the command-line tool itself is built separately and shares the same generator. A step-by-step wizard creates a Spring Boot project with Maven or Gradle, picking the database, persistence framework, web frontend and extras such as Spring Security, Testcontainers, Docker Compose and Kubernetes manifests.",
+		"zh-CN": "progen CLI 的桌面版，由 MyGo 原生 UI 绘制；命令行工具本身另行构建，两者共用同一个生成器。分步向导会生成使用 Maven 或 Gradle 的 Spring Boot 项目，可选择数据库、持久化框架、Web 前端，以及 Spring Security、Testcontainers、Docker Compose、Kubernetes 清单等附加配置。",
+		"zh-TW": "progen CLI 的桌面版，由 MyGo 原生 UI 繪製；命令列工具本身另行建置，兩者共用同一個產生器。分步精靈會產生使用 Maven 或 Gradle 的 Spring Boot 專案，可選擇資料庫、持久層框架、Web 前端，以及 Spring Security、Testcontainers、Docker Compose、Kubernetes 清單等附加設定。",
+		"ja": "progen CLI のデスクトップ版で、MyGo のネイティブ UI で描かれています。コマンドラインツール本体は別に作られており、同じジェネレーターを使います。ステップごとのウィザードで、Maven または Gradle の Spring Boot プロジェクトを作成し、データベース、永続化フレームワーク、Web フロントエンド、さらに Spring Security、Testcontainers、Docker Compose、Kubernetes マニフェストなどの追加構成を選べます。",
+		"ko": "progen CLI의 데스크톱 버전으로, MyGo의 네이티브 UI로 그렸습니다. 명령줄 도구 자체는 따로 만들어지며 같은 생성기를 씁니다. 단계별 마법사로 Maven 또는 Gradle 기반 Spring Boot 프로젝트를 만들고, 데이터베이스, 영속성 프레임워크, 웹 프런트엔드와 Spring Security, Testcontainers, Docker Compose, Kubernetes 매니페스트 같은 추가 구성을 고를 수 있습니다."
+	},
+	"icon": {
+		"file": "progen-desktop.webp"
+	},
+	"screenshot": "progen-desktop.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-18T02:31:35Z"
+}
