@@ -13,11 +13,11 @@
 	"url": "https://github.com/tk103331/goshell",
 	"repo": "tk103331/goshell",
 	"summary": {
-		"en": "A terminal client for SSH servers, Docker containers and Kubernetes pods, with a file sidebar, an editor, a Git view and web views.",
-		"zh-CN": "连接 SSH 服务器、Docker 容器和 Kubernetes Pod 的终端客户端，内置文件边栏、编辑器、Git 视图和网页视图。",
-		"zh-TW": "連線 SSH 伺服器、Docker 容器和 Kubernetes Pod 的終端機用戶端，內建檔案側欄、編輯器、Git 檢視與網頁檢視。",
-		"ja": "SSH サーバー、Docker コンテナ、Kubernetes の Pod に接続するターミナルクライアント。ファイルサイドバー、エディター、Git ビュー、Web ビューを備えます。",
-		"ko": "SSH 서버, Docker 컨테이너, Kubernetes 파드에 접속하는 터미널 클라이언트입니다. 파일 사이드바, 편집기, Git 뷰, 웹 뷰를 갖추고 있습니다."
+		"en": "A terminal for SSH, Docker and Kubernetes with a file sidebar, an editor and a Git view.",
+		"zh-CN": "连接 SSH、Docker 和 Kubernetes 的终端客户端，内置文件边栏、编辑器和 Git 视图。",
+		"zh-TW": "連線 SSH、Docker 和 Kubernetes 的終端機用戶端，內建檔案側欄、編輯器與 Git 檢視。",
+		"ja": "SSH・Docker・Kubernetes に接続するターミナル。ファイルサイドバー、エディター、Git ビューを備えます。",
+		"ko": "SSH, Docker, Kubernetes에 접속하는 터미널. 파일 사이드바, 편집기, Git 뷰를 갖췄습니다."
 	},
 	"description": {
 		"en": "A terminal client written in Go and drawn with MyGo's native UI that opens shells on SSH servers, Docker containers and Kubernetes pods. Its file sidebar follows the shell's directory, opens files in an editor, renders Markdown and previews pictures. Its Git view shows the changed files with a checkbox each and a + for untracked ones, the diff of what HEAD holds, a commit box, the branch's commits and a graph, and switches branches. Command+click on a URL the terminal shows opens it in a web view in the pane beside the terminal. Terminal emulation comes from Ghostty's libghostty-vt, with shortcut commands, six color themes, and English and Simplified Chinese. It is still a work in progress, and on Windows it needs administrator rights.",
