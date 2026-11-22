@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ragle",
+	"name": "Ragle",
+	"author": "Batkixni",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/Batkixni/Ragle",
+	"repo": "Batkixni/Ragle",
+	"summary": {
+		"en": "Ragle 是一款原生框架開源的設計資產管理器，整合了如 Eagle 一樣優雅的檔案管理模式，同時引入了白板等設計師在參照作品時所需的功能。"
+	},
+	"description": {
+		"en": "Ragle 是一款原生框架開源的設計資產管理器，整合了如 Eagle 一樣優雅的檔案管理模式，同時引入了白板等設計師在參照作品時所需的功能。"
+	},
+	"added": "2026-11-22T14:58:00Z"
+}
