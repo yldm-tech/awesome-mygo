@@ -1,0 +1,17 @@
+{
+	"$schema": "../schema/ai.schema.json",
+	"slug": "crewbase",
+	"name": "crewbase",
+	"author": "hedeqiang",
+	"summary": {
+		"en": "A local-first, model-agnostic workspace for a crew of AI agents."
+	},
+	"repo": "hedeqiang/crewbase",
+	"url": "https://github.com/hedeqiang/crewbase",
+	"type": "skill",
+	"install": "npx skills add hedeqiang/crewbase",
+	"tags": [
+		"ai"
+	],
+	"added": "2026-11-22T15:34:55Z"
+}
