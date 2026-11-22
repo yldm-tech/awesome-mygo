@@ -1,0 +1,35 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "raglex",
+	"name": "Raglex",
+	"author": "Batkixni",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"category": "DesignApplication",
+	"group": "media",
+	"url": "https://raglex-web.balicey.workers.dev",
+	"repo": "Batkixni/Raglex",
+	"summary": {
+		"en": "A local design asset manager like Eagle, with moodboards that float on top like PureRef.",
+		"zh-CN": "类似 Eagle 的本地设计素材管理器，带无限画板和 PureRef 式置顶参考窗口。",
+		"zh-TW": "類似 Eagle 的本機設計素材管理器，帶無限白板與 PureRef 式置頂參考視窗。",
+		"ja": "Eagle 風のローカルなデザイン素材管理アプリ。ムードボードを PureRef のように最前面に表示。",
+		"ko": "Eagle처럼 쓰는 로컬 디자인 에셋 관리자. 무드보드를 PureRef처럼 항상 위에 띄웁니다."
+	},
+	"description": {
+		"en": "A design asset manager for macOS, Windows and Linux, drawn with MyGo's native UI, with no Electron and one local bbolt database on disk. It imports files by index, symlink, move or copy, previews fonts, audio, SVG and PDF inline, and finds similar images and colors offline. Moodboards can pop out into a frameless, always-on-top window like PureRef.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的设计素材管理器，适用于 macOS、Windows 与 Linux，没有 Electron，所有数据存放在本地的单一 bbolt 数据库中。可按索引、符号链接、移动或复制方式导入文件，直接预览字体、音频、SVG 与 PDF，并能离线按视觉相似度和颜色搜索。无限画板可弹出为无边框、始终置顶的参考窗口，用法类似 PureRef。",
+		"zh-TW": "以 MyGo 原生 UI 繪製的設計素材管理器，支援 macOS、Windows 與 Linux，沒有 Electron，所有資料都存在本機的單一 bbolt 資料庫中。可用索引、符號連結、移動或複製的方式匯入檔案，直接預覽字型、音訊、SVG 與 PDF，並能離線依視覺相似度與顏色搜尋。無限白板可彈出成無邊框、永遠置頂的參考視窗，用法類似 PureRef。",
+		"ja": "MyGo のネイティブ UI で描かれた、macOS・Windows・Linux 向けのデザイン素材管理アプリ。Electron は使わず、データはローカルの bbolt データベース一つに保存されます。ファイルはインデックス、シンボリックリンク、移動、コピーで取り込め、フォント・音声・SVG・PDF をその場でプレビューし、見た目の類似や色でオフライン検索できます。無限のムードボードは、PureRef のように枠のない最前面ウィンドウとして切り出せます。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS·Windows·Linux용 디자인 에셋 관리자입니다. Electron 없이 데이터를 로컬의 bbolt 데이터베이스 하나에 저장합니다. 파일을 인덱스, 심볼릭 링크, 이동, 복사로 가져오고, 글꼴·오디오·SVG·PDF를 바로 미리 보며, 시각적 유사도와 색상으로 오프라인 검색할 수 있습니다. 무한 무드보드는 PureRef처럼 테두리 없이 항상 위에 뜨는 창으로 띄웁니다."
+	},
+	"icon": {
+		"file": "raglex.webp"
+	},
+	"screenshot": "raglex.webp",
+	"added": "2026-11-22T14:58:00Z"
+}
