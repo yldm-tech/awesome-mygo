@@ -1,0 +1,21 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "crewbase",
+	"name": "Crewbase",
+	"author": "hedeqiang",
+	"kind": "web",
+	"platforms": ["mac", "win", "linux"],
+	"group": "agents",
+	"url": "https://github.com/hedeqiang/crewbase/releases/latest",
+	"repo": "hedeqiang/crewbase",
+	"summary": {
+		"en": "A local-first, model-agnostic desktop workspace for teams of AI agents.",
+		"zh-CN": "面向 AI Agent 团队的本地优先桌面工作区，支持多种模型。"
+	},
+	"description": {
+		"en": "Coordinate AI agents with separate workspaces and permissions. Agents can work in parallel on separate Git worktrees and review changes before merging. Install on macOS with brew install --cask hedeqiang/tap/crewbase, or download a desktop installer from Releases.",
+		"zh-CN": "让多个 AI Agent 在各自的工作区和权限范围内协作，使用独立的 Git worktree 并行开发，并在合入前互相评审。macOS 可通过 brew install --cask hedeqiang/tap/crewbase 安装，也可以前往 Releases 下载桌面安装包。"
+	},
+	"screenshot": "crewbase.webp",
+	"added": "2026-11-22T15:34:55Z"
+}
