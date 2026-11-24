@@ -1,0 +1,24 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "block",
+	"name": "Block",
+	"author": "eachann1024",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://block.cooool.top",
+	"repo": "eachann1024/block",
+	"summary": {
+		"en": "A local-first block Markdown notes app for macOS, Windows, and Linux — no sign-up, permanently free.",
+		"zh-CN": "本地优先的块编辑 Markdown 笔记：不用注册，打开就能写，支持 Mac、Windows 和 Linux，永久免费。"
+	},
+	"description": {
+		"en": "Block stores notes as plain Markdown on your computer and stays fast on long documents. It includes typography, version history, a quick-note window, and AI edits you review before they are written, plus optional sync, image hosting, and migration extensions. Open source under Apache 2.0.",
+		"zh-CN": "Block 把笔记以普通 Markdown 存在自己电脑里，长文也能秒开。内置排版、版本找回、速记小窗和 AI 改稿（先预览再写入），并可按需安装同步、图床和迁移扩展。源码以 Apache 2.0 开源。"
+	},
+	"added": "2026-11-22T09:59:47Z"
+}
