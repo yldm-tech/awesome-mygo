@@ -13,12 +13,22 @@
 	"url": "https://block.cooool.top",
 	"repo": "eachann1024/block",
 	"summary": {
-		"en": "A local-first block Markdown notes app for macOS, Windows, and Linux — no sign-up, permanently free.",
-		"zh-CN": "本地优先的块编辑 Markdown 笔记：不用注册，打开就能写，支持 Mac、Windows 和 Linux，永久免费。"
+		"en": "A local-first Markdown notes app with block editing that saves each note as a plain .md file.",
+		"zh-CN": "本地优先的 Markdown 块笔记，每篇笔记都存成电脑里的普通 .md 文件。",
+		"zh-TW": "本機優先的 Markdown 區塊筆記，每篇筆記都存成電腦裡的普通 .md 檔案。",
+		"ja": "ローカルファーストの Markdown ブロックノート。各ノートを .md ファイルで手元に保存。",
+		"ko": "로컬 우선 Markdown 블록 노트 앱. 각 노트를 일반 .md 파일로 컴퓨터에 저장합니다."
 	},
 	"description": {
-		"en": "Block stores notes as plain Markdown on your computer and stays fast on long documents. It includes typography, version history, a quick-note window, and AI edits you review before they are written, plus optional sync, image hosting, and migration extensions. Open source under Apache 2.0.",
-		"zh-CN": "Block 把笔记以普通 Markdown 存在自己电脑里，长文也能秒开。内置排版、版本找回、速记小窗和 AI 改稿（先预览再写入），并可按需安装同步、图床和迁移扩展。源码以 Apache 2.0 开源。"
+		"en": "A free, open-source block notes app for macOS, Windows and Linux, drawn with MyGo's native UI. Notes are plain .md files on your computer, and it works without an account or a connection. It drags and folds whole paragraphs, keeps a local history of every edit, shows AI edits as a diff before writing them, and takes optional extensions for sync to WebDAV or Git.",
+		"zh-CN": "免费开源的块笔记应用，支持 macOS、Windows 与 Linux，由 MyGo 原生 UI 绘制。笔记以普通 .md 文件存在你的电脑上，无需注册，断网也能写。段落可整块拖动、章节可折叠，每次改稿自动在本地留底以便找回；AI 改稿先显示对比，确认后才写入；同步到 WebDAV 或 Git 可通过可选扩展添加。",
+		"zh-TW": "免費開源的區塊筆記應用程式，支援 macOS、Windows 與 Linux，由 MyGo 原生 UI 繪製。筆記以普通 .md 檔案存在你的電腦上，無需註冊，離線也能寫。段落可整塊拖曳、章節可摺疊，每次修改都會在本機留存版本以便找回；AI 改稿先顯示差異，確認後才寫入；同步到 WebDAV 或 Git 可透過選用擴充功能加入。",
+		"ja": "macOS、Windows、Linux 向けの無料・オープンソースのブロック型ノートアプリで、MyGo のネイティブ UI で描かれています。ノートは普通の .md ファイルとして手元に保存され、アカウント登録もネット接続も要りません。段落ごとのドラッグや章の折りたたみができ、編集のたびに履歴をローカルに残し、AI による修正は差分を確かめてから反映します。WebDAV や Git への同期は任意の拡張機能で追加できます。",
+		"ko": "macOS, Windows, Linux용 무료 오픈 소스 블록 노트 앱으로, MyGo의 네이티브 UI로 그렸습니다. 노트는 일반 .md 파일로 내 컴퓨터에 저장되며 가입도 인터넷 연결도 필요 없습니다. 문단을 통째로 끌어 옮기고 장을 접을 수 있고, 편집할 때마다 기록을 로컬에 남기며, AI 수정은 차이를 먼저 보여 주고 확인해야 반영합니다. WebDAV나 Git 동기화는 선택 확장으로 추가합니다."
 	},
+	"icon": {
+		"file": "block.webp"
+	},
+	"screenshot": "block.webp",
 	"added": "2026-11-22T09:59:47Z"
 }
