@@ -28,9 +28,6 @@
 	"icon": {
 		"file": "rakko.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "rakko.webp",
 	"added": "2026-11-17T08:17:58Z"
 }
