@@ -29,8 +29,7 @@
 		"file": "mujicagent.webp"
 	},
 	"provisional": [
-		"icon",
-		"screenshot"
+		"icon"
 	],
 	"screenshot": "mujicagent.webp",
 	"added": "2026-11-14T02:29:31Z"
