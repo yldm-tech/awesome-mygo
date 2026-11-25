@@ -5,18 +5,28 @@
 	"author": "zihaveaDream",
 	"kind": "native",
 	"platforms": [
-		"win",
-		"linux",
-		"mac"
+		"win"
 	],
 	"group": "system",
 	"url": "https://github.com/zihaveaDream/netshift",
 	"repo": "zihaveaDream/netshift",
 	"summary": {
-		"en": "面向多网段与现场运维的 Windows 网络配置工具箱：网卡 IP/DNS/MAC 与预设方案一键切换，带 IP 冲突预检、修改前快照回退、双网卡内网分流路由、C 网群 Ping，以及系统代理与 Hosts 快捷管理。"
+		"en": "A Windows toolbox that switches adapter IP, DNS and MAC settings from presets, with rollback.",
+		"zh-CN": "Windows 网络配置工具箱：用预设方案切换网卡 IP、DNS 与 MAC，可回退。",
+		"zh-TW": "Windows 網路設定工具箱：以預設方案切換網路卡 IP、DNS 與 MAC，可還原。",
+		"ja": "Windows 用ネットワーク設定ツール。IP・DNS・MAC をプリセットで切り替え、元に戻せる。",
+		"ko": "Windows용 네트워크 설정 도구. 어댑터 IP, DNS, MAC을 프리셋으로 바꾸고 되돌립니다."
 	},
 	"description": {
-		"en": "面向多网段与现场运维的 Windows 网络配置工具箱：网卡 IP/DNS/MAC 与预设方案一键切换，带 IP 冲突预检、修改前快照回退、双网卡内网分流路由、C 网群 Ping，以及系统代理与 Hosts 快捷管理。"
+		"en": "A Windows 10 and 11 network configuration toolbox drawn with MyGo's native UI, with no Electron or WebView. It applies adapter IP, DNS and MAC settings from presets grouped by site, checks for IP conflicts first and keeps a snapshot of the old settings for one-click rollback. It also sets up intranet split routing for two adapters, pings a whole C subnet, and manages the system proxy and Hosts file.",
+		"zh-CN": "适用于 Windows 10/11 的网络配置工具箱，由 MyGo 原生 UI 绘制，没有 Electron 或 WebView。预设方案按项目地点管理，可一键切换网卡的 IP、DNS 与 MAC；应用前先做 IP 冲突预检，并保存修改前的快照以便一键回退。另有双网卡内网分流路由、C 网群 Ping，以及系统代理与 Hosts 管理。",
+		"zh-TW": "適用於 Windows 10/11 的網路設定工具箱，由 MyGo 原生 UI 繪製，沒有 Electron 或 WebView。預設方案依專案地點管理，可一鍵切換網路卡的 IP、DNS 與 MAC；套用前先檢查 IP 衝突，並保存修改前的快照以便一鍵還原。另有雙網路卡內網分流路由、C 網段群 Ping，以及系統 Proxy 與 Hosts 管理。",
+		"ja": "MyGo のネイティブ UI で描かれた Windows 10・11 向けのネットワーク設定ツールボックス。Electron も WebView も使いません。現場ごとにまとめたプリセットからアダプターの IP・DNS・MAC を切り替え、適用前に IP の競合を確認し、変更前のスナップショットからワンクリックで戻せます。2 枚のアダプターを使う環境向けの社内ルート分岐、C クラス一括 Ping、システムプロキシと Hosts の管理も備えています。",
+		"ko": "MyGo의 네이티브 UI로 그린 Windows 10·11용 네트워크 설정 도구 모음으로, Electron도 WebView도 쓰지 않습니다. 현장별로 묶은 프리셋으로 어댑터의 IP, DNS, MAC을 바꾸고, 적용 전에 IP 충돌을 확인하며 변경 전 스냅숏으로 클릭 한 번에 되돌릴 수 있습니다. 어댑터 두 개를 쓰는 환경을 위한 내부망 분리 라우팅, C 클래스 일괄 Ping, 시스템 프록시와 Hosts 관리도 들어 있습니다."
 	},
+	"icon": {
+		"file": "netshift.webp"
+	},
+	"screenshot": "netshift.webp",
 	"added": "2026-11-25T09:12:41Z"
 }
