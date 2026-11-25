@@ -29,9 +29,6 @@
 	"icon": {
 		"file": "feth-save-editor.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "feth-save-editor.webp",
 	"added": "2026-11-13T02:27:52Z"
 }
