@@ -11,8 +11,11 @@
 	"url": "https://github.com/Couleur-Share/GuiZhi",
 	"repo": "Couleur-Share/GuiZhi",
 	"summary": {
-		"en": "Local-first AI personal knowledge base: capture, hybrid search, AI Q&A and an AI-compiled Wiki, all on your machine.",
-		"zh-CN": "本地优先的 AI 个人知识库：多源采集、混合检索、AI 问答与 AI 编译的 Wiki，数据全部留在本机。"
+		"en": "Local-first AI knowledge base: capture, hybrid search, AI Q&A and an AI-compiled wiki, all kept local.",
+		"zh-CN": "本地优先的 AI 个人知识库：多源采集、混合检索、AI 问答与 AI 编译的 Wiki，数据全部留在本机。",
+		"zh-TW": "本地優先的 AI 個人知識庫：多源採集、混合檢索、AI 問答與 AI 編譯的 Wiki，資料全部留在本機。",
+		"ja": "ローカルファーストの AI 個人ナレッジベース。収集、ハイブリッド検索、AI 質問応答、AI が編む Wiki。",
+		"ko": "로컬 우선 AI 개인 지식 베이스. 수집, 하이브리드 검색, AI 질의응답, AI가 엮는 위키를 모두 내 기기에서."
 	},
 	"description": {
 		"en": "GuiZhi is a local-first AI knowledge base for Windows, built with a Go + WebView2 shell and a React interface. It captures web pages, notes, images and audio/video, searches them with full-text and semantic hybrid retrieval, answers questions over your library with AI, and compiles it into a linked Wiki. The library and backups stay on your machine; no account is needed.",
