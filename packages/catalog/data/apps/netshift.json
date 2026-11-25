@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "netshift",
+	"name": "NetShift",
+	"author": "zihaveaDream",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/zihaveaDream/netshift",
+	"repo": "zihaveaDream/netshift",
+	"summary": {
+		"en": "面向多网段与现场运维的 Windows 网络配置工具箱：网卡 IP/DNS/MAC 与预设方案一键切换，带 IP 冲突预检、修改前快照回退、双网卡内网分流路由、C 网群 Ping，以及系统代理与 Hosts 快捷管理。"
+	},
+	"description": {
+		"en": "面向多网段与现场运维的 Windows 网络配置工具箱：网卡 IP/DNS/MAC 与预设方案一键切换，带 IP 冲突预检、修改前快照回退、双网卡内网分流路由、C 网群 Ping，以及系统代理与 Hosts 快捷管理。"
+	},
+	"added": "2026-11-25T09:12:41Z"
+}
