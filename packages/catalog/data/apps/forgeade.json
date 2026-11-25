@@ -27,10 +27,6 @@
 	"icon": {
 		"file": "forgeade.webp"
 	},
-	"provisional": [
-		"icon",
-		"screenshot"
-	],
 	"screenshot": "forgeade.webp",
 	"added": "2026-11-14T02:29:31Z"
 }
