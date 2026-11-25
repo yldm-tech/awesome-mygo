@@ -29,9 +29,6 @@
 	"icon": {
 		"file": "t2-desktop.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "t2-desktop.webp",
 	"added": "2026-11-14T02:29:31Z"
 }
