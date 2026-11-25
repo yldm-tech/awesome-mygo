@@ -13,11 +13,11 @@
 	"url": "https://matrix.nexrin.cc",
 	"repo": "MatrixClass/MatrixClass",
 	"summary": {
-		"en": "MatrixClass is a teacher-side and student-side software suite for electronic classroom environments, built with Go and MyGo's native UI. It uses the high-performance KCP/SMUX multiplexing protocol for LAN communication and offers screen broadcasting, screen monitoring, classroom messaging, file distribution, homework collection, in-class quizzes, roll call and check-in, remote control, and management policies. It is mainly aimed at school teachers for classroom instruction and at classroom administrators for batch management and control.",
-		"zh-CN": "矩联电子教室是一套电子教室环境的教师端与学生端软件，使用 Go 和 MyGo 原生 UI 开发，采用高性能协议 KCP/SMUX 多路复用进行局域网通信，提供屏幕广播、屏幕监控、课堂消息、文件分发、作业收取、随堂测验、点名签到、远程控制和管控策略等功能。主要面向学校教师授课使用与教室管理员批量管理控制。",
-		"zh-TW": "矩聯電子教室是一套電子教室環境的教師端與學生端軟體，使用 Go 和 MyGo 原生 UI 開發，採用高效能協定 KCP/SMUX 多工復用進行區域網路通訊，提供螢幕廣播、螢幕監控、課堂訊息、檔案分發、作業收取、隨堂測驗、點名簽到、遠端控制和管控策略等功能。主要面向學校教師授課使用與教室管理員批次管理控制。",
-		"ja": "矩聯電子教室は、電子教室環境向けの教師側・学生側ソフトウェアです。Go と MyGo のネイティブ UI で開発され、高性能プロトコル KCP/SMUX の多重化によって LAN 通信を行います。画面ブロードキャスト、画面監視、授業メッセージ、ファイル配布、課題回収、小テスト、出欠確認、リモートコントロール、管理ポリシーなどの機能を提供します。主に学校の教師による授業での利用と、教室管理者による一括管理・制御を想定しています。",
-		"ko": "矩聯電子教室는 전자 교실 환경을 위한 교사용·학생용 소프트웨어입니다. Go와 MyGo 네이티브 UI로 개발되었으며, 고성능 프로토콜인 KCP/SMUX 다중화를 사용해 근거리 통신망(LAN) 통신을 수행합니다. 화면 방송, 화면 모니터링, 수업 메시지, 파일 배포, 과제 수거, 수시 퀴즈, 출석 확인, 원격 제어, 관리 정책 등의 기능을 제공합니다. 주로 학교 교사의 수업 활용과 교실 관리자의 일괄 관리·제어를 대상으로 합니다."
+		"en": "LAN classroom software for teachers and students: screen broadcast, monitoring, quizzes and remote control.",
+		"zh-CN": "局域网电子教室教师端与学生端：屏幕广播、屏幕监控、文件分发、随堂测验、点名签到与远程控制。",
+		"zh-TW": "區域網路電子教室教師端與學生端：螢幕廣播、螢幕監控、檔案分發、隨堂測驗、點名簽到與遠端控制。",
+		"ja": "LAN 向け電子教室の教師用・学生用ソフト。画面配信、画面監視、小テスト、出欠確認、リモート操作に対応。",
+		"ko": "LAN 전자 교실용 교사·학생 소프트웨어. 화면 방송, 화면 모니터링, 파일 배포, 퀴즈, 출석 확인, 원격 제어."
 	},
 	"description": {
 		"en": "MatrixClass is a teacher-side and student-side software suite for electronic classroom environments, built with Go and MyGo's native UI. It uses the high-performance KCP/SMUX multiplexing protocol for LAN communication and offers screen broadcasting, screen monitoring, classroom messaging, file distribution, homework collection, in-class quizzes, roll call and check-in, remote control, and management policies. It is mainly aimed at school teachers for classroom instruction and at classroom administrators for batch management and control.",
