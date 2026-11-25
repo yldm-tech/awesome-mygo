@@ -11,15 +11,25 @@
 	"url": "https://github.com/Couleur-Share/GuiZhi",
 	"repo": "Couleur-Share/GuiZhi",
 	"summary": {
-		"en": "Local-first AI knowledge base: capture, hybrid search, AI Q&A and an AI-compiled wiki, all kept local.",
-		"zh-CN": "本地优先的 AI 个人知识库：多源采集、混合检索、AI 问答与 AI 编译的 Wiki，数据全部留在本机。",
-		"zh-TW": "本地優先的 AI 個人知識庫：多源採集、混合檢索、AI 問答與 AI 編譯的 Wiki，資料全部留在本機。",
-		"ja": "ローカルファーストの AI 個人ナレッジベース。収集、ハイブリッド検索、AI 質問応答、AI が編む Wiki。",
-		"ko": "로컬 우선 AI 개인 지식 베이스. 수집, 하이브리드 검색, AI 질의응답, AI가 엮는 위키를 모두 내 기기에서."
+		"en": "A local-first AI knowledge base for web pages, notes and videos, with search, Q&A and a wiki.",
+		"zh-CN": "本地优先的 AI 知识库：收集网页、笔记与音视频，支持检索、问答并编成 Wiki。",
+		"zh-TW": "本地優先的 AI 知識庫：收集網頁、筆記與影音，支援檢索、問答並編成 Wiki。",
+		"ja": "ローカル優先の AI ナレッジベース。Web ページやノート、動画を集め、検索と質問、Wiki 化まで。",
+		"ko": "로컬 우선 AI 지식 베이스. 웹 페이지와 노트, 영상을 모아 검색과 질의응답, 위키 정리까지."
 	},
 	"description": {
-		"en": "GuiZhi is a local-first AI knowledge base for Windows, built with a Go + WebView2 shell and a React interface. It captures web pages, notes, images and audio/video, searches them with full-text and semantic hybrid retrieval, answers questions over your library with AI, and compiles it into a linked Wiki. The library and backups stay on your machine; no account is needed.",
-		"zh-CN": "归知是面向 Windows 的本地优先 AI 个人知识库，由 Go + WebView2 外壳与 React 界面构成。可采集网页、笔记、图片和音视频，用全文与语义混合检索查找资料，让 AI 围绕资料问答，并把积累的内容编译成互相链接的 Wiki。知识库与备份保存在本机，无需注册账号。"
+		"en": "GuiZhi collects web pages, local files and share links from sites such as Bilibili and YouTube into a knowledge base kept on your machine, with no account. With an AI model set up it summarizes, answers questions over your notes and compiles them into a linked wiki; tagging, full-text search and Markdown export work without AI. A Windows app built with MyGo around a web frontend.",
+		"zh-CN": "归知把网页、本地文件以及哔哩哔哩、YouTube 等平台的分享链接收进保存在本机的知识库，无需注册账号。配置 AI 模型后，可以生成摘要、围绕资料问答，并把内容编译成互相链接的 Wiki；不用 AI 也能打标签、全文检索和导出 Markdown。这是一款 Windows 应用，由 MyGo 搭配 Web 前端构建。",
+		"zh-TW": "歸知把網頁、本機檔案以及嗶哩嗶哩、YouTube 等平台的分享連結收進儲存在本機的知識庫，無須註冊帳號。設定 AI 模型後，可以產生摘要、針對資料問答，並把內容編譯成互相連結的 Wiki；不用 AI 也能加標籤、全文檢索和匯出 Markdown。這是一款 Windows 應用程式，以 MyGo 搭配 Web 前端打造。",
+		"ja": "GuiZhi は、Web ページやローカルファイル、ビリビリや YouTube などの共有リンクを、手元に保存されるナレッジベースに取り込みます。アカウント登録は不要です。AI モデルを設定すると要約や資料に基づく質問応答ができ、内容を相互リンクされた Wiki にまとめます。タグ付け、全文検索、Markdown 書き出しは AI なしでも使えます。MyGo と Web フロントエンドで作られた Windows アプリです。",
+		"ko": "GuiZhi는 웹 페이지, 로컬 파일, 빌리빌리나 YouTube 같은 플랫폼의 공유 링크를 내 기기에 저장되는 지식 베이스로 모읍니다. 계정 가입은 필요 없습니다. AI 모델을 설정하면 요약을 만들고 자료를 바탕으로 질문에 답하며, 내용을 서로 연결된 위키로 엮습니다. 태그, 전문 검색, Markdown 내보내기는 AI 없이도 쓸 수 있습니다. MyGo와 웹 프런트엔드로 만든 Windows 앱입니다."
 	},
+	"icon": {
+		"file": "guizhi.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "guizhi.webp",
 	"added": "2026-11-15T08:19:21Z"
 }
