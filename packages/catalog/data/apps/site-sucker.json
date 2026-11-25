@@ -4,7 +4,11 @@
 	"name": "Site Sucker",
 	"author": "maksqi",
 	"kind": "native",
-	"platforms": ["win", "linux", "mac"],
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
 	"group": "network",
 	"url": "https://github.com/maksqi/site-sucker",
 	"repo": "maksqi/site-sucker",

@@ -25,5 +25,12 @@
 		"ja": "Rakko は macOS と Windows の画面上部に、ファイルトレイ、クリップボード履歴、検索、音楽、便利なツールをまとめるネイティブアプリです。",
 		"ko": "Rakko는 macOS와 Windows 화면 상단에 파일 트레이, 클립보드 기록, 검색, 음악 및 유용한 도구를 모아 둔 네이티브 앱입니다."
 	},
+	"icon": {
+		"file": "rakko.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "rakko.webp",
 	"added": "2026-11-17T08:17:58Z"
 }
