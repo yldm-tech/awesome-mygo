@@ -12,11 +12,11 @@
 	"url": "https://rakko-yu.pages.dev",
 	"repo": "henryyu333/rakko",
 	"summary": {
-		"en": "Rakko is a native desktop utility for macOS and Windows, bringing a file tray, clipboard history, search, music and everyday tools to the notch or top edge of your screen.",
-		"zh-CN": "Rakko 是一款适用于 macOS 和 Windows 的屏幕顶边工具，将文件托盘、剪贴板历史、搜索、音乐和常用工具收在刘海或顶部胶囊里。",
-		"zh-TW": "Rakko 是一款適用於 macOS 和 Windows 的螢幕頂邊工具，將檔案托盤、剪貼簿歷史、搜尋、音樂和常用工具收在瀏海或頂部膠囊裡。",
-		"ja": "Rakko は macOS と Windows の画面上部に、ファイルトレイ、クリップボード履歴、検索、音楽、便利なツールをまとめるネイティブアプリです。",
-		"ko": "Rakko는 macOS와 Windows 화면 상단에 파일 트레이, 클립보드 기록, 검색, 음악 및 유용한 도구를 모아 둔 네이티브 앱입니다."
+		"en": "A top-edge utility for macOS and Windows: file tray, clipboard history, search, music and handy tools.",
+		"zh-CN": "Rakko 是 macOS 和 Windows 的屏幕顶边工具，提供文件托盘、剪贴板历史、搜索、音乐和常用工具。",
+		"zh-TW": "Rakko 是 macOS 和 Windows 的螢幕頂邊工具，提供檔案托盤、剪貼簿歷史、搜尋、音樂和常用工具。",
+		"ja": "macOS と Windows の画面上部にファイルトレイ、クリップボード履歴、検索、音楽をまとめるツール。",
+		"ko": "macOS와 Windows 화면 상단에 파일 트레이, 클립보드 기록, 검색, 음악을 모은 도구."
 	},
 	"description": {
 		"en": "Rakko is a native desktop utility for macOS and Windows, bringing a file tray, clipboard history, search, music and everyday tools to the notch or top edge of your screen.",
