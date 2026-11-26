@@ -1,0 +1,23 @@
+{
+	"$schema": "../schema/plugin.schema.json",
+	"slug": "mygo-pdf",
+	"name": "MyGo PDF",
+	"mark": "pd",
+	"official": false,
+	"surface": "native",
+	"import": "github.com/gvenusleo/mygo-pdf/pdf",
+	"tags": [
+		"pdf",
+		"viewer",
+		"pdfium"
+	],
+	"docs": "https://github.com/gvenusleo/mygo-pdf/blob/main/README.md",
+	"summary": {
+		"en": "Embeddable, read-only PDF viewer for MyGo native UI, with bookmarks, text search and refreshes that preserve the reading position.",
+		"zh-CN": "可嵌入 MyGo 原生界面的只读 PDF 查看器，支持书签和文本搜索，刷新文档时保留阅读位置。",
+		"zh-TW": "可嵌入 MyGo 原生介面的唯讀 PDF 檢視器，支援書籤和文字搜尋，重新整理文件時會保留閱讀位置。",
+		"ja": "MyGoのネイティブUIに組み込める読み取り専用PDFビューアー。ブックマークとテキスト検索に対応し、文書を更新しても閲覧位置を保持します。",
+		"ko": "MyGo 네이티브 UI에 내장할 수 있는 읽기 전용 PDF 뷰어입니다. 북마크와 텍스트 검색을 지원하며 문서를 새로 고쳐도 읽던 위치를 유지합니다."
+	},
+	"added": "2026-11-26T14:40:24Z"
+}
