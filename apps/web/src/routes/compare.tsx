@@ -174,8 +174,14 @@ function BenchCard({ run, view }: { run: BenchRun; view: 'chart' | 'table' }) {
 		<div className='flex min-w-0 flex-col gap-4 rounded-[16px] border border-line-2 bg-panel p-5 max-sm:p-4'>
 			<div className='flex flex-col gap-1'>
 				<h3 className='m-0 text-[20px] font-black'>{run.os}</h3>
-				<span className='font-mono text-[11px] text-fg-3'>
-					{run.cpu} · {run.date} · MyGo {run.versions.mygo} · NSGo {run.versions.nsgo}
+				{/* Each item keeps to one line, so a long CPU name wraps the line between items rather than inside one. */}
+				<span className='flex flex-wrap gap-x-1.5 font-mono text-[11px] text-fg-3'>
+					{[run.cpu, run.date, `MyGo ${run.versions.mygo}`, `NSGo ${run.versions.nsgo}`].map((item, i) => (
+						<span key={item} className='whitespace-nowrap'>
+							{i > 0 && '· '}
+							{item}
+						</span>
+					))}
 				</span>
 			</div>
 			{view === 'chart' ? (
@@ -204,7 +210,7 @@ function Benchmarks() {
 				<h2 id='bench' className='m-0 text-[26px] font-black'>
 					{t.bench_h}
 				</h2>
-				<p className='m-0 max-w-[820px] text-[15px] leading-[1.7] text-fg-2'>{t.bench_p}</p>
+				<p className='m-0 text-[15px] leading-[1.7] text-fg-2'>{t.bench_p}</p>
 			</div>
 			<div className='flex flex-wrap items-center justify-between gap-3'>
 				<ul className='m-0 flex list-none gap-5 p-0 text-[13px] text-fg-2' aria-label={t.bench_legend}>
@@ -228,7 +234,7 @@ function Benchmarks() {
 					<BenchCard key={run.os} run={run} view={view} />
 				))}
 			</div>
-			<p className='m-0 max-w-[820px] text-[13px] leading-[1.7] text-fg-3'>
+			<p className='m-0 text-[13px] leading-[1.7] text-fg-3'>
 				{before}
 				<a href={MYGO_BENCH} target='_blank' rel='noopener'>
 					{t.bench_mygo}
@@ -249,7 +255,7 @@ function ComparePage() {
 			<div className='flex flex-col gap-3.5'>
 				<span className='kicker'>~/COMPARE</span>
 				<h1 className='page-h1'>{t.compare_h}</h1>
-				<p className='m-0 max-w-[720px] text-[16px] leading-[1.7] text-fg-2'>{t.compare_p}</p>
+				<p className='m-0 text-[16px] leading-[1.7] text-fg-2'>{t.compare_p}</p>
 			</div>
 			<div className='border-t border-line-2'>
 				<div className={`${COLS} border-b border-line px-2 py-3 font-mono text-[11px] tracking-[0.08em] text-fg-3 uppercase max-lg:hidden`} aria-hidden='true'>
