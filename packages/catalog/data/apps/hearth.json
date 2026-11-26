@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "hearth",
+	"name": "Hearth",
+	"author": "Blinks44",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://hearth.moduix.dev",
+	"repo": "Blinks44/hearth",
+	"summary": {
+		"en": "Inspects and fixes your dev setup: runtimes, PATH, Docker, Kubernetes, databases and AI agents.",
+		"zh-CN": "查看并修复本机开发环境：运行时、PATH、Docker、数据库与 AI 智能体。",
+		"zh-TW": "檢視並修復本機開發環境：執行環境、PATH、Docker、資料庫與 AI 代理。",
+		"ja": "ローカルの開発環境を調べて直す：ランタイム、PATH、Docker、データベース、AI エージェント。",
+		"ko": "런타임, PATH, Docker, 데이터베이스와 AI 에이전트까지 개발 환경을 점검하고 고칩니다."
+	},
+	"description": {
+		"en": "A dev environment app for macOS, Windows and Linux, drawn with MyGo's native UI in a Go binary of about 18 MB, with no WebView. It shows runtimes, PATH and what each project expects, manages Docker, Kubernetes and local databases, and gathers AI coding agents' skills and MCP servers in one view. Scanning changes nothing; every fix shows its commands and diff before you confirm.",
+		"zh-CN": "适用于 macOS、Windows 与 Linux 的开发环境工具，由 MyGo 原生 UI 绘制，单个 Go 二进制约 18 MB，不用 WebView。它能查看运行时、PATH 以及各项目要求的版本，管理 Docker、Kubernetes 与本地数据库，并把 AI 编程智能体的技能和 MCP 服务器集中到一处。扫描不会改动系统，每项修复都会先列出命令和差异，确认后才执行。",
+		"zh-TW": "適用於 macOS、Windows 與 Linux 的開發環境工具，由 MyGo 原生 UI 繪製，單一 Go 執行檔約 18 MB，不用 WebView。它能檢視執行環境、PATH 以及各專案要求的版本，管理 Docker、Kubernetes 與本機資料庫，並把 AI 編碼代理的技能和 MCP 伺服器集中在一處。掃描不會更動系統，每項修復都會先列出指令和差異，確認後才執行。",
+		"ja": "macOS・Windows・Linux 向けの開発環境ツール。MyGo のネイティブ UI で描かれた約 18 MB の Go バイナリで、WebView は使いません。ランタイムと PATH、各プロジェクトが求めるバージョンを確認し、Docker、Kubernetes、ローカルのデータベースを管理し、AI コーディングエージェントのスキルと MCP サーバーを一か所にまとめます。スキャンは何も変更せず、修正は実行するコマンドと差分を見せてから確認を求めます。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS, Windows, Linux용 개발 환경 도구로, 약 18MB의 Go 바이너리이며 WebView가 없습니다. 런타임과 PATH, 프로젝트별 요구 버전을 보여 주고 Docker, Kubernetes, 로컬 데이터베이스를 관리하며 AI 코딩 에이전트의 스킬과 MCP 서버를 한곳에 모읍니다. 스캔은 아무것도 바꾸지 않으며, 수정은 명령과 diff를 보여 준 뒤 확인해야 실행됩니다."
+	},
+	"icon": {
+		"file": "hearth.webp"
+	},
+	"screenshot": "hearth.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
