@@ -1,5 +1,5 @@
 import { BENCH_RUNS, BENCH_SUITE, type BenchRun, FRAMEWORKS, MYGO_BENCH, fill } from '@awesome-mygo/catalog';
-import { BENCH_FWS, BENCH_ROWS, num } from '../../lib/bench';
+import { BENCH_ROWS, fwsOf, num, rowValues } from '../../lib/bench';
 import { useT } from '../../lib/lang';
 import { DesktopIcons } from '../DesktopIcons';
 import { StatusBar, Win, lnk, well } from '../ui';
@@ -78,7 +78,7 @@ function RunTable({ run }: { run: BenchRun }) {
 			<div>
 				<h3 className='m-0 text-base font-semibold'>{run.os}</h3>
 				<span className='flex flex-wrap gap-x-1.5 font-mono text-xs text-faint'>
-					{[run.cpu, run.date, `MyGo ${run.versions.mygo}`, `NSGo ${run.versions.nsgo}`].map((item, i) => (
+					{[run.cpu, run.date, ...fwsOf(run).map((f) => `${f.name} ${run.versions[f.key]}`)].map((item, i) => (
 						<span key={item} className='whitespace-nowrap'>
 							{i > 0 && '· '}
 							{item}
@@ -90,7 +90,7 @@ function RunTable({ run }: { run: BenchRun }) {
 				<thead>
 					<tr className='border-b border-line text-left text-xs text-faint'>
 						<th scope='col' className='py-1 pr-2 font-normal' />
-						{BENCH_FWS.map((f) => (
+						{fwsOf(run).map((f) => (
 							<th key={f.key} scope='col' lang='en' className='py-1 pl-2 text-right font-normal'>
 								{f.name}
 							</th>
@@ -99,20 +99,21 @@ function RunTable({ run }: { run: BenchRun }) {
 				</thead>
 				<tbody>
 					{BENCH_ROWS.map((row) => {
-						const values = BENCH_FWS.map((f) => row.value(run, f.key));
-						const best = Math.min(...values);
-						const tie = values.every((v) => num(v, row.unit) === num(best, row.unit));
+						const { values, best } = rowValues(row, run);
 						return (
 							<tr key={`${row.label}-${row.of ?? ''}`} className='border-b border-line last:border-b-0'>
 								<th scope='row' className='py-1.5 pr-2 text-left font-normal'>
 									{t[row.label]}
 									{row.of && <span className='block text-xs text-faint'>{t[`bench_case_${row.of}`]}</span>}
 								</th>
-								{values.map((v, i) => (
-									<td key={BENCH_FWS[i].key} className={`py-1.5 pl-2 text-right whitespace-nowrap ${!tie && v === best ? 'font-bold' : 'text-muted'}`}>
-										{num(v, row.unit)} <span className='text-xs text-faint'>{row.unit}</span>
-									</td>
-								))}
+								{fwsOf(run).map((f) => {
+									const x = values.find((y) => y.key === f.key);
+									return (
+										<td key={f.key} className={`py-1.5 pl-2 text-right whitespace-nowrap ${x && x.v === best ? 'font-bold' : 'text-muted'}`}>
+											{x ? num(x.v, row.unit) : '–'} <span className='text-xs text-faint'>{row.unit}</span>
+										</td>
+									);
+								})}
 							</tr>
 						);
 					})}

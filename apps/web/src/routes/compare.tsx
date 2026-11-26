@@ -1,7 +1,7 @@
 import { BENCH_RUNS, BENCH_SUITE, type BenchFramework, type BenchRun, FRAMEWORKS, type Framework, MYGO_BENCH, fill } from '@awesome-mygo/catalog';
 import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
-import { BENCH_FWS, BENCH_ROWS, num } from '../lib/bench';
+import { BENCH_FWS, BENCH_ROWS, fwsOf, num, rowValues } from '../lib/bench';
 import { useT } from '../lib/lang';
 import { pageHead } from '../lib/seo';
 
@@ -58,34 +58,36 @@ function Row({ fw }: { fw: Framework }) {
 	);
 }
 
-// The two series, in the reference palette's first two dark categorical slots, checked on the panel surface (#12161b) with the dataviz validator: lightness band, chroma, colour-blind and normal-vision separation and 3:1 contrast all pass. Only the bars wear them; every value and label stays in the text colours.
-const SERIES: Record<BenchFramework, string> = { mygo: '#338ced', nsgo: '#e76624' };
+// The four series in fixed order, from the reference palette's dark categorical slots, checked on the panel surface (#12161b) with the dataviz validator in the page's order (MyGo, Fyne, NSGo, Wails): lightness band, chroma, colour-blind and normal-vision separation of neighbours and 3:1 contrast all pass. Yellow, the palette's fourth slot, is left out: beside NSGo's orange it fails both separations, so Wails takes violet. Only the bars wear them; every value and label stays in the text colours.
+const SERIES: Record<BenchFramework, string> = { mygo: '#338ced', fyne: '#00a888', nsgo: '#e76624', wails: '#9887ef' };
 
 // The table's rows grouped into one chart per measure, each on its own axis, as the units differ.
-const BENCH_CHARTS = (['bench_size', 'bench_startup', 'bench_memory', 'bench_cpu'] as const).map((label) => ({ label, rows: BENCH_ROWS.filter((r) => r.label === label) }));
+const BENCH_CHARTS = (['bench_size', 'bench_startup', 'bench_memory', 'bench_cpu', 'bench_fps'] as const).map((label) => ({ label, rows: BENCH_ROWS.filter((r) => r.label === label) }));
 
 function Swatch({ fw }: { fw: BenchFramework }) {
 	return <span aria-hidden='true' className='inline-block size-2.5 flex-none rounded-[3px]' style={{ background: SERIES[fw] }} />;
 }
 
-// One measure on one machine: a row a case, a bar a framework, from a shared zero to the largest value. The value sits past the bar's end; hovering or focusing the row shows both values and how much lower the lower is.
+// One measure on one machine: a row a case, a bar a framework the run measures, from a shared zero to the largest value. The value sits past the bar's end; hovering or focusing the row lists every value and names the best.
 function BenchChart({ run, chart }: { run: BenchRun; chart: (typeof BENCH_CHARTS)[number] }) {
 	const t = useT();
-	const unit = chart.rows[0].unit;
-	const max = Math.max(...chart.rows.flatMap((row) => BENCH_FWS.map((f) => row.value(run, f.key))));
+	const { unit, higher } = chart.rows[0];
+	const max = Math.max(...chart.rows.flatMap((row) => rowValues(row, run).values.map((x) => x.v)));
 	return (
 		<div className='flex flex-col gap-2'>
 			<h4 className='m-0 flex items-baseline justify-between text-[13px] font-bold text-fg'>
-				{t[chart.label]}
+				<span>
+					{t[chart.label]}
+					<span className='ml-2 text-[11px] font-normal text-fg-3'>{higher ? t.bench_higher : t.bench_lower_better}</span>
+				</span>
 				<span className='font-mono text-[11px] font-normal text-fg-3'>{unit}</span>
 			</h4>
 			<div className='flex flex-col gap-2.5'>
 				{chart.rows.map((row) => {
-					const values = BENCH_FWS.map((f) => ({ ...f, v: row.value(run, f.key) }));
-					const [low, high] = [...values].sort((a, b) => a.v - b.v);
-					const pct = high.v > 0 ? Math.round((1 - low.v / high.v) * 100) : 0;
+					const { values, best } = rowValues(row, run);
+					const leader = values.find((x) => x.v === best);
 					const caseName = row.of ? t[`bench_case_${row.of}`] : undefined;
-					const summary = [caseName, ...values.map((x) => `${x.name} ${num(x.v, unit)} ${unit}`), pct > 0 ? fill(t.bench_lower, { x: low.name, n: pct }) : undefined].filter(Boolean).join(' · ');
+					const summary = [caseName, ...values.map((x) => `${x.name} ${num(x.v, unit)} ${unit}`), leader ? fill(t.bench_best, { x: leader.name }) : undefined].filter(Boolean).join(' · ');
 					return (
 						<div key={row.of ?? 'all'} tabIndex={0} aria-label={summary} className='group relative flex flex-col gap-[3px] rounded-[6px] outline-none focus-visible:ring-2 focus-visible:ring-cyan'>
 							{caseName && <span className='text-[11px] text-fg-3'>{caseName}</span>}
@@ -103,10 +105,12 @@ function BenchChart({ run, chart }: { run: BenchRun; chart: (typeof BENCH_CHARTS
 										<span className='font-bold text-fg tabular-nums'>
 											{num(x.v, unit)} {unit}
 										</span>
-										<span lang='en' className='text-fg-3'>{x.name}</span>
+										<span lang='en' className='text-fg-3'>
+											{x.name}
+										</span>
 									</span>
 								))}
-								{pct > 0 && <span className='text-[11px] text-fg-2'>{fill(t.bench_lower, { x: low.name, n: pct })}</span>}
+								{leader && <span className='text-[11px] text-fg-2'>{fill(t.bench_best, { x: leader.name })}</span>}
 							</div>
 						</div>
 					);
@@ -118,39 +122,43 @@ function BenchChart({ run, chart }: { run: BenchRun; chart: (typeof BENCH_CHARTS
 
 function BenchTable({ run }: { run: BenchRun }) {
 	const t = useT();
+	const fws = fwsOf(run);
 	return (
-		<table className='w-full border-collapse text-[13px] tabular-nums'>
-			<thead>
-				<tr className='border-b border-line text-left font-mono text-[11px] tracking-[0.06em] text-fg-3 uppercase'>
-					<th scope='col' className='py-2 pr-2 font-normal' />
-					{BENCH_FWS.map((f) => (
-						<th key={f.key} scope='col' lang='en' className='py-2 pl-2 text-right font-normal'>
-							{f.name}
-						</th>
-					))}
-				</tr>
-			</thead>
-			<tbody>
-				{BENCH_ROWS.map((row) => {
-					const values = BENCH_FWS.map((f) => row.value(run, f.key));
-					const best = Math.min(...values);
-					const tie = values.every((v) => num(v, row.unit) === num(best, row.unit));
-					return (
-						<tr key={`${row.label}-${row.of ?? ''}`} className='border-b border-line last:border-b-0'>
-							<th scope='row' className='py-2 pr-2 text-left font-normal text-fg-2'>
-								{t[row.label]}
-								{row.of && <span className='block text-[11px] text-fg-3'>{t[`bench_case_${row.of}`]}</span>}
+		<div className='overflow-x-auto'>
+			<table className='w-full border-collapse text-[13px] tabular-nums'>
+				<thead>
+					<tr className='border-b border-line text-left font-mono text-[11px] tracking-[0.06em] text-fg-3 uppercase'>
+						<th scope='col' className='py-2 pr-2 font-normal' />
+						{fws.map((f) => (
+							<th key={f.key} scope='col' lang='en' className='py-2 pl-2 text-right font-normal'>
+								{f.name}
 							</th>
-							{values.map((v, i) => (
-								<td key={BENCH_FWS[i].key} className={`py-2 pl-2 text-right whitespace-nowrap ${!tie && v === best ? 'font-bold text-fg' : 'text-fg-2'}`}>
-									{num(v, row.unit)} <span className='text-[11px] text-fg-3'>{row.unit}</span>
-								</td>
-							))}
-						</tr>
-					);
-				})}
-			</tbody>
-		</table>
+						))}
+					</tr>
+				</thead>
+				<tbody>
+					{BENCH_ROWS.map((row) => {
+						const { values, best } = rowValues(row, run);
+						return (
+							<tr key={`${row.label}-${row.of ?? ''}`} className='border-b border-line last:border-b-0'>
+								<th scope='row' className='py-2 pr-2 text-left font-normal text-fg-2'>
+									{t[row.label]}
+									{row.of && <span className='block text-[11px] text-fg-3'>{t[`bench_case_${row.of}`]}</span>}
+								</th>
+								{fws.map((f) => {
+									const x = values.find((y) => y.key === f.key);
+									return (
+										<td key={f.key} className={`py-2 pl-2 text-right whitespace-nowrap ${x && x.v === best ? 'font-bold text-fg' : 'text-fg-2'}`}>
+											{x ? num(x.v, row.unit) : '–'} <span className='text-[11px] text-fg-3'>{row.unit}</span>
+										</td>
+									);
+								})}
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</div>
 	);
 }
 
@@ -162,7 +170,7 @@ function BenchCard({ run, view }: { run: BenchRun; view: 'chart' | 'table' }) {
 				<h3 className='m-0 text-[20px] font-black'>{run.os}</h3>
 				{/* Each item keeps to one line, so a long CPU name wraps the line between items rather than inside one. */}
 				<span className='flex flex-wrap gap-x-1.5 font-mono text-[11px] text-fg-3'>
-					{[run.cpu, run.date, `MyGo ${run.versions.mygo}`, `NSGo ${run.versions.nsgo}`].map((item, i) => (
+					{[run.cpu, run.date, ...fwsOf(run).map((f) => `${f.name} ${run.versions[f.key]}`)].map((item, i) => (
 						<span key={item} className='whitespace-nowrap'>
 							{i > 0 && '· '}
 							{item}
