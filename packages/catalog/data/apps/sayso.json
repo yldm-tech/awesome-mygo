@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "sayso",
+	"name": "Sayso",
+	"author": "watzon",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "ai",
+	"url": "https://justsayso.app",
+	"repo": "watzon/sayso",
+	"summary": {
+		"en": "Local dictation: press a key, speak, and Sayso types the text into the app you are using.",
+		"zh-CN": "本地运行的语音输入：按下快捷键说话，文字直接写进当前使用的应用。",
+		"zh-TW": "在本機執行的語音輸入：按下快捷鍵說話，文字直接寫進目前使用的 App。",
+		"ja": "ローカルで動く音声入力アプリ。キーを押して話すと、使用中のアプリに文字が入力されます。",
+		"ko": "로컬에서 동작하는 받아쓰기 앱. 키를 누르고 말하면 사용 중인 앱에 텍스트가 입력됩니다."
+	},
+	"description": {
+		"en": "A dictation app for macOS, Windows and Linux, written in Go with MyGo's native UI. Press a key, speak, and Sayso pastes the text into the focused app, with speech recognized on your computer by models such as Parakeet and Whisper. Nothing leaves the computer unless you pick a cloud model or an AI style, which rewrites the transcript with a prompt, for example as an email.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 构建的听写应用，支持 macOS、Windows 与 Linux。按下快捷键说话，Sayso 就把文字粘贴到当前应用；语音识别在本机用 Parakeet、Whisper 等模型完成。除非你选用云端模型或 AI 风格（用提示词改写转录稿，例如改成邮件），否则数据不会离开电脑。",
+		"zh-TW": "以 Go 撰寫、由 MyGo 原生 UI 打造的聽寫 App，支援 macOS、Windows 與 Linux。按下快捷鍵說話，Sayso 就會把文字貼到目前使用的 App；語音辨識在本機以 Parakeet、Whisper 等模型完成。除非你選用雲端模型或 AI 風格（以提示詞改寫逐字稿，例如改成電子郵件），否則資料不會離開電腦。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で作られた macOS・Windows・Linux 向けの音声入力アプリ。キーを押して話すと、Sayso が使用中のアプリに文字を貼り付けます。音声認識は Parakeet や Whisper などのモデルを使い、パソコン上で行われます。クラウドのモデルや、プロンプトで書き起こしを整える AI スタイル（メール向けなど）を選ばない限り、データはパソコンの外に出ません。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 만든 macOS·Windows·Linux용 받아쓰기 앱입니다. 키를 누르고 말하면 Sayso가 사용 중인 앱에 텍스트를 붙여 넣으며, 음성 인식은 Parakeet, Whisper 같은 모델로 컴퓨터에서 처리합니다. 클라우드 모델이나 프롬프트로 전사문을 다듬는 AI 스타일(이메일용 등)을 고르지 않으면 데이터가 컴퓨터 밖으로 나가지 않습니다."
+	},
+	"icon": {
+		"file": "sayso.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "sayso.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
