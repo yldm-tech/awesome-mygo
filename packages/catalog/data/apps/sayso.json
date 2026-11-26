@@ -29,9 +29,6 @@
 	"icon": {
 		"file": "sayso.webp"
 	},
-	"provisional": [
-		"icon"
-	],
 	"screenshot": "sayso.webp",
 	"added": "2026-11-26T02:31:39Z"
 }
