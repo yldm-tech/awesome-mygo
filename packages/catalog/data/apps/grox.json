@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "grox",
+	"name": "Grox",
+	"author": "dandandujie",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/dandandujie/Grox",
+	"repo": "dandandujie/Grox",
+	"summary": {
+		"en": "A local-first workspace for a team of AI assistants run by CLI agents or OpenAI-compatible APIs.",
+		"zh-CN": "本地优先的 AI 助理团队工作区，接入 CLI 智能体或 OpenAI 兼容 API。",
+		"zh-TW": "本機優先的 AI 助理團隊工作區，串接 CLI 代理程式或 OpenAI 相容 API。",
+		"ja": "CLI エージェントや OpenAI 互換 API で動く AI アシスタントチームのローカル作業空間。",
+		"ko": "CLI 에이전트나 OpenAI 호환 API로 움직이는 AI 비서 팀의 로컬 우선 작업 공간."
+	},
+	"description": {
+		"en": "A desktop workspace where AI assistants, each with its own model, instructions, folders and approval rights, take on tasks, send actions for your review and answer in channels when @-mentioned. They run on an installed Grok Build, Claude Code, Codex or Gemini CLI, or an OpenAI-compatible API, and the workspace stays on your computer. Built with MyGo and a React web frontend.",
+		"zh-CN": "把不同角色的 AI 助理放进同一个桌面工作区，每位助理有自己的模型、指令、目录和审批权限，可以交代任务、审阅操作请求，或在频道里用 @ 点名回答。助理可接入已安装的 Grok Build、Claude Code、Codex 或 Gemini CLI，也可连接兼容 OpenAI 的 API，工作区保存在本机。基于 MyGo 的 Web 前端构建，界面用 React 编写。",
+		"zh-TW": "把不同角色的 AI 助理放進同一個桌面工作區，每位助理有自己的模型、指令、目錄和審批權限，可以交辦任務、審閱操作請求，或在頻道裡用 @ 指定誰來回答。助理可串接已安裝的 Grok Build、Claude Code、Codex 或 Gemini CLI，也能連接相容 OpenAI 的 API，工作區保存在本機。以 MyGo 的 Web 前端打造，介面使用 React 撰寫。",
+		"ja": "役割の違う AI アシスタントを一つのワークスペースに集めるデスクトップアプリです。アシスタントごとにモデル、指示、フォルダー、承認権限を設定でき、タスクを任せたり、操作の依頼を確認したり、チャンネルで @ を付けて回答する相手を指名したりできます。インストール済みの Grok Build、Claude Code、Codex、Gemini CLI か OpenAI 互換 API で動き、ワークスペースは手元のマシンに保存されます。MyGo の Web フロントエンドで作られ、UI は React です。",
+		"ko": "역할이 다른 AI 비서들을 한 작업 공간에 모은 데스크톱 앱입니다. 비서마다 모델, 지시문, 폴더, 승인 권한을 정할 수 있고, 작업을 맡기거나 작업 요청을 검토하거나 채널에서 @로 답할 비서를 지정할 수 있습니다. 설치된 Grok Build, Claude Code, Codex, Gemini CLI나 OpenAI 호환 API로 동작하며 작업 공간은 내 컴퓨터에 저장됩니다. MyGo의 웹 프런트엔드로 만들었고 UI는 React입니다."
+	},
+	"icon": {
+		"file": "grox.webp"
+	},
+	"screenshot": "grox.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
