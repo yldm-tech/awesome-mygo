@@ -225,6 +225,9 @@ function Hero() {
 							<span className='font-display text-[18px] font-extrabold text-fg tabular-nums'>{st.n}</span> {st.label}
 						</span>
 					))}
+					<Link to='/compare' className='text-fg-2 no-underline hover:text-cyan max-md:inline-flex max-md:min-h-10 max-md:items-center'>
+						{t.compare_link} <span className='arrow'>→</span>
+					</Link>
 				</div>
 				</div>
 

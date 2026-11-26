@@ -456,6 +456,7 @@ describe('search snippets', () => {
 		['title_plugins', 'desc_plugins'],
 		['title_showcase', 'desc_showcase'],
 		['title_learn', 'desc_learn'],
+		['title_compare', 'desc_compare'],
 	] as const;
 
 	it('puts the site name first in the home title and keeps every title short enough to show whole', () => {
@@ -478,7 +479,7 @@ describe('search snippets', () => {
 	});
 
 	it('gives every page keywords that pair MyGo with Go and repeat no phrase', () => {
-		const KEYWORDS = ['kw_home', 'kw_ui', 'kw_state', 'kw_templates', 'kw_ai', 'kw_plugins', 'kw_showcase', 'kw_learn', 'kw_app'] as const;
+		const KEYWORDS = ['kw_home', 'kw_ui', 'kw_state', 'kw_templates', 'kw_ai', 'kw_plugins', 'kw_showcase', 'kw_learn', 'kw_compare', 'kw_app'] as const;
 		for (const L of LANGS) {
 			for (const key of KEYWORDS) {
 				const terms = LOCALES[L.code][key].split(', ');

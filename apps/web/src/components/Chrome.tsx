@@ -1,4 +1,4 @@
-import { MAINTAINER_URL, MYGO_REPO, SPONSOR_URL } from '@awesome-mygo/catalog';
+import { AWESOME_NSGO, MAINTAINER_URL, MYGO_REPO, SPONSOR_URL } from '@awesome-mygo/catalog';
 import { Link } from '@tanstack/react-router';
 import { useT } from '../lib/lang';
 import { useSite } from '../lib/site';
@@ -24,6 +24,9 @@ export function Footer() {
 				<Link to='/metrics' className='text-fg-2 no-underline hover:text-cyan max-md:inline-flex max-md:min-h-10 max-md:items-center'>
 					{t.metrics_title}
 				</Link>
+				<Link to='/compare' className='text-fg-2 no-underline hover:text-cyan max-md:inline-flex max-md:min-h-10 max-md:items-center'>
+					{t.compare_h}
+				</Link>
 				</nav>
 				<div className='flex flex-wrap justify-between gap-3 text-[13px] text-fg-3'>
 					<span>
@@ -32,6 +35,12 @@ export function Footer() {
 							YLDM
 						</a>
 						{t.footer_by.split('{x}')[1]}
+						{' · '}
+						{t.footer_sibling.split('{x}')[0]}
+						<a href={AWESOME_NSGO} target='_blank' rel='noopener'>
+							Awesome NSGo
+						</a>
+						{t.footer_sibling.split('{x}')[1]}
 					</span>
 					<span className='flex flex-wrap gap-5'>
 						<a href={MYGO_REPO} target='_blank' rel='noopener' className='inline-flex items-center gap-1.5 max-md:min-h-10'>

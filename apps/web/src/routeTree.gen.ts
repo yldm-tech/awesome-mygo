@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AiRouteImport } from './routes/ai'
+import { Route as CompareRouteImport } from './routes/compare'
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as MetricsRouteImport } from './routes/metrics'
 import { Route as PluginsRouteImport } from './routes/plugins'
@@ -34,6 +35,11 @@ const IndexRoute = IndexRouteImport.update({
 const AiRoute = AiRouteImport.update({
   id: '/ai',
   path: '/ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LearnRoute = LearnRouteImport.update({
@@ -110,6 +116,7 @@ const AppsSlugRoute = AppsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ai': typeof AiRoute
+  '/compare': typeof CompareRoute
   '/learn': typeof LearnRoute
   '/metrics': typeof MetricsRoute
   '/plugins': typeof PluginsRoute
@@ -128,6 +135,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ai': typeof AiRoute
+  '/compare': typeof CompareRoute
   '/learn': typeof LearnRoute
   '/metrics': typeof MetricsRoute
   '/plugins': typeof PluginsRoute
@@ -147,6 +155,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/ai': typeof AiRoute
+  '/compare': typeof CompareRoute
   '/learn': typeof LearnRoute
   '/metrics': typeof MetricsRoute
   '/plugins': typeof PluginsRoute
@@ -167,6 +176,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/ai'
+    | '/compare'
     | '/learn'
     | '/metrics'
     | '/plugins'
@@ -185,6 +195,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/ai'
+    | '/compare'
     | '/learn'
     | '/metrics'
     | '/plugins'
@@ -203,6 +214,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/ai'
+    | '/compare'
     | '/learn'
     | '/metrics'
     | '/plugins'
@@ -222,6 +234,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AiRoute: typeof AiRoute
+  CompareRoute: typeof CompareRoute
   LearnRoute: typeof LearnRoute
   MetricsRoute: typeof MetricsRoute
   PluginsRoute: typeof PluginsRoute
@@ -252,6 +265,13 @@ declare module '@tanstack/react-router' {
       path: '/ai'
       fullPath: '/ai'
       preLoaderRoute: typeof AiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/learn': {
@@ -358,6 +378,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AiRoute: AiRoute,
+  CompareRoute: CompareRoute,
   LearnRoute: LearnRoute,
   MetricsRoute: MetricsRoute,
   PluginsRoute: PluginsRoute,

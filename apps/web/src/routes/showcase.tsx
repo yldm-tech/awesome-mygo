@@ -1,6 +1,6 @@
 import { APPS, APP_PLATFORMS, type AppKind, type AppPlatform, HAS_SCORES, likeKey, pad2, pick } from '@awesome-mygo/catalog';
 import { DEFAULT_SORT, groupChips, shownSort, sortApps, validateShowcaseSearch } from '../lib/showcase';
-import { createFileRoute, useNavigate } from '@tanstack/react-router';
+import { Link, createFileRoute, useNavigate } from '@tanstack/react-router';
 import { AppLink, KindTag, MonoTile, PlatformTags, WinBar, appView } from '../components/bits';
 import { showBy, showDesc, showGrid, showId, showIdText, showName } from '../components/EntryCard';
 import { FilterBar, FilterChip, FilterChips, FilterSelect, FilterSelects } from '../components/FilterBar';
@@ -43,6 +43,9 @@ function ShowcasePage() {
 				<div className='flex flex-col gap-3.5'>
 					<span className='kicker'>~/SHOWCASE</span>
 					<h1 className='page-h1'>{t.cat_show_name}</h1>
+					<Link to='/compare' className='text-[14px] font-semibold text-fg-2 no-underline hover:text-cyan max-md:inline-flex max-md:min-h-10 max-md:items-center'>
+						{t.compare_link} <span className='arrow'>→</span>
+					</Link>
 				</div>
 				<span className='font-display text-[120px] leading-[0.8] font-extrabold tracking-[-0.06em] text-cyan tabular-nums max-sm:text-[72px]'>{pad2(list.length)}</span>
 			</div>
