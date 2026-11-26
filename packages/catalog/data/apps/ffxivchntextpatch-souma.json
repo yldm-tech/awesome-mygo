@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ffxivchntextpatch-souma",
+	"name": "FFXIVChnTextPatch-Souma",
+	"author": "Souma-Sumire",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "game",
+	"url": "https://github.com/Souma-Sumire/FFXIVChnTextPatch-Souma",
+	"repo": "Souma-Sumire/FFXIVChnTextPatch-Souma",
+	"summary": {
+		"en": "Patches the Final Fantasy XIV client with a Chinese text translation and custom game fonts.",
+		"zh-CN": "为《最终幻想14》客户端打上中文汉化文本与自定义字体的补丁工具。",
+		"zh-TW": "為《最終幻想14》用戶端套用中文翻譯文字與自訂字型的修補工具。",
+		"ja": "ファイナルファンタジーXIV のクライアントに中国語テキストと独自フォントを適用するパッチツール。",
+		"ko": "파이널 판타지 XIV 클라이언트에 중국어 번역 텍스트와 사용자 글꼴을 적용하는 패치 도구."
+	},
+	"description": {
+		"en": "A Windows and macOS patcher that applies a Chinese text translation to the Final Fantasy XIV client, built on FFXIVChnTextPatch and FFXIVChnTextPatch-GP as a MyGo app with a web frontend. It also customizes the game's fonts, with multi-layer blending and a typesetting preview based on FFXIV-FontChanger, and its release build fetches the translation CSVs from the cloud.",
+		"zh-CN": "适用于 Windows 与 macOS 的《最终幻想14》客户端汉化补丁工具，基于 FFXIVChnTextPatch 与 FFXIVChnTextPatch-GP 开发，以 MyGo 搭配 Web 前端构建。它还能定制游戏字体，多图层混合与排版预览基于 FFXIV-FontChanger；发布版从云端获取汉化 CSV。",
+		"zh-TW": "適用於 Windows 與 macOS 的《最終幻想14》用戶端中文化修補工具，以 FFXIVChnTextPatch 與 FFXIVChnTextPatch-GP 為基礎開發，採用 MyGo 搭配 Web 前端打造。它也能自訂遊戲字型，多圖層混合與排版預覽以 FFXIV-FontChanger 為基礎；發行版會從雲端取得翻譯 CSV。",
+		"ja": "Windows・macOS 向けの、ファイナルファンタジーXIV のクライアントに中国語訳を当てるパッチツール。FFXIVChnTextPatch と FFXIVChnTextPatch-GP をもとに、MyGo と Web フロントエンドで作られています。ゲームフォントのカスタマイズもでき、多レイヤーの合成と組版プレビューは FFXIV-FontChanger に基づきます。リリース版は翻訳 CSV をクラウドから取得します。",
+		"ko": "Windows와 macOS용 파이널 판타지 XIV 클라이언트 중국어 번역 패치 도구로, FFXIVChnTextPatch와 FFXIVChnTextPatch-GP를 바탕으로 MyGo와 웹 프런트엔드로 만들었습니다. 게임 글꼴도 바꿀 수 있으며, 다중 레이어 합성과 조판 미리보기는 FFXIV-FontChanger를 기반으로 합니다. 릴리스 빌드는 번역 CSV를 클라우드에서 받아옵니다."
+	},
+	"icon": {
+		"file": "ffxivchntextpatch-souma.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "ffxivchntextpatch-souma.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
