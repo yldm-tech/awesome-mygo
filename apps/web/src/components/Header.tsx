@@ -16,6 +16,7 @@ export const NAV = [
 	{ to: '/plugins', key: 'nav_plugins' },
 	{ to: '/showcase', key: 'nav_showcase' },
 	{ to: '/learn', key: 'nav_learn' },
+	{ to: '/compare', key: 'nav_compare' },
 ] as const;
 
 export const SITE_NAV = NAV;
@@ -58,18 +59,18 @@ export function Header({ scrolled }: { scrolled: boolean }) {
 			className={`sticky top-0 z-20 border-b border-line bg-bg/82 backdrop-blur-[14px] [transition:box-shadow_0.3s] data-[scrolled=true]:shadow-[0_10px_40px_rgba(0,0,0,0.45)] ${menu ? 'max-md:max-h-dvh max-md:overflow-y-auto max-md:overscroll-contain' : ''}`}
 			data-scrolled={scrolled}
 		>
-			{/* The brand, the eight sections and the header actions share one row from the burger breakpoint up: the search button is as wide as its label, and below 1288px, before the 1600px container reaches its full width, the brand shows only its logo, the search button drops its label and the gaps tighten, so every language fits one row down to 1100px. Below md (phones) the header is one compact row of the brand, search, submit and the burger: the language, look and GitHub buttons move into the burger's panel, and the gaps, buttons and brand shrink so English still fits at 360px. */}
+			{/* The brand, the nine sections and the header actions share one row from the burger breakpoint (menu, 1060px) up: the search button is as wide as its label, and below 1288px, before the 1600px container reaches its full width, the brand shows only its logo, the search button drops its label and the gaps tighten, so every language fits one row down to the breakpoint. Below md (phones) the header is one compact row of the brand, search, submit and the burger: the language, look and GitHub buttons move into the burger's panel, and the gaps, buttons and brand shrink so English still fits at 360px. */}
 			<div className='site-shell mx-auto flex flex-wrap items-center gap-x-5 gap-y-2.5 px-6 py-2.5 max-hdr:gap-x-3.5 max-md:gap-x-1.5 max-md:py-2 max-sm:px-5'>
 				<Link to='/' aria-label={t.a_home} className='flex min-h-11 items-center gap-2.5 p-0 text-fg no-underline max-md:mr-auto max-md:min-h-10 max-md:gap-2 max-md:[&_img]:size-7'>
 					<Logo />
-					<span className='font-display text-[20px] font-extrabold tracking-[-0.035em] max-hdr:nav:hidden max-md:text-[clamp(16px,4.44vw,18px)]'>
+					<span className='font-display text-[20px] font-extrabold tracking-[-0.035em] max-hdr:menu:hidden max-md:text-[clamp(16px,4.44vw,18px)]'>
 						Awesome <span className='text-cyan'>MyGo</span>
 					</span>
 				</Link>
 				{/* Below the burger breakpoint the nav is a full-width panel on its own row, shown while the burger is open. */}
 				<nav
 					id='sitenav'
-					className={`my-0 mr-auto ml-2 flex flex-wrap gap-0.5 rounded-xl border border-line bg-well p-1 max-nav:order-5 max-nav:m-0 max-nav:w-full ${menu ? 'max-nav:flex-col max-nav:items-stretch' : 'max-nav:hidden'}`}
+					className={`my-0 mr-auto ml-2 flex flex-wrap gap-0.5 rounded-xl border border-line bg-well p-1 max-menu:order-5 max-menu:m-0 max-menu:w-full ${menu ? 'max-menu:flex-col max-menu:items-stretch' : 'max-menu:hidden'}`}
 					data-open={menu}
 					aria-label={t.a_cats}
 				>
@@ -77,7 +78,7 @@ export function Header({ scrolled }: { scrolled: boolean }) {
 						<Link
 							key={n.to}
 							to={n.to}
-							className={`box-border inline-flex min-h-[38px] items-center rounded-lg border-0 bg-transparent px-2.5 py-0 text-[14px] font-medium text-fg-2 no-underline [transition:background_0.15s,color_0.15s] hover:bg-white/6 hover:text-fg data-[status=active]:bg-fg data-[status=active]:font-bold data-[status=active]:text-bg max-nav:min-h-12 max-nav:justify-start`}
+							className={`box-border inline-flex min-h-[38px] items-center rounded-lg border-0 bg-transparent px-[7px] py-0 text-[14px] font-medium text-fg-2 no-underline [transition:background_0.15s,color_0.15s] hover:bg-white/6 hover:text-fg data-[status=active]:bg-fg data-[status=active]:font-bold data-[status=active]:text-bg max-menu:min-h-12 max-menu:justify-start`}
 							activeOptions={{ exact: true, includeSearch: false }}
 							onClick={() => setMenu(false)}
 						>
@@ -86,7 +87,7 @@ export function Header({ scrolled }: { scrolled: boolean }) {
 					))}
 				</nav>
 				{/* Below md the actions box dissolves (display: contents) so its buttons sit in the header row itself, and the language, look and GitHub group can take a row of its own in the burger's panel. */}
-				<div className='flex items-center gap-2 max-nav:ml-auto max-md:contents'>
+				<div className='flex items-center gap-2 max-menu:ml-auto max-md:contents'>
 					<button
 						type='button'
 						className='btn-g flex min-h-11 items-center gap-2.5 rounded-[10px] border border-line-2 bg-well px-3.5 py-0 text-[14px] text-fg-2 hover:border-fg hover:bg-white/4 hover:text-fg max-hdr:min-w-0 max-md:size-10 max-md:min-h-10 max-md:justify-center max-md:px-0'
@@ -177,7 +178,7 @@ export function Header({ scrolled }: { scrolled: boolean }) {
 					</button>
 					<button
 						type='button'
-						className='btn-g hidden size-11 items-center justify-center rounded-[10px] border border-line-2 bg-well text-fg hover:border-fg hover:bg-white/4 hover:text-fg max-nav:flex max-md:size-10'
+						className='btn-g hidden size-11 items-center justify-center rounded-[10px] border border-line-2 bg-well text-fg hover:border-fg hover:bg-white/4 hover:text-fg max-menu:flex max-md:size-10'
 						onClick={() => setMenu((v) => !v)}
 						aria-expanded={menu}
 						aria-controls='sitenav siteacts'

@@ -24,9 +24,6 @@ export function Footer() {
 				<Link to='/metrics' className='text-fg-2 no-underline hover:text-cyan max-md:inline-flex max-md:min-h-10 max-md:items-center'>
 					{t.metrics_title}
 				</Link>
-				<Link to='/compare' className='text-fg-2 no-underline hover:text-cyan max-md:inline-flex max-md:min-h-10 max-md:items-center'>
-					{t.compare_h}
-				</Link>
 				</nav>
 				<div className='flex flex-wrap justify-between gap-3 text-[13px] text-fg-3'>
 					<span>

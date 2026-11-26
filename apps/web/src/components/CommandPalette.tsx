@@ -15,6 +15,7 @@ const JUMPS = [
 	{ to: '/plugins', key: 'nav_plugins' },
 	{ to: '/showcase', key: 'cat_show_name' },
 	{ to: '/learn', key: 'learn_h' },
+	{ to: '/compare', key: 'compare_h' },
 ] as const;
 
 export function CommandPalette() {

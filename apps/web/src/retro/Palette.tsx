@@ -15,6 +15,7 @@ const JUMPS = [
 	{ to: '/plugins', key: 'nav_plugins' },
 	{ to: '/showcase', key: 'cat_show_name' },
 	{ to: '/learn', key: 'learn_h' },
+	{ to: '/compare', key: 'compare_h' },
 ] as const;
 
 // A magnifying glass for the empty result list, in the shared palette (k ink, c pale blue, w paper, o orange).

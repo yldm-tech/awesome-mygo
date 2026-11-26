@@ -12,6 +12,7 @@ import { RetroSubmit } from './Submit';
 import { AppPage } from './pages/AppPage';
 import { Home } from './pages/Home';
 import { Learn } from './pages/Learn';
+import { Compare } from './pages/Compare';
 import { Metrics } from './pages/Metrics';
 import { NotFound } from './pages/NotFound';
 import { Plugins } from './pages/Plugins';
@@ -31,6 +32,7 @@ const PAGES: Record<string, ComponentType> = {
 	'/plugins': Plugins,
 	'/showcase': Showcase,
 	'/learn': Learn,
+	'/compare': Compare,
 	'/metrics': Metrics,
 	'/apps/$slug': AppPage,
 };
@@ -151,7 +153,7 @@ function MenuBar() {
 			</Link>
 			<nav aria-label={t.a_cats} className='hidden desk:flex'>
 				{NAV.map((n) => (
-					<Link key={n.to} to={n.to} activeOptions={{ exact: true, includeSearch: false }} className='flex h-[24px] items-center rounded-md px-[10px] whitespace-nowrap no-underline hover:bg-ink/5 aria-[current=page]:bg-ink/8 aria-[current=page]:font-semibold'>
+					<Link key={n.to} to={n.to} activeOptions={{ exact: true, includeSearch: false }} className='flex h-[24px] items-center rounded-md px-[8px] whitespace-nowrap no-underline hover:bg-ink/5 aria-[current=page]:bg-ink/8 aria-[current=page]:font-semibold'>
 						{t[n.key]}
 					</Link>
 				))}

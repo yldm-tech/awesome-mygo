@@ -61,4 +61,6 @@ What utilities cannot say, or what many pages share and adjust by class, is kept
 	--breakpoint-split: 960px;
 	--breakpoint-hero: 1000px;
 	--breakpoint-hdr: 1288px;
+	/* Where the header's section links fold into the burger menu: below it the nine links, the logo and the actions do not fit on one row in English or Japanese, the longest of the site's languages. */
+	--breakpoint-menu: 1060px;
 }

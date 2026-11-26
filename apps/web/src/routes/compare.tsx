@@ -1,6 +1,7 @@
-import { BENCH_RUNS, BENCH_SUITE, type BenchCase, type BenchFramework, type BenchRun, type BenchValues, FRAMEWORKS, type Framework, MYGO_BENCH, type StringKey, fill } from '@awesome-mygo/catalog';
+import { BENCH_RUNS, BENCH_SUITE, type BenchFramework, type BenchRun, FRAMEWORKS, type Framework, MYGO_BENCH, fill } from '@awesome-mygo/catalog';
 import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
+import { BENCH_FWS, BENCH_ROWS, num } from '../lib/bench';
 import { useT } from '../lib/lang';
 import { pageHead } from '../lib/seo';
 
@@ -56,21 +57,6 @@ function Row({ fw }: { fw: Framework }) {
 		</article>
 	);
 }
-
-// The rows of a benchmark table: what it measures, its unit, and its value for a framework, lower being better in every row.
-const BENCH_ROWS: { label: StringKey; of?: BenchCase; unit: string; value: (run: BenchRun, fw: BenchFramework) => number }[] = [
-	{ label: 'bench_size', unit: 'MB', value: (r, fw) => r.size[fw] / 1e6 },
-	...(['counter', 'list', 'quotes'] as const).map((c) => ({ label: 'bench_startup' as const, of: c, unit: 'ms', value: (r: BenchRun, fw: BenchFramework) => r.cases[c][fw].startup })),
-	...(['counter', 'list', 'quotes'] as const).map((c) => ({ label: 'bench_memory' as const, of: c, unit: 'MB', value: (r: BenchRun, fw: BenchFramework) => r.cases[c][fw].memory / 1e6 })),
-	// The process's CPU and the compositor's added, as the suite says to read them. The counter is left out: it is idle, at 0 for both.
-	...(['list', 'quotes'] as const).map((c) => ({ label: 'bench_cpu' as const, of: c, unit: '%', value: (r: BenchRun, fw: BenchFramework) => cpuOf(r.cases[c][fw]) })),
-];
-const cpuOf = (v: BenchValues) => v.cpu + (v.compositor ?? 0);
-const BENCH_FWS: { key: BenchFramework; name: string }[] = [
-	{ key: 'mygo', name: 'MyGo' },
-	{ key: 'nsgo', name: 'NSGo' },
-];
-const num = (n: number, unit: string) => (unit === 'ms' ? Math.round(n).toString() : n.toFixed(1));
 
 // The two series, in the reference palette's first two dark categorical slots, checked on the panel surface (#12161b) with the dataviz validator: lightness band, chroma, colour-blind and normal-vision separation and 3:1 contrast all pass. Only the bars wear them; every value and label stays in the text colours.
 const SERIES: Record<BenchFramework, string> = { mygo: '#338ced', nsgo: '#e76624' };
