@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "lazygitgo",
+	"name": "lazygitGo",
+	"author": "FleetingEcho",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/FleetingEcho/lazygitGo",
+	"repo": "FleetingEcho/lazygitGo",
+	"summary": {
+		"en": "A native Git client on Lazygit's engine, with line staging, a commit graph and a code editor.",
+		"zh-CN": "基于 Lazygit 引擎的原生 Git 客户端，支持逐行暂存、提交图和代码编辑器。",
+		"zh-TW": "以 Lazygit 引擎打造的原生 Git 用戶端，支援逐行暫存、提交圖與程式碼編輯器。",
+		"ja": "Lazygit のエンジンを使うネイティブ Git クライアント。行単位ステージングとコミットグラフ付き。",
+		"ko": "Lazygit 엔진 기반의 네이티브 Git 클라이언트. 줄 단위 스테이징과 커밋 그래프 지원."
+	},
+	"description": {
+		"en": "A Git client for macOS, Windows and Linux, drawn with MyGo's native UI on top of Lazygit's Git command layer. It stages single lines, shows a commit graph and file history with batch rewrites, and resolves conflicts in a four-pane Base, Current, Incoming and Result view. A code editor, search, a terminal and SSH workspaces on remote Linux hosts sit beside the repository tabs.",
+		"zh-CN": "适用于 macOS、Windows 与 Linux 的 Git 客户端，由 MyGo 原生 UI 绘制，底层使用 Lazygit 的 Git 命令层。可以逐行暂存，在提交图和文件历史中批量改写提交，并在 Base、Current、Incoming、Result 四栏视图中解决冲突。代码编辑器、搜索、终端以及远程 Linux 主机上的 SSH 工作区就在仓库标签页旁边。",
+		"zh-TW": "適用於 macOS、Windows 與 Linux 的 Git 用戶端，由 MyGo 原生 UI 繪製，底層使用 Lazygit 的 Git 指令層。可以逐行暫存，在提交圖與檔案歷史中批次改寫提交，並在 Base、Current、Incoming、Result 四欄檢視中解決衝突。程式碼編輯器、搜尋、終端機以及遠端 Linux 主機上的 SSH 工作區就在儲存庫分頁旁邊。",
+		"ja": "macOS・Windows・Linux 向けの Git クライアント。Lazygit の Git コマンド層の上に、MyGo のネイティブ UI で描かれています。行単位でステージでき、コミットグラフやファイル履歴を見ながらコミットをまとめて書き換えられ、競合は Base・Current・Incoming・Result の 4 ペインで解決します。コードエディター、検索、ターミナル、リモート Linux ホスト上の SSH ワークスペースもリポジトリのタブと並んで使えます。",
+		"ko": "macOS, Windows, Linux용 Git 클라이언트로, Lazygit의 Git 명령 계층 위에 MyGo의 네이티브 UI로 그렸습니다. 줄 단위로 스테이징하고, 커밋 그래프와 파일 기록을 보며 커밋을 일괄 수정하며, 충돌은 Base, Current, Incoming, Result 네 칸 화면에서 해결합니다. 코드 편집기, 검색, 터미널, 원격 Linux 호스트의 SSH 워크스페이스도 저장소 탭 옆에서 쓸 수 있습니다."
+	},
+	"icon": {
+		"file": "lazygitgo.webp"
+	},
+	"screenshot": "lazygitgo.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
