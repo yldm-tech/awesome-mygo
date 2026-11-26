@@ -412,7 +412,7 @@
 	"fw_note": "Compiled in November 2026. These projects move fast; their own sites have the latest.",
 	"footer_sibling": "also maintains {x}",
 	"bench_h": "Benchmarks",
-	"bench_p": "The only published runs that measure two of these frameworks on the same machines come from a suite NSGo maintains: the same apps written for NSGo and for MyGo, built as releases and measured. Lower is better; the lower value in each row is in bold.",
+	"bench_p": "The only published runs that measure two of these frameworks on the same machines come from a suite NSGo maintains: the same apps written for NSGo and for MyGo, built as releases and measured. Lower is better throughout.",
 	"bench_note": "CPU is the app's process and the system compositor added, in percent of one core: native views leave drawing to the compositor where GPU renderers draw in their own process, so only the sum compares. Figures from different machines do not compare. No published run measures Wails or Fyne beside them; MyGo against GPUI and egui is in {x}.",
 	"bench_mygo": "MyGo's own benchmarks",
 	"bench_suite": "Suite and method",
@@ -423,5 +423,10 @@
 	"bench_cpu": "CPU",
 	"bench_case_counter": "counter, idle",
 	"bench_case_list": "10,000-row list, scrolled every frame",
-	"bench_case_quotes": "40 quotes, updated every frame"
+	"bench_case_quotes": "40 quotes, updated every frame",
+	"bench_legend": "Legend",
+	"bench_view": "View",
+	"bench_view_chart": "Chart",
+	"bench_view_table": "Table",
+	"bench_lower": "{x} {n}% lower"
 }
