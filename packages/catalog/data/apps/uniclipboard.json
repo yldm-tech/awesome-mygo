@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "uniclipboard",
+	"name": "UniClipboard",
+	"author": "UniClipboard",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://uniclipboard.app",
+	"repo": "UniClipboard/UniClipboard",
+	"summary": {
+		"en": "Peer-to-peer clipboard sync between your computers, end-to-end encrypted, no account or cloud.",
+		"zh-CN": "在多台电脑间点对点同步剪贴板，端到端加密，无需账号与云端。",
+		"zh-TW": "在多台電腦間點對點同步剪貼簿，端對端加密，免帳號也不經雲端。",
+		"ja": "パソコン間でクリップボードを直接同期。エンドツーエンド暗号化で、アカウントもクラウドも不要。",
+		"ko": "여러 컴퓨터의 클립보드를 직접 동기화합니다. 종단간 암호화, 계정과 클라우드 없이."
+	},
+	"description": {
+		"en": "A clipboard sync app for Windows, macOS and Linux whose desktop window is drawn with MyGo's native UI. Devices pair with a 6-digit code and connect directly, on the same Wi-Fi or across networks, with end-to-end encryption and no account or server; text, images, files and whole folders sync. A quick panel and history search find past items, and the unic command line works from a terminal.",
+		"zh-CN": "适用于 Windows、macOS 与 Linux 的剪贴板同步应用，桌面窗口由 MyGo 原生 UI 绘制。设备用 6 位数字码配对后直接连接，同一 Wi-Fi 或跨网络均可，端到端加密，无需账号，也没有服务器；文本、图片、文件和整个文件夹都能同步。快捷面板与历史搜索可找回过去的内容，unic 命令行则能在终端里收发。",
+		"zh-TW": "適用於 Windows、macOS 與 Linux 的剪貼簿同步應用程式，桌面視窗由 MyGo 原生 UI 繪製。裝置以 6 位數字碼配對後直接連線，同一 Wi-Fi 或跨網路皆可，端對端加密，免帳號，也沒有伺服器；文字、圖片、檔案和整個資料夾都能同步。快速面板與歷史搜尋可找回過去的內容，unic 命令列則能在終端機裡收發。",
+		"ja": "Windows・macOS・Linux 向けのクリップボード同期アプリで、デスクトップ画面は MyGo のネイティブ UI で描かれています。6 桁のコードでペアリングしたデバイス同士が、同じ Wi-Fi でもネットワーク越しでも直接つながり、エンドツーエンドで暗号化されます。アカウントもサーバーも不要です。テキスト、画像、ファイル、フォルダーごと同期でき、クイックパネルと履歴検索で過去の項目を探せ、unic コマンドでターミナルからも送受信できます。",
+		"ko": "Windows, macOS, Linux용 클립보드 동기화 앱으로, 데스크톱 창은 MyGo의 네이티브 UI로 그립니다. 6자리 코드로 페어링한 기기끼리 같은 Wi-Fi든 다른 네트워크든 직접 연결되며, 종단간 암호화되고 계정도 서버도 필요 없습니다. 텍스트, 이미지, 파일, 폴더 전체를 동기화하고, 퀵 패널과 기록 검색으로 지난 항목을 찾으며, unic 명령줄로 터미널에서도 주고받습니다."
+	},
+	"icon": {
+		"file": "uniclipboard.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "uniclipboard.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
