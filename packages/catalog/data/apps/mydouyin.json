@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mydouyin",
+	"name": "MyDouyin",
+	"author": "margbug01",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://mydouyin.pages.dev/",
+	"repo": "margbug01/MyDouyin",
+	"summary": {
+		"en": "Unofficial native desktop client for Douyin videos and Hongguo short dramas, no login needed.",
+		"zh-CN": "非官方原生桌面客户端，免登录刷抖音、看红果短剧。",
+		"zh-TW": "非官方原生桌面用戶端，免登入瀏覽抖音、觀看紅果短劇。",
+		"ja": "抖音の動画と紅果の短編ドラマをログインなしで見られる、非公式のネイティブデスクトップアプリ。",
+		"ko": "로그인 없이 Douyin 영상과 Hongguo 숏드라마를 보는 비공식 네이티브 데스크톱 앱."
+	},
+	"description": {
+		"en": "An unofficial desktop client for Douyin and Hongguo short dramas on macOS (Apple Silicon) and Windows 10/11, drawn with MyGo's native UI, with no Electron and no Android emulator. One window switches between Douyin videos, live streams and comments and Hongguo's free short dramas, both browsable without logging in. Video plays through the system's hardware decoders, with no FFmpeg to install.",
+		"zh-CN": "非官方的抖音与红果短剧桌面客户端，支持 macOS（Apple Silicon）与 Windows 10/11，由 MyGo 原生 UI 绘制，不用 Electron，也不需要安卓模拟器。在一个窗口里就能切换刷抖音视频、看直播和评论，或观看红果免费短剧，两者都可以免登录浏览。视频由系统硬件解码，无需安装 FFmpeg。",
+		"zh-TW": "非官方的抖音與紅果短劇桌面用戶端，支援 macOS（Apple Silicon）與 Windows 10/11，由 MyGo 原生 UI 繪製，不用 Electron，也不需要 Android 模擬器。在同一個視窗裡就能切換瀏覽抖音影片、直播和留言，或觀看紅果免費短劇，兩者都能免登入使用。影片由系統硬體解碼，不必安裝 FFmpeg。",
+		"ja": "macOS（Apple Silicon）と Windows 10/11 向けの、抖音と紅果短劇の非公式デスクトップクライアントです。MyGo のネイティブ UI で描かれ、Electron も Android エミュレーターも使いません。ひとつのウィンドウで、抖音の動画・ライブ・コメントと紅果の無料短編ドラマを切り替えられ、どちらもログインなしで見られます。動画は OS のハードウェアデコーダーで再生するため、FFmpeg のインストールは不要です。",
+		"ko": "macOS(Apple Silicon)와 Windows 10/11용 비공식 Douyin·Hongguo 숏드라마 데스크톱 클라이언트로, MyGo의 네이티브 UI로 그렸으며 Electron도 Android 에뮬레이터도 쓰지 않습니다. 한 창에서 Douyin 영상, 라이브, 댓글과 Hongguo의 무료 숏드라마를 오가며, 둘 다 로그인 없이 볼 수 있습니다. 영상은 시스템 하드웨어 디코더로 재생해 FFmpeg를 설치할 필요가 없습니다."
+	},
+	"icon": {
+		"file": "mydouyin.webp"
+	},
+	"screenshot": "mydouyin.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
