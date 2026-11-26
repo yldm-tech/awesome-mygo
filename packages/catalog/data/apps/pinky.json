@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "pinky",
+	"name": "Pinky",
+	"author": "DIYgod",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/DIYgod/pinky",
+	"repo": "DIYgod/pinky",
+	"summary": {
+		"en": "Lets AI agents operate your iPhone or Android phone over MCP, while you approve risky steps.",
+		"zh-CN": "让 AI 智能体经 MCP 操作 iPhone 或 Android 手机，并由你把关。",
+		"zh-TW": "讓 AI 代理經 MCP 操作 iPhone 或 Android 手機，並由你把關。",
+		"ja": "AI エージェントが MCP で iPhone や Android を操作。危険な手順は承認制。",
+		"ko": "AI 에이전트가 MCP로 iPhone이나 Android 폰을 조작하고, 위험한 단계는 승인합니다."
+	},
+	"description": {
+		"en": "A macOS, Windows and Linux app, drawn with MyGo's native UI without Electron or a webview, that lets Claude Code, Codex, Cursor or any MCP agent operate a real iPhone or Android phone. Payments and other risky taps wait for your approval, banking and password apps stay hidden from agents, and you can take over any time. Only the desktop app uses MyGo; Pinky's phone apps are built separately.",
+		"zh-CN": "面向 macOS、Windows 与 Linux 的桌面应用，由 MyGo 原生 UI 绘制，没有 Electron，也没有 Web 视图，让 Claude Code、Codex、Cursor 等任何支持 MCP 的智能体操作真实的 iPhone 或 Android 手机。付款等风险操作要等你批准，银行和密码管理应用对智能体隐藏，你也可以随时接管。只有桌面端用 MyGo 构建，手机上的 Pinky 应用另行开发。",
+		"zh-TW": "適用於 macOS、Windows 與 Linux 的桌面應用程式，由 MyGo 原生 UI 繪製，沒有 Electron，也沒有 Web 視圖，讓 Claude Code、Codex、Cursor 等任何支援 MCP 的代理操作真實的 iPhone 或 Android 手機。付款等高風險操作須等你核准，銀行與密碼管理 App 對代理隱藏，你也能隨時接手。只有桌面端以 MyGo 打造，手機上的 Pinky App 另行開發。",
+		"ja": "macOS・Windows・Linux 向けのデスクトップアプリで、Electron も Web ビューもなく MyGo のネイティブ UI で描かれています。Claude Code や Codex など MCP 対応のエージェントに実機の iPhone や Android スマホを操作させます。支払いなど危険な操作は承認待ちになり、銀行アプリなどはエージェントから隠され、いつでも引き継げます。MyGo 製なのはデスクトップ版だけで、スマホ側のアプリは別に作られています。",
+		"ko": "Electron도 웹 뷰도 없이 MyGo의 네이티브 UI로 그린 macOS·Windows·Linux용 데스크톱 앱으로, Claude Code, Codex, Cursor 등 MCP를 쓰는 에이전트가 실제 iPhone이나 Android 폰을 조작하게 합니다. 결제 같은 위험한 동작은 승인을 기다리고, 은행·비밀번호 관리 앱은 에이전트에게 숨겨지며, 언제든 직접 넘겨받을 수 있습니다. MyGo로 만든 것은 데스크톱 앱뿐이고, 폰용 Pinky 앱은 따로 만들어집니다."
+	},
+	"icon": {
+		"file": "pinky.webp"
+	},
+	"screenshot": "pinky.webp",
+	"added": "2026-11-26T02:31:39Z"
+}
