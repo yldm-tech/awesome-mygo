@@ -410,5 +410,18 @@
 	"fw_site": "官网",
 	"fw_source": "资料来源",
 	"fw_note": "整理于 2026 年 11 月。各项目更新很快，以其官网为准。",
-	"footer_sibling": "同时维护 {x}"
+	"footer_sibling": "同时维护 {x}",
+	"bench_h": "性能测试",
+	"bench_p": "目前唯一把其中两个框架放在同一台机器上测量的公开数据，来自 NSGo 维护的测试套件：同样的应用分别用 NSGo 和 MyGo 编写，以 release 方式构建后测量。数值越低越好，每行较低的一项加粗。",
+	"bench_note": "CPU 为应用进程与系统合成器之和，按单核百分比计：原生控件把绘制交给合成器，GPU 渲染器在自己的进程里绘制，两者相加才可比。不同机器之间的数字不可比。Wails 与 Fyne 暂无同场数据；MyGo 与 GPUI、egui 的对比见 {x}。",
+	"bench_mygo": "MyGo 官方测试",
+	"bench_suite": "测试套件与方法",
+	"bench_raw": "原始数据",
+	"bench_size": "包体积",
+	"bench_startup": "启动",
+	"bench_memory": "内存",
+	"bench_cpu": "CPU",
+	"bench_case_counter": "计数器，空闲",
+	"bench_case_list": "1 万行列表，逐帧滚动",
+	"bench_case_quotes": "40 条行情，逐帧刷新"
 }
