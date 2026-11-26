@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "antigravity-monitor",
+	"name": "Antigravity Monitor",
+	"author": "oysterhyd",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "agents",
+	"url": "https://github.com/oysterhyd/antigravity-monitor",
+	"repo": "oysterhyd/antigravity-monitor",
+	"summary": {
+		"en": "Real-time context, token, subagent tree and quota monitor for Antigravity, in a window and the tray.",
+		"zh-CN": "面向 Antigravity 的原生实时监控面板：上下文拆解、Agent 拓扑、额度与历史统计。",
+		"zh-TW": "面向 Antigravity 的原生即時監控面板：上下文拆解、Agent 拓撲、額度與歷史統計。",
+		"ja": "Antigravity のコンテキスト内訳・親子 Agent 構成・利用枠と履歴をリアルタイム監視。",
+		"ko": "Antigravity의 컨텍스트, 에이전트 트리, 실시간 할당량과 기록을 보는 Windows 모니터."
+	},
+	"description": {
+		"en": "A native Windows desktop window and system tray panel for Antigravity, built with Go and MyGo's native UI with no WebView or proxy. It reads local Antigravity logs in read-only mode to break down context window usage by component, map parent and child agent trees, track per-request cost, cache hit rate, TTFT and decode speed, and display live model quotas and historical usage.",
+		"zh-CN": "面向 Antigravity 的 Windows 原生实时监控面板，采用桌面主窗口与系统托盘弹层双形态，由 Go 与 MyGo 原生 UI 直绘，无需代理与 WebView。应用以纯本地只读方式解析本机记录，提供上下文窗口五色成分拆解、父子 Agent 层级拓扑、费用与缓存命中率、TTFT 与吐字速度、账号实时额度及历史消耗统计。",
+		"zh-TW": "面向 Antigravity 的 Windows 原生即時監控面板，提供桌面主視窗與系統匣彈層雙形態，由 Go 與 MyGo 原生 UI 直繪，無需代理與 WebView。應用以純本機唯讀方式解析本機紀錄，支援上下文視窗五色成分拆解、父子 Agent 層級拓撲、費用與快取命中率、TTFT 與吐字速度、帳號即時額度及歷史消耗統計。",
+		"ja": "Antigravity 向けの Windows ネイティブ監視ツール。デスクトップウィンドウとシステムトレイパネルを備え、Go と MyGo のネイティブ UI で描かれ、プロキシも WebView も不要です。ローカル記録を読み取り専用で解析し、コンテキストウィンドウの内訳、親子 Agent の階層構造、コスト・キャッシュヒット率・TTFT・生成速度、アカウントの利用枠と履歴統計を表示します。",
+		"ko": "Antigravity용 Windows 네이티브 실시간 모니터링 도구로, 데스크톱 창과 시스템 트레이 패널을 제공하며 Go와 MyGo의 네이티브 UI로 그려져 프록시나 WebView가 필요 없습니다. 로컬 기록을 읽기 전용으로 분석해 컨텍스트 창 구성 요소, 부모-자식 에이전트 트리, 비용·캐시 적중률·TTFT·생성 속도, 실시간 모델 할당량과 누적 사용 통계를 보여 줍니다."
+	},
+	"icon": {
+		"file": "antigravity-monitor.webp"
+	},
+	"screenshot": "antigravity-monitor.webp",
+	"added": "2026-11-26T06:24:00Z"
+}
