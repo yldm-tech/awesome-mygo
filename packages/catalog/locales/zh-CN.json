@@ -413,7 +413,7 @@
 	"fw_note": "整理于 2026 年 11 月。各项目更新很快，以其官网为准。",
 	"footer_sibling": "同时维护 {x}",
 	"bench_h": "性能测试",
-	"bench_p": "所有数据都来自 NSGo 的测试套件：同样的应用分别用各框架编写，以 release 方式构建后在同一台机器上测量。macOS 是本站在 M4 Pro 上测的 MyGo、Fyne、NSGo、Wails 四个框架；Windows 和 Linux 是该套件自己发布的结果，只测了 MyGo 和 NSGo。",
+	"bench_p": "所有数据都来自 NSGo 的测试套件：同样的应用分别用各框架编写，以 release 方式构建后在同一台机器上测量。macOS 取自该套件在 M4 Pro 上测的七个框架里的 MyGo、Fyne、NSGo、Wails，与 nsgo.dev 是同一份数据；Windows 和 Linux 是该套件更早的结果，只测了 MyGo 和 NSGo。",
 	"bench_note": "CPU 为应用进程与系统合成器之和，按单核百分比计：原生控件把绘制交给合成器，GPU 渲染器在自己的进程里绘制，两者相加才可比。Wails 的页面运行在系统 WebView 里，macOS 上把 WebKit 的渲染进程一并计入。Fyne 固定每秒绘制 60 帧，系统 WebView 的动画帧也是 60，而 MyGo 和 NSGo 跟随屏幕刷新率（这台机器是 120 Hz），所以 CPU 要结合帧率看。不同机器之间的数字不可比。MyGo 与 GPUI、egui 的对比见 {x}。",
 	"bench_mygo": "MyGo 官方测试",
 	"bench_suite": "测试套件与方法",
@@ -432,5 +432,6 @@
 	"bench_fps": "帧率",
 	"bench_higher": "越高越好",
 	"bench_lower_better": "越低越好",
-	"bench_best": "{x} 最优"
+	"bench_best": "{x} 最优",
+	"bench_best_tag": "最优"
 }

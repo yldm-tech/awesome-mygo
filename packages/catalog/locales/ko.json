@@ -413,7 +413,7 @@
 	"fw_note": "2026년 11월 기준입니다. 각 프로젝트가 빠르게 바뀌므로 최신 정보는 공식 사이트를 확인하세요.",
 	"footer_sibling": "{x}도 운영",
 	"bench_h": "벤치마크",
-	"bench_p": "모든 수치는 NSGo 벤치마크에서 나왔습니다. 같은 앱을 각 프레임워크로 작성해 릴리스 빌드를 같은 기기에서 측정했습니다. macOS는 이 사이트가 M4 Pro에서 측정한 MyGo, Fyne, NSGo, Wails 네 가지이고, Windows와 Linux는 벤치마크가 직접 공개한 결과로 MyGo와 NSGo만 있습니다.",
+	"bench_p": "모든 수치는 NSGo 벤치마크에서 나왔습니다. 같은 앱을 각 프레임워크로 작성해 릴리스 빌드를 같은 기기에서 측정했습니다. macOS는 M4 Pro에서 일곱 프레임워크를 측정한 결과 중 MyGo, Fyne, NSGo, Wails로, nsgo.dev와 같은 데이터입니다. Windows와 Linux는 이전 결과로 MyGo와 NSGo만 있습니다.",
 	"bench_note": "CPU는 앱 프로세스와 시스템 컴포지터의 합이며 코어 1개 기준 백분율입니다. 네이티브 뷰는 그리기를 컴포지터에 맡기고 GPU 렌더러는 자기 프로세스에서 그리므로 합으로만 비교할 수 있습니다. Wails 페이지는 시스템 WebView에서 돌며, macOS에서는 WebKit 프로세스도 함께 셉니다. Fyne은 초당 60프레임을 그리고 시스템 WebView 애니메이션도 60이지만, MyGo와 NSGo는 디스플레이(이 기기는 120 Hz)를 따르므로 CPU는 프레임과 함께 보세요. 다른 기기의 수치는 비교할 수 없습니다. MyGo와 GPUI·egui 비교는 {x}를 참고하세요.",
 	"bench_mygo": "MyGo 공식 벤치마크",
 	"bench_suite": "벤치마크와 측정 방법",
@@ -432,5 +432,6 @@
 	"bench_fps": "프레임",
 	"bench_higher": "높을수록 좋음",
 	"bench_lower_better": "낮을수록 좋음",
-	"bench_best": "{x} 최고"
+	"bench_best": "{x} 최고",
+	"bench_best_tag": "최고"
 }

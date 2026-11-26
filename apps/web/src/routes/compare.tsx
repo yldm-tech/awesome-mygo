@@ -92,9 +92,10 @@ function BenchChart({ run, chart }: { run: BenchRun; chart: (typeof BENCH_CHARTS
 						<div key={row.of ?? 'all'} tabIndex={0} aria-label={summary} className='group relative flex flex-col gap-[3px] rounded-[6px] outline-none focus-visible:ring-2 focus-visible:ring-cyan'>
 							{caseName && <span className='text-[11px] text-fg-3'>{caseName}</span>}
 							{values.map((x) => (
-								<div key={x.key} className='flex h-[10px] items-center gap-1.5'>
+								<div key={x.key} className='flex h-3 items-center gap-1.5'>
 									<span className='h-full rounded-r-[4px] transition-[filter] duration-150 group-hover:brightness-125 group-focus-visible:brightness-125' style={{ width: `${(x.v / max) * 78}%`, background: SERIES[x.key], minWidth: x.v > 0 ? 2 : 0 }} />
-									<span className='font-mono text-[11px] leading-none text-fg-2 tabular-nums'>{num(x.v, unit)}</span>
+									<span className={`font-mono text-[11px] leading-none tabular-nums ${x.v === best ? 'font-bold text-fg' : 'text-fg-2'}`}>{num(x.v, unit)}</span>
+									{x.v === best && <span className='rounded-full bg-cyan/15 px-1.5 text-[10px] leading-3 font-bold text-cyan'>{t.bench_best_tag}</span>}
 								</div>
 							))}
 							<div role='presentation' className='pointer-events-none absolute right-0 bottom-[calc(100%+6px)] z-10 hidden min-w-[180px] flex-col gap-1 rounded-[10px] border border-line-3 bg-bar px-3 py-2.5 text-[12px] shadow-[0_12px_32px_rgba(0,0,0,0.5)] group-hover:flex group-focus-visible:flex'>

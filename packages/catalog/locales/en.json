@@ -413,7 +413,7 @@
 	"fw_note": "Compiled in November 2026. These projects move fast; their own sites have the latest.",
 	"footer_sibling": "also maintains {x}",
 	"bench_h": "Benchmarks",
-	"bench_p": "Every figure comes from NSGo's benchmark suite: the same apps written for each framework, built as releases and measured on one machine. macOS is this site's run of MyGo, Fyne, NSGo and Wails on an M4 Pro; Windows and Linux are the suite's own published runs, which measure MyGo and NSGo only.",
+	"bench_p": "Every figure comes from NSGo's benchmark suite: the same apps written for each framework, built as releases and measured on one machine. macOS is MyGo, Fyne, NSGo and Wails from the suite's run of seven frameworks on an M4 Pro, the same data nsgo.dev shows; Windows and Linux are the suite's earlier runs, which measure MyGo and NSGo only.",
 	"bench_note": "CPU is the app's process and the system compositor added, in percent of one core: native views leave drawing to the compositor where GPU renderers draw in their own process, so only the sum compares. Wails' page runs in the system webview, and on macOS WebKit's processes count with it. Fyne draws 60 frames a second and the system webview animates at 60, where MyGo and NSGo follow the display (120 Hz on this machine), so read CPU with frames. Figures from different machines do not compare. MyGo against GPUI and egui is in {x}.",
 	"bench_mygo": "MyGo's own benchmarks",
 	"bench_suite": "Suite and method",
@@ -432,5 +432,6 @@
 	"bench_fps": "Frames",
 	"bench_higher": "higher is better",
 	"bench_lower_better": "lower is better",
-	"bench_best": "{x} best"
+	"bench_best": "{x} best",
+	"bench_best_tag": "Best"
 }
