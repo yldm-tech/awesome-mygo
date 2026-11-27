@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "echo-music-desktop",
+	"name": "Echo Music Desktop",
+	"author": "EchoMusicApp",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/EchoMusicApp/Desktop",
+	"repo": "EchoMusicApp/Desktop",
+	"summary": {
+		"en": "A desktop YouTube Music player with synced lyrics, an equalizer, downloads and Android sync.",
+		"zh-CN": "YouTube Music 桌面播放器，支持同步歌词、均衡器、下载与手机同步。",
+		"zh-TW": "YouTube Music 桌面播放器，支援同步歌詞、等化器、下載與手機同步。",
+		"ja": "同期歌詞やイコライザー、ダウンロードを備えた YouTube Music デスクトッププレーヤー。",
+		"ko": "싱크 가사, 이퀄라이저, 다운로드를 갖춘 데스크톱 YouTube Music 플레이어."
+	},
+	"description": {
+		"en": "The desktop client of Echo Music for macOS, Windows and Linux, drawn with MyGo's native UI; the Android app is a separate project built otherwise. It plays YouTube Music without ads, with synced lyrics, a 10-band equalizer, podcasts, offline downloads and a menu bar or tray mini player. Echo Connect pairs it with the Android app over local Wi-Fi to hand off playback and sync playlists.",
+		"zh-CN": "Echo Music 的桌面客户端，支持 macOS、Windows 与 Linux，由 MyGo 原生 UI 绘制；Android 版是另行开发的独立项目。它无广告播放 YouTube Music，提供同步歌词、10 段均衡器、播客、离线下载，以及菜单栏或托盘迷你播放器。通过 Echo Connect 可在同一 Wi-Fi 下与 Android 版配对，接力播放并同步歌单。",
+		"zh-TW": "Echo Music 的桌面用戶端，支援 macOS、Windows 與 Linux，由 MyGo 原生 UI 繪製；Android 版是另外開發的獨立專案。它無廣告播放 YouTube Music，提供同步歌詞、10 段等化器、Podcast、離線下載，以及選單列或系統匣迷你播放器。透過 Echo Connect 可在同一個 Wi-Fi 下與 Android 版配對，接續播放並同步播放清單。",
+		"ja": "Echo Music の macOS・Windows・Linux 向けデスクトップクライアントで、MyGo のネイティブ UI で描かれています。Android 版は別に開発されているプロジェクトです。YouTube Music を広告なしで再生し、同期歌詞、10 バンドのイコライザー、ポッドキャスト、オフライン用のダウンロード、メニューバーやトレイのミニプレーヤーを備えます。Echo Connect を使えば、同じ Wi-Fi 上の Android 版とペアリングして再生を引き継いだり、プレイリストを同期したりできます。",
+		"ko": "macOS, Windows, Linux용 Echo Music 데스크톱 클라이언트로, MyGo의 네이티브 UI로 그렸습니다. Android 앱은 별도로 개발되는 프로젝트입니다. YouTube Music을 광고 없이 재생하며 싱크 가사, 10밴드 이퀄라이저, 팟캐스트, 오프라인 다운로드, 메뉴 막대·트레이 미니 플레이어를 갖췄습니다. Echo Connect로 같은 Wi-Fi의 Android 앱과 페어링해 재생을 이어 받고 재생목록을 동기화할 수 있습니다."
+	},
+	"icon": {
+		"file": "echo-music-desktop.webp"
+	},
+	"screenshot": "echo-music-desktop.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
