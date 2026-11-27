@@ -11,11 +11,11 @@
 	"url": "https://github.com/Lumiaqian/loopwall",
 	"repo": "Lumiaqian/loopwall",
 	"summary": {
-		"en": "A lightweight local video wallpaper app for Apple Silicon Macs with per-display playlists, themes and LAN sharing.",
+		"en": "Local video wallpaper app for Apple Silicon Macs with per-display themes and LAN sharing.",
 		"zh-CN": "专为 Apple Silicon Mac 打造的本地视频动态壁纸应用，支持多屏独立轮播、多主题与局域网互传。",
 		"zh-TW": "專為 Apple Silicon Mac 打造的本機影片動態桌布應用，支援多螢幕獨立輪播、多主題與區域網路互傳。",
-		"ja": "Apple Silicon Mac 向けの軽量なローカル動画壁紙アプリ。ディスプレイ別再生・テーマ切替・LAN 共有に対応。",
-		"ko": "Apple Silicon Mac용 가벼운 로컬 동영상 배경화면 앱. 디스플레이별 독립 재생, 테마 전환, LAN 공유를 지원합니다."
+		"ja": "Apple Silicon Mac 向けのローカル動画壁紙アプリ。ディスプレイ別テーマと LAN 共有に対応。",
+		"ko": "Apple Silicon Mac용 로컬 동영상 배경화면 앱. 디스플레이별 테마와 LAN 공유를 지원합니다."
 	},
 	"description": {
 		"en": "A local video live-wallpaper app for Apple Silicon Macs running macOS 26+, combining a Go manager drawn with MyGo's native UI and Liquid Glass styling with a standalone Swift 6 wallpaper extension that keeps playing even after the manager quits. It supports multiple playlist themes, independent per-display rotation or pinning, APFS-clone lossless video import, power-saving pauses, two-Mac short-code LAN sharing over mTLS, and Ed25519-signed in-app updates.",
