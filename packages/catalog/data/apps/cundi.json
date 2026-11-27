@@ -1,0 +1,21 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "cundi",
+	"name": "cundi",
+	"author": "xukongzangpusa",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"url": "https://github.com/xukongzangpusa/cundi",
+	"repo": "xukongzangpusa/cundi",
+	"summary": {
+		"en": "Cundi videoPlayer: a native Windows/Linux desktop video wall — up to 64 panes in one window, fed by HTTP(S)-FLV, WS(S)-FLV, HLS, RTMP(S), RTSP(S) or local files, each pane pulling, decoding and reconnecting on its own. Fully local, no account, no server. WHEP (WebRTC) streaming is planned."
+	},
+	"description": {
+		"en": "Cundi videoPlayer: a native Windows/Linux desktop video wall — up to 64 panes in one window, fed by HTTP(S)-FLV, WS(S)-FLV, HLS, RTMP(S), RTSP(S) or local files, each pane pulling, decoding and reconnecting on its own. Fully local, no account, no server. WHEP (WebRTC) streaming is planned."
+	},
+	"added": "2026-11-27T13:50:42Z"
+}
