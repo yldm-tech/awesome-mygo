@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "iridium",
+	"name": "Iridium",
+	"author": "kumoSleeping",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/kumoSleeping/Iridium",
+	"repo": "kumoSleeping/Iridium",
+	"summary": {
+		"en": "One window for the Claude Code, Codex and other agent sessions on your terminals and computers.",
+		"zh-CN": "把多台电脑上的 Claude Code、Codex 等 Agent 会话收进一个窗口。",
+		"zh-TW": "把多台電腦上的 Claude Code、Codex 等 Agent 對話收進一個視窗。",
+		"ja": "複数のPCにある Claude Code や Codex などのエージェントセッションを一画面に集約。",
+		"ko": "여러 컴퓨터의 Claude Code, Codex 등 에이전트 세션을 한 창에 모읍니다."
+	},
+	"description": {
+		"en": "A self-hosted hub that finds the Claude Code, Codex, pi, dsh and agy sessions in your terminals and on other connected computers, lets you follow them or take them over, and brings several agents into one channel with memory that carries across sessions. The service is a single Go binary with its own web page. MyGo builds only its desktop client, which has a web frontend.",
+		"zh-CN": "一个自托管的中枢，能找出终端里和已接入的其他电脑上的 Claude Code、Codex、pi、dsh 与 agy 会话，让你查看进度或直接接管，还能把多个 Agent 拉进同一个频道，并提供跨会话的记忆。服务本身是内嵌网页的单个 Go 二进制文件；MyGo 只用于构建它的桌面客户端，客户端采用 Web 前端。",
+		"zh-TW": "一個自架的中樞，能找出終端機裡與已接入的其他電腦上的 Claude Code、Codex、pi、dsh 與 agy 工作階段，讓你查看進度或直接接手，還能把多個 Agent 拉進同一個頻道，並提供跨工作階段的記憶。服務本身是內嵌網頁的單一 Go 執行檔；MyGo 只用來建置它的桌面用戶端，用戶端採用 Web 前端。",
+		"ja": "ターミナルや接続したほかのコンピューターにある Claude Code、Codex、pi、dsh、agy のセッションを見つけ、進み具合を見守ったり、そのまま引き継いだりできるセルフホスト型のハブ。複数のエージェントを一つのチャンネルに招くことができ、セッションをまたいだ記憶も使えます。サービス本体は Web ページを内蔵した単一の Go バイナリです。MyGo で作られているのは、Web フロントエンドを使うデスクトップクライアントだけです。",
+		"ko": "터미널과 연결된 다른 컴퓨터에 있는 Claude Code, Codex, pi, dsh, agy 세션을 찾아 진행 상황을 지켜보거나 그대로 이어받을 수 있는 셀프 호스팅 허브입니다. 여러 에이전트를 한 채널에 불러 모을 수 있고, 세션을 넘나드는 기억도 제공합니다. 서비스 자체는 웹 페이지를 내장한 단일 Go 바이너리이며, MyGo로 만든 것은 웹 프런트엔드를 쓰는 데스크톱 클라이언트뿐입니다."
+	},
+	"icon": {
+		"file": "iridium.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "iridium.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
