@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "guludrive",
+	"name": "GuluDrive",
+	"author": "nekohy",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/nekohy/guludrive",
+	"repo": "nekohy/guludrive",
+	"summary": {
+		"en": "A cloud drive on the Google Photos Android protocol, with WebDAV, a web UI and a native window.",
+		"zh-CN": "基于 Google Photos 安卓端协议的网盘，支持 WebDAV 与原生窗口。",
+		"zh-TW": "基於 Google Photos 安卓協定的雲端硬碟，支援 WebDAV 與原生視窗。",
+		"ja": "Google Photos の Android 版プロトコルによるクラウドドライブ。WebDAV 対応。",
+		"ko": "Google Photos Android 프로토콜 기반 클라우드 드라이브, WebDAV 지원."
+	},
+	"description": {
+		"en": "A cloud drive built on the Google Photos Android protocol: it poses as a Pixel XL for unlimited storage, uploads any file disguised as BMP or MP4, and keeps the file system in SQLite. Files are served through a web UI and WebDAV, with downloads optionally relayed via a Cloudflare Worker. MyGo draws its native window; the web UI is built with Vue, and the no-ui builds run only the web service.",
+		"zh-CN": "基于 Google Photos 安卓端协议实现的网盘工具：模拟 Pixel XL 获得无限容量，把任意文件伪装成 BMP 或 MP4 上传，并用 SQLite 映射文件系统。文件可通过 Web 界面和 WebDAV 访问，下载可选经 Cloudflare Worker 转发。原生窗口由 MyGo 绘制，Web 界面用 Vue 构建，no-ui 版本只提供 Web 服务。",
+		"zh-TW": "基於 Google Photos 安卓端協定實作的雲端硬碟工具：模擬 Pixel XL 取得無限容量，把任意檔案偽裝成 BMP 或 MP4 上傳，並以 SQLite 對應檔案系統。檔案可透過 Web 介面與 WebDAV 存取，下載可選擇經 Cloudflare Worker 轉送。原生視窗由 MyGo 繪製，Web 介面以 Vue 打造，no-ui 版本只提供 Web 服務。",
+		"ja": "Google Photos の Android 版プロトコルで実装したクラウドドライブ。Pixel XL を装って無制限の容量を使い、任意のファイルを BMP や MP4 に偽装してアップロードし、ファイルシステムは SQLite で管理します。Web UI と WebDAV からアクセスでき、ダウンロードは Cloudflare Worker 経由にもできます。ネイティブウィンドウは MyGo で描かれ、Web UI は Vue 製で、no-ui 版は Web サービスのみです。",
+		"ko": "Google Photos Android 프로토콜로 구현한 클라우드 드라이브입니다. Pixel XL로 위장해 무제한 용량을 쓰고, 어떤 파일이든 BMP나 MP4로 위장해 올리며, 파일 시스템은 SQLite로 관리합니다. Web UI와 WebDAV로 접근하고, 다운로드는 Cloudflare Worker를 거치게 할 수도 있습니다. 네이티브 창은 MyGo로 그리며, no-ui 빌드는 Web 서비스만 제공합니다."
+	},
+	"icon": {
+		"file": "guludrive.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "guludrive.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
