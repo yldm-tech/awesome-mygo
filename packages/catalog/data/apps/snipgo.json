@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "snipgo",
+	"name": "SnipGo",
+	"author": "Lumiaqian",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/Lumiaqian/snipgo",
+	"repo": "Lumiaqian/snipgo",
+	"summary": {
+		"en": "A lightweight, local-first macOS screenshot, annotation, OCR and floating pin tool built in pure Go.",
+		"zh-CN": "纯 Go 打造的轻量、全本地离线 macOS 截图、标注、识图与悬浮贴图工具。",
+		"zh-TW": "以純 Go 打造的輕量、全本機離線 macOS 截圖、標註、識圖與懸浮貼圖工具。",
+		"ja": "純 Go で作られた軽量・完全ローカル動作の macOS 向けスクリーンショット・注釈・OCR・フローティングピンツール。",
+		"ko": "순수 Go로 만든 가볍고 완전 로컬 오프라인 macOS 스크린샷·주석·OCR·플로팅 핀 도구."
+	},
+	"description": {
+		"en": "A fast, offline screenshot and floating pin utility for macOS 14+, built in pure Go (CGO_ENABLED=0) with MyGo's native UI and Liquid Glass styling. It calls ScreenCaptureKit, Vision, CoreGraphics and AppKit via purego for instant transparent capture, 10 vector annotation tools, a 10-template mockup studio, developer color picking (HEX/RGB/OKLCH/Tailwind), offline AI subject cutout, table OCR, scrolling capture, and side-by-side diff pins.",
+		"zh-CN": "面向 macOS 14+ 的极速、全本地离线截图与悬浮贴图工具，采用纯 Go（CGO_ENABLED=0）与 MyGo 原生 UI 及 Liquid Glass 界面构建。通过 purego 调用 ScreenCaptureKit、Vision、CoreGraphics 与 AppKit，提供 0ms 透明框选、10 种矢量标注、10 套模板工作台、开发者取色卡（HEX/RGB/OKLCH/Tailwind）、离线 AI 主体抠图、表格识图、滚动长截图与拉帘对比贴图。",
+		"zh-TW": "面向 macOS 14+ 的極速、全本機離線截圖與懸浮貼圖工具，以純 Go（CGO_ENABLED=0）搭配 MyGo 原生 UI 與 Liquid Glass 介面打造。透過 purego 呼叫 ScreenCaptureKit、Vision、CoreGraphics 與 AppKit，支援即時透明框選、10 種向量標註、10 套範本工作台、開發者取色卡（HEX/RGB/OKLCH/Tailwind）、離線 AI 主體去背、表格識圖、捲動長截圖與拉簾對比貼圖。",
+		"ja": "macOS 14 以降向けの高速なオフライン・スクリーンショット＆フローティングピンツール。純 Go（CGO_ENABLED=0）と MyGo のネイティブ UI・Liquid Glass デザインで構築されています。purego 経由で ScreenCaptureKit・Vision・CoreGraphics・AppKit を呼び出し、透過範囲選択、10 種のベクター注釈、10 種のテンプレートスタジオ、開発者向けカラーピッカー（HEX/RGB/OKLCH/Tailwind）、オフライン AI 切り抜き、表 OCR、スクロール撮影、比較ピンを備えます。",
+		"ko": "macOS 14 이상을 위한 빠르고 오프라인으로 동작하는 스크린샷 및 플로팅 핀 도구입니다. 순수 Go(CGO_ENABLED=0)와 MyGo 네이티브 UI, Liquid Glass 디자인으로 제작되었으며 purego로 ScreenCaptureKit, Vision, CoreGraphics, AppKit을 직접 호출합니다. 투명 영역 캡처, 10종 벡터 주석, 10종 템플릿 스튜디오, 개발자 컬러 피커(HEX/RGB/OKLCH/Tailwind), 오프라인 AI 누끼, 표 OCR, 스크롤 캡처, 비교 핀을 지원합니다."
+	},
+	"icon": {
+		"file": "snipgo.webp"
+	},
+	"screenshot": "snipgo.webp",
+	"added": "2026-11-27T09:20:00Z"
+}
