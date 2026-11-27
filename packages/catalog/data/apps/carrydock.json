@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "carrydock",
+	"name": "CarryDock",
+	"author": "youzhiran",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "system",
+	"url": "https://carrydock.devyi.com",
+	"repo": "youzhiran/CarryDock",
+	"summary": {
+		"en": "A Windows manager for portable apps: imports archives, launches executables and keeps backups.",
+		"zh-CN": "Windows 便携软件管理器：导入压缩包、启动程序并保留备份。",
+		"zh-TW": "Windows 可攜式軟體管理工具：匯入壓縮檔、啟動程式並保留備份。",
+		"ja": "Windows 向けポータブルアプリ管理ツール。アーカイブを取り込み、起動し、バックアップも管理。",
+		"ko": "Windows용 포터블 앱 관리자. 압축 파일을 가져오고 실행하며 백업을 관리합니다."
+	},
+	"description": {
+		"en": "A portable app manager for Windows, drawn with MyGo's native UI on Direct3D 11, with no CGO and no WebView2. Drop archives such as ZIP, 7Z or RAR, or executables, into the window to import them; it picks the executable to launch, keeps timestamped ZIP backups for each app and can adopt existing portable folders in a batch. The interface is in Chinese and English.",
+		"zh-CN": "Windows 便携软件管理器，由 MyGo 原生 UI 通过 Direct3D 11 绘制，不依赖 CGO 和 WebView2。把 ZIP、7Z、RAR 等压缩包或可执行文件拖进窗口即可导入；它会选出要启动的程序，为每个应用保留带时间戳的 ZIP 备份，还能批量接管已有的便携软件目录。界面支持中文和英文。",
+		"zh-TW": "Windows 可攜式軟體管理工具，由 MyGo 原生 UI 透過 Direct3D 11 繪製，不依賴 CGO 與 WebView2。把 ZIP、7Z、RAR 等壓縮檔或執行檔拖進視窗即可匯入；它會選出要啟動的程式，為每個應用程式保留帶時間戳記的 ZIP 備份，也能批次接管既有的可攜式軟體資料夾。介面支援中文與英文。",
+		"ja": "MyGo のネイティブ UI で Direct3D 11 に描画する Windows 向けポータブルアプリ管理ツール。CGO にも WebView2 にも依存しません。ZIP、7Z、RAR などのアーカイブや実行ファイルをウィンドウにドロップすると取り込み、起動する実行ファイルを選び、アプリごとにタイムスタンプ付きの ZIP バックアップを管理します。既存のポータブルアプリのフォルダーもまとめて登録できます。画面は中国語と英語に対応しています。",
+		"ko": "MyGo의 네이티브 UI로 Direct3D 11에 그리는 Windows용 포터블 앱 관리자로, CGO도 WebView2도 쓰지 않습니다. ZIP, 7Z, RAR 같은 압축 파일이나 실행 파일을 창에 끌어다 놓으면 가져오고, 실행할 파일을 골라 주며, 앱마다 타임스탬프가 붙은 ZIP 백업을 관리합니다. 이미 있는 포터블 앱 폴더도 한꺼번에 등록할 수 있습니다. 화면은 중국어와 영어를 지원합니다."
+	},
+	"icon": {
+		"file": "carrydock.webp"
+	},
+	"screenshot": "carrydock.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
