@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "koma",
+	"name": "Koma",
+	"author": "Kutius",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "system",
+	"url": "https://github.com/Kutius/koma",
+	"repo": "Kutius/koma",
+	"summary": {
+		"en": "A QQ-style Windows screenshot tool: annotate in place, capture scrolling pages and pin images.",
+		"zh-CN": "仿 QQ 截图的 Windows 截图工具：原位标注、滚动长截图、把图片钉在桌面。",
+		"zh-TW": "仿 QQ 截圖的 Windows 截圖工具：原處標註、捲動長截圖、把圖片釘在桌面。",
+		"ja": "QQ 風の Windows 用スクリーンショットツール。その場で注釈、スクロール撮影、画像のピン留め。",
+		"ko": "QQ 캡처 스타일의 Windows 스크린샷 도구. 제자리 주석, 스크롤 캡처, 이미지 고정."
+	},
+	"description": {
+		"en": "A screenshot tool for Windows 10 and 11 in the style of QQ screenshot, drawn with MyGo's native UI on Direct3D 11 with no WebView, a single file of about 13 MB that sits in the tray. Ctrl+Shift+A freezes every monitor so you can select, annotate, blur and measure in place. It also stitches scrolling captures, with auto-scroll, and pins images on top of the desktop.",
+		"zh-CN": "仿照 QQ 截图打造的 Windows 10/11 截图工具，用 Go 和 MyGo 原生 UI 以 Direct3D 11 绘制，没有 WebView 或 Electron，单文件约 13 MB，常驻托盘。按 Ctrl+Shift+A 冻结所有显示器画面，直接在原位框选、标注、打码和测距；还支持可自动滚动的长截图拼接，以及把图片钉在桌面最顶层。",
+		"zh-TW": "仿照 QQ 截圖打造的 Windows 10/11 截圖工具，以 Go 與 MyGo 原生 UI 透過 Direct3D 11 繪製，沒有 WebView 或 Electron，單一執行檔約 13 MB，常駐系統匣。按 Ctrl+Shift+A 凍結所有螢幕畫面，直接在原處框選、標註、打馬賽克與測距；也支援可自動捲動的長截圖拼接，並能把圖片釘選在桌面最上層。",
+		"ja": "QQ のスクリーンショット機能を手本にした Windows 10/11 向けの撮影ツール。Go と MyGo のネイティブ UI で Direct3D 11 により描画し、WebView も Electron も使いません。約 13 MB の単一ファイルでタスクトレイに常駐します。Ctrl+Shift+A で全モニターの画面を止め、その場で範囲選択、注釈、モザイク、計測ができます。自動スクロール付きのスクロールキャプチャや、画像をデスクトップの最前面にピン留めする機能もあります。",
+		"ko": "QQ 캡처를 본떠 만든 Windows 10/11용 스크린샷 도구로, Go와 MyGo의 네이티브 UI로 Direct3D 11에서 그리며 WebView도 Electron도 쓰지 않습니다. 약 13MB 단일 파일로 트레이에 상주합니다. Ctrl+Shift+A로 모든 모니터 화면을 멈춘 뒤 그 자리에서 영역 선택, 주석, 모자이크, 측정을 할 수 있고, 자동 스크롤을 지원하는 스크롤 캡처와 이미지를 바탕화면 맨 위에 고정하는 기능도 있습니다."
+	},
+	"icon": {
+		"file": "koma.webp"
+	},
+	"screenshot": "koma.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
