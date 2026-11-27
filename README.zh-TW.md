@@ -8,7 +8,7 @@
 
 把圍繞 [MyGo](https://github.com/egoist/mygo) 的應用、外掛、元件和文件收集在一個網站裡：**[awesomemygo.dev](https://awesomemygo.dev)**。MyGo 是用 Go 打造桌面應用的工具包，介面可以是原生 UI，也可以是 Web 前端。
 
-[English](README.md) · [简体中文](README.zh-CN.md) · 繁體中文 · [日本語](README.ja.md) · [한국어](README.ko.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · 繁體中文 · [日本語](README.ja.md) · [한국어](README.ko.md) · [Türkçe](README.tr.md)
 
 [![Awesome MyGo](.github/assets/banner.png)](https://awesomemygo.dev)
 
