@@ -1,0 +1,33 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "agent-remote-control-arc",
+	"name": "Agent Remote Control (ARC)",
+	"author": "whzxc",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://github.com/whzxc/agent-remote-control",
+	"repo": "whzxc/agent-remote-control",
+	"summary": {
+		"en": "Connects Claude, ChatGPT and other MCP clients to Codex and other coding agents on your computer.",
+		"zh-CN": "让 Claude、ChatGPT 等 MCP 客户端调用本机 Codex 等编程智能体。",
+		"zh-TW": "讓 Claude、ChatGPT 等 MCP 用戶端指揮本機的 Codex 等程式代理。",
+		"ja": "Claude や ChatGPT などから MCP で手元の Codex などのエージェントを使う。",
+		"ko": "Claude, ChatGPT 등 MCP 클라이언트를 로컬 Codex 등 코딩 에이전트와 연결합니다."
+	},
+	"description": {
+		"en": "A desktop app for Apple Silicon Macs and Windows that lets Claude, ChatGPT and other MCP clients hand work to Codex and other coding agents on your computer, through a remote link you approve locally or your own Cloudflare relay. Claude can read files, Git changes and Codex tasks, dispatch a job, and come back to review it when ARC notifies it. The interface is a web frontend built with MyGo.",
+		"zh-CN": "面向 Apple Silicon Mac 与 Windows 的桌面应用，让 Claude、ChatGPT 等 MCP 客户端把任务交给你电脑上的 Codex 等编程智能体，可通过本地批准的远程链接或自建的 Cloudflare 中继连接。Claude 能读取文件、Git 变更和 Codex 任务并派发工作，收到 ARC 通知后再回来审查。界面是用 MyGo 构建的 Web 前端。",
+		"zh-TW": "適用於 Apple Silicon Mac 與 Windows 的桌面應用程式，讓 Claude、ChatGPT 等 MCP 用戶端把工作交給你電腦上的 Codex 等程式代理，可透過本機核准的遠端連結或自建的 Cloudflare 中繼連線。Claude 能讀取檔案、Git 變更與 Codex 任務並派發工作，收到 ARC 通知後再回來審查。介面是以 MyGo 建構的 Web 前端。",
+		"ja": "Apple Silicon Mac と Windows 向けのアプリで、Claude や ChatGPT などの MCP クライアントから、手元の Codex などのコーディングエージェントに作業を任せられます。接続はローカルで承認するリモートリンクか、自作の Cloudflare リレーを使います。Claude はファイルや Git の変更、Codex のタスクを読んで作業を送り、ARC の通知で戻ってきて結果を確認します。画面は MyGo で作った Web フロントエンドです。",
+		"ko": "Apple Silicon Mac과 Windows용 앱으로, Claude, ChatGPT 등 MCP 클라이언트가 내 컴퓨터의 Codex 같은 코딩 에이전트에게 작업을 맡기게 합니다. 로컬에서 승인하는 원격 링크나 직접 만든 Cloudflare 릴레이로 연결합니다. Claude는 파일, Git 변경 사항, Codex 작업을 읽고 일을 보낸 뒤 ARC 알림을 받고 돌아와 결과를 검토합니다. 화면은 MyGo로 만든 웹 프런트엔드입니다."
+	},
+	"icon": {
+		"file": "agent-remote-control-arc.webp"
+	},
+	"screenshot": "agent-remote-control-arc.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
