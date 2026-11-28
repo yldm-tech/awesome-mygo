@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mikutv",
+	"name": "MikuTV",
+	"author": "yuchanns",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://mikutv.yuchanns.dev",
+	"repo": "yuchanns/MikuTV",
+	"summary": {
+		"en": "A native Apple TV video client with sandboxed JavaScript plugins for sources and themes.",
+		"zh-CN": "原生 Apple TV 视频客户端，以沙盒插件接入内容源与主题。",
+		"zh-TW": "原生 Apple TV 影音用戶端，以沙盒外掛接入內容來源與主題。",
+		"ja": "Apple TV 向けのネイティブ動画クライアント。ソースとテーマはサンドボックス内のプラグインで追加。",
+		"ko": "네이티브 Apple TV 동영상 클라이언트. 콘텐츠 소스와 테마는 샌드박스 플러그인으로 추가."
+	},
+	"description": {
+		"en": "An Apple TV video client for tvOS 18 and later, written in Go and drawn with MyGo's native UI, with AVPlayer playback and danmaku and subtitle layers. Content sources and themes come from JavaScript plugins installed on the TV from GitHub, each checked against its release tag and SHA-256 digest and run in a sandbox limited to the hosts it declares.",
+		"zh-CN": "面向 tvOS 18 及以上的 Apple TV 视频客户端，用 Go 编写、由 MyGo 原生 UI 绘制，以 AVPlayer 播放，并叠加弹幕和字幕。内容源与主题由 JavaScript 插件提供，可在电视上直接从 GitHub 安装；每个插件都会校验发布标签与 SHA-256 摘要，并在只能访问其声明域名的沙盒中运行。",
+		"zh-TW": "適用 tvOS 18 以上的 Apple TV 影音用戶端，以 Go 撰寫、由 MyGo 原生 UI 繪製，透過 AVPlayer 播放，並疊加彈幕與字幕。內容來源與主題由 JavaScript 外掛提供，可在電視上直接從 GitHub 安裝；每個外掛都會核對發布標籤與 SHA-256 摘要，並在只能連線其宣告網域的沙盒中執行。",
+		"ja": "tvOS 18 以降の Apple TV 向け動画クライアントで、Go で書かれ MyGo のネイティブ UI で描かれています。再生は AVPlayer で、弾幕と字幕を重ねて表示します。コンテンツソースとテーマは JavaScript プラグインで追加し、テレビ上で GitHub から直接インストールできます。各プラグインはリリースタグと SHA-256 ダイジェストで検証され、宣言したホストにしか接続できないサンドボックスで動きます。",
+		"ko": "tvOS 18 이상의 Apple TV용 동영상 클라이언트로, Go로 작성하고 MyGo의 네이티브 UI로 그렸습니다. AVPlayer로 재생하며 탄막과 자막을 겹쳐 보여 줍니다. 콘텐츠 소스와 테마는 JavaScript 플러그인으로 추가하며 TV에서 바로 GitHub에서 설치할 수 있고, 각 플러그인은 릴리스 태그와 SHA-256 다이제스트로 검증된 뒤 선언한 호스트에만 접속할 수 있는 샌드박스에서 실행됩니다."
+	},
+	"icon": {
+		"file": "mikutv.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "mikutv.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
