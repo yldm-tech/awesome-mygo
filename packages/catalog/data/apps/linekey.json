@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "linekey",
+	"name": "Linekey",
+	"author": "RunMintOn",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/RunMintOn/Linekey",
+	"repo": "RunMintOn/Linekey",
+	"summary": {
+		"en": "A macOS snippet manager whose ⌘. panel pastes a snippet into any app.",
+		"zh-CN": "macOS 片段管理工具：按 ⌘. 打开搜索面板，文本直接落到任意应用的光标处。",
+		"zh-TW": "macOS 片段管理工具：按 ⌘. 開啟搜尋面板，文字直接落到任何 App 的游標處。",
+		"ja": "⌘. のパネルで検索したスニペットを、どのアプリのカーソル位置にも貼り付ける macOS のスニペット管理ツール。",
+		"ko": "⌘. 패널에서 찾은 스니펫을 어느 앱의 커서 위치에나 붙여 넣는 macOS 스니펫 관리 도구."
+	},
+	"description": {
+		"en": "A menu bar app for macOS on Apple silicon, written in Go with windows drawn by MyGo's native UI. Press ⌘. over any app, search titles and bodies, and press Return to paste the snippet where you were typing. Dates, clipboard contents, dropdowns and one-off inputs resolve as placeholders at insertion time, Markdown and HTML keep their formatting, and a manager window holds categories, notes, a usage ranking and hand-written Chinese translations kept beside the original. Snippets live in a local SQLite file, with no accounts and no telemetry.",
+		"zh-CN": "用 Go 编写、窗口由 MyGo 原生 UI 绘制的 macOS 菜单栏应用，适用于 Apple 芯片的 Mac。在任意应用里按 ⌘. 搜索标题和正文，按 Return 就把条目粘贴到刚才打字的位置。日期、剪贴板内容、下拉选项和一次性输入作为占位符在插入时解析，Markdown 与 HTML 保留格式，管理窗口提供分类、备注、使用频率排序，还可以把中文译文与原文并排保存。条目存放在本机 SQLite 文件中，没有账号，也没有遥测。",
+		"zh-TW": "用 Go 撰寫、視窗由 MyGo 原生 UI 繪製的 macOS 選單列 App，適用於 Apple 晶片的 Mac。在任何 App 裡按 ⌘. 搜尋標題與內文，按 Return 就把條目貼到剛才打字的位置。日期、剪貼簿內容、下拉選項與一次性輸入作為預留位置在插入時解析，Markdown 與 HTML 保留格式，管理視窗提供分類、備註、使用頻率排序，還可以把中文譯文與原文並排保存。條目存放在本機 SQLite 檔案中，沒有帳號，也沒有遙測。",
+		"ja": "Go で書き、ウィンドウを MyGo のネイティブ UI で描いた Apple シリコン Mac 向けのメニューバーアプリ。どのアプリでも ⌘. でタイトルと本文を検索し、Return でスニペットを直前まで入力していた位置に貼り付けます。日付、クリップボードの内容、ドロップダウン、一度だけの入力は挿入時にプレースホルダーとして解決され、Markdown と HTML は書式を保ちます。管理ウィンドウでは分類、メモ、使用頻度の並べ替えができ、手書きの中国語訳を原文の隣に残せます。スニペットはローカルの SQLite ファイルに保存し、アカウントもテレメトリーもありません。",
+		"ko": "Go로 작성하고 창을 MyGo의 네이티브 UI로 그린 Apple 실리콘 Mac용 메뉴 막대 앱입니다. 어느 앱에서든 ⌘.로 제목과 본문을 검색하고 Return을 누르면 방금 입력하던 위치에 스니펫이 붙습니다. 날짜, 클립보드 내용, 드롭다운, 일회성 입력은 삽입할 때 자리 표시자로 해석되고, Markdown과 HTML은 서식을 유지합니다. 관리 창에서는 분류, 메모, 사용 빈도 정렬을 다루고 손으로 쓴 중국어 번역을 원문 옆에 둘 수 있습니다. 스니펫은 로컬 SQLite 파일에 저장되며 계정도 텔레메트리도 없습니다."
+	},
+	"icon": {
+		"file": "linekey.webp"
+	},
+	"screenshot": "linekey.webp",
+	"added": "2026-11-28T12:57:05Z"
+}
