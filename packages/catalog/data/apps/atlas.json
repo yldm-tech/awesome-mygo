@@ -9,18 +9,18 @@
 	"url": "https://github.com/gvenusleo/Atlas",
 	"repo": "gvenusleo/Atlas",
 	"summary": {
-		"en": "A desktop AI agent with file and shell tools, skills, images, scheduled tasks and a terminal.",
-		"zh-CN": "桌面 AI Agent：读写文件、执行命令，支持技能、图片输入、定时任务和内置终端。",
-		"zh-TW": "桌面 AI Agent：讀寫檔案、執行指令，支援技能、圖片輸入、排程任務與內建終端機。",
-		"ja": "ファイル操作、シェル、スキル、画像入力、定期タスク、ターミナルを備えたデスクトップ AI エージェント。",
-		"ko": "파일·셸 도구, 스킬, 이미지 입력, 예약 작업, 내장 터미널을 갖춘 데스크톱 AI 에이전트."
+		"en": "A desktop AI agent for chatting, reviewing Git changes, and using a terminal in one window.",
+		"zh-CN": "桌面 AI Agent，可在同一个窗口对话、查看 Git 更改和使用终端。",
+		"zh-TW": "桌面 AI Agent，可在同一個視窗對話、查看 Git 變更並使用終端機。",
+		"ja": "チャット、Gitの変更確認、ターミナル操作をひとつのウィンドウで行えるデスクトップAIエージェント。",
+		"ko": "대화, Git 변경 사항 검토, 터미널 사용을 한 창에서 할 수 있는 데스크톱 AI 에이전트."
 	},
 	"description": {
-		"en": "A desktop AI agent for macOS, Windows and Linux, drawn with MyGo's native UI. It works with model providers you add by API key, uses four tools (read, write, edit, shell) plus skills and AGENTS.md instructions, accepts images, runs scheduled tasks and has a terminal panel. It has full file and command access with no confirmation step, and is currently being rewritten.",
-		"zh-CN": "用 MyGo 原生 UI 绘制的桌面 AI Agent，提供 macOS、Windows 与 Linux 版本。用 API key 接入自己配置的模型服务，通过 read、write、edit、shell 四个工具操作文件和命令，支持技能与 AGENTS.md 指令、图片输入和定时任务，并带终端面板。它拥有完整的文件与命令权限，执行前不做确认，目前仍在重写中。",
-		"zh-TW": "用 MyGo 原生 UI 繪製的桌面 AI Agent，提供 macOS、Windows 與 Linux 版本。以 API key 接入自行設定的模型服務，透過 read、write、edit、shell 四個工具操作檔案與指令，支援技能與 AGENTS.md 指示、圖片輸入和排程任務，並附終端機面板。它擁有完整的檔案與指令權限，執行前不做確認，目前仍在重寫中。",
-		"ja": "MyGo のネイティブ UI で描かれたデスクトップ AI エージェントで、macOS・Windows・Linux に対応します。API キーで自分のモデルプロバイダーを接続し、read・write・edit・shell の四つのツールでファイルとコマンドを扱い、スキルや AGENTS.md の指示、画像入力、定期タスク、ターミナルパネルにも対応します。ファイル操作やコマンド実行に確認はなく、現在は書き直しの途中です。",
-		"ko": "MyGo의 네이티브 UI로 그린 데스크톱 AI 에이전트로, macOS, Windows, Linux를 지원합니다. API 키로 직접 설정한 모델 제공자를 연결하고, read, write, edit, shell 네 가지 도구로 파일과 명령을 다루며, 스킬과 AGENTS.md 지침, 이미지 입력, 예약 작업, 터미널 패널도 갖췄습니다. 파일 작업과 명령 실행에 확인 절차가 없으며, 현재 다시 작성되는 중입니다."
+		"en": "Built with MyGo's native UI for macOS, Windows, and Linux, Atlas connects to model providers you configure and supports skills, image input, and scheduled tasks. The agent has full file and shell access and can read or write files and run commands without asking for confirmation.",
+		"zh-CN": "Atlas 用 MyGo 构建原生界面，支持 macOS、Windows 和 Linux，可接入自行配置的模型服务，并支持技能、图片输入和定时任务。Agent 拥有完整的文件与命令权限，读写文件和执行命令前无需确认。",
+		"zh-TW": "Atlas 使用 MyGo 打造原生介面，支援 macOS、Windows 和 Linux，可連接自行設定的模型服務，並支援技能、圖片輸入和排程任務。Agent 擁有完整的檔案與指令權限，讀寫檔案和執行指令前無須確認。",
+		"ja": "AtlasはMyGoのネイティブUIを使ったmacOS・Windows・Linux向けのアプリで、設定したモデルプロバイダーに接続でき、スキル、画像入力、スケジュール実行にも対応しています。エージェントはファイルとシェルへのフルアクセス権を持ち、確認なしでファイルの読み書きやコマンド実行を行います。",
+		"ko": "Atlas는 MyGo의 네이티브 UI로 만든 macOS, Windows, Linux용 앱으로, 직접 설정한 모델 제공자에 연결할 수 있으며 스킬, 이미지 입력, 예약 작업을 지원합니다. 에이전트는 파일과 셸에 대한 전체 권한을 가지며, 확인 없이 파일을 읽고 쓰거나 명령을 실행합니다."
 	},
 	"icon": {
 		"file": "atlas.webp"
