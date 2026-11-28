@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "carryover",
+	"name": "Carryover",
+	"author": "akfaiz",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "game",
+	"url": "https://github.com/akfaiz/carryover",
+	"repo": "akfaiz/carryover",
+	"summary": {
+		"en": "A game launcher that syncs your save games between devices through your own cloud storage.",
+		"zh-CN": "通过你自己的云存储，在设备之间同步存档的游戏启动器。",
+		"zh-TW": "透過你自己的雲端儲存空間，在裝置之間同步存檔的遊戲啟動器。",
+		"ja": "自分のクラウドストレージを使い、デバイス間でセーブデータを同期するゲームランチャー。",
+		"ko": "내 클라우드 저장소로 기기 간 게임 세이브를 동기화하는 게임 런처."
+	},
+	"description": {
+		"en": "Carryover's desktop app for Windows, macOS and Linux / Steam Deck, drawn with MyGo's native UI; the Android app is made separately. It downloads your latest saves before you play and uploads them when you quit, whether you start from its own launcher or from Steam. rclone is built in, for Google Drive, Dropbox, OneDrive, WebDAV, SFTP and SMB.",
+		"zh-CN": "Carryover 的 Windows、macOS 与 Linux / Steam Deck 桌面版，由 MyGo 原生 UI 绘制，Android 版另行开发。开始游戏前下载最新存档，退出后上传，从自带启动器或 Steam 启动皆可；内置 rclone，支持 Google Drive、Dropbox、OneDrive、WebDAV、SFTP 与 SMB。",
+		"zh-TW": "Carryover 的 Windows、macOS 與 Linux / Steam Deck 桌面版，由 MyGo 原生 UI 繪製，Android 版另行開發。開始遊戲前下載最新存檔，結束後上傳，從自家啟動器或 Steam 啟動皆可；內建 rclone，支援 Google Drive、Dropbox、OneDrive、WebDAV、SFTP 與 SMB。",
+		"ja": "Carryover の Windows・macOS・Linux / Steam Deck 向けデスクトップ版で、MyGo のネイティブ UI で描かれています。Android 版は別に作られています。プレイ前に最新のセーブをダウンロードし、終了後にアップロードします。起動は Carryover のランチャーからでも Steam からでもかまいません。rclone を内蔵し、Google Drive、Dropbox、OneDrive、WebDAV、SFTP、SMB に対応します。",
+		"ko": "Windows, macOS, Linux / Steam Deck용 Carryover 데스크톱 버전으로, MyGo의 네이티브 UI로 그렸고 Android 앱은 따로 만들어집니다. 게임 전에 최신 세이브를 내려받고 종료하면 올리며, Carryover 자체 런처나 Steam 어디서 시작해도 됩니다. rclone이 내장되어 Google Drive, Dropbox, OneDrive, WebDAV, SFTP, SMB를 쓸 수 있습니다."
+	},
+	"icon": {
+		"file": "carryover.webp"
+	},
+	"screenshot": "carryover.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
