@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "xi",
+	"name": "Xi",
+	"author": "Stars76",
+	"kind": "native",
+	"platforms": [
+		"win"
+	],
+	"group": "notes",
+	"url": "https://github.com/Stars76/Xi",
+	"repo": "Stars76/Xi",
+	"summary": {
+		"en": "A Windows focus timer and to-do list with a sea of characters that shifts with weather and time.",
+		"zh-CN": "Windows 专注计时与待办应用，一片用字符写成的海随天气、昼夜和剩余时间变化。",
+		"zh-TW": "Windows 專注計時與待辦應用程式，一片用字元寫成的海隨天氣、晝夜和剩餘時間變化。",
+		"ja": "Windows 向けの集中タイマー兼 ToDo アプリ。文字で描いた海が天気や昼夜、残り時間で変わる。",
+		"ko": "Windows용 집중 타이머 겸 할 일 앱. 글자로 그린 바다가 날씨와 시간에 따라 바뀝니다."
+	},
+	"description": {
+		"en": "A Windows focus timer and to-do app drawn with MyGo's native UI, shipped as a single executable with no Electron or WebView2. The timer's sea is made only of ~ ≈ ≋ characters, its level is the time left, and its waves, sun, moon and boats follow the weather, optionally synced from Open-Meteo, and the time of day. Tasks have subtasks, alarms and daily templates, and all data stays on your computer.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 专注计时与待办应用，单个可执行文件，没有 Electron，也没有 WebView2。专注钟的海只由 ~ ≈ ≋ 三种字符铺成，水位就是剩余时间，海浪、日月和船只随天气（可选同步 Open-Meteo 实况）与昼夜变化。待办支持子任务、闹钟和每日模板，数据全部保存在本地。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 專注計時與待辦應用程式，單一執行檔，沒有 Electron，也沒有 WebView2。專注鐘的海只由 ~ ≈ ≋ 三種字元鋪成，水位就是剩餘時間，海浪、日月和船隻隨天氣（可選同步 Open-Meteo 即時天氣）與晝夜變化。待辦支援子任務、鬧鐘和每日範本，資料全部儲存在本機。",
+		"ja": "MyGo のネイティブ UI で描かれた Windows 向けの集中タイマー兼 ToDo アプリで、Electron も WebView2 も使わない単一の実行ファイルです。タイマーの海は ~ ≈ ≋ の三つの文字だけで描かれ、水位が残り時間を表し、波や太陽、月、船は天気（Open-Meteo の実況と同期も可能）と時間帯に合わせて変わります。タスクはサブタスク、アラーム、毎日のテンプレートに対応し、データはすべてローカルに保存されます。",
+		"ko": "MyGo의 네이티브 UI로 그린 Windows용 집중 타이머 겸 할 일 앱으로, Electron도 WebView2도 없는 단일 실행 파일입니다. 타이머의 바다는 ~ ≈ ≋ 세 가지 글자로만 그려지고 수위가 남은 시간을 나타내며, 파도와 해, 달, 배는 날씨(선택적으로 Open-Meteo 실시간 날씨와 동기화)와 시간대에 따라 바뀝니다. 할 일은 하위 작업, 알람, 매일 템플릿을 지원하고 데이터는 모두 로컬에 저장됩니다."
+	},
+	"icon": {
+		"file": "xi.webp"
+	},
+	"screenshot": "xi.webp",
+	"added": "2026-11-28T02:30:56Z"
+}
