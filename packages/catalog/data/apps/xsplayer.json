@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "xsplayer",
+	"name": "XsPlayer",
+	"author": "freelxs",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/freelxs/XsPlayer",
+	"repo": "freelxs/XsPlayer",
+	"summary": {
+		"en": "A desktop player for CatPawOpen JS plugins, TVBox sources, Kazumi rules and M3U live lists.",
+		"zh-CN": "桌面播放器：CatPawOpen 插件、TVBox、Kazumi 与 M3U 直播。",
+		"zh-TW": "桌面播放器：CatPawOpen 外掛、TVBox、Kazumi 與 M3U 直播。",
+		"ja": "デスクトッププレーヤー。CatPawOpen プラグイン、TVBox、Kazumi、M3U ライブに対応。",
+		"ko": "CatPawOpen 플러그인, TVBox, Kazumi, M3U 라이브를 재생하는 데스크톱 플레이어."
+	},
+	"description": {
+		"en": "A desktop player for macOS, Windows and Linux with a web frontend in MyGo. It runs JS plugins you supply through a CatPawOpen-compatible interface, plays TVBox sources and Kazumi rules, and imports M3U and TVBox live subscriptions, in its built-in player or in mpv, IINA or PotPlayer. MyGo builds the desktop app; a login-protected web mode runs from a Docker image.",
+		"zh-CN": "用 MyGo 以网页前端构建的 macOS、Windows 与 Linux 桌面播放器。它通过 CatPawOpen 兼容接口运行你自己提供的 JS 插件，播放 TVBox 源和 Kazumi 规则，导入 M3U 与 TVBox 直播订阅，可用内置播放器或 mpv、IINA、PotPlayer 播放。MyGo 只构建桌面版；需要登录的网页模式以 Docker 镜像另行提供。",
+		"zh-TW": "以 MyGo 搭配網頁前端打造的 macOS、Windows 與 Linux 桌面播放器。它透過 CatPawOpen 相容介面執行你自行提供的 JS 外掛，播放 TVBox 源與 Kazumi 規則，匯入 M3U 與 TVBox 直播訂閱，可用內建播放器或 mpv、IINA、PotPlayer 播放。MyGo 只建置桌面版；需要登入的網頁模式另以 Docker 映像檔提供。",
+		"ja": "MyGo と Web フロントエンドで作った macOS・Windows・Linux 向けデスクトッププレーヤー。CatPawOpen 互換インターフェースで手持ちの JS プラグインを動かし、TVBox ソースや Kazumi ルールを再生し、M3U や TVBox のライブ購読を読み込めます。再生は内蔵プレーヤーのほか mpv、IINA、PotPlayer でも可能です。MyGo が作るのはデスクトップ版で、ログイン付きの Web モードは Docker イメージで提供されます。",
+		"ko": "MyGo와 웹 프런트엔드로 만든 macOS·Windows·Linux용 데스크톱 플레이어입니다. CatPawOpen 호환 인터페이스로 직접 준비한 JS 플러그인을 실행하고, TVBox 소스와 Kazumi 규칙을 재생하며, M3U와 TVBox 라이브 구독을 가져옵니다. 내장 플레이어나 mpv, IINA, PotPlayer로 재생합니다. MyGo로 빌드하는 것은 데스크톱 앱뿐이고, 로그인이 필요한 웹 모드는 Docker 이미지로 제공됩니다."
+	},
+	"icon": {
+		"file": "xsplayer.webp"
+	},
+	"screenshot": "xsplayer.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-26T02:31:39Z"
+}
