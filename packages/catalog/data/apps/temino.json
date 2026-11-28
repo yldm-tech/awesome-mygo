@@ -1,0 +1,22 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "temino",
+	"name": "Temino",
+	"author": "Lotus0614",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/Lotus0614/Temino",
+	"repo": "Lotus0614/Temino",
+	"summary": {
+		"en": "Temino 是一个用 Go + MyGo 原生 UI 写的跨平台 WebUI 进程管理器：把那些必须开个终端才能跑起来的本地 WebUI（ComfyUI、AstrBot、node 服务……）集中配置，一键启停，实时看日志，处理端口占用。"
+	},
+	"description": {
+		"en": "Temino 是一个用 Go + MyGo 原生 UI 写的跨平台 WebUI 进程管理器：把那些必须开个终端才能跑起来的本地 WebUI（ComfyUI、AstrBot、node 服务……）集中配置，一键启停，实时看日志，处理端口占用。"
+	},
+	"added": "2026-11-28T14:54:35Z"
+}
