@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "cundi",
+	"name": "cundi",
+	"author": "xukongzangpusa",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux"
+	],
+	"group": "media",
+	"url": "https://github.com/xukongzangpusa/cundi",
+	"repo": "xukongzangpusa/cundi",
+	"summary": {
+		"en": "A native video wall for Windows and Linux: up to 64 live streams or local files in one window.",
+		"zh-CN": "Windows 与 Linux 原生视频墙：一个窗口最多播放 64 路直播流或本地文件。",
+		"zh-TW": "Windows 與 Linux 原生影像牆：一個視窗最多播放 64 路串流或本機影片。",
+		"ja": "Windows・Linux 用のネイティブなビデオウォール。最大 64 画面でライブ配信や動画を再生。",
+		"ko": "Windows·Linux용 네이티브 비디오 월. 한 창에서 최대 64개 스트림이나 파일을 재생."
+	},
+	"description": {
+		"en": "A video wall player for Windows and Linux drawn with MyGo's native UI, with no web view. One window holds up to 64 panes, each pulling, decoding and reconnecting on its own, fed by HTTP(S)-FLV, WS(S)-FLV, HLS, RTMP(S) or RTSP(S) streams or local files and decoded locally with FFmpeg. Groups, saved layouts and snapshots are kept in a local library with no account or server.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Windows 与 Linux 视频墙播放器，没有 Web 视图。一个窗口最多容纳 64 个画面，每个画面独立拉流、解码和重连，来源可以是 HTTP(S)-FLV、WS(S)-FLV、HLS、RTMP(S)、RTSP(S) 直播流或本地文件，全部由 FFmpeg 在本机解码。分组、布局和截图都保存在本地，无需账号，也无需服务器。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Windows 與 Linux 影像牆播放器，沒有 Web 視圖。一個視窗最多容納 64 個畫面，每個畫面各自拉流、解碼和重新連線，來源可以是 HTTP(S)-FLV、WS(S)-FLV、HLS、RTMP(S)、RTSP(S) 直播串流或本機檔案，全部由 FFmpeg 在本機解碼。分組、版面配置和截圖都存在本機，不需要帳號，也不需要伺服器。",
+		"ja": "MyGo のネイティブ UI で描かれた Windows・Linux 向けのビデオウォールプレーヤー。1 つのウィンドウに最大 64 画面を並べ、各画面が HTTP(S)-FLV、WS(S)-FLV、HLS、RTMP(S)、RTSP(S) のライブ配信やローカルファイルを個別に取得し、FFmpeg で手元でデコードして、切れれば再接続します。グループ、レイアウト、スナップショットはローカルに保存され、アカウントもサーバーも要りません。",
+		"ko": "MyGo의 네이티브 UI로 그린 Windows·Linux용 비디오 월 플레이어로, 웹 뷰가 없습니다. 한 창에 최대 64개 화면을 두고, 화면마다 HTTP(S)-FLV, WS(S)-FLV, HLS, RTMP(S), RTSP(S) 라이브 스트림이나 로컬 파일을 따로 받아 FFmpeg로 로컬에서 디코딩하며 끊기면 다시 연결합니다. 그룹, 레이아웃, 스냅숏은 로컬에 저장되어 계정도 서버도 필요 없습니다."
+	},
+	"icon": {
+		"file": "cundi.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "cundi.webp",
+	"added": "2026-11-27T13:50:42Z"
+}
