@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "mymusic",
+	"name": "MyMusic",
+	"author": "chentianxiong123",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/chentianxiong123/mymusic",
+	"repo": "chentianxiong123/mymusic",
+	"summary": {
+		"en": "A native music player that plays from Bilibili, NetEase, local files and JS plugin sources.",
+		"zh-CN": "原生音乐播放器，可播放 B站、网易云、本地音乐和 JS 插件音源。",
+		"zh-TW": "原生音樂播放器，可播放 B站、網易雲音樂、本機音樂與 JS 外掛音源。",
+		"ja": "Bilibili、NetEase、ローカル、JS プラグインから再生するネイティブ音楽プレーヤー。",
+		"ko": "Bilibili, NetEase, 로컬, JS 플러그인 음원을 재생하는 네이티브 음악 플레이어."
+	},
+	"description": {
+		"en": "A music player drawn with MyGo's native UI. It plays from Bilibili, NetEase Cloud Music and local files, adds sources such as Kugou, QQ Music and Jamendo through JS plugins, matches lyrics by duration and title, and checks updates with ed25519 signatures. This is the project's main MyGo build; DLNA casting, Xiaomi speakers and a desktop lyrics widget are in a separate Wails 3 version.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 Go 音乐播放器。可播放 B站、网易云音乐和本地音乐，并通过 JS 插件接入酷狗、QQ 音乐、Jamendo 等音源；歌词按时长和标题智能匹配，更新经 ed25519 签名校验。这是项目的 MyGo 主发行版；DLNA 投屏、小米音箱和桌面歌词挂件属于另一套 Wails 3 版本。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 Go 音樂播放器。可播放 B站、網易雲音樂與本機音樂，並透過 JS 外掛接入酷狗、QQ 音樂、Jamendo 等音源；歌詞依時長與標題智慧比對，更新經 ed25519 簽章驗證。這是專案的 MyGo 主要發行版；DLNA 投放、小米音箱與桌面歌詞小工具屬於另一套 Wails 3 版本。",
+		"ja": "MyGo のネイティブ UI で描かれた、Go 製の音楽プレーヤー。Bilibili、NetEase Cloud Music、ローカルの曲を再生でき、Kugou、QQ Music、Jamendo などの音源を JS プラグインで追加できます。歌詞は再生時間とタイトルで照合し、アップデートは ed25519 署名で検証します。これはプロジェクトの MyGo による主要版で、DLNA キャスト、Xiaomi スピーカー、デスクトップ歌詞ウィジェットは別の Wails 3 版にあります。",
+		"ko": "MyGo의 네이티브 UI로 그린 Go 음악 플레이어입니다. Bilibili, NetEase, 로컬 음악을 재생하고, JS 플러그인으로 Kugou, QQ Music, Jamendo 등 음원을 더할 수 있습니다. 가사는 재생 시간과 제목으로 맞추고, 업데이트는 ed25519 서명으로 검증합니다. 이 버전은 프로젝트의 MyGo 주 배포판이며, DLNA 캐스팅, 샤오미 스피커, 데스크톱 가사 위젯은 별도의 Wails 3 버전에 있습니다."
+	},
+	"icon": {
+		"file": "mymusic.webp"
+	},
+	"screenshot": "mymusic.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-28T02:30:56Z"
+}
