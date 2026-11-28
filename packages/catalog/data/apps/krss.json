@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "krss",
+	"name": "Krss",
+	"author": "kue02",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/kue02/Krss",
+	"repo": "kue02/Krss",
+	"summary": {
+		"en": "Client for Krss, a self-hosted RSS reader with AI summaries, translation and automation rules.",
+		"zh-CN": "自托管 RSS 阅读器 Krss 的客户端，带 AI 摘要、翻译与自动化规则。",
+		"zh-TW": "自架 RSS 閱讀器 Krss 的用戶端，具備 AI 摘要、翻譯與自動化規則。",
+		"ja": "セルフホスト型 RSS リーダー Krss のクライアント。AI 要約・翻訳と自動化ルールを備える。",
+		"ko": "셀프 호스팅 RSS 리더 Krss의 클라이언트. AI 요약과 번역, 자동화 규칙을 지원합니다."
+	},
+	"description": {
+		"en": "The client app for Krss, a self-hosted RSS reader. The Krss server, a single Go binary with SQLite, is deployed separately, usually with Docker. MyGo wraps Krss's React web frontend, which connects to your own server and offers article, social, notification and picture views, AI summaries and translation, automation rules and plugins.",
+		"zh-CN": "自托管 RSS 阅读器 Krss 的客户端。Krss 的服务端是单个 Go 二进制加 SQLite，需要另行部署，通常用 Docker；这个客户端由 MyGo 包装 Krss 的 React Web 前端，连接你自己的服务器，提供文章、社交、通知、图片四种视图，以及 AI 摘要与翻译、自动化规则和插件。",
+		"zh-TW": "自架 RSS 閱讀器 Krss 的用戶端。Krss 的伺服器端是單一 Go 執行檔搭配 SQLite，需另行部署，通常使用 Docker；這個用戶端由 MyGo 包裝 Krss 的 React Web 前端，連線到你自己的伺服器，提供文章、社群、通知、圖片四種檢視，以及 AI 摘要與翻譯、自動化規則和外掛。",
+		"ja": "セルフホスト型 RSS リーダー Krss のクライアントアプリです。サーバーは SQLite を使う単一の Go バイナリで、Docker などで別途立ち上げます。このクライアントは Krss の React 製 Web フロントエンドを MyGo で包んだもので、自分のサーバーに接続し、記事・ソーシャル・通知・画像の 4 つのビュー、AI 要約と翻訳、自動化ルール、プラグインを利用できます。",
+		"ko": "셀프 호스팅 RSS 리더 Krss의 클라이언트 앱입니다. Krss 서버는 SQLite를 쓰는 단일 Go 바이너리로, 보통 Docker로 따로 배포합니다. 이 클라이언트는 Krss의 React 웹 프런트엔드를 MyGo로 감싼 것으로, 직접 운영하는 서버에 연결해 기사·소셜·알림·이미지 네 가지 보기와 AI 요약·번역, 자동화 규칙, 플러그인을 제공합니다."
+	},
+	"icon": {
+		"file": "krss.webp"
+	},
+	"screenshot": "krss.webp",
+	"added": "2026-11-28T02:30:56Z"
+}
