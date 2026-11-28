@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "ytb-music",
+	"name": "YTB Music",
+	"author": "wishworldbetter",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/wishworldbetter/ytb-music",
+	"repo": "wishworldbetter/ytb-music",
+	"summary": {
+		"en": "A native desktop client for YouTube Music, with synced lyrics and song radio.",
+		"zh-CN": "原生 YouTube Music 桌面客户端，支持同步歌词与歌曲电台。",
+		"zh-TW": "原生 YouTube Music 桌面用戶端，支援同步歌詞與歌曲電台。",
+		"ja": "YouTube Music のネイティブなデスクトップクライアント。同期歌詞とソングラジオに対応。",
+		"ko": "YouTube Music용 네이티브 데스크톱 클라이언트. 싱크 가사와 노래 라디오를 지원합니다."
+	},
+	"description": {
+		"en": "A YouTube Music client written in Go and drawn with MyGo's native UI, with no WebView even for music videos; the interface is in Chinese. It offers search, song radio and synced lyrics from LRCLib, and syncs your playlists, likes and history once signed in. It runs on macOS, Windows and Linux, but videos, browser sign-in import and 256 kbps audio are macOS only for now.",
+		"zh-CN": "用 Go 编写、由 MyGo 原生 UI 绘制的 YouTube Music 客户端，播放歌曲和 MV 都不启动 WebView，界面为中文。支持搜索、歌曲电台和来自 LRCLib 的同步歌词，登录后可同步歌单、喜欢的歌曲和播放记录。可在 macOS、Windows 与 Linux 上运行，但 MV、从浏览器导入登录和 256 kbps 音质目前仅限 macOS。",
+		"zh-TW": "用 Go 撰寫、由 MyGo 原生 UI 繪製的 YouTube Music 用戶端，播放歌曲和 MV 都不啟動 WebView，介面為中文。支援搜尋、歌曲電台和來自 LRCLib 的同步歌詞，登入後可同步播放清單、喜歡的歌曲和播放紀錄。可在 macOS、Windows 與 Linux 上執行，但 MV、從瀏覽器匯入登入和 256 kbps 音質目前僅限 macOS。",
+		"ja": "Go で書かれ、MyGo のネイティブ UI で描かれた YouTube Music クライアント。曲もミュージックビデオも WebView を使わずに再生し、画面は中国語です。検索、ソングラジオ、LRCLib の同期歌詞に対応し、ログインするとプレイリスト、高評価、履歴が同期されます。macOS・Windows・Linux で動きますが、ミュージックビデオ、ブラウザーからのログイン取り込み、256 kbps の音質は今のところ macOS のみです。",
+		"ko": "Go로 작성하고 MyGo의 네이티브 UI로 그린 YouTube Music 클라이언트로, 노래도 뮤직비디오도 WebView 없이 재생하며 화면은 중국어입니다. 검색, 노래 라디오, LRCLib의 싱크 가사를 지원하고, 로그인하면 재생목록, 좋아요, 기록이 동기화됩니다. macOS, Windows, Linux에서 실행되지만 뮤직비디오, 브라우저 로그인 가져오기, 256kbps 음질은 아직 macOS 전용입니다."
+	},
+	"icon": {
+		"file": "ytb-music.webp"
+	},
+	"screenshot": "ytb-music.webp",
+	"added": "2026-11-27T02:31:44Z"
+}
