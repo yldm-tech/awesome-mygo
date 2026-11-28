@@ -1,0 +1,37 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "xdl",
+	"name": "XDL",
+	"author": "missuo",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/missuo/xdl",
+	"repo": "missuo/xdl",
+	"summary": {
+		"en": "Batch downloads photos, videos and GIFs from X/Twitter accounts, with scheduled subscriptions.",
+		"zh-CN": "批量下载 X/Twitter 账号的图片、视频和 GIF，支持定时订阅。",
+		"zh-TW": "批次下載 X/Twitter 帳號的圖片、影片和 GIF，支援定時訂閱。",
+		"ja": "X/Twitter のアカウントの画像・動画・GIF を一括ダウンロード。定期購読にも対応。",
+		"ko": "X/Twitter 계정의 사진, 동영상, GIF를 일괄 다운로드하고 정기 구독도 지원합니다."
+	},
+	"description": {
+		"en": "The desktop app of XDL, drawn with MyGo's native UI for macOS, Windows and Linux; the CLI, headless server, Chrome extension and MCP server for AI agents are separate pieces that share its job queue. It downloads photos, videos and GIFs from an account's timeline, likes or your bookmarks, skips anything downloaded before, resumes dropped downloads and checks subscribed accounts on a schedule.",
+		"zh-CN": "XDL 的桌面应用，由 MyGo 原生 UI 绘制，支持 macOS、Windows 和 Linux；命令行工具、无界面服务器、Chrome 扩展和面向 AI 代理的 MCP 服务器另行实现，与它共用同一个任务队列。它能下载账号时间线、喜欢或你的书签中的图片、视频和 GIF，跳过下载过的内容，断点续传，并按计划检查订阅的账号。",
+		"zh-TW": "XDL 的桌面應用程式，由 MyGo 原生 UI 繪製，支援 macOS、Windows 與 Linux；命令列工具、無介面伺服器、Chrome 擴充功能和供 AI 代理使用的 MCP 伺服器另外實作，與它共用同一個工作佇列。它能下載帳號時間軸、喜歡或你的書籤中的圖片、影片和 GIF，略過下載過的內容，支援續傳，並依排程檢查訂閱的帳號。",
+		"ja": "XDL のデスクトップアプリで、MyGo のネイティブ UI で描かれ、macOS・Windows・Linux で動きます。CLI、ヘッドレスサーバー、Chrome 拡張機能、AI エージェント向けの MCP サーバーは別に作られており、同じジョブキューを共有します。アカウントのタイムライン、いいね、自分のブックマークから画像・動画・GIF をダウンロードし、取得済みのものは飛ばし、途切れたダウンロードは再開し、購読したアカウントを定期的にチェックします。",
+		"ko": "XDL의 데스크톱 앱으로, MyGo의 네이티브 UI로 그렸고 macOS, Windows, Linux에서 실행됩니다. CLI, 헤드리스 서버, Chrome 확장, AI 에이전트용 MCP 서버는 따로 만들어져 같은 작업 대기열을 함께 씁니다. 계정의 타임라인, 마음에 들어요, 내 북마크에서 사진, 동영상, GIF를 내려받고, 이미 받은 것은 건너뛰며, 끊긴 다운로드는 이어 받고, 구독한 계정을 일정에 따라 확인합니다."
+	},
+	"icon": {
+		"file": "xdl.webp"
+	},
+	"screenshot": "xdl.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-28T02:30:56Z"
+}
