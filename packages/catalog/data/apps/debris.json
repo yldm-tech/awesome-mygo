@@ -1,0 +1,38 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "debris",
+	"name": "Debris",
+	"author": "pampas9000",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "media",
+	"url": "https://github.com/pampas9000/debris",
+	"repo": "pampas9000/debris",
+	"summary": {
+		"en": "Converts design asset libraries between Eagle, Pixcall, Refto and Billfish formats.",
+		"zh-CN": "在 Eagle、Pixcall、Refto 与 Billfish 之间转换设计素材库。",
+		"zh-TW": "在 Eagle、Pixcall、Refto 與 Billfish 之間轉換設計素材庫。",
+		"ja": "Eagle・Pixcall・Refto・Billfish の間でデザイン素材ライブラリを変換。",
+		"ko": "Eagle, Pixcall, Refto, Billfish 간 디자인 에셋 라이브러리 변환."
+	},
+	"description": {
+		"en": "Converts design asset libraries between Eagle, Pixcall and Refto, and out of the discontinued Billfish, keeping folders, tags, colors, ratings, annotations and source URLs. It detects the source format, previews counts and possible losses before writing, and can hardlink files instead of copying. MyGo builds the desktop app with a SolidJS frontend; the CLI is a separate Go build.",
+		"zh-CN": "在 Eagle、Pixcall 与 Refto 之间直接转换设计素材库，也能把已停更的 Billfish 素材库迁出，并保留文件夹、标签、颜色、评分、注释和来源网址。转换前会自动识别格式，预览数量和可能丢失的内容，同一磁盘上可用硬链接代替复制。桌面应用由 MyGo 搭配 SolidJS 前端构建，命令行工具则是另外的 Go 程序。",
+		"zh-TW": "在 Eagle、Pixcall 與 Refto 之間直接轉換設計素材庫，也能把已停止開發的 Billfish 素材庫遷出，並保留資料夾、標籤、顏色、評分、註解和來源網址。轉換前會自動辨識格式，預覽數量與可能遺失的內容，同一磁碟上可用硬連結取代複製。桌面應用程式由 MyGo 搭配 SolidJS 前端建置，命令列工具則是另外的 Go 程式。",
+		"ja": "Eagle・Pixcall・Refto の間でデザイン素材ライブラリを変換し、開発終了した Billfish からの移行にも対応します。フォルダー、タグ、カラー、評価、注釈、元 URL はそのまま引き継がれます。変換前に形式を自動判別して件数や失われる情報をプレビューでき、同じディスク上ではコピーの代わりにハードリンクを使えます。デスクトップアプリは MyGo と SolidJS のフロントエンドで作られ、CLI は別の Go ビルドです。",
+		"ko": "Eagle, Pixcall, Refto 사이에서 디자인 에셋 라이브러리를 변환하고 개발이 중단된 Billfish에서도 옮겨 오며, 폴더, 태그, 색상, 평점, 주석, 출처 URL을 유지합니다. 변환 전에 형식을 감지하고 개수와 손실될 정보를 미리 보여 주며, 같은 디스크에서는 복사 대신 하드 링크를 씁니다. 데스크톱 앱은 MyGo와 SolidJS 프런트엔드로 만들었고 CLI는 별도의 Go 빌드입니다."
+	},
+	"icon": {
+		"file": "debris.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "debris.webp",
+	"added": "2026-11-28T02:30:56Z"
+}
