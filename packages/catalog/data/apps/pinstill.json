@@ -1,0 +1,32 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "pinstill",
+	"name": "Pinstill",
+	"author": "echoVic",
+	"kind": "web",
+	"platforms": [
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/echoVic/Pinstill",
+	"repo": "echoVic/Pinstill",
+	"summary": {
+		"en": "A Mac screenshot tool: annotate in place, capture scrolling pages, extract text and pin images.",
+		"zh-CN": "Mac 截图工具：在选区里直接标注，支持长截图、文字提取、翻译与贴图。",
+		"zh-TW": "Mac 截圖工具：在選取範圍內直接標註，支援長截圖、文字擷取、翻譯與釘圖。",
+		"ja": "Mac のスクリーンショットツール。範囲内でそのまま注釈、スクロール撮影、文字認識、翻訳、ピン留め。",
+		"ko": "Mac 스크린샷 도구. 선택 영역 주석, 스크롤 캡처, 문자 인식, 번역, 이미지 고정."
+	},
+	"description": {
+		"en": "A menu bar screenshot tool for macOS 13 and later, with a web frontend in MyGo's system WebView. Press ⌘⇧1 to select an area, then annotate it, take a scrolling capture, extract text with on-device OCR or read QR codes; a local model or an OpenAI-compatible API can also translate it. Images can be pinned as floating windows or hung side by side below the menu bar.",
+		"zh-CN": "适用于 macOS 13 及以上的菜单栏截图工具，前端运行在 MyGo 的系统 WebView 中。按 ⌘⇧1 框选后可直接标注、截长图、用本机 OCR 提取文字或识别二维码，也可接入本地模型或 OpenAI 兼容 API 翻译截图。图片可以置顶贴在桌面上，或并排挂在菜单栏下方。",
+		"zh-TW": "適用於 macOS 13 以上的選單列截圖工具，前端執行於 MyGo 的系統 WebView。按 ⌘⇧1 框選後可直接標註、擷取長截圖、以本機 OCR 擷取文字或辨識 QR 碼，也能接上本機模型或 OpenAI 相容 API 翻譯截圖。圖片可置頂釘在桌面上，或並排掛在選單列下方。",
+		"ja": "macOS 13 以降で動く、メニューバー常駐のスクリーンショットツール。フロントエンドは MyGo のシステム WebView で動きます。⌘⇧1 で範囲を選べば、その場で注釈、スクロール撮影、端末内 OCR による文字抽出、QR コードの読み取りができ、ローカルモデルや OpenAI 互換 API で翻訳もできます。画像は最前面にピン留めしたり、メニューバーの下に並べて吊るしたりできます。",
+		"ko": "macOS 13 이상에서 동작하는 메뉴 막대 스크린샷 도구로, 프런트엔드는 MyGo의 시스템 WebView에서 실행됩니다. ⌘⇧1로 영역을 선택해 바로 주석을 달고, 스크롤 캡처, 기기 내 OCR 텍스트 추출, QR 코드 인식을 할 수 있으며 로컬 모델이나 OpenAI 호환 API로 번역도 합니다. 이미지는 맨 위에 고정하거나 메뉴 막대 아래에 나란히 걸어 둘 수 있습니다."
+	},
+	"icon": {
+		"file": "pinstill.webp"
+	},
+	"screenshot": "pinstill.webp",
+	"added": "2026-11-28T02:30:56Z"
+}
