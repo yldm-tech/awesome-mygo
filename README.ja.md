@@ -8,7 +8,7 @@
 
 [MyGo](https://github.com/egoist/mygo) まわりのアプリ、プラグイン、コンポーネント、ドキュメントをひとつのサイトに集めました：**[awesomemygo.dev](https://awesomemygo.dev)**。MyGo は Go でデスクトップアプリを作るツールキットで、UI はネイティブ UI でも Web フロントエンドでも作れます。
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · 日本語 · [한국어](README.ko.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · 日本語 · [한국어](README.ko.md) · [Türkçe](README.tr.md)
 
 [![Awesome MyGo](.github/assets/banner.png)](https://awesomemygo.dev)
 
