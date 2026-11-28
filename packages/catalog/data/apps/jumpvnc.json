@@ -1,0 +1,34 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "jumpvnc",
+	"name": "JumpVNC",
+	"author": "jumpserver",
+	"kind": "web",
+	"platforms": [
+		"win",
+		"linux",
+		"mac"
+	],
+	"group": "system",
+	"url": "https://github.com/jumpserver/jumpvnc",
+	"repo": "jumpserver/jumpvnc",
+	"summary": {
+		"en": "Remote desktop over SSH: VNC and SFTP file transfer share one connection and one port.",
+		"zh-CN": "基于 SSH 的远程桌面客户端：VNC 桌面与 SFTP 文件传输共用一条连接。",
+		"zh-TW": "基於 SSH 的遠端桌面用戶端：VNC 桌面與 SFTP 檔案傳輸共用一條連線。",
+		"ja": "SSH 経由のリモートデスクトップ。VNC の画面と SFTP のファイル転送を一つの接続で。",
+		"ko": "SSH 기반 원격 데스크톱. VNC 화면과 SFTP 파일 전송을 한 연결로 처리합니다."
+	},
+	"description": {
+		"en": "The desktop viewer for JumpVNC, a remote desktop tool that carries VNC and SFTP file transfer over one SSH connection on a single TCP port, with SSH public-key authentication. Inside the desktop window it browses remote folders, uploads and downloads files by drag and drop, and syncs the text clipboard. The viewer is built with MyGo and a web frontend; the Windows and Linux servers are built separately.",
+		"zh-CN": "JumpVNC 的桌面客户端。JumpVNC 是一款远程桌面工具，用一条 SSH 连接承载 VNC 桌面与 SFTP 文件传输，只占一个 TCP 端口，并支持 SSH 公钥认证。客户端可在桌面窗口内浏览远程目录，拖放上传、下载文件，并双向同步文本剪贴板。客户端由 MyGo 搭配 Web 前端构建，Windows 与 Linux 服务端另行构建。",
+		"zh-TW": "JumpVNC 的桌面用戶端。JumpVNC 是一套遠端桌面工具，以一條 SSH 連線承載 VNC 桌面與 SFTP 檔案傳輸，只佔用一個 TCP 連接埠，並支援 SSH 公鑰認證。用戶端可在桌面視窗內瀏覽遠端目錄，拖放上傳、下載檔案，並雙向同步文字剪貼簿。用戶端以 MyGo 搭配 Web 前端打造，Windows 與 Linux 伺服器端另行建置。",
+		"ja": "JumpVNC のデスクトップビューアー。JumpVNC は、VNC の画面と SFTP のファイル転送を一つの SSH 接続、一つの TCP ポートにまとめるリモートデスクトップツールで、SSH 公開鍵認証に対応します。デスクトップ画面の中でリモートのフォルダーを開き、ドラッグ＆ドロップでファイルをアップロード・ダウンロードでき、テキストのクリップボードも同期します。ビューアーは MyGo と Web フロントエンドで作られ、Windows・Linux 用のサーバーは別にビルドされています。",
+		"ko": "JumpVNC의 데스크톱 뷰어입니다. JumpVNC는 VNC 화면과 SFTP 파일 전송을 SSH 연결 하나, TCP 포트 하나로 처리하는 원격 데스크톱 도구로, SSH 공개 키 인증을 지원합니다. 데스크톱 창 안에서 원격 폴더를 살펴보고 끌어다 놓기로 파일을 올리거나 내려받으며, 텍스트 클립보드도 동기화합니다. 뷰어는 MyGo와 웹 프런트엔드로 만들었고, Windows·Linux 서버는 따로 빌드합니다."
+	},
+	"icon": {
+		"file": "jumpvnc.webp"
+	},
+	"screenshot": "jumpvnc.webp",
+	"added": "2026-11-28T02:30:56Z"
+}
