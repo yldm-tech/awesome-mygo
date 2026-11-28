@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "cheaprouter-desktop",
+	"name": "CheapRouter Desktop",
+	"author": "ai-poet",
+	"kind": "native",
+	"platforms": [
+		"win",
+		"mac"
+	],
+	"group": "agents",
+	"url": "https://cheaprouter.cc",
+	"repo": "ai-poet/cheaprouter-harness",
+	"summary": {
+		"en": "CheapRouter model gateway client with a built-in coding agent, Git, terminal and AI image studio.",
+		"zh-CN": "CheapRouter 模型网关客户端，带编码 Agent、Git、终端和 AI 画图。",
+		"zh-TW": "CheapRouter 模型閘道用戶端，內建 Agent、Git、終端機與 AI 繪圖。",
+		"ja": "CheapRouter のクライアント。コーディング Agent、Git、ターミナル、AI 画像生成付き。",
+		"ko": "CheapRouter 게이트웨이 클라이언트. 코딩 에이전트·Git·터미널·AI 이미지 생성 내장."
+	},
+	"description": {
+		"en": "The CheapRouter desktop client for macOS and Windows, written in Go and drawn with MyGo's native GPU UI, with no Electron. It runs a coding agent with multi-file edits, Git and worktrees, a built-in terminal and plugins, and an image studio for text-to-image and image-to-image; signing in to the gateway is optional. The Android remote app is built separately in Flutter.",
+		"zh-CN": "低价多模型网关 CheapRouter 的 macOS 与 Windows 桌面客户端，用 Go 编写、由 MyGo 原生 GPU UI 绘制，没有 Electron。内置可多文件编辑的编码 Agent，带 Git 与 Worktree、内置终端和插件，另有文生图、图生图的创作工作台；登录网关并非必需。Android 远控 App 另用 Flutter 构建。",
+		"zh-TW": "低價多模型閘道 CheapRouter 的 macOS 與 Windows 桌面用戶端，用 Go 撰寫、由 MyGo 原生 GPU UI 繪製，沒有 Electron。內建可多檔編輯的程式 Agent，附 Git 與 Worktree、內建終端機和外掛，另有文生圖、圖生圖的創作工作台；登入閘道並非必要。Android 遙控 App 另以 Flutter 建置。",
+		"ja": "マルチモデルゲートウェイ CheapRouter の macOS・Windows 向けデスクトップクライアントで、Go で書かれ MyGo のネイティブ GPU UI で描かれています。Electron は使いません。複数ファイルを編集するコーディングエージェントに Git と Worktree、内蔵ターミナル、プラグインを備え、テキストや画像から画像を作る創作ワークベンチもあります。ゲートウェイへのログインは必須ではありません。Android のリモート操作アプリは Flutter で別に作られています。",
+		"ko": "멀티 모델 게이트웨이 CheapRouter의 macOS·Windows용 데스크톱 클라이언트로, Go로 작성하고 MyGo의 네이티브 GPU UI로 그렸으며 Electron은 쓰지 않습니다. 여러 파일을 편집하는 코딩 에이전트와 Git·Worktree, 내장 터미널, 플러그인을 갖췄고, 텍스트나 이미지로 그림을 만드는 창작 작업대도 있습니다. 게이트웨이 로그인은 필수가 아닙니다. Android 원격 제어 앱은 Flutter로 따로 만듭니다."
+	},
+	"icon": {
+		"file": "cheaprouter-desktop.webp"
+	},
+	"screenshot": "cheaprouter-desktop.webp",
+	"provisional": [
+		"screenshot"
+	],
+	"added": "2026-11-28T02:30:56Z"
+}
