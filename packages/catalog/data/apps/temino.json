@@ -5,18 +5,31 @@
 	"author": "Lotus0614",
 	"kind": "native",
 	"platforms": [
-		"win",
-		"linux",
-		"mac"
+		"win"
 	],
 	"group": "system",
 	"url": "https://github.com/Lotus0614/Temino",
 	"repo": "Lotus0614/Temino",
 	"summary": {
-		"en": "Temino 是一个用 Go + MyGo 原生 UI 写的跨平台 WebUI 进程管理器：把那些必须开个终端才能跑起来的本地 WebUI（ComfyUI、AstrBot、node 服务……）集中配置，一键启停，实时看日志，处理端口占用。"
+		"en": "A native manager for local WebUIs like ComfyUI: one-click start and stop, live logs, port checks.",
+		"zh-CN": "本地 WebUI 进程管理器：一键启停 ComfyUI 等服务，看实时日志，处理端口占用。",
+		"zh-TW": "本機 WebUI 行程管理器：一鍵啟停 ComfyUI 等服務，看即時日誌，處理埠號占用。",
+		"ja": "ローカル WebUI のプロセス管理アプリ。ComfyUI などをワンクリックで起動・停止し、ログを表示。",
+		"ko": "ComfyUI 같은 로컬 WebUI를 한 번에 켜고 끄며 실시간 로그와 포트 점유를 다루는 앱."
 	},
 	"description": {
-		"en": "Temino 是一个用 Go + MyGo 原生 UI 写的跨平台 WebUI 进程管理器：把那些必须开个终端才能跑起来的本地 WebUI（ComfyUI、AstrBot、node 服务……）集中配置，一键启停，实时看日志，处理端口占用。"
+		"en": "A manager for local WebUIs that otherwise need an open terminal, such as ComfyUI, AstrBot or node services, drawn with MyGo's native UI as a single Go program of a few MB. It starts and stops them in one click, shows live logs with search, flags ports already in use and can kill the process holding one. Only Windows is released and tested so far.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的本地 WebUI 进程管理器，整个程序是几 MB 的 Go 单文件。ComfyUI、AstrBot、node 服务这类本要开终端才能跑的 WebUI，可以集中配置、一键启停，实时查看可搜索的日志；启动时检测端口占用，并能结束占用端口的进程。目前只发布并实测了 Windows 版。",
+		"zh-TW": "以 MyGo 原生 UI 繪製的本機 WebUI 行程管理器，整個程式是幾 MB 的 Go 單一執行檔。ComfyUI、AstrBot、node 服務這類原本得開終端機才能執行的 WebUI，可以集中設定、一鍵啟停，即時查看可搜尋的日誌；啟動時偵測連接埠占用，並能結束占用連接埠的行程。目前只發布並實測了 Windows 版。",
+		"ja": "MyGo のネイティブ UI で描かれた、ローカル WebUI のプロセス管理アプリで、数 MB の Go 単一実行ファイルです。ComfyUI、AstrBot、node サービスなど、ターミナルを開かないと動かない WebUI をまとめて設定してワンクリックで起動・停止でき、ログは検索しながらリアルタイムで確認できます。起動時にポートの使用状況を調べ、ポートを占有するプロセスを終了することもできます。現在リリースされ検証済みなのは Windows 版のみです。",
+		"ko": "MyGo의 네이티브 UI로 그린 로컬 WebUI 프로세스 관리자로, 몇 MB짜리 Go 단일 실행 파일입니다. ComfyUI, AstrBot, node 서비스처럼 터미널을 열어야 돌아가는 WebUI를 한곳에서 설정하고 클릭 한 번으로 켜고 끄며, 실시간 로그를 검색하며 볼 수 있습니다. 시작할 때 포트 점유를 확인하고 포트를 차지한 프로세스를 종료할 수도 있습니다. 현재 배포되고 검증된 것은 Windows 버전뿐입니다."
 	},
+	"icon": {
+		"file": "temino.webp"
+	},
+	"provisional": [
+		"icon"
+	],
+	"screenshot": "temino.webp",
 	"added": "2026-11-28T14:54:35Z"
 }
