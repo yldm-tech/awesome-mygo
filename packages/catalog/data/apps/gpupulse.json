@@ -1,0 +1,36 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "gpupulse",
+	"name": "GPUPulse",
+	"author": "FlyoungOvO",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "dev",
+	"url": "https://github.com/FlyoungOvO/GPUPulse",
+	"repo": "FlyoungOvO/GPUPulse",
+	"summary": {
+		"en": "A macOS menu bar app that shows NVIDIA GPU usage and free cards across your SSH servers.",
+		"zh-CN": "macOS 菜单栏工具，查看多台 SSH 服务器的 NVIDIA GPU 空闲与占用。",
+		"zh-TW": "macOS 選單列工具，查看多台 SSH 伺服器的 NVIDIA GPU 閒置與使用。",
+		"ja": "SSH サーバーの NVIDIA GPU の空きと使用状況を見る macOS メニューバーアプリ。",
+		"ko": "여러 SSH 서버의 NVIDIA GPU 사용량과 빈 카드를 보여 주는 macOS 메뉴 막대 앱."
+	},
+	"description": {
+		"en": "A macOS menu bar tool drawn with MyGo's native UI that shows each NVIDIA GPU on your SSH servers as free, holding memory or busy, with memory, temperature and processes, and copies CUDA_VISIBLE_DEVICES for free cards. It reads hosts from ~/.ssh/config and runs only nvidia-smi and ps. Build it from source for the MyGo version; the 1.1.0 release is an earlier SwiftUI build.",
+		"zh-CN": "用 MyGo 原生 UI 绘制的 macOS 菜单栏工具，显示多台 SSH 服务器上每张 NVIDIA GPU 是空闲、占显存还是运行中，附显存、温度与进程，可一键复制空闲卡的 CUDA_VISIBLE_DEVICES。服务器取自 ~/.ssh/config，远端只执行 nvidia-smi 与 ps。MyGo 版需从源码构建，预构建的 1.1.0 是早期 SwiftUI 版本。",
+		"zh-TW": "用 MyGo 原生 UI 繪製的 macOS 選單列工具，顯示多台 SSH 伺服器上每張 NVIDIA GPU 是閒置、占用顯示記憶體還是運算中，附記憶體、溫度與程序，可一鍵複製閒置卡的 CUDA_VISIBLE_DEVICES。伺服器取自 ~/.ssh/config，遠端只執行 nvidia-smi 與 ps。MyGo 版需從原始碼建置，預先建置的 1.1.0 是早期 SwiftUI 版本。",
+		"ja": "MyGo のネイティブ UI で描かれた macOS メニューバーツール。複数の SSH サーバーにある NVIDIA GPU を空き・メモリ使用中・稼働中で示し、メモリ、温度、プロセスも表示して、空きカードの CUDA_VISIBLE_DEVICES をコピーできます。ホストは ~/.ssh/config から読み、リモートでは nvidia-smi と ps だけを実行します。MyGo 版はソースからビルドし、配布中の 1.1.0 は以前の SwiftUI 版です。",
+		"ko": "MyGo의 네이티브 UI로 그린 macOS 메뉴 막대 도구로, 여러 SSH 서버의 NVIDIA GPU가 비어 있는지, 메모리를 점유했는지, 실행 중인지를 메모리·온도·프로세스와 함께 보여 주고 빈 카드의 CUDA_VISIBLE_DEVICES를 복사합니다. 호스트는 ~/.ssh/config에서 가져오며 원격에서는 nvidia-smi와 ps만 실행합니다. MyGo 버전은 소스로 빌드하며 1.1.0 릴리스는 이전 SwiftUI 버전입니다."
+	},
+	"icon": {
+		"file": "gpupulse.webp"
+	},
+	"provisional": [
+		"icon",
+		"screenshot"
+	],
+	"screenshot": "gpupulse.webp",
+	"added": "2026-11-28T02:30:56Z"
+}
