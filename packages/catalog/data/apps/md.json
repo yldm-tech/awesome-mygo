@@ -1,0 +1,28 @@
+{
+	"$schema": "../schema/app.schema.json",
+	"slug": "md",
+	"name": "md",
+	"author": "RunMintOn",
+	"kind": "native",
+	"platforms": [
+		"mac"
+	],
+	"group": "notes",
+	"url": "https://github.com/RunMintOn/md",
+	"repo": "RunMintOn/md",
+	"summary": {
+		"en": "A macOS Markdown editor drawn by MyGo's native UI: source, mixed, preview and a scroll-synced split, plus a two-sided text diff.",
+		"zh-CN": "用 MyGo 原生界面绘制的 macOS Markdown 编辑器：源码、混合、预览与联动分栏，外加双侧文本 Diff。",
+		"zh-TW": "用 MyGo 原生介面繪製的 macOS Markdown 編輯器：原始碼、混合、預覽與連動分欄，外加雙側文字 Diff。",
+		"ja": "MyGo のネイティブ UI で描く macOS 用 Markdown エディタ。ソース、ミックス、プレビュー、同期スクロールの分割表示に、両側を編集できる差分表示を備えます。",
+		"ko": "MyGo 네이티브 UI로 그린 macOS용 Markdown 편집기입니다. 소스, 믹스, 미리보기, 함께 스크롤되는 분할 보기와 양쪽을 편집하는 Diff를 제공합니다."
+	},
+	"description": {
+		"en": "Written in Go with windows drawn by MyGo's native UI, and no WebView or bundled browser: Mermaid runs through Pele and formulas through MathJax on the system JavaScriptCore, then the SVG is rasterised by AppKit. One Markdown source feeds four views, so the source, the mixed view with its markers drawn at their own size, the read-only page and the split that scrolls both sides together share a single selection. Find runs once and lands on the source and the rendered text in the same search, an outline jumps by heading, and pasted images are written into a .assets directory beside the document when it saves. A separate tab compares two editable texts with line and word highlights as you type. Drafts are checked against the file on disk before saving, broken into a conflict prompt, and saved tabs come back after a restart with their order, view and reading position.",
+		"zh-CN": "用 Go 编写、窗口由 MyGo 原生界面绘制，没有 WebView，也不带浏览器：Mermaid 走 Pele、公式走 MathJax，都跑在系统 JavaScriptCore 上，SVG 再由 AppKit 光栅化。一份 Markdown 源码供四种视图使用，源码、标记按自身字号绘制的混合视图、只读页面，以及两侧联动滚动的分栏，共用同一个选区。查找只跑一次，同时落在源码和渲染文字上，大纲按标题跳转，粘贴的图片在保存时写入文档同名的 .assets 目录。另一个标签页比较两段可编辑文本，行级与行内高亮随输入重算。保存前把草稿与磁盘上的文件比对，不一致时弹出冲突确认；重启后恢复已保存标签的顺序、视图与阅读位置。",
+		"zh-TW": "用 Go 撰寫、視窗由 MyGo 原生介面繪製，沒有 WebView，也不帶瀏覽器：Mermaid 走 Pele、公式走 MathJax，都跑在系統 JavaScriptCore 上，SVG 再由 AppKit 光柵化。一份 Markdown 原始碼供四種視圖使用，原始碼、標記按自身字級繪製的混合視圖、唯讀頁面，以及兩側連動捲動的分欄，共用同一個選取範圍。搜尋只跑一次，同時落在原始碼與渲染文字上，大綱按標題跳轉，貼上的圖片在儲存時寫入文件同名的 .assets 目錄。另一個分頁比較兩段可編輯文字，行級與行內高亮隨輸入重算。儲存前把草稿與磁碟上的檔案比對，不一致時彈出衝突確認；重新啟動後恢復已儲存分頁的順序、視圖與閱讀位置。",
+		"ja": "Go で書き、ウィンドウを MyGo のネイティブ UI で描いたエディタで、WebView も同梱ブラウザもありません。Mermaid は Pele、数式は MathJax をシステムの JavaScriptCore 上で動かし、SVG を AppKit がラスタライズします。1 つの Markdown ソースを 4 つのビューが共有し、記号をそのままの大きさで描くミックス表示、読み取り専用のページ、両側が連動してスクロールする分割表示が同じ選択範囲を使います。検索は 1 回でソースと描画後の文字の両方に当たり、アウトラインは見出しで移動し、貼り付けた画像は保存時に文書と同じ名前の .assets ディレクトリへ書き出されます。別のタブでは 2 つの編集可能なテキストを行単位・語単位のハイライト付きで比較し、入力に合わせて差分を計算し直します。保存前にはディスク上のファイルと下書きを照合し、食い違えば確認を出し、再起動後は保存済みタブの順序・ビュー・読んでいた位置を復元します。",
+		"ko": "Go로 작성하고 창을 MyGo 네이티브 UI로 그렸으며 WebView도 내장 브라우저도 없습니다. Mermaid는 Pele, 수식은 MathJax를 시스템 JavaScriptCore에서 실행하고 SVG는 AppKit이 래스터화합니다. 하나의 Markdown 소스를 네 가지 보기가 함께 쓰므로, 기호를 제 크기로 그리는 믹스 보기, 읽기 전용 페이지, 양쪽이 함께 스크롤되는 분할 보기가 같은 선택 범위를 공유합니다. 검색은 한 번에 소스와 렌더링된 텍스트 모두에 적용되고, 아웃라인은 제목으로 이동하며, 붙여 넣은 이미지는 저장할 때 문서와 같은 이름의 .assets 디렉터리에 기록됩니다. 별도 탭에서는 편집 가능한 두 텍스트를 줄 단위와 단어 단위 강조로 비교하며 입력에 따라 다시 계산합니다. 저장 전에는 초안과 디스크의 파일을 대조해 다르면 확인을 요청하고, 재시작 후에는 저장된 탭의 순서, 보기, 읽던 위치를 복원합니다."
+	},
+	"added": "2026-11-28T14:25:01Z"
+}
